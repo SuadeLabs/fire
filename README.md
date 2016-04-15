@@ -1,4 +1,4 @@
-# Financial Regulatory (FiRE) Data Format
+# Financial Regulatory (FIRE) Data Format
 
 - The project homepage can be found at [https://suade.org/fire/][1]
 - The project whitepaper can be found at [https://suade.org/fire/manifesto/][2]
