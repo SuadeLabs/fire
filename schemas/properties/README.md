@@ -24,11 +24,13 @@ For our purposes, we can just consider JSON to be the data and a JSON-schema to 
 A property in JSON notation is a name-value pair and list of properties is what makes up the data in our schemas. What you would normally call a "field" (like interest_rate) is the *name of the property* and what we might call an attribute is the *value of the property*.
 
 **One property**
+
 '''javascript
 {"name": value}
 '''
 
 **List of properties**
+
 '''javascript
 {"name1": "value1", "name3": "value3", "name2": "value2"}
 '''
