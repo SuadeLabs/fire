@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Collateral Schema",
-  "description": "Data schema used to upload collateral data to the platform.",
+  "description": "Data schema to define collateral (currently can reference loans or accounts).",
   "type": "object",
   "properties": {
     "id": {

@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Customer Schema",
-  "description": "Data schema used to upload customer data to the platform.",
+  "description": "Data schema to define a customer.",
   "type": "object",
   "properties": {
     "id": {

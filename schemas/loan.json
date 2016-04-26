@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Loan Schema",
-  "description": "Data schema used to upload loan data to the platform.",
+  "description": "Data schema defining the characteristics of a loan product.",
   "type": "object",
   "properties": {
     "id": {
