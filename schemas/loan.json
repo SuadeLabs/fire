@@ -3,8 +3,6 @@
   "title": "Suade Loan Schema",
   "description": "Suade data schema used to upload loan data to the platform.",
   "type": "object",
-  "id": "loan",
-  "default": "default",
   "properties": {
     "id": {
       "type": "string"

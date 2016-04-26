@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Suade Transaction Schema",
+  "description": "Suade data schema used to upload granular transaction data to the platform.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "date": {
+      "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "loan_id": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "integer"
+    },
+    "type": {
+      "description": "A loan transaction is an action that impacts the balance of the loan.",
+      "type": "string",
+      "enum": ["advance", "further_advance", "interest", "interest_repayment", "capitalisation", "capital_repayment", "sale", "write_off", "other"]
+    }
+  },
+  "required": ["id", "date", "loan_id", "amount", "type"],
+  "additionalProperties": false
+}
