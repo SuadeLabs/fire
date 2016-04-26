@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Suade Collateral Schema",
-  "description": "Suade data schema used to upload collateral data to the platform.",
+  "title": "Collateral Schema",
+  "description": "Data schema used to upload collateral data to the platform.",
   "type": "object",
   "properties": {
     "id": {

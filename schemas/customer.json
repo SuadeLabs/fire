@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Suade Customer Schema",
-  "description": "Suade data schema used to upload customer data to the platform.",
+  "title": "Customer Schema",
+  "description": "Data schema used to upload customer data to the platform.",
   "type": "object",
   "properties": {
     "id": {

@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Suade Transaction Schema",
-  "description": "Suade data schema used to upload granular transaction data to the platform.",
+  "title": "Transaction Schema",
+  "description": "Data schema used to upload granular transaction data to the platform.",
   "type": "object",
   "properties": {
     "id": {
