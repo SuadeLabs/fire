@@ -1,4 +1,6 @@
 # Financial Regulatory (FIRE) Data Format
+
+[![Join the chat at https://gitter.im/SuadeLabs/fire](https://badges.gitter.im/SuadeLabs/fire.svg)](https://gitter.im/SuadeLabs/fire?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 - The project homepage can be found at [https://suade.org/fire/][1]
 - Please get in touch (info at suade dot org) if you would like to participate from a knowledge or tech point of view. 
 
