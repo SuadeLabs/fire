@@ -86,40 +86,40 @@ A **null** value means the value is unknown. Note that this is different from an
 
 An **integer** is a number without a fraction or exponent part.
 
-> ex 1. 4
+> ex 1. 4  
 > ex 2. 26908289076124561671021
 
 An **number** is a number with or without a fraction or exponent part.
 
-> ex 1. 26908289076124561671021
+> ex 1. 26908289076124561671021  
 > ex 2. 269082.89076124561671021
 
 An **string** is a list of characters (except " or \ ) inside "quotes". You can think of a string as a word. Note that the "word" can also contain numbers (like your national insurance number). But also note that numbers represented as strings need to be converted back to numbers if you want to add or multiply them.
 
-> ex 1. "sheep"
+> ex 1. "sheep"  
 > ex 2. "AS546NB8"
 
 A **boolean** is simple *true* or *false* flag. Note that the true/false flag is lowercase and not inside "quotes."
 
-> ex 1. true
+> ex 1. true  
 > ex 2. false
 
 An **array** is a list of the other types, separated by commas and inside square brackets [ ].
 
-> ex 1. [2, 235, 34634, 34]
+> ex 1. [2, 235, 34634, 34]  
 > ex 2. ["sheep", "sheep_dog", "fox"]
 
 An **object** is a JSON object, or in other words, the thing we are defining. So this allows for nesting of objects within objects. This is valid JSON, but adds time and complexity in the decoding/parsing process so generally should be avoided.
 
 ```javascript
 {
-  "name1": "value1",
-  "name3": {
-    "name1": "value1",
-    "name3": "value3",
-    "name2": "value2"
+  "farm_id": "E2G2K3LSJENJ4J3K10H",
+  "animals": {
+    "goat": 2,
+    "sheep": 7,
+    "sheep_dog": 1
   },
-  "name2": "value2"
+  "farm_owner": "peter"
 }
 ```
 
@@ -128,7 +128,7 @@ How would you represent a date value like 31 August 2014?
 - We could make use of a string type: "31 August 2014" but then "Aug 31 2014" would also be valid and we would have trouble ordering our data by date.
 - We could accept an integer type: 31082014 but then 1235 would also be a valid integer. And even if we restricted it to 8-digits, we would have to remember to make sure single digit months have a leading zeros and still this doesn't tell us if it is 31 August 2014 or 14 February 8013.
 
-You get the idea, that sometimes we need more information. This is where the "format" parameter comes in. 
+You get the idea, sometimes we need more information. This is where the **format** parameter comes in. 
 
 The following is the list of the formats specified in the JSON Schema specification:
 
@@ -138,6 +138,7 @@ The following is the list of the formats specified in the JSON Schema specificat
 - "ipv4": IPv4 address, according to dotted-quad ABNF syntax as defined in RFC 2673, section 3.2.
 - "ipv6": IPv6 address, as defined in RFC 2373, section 2.2.
 - "uri": A universal resource identifier (URI), according to RFC3986.
+
 
 <!-- ### Restrictions
 Once we have defined the name and type of our  -->
