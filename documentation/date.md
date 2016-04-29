@@ -10,4 +10,4 @@ schemas:	[collateral, customer, loan]
 
 
 ---
-[id]: 		https://github.com/suadelabs/fire/docs/properties/id.md
+[id]: 		https://github.com/suadelabs/fire/blob/master/documentation/id.md
