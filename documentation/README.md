@@ -45,7 +45,7 @@ JSON is just text, so the formatting is purely visual, even the order (see above
 }
 ```
 
-You can visit: [http://jsonprettyprint.com/][http://jsonprettyprint.com/] to help with this formatting.
+You can visit: [http://jsonprettyprint.com/](http://jsonprettyprint.com/) to help with this formatting.
 
 
 # JSON-Schema
