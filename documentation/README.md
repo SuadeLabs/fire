@@ -139,6 +139,23 @@ The following is the list of the formats specified in the JSON Schema specificat
 - "ipv6": IPv6 address, as defined in RFC 2373, section 2.2.
 - "uri": A universal resource identifier (URI), according to RFC3986.
 
+The one we use most commonly from this is the **"date-time"** format and it basically means your dates and timestamps need to be a valid string but also look like this: YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. 
+
+So for our example, if this is your schema:
+```javascript
+{"animal_birthday": {
+  "description": "The recorded birthday for the animal.",
+  "type": "string",
+  "format": "date-time"
+  }
+}
+```
+then this would be a valid input:
+```javascript
+{"animal_birthday": "1995-06-07T13:00:00Z"}
+```
+
+
 
 <!-- ### Restrictions
 Once we have defined the name and type of our  -->
