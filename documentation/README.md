@@ -1,6 +1,6 @@
 ---
 layout:		readme
-title:		"Properties README"
+title:		"README"
 ---
 
 # General Information
@@ -82,7 +82,7 @@ Now that we have described our property value, let's go a step further and narro
 
 JSON has 7 standard types that we can use:
 
-A **null** value means the value is unknown. Note that this is different from an empty or zero field.
+A **null** value means the value is unknown. Note that this is different from an empty or zero field. If the field is empty, undefined or does not exist, then it can simply be omitted (unless it is indicated as being "required" in which case you should provide a suitable default value).
 
 An **integer** is a number without a fraction or exponent part.
 
