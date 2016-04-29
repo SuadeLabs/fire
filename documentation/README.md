@@ -9,11 +9,13 @@ This is an introduction for people new to JSON, if you are already familiar with
 ### Headers
 Please make sure all property markdown files start with the following header:
 
-> \--- 
-> layout:			property
-> title:			"name of the data item as it appears in the schemas (ie. lowercase)"
-> schemas:		[a list of schemas where this data_item is used]
-> \---
+```markdown
+--- 
+layout:			property
+title:			"name of the data item as it appears in the schemas (ie. lowercase)"
+schemas:		[a list of schemas where this data_item is used]
+---
+```
 
 # JSON
 JSON is short for "Javascript Object Notation" and defines the format for an "object." An object in programming terms can be a variable, data structure or a function (basically anything). More commonly, in Object-Oriented programming an object typically refers to an Instance of a Class. That is to say, a specific description of something more general. Like a Goat being an instance of the Class "Animal." 
@@ -24,24 +26,24 @@ For our purposes, we can just consider JSON to be the data and a JSON-schema to 
 A property in JSON notation is a name-value pair and list of properties is what makes up the data in our schemas. What you would normally call a "field" (like interest_rate) is the *name of the property* and what we might call an attribute is the *value of the property*.
 
 **One property**
-'''javascript
+```javascript
 {"name": value}
-'''
+```
 
 **List of properties**
-'''javascript
+```javascript
 {"name1": "value1", "name3": "value3", "name2": "value2"}
-'''
+```
 
 JSON is just text, so the formatting is purely visual, even the order (see above) does not matter. As things get more complicated however, it is considered best practice to format your JSON to look more human-friendly:
 
-'''javascript
+```javascript
 {
   "name1": "value1",
   "name3": "value3",
   "name2": "value2"
 }
-'''
+```
 
 You can visit: [http://jsonprettyprint.com/][http://jsonprettyprint.com/] to help with this formatting.
 
@@ -52,31 +54,31 @@ While any data sent/received in JSON format will always look like the above, we 
 ### Description
 What if we want to add a little more information to describe our property? This is where the "description" parameter comes in. We add some curly brackets where the "value" is supposed to be and add a description as so: 
 
-'''javascript
+```javascript
 {"name": {"description": "A little blurb about this property"} }
-'''
+```
 
 *or*
 
-'''javascript
+```javascript
 {
   "name": {
    "description": "A little blurb about this property"
   }
 }
-'''
+```
 
 ### Types
 Now that we have described our property value, let's go a step further and narrow it down to a specific type. Is it a number, a word, a list? The "type" parameter allows us to specify exactly this. So now our schema would look something like this:
 
-'''javascript
+```javascript
 {
   "name": {
    "description": "A little blurb about this property",
    "type": "number"
   }
 }
-'''
+```
 
 JSON has 7 standard types that we can use:
 
@@ -109,7 +111,7 @@ An **array** is a list of the other types, separated by commas and inside square
 
 An **object** is a JSON object, or in other words, the thing we are defining. So this allows for nesting of objects within objects. This is valid JSON, but adds time and complexity in the decoding/parsing process so generally should be avoided.
 
-'''javascript
+```javascript
 {
   "name1": "value1",
   "name3": {
@@ -119,7 +121,7 @@ An **object** is a JSON object, or in other words, the thing we are defining. So
   },
   "name2": "value2"
 }
-'''
+```
 
 ### Formats
 How would you represent a date value like 31 August 2014? 
