@@ -141,6 +141,10 @@
       "type": "string",
       "enum": ["other"]
     },
+    "product_name": {
+      "description": "The name of the product as given by the financial institution to be used for display and reference purposes.",
+      "type": "string"
+    },
     "purpose": {
       "type": "string",
       "enum": ["house_purchase", "first_time_buyer", "buy_to_let", "further_advance", "remortgage", "remortgage_other", "lifetime_mortgage", "bridging_loan"]
