@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Transaction Schema",
+  "title": "Loan Transaction Schema",
   "description": "A loan_transaction is an event that has an impact on a loan, typically the balance.",
   "type": "object",
   "properties": {
