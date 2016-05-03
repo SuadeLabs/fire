@@ -7,7 +7,7 @@
 [![Contributor Guidelines](https://img.shields.io/badge/contributor-guidelines-lightgrey.svg)][contributing]
 
 ### What is the FIRE data format?
-The Financial Regulatory data format defines a common specification for granular regulatory data. Regulatory data refers to the data that underlies regulatory submissions and is used for policy, monitoring and supervision purposes. 
+The Financial Regulatory data format defines a common specification for granular data used for regulatory reporting. Regulatory data refers to the data that underlies regulatory submissions and is used for policy, monitoring and supervision purposes. 
 
 The FIRE data schemas and code samples are licensed under the [Apache 2.0 License][apache] which has been chosen for being open, permissive and already widely accepted within financial sector (think Hadoop, Cassandra, ActiveMQ).
 
