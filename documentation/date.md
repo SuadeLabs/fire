@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"date"
-schemas:	[collateral, customer, loan]
+schemas:	[account, collateral, customer, loan]
 ---
 
 # date
