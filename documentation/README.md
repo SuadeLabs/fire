@@ -99,10 +99,12 @@ An **string** is a list of characters (except " or \ ) inside "quotes". You can 
 > ex 1. "sheep"  
 > ex 2. "AS546NB8"
 
-A **boolean** is simple *true* or *false* flag. Note that the true/false flag is lowercase and not inside "quotes."
+A **boolean** is simple *true* or *false* flag. Note that the true/false flag is lowercase and not inside "quotes." 
 
 > ex 1. true  
 > ex 2. false
+
+If you were wondering, the word boolean comes from a founding father of modern logic, the English mathematician [George Boole][boole].
 
 An **array** is a list of the other types, separated by commas and inside square brackets [ ].
 
@@ -122,6 +124,13 @@ An **object** is a JSON object, or in other words, the thing we are defining. So
   "farm_owner": "peter"
 }
 ```
+
+# Restrictions
+Once we have given a *description*, a *type* and maybe a *format* for our property value we can implement some sanity checks by applying further restrictions. 
+
+Restrictions can come in the form of visual presentation like *formats* or *enums*, or they can come in the form of simple quantitative sanity-checks. Both are extremely useful to narrow down the possibilities of what might be considered as "valid data" according to the schema. These restrictions not only ensure that bad data is caught at the most granular level, but it also ensures that common semantics are used to define the same thing. It is the first step towards a harmonised standard. In other words, if a loan currency is US Dollar, let's agree to call it "USD" instead of "US_Dollar", "dollar-USA", "011" or "$US." 
+
+Restrictions can be difficult to implement as you need to consider all potential edge cases. Account balances are generally positive but sometimes can be negative, too. Leveraging widely used [ISO][iso] or [IFRS][ifrs] standards are therefore a great way to ensure you have considered the full spectrum of possible values. It also means that, more often than not, firms will already be familiar with and recording data in line with these standards.
 
 ### Formats
 How would you represent a date value like 31 August 2014? 
@@ -154,9 +163,36 @@ then this would be a valid input:
 ```javascript
 {"animal_birthday": "1995-06-07T13:00:00Z"}
 ```
+and this would be an invalid input:
+{"animal_birthday": "1995-6-7T13:00:00Z"}
 
 
+### Enums
+**enum** is short for [enumeration][enum] which is short for "a complete, ordered listing of all the items in a collection." All that means is a list (an array) of possible values our value can have. Enums are typically used with string types to limit the range of possible strings that are considered valid for a property value.
 
-<!-- ### Restrictions
-Once we have defined the name and type of our  -->
+Again, it is important to consider edge cases and hence where relevant, it is advisable to leave an "other" or "none" value so that and edge case can be temporarily mapped to a generic parameter. Particularly, in the case of an open source project, you can envisage enum lists getting longer as the schemas evolve through contributions.
 
+So for example, if this is your schema:
+```javascript
+{"animal_type": {
+  "description": "The type of animal on the farm.",
+  "type": "string",
+  "enum": ["sheep", "goat", "cow", "other"]
+  }
+}
+```
+then this would be a valid input:
+```javascript
+{"animal_type": "goat"}
+```
+and this would be an invalid input:
+```javascript
+{"animal_type": "horse"}
+```
+
+
+---
+[boole]:  https://en.wikipedia.org/wiki/George_Boole
+[iso]:    https://en.wikipedia.org/wiki/International_Organization_for_Standardization
+[ifrs]:   https://en.wikipedia.org/wiki/International_Financial_Reporting_Standards
+[enum]:   https://en.wikipedia.org/wiki/Enumeration
