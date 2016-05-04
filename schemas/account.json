@@ -184,5 +184,5 @@
   "required": [
               "id", "date", "balance", "customer_id"
               ],
-  "additionalProperties": false
+  "additionalProperties": true
 }

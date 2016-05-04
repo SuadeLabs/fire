@@ -185,5 +185,5 @@
       "id", "date", "balance", "customers", "start_date", "end_date", "limit_amount", "purpose", 
       "rate", "rate_type", "repayment_type", "type"
   ],
-  "additionalProperties": false
+  "additionalProperties": true
 }

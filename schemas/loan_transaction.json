@@ -25,5 +25,5 @@
     }
   },
   "required": ["id", "date", "loan_id", "amount", "type"],
-  "additionalProperties": false
+  "additionalProperties": true
 }

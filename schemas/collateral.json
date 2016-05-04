@@ -69,5 +69,5 @@
     }
   },
   "required": ["id", "date", "value"],
-  "additionalProperties": false
+  "additionalProperties": true
 }

@@ -69,5 +69,5 @@
     }
   },
   "required": ["id", "date", "credit_impaired"],
-  "additionalProperties": false
+  "additionalProperties": true
 }
