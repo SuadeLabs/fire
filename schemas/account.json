@@ -145,6 +145,7 @@
           "format": "date-time"
         },
         "last": {
+          "description": "The final payment date for interest payments, often coincides with end_date.",
           "type": "string",
           "format": "date-time"
         },
