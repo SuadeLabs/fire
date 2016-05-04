@@ -80,6 +80,7 @@
             "type": "string"
           },
           "income_amount": {
+            "description": "The reference income used for the customer(s) for this loan. Monetary type represented as an integer number of cents/pence.",
             "type": "integer",
             "minimum": 0
           }
@@ -139,7 +140,7 @@
     },
     "provision_type": {
       "type": "string",
-      "enum": ["other"]
+      "enum": ["none", "other"]
     },
     "product_name": {
       "description": "The name of the product as given by the financial institution to be used for display and reference purposes.",
@@ -168,6 +169,10 @@
     "securitised": {
       "type": "boolean"
     },
+    "source": {
+      "description": "The name of the source or origin of the data as given by the financial institution to be used for display and reference purposes.",
+      "type": "string"
+    },
     "start_date": {
       "type": "string",
       "format": "date-time"
@@ -178,7 +183,7 @@
     },
     "type": {
       "type": "string",
-      "enum": ["mortgage", "credit_card", "overdraft"]
+      "enum": ["mortgage", "credit_card", "overdraft", "other"]
     }
   },
   "required": [
