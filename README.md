@@ -35,7 +35,7 @@ Each release of the FIRE schemas can be found under their respective directories
 
 
 [fire]:         https://suade.org/fire/
-[license]:      https://github.com/SuadeLabs/fire/blob/master/LICENSE.md
+[license]:      https://github.com/SuadeLabs/fire/blob/master/LICENSE
 [gitter]:       https://gitter.im/SuadeLabs/fire
 [contributing]: https://github.com/SuadeLabs/fire/blob/master/CONTRIBUTING.md
 [apache]:	http://www.apache.org/licenses/LICENSE-2.0
