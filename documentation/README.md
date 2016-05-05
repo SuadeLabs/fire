@@ -164,8 +164,9 @@ then this would be a valid input:
 {"animal_birthday": "1995-06-07T13:00:00Z"}
 ```
 and this would be an invalid input:
+```javascript
 {"animal_birthday": "1995-6-7T13:00:00Z"}
-
+```
 
 ### Enums
 **enum** is short for [enumeration][enum] which is short for "a complete, ordered listing of all the items in a collection." All that means is a list (an array) of possible values our value can have. Enums are typically used with string types to limit the range of possible strings that are considered valid for a property value.
