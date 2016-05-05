@@ -1,0 +1,194 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Loan Schema",
+  "description": "Data schema defining the characteristics of a loan product.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "date": {
+      "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "accounting_treatment": {
+      "type": "string"
+    },
+    "accrued_interest_balance": {
+      "description": "The accrued interest due at the next payment date. Monetary type represented as an integer number of cents/pence.",
+      "type": "integer"
+    },
+    "administration": {
+      "description": "How the loan was administered by the lender.",
+      "type": "string",
+      "enum": ["principal", "other"]
+    },
+    "arrears_arrangement": {
+      "description": "The arrangement the lender has made with the borrower regarding the amount referenced in the arrears_balance.",
+      "type": "string",
+      "enum": ["temporary", "formal", "possessed", "none"]
+    },
+    "arrears_balance": {
+      "description": "The balance of the loan or capital amount that is considered to be in arrears. Monetary type represented as an integer number of cents/pence.",
+      "type": "integer"
+    },
+    "balance": {
+      "description": "The balance of the loan or capital still to be repaid. Monetary type represented as an integer number of cents/pence.",
+      "type": "integer"
+    },
+    "base_rate": {
+      "type": "string",
+      "enum": ["ZERO", "UKBRBASE", "FDTR"]
+    },
+    "charge_on_collateral": {
+      "description": "Lender charge on property, 1 indicates first charge, 2 second and so on. 0 indicates a combination of charge levels.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "currency_code": {
+      "type": "string",
+      "enum": [
+        "AED", "AFN", "ALL", "AMD", "ANG", "AOA", "ARS", "AUD", "AWG", "AZN",
+        "BAM", "BBD", "BDT", "BGN", "BHD", "BIF", "BMD", "BND", "BOB", "BOV", 
+        "BRL", "BSD", "BTN", "BWP", "BYR", "BZD", "CAD", "CDF", "CHE", "CHF",
+        "CHW", "CLF", "CLP", "CNY", "COP", "COU", "CRC", "CUC", "CUP", "CVE", 
+        "CZK", "DJF", "DKK", "DOP", "DZD", "EGP", "ERN", "ETB", "EUR", "FJD", 
+        "FKP", "GBP", "GEL", "GHS", "GIP", "GMD", "GNF", "GTQ", "GYD", "HKD",
+        "HNL", "HRK", "HTG", "HUF", "IDR", "ILS", "INR", "IQD", "IRR", "ISK", 
+        "JMD", "JOD", "JPY", "KES", "KGS", "KHR", "KMF", "KPW", "KRW", "KWD", 
+        "KYD", "KZT", "LAK", "LBP", "LKR", "LRD", "LSL", "LYD", "MAD", "MDL", 
+        "MGA", "MKD", "MMK", "MNT", "MOP", "MRO", "MUR", "MVR", "MWK", "MXN", 
+        "MXV", "MYR", "MZN", "NAD", "NGN", "NIO", "NOK", "NPR", "NZD", "OMR", 
+        "PAB", "PEN", "PGK", "PHP", "PKR", "PLN", "PYG", "QAR", "RON", "RSD",
+        "RUB", "RWF", "SAR", "SBD", "SCR", "SDG", "SEK", "SGD", "SHP", "SLL", 
+        "SOS", "SRD", "SSP", "STD", "SYP", "SZL", "THB", "TJS", "TMT", "TND", 
+        "TOP", "TRY", "TTD", "TWD", "TZS", "UAH", "UGX", "USD", "USN", "USS", 
+        "UYI", "UYU", "UZS", "VEF", "VND", "VUV", "WST", "XAF", "XAG", "XAU", 
+        "XBA", "XBB", "XBC", "XBD", "XCD", "XDR", "XFU", "XOF", "XPD", "XPF", 
+        "XPT", "XSU", "XTS", "XUA", "XXX", "YER", "ZAR", "ZMW"
+      ]
+    },
+    "customers": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "income_amount": {
+            "description": "The reference income used for the customer(s) for this loan. Monetary type represented as an integer number of cents/pence.",
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "encumbrance_amount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "impairment_amount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "impairment_type": {
+      "type": "string",
+      "enum": ["collective", "individual", "write_off", "none"]
+    },
+    "issuer_id": {
+      "description": "The 20-digit Legal Entity Identifier for the issuer.",
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 20
+    },
+    "limit_amount": {
+      "description": "The total credit limit on the loan. Monetary type represented as integer number of cents/pence.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "lnrf_amount": {
+      "description": "The total amount of non-recourse funding linked to the loan. Monetary type represented as integer number of cents/pence.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "movement": {
+      "type": "string",
+      "enum": ["none", "acquired", "sold", "securitised", "other"]
+    },
+    "notional_amount": {
+      "description": "The original notional amount of the loan.",
+      "type": "integer"
+    },
+    "originator_id": {
+      "type": "string"
+    },
+    "originator_type": {
+      "type": "string",
+      "enum": ["mortgage_lender", "spv", "other"]
+    },
+    "provision_amount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "provision_type": {
+      "type": "string",
+      "enum": ["none", "other"]
+    },
+    "product_name": {
+      "description": "The name of the product as given by the financial institution to be used for display and reference purposes.",
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string",
+      "enum": ["house_purchase", "first_time_buyer", "buy_to_let", "further_advance", "remortgage", "remortgage_other", "lifetime_mortgage", "bridging_loan"]
+    },
+    "rate": {
+      "description": "The full interest rate applied to the loan balance. Note that for tracker rates this includes the benchmark (ie. not the credit spread). Percentages represented as a decimal/float such that 1.5% is 0.015.",
+      "type": "number"
+    },
+    "rate_type": {
+      "type": "string",
+      "enum": ["fixed", "variable", "tracker", "combined"]
+    },
+    "regulated": {
+      "type": "boolean"
+    },
+    "repayment_type": {
+      "description": "Repayment type of the loan refers to whether the customer will be repaying capital + interest, just interest or a combination of the two.",
+      "type": "string",
+      "enum": ["repayment", "interest_only", "combined", "other"]
+    },
+    "securitised": {
+      "type": "boolean"
+    },
+    "source": {
+      "description": "The name of the source or origin of the data as given by the financial institution to be used for display and reference purposes.",
+      "type": "string"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["actual", "committed", "cancelled", "defaulted"]
+    },
+    "type": {
+      "type": "string",
+      "enum": ["mortgage", "credit_card", "overdraft", "other"]
+    }
+  },
+  "required": [
+      "id", "date", "balance", "customers", "start_date", "end_date", "limit_amount", "purpose", 
+      "rate", "rate_type", "repayment_type", "type"
+  ],
+  "additionalProperties": true
+}
