@@ -148,8 +148,8 @@
           "description": "The final payment date for interest payments, often coincides with end_date.",
           "type": "string",
           "format": "date-time"
-        },
-      },
+        }
+      }
     },
     "on_balance_sheet": {
     	"description": "Is the account or deposit reported on the balance sheet of the financial institution?",
