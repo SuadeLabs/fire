@@ -84,7 +84,8 @@
             "type": "integer",
             "minimum": 0
           }
-        }
+        },
+        "required": ["id", "income_amount"]
       }
     },
     "encumbrance_amount": {
