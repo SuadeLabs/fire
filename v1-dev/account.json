@@ -116,7 +116,7 @@
     "encumbrance_type": {
     	"description": "The type of the encumbrance causing the encumbrance_amount.",
       "type": "string",
-      "enum": ["collective", "individual", "none", "other"]
+      "enum": ["repo", "covered_bond", "derivative", "none", "other"]
     },
     "guarantee_amount": {
       "description": "The amount of the account that is guaranteed under a Government Deposit Guarantee Scheme. Represented as an integer number of cents/pence.",
@@ -127,29 +127,25 @@
       "description": "The Government Deposit Scheme scheme under which the guarantee_amount is guaranteed.",
       "type": "string"
     },
-    "payment_dates": {
-      "type": "object",
-      "properties": {
-        "first": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "prev": {
-          "description": "The most recent previous date at which interest was paid or accrued_interest balance returned to zero.",
-          "type": "string",
-          "format": "date-time"
-        },
-        "next": {
-          "description": "The next date at which interest will be paid or accrued_interest balance returned to zero.",
-          "type": "string",
-          "format": "date-time"
-        },
-        "last": {
-          "description": "The final payment date for interest payments, often coincides with end_date.",
-          "type": "string",
-          "format": "date-time"
-        }
-      }
+    "first_payment_date": {
+      "description": "The first payment date for interest payments, often coincides with end_date.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "prev_payment_date": {
+      "description": "The most recent previous date at which interest was paid or accrued_interest balance returned to zero.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "next_payment_date": {
+      "description": "The next date at which interest will be paid or accrued_interest balance returned to zero.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_payment_date": {
+      "description": "The final payment date for interest payments, often coincides with end_date.",
+      "type": "string",
+      "format": "date-time"
     },
     "on_balance_sheet": {
     	"description": "Is the account or deposit reported on the balance sheet of the financial institution?",
