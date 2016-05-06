@@ -8,7 +8,7 @@ The **encumbrance_type** describes the nature and reason behind the [**encumbran
 
 With regards to asset encumbrance the EBA [mentions][eba-report] repos, covered bonds and derivatives.
 
-For real estate collateral, we include real_estate:
+For real estate collateral, we include real_estate.
 
 *(Consider further enums, particularly with regards to more specific real estate collateral: liens, easement ...)*
 
