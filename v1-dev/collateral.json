@@ -49,6 +49,16 @@
         "XPT", "XSU", "XTS", "XUA", "XXX", "YER", "ZAR", "ZMW"
       ]
     },
+    "encumbrance_amount": {
+      "description": "The amount of the account that is encumbered by potential future commitments or legal liabilities. Represented as an integer number of cents/pence.",
+      "type": "integer",
+      "min": 0
+    },
+    "encumbrance_type": {
+      "description": "The type of the encumbrance causing the encumbrance_amount.",
+      "type": "string",
+      "enum": ["repo", "covered_bond", "derivative", "real_estate", "none", "other"]
+    },
     "end_date": {
       "description": "The end date for recognition of the collateral",
       "type": "string",
