@@ -7,8 +7,7 @@ schemas:	[account, loan, collateral]
 # encumbrance_amount
 The **encumbrance_amount** is used in reference to products or entities where an encumbrance can be described as a claim, right to, interest in, or legal liability that diminishes its value. Encumbrances are typically used in reference to real property or assets to reflect liabilities where part or whole of the property or asset has been used as collateral, security or pledged by a borrower to a lender. 
 
-The *amount* here refers to the carrying amount or accounting value for the encumbrance. It is a positive integer number of cents. 
-*(do we need an encumbrance_fv field for fair value?)*
+The *amount* here refers to the carrying amount or accounting value for the encumbrance. It is a positive integer number of cents. [See issue](https://github.com/SuadeLabs/fire/issues/12)
 
 ### EBA
 Asset Encumbrance has become a regulatory requirement in its own right and in the EBA's 2013 [public hearing][eba-pres] they describe:
