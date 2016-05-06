@@ -1,3 +1,4 @@
+---
 layout:		property
 title:		"encumbrance_amount"
 schemas:	[account, loan, collateral]
