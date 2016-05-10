@@ -28,7 +28,7 @@ The FIRE data format is supported by the [European Commission][euc], the [Open D
 
 ---
 
-Please get in touch (info at suade dot org) if you would like to participate from a knowledge or tech point of view.
+Please see the [contributing guidelines][contributing] or get in touch (info at suade dot org) if you would like to participate from a knowledge or tech point of view.
 
 ### Versioning
 Each release of the FIRE schemas can be found under their respective directories (labeled "v<version>"). If there's a "-dev" suffix, that means that it's a version that's currently in development and should not yet be used in a stable production environment, as there are still changes likely to be made. Versions without the "-dev" suffix are considered stable - and although changes may still be made to them (bug fixes, documentation, etc), those changes are all guaranteed to be backwards compatible with the initial release of that version.
