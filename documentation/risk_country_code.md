@@ -8,7 +8,6 @@ The **risk\_country\_code** represents location or jurisdiction of where the ris
 
 See also [**country_code**][cc].
 
-
 ---
 [end]: https://github.com/suadelabs/fire/blob/master/documentation/end_date.md
 [cc]: https://github.com/suadelabs/fire/blob/master/documentation/country_code.md
