@@ -149,7 +149,7 @@
     },
     "purpose": {
       "type": "string",
-      "enum": ["house_purchase", "first_time_buyer", "buy_to_let", "further_advance", "remortgage", "remortgage_other", "lifetime_mortgage", "bridging_loan"]
+      "enum": ["house_purchase", "first_time_buyer", "buy_to_let", "remortgage", "remortgage_other", "lifetime_mortgage", "bridging_loan", "other"]
     },
     "rate": {
       "description": "The full interest rate applied to the loan balance. Note that for tracker rates this includes the benchmark (ie. not the credit spread). Percentages represented as a decimal/float such that 1.5% is 0.015.",

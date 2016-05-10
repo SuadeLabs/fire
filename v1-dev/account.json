@@ -128,7 +128,7 @@
       "type": "string"
     },
     "first_payment_date": {
-      "description": "The first payment date for interest payments, often coincides with end_date.",
+      "description": "The first payment date for interest payments.",
       "type": "string",
       "format": "date-time"
     },
@@ -161,7 +161,7 @@
       "enum": ["deposit", "cash_management", "ci_service", "collateral", "clearing", "custody", "other"]
     },
     "rate": {
-      "description": "Interest rate applied to the account balance. Note that this therefore includes the base_rate (ie. not the spread).",
+      "description": "The full interest rate applied to the account balance in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).",
       "type": "number"
     },
     "rate_type": {
@@ -169,7 +169,7 @@
       "type": "string",
       "enum": ["fixed", "variable", "tracker", "combined"]
     },
-    "reporting_entity_lei_code": {
+    "reporting_lei": {
       "description": "The LEI code for the legal entity under which the account is being reported.",
       "type": "string"
     },
