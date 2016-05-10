@@ -8,7 +8,7 @@ schemas:	[account, loan]
 The **rate_type** property describes the nature of the interest rate being applied in the **rate** property. This is useful in determining future cash flows
 
 ### fixed
-A **fixed** rate type, as defined in the Bank of England's [Mortgage Lending & Administration Report (MLAR) Definitions][mlardef]:
+A **fixed** rate type, as defined in the Bank of England's [Mortgage Lending & Administration Report (MLAR) Definitions][mlar]:
 > means the rate of interest is fixed for a stated period. It should also include any products with a 'capped rate' (i.e. subject to a guaranteed maximum rate) and any products that are 'collared loans' (i.e. subject to a minimum and a maximum rate). Annual review or stabilised payment loans should be excluded (since the purpose is merely to smooth cash flow on variable rate loans);
 
 ### variable
@@ -20,4 +20,4 @@ A **tracker** rate type is a sub-category of **variable** rate types and indicat
 
 
 ---
-[mlardef]: http://www.bankofengland.co.uk/pra/documents/regulatorydata/mlar/sup_chapter16_annex19bg_20120401.pdf
+[mlar]: http://www.bankofengland.co.uk/pra/documents/regulatorydata/mlar/sup_chapter16_annex19bg_20120401.pdf
