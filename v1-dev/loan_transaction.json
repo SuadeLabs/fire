@@ -28,6 +28,6 @@
       "type": "string"
     }
   },
-  "required": ["id", "date", "loan_id", "amount", "type"],
+  "required": ["id", "date", "amount"],
   "additionalProperties": true
 }

@@ -187,9 +187,6 @@
       "enum": ["mortgage", "credit_card", "overdraft", "other"]
     }
   },
-  "required": [
-      "id", "date", "balance", "customers", "start_date", "end_date", "limit_amount", "purpose",
-      "rate", "rate_type", "repayment_type", "type"
-  ],
+  "required": ["id", "date", "balance"],
   "additionalProperties": true
 }

@@ -72,6 +72,6 @@
       "type": "string"
     }
   },
-  "required": ["id", "date", "credit_impaired"],
+  "required": ["id", "date"],
   "additionalProperties": true
 }
