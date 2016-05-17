@@ -173,6 +173,10 @@
       "description": "The LEI code for the legal entity under which the account is being reported.",
       "type": "string"
     },
+    "reporting_entity_name": {
+      "description": "The name of the reporting legal entity for MI purposes (as LEI code may not be available).",
+      "type": "string"
+    },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the account resides. In accordance with ISO 3166-1",
       "type": "string",
@@ -219,7 +223,9 @@
     "type": {
     	"description": "This is the type of the account with regards to common regulatory classifications.",
       "type": "string",
-      "enum": ["call", "cd", "checking", "current", "internet_only", "isa", "money_market", "nostro", "savings", "time_deposit", "vostro", "other"]
+      "enum": ["call", "cd", "checking", "current", "internet_only", "isa", "money_market", "nostro", "bonds", 
+               "savings", "payments", "time_deposit", "vostro", "private_banking", "other"
+      ]
     },
     "trade_date": {
     	"description": "The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
