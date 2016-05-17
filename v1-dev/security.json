@@ -22,7 +22,7 @@
       "type": "integer"
     },
     "balance": {
-      "description": "Currency amount represented as an integer number of cents/pence.",
+      "description": "Outstanding amount including accrued interest. Monetary integer number of cents/pence.",
       "type": "integer"
     },
     "base_rate": {
@@ -114,6 +114,11 @@
       "type": "string",
       "format": "date-time"
     },
+    "hqla_class": {
+      "description": "What is the HQLA classification of this asset?",
+      "type": "string",
+      "enum": ["1", "2a", "2b", "ineligible"]
+    },
     "isin_code": {
       "description": "The unique International Securities Identification Number for the security according to ISO 6166.",
       "type": "string",
@@ -125,10 +130,26 @@
       "type": "string",
       "format": "date-time"
     },
+    "movement": {
+      "type": "string",
+      "enum": ["cash", "asset", "other"]
+    }, 
+    "mtm_clean": {
+      "description": "The mark-to-market value of the security excluding interest. Monetary number of cents/pence.",
+      "type": "integer"
+    },
+    "mtm_dirty": {
+      "description": "The mark-to-market value of the security including interest. Monetary number of cents/pence.",
+      "type": "integer"
+    },
     "next_payment_date": {
       "description": "The next date at which interest will be paid or accrued_interest balance returned to zero.",
       "type": "string",
       "format": "date-time"
+    },
+    "notional": {
+      "description": "The notional value is the total amount of a security's underlying asset at its spot price. Monetary number of cents.",
+      "type": "integer"
     },
     "on_balance_sheet": {
     	"description": "Is the security reported on the balance sheet of the financial institution?",
@@ -144,13 +165,17 @@
       "type": "string"
     },
     "purpose": {
-      "description": "The purpose for which the security is being held.",
+      "description": "The purpose for which the security is being recorded.",
       "type": "string",
-      "enum": ["investment", "collateral"]
+      "enum": ["investment", "collateral", "reference"]
     },
     "rate": {
       "description": "The full interest rate applied to the security notional in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).",
       "type": "number"
+    },
+    "rehypothecation": {
+      "description": "Can the security be rehypothecated by the borrower?",
+      "type": "boolean"
     },
     "reporting_lei": {
       "description": "The LEI code for the legal entity under which the security is being reported.",
@@ -191,10 +216,6 @@
          "VG", "VI", "WF", "EH", "YE", "ZM", "ZW"
       ]
     },
-    "sft_leg": {
-      "type": "string",
-      "enum": ["cash", "asset", "other"]
-    },  
     "source": {
     	"description": "An identifier for the data source. Useful for analytics and MI purposes.",
     	"type": "string"
@@ -208,13 +229,22 @@
     	"description": "This is the type of the security with regards to common regulatory classifications.",
       "type": "string",
       "enum": [
-        "equity_held", "equity", "cash", "other", "cb_reserve", "cash_ratio_deposit", 
+        "equity_held", "share", "share_portfolio", "cash", "other", "cb_reserve", "cash_ratio_deposit", 
         "debt_held", "bond", "index_linked_gilt", "covered_bond", "abs", "residential_mbs", "non_residential_mbs", "frn", "govt_gteed_frn", 
-        "sft", "repo", "rev_repo", "sell_buy_back", "buy_sell_back", "bond_placed", "bond_received", "equity_placed", "equity_received"
+        "sft", "repo", "rev_repo", "sell_buy_back", "buy_sell_back", "bond_placed", "bond_received", "equity_placed", "equity_received", "margin_loan"
       ]
     },
     "trade_date": {
     	"description": "The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "transferable": {
+      "description": "Can the security be negotiated on the capital market?",
+      "type": "boolean"
+    },
+    "value_date": {
+      "description": "The timestamp that the trade or financial product was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
       "format": "date-time"
     }
