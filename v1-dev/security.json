@@ -76,6 +76,18 @@
          "VG", "VI", "WF", "EH", "YE", "ZM", "ZW"
       ]
     },
+    "cqs_standardised": {
+      "description": "The credit quality step for standardised approach.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 6
+    },
+    "cqs_irb": {
+      "description": "The credit quality step for internal ratings based approach.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12
+    },
     "currency_code": {
     	"description": "Actual currency of the security in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
       "type": "string",
@@ -114,16 +126,28 @@
       "type": "string",
       "format": "date-time"
     },
+    "guarantor_id" : {
+      "description": "The unique identifier for the guarantor within the financial institution.",
+      "type": "string"
+    },
     "hqla_class": {
       "description": "What is the HQLA classification of this asset?",
       "type": "string",
       "enum": ["1", "2a", "2b", "ineligible"]
+    },
+    "hqla_exclude": {
+      "description": "Excluded from HQLA reporting for operational or credit enhancement reasons.",
+      "type": "boolean"
     },
     "isin_code": {
       "description": "The unique International Securities Identification Number for the security according to ISO 6166.",
       "type": "string",
       "minLength": 12,
       "maxLength": 12
+    },
+    "issuer_id" : {
+      "description": "The unique identifier for the issuer within the financial institution.",
+      "type": "string"
     },
     "last_payment_date": {
       "description": "The final payment date for interest payments, often coincides with end_date.",
@@ -132,7 +156,7 @@
     },
     "movement": {
       "type": "string",
-      "enum": ["cash", "asset", "other"]
+      "enum": ["cash", "asset", "debt_issue", "cb_omo", "other"]
     }, 
     "mtm_clean": {
       "description": "The mark-to-market value of the security excluding interest. Monetary number of cents/pence.",
@@ -225,13 +249,14 @@
       "type": "string",
       "format": "date-time"
     },
-    "type": {
+    "type": { 
     	"description": "This is the type of the security with regards to common regulatory classifications.",
       "type": "string",
       "enum": [
-        "equity_held", "share", "share_portfolio", "cash", "other", "cb_reserve", "cash_ratio_deposit", 
-        "debt_held", "bond", "index_linked_gilt", "covered_bond", "abs", "residential_mbs", "non_residential_mbs", "frn", "govt_gteed_frn", 
-        "sft", "repo", "rev_repo", "sell_buy_back", "buy_sell_back", "bond_placed", "bond_received", "equity_placed", "equity_received", "margin_loan"
+        "equity_held", "share", "share_agg", "cash", "other", "cb_reserve", "cash_ratio_deposit", 
+        "debt_held", "bond", "index_linked_gilt", "covered_bond", "abs", "rmbs", "rmbs_trans", "cmbs", "frn", "govt_gteed_frn", 
+        "sft", "repo", "rev_repo", "sell_buy_back", "buy_sell_back", "bond_loan", "bond_borrow", "stock_loan", "stock_borrow", "margin_loan",
+        "debt_issue", "emtn", "mtn", "cp", "cd", "bond_amortising", "struct_note", "spv_mortgages", "spv_other"
       ]
     },
     "trade_date": {
@@ -240,7 +265,7 @@
       "format": "date-time"
     },
     "transferable": {
-      "description": "Can the security be negotiated on the capital market?",
+      "description": "Can the security be transferred between parties or negotiated on the capital market?",
       "type": "boolean"
     },
     "value_date": {
