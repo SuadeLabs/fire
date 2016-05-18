@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Aggregated Loan Schema",
+  "description": "An Aggregated Loan represents a grouping of loans into a single data object.",
+  "type": "object",
+  "allOf": [
+    {"$ref": "https://github.com/SuadeLabs/fire/blob/master/v1-dev/loan.json"},
+    {"properties": {
+    	"count": {
+    		"description": "Describes the number of loans aggregated into a single row.",
+    		"type": "integer",
+        "minimum": 2        
+    	},
+    	"balance_500keur": {
+    		"description": "Indicates that the balance of each loan within the aggregate had a balance greater than 500k EUR.",
+    		"type": "boolean"
+    	}
+    }
+  	}
+  ],
+  "required": ["count"],
+  "additionalProperties": true
+}
