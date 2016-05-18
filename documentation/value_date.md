@@ -1,0 +1,8 @@
+---
+layout:		property
+title:		"value_date"
+schemas:	[security, collateral]
+---
+
+# value_date
+The **value_date** represents the date the product or trade was valued by the institution and should corresond to the mark-to-market amounts for securities and derivatives or **value** for collateral or other assets where a liquid market does not exist.
