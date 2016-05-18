@@ -8,6 +8,7 @@ schemas:	[account, loan]
 The **purpose** property describes the reason behind the creation or usage of the financial product *as seen from the point of view of the financial institution*.
 
 ## Account
+
 ### deposit
 The **deposit** enum value refers to a retail deposit defined in accordance with Article 411 of the [CRR][crr]:
     
@@ -26,7 +27,7 @@ Assets placed as a **ci_service** should be considered unencumbered inaccordance
 ### collateral
 The **collateral** enum type identifies an account or deposit received as collateral and hence, not classified as a liability for the purposes of Article 27 and 29 of the [LCR][lcr]. Collateral held in an account should have a corresponding [**account_id**][account_id] in the collateral schema.
 
-### clearing
+### operational
 The **clearing** enum value indicates that the account or deposit is being maintained for clearing, settlement, custody or cash_management services in the context of an operational relationship and hence can be treated as a very short term exposure. *(further granularity needed or  exists?)*
 
 Clearing and comparable services from the [CRR][crr] Article 422.4:
@@ -43,9 +44,10 @@ Operational deposit from the [CRR][crr] Article 27.6:
 > Only that part of the deposit which is necessary to make use of the service of which the deposit is a by-product shall be treated as an operational deposit. The excess shall be treated as non-operational.
 
 ### custody
-As opposed to short-term definition within **clearing**, **custody** here refers to the long-term custody of financial assets such as those held for safekeeping by a custodian bank.
+As opposed to short-term definition within **operational**, **custody** here refers to the long-term custody of financial assets such as those held for safekeeping by a custodian bank.
 
 ### prime_brokerage
+Describes an account held for prime brokerage reasons but not including those contained above for operational reasons.
 
 ### other
 The **other** enum value can be used when none of the other enum values apply or the value is *unknown*.
