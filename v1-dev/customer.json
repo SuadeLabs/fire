@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Customer Schema",
-  "description": "Data schema to define a customer.",
+  "description": "Data schema to define a customer or legal entity related to a financial product or transaction.",
   "type": "object",
   "properties": {
     "id": {
@@ -21,7 +21,7 @@
       "type": "string"
     },
     "country_code": {
-      "description": "The customer country of residence. Two-letter country code as defined according to ISO 3166-1.",
+      "description": "The person or entity country of residence. Two-letter country code as defined according to ISO 3166-1.",
       "type": "string",
       "enum": [
          "AF", "AX", "AL", "DZ", "AS", "AD", "AO", "AI", "AQ", "AG", "AR", 
@@ -53,8 +53,14 @@
       "description": "Flag to determine if the customer credit quality is impaired.",
       "type": "boolean"
     },
-    "ecai_credit_quality": {
-      "description": "The credit quality step by a designated ECAI.",
+    "cqs_standardised": {
+      "description": "The credit quality step for standardised approach.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 6
+    },
+    "cqs_irb": {
+      "description": "The credit quality step for internal ratings based approach.",
       "type": "integer",
       "minimum": 1,
       "maximum": 12
@@ -62,12 +68,6 @@
     "lei_code": {
       "description": "The LEI code for the customer legal entity (for corporate customers).",
       "type": "string"
-    },
-    "isic_code": {
-      "description": "The UN ISIC standard industry and sector classification.",
-      "type": "integer",
-      "minimum": 0,
-      "maximum": 99999
     },
     "name": {
       "description": "The name of the customer to be used for display and reference purposes.",
@@ -81,8 +81,43 @@
       "description": "The name of the ultimate parent of customer to be used for display and reference purposes.",
       "type": "string"
     },
-    "post_code": {
-      "description": "Postal address of customer",
+    "risk_country_code": {
+      "description": "Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1",
+      "type": "string",
+      "enum": [
+         "AF", "AX", "AL", "DZ", "AS", "AD", "AO", "AI", "AQ", "AG", "AR", 
+         "AM", "AW", "AU", "AT", "AZ", "BS", "BH", "BD", "BB", "BY", "BE", 
+         "BZ", "BJ", "BM", "BT", "BO", "BQ", "BA", "BW", "BV", "BR", "IO", 
+         "BN", "BG", "BF", "BI", "CV", "KH", "CM", "CA", "KY", "CF", "TD", 
+         "CL", "CN", "CX", "CC", "CO", "KM", "CG", "CD", "CK", "CR", "CI", 
+         "HR", "CU", "CW", "CY", "CZ", "DK", "DJ", "DM", "DO", "EC", "EG", 
+         "SV", "GQ", "ER", "EE", "ET", "FK", "FO", "FJ", "FI", "FR", "GF", 
+         "PF", "TF", "GA", "GM", "GE", "DE", "GH", "GI", "GR", "GL", "GD", 
+         "GP", "GU", "GT", "GG", "GN", "GW", "GY", "HT", "HM", "VA", "HN", 
+         "HK", "HU", "IS", "IN", "ID", "IR", "IQ", "IE", "IM", "IL", "IT", 
+         "JM", "JP", "JE", "JO", "KZ", "KE", "KI", "KP", "KR", "KW", "KG", 
+         "LA", "LV", "LB", "LS", "LR", "LY", "LI", "LT", "LU", "MO", "MK", 
+         "MG", "MW", "MY", "MV", "ML", "MT", "MH", "MQ", "MR", "MU", "YT", 
+         "MX", "FM", "MD", "MC", "MN", "ME", "MS", "MA", "MZ", "MM", "NA", 
+         "NR", "NP", "NL", "NC", "NZ", "NI", "NE", "NG", "NU", "NF", "MP", 
+         "NO", "OM", "PK", "PW", "PS", "PA", "PG", "PY", "PE", "PH", "PN", 
+         "PL", "PT", "PR", "QA", "RE", "RO", "RU", "RW", "BL", "SH", "KN", 
+         "LC", "MF", "PM", "VC", "WS", "SM", "ST", "SA", "SN", "RS", "SC", 
+         "SL", "SG", "SX", "SK", "SI", "SB", "SO", "ZA", "GS", "SS", "ES", 
+         "LK", "SD", "SR", "SJ", "SZ", "SE", "CH", "SY", "TW", "TJ", "TZ", 
+         "TH", "TL", "TG", "TK", "TO", "TT", "TN", "TR", "TM", "TC", "TV", 
+         "UG", "UA", "AE", "GB", "US", "UM", "UY", "UZ", "VU", "VE", "VN", 
+         "VG", "VI", "WF", "EH", "YE", "ZM", "ZW"
+      ]
+    },
+    "sic_code": {
+      "description": "The UK SIC 2007 standard industry and sector classification.",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "source": {
+      "description": "The name of the source or origin of the data as given by the financial institution to be used for display and reference purposes.",
       "type": "string"
     },
     "type": {
@@ -92,10 +127,6 @@
         "investment_firm", "sspe", "ciu", "ceis", "insurer", "financial_holding", "other_financial",
         "pic", "credit_union", "deposit_broker"
       ]
-    },
-    "source": {
-      "description": "The name of the source or origin of the data as given by the financial institution to be used for display and reference purposes.",
-      "type": "string"
     }
   },
   "required": ["id", "date"],

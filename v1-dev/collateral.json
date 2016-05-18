@@ -64,6 +64,10 @@
       "type": "string",
       "format": "date-time"
     },
+    "source": {
+      "description": "An identifier for the data source. Useful for analytics and MI purposes.",
+      "type": "string"
+    },
     "start_date": {
       "description": "The start date for recognition of the collateral",
       "type": "string",
@@ -77,9 +81,10 @@
       "description": "The valuation as used by the bank for the collateral",
       "type": "integer"
     },
-    "source": {
-      "description": "An identifier for the data source. Useful for analytics and MI purposes.",
-      "type": "string"
+    "value_date": {
+      "description": "The timestamp that the trade or financial product was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
     }
   },
   "required": ["id", "date", "value"],
