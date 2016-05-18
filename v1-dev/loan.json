@@ -184,7 +184,7 @@
     },
     "type": {
       "type": "string",
-      "enum": ["mortgage", "credit_card", "overdraft", "other"]
+      "enum": ["mortgage", "commercial_property", "commercial", "personal", "auto", "trade_finance", "credit_card", "overdraft", "other"]
     }
   },
   "required": ["id", "date", "balance"],
