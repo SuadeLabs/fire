@@ -133,7 +133,7 @@
     "hqla_class": {
       "description": "What is the HQLA classification of this asset?",
       "type": "string",
-      "enum": ["1", "2a", "2b", "ineligible"]
+      "enum": ["i", "iia", "iib", "ineligible"]
     },
     "hqla_exclude": {
       "description": "Excluded from HQLA reporting for operational or credit enhancement reasons.",
@@ -242,7 +242,7 @@
     },
     "source": {
       "description": "An identifier for the data source. Useful for analytics and MI purposes.",
-      "type": "array",
+      "type": "string",
       "minItems": 1,
       "items": {
         "type": "string"
