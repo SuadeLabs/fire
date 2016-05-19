@@ -171,7 +171,7 @@
       "type": "string",
       "format": "date-time"
     },
-    "notional": {
+    "notional_amount": {
       "description": "The notional value is the total amount of a security's underlying asset at its spot price. Monetary number of cents.",
       "type": "integer"
     },

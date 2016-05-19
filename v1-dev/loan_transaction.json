@@ -30,7 +30,7 @@
       "items": {
         "type": "string"
       }
-    },
+    }
   },
   "required": ["id", "date", "amount"],
   "additionalProperties": true
