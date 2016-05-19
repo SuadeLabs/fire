@@ -50,29 +50,35 @@
       ]
     },
     "credit_impaired": {
-      "description": "Flag to determine if the entity's credit quality is considered impaired.",
+      "description": "Flag to determine if the customer credit quality is impaired.",
       "type": "boolean"
     },
-    "ecai_credit_quality": {
-      "description": "The credit quality step by a designated ECAI.",
+    "cqs_standardised": {
+      "description": "The credit quality step for standardised approach.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 6
+    },
+    "cqs_irb": {
+      "description": "The credit quality step for internal ratings based approach.",
       "type": "integer",
       "minimum": 1,
       "maximum": 12
     },
     "lei_code": {
-      "description": "The LEI code for the legal entity.",
+      "description": "The LEI code for the customer legal entity (for corporate customers).",
       "type": "string"
     },
     "name": {
-      "description": "The name of the entity to be used for display and reference purposes.",
+      "description": "The name of the customer to be used for display and reference purposes.",
       "type": "string"
     },
     "parent_id": {
-    	"description": "The unique identifier for the ultimate parent of the entity.",
-    	"type": "string"
+      "description": "The unique identifier for the ultimate parent of the customer.",
+      "type": "string"
     },
     "parent_name": {
-      "description": "The name of the ultimate parent of entity to be used for display and reference purposes.",
+      "description": "The name of the ultimate parent of customer to be used for display and reference purposes.",
       "type": "string"
     },
     "risk_country_code": {
@@ -121,7 +127,7 @@
     "type": {
       "type": "string",
       "enum": ["individual", "sme", "corporate", "other",
-        "financial", "natural_person", "sovereign", "central_bank", "local_authority", "regional_govt", "central_govt", "mdb", "credit_institution", 
+        "financial", "natural_person", "sovereign", "central_bank", "regional_govt", "central_govt", "mdb", "credit_institution", 
         "investment_firm", "sspe", "ciu", "ceis", "insurer", "financial_holding", "other_financial",
         "pic", "credit_union", "deposit_broker"
       ]
