@@ -66,7 +66,11 @@
     },
     "source": {
       "description": "An identifier for the data source. Useful for analytics and MI purposes.",
-      "type": "string"
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
     },
     "start_date": {
       "description": "The start date for recognition of the collateral",

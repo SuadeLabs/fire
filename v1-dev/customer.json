@@ -117,8 +117,12 @@
       "maximum": 99999
     },
     "source": {
-      "description": "The name of the source or origin of the data as given by the financial institution to be used for display and reference purposes.",
-      "type": "string"
+      "description": "An identifier for the data source. Useful for analytics and MI purposes.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
     },
     "type": {
       "type": "string",
