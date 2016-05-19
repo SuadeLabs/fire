@@ -135,6 +135,10 @@
       "type": "string",
       "enum": ["mortgage_lender", "spv", "other"]
     },
+    "product_name": {
+      "description": "The name of the product as given by the financial institution to be used for display and reference purposes.",
+      "type": "string"
+    },    
     "provision_amount": {
       "type": "integer",
       "minimum": 0
@@ -142,10 +146,6 @@
     "provision_type": {
       "type": "string",
       "enum": ["none", "other"]
-    },
-    "product_name": {
-      "description": "The name of the product as given by the financial institution to be used for display and reference purposes.",
-      "type": "string"
     },
     "purpose": {
       "type": "string",
@@ -160,6 +160,7 @@
       "enum": ["fixed", "variable", "tracker", "combined"]
     },
     "regulated": {
+      "description": "Is this loan regulated or unregulated?",
       "type": "boolean"
     },
     "repayment_type": {
@@ -167,6 +168,10 @@
       "type": "string",
       "enum": ["repayment", "interest_only", "combined", "other"]
     },
+    "secured": {
+      "description": "Is this loan secured or unsecured?",
+      "type": "boolean"
+    },    
     "securitised": {
       "type": "boolean"
     },
