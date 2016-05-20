@@ -21,7 +21,10 @@
     "type": {
       "description": "A loan transaction is an action that impacts the balance of the loan.",
       "type": "string",
-      "enum": ["advance", "further_advance", "interest", "interest_repayment", "capitalisation", "capital_repayment", "sale", "write_off", "other"]
+      "enum": [
+        "advance", "further_advance", "interest", "interest_repayment",
+        "capitalisation", "capital_repayment", "sale", "write_off", "other"
+      ]
     },
     "source": {
       "description": "An identifier for the data source. Useful for analytics and MI purposes.",
