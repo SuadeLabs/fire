@@ -4,7 +4,7 @@
   "description": "An Aggregated Account represents a grouping of accounts into a single data object.",
   "type": "object",
   "allOf": [{
-    "$ref": "https://github.com/SuadeLabs/fire/blob/master/v1-dev/account.json"
+    "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/account.json"
   }],
   "properties": {
     "count": {

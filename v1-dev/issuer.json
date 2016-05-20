@@ -4,7 +4,7 @@
   "description": "Data schema to define an issuer for a security.",
   "type": "object",
   "allOf": [{
-    "$ref": "https://github.com/SuadeLabs/fire/blob/master/v1-dev/entity.json"
+    "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/entity.json"
   }],
   "required": ["id", "date", "lei_code", "type"],
   "additionalProperties": true

@@ -4,7 +4,7 @@
   "description": "An Aggregated Loan represents a grouping of loans into a single data object.",
   "type": "object",
   "allOf": [{
-    "$ref": "https://github.com/SuadeLabs/fire/blob/master/v1-dev/loan.json"
+    "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/loan.json"
   }],
   "properties": {
     "count": {
