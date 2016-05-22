@@ -81,6 +81,11 @@
       "description": "The name of the ultimate parent of customer to be used for display and reference purposes.",
       "type": "string"
     },
+    "product_count": {
+      "description": "The credit quality step for standardised approach.",
+      "type": "integer",
+      "minimum": 1
+    },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1",
       "type": "string",
@@ -123,6 +128,11 @@
       "items": {
         "type": "string"
       }
+    },
+    "start_date": {
+      "description": "The date that the customer first became a customer. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
     },
     "type": {
       "type": "string",
