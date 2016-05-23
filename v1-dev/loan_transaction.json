@@ -19,7 +19,7 @@
       "type": "integer"
     },
     "type": {
-      "description": "A loan transaction is an action that impacts the balance of the loan.",
+      "description": "The type of impact on the balance of the loan.",
       "type": "string",
       "enum": [
         "advance", "further_advance", "interest", "interest_repayment",
