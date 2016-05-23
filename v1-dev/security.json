@@ -191,7 +191,7 @@
     "purpose": {
       "description": "The purpose for which the security is being recorded.",
       "type": "string",
-      "enum": ["investment", "collateral", "reference"]
+      "enum": ["investment", "collateral", "reference", "other"]
     },
     "rate": {
       "description": "The full interest rate applied to the security notional in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).",
@@ -262,7 +262,7 @@
         "abs", "rmbs", "rmbs_trans", "cmbs", "frn", "govt_gteed_frn", "sft", "repo",
         "rev_repo", "sell_buy_back", "buy_sell_back", "bond_loan", "bond_borrow",
         "stock_loan", "stock_borrow", "margin_loan", "debt_issue", "emtn", "mtn",
-        "cp", "cd", "bond_amortising", "struct_note", "spv_mortgages", "spv_other"
+        "commercial_paper", "cd", "bond_amortising", "struct_note", "spv_mortgages", "spv_other"
       ]
     },
     "trade_date": {
