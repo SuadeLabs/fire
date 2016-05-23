@@ -12,9 +12,9 @@
       "type": "integer",
       "minimum": 2
     },
-    "balance_500keur": {
-      "description": "Indicates that the balance of each loan within the aggregate had a balance greater than 500k EUR.",
-      "type": "boolean"
+    "minimum_balance_eur": {
+      "description": "Indicates the minimum balance, in Euros, of each loan within the aggregate.",
+      "type": "integer"
     }
   },
   "required": ["count"],
