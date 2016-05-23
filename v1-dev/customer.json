@@ -8,7 +8,7 @@
   }],
   "properties": {
     "product_count": {
-      "description": "The credit quality step for standardised approach.",
+      "description": "The number of active products/trade this customer has with the firm.",
       "type": "integer",
       "minimum": 1
     },
