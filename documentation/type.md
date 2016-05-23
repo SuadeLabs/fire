@@ -39,6 +39,7 @@ LCR Article 13:
 
 ### personal
 LCR Article 13: 
+> loans and credit facilities to individuals resident in a Member State for personal, family or household consumption purposes.
 
 ### commercial 
 LCR Article 13: 
@@ -64,7 +65,12 @@ Only loans where there is a one-to-one correspondence between the loan and a spe
 ### credit_card
 A **credit_card** is credit facility typically secured by a deposit account or equity in the borrower's property.
 
-### other_credit_facility
+### credit_facility, multiccy_facility
+From Annex I of the [CRR][crr]:
+> agreements to lend, purchase securities, provide guarantees or acceptance facilities
+
+### other
+Other refers to a type of security not covered by the above. If you find yourself using this often, please [contribute][contributing].
 
 ### overdraft
 *put as loan type or deduce from a negative balance?*
