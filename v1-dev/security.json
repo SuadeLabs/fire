@@ -240,8 +240,8 @@
         "VG", "VI", "WF", "EH", "YE", "ZM", "ZW"
       ]
     },
-    "source": {
-      "description": "An identifier for the data source. Useful for analytics and MI purposes.",
+    "sources": {
+      "description": "Identifiers for data sources. Useful for analytics and MI purposes.",
       "type": "string",
       "minItems": 1,
       "items": {
