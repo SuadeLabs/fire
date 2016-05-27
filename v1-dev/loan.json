@@ -41,11 +41,6 @@
       "type": "string",
       "enum": ["ZERO", "UKBRBASE", "FDTR"]
     },
-    "charge_on_collateral": {
-      "description": "Lender charge on property, 1 indicates first charge, 2 second and so on. 0 indicates a combination of charge levels.",
-      "type": "integer",
-      "minimum": 0
-    },
     "currency_code": {
       "type": "string",
       "enum": [
