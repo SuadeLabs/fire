@@ -55,7 +55,7 @@
       ]
     },
     "encumbrance_amount": {
-      "description": "The amount of the account that is encumbered by potential future commitments or legal liabilities. Represented as an integer number of cents/pence.",
+      "description": "The amount of the collateral that is encumbered by potential future commitments or legal liabilities. Represented as an integer number of cents/pence.",
       "type": "integer",
       "min": 0
     },
@@ -91,7 +91,7 @@
       "type": "integer"
     },
     "value_date": {
-      "description": "The timestamp that the trade or financial product was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "description": "The timestamp that the collateral was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
       "format": "date-time"
     }
