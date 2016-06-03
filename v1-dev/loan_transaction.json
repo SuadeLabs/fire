@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Loan Transaction Schema",
-  "description": "A loan_transaction is an event that has an impact on a loan, typically the balance.",
+  "description": "A Loan Transaction is an event that has an impact on a loan, typically the balance.",
   "type": "object",
   "properties": {
     "id": {
@@ -12,11 +12,11 @@
       "type": "string",
       "format": "date-time"
     },
-    "loan_id": {
-      "type": "string"
-    },
     "amount": {
       "type": "integer"
+    },    
+    "loan_id": {
+      "type": "string"
     },
     "type": {
       "description": "The type of impact on the balance of the loan.",
