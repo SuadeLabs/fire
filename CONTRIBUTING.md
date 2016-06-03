@@ -3,4 +3,4 @@
 3. Make a pull request: [https://help.github.com/articles/using-pull-requests/](https://help.github.com/articles/using-pull-requests/)
 
 
-Ensure that you follow the community guidelines: [https://suade.org/fire/guidelines.html](https://suade.org/fire/guidelines.html)
+Ensure that you follow the community guidelines: [https://suade.org/fire/guidelines/](https://suade.org/fire/guidelines/)
