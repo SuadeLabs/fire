@@ -127,7 +127,7 @@
     "type": {
       "type": "string",
       "enum": [
-        "individual", "sme", "corporate", "other", "financial", "natural_person",
+        "individual", "sme", "corporate", "other", "financial", "natural_person", "intl_org",
         "sovereign", "central_bank", "regional_govt", "central_govt", "mdb", "credit_institution",
         "investment_firm", "sspe", "ciu", "ceis", "insurer", "financial_holding", "other_financial",
         "pic", "credit_union", "deposit_broker"
