@@ -12,7 +12,7 @@ schemas:    [account, collateral, customer, loan]
 
 ---
 
-# Customer
+# Customer, Issuer, Guarantor, Entity
 Article 411 of the [CRR][crr]:
 > financial customer‧ means a customer that performs one or more of the activities listed in Annex I to Directive 2013/36/EU as its main business, or is one of the following:
 > (a) a credit institution;
@@ -22,6 +22,34 @@ Article 411 of the [CRR][crr]:
 > (e) a non-open ended investment scheme;
 > (f) an insurance undertaking;
 > (g) a financial holding company or mixed-financial holding company.
+
+### mdb
+Multilateral Development Banks are defined in the [CRR][crr] Article 117:
+> The Inter-American Investment Corporation, the Black Sea Trade and Development Bank, the Central American Bank for Economic Integration and the CAF-Development Bank of Latin America shall be considered multilateral development banks.
+> ...
+> (a) the International Bank for Reconstruction and Development;
+> (b) the International Finance Corporation;
+> (c) the Inter-American Development Bank;
+> (d) the Asian Development Bank;
+> (e) the African Development Bank;
+> (f) the Council of Europe Development Bank;
+> (g) the Nordic Investment Bank;
+> (h) the Caribbean Development Bank;
+> (i) the European Bank for Reconstruction and Development;
+> (j) the European Investment Bank;
+> (k) the European Investment Fund;
+> (l) the Multilateral Investment Guarantee Agency;
+> (m) the International Finance Facility for Immunisation;
+> (n) the Islamic Development Bank.
+
+### intl_org
+International Organisations are defined in the [CRR][crr] Article 118:
+> (a) the Union;
+> (b) the International Monetary Fund;
+> (c) the Bank for International Settlements;
+> (d) the European Financial Stability Facility;
+> (e) the European Stability Mechanism;
+> (f) an international financial institution established by two or more Member States, which has the purpose to mobilise funding and provide financial assistance to the benefit of its members that are experiencing or threatened by severe financing problems.
 
 ---
 
