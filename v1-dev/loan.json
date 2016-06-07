@@ -169,8 +169,7 @@
     "purpose": {
       "type": "string",
       "enum": [
-        "house_purchase", "first_time_buyer", "buy_to_let", "remortgage",
-        "remortgage_other", "lifetime_mortgage", "bridging_loan", "other"
+        "house_purchase", "first_time_buyer", "buy_to_let", "remortgage", "remortgage_other", "lifetime_mortgage", "bridging_loan", "other"
       ]
     },
     "rate": {
