@@ -20,7 +20,7 @@
     "accrued_interest": {
       "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as an integer number of cents/pence.",
       "type": "integer"
-    },
+    },    
     "balance": {
       "description": "Outstanding amount including accrued interest. Monetary integer number of cents/pence.",
       "type": "integer"
@@ -257,12 +257,12 @@
       "description": "This is the type of the security with regards to common regulatory classifications.",
       "type": "string",
       "enum": [
-        "equity_held", "share", "share_agg", "cash", "other", "cb_reserve",
-        "cash_ratio_deposit", "debt_held", "bond", "index_linked_gilt", "covered_bond",
-        "abs", "rmbs", "rmbs_trans", "cmbs", "frn", "govt_gteed_frn", "sft", "repo",
-        "rev_repo", "sell_buy_back", "buy_sell_back", "bond_loan", "bond_borrow",
-        "stock_loan", "stock_borrow", "margin_loan", "debt_issue", "emtn", "mtn",
-        "commercial_paper", "cd", "bond_amortising", "struct_note", "spv_mortgages", "spv_other"
+        "equity_held", "share", "share_agg", "cash", "other", "cb_reserve", "cash_ratio_deposit",
+        "debt_held", "bond", "index_linked_gilt", "covered_bond", "bond_amortising", 
+          "abs", "rmbs", "rmbs_trans", "cmbs", "frn",
+        "sft", "repo", "rev_repo", "sell_buy_back", "buy_sell_back", "bond_loan", "bond_borrow",
+          "stock_loan", "stock_borrow", "margin_loan", 
+        "debt_issue", "emtn", "mtn", "commercial_paper", "cd", "struct_note", "spv_mortgages", "spv_other"
       ]
     },
     "trade_date": {
