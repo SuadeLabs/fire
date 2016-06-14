@@ -18,6 +18,10 @@
     "loan_id": {
       "type": "string"
     },
+    "movement": {
+      "type": "string",
+      "enum": ["none", "acquired", "sold", "securitised", "other"]
+    },    
     "type": {
       "description": "The type of impact on the balance of the loan.",
       "type": "string",
