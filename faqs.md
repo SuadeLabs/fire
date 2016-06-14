@@ -4,8 +4,7 @@ title: "FIRE FAQs"
 ---
 
 ### Is FIRE a data model for my database?
-No. The FIRE Data Format is designed to define the format and definition for the transmission of data rather than the storage of that data. Financial institution data as a whole lends itself naturally to a relational data model.
-Depending on the use-case, FIRE data might be better stored in a non-relational or denormalised form.
+No. The FIRE Data Format is designed to define the format and definition for the transmission of data rather than the storage of that data. Financial data as a whole does lend itself naturally to a relational data model, but depending on the use-case, FIRE data might be better stored in a non-relational, graph or denormalised form.
 
 ### Given that FIRE is not a data model recipe, why do you have multiple schemas and relational ids that suggests an underlying relational table design?
 There are a few reasons for separating data into "normalised" components:
