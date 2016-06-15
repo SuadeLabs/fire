@@ -1,4 +1,4 @@
----
+ ---
 layout:     property
 title:      "type"
 schemas:    [account, collateral, customer, loan]
@@ -13,6 +13,85 @@ schemas:    [account, collateral, customer, loan]
 ---
 
 # Customer, Issuer, Guarantor, Entity
+TREE
+
+### natural_person
+Natural person refers to a human being as you would expect. It is further defined in the [Data Protection Directive][dpd]: 
+> Article 2(a):
+> (a) ... an identifiable person is one who can be identified, directly or indirectly, in particular by reference to an identification number or to one or more factors specific to his physical, physiological, mental, economic, cultural or social identity
+
+
+### individual
+Individual is a UK specific definition which is slightly broader than a natural person and defined in the FCA Handbook Glossary under [individual][fca-indiv]:
+> (a) a natural person; or
+> (b) a partnership consisting of two or three persons not all of whom are bodies corporate; or
+> (c) an unincorporated body of persons which does not consist entirely of bodies corporate and is not a partnership.
+
+### sme
+Definition of an SME is based on a set of criteria, while in theory it is possible for this to be a dynamic field based on other relevant data provided (employee count, turnover etc.), often times the data is unavailable or not current and hence firm may wish to identify SMEs directly.
+In this scenario, an SME type will be assumed to comply with the [EU SME Recommendation][sme], further explained in [What is an SME?][sme-what] broadly as:
+
+| Company category | Staff headcount | Turnover (or) | Balance sheet total |
+| Medium-sized     | < 250           | ≤ € 50 m      | ≤ € 43 m            |
+| Small            | < 50            | ≤ € 10 m      | ≤ € 10 m            |
+| Micro            | < 10            | ≤ € 2 m       | ≤ € 2 m             |
+
+
+### corporate 
+
+### other 
+Other means it is known to **not** be one of the other types. If type is unknown it should just be left blank.
+
+### intl_org
+This is a list, CRR 118, referenced in LCR 10(g)
+
+sovereign, 
+central_bank, 
+regional_govt, 
+central_govt, 
+pse,
+credit_institution, 
+investment_firm, 
+sspe, 
+ciu, 
+ceis, 
+insurer, 
+financial_holding, 
+other_financial, 
+pic, 
+credit_union, 
+deposit_broker
+
+```bash
+├── individual
+│   ├── partnership
+│   └── natural_person
+├── corporate
+│   └── sme
+├── financial
+│   ├── central_bank
+│   ├── credit_institution
+│   ├── investment_firm
+│   ├── sspe
+│   ├── ciu
+│   ├── ceis
+│   ├── pic
+│   ├── insurer
+│   ├── financial_holding
+│   └── other_financial
+├── pse
+│   ├── local_authority
+│   ├── regional_govt
+│   └── central_govt
+├── sovereign
+├── intl_org
+├── mdb
+├── credit_union
+└── deposit_broker
+```
+
+
+### financial
 Article 411 of the [CRR][crr]:
 > financial customer‧ means a customer that performs one or more of the activities listed in Annex I to Directive 2013/36/EU as its main business, or is one of the following:
 > (a) a credit institution;
@@ -22,6 +101,20 @@ Article 411 of the [CRR][crr]:
 > (e) a non-open ended investment scheme;
 > (f) an insurance undertaking;
 > (g) a financial holding company or mixed-financial holding company.
+
+> 'financial sector entity' means any of the following:
+> (a) an institution;
+> (b) a financial institution;
+> (c) an ancillary services undertaking included in the consolidated financial situation of an institution;
+> (d) an insurance undertaking;
+> (e) a third-country insurance undertaking;
+> (f) a reinsurance undertaking;
+> (g) a third-country reinsurance undertaking;
+> (h) an insurance holding company;
+> (i) a mixed-activity holding company
+> (j) a mixed-activity insurance holding company as defined in point (g) of Article 212(1) of Directive 2009/138/EC;
+> (k) an undertaking excluded from the scope of Directive 2009/138/EC in accordance with Article 4 of that Directive;
+> (l) a third-country undertaking with a main business comparable to any of the entities referred to in points (a) to (k);
 
 ### mdb
 Multilateral Development Banks are defined in the [CRR][crr] Article 117:
@@ -194,3 +287,5 @@ Other refers to a type of security not covered by the above. If you find yoursel
 [mlar]: http://www.bankofengland.co.uk/pra/documents/regulatorydata/mlar/sup_chapter16_annex19bg_20120401.pdf
 [sftr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32015R2365
 [contributing]: https://github.com/SuadeLabs/fire/blob/master/CONTRIBUTING.md
+[dpd]: http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:31995L0046:en:HTML
+[fca-indiv]: https://www.handbook.fca.org.uk/handbook/glossary/G3173.html
