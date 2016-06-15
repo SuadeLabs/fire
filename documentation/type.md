@@ -2,65 +2,28 @@
 layout:     property
 title:      "type"
 schemas:    [account, collateral, customer, loan]
----
+--- 
+
 
 # type
 
 
 # Account
-"call", "cd", "checking", "current", "internet_only", "isa", "money_market", "nostro", "savings", "time_deposit", "vostro", "other"
-
----
+### call
+### cd
+### checking
+### current
+### internet_only
+### isa
+### money_market
+### nostro
+### savings
+### time_deposit
+### vostro
+### other
 
 # Customer, Issuer, Guarantor, Entity
-TREE
-
-### natural_person
-Natural person refers to a human being as you would expect. It is further defined in the [Data Protection Directive][dpd]: 
-> Article 2(a):
-> (a) ... an identifiable person is one who can be identified, directly or indirectly, in particular by reference to an identification number or to one or more factors specific to his physical, physiological, mental, economic, cultural or social identity
-
-
-### individual
-Individual is a UK specific definition which is slightly broader than a natural person and defined in the FCA Handbook Glossary under [individual][fca-indiv]:
-> (a) a natural person; or
-> (b) a partnership consisting of two or three persons not all of whom are bodies corporate; or
-> (c) an unincorporated body of persons which does not consist entirely of bodies corporate and is not a partnership.
-
-### sme
-Definition of an SME is based on a set of criteria, while in theory it is possible for this to be a dynamic field based on other relevant data provided (employee count, turnover etc.), often times the data is unavailable or not current and hence firm may wish to identify SMEs directly.
-In this scenario, an SME type will be assumed to comply with the [EU SME Recommendation][sme], further explained in [What is an SME?][sme-what] broadly as:
-
-| Company category | Staff headcount | Turnover (or) | Balance sheet total |
-| Medium-sized     | < 250           | ≤ € 50 m      | ≤ € 43 m            |
-| Small            | < 50            | ≤ € 10 m      | ≤ € 10 m            |
-| Micro            | < 10            | ≤ € 2 m       | ≤ € 2 m             |
-
-
-### corporate 
-
-### other 
-Other means it is known to **not** be one of the other types. If type is unknown it should just be left blank.
-
-### intl_org
-This is a list, CRR 118, referenced in LCR 10(g)
-
-sovereign, 
-central_bank, 
-regional_govt, 
-central_govt, 
-pse,
-credit_institution, 
-investment_firm, 
-sspe, 
-ciu, 
-ceis, 
-insurer, 
-financial_holding, 
-other_financial, 
-pic, 
-credit_union, 
-deposit_broker
+Customer, issuer, guarantor and entity schemas share a lot of common type attributes so they are grouped together here. Also, due to the complexity of this property, the variety of reporting granularity and the larger issue of data quality at firms, the fields are not all mutually exclusive and should be thought of more as a tree rather than unique items:
 
 ```bash
 ├── individual
@@ -89,6 +52,38 @@ deposit_broker
 ├── credit_union
 └── deposit_broker
 ```
+
+### individual
+Individual is a UK specific definition which is slightly broader than a natural person and defined in the FCA Handbook Glossary under [individual][fca-indiv]:
+> (a) a natural person; or
+> (b) a partnership consisting of two or three persons not all of whom are bodies corporate; or
+> (c) an unincorporated body of persons which does not consist entirely of bodies corporate and is not a partnership.
+
+### natural_person
+Natural person refers to a human being as you would expect. It is further defined in the [Data Protection Directive][dpd]: 
+> Article 2(a):
+> (a) ... an identifiable person is one who can be identified, directly or indirectly, in particular by reference to an identification number or to one or more factors specific to his physical, physiological, mental, economic, cultural or social identity
+
+### partnership
+As defined in the FCA Handbook referencing the Financial Securities and Markets Act:
+> (in accordance with section 417(1) of the Act (Definitions)) any partnership, including a partnership constituted under the law of a country or territory outside the United Kingdom, but not including a limited liability partnership.
+
+### sme
+Definition of an SME is based on a set of criteria, while in theory it is possible for this to be a dynamic field based on other relevant data provided (employee count, turnover etc.), often times the data is unavailable or not current and hence firm may wish to identify SMEs directly.
+In this scenario, an SME type will be assumed to comply with the [EU SME Recommendation][sme], further explained in [What is an SME?][sme-what] broadly as:
+
+Company category | Staff headcount | Turnover (or) | Balance sheet total 
+-----------------|-----------------|---------------|--------------------
+Medium-sized     | < 250           | ≤ € 50 m      | ≤ € 43 m            
+Small            | < 50            | ≤ € 10 m      | ≤ € 10 m            
+Micro            | < 10            | ≤ € 2 m       | ≤ € 2 m             
+
+
+### other 
+Other means it is known to **not** be one of the other types. If type is unknown it should just be left blank.
+
+### intl_org
+This is a list, CRR 118, referenced in LCR 10(g)
 
 
 ### financial
@@ -144,7 +139,26 @@ International Organisations are defined in the [CRR][crr] Article 118:
 > (e) the European Stability Mechanism;
 > (f) an international financial institution established by two or more Member States, which has the purpose to mobilise funding and provide financial assistance to the benefit of its members that are experiencing or threatened by severe financing problems.
 
----
+
+### corporate 
+### sovereign, 
+### central_bank
+### regional_govt
+### central_govt
+### pse
+### credit_institution
+### investment_firm
+### sspe
+### ciu
+### ceis 
+### insurer
+### financial_holding
+### other_financial
+### pic 
+### credit_union
+### deposit_broker
+
+
 
 # Loan
 ### trade_finance
@@ -196,9 +210,55 @@ Other refers to a type of security not covered by the above. If you find yoursel
 ### overdraft
 *put as loan type or deduce from a negative balance?*
 
----
+
+
 
 # Security
+
+```bash
+├── equity_held
+│   ├── share
+│   └── share_agg
+├── cb_reserve
+├── cb_facility
+├── cash_ratio_deposit
+├── debt_held
+│   ├── bond
+│   ├── bond_amortising
+│   ├── index_linked_gilt
+│   ├── covered_bond
+│   ├── frn
+│   └── abs
+│       ├── abs_auto 
+│       ├── abs_sme
+│       ├── abs_consumer
+│       ├── abs_other
+│       └── mbs
+│           ├── rmbs
+│           ├── rmbs_trans
+│           └── cmbs
+│   
+├── sft
+│   ├── margin_loan 
+│   ├── repo
+│   │   ├── bond_loan 
+│   │   ├── stock_loan
+│   │   └── sell_buy_back 
+│   └── rev_repo
+│       ├── bond_borrow 
+│       ├── stock_borrow
+│       └── buy_sell_back 
+├── debt_issue
+│   ├── commercial_paper
+│   ├── covered_bond_issue 
+│   ├── struct_note
+│   ├── spv_mortgages
+│   ├── spv_other
+│   └── mtn
+│       └── emtn
+├── cash
+└── other
+```
 
 ### cash
 A cash or cash-equivalent security. Consider a securitisation of cash deposits.
@@ -238,8 +298,7 @@ Any asset-backed security.
 A residential mortgage-backed security (a subclass of an abs).
 
 ### rmbs_trans
-This type value is in order to indicate whether a the security is subject to transitional provisions for securitisations backed by residential loans:
-
+This type value is in order to indicate whether a the security is subject to transitional provisions for securitisations backed by residential loans:  
 [LCR][lcr] Article 37:
 > 1.   By derogation from Article 13, securitisations issued before 1 October 2015, where the underlying exposures are residential loans as referred to in point (g)(i) of Article 13(2), shall qualify as Level 2B assets if they meet all the requirements set out in Article 13 other than the loan-to-value or loan-to-income requirements set out in that point (g)(i) of Article 13(2).
 
