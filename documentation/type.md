@@ -50,7 +50,8 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 ├── intl_org
 ├── mdb
 ├── credit_union
-└── deposit_broker
+├── deposit_broker
+└── other
 ```
 
 ### individual
