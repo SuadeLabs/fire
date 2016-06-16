@@ -238,7 +238,6 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │           ├── rmbs
 │           ├── rmbs_trans
 │           └── cmbs
-│   
 ├── sft
 │   ├── margin_loan 
 │   ├── repo
@@ -349,3 +348,6 @@ Other refers to a type of security not covered by the above. If you find yoursel
 [contributing]: https://github.com/SuadeLabs/fire/blob/master/CONTRIBUTING.md
 [dpd]: http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:31995L0046:en:HTML
 [fca-indiv]: https://www.handbook.fca.org.uk/handbook/glossary/G3173.html
+[sme]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32003H0361
+[sme-what]: http://ec.europa.eu/growth/smes/business-friendly-environment/sme-definition/index_en.htm
+
