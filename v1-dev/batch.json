@@ -37,7 +37,8 @@
             "type": "string",
             "format": "uri"
           }
-        }
+        },
+        "required": ["rel", "href"]
       }
     }
   },
