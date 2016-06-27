@@ -45,7 +45,8 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 ├── pse
 │   ├── local_authority
 │   ├── regional_govt
-│   └── central_govt
+│   ├── central_govt
+│   └── other_pse
 ├── sovereign
 ├── intl_org
 ├── mdb
