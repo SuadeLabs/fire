@@ -20,6 +20,10 @@
       "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as an integer number of cents/pence.",
       "type": "integer"
     },
+    "arrears_balance": {
+      "description": "The balance of the capital amount that is considered to be in arrears (for overdrafts/credit cards). Monetary type represented as an integer number of cents/pence.",
+      "type": "integer"
+    },    
     "balance": {
       "description": "Currency amount represented as an integer number of cents/pence.",
       "type": "integer"
@@ -228,7 +232,7 @@
       "description": "This is the type of the account with regards to common regulatory classifications.",
       "type": "string",
       "enum": [
-        "call", "cd", "checking", "current", "internet_only", "isa", "money_market",
+        "call", "cd", "checking", "current", "credit_card", "internet_only", "isa", "money_market",
         "nostro", "bonds", "savings", "payments", "time_deposit", "vostro",
         "private_banking", "other"
       ]
@@ -239,6 +243,6 @@
       "format": "date-time"
     }
   },
-  "required": ["id", "date", "balance"],
+  "required": ["id", "date"],
   "additionalProperties": true
 }
