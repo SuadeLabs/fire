@@ -140,8 +140,8 @@
       "description": "The amount that is expected to be received at the next_receive_date. Monetary number of cents.",
       "type": "integer"
     },
-    "next_refix_date": {
-      "description": "The date on which the periodic payment term and conditions of a contract agreement are established.",
+    "next_reset_date": {
+      "description": "The date on which the periodic payment term and conditions of a contract agreement are reset/re-established.",
       "type": "string",
       "format": "date-time"
     },  
@@ -261,6 +261,6 @@
       "format": "date-time"
     }
   },
-  "required": ["id", "date", "balance"],
+  "required": ["id", "date"],
   "additionalProperties": true
 }
