@@ -117,22 +117,17 @@
       "description": "The mark-to-market value of the security including interest. Monetary number of cents/pence.",
       "type": "integer"
     },
-    "next_excercise_date": {
+    "next_exercise_date": {
       "description": "The next date at which the option can be exercised.",
-      "type": "string",
-      "format": "date-time"
-    },
-    "next_payment_date": {
-      "description": "The next date at which interest will be paid or accrued_interest balance returned to zero.",
       "type": "string",
       "format": "date-time"
     },
     "next_payment_amount": {
       "description": "The amount that will need to be paid at the next_payment_date. Monetary number of cents.",
       "type": "integer"
-    },
-    "next_receive_date": {
-      "description": "The next date at which interest will be received or accrued_interest balance returned to zero.",
+    },    
+    "next_payment_date": {
+      "description": "The next date at which interest will be paid or accrued_interest balance returned to zero.",
       "type": "string",
       "format": "date-time"
     },
@@ -140,11 +135,16 @@
       "description": "The amount that is expected to be received at the next_receive_date. Monetary number of cents.",
       "type": "integer"
     },
+    "next_receive_date": {
+      "description": "The next date at which interest will be received or accrued_interest balance returned to zero.",
+      "type": "string",
+      "format": "date-time"
+    },
     "next_reset_date": {
       "description": "The date on which the periodic payment term and conditions of a contract agreement are reset/re-established.",
       "type": "string",
       "format": "date-time"
-    },  
+    },
     "notional_amount": {
       "description": "The notional value is the total amount of a security's underlying asset at its spot price. Monetary number of cents.",
       "type": "integer"
