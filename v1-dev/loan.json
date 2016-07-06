@@ -147,6 +147,10 @@
       "description": "The original notional amount of the loan.",
       "type": "integer"
     },
+    "on_balance_sheet": {
+      "description": "Is the loan reported on the balance sheet of the financial institution?",
+      "type": "boolean"
+    },
     "originator_id": {
       "type": "string"
     },
