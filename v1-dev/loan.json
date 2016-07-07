@@ -189,6 +189,11 @@
       "description": "Is this loan regulated or unregulated?",
       "type": "boolean"
     },
+    "repayment_frequency": {
+      "description": "Repayment frequency of the loan refers to how often the repayments occur.",
+      "type": "string",
+      "enum": ["daily", "weekly", "bi_weekly", "monthly", "quarterly", "semi_annually", "annually", "at_maturity"] 
+    },    
     "repayment_type": {
       "description": "Repayment type of the loan refers to whether the customer will be repaying capital + interest, just interest or a combination of the two.",
       "type": "string",
