@@ -27,7 +27,8 @@
       "type": "string",
       "enum": [
         "advance", "further_advance", "interest", "interest_repayment",
-        "capitalisation", "capital_repayment", "sale", "write_off", "other"
+        "capitalisation", "capital_repayment", "sale", "write_off",
+        "due", "received", "other"
       ]
     },
     "sources": {
