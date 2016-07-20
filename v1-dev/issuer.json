@@ -7,6 +7,6 @@
     "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/entity.json"
   }],
   "properties": {},
-  "required": ["id", "date", "lei_code", "type"],
+  "required": ["id", "date"],
   "additionalProperties": true
 }
