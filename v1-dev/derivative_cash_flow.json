@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Swap Schema",
-  "description": "A swap is two-way derivative contract where two parties exchange cash flows (or assets) derived from an underlying reference index, security or financial instrument.",
+  "title": "Derivative Cash Flow Schema",
+  "description": "A derivative cash flow where two parties exchange cash flows (or assets) derived from an underlying reference index, security or financial instrument.",
   "type": "object",
   "properties": {
     "id": {
