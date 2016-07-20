@@ -259,6 +259,6 @@
       ]
     }
   },
-  "required": ["id", "date", "balance"],
+  "required": ["id", "date"],
   "additionalProperties": true
 }
