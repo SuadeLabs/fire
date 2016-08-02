@@ -49,7 +49,11 @@
       "LK", "SD", "SR", "SJ", "SZ", "SE", "CH", "SY", "TW", "TJ", "TZ",
       "TH", "TL", "TG", "TK", "TO", "TT", "TN", "TR", "TM", "TC", "TV",
       "UG", "UA", "AE", "GB", "US", "UM", "UY", "UZ", "VU", "VE", "VN",
-      "VG", "VI", "WF", "EH", "YE", "ZM", "ZW"
+      "VG", "VI", "WF", "EH", "YE", "ZM", "ZW", "AA", "QM", "QN", "QO",
+      "QP", "QQ", "QR", "QS", "QT", "QU", "QV", "QW", "QX", "QY", "QZ",
+      "XA", "XB", "XC", "XD", "XE", "XF", "XG", "XH", "XI", "XJ", "XK",
+      "XL", "XM", "XN", "XO", "XP", "XQ", "XR", "XS", "XT", "XU", "XV",
+      "XW", "XX", "XY", "XZ", "ZZ"
     ]
   }
 }
