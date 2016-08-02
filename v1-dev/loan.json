@@ -42,7 +42,6 @@
       "enum": ["ZERO", "UKBRBASE", "FDTR"]
     },
     "currency_code": {
-      "type": "string",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/currency_code"
     },
     "customers": {
@@ -73,7 +72,7 @@
       "format": "date-time"
     },
     "facility_currency_code": {
-    	"description": "The currency of the credit facility if not the same as loan currency_code.",
+      "description": "The currency of the credit facility if not the same as loan currency_code.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/currency_code"
     },
     "impairment_amount": {
