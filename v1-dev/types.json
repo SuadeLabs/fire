@@ -1,6 +1,6 @@
 {
   "currency_code": {
-      "description": "Currency in accordance with ISO 4217 standards.",
+      "description": "Currency in accordance with ISO 4217 standards plus CNH for practical considerations.",
       "type": "string",
       "enum": [
         "AED", "AFN", "ALL", "AMD", "ANG", "AOA", "ARS", "AUD", "AWG", "AZN",
@@ -20,11 +20,11 @@
         "TOP", "TRY", "TTD", "TWD", "TZS", "UAH", "UGX", "USD", "USN", "USS",
         "UYI", "UYU", "UZS", "VEF", "VND", "VUV", "WST", "XAF", "XAG", "XAU",
         "XBA", "XBB", "XBC", "XBD", "XCD", "XDR", "XFU", "XOF", "XPD", "XPF",
-        "XPT", "XSU", "XTS", "XUA", "XXX", "YER", "ZAR", "ZMW"
+        "XPT", "XSU", "XTS", "XUA", "XXX", "YER", "ZAR", "ZMW", "CNH"
       ]
   },
   "country_code": {
-    "description": "Two-letter country code as defined according to ISO 3166-1.",
+    "description": "Two-letter country code as defined according to ISO 3166-1 plus ISO allowed, user-assignable codes (AA, QM to QZ, XA to XZ, and ZZ).",
     "type": "string",
     "enum": [
       "AF", "AX", "AL", "DZ", "AS", "AD", "AO", "AI", "AQ", "AG", "AR",
