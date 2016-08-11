@@ -71,6 +71,10 @@
       "description": "The unique identifier used by the financial institution to identify the customer for this product.",
       "type": "string"
     },
+    "deal_id": {
+      "description": "The unique identifier used by the financial institution to identify the deal for this product that links it to other products of the same or different type.",
+      "type": "string"
+    },
     "end_date": {
       "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
       "type": "string",
