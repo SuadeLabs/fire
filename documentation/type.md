@@ -7,21 +7,6 @@ schemas:    [account, collateral, customer, loan]
 
 # type
 
-
-# Account
-### call
-### cd
-### checking
-### current
-### internet_only
-### isa
-### money_market
-### nostro
-### savings
-### time_deposit
-### vostro
-### other
-
 # Customer, Issuer, Guarantor, Entity
 Customer, issuer, guarantor and entity schemas share a lot of common type attributes so they are grouped together here. Also, due to the complexity of this property, the variety of reporting granularity and the larger issue of data quality at firms, the fields are not all mutually exclusive and should be thought of more as a tree rather than unique items:
 
@@ -143,23 +128,39 @@ International Organisations are defined in the [CRR][crr] Article 118:
 
 
 ### corporate 
-### sovereign, 
+*needs definition*
+### sovereign  
+*needs definition*
 ### central_bank
+*needs definition*
 ### regional_govt
+*needs definition*
 ### central_govt
+*needs definition*
 ### pse
+*needs definition*
 ### credit_institution
+*needs definition*
 ### investment_firm
+*needs definition*
 ### sspe
+*needs definition*
 ### ciu
+*needs definition*
 ### ceis 
+*needs definition*
 ### insurer
+*needs definition*
 ### financial_holding
+*needs definition*
 ### other_financial
+*needs definition*
 ### pic 
+*needs definition*
 ### credit_union
+*needs definition*
 ### deposit_broker
-
+*needs definition*
 
 
 # Loan
@@ -218,17 +219,17 @@ Other refers to a type of security not covered by the above. If you find yoursel
 # Security
 
 ```bash
-├── equity_held
+├── equity_held +
 │   ├── share
 │   └── share_agg
-├── cb_reserve
-├── cb_facility
+├── cb_reserve +
+├── cb_facility +
 ├── cash_ratio_deposit
-├── debt_held
+├── debt_held +
 │   ├── bond
 │   ├── bond_amortising
 │   ├── index_linked_gilt
-│   ├── covered_bond
+│   ├── covered_bond 
 │   ├── frn
 │   └── abs
 │       ├── abs_auto 
@@ -241,15 +242,17 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │           └── cmbs
 ├── sft
 │   ├── margin_loan 
-│   ├── repo
+│   ├── repo -
+│   │   ├── cash_loan 
 │   │   ├── bond_loan 
 │   │   ├── stock_loan
 │   │   └── sell_buy_back 
-│   └── rev_repo
-│       ├── bond_borrow 
+│   └── rev_repo +
+│       ├── cash_borrow 
+│       ├── bond_borrow
 │       ├── stock_borrow
 │       └── buy_sell_back 
-├── debt_issue
+├── debt_issue -
 │   ├── commercial_paper
 │   ├── covered_bond_issue 
 │   ├── struct_note
@@ -257,7 +260,7 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │   ├── spv_other
 │   └── mtn
 │       └── emtn
-├── cash
+├── cash +
 └── other
 ```
 
@@ -277,9 +280,15 @@ This is a "catch all" term for holding any of *bond*, *bond_amortising*, *index_
 This is a "catch all" term for issuance any of *bond*, *bond_amortising*, *index_linked_gilt*, *covered_bond*, *abs*, *residential_mbs*, *non_residential_mbs*, *frn*, *govt_gteed_frn*, to be used when further granularity is not available or not needed.
 
 ### bond, bond_amortising
+*needs definition*
 ### index_linked_gilt
+*needs definition*
 ### covered_bond
+From the [LCR][lcr] introduction (9):
+Covered bonds are debt instruments issued by credit institutions and secured by a cover pool of assets which typically consist of mortgage loans or public sector debt to which investors have a preferential claim in the event of default. Their secured nature and certain additional safety features, such as the requirement on the issuer to replace non-performing assets in the cover pool and maintain the cover pool at a value exceeding the par value of the bonds (‘asset coverage requirement’), have contributed to make covered bonds relatively low-risk, yield-bearing instruments with a key funding role in mortgage markets of most Member States. In certain Member States outstanding covered bond issuance exceeds the pool of outstanding government bonds. Certain covered bonds of credit quality step 1, in particular, exhibited an excellent liquidity performance during the period from 1 January 2008 to 30 June 2012 analysed by the EBA in its report. Nevertheless the EBA recommended treating these covered bonds as level 2A assets to align with BCBS standards. However, in the light of the considerations made above about their credit quality, liquidity performance and role in the funding markets of the Union, it is appropriate for these credit quality step 1 covered bonds to be treated as level 1 assets. In order to avoid excessive concentration risks and unlike other level 1 assets, the holdings of credit quality step 1 covered bonds in the liquidity buffer should be subject to a 70 % cap of the overall buffer, a minimum 7 % haircut and to the diversification requirement.
+
 ### emtn, mtn 
+*needs definition*
 
 ### commercial_paper
 Commercial paper, in the global financial market, is an unsecured promissory note with a fixed maturity of no more than 270 days.
@@ -340,6 +349,34 @@ A government guaranteed floating-rate note.
 
 ### other
 Other refers to a type of security not covered by the above. If you find yourself using this often, please [contribute][contributing].
+
+
+# Account
+### call
+*needs definition*
+### cd
+*needs definition*
+### checking
+*needs definition*
+### current
+*needs definition*
+### internet_only
+*needs definition*
+### isa
+*needs definition*
+### money_market
+*needs definition*
+### nostro
+*needs definition*
+### savings
+*needs definition*
+### time_deposit
+*needs definition*
+### vostro
+*needs definition*
+### other
+*needs definition*
+
 
 ---
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575
