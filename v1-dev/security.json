@@ -21,6 +21,11 @@
       "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as an integer number of cents/pence.",
       "type": "integer"
     },    
+    "asset_liability": {
+      "description": "Is the derivative an asset or a liability from the firm point of view?",
+      "type": "string",
+      "enum": ["asset", "liability"]
+    },    
     "balance": {
       "description": "Outstanding amount including accrued interest. Monetary integer number of cents/pence.",
       "type": "integer"
@@ -174,6 +179,12 @@
       "description": "Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/country_code"
     },
+    "sft_type": {
+      "description": "",
+      "type": "string",
+      "enum": ["repo", "rev_repo", "sell_buy_back", "buy_sell_back", "bond_loan", "bond_borrow",
+               "stock_loan", "stock_borrow", "margin_loan"]
+    },
     "sources": {
       "description": "Identifiers for data sources. Useful for analytics and MI purposes.",
       "type": "array",
@@ -195,8 +206,6 @@
         "debt_held", "bond", "index_linked_gilt", "covered_bond", "bond_amortising", 
           "abs", "rmbs", "rmbs_trans", "cmbs", "frn", "mbs", "abs_auto", "abs_consumer", "abs_sme",
           "covered_bond_issue", "abs_other", "govt_gteed_frn",
-        "sft", "repo", "rev_repo", "sell_buy_back", "buy_sell_back", "bond_loan", "bond_borrow",
-          "stock_loan", "stock_borrow", "margin_loan", 
         "debt_issue", "emtn", "mtn", "commercial_paper", "cd", "struct_note", "spv_mortgages", "spv_other"
       ]
     },
