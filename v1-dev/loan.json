@@ -16,7 +16,7 @@
       "type": "string"
     },
     "accrued_interest_balance": {
-      "description": "The accrued interest due at the next payment date. Monetary type represented as an integer number of cents/pence.",
+      "description": "The accrued interest due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "administration": {
@@ -30,11 +30,16 @@
       "enum": ["temporary", "formal", "possessed", "none"]
     },
     "arrears_balance": {
-      "description": "The balance of the loan or capital amount that is considered to be in arrears. Monetary type represented as an integer number of cents/pence.",
+      "description": "The balance of the loan or capital amount that is considered to be in arrears. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
+    "asset_liability": {
+      "description": "Is the derivative an asset or a liability from the firm point of view?",
+      "type": "string",
+      "enum": ["asset", "liability"]
+    },    
     "balance": {
-      "description": "The balance of the loan or capital still to be repaid. Monetary type represented as an integer number of cents/pence.",
+      "description": "The balance of the loan or capital still to be repaid. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "base_rate": {
@@ -90,12 +95,12 @@
       "maxLength": 20
     },
     "limit_amount": {
-      "description": "The total credit limit on the loan. Monetary type represented as integer number of cents/pence.",
+      "description": "The total credit limit on the loan. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
       "minimum": 0
     },
     "lnrf_amount": {
-      "description": "The total amount of non-recourse funding linked to the loan. Monetary type represented as integer number of cents/pence.",
+      "description": "The total amount of non-recourse funding linked to the loan. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
       "minimum": 0
     },
@@ -104,7 +109,7 @@
       "enum": ["none", "acquired", "sold", "securitised", "other"]
     },
     "notional_amount": {
-      "description": "The original notional amount of the loan.",
+      "description": "The original notional amount of the loan. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "on_balance_sheet": {
@@ -123,6 +128,7 @@
       "type": "string"
     },
     "provision_amount": {
+      "description": "The amount of the account that is provisioned by the financial institution. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
       "minimum": 0
     },

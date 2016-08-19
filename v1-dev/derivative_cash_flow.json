@@ -14,7 +14,7 @@
       "format": "date-time"
     },
     "accrued_interest": {
-      "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as an integer number of cents/pence.",
+      "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "asset_class": {
@@ -28,7 +28,7 @@
       "enum": ["asset", "liability"]
     },
     "balance": {
-      "description": "Outstanding amount including accrued interest. Monetary integer number of cents/pence.",
+      "description": "Outstanding amount including accrued interest. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "currency_code": {
@@ -54,7 +54,7 @@
       "type": "boolean"
     },
     "notional_amount": {
-      "description": "The notional value is the total amount of a security's underlying asset at its spot price. Monetary number of cents.",
+      "description": "The notional value is the total amount of a security's underlying asset at its spot price. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "on_balance_sheet": {

@@ -18,7 +18,7 @@
       "type": "string"
     },
     "accrued_interest": {
-      "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as an integer number of cents/pence.",
+      "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "asset_class": {
@@ -32,7 +32,7 @@
       "enum": ["asset", "liability"]
     },
     "balance": {
-      "description": "Outstanding amount including accrued interest. Monetary integer number of cents/pence.",
+      "description": "Outstanding amount including accrued interest. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "base_rate": {
@@ -90,11 +90,11 @@
       "type": "boolean"
     },
     "mtm_clean": {
-      "description": "The mark-to-market value of the security excluding interest. Monetary number of cents/pence.",
+      "description": "The mark-to-market value of the security excluding interest. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "mtm_dirty": {
-      "description": "The mark-to-market value of the security including interest. Monetary number of cents/pence.",
+      "description": "The mark-to-market value of the security including interest. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "next_exercise_date": {
@@ -103,7 +103,7 @@
       "format": "date-time"
     },
     "next_payment_amount": {
-      "description": "The amount that will need to be paid at the next_payment_date. Monetary number of cents.",
+      "description": "The amount that will need to be paid at the next_payment_date. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },    
     "next_payment_date": {
@@ -112,7 +112,7 @@
       "format": "date-time"
     },
     "next_receive_amount": {
-      "description": "The amount that is expected to be received at the next_receive_date. Monetary number of cents.",
+      "description": "The amount that is expected to be received at the next_receive_date. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "next_receive_date": {
@@ -126,7 +126,7 @@
       "format": "date-time"
     },
     "notional_amount": {
-      "description": "The notional value is the total amount of a security's underlying asset at its spot price. Monetary number of cents.",
+      "description": "The notional value is the total amount of a security's underlying asset at its spot price. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "on_balance_sheet": {

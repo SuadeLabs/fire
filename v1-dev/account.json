@@ -17,15 +17,20 @@
       "type": "string"
     },
     "accrued_interest": {
-      "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as an integer number of cents/pence.",
+      "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "arrears_balance": {
-      "description": "The balance of the capital amount that is considered to be in arrears (for overdrafts/credit cards). Monetary type represented as an integer number of cents/pence.",
+      "description": "The balance of the capital amount that is considered to be in arrears (for overdrafts/credit cards). Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
-    },    
+    },  
+    "asset_liability": {
+      "description": "Is the derivative an asset or a liability from the firm point of view?",
+      "type": "string",
+      "enum": ["asset", "liability"]
+    },
     "balance": {
-      "description": "Currency amount represented as an integer number of cents/pence.",
+      "description": "The contractual balance on the date and in the currency given. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "base_rate": {
@@ -68,7 +73,7 @@
       "format": "date-time"
     },
     "encumbrance_amount": {
-      "description": "The amount of the account that is encumbered by potential future commitments or legal liabilities. Represented as an integer number of cents/pence.",
+      "description": "The amount of the account that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
       "min": 0
     },
@@ -83,7 +88,7 @@
       "format": "date-time"
     },
     "guarantee_amount": {
-      "description": "The amount of the account that is guaranteed under a Government Deposit Guarantee Scheme. Represented as an integer number of cents/pence.",
+      "description": "The amount of the account that is guaranteed under a Government Deposit Guarantee Scheme. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
       "min": 0
     },

@@ -35,7 +35,7 @@
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/currency_code"
     },
     "encumbrance_amount": {
-      "description": "The amount of the collateral that is encumbered by potential future commitments or legal liabilities. Represented as an integer number of cents/pence.",
+      "description": "The amount of the collateral that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
       "min": 0
     },
@@ -67,7 +67,7 @@
       "enum": ["residential_property", "commercial_property", "guarantee", "debenture", "life_policy", "shares", "debt_securities", "cash", "other"]
     },
     "value": {
-      "description": "The valuation as used by the bank for the collateral",
+      "description": "The valuation as used by the bank for the collateral on the value_date. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "value_date": {
