@@ -240,19 +240,7 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │           ├── rmbs
 │           ├── rmbs_trans
 │           └── cmbs
-├── sft
-│   ├── margin_loan 
-│   ├── repo -
-│   │   ├── cash_loan 
-│   │   ├── bond_loan 
-│   │   ├── stock_loan
-│   │   └── sell_buy_back 
-│   └── rev_repo +
-│       ├── cash_borrow 
-│       ├── bond_borrow
-│       ├── stock_borrow
-│       └── buy_sell_back 
-├── debt_issue -
+├── debt_issue 
 │   ├── commercial_paper
 │   ├── covered_bond_issue 
 │   ├── struct_note
@@ -260,7 +248,7 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │   ├── spv_other
 │   └── mtn
 │       └── emtn
-├── cash +
+├── cash 
 └── other
 ```
 
