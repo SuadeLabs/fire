@@ -68,7 +68,7 @@
       "type": "string"
     },
     "end_date": {
-      "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
+      "description": "The end or maturity date of the account. Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
       "type": "string",
       "format": "date-time"
     },
@@ -103,6 +103,11 @@
     },
     "next_payment_date": {
       "description": "The next date at which interest will be paid or accrued_interest balance returned to zero.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "next_withdrawal_date": {
+      "description": "The next date at which customer is allowed to withdraw money from this account.",
       "type": "string",
       "format": "date-time"
     },
@@ -176,6 +181,10 @@
       "description": "The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
       "format": "date-time"
+    },
+    "withdrawal_penalty": {
+      "description": "This is the penalty incurred by the customer for an early withdrawal on this account. An early withdrawal is defined as a withdrawal prior to the next_withdrawal_date. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer"
     }
   },
   "required": ["id", "date"],
