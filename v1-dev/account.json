@@ -166,7 +166,7 @@
     "status": {
       "description": "Describes if the Account is active or been cancelled.",
       "type": "string",
-      "enum": ["active", "cancelled", "cancelled_payout_agreed", "other"]
+      "enum": ["active", "cancelled", "cancelled_payout_agreed", "transactional", "other"]
     },
     "type": {
       "description": "This is the type of the account with regards to common regulatory classifications.",
