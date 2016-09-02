@@ -94,6 +94,11 @@
       "description": "The unique identifier for the guarantor within the financial institution.",
       "type": "string"
     },
+    "guarantee_start_date": {
+      "description": "The first day the security became guaranteed by the guarantor. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
+      "type": "string",
+      "format": "date-time"
+    },
     "hqla_class": {
       "description": "What is the HQLA classification of this asset?",
       "type": "string",
@@ -229,6 +234,6 @@
       "format": "date-time"
     }
   },
-  "required": ["id", "date", "balance"],
+  "required": ["id", "date"],
   "additionalProperties": true
 }

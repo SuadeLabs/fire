@@ -8,7 +8,7 @@
   }],
   "properties": {
     "product_count": {
-      "description": "The number of active products/trade this customer has with the firm.",
+      "description": "The number of active non-loan products/trades this customer has with the firm.",
       "type": "integer",
       "minimum": 1
     },
@@ -16,6 +16,11 @@
       "description": "The date that the customer first became a customer. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
       "format": "date-time"
+    },
+    "status": {
+      "description": "The status of the relationship with the customer from the firm's point of view.",
+      "type": "string",
+      "enum": ["established"]
     }
   },
   "required": ["id", "date"],

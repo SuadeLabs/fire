@@ -9,7 +9,7 @@ The **end_date** is a widely used property and reflects the contractual maturity
 
 The **end date** refers to the final observation or value date for the data in the JSON object. From the recipient's point of view, it is the time stamp for which the data in the JSON object is or will no longer be *true*. Note that it is called date but allows for precision to the nearest second in accordance with the ISO 8601 standard (YYYY-MM-DDTHH:MM:SSZ).
 
-It is possible that for some products, particularly cash-related accounts there is no end or maturity date. For fixed-life securities such as bonds, the date will be the maturity date of the underlying asset. Similarly, for security financing transactions, the **end_date** is typically the date the collateral or asset is returned.
+It is possible that for some products, particularly cash-related accounts there is no end or maturity date. If not provided, therefore, it should be assumed that the end_date is infinite (ie. perpetual). For fixed-life securities such as bonds, the date will be the maturity date of the underlying asset. Similarly, for security financing transactions, the **end_date** is typically the date the collateral or asset is returned or the financing ends.
 
 See also [**date**][date].
 

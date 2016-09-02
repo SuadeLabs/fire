@@ -68,7 +68,7 @@
       "type": "string"
     },
     "end_date": {
-      "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
+      "description": "The end or maturity date of the account. Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
       "type": "string",
       "format": "date-time"
     },
@@ -106,6 +106,11 @@
       "type": "string",
       "format": "date-time"
     },
+    "next_withdrawal_date": {
+      "description": "The next date at which customer is allowed to withdraw money from this account.",
+      "type": "string",
+      "format": "date-time"
+    },
     "on_balance_sheet": {
       "description": "Is the account or deposit reported on the balance sheet of the financial institution?",
       "type": "boolean"
@@ -122,7 +127,7 @@
     "purpose": {
       "description": "The purpose for which the account was created or is being used.",
       "type": "string",
-      "enum": ["deposit", "cash_management", "ci_service", "collateral", "clearing", "custody", "operational", "other"]
+      "enum": ["deposit", "cash_management", "ci_service", "collateral", "clearing", "custody", "operational", "firm_operating_expenses", "other"]
     },
     "rate": {
       "description": "The full interest rate applied to the account balance in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).",
@@ -161,7 +166,7 @@
     "status": {
       "description": "Describes if the Account is active or been cancelled.",
       "type": "string",
-      "enum": ["active", "cancelled", "other"]
+      "enum": ["active", "cancelled", "cancelled_payout_agreed", "transactional", "other"]
     },
     "type": {
       "description": "This is the type of the account with regards to common regulatory classifications.",
@@ -176,6 +181,10 @@
       "description": "The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
       "format": "date-time"
+    },
+    "withdrawal_penalty": {
+      "description": "This is the penalty incurred by the customer for an early withdrawal on this account. An early withdrawal is defined as a withdrawal prior to the next_withdrawal_date. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer"
     }
   },
   "required": ["id", "date"],
