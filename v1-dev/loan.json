@@ -112,6 +112,7 @@
       "minimum": 0
     },
     "movement": {
+      "description": "The movement parameter describes how the loan arrived to the firm.",
       "type": "string",
       "enum": ["none", "acquired", "sold", "securitised", "other"]
     },
