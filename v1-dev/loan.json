@@ -187,6 +187,7 @@
       "type": "boolean"
     },
     "securitised": {
+      "description": "Is this loan securitised?",
       "type": "boolean"
     },
     "sources": {
