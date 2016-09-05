@@ -14,7 +14,7 @@
       "format": "date-time"
     },
     "accounting_treatment": {
-      "description": "A text field for the firm to link this data to a line on the balance sheet or IFRS9 classification.",
+      "description": "The accounting treatment for derivatives is determined by which accounting principles are applied (e.g. International Financial Reporting Standards (IFRS), International Accounting Standards (IAS), United Kingdom Generally Accepted Accounting Principles (UK GAAP) etc.).",
       "type": "string"
     },
     "accrued_interest": {
@@ -105,7 +105,7 @@
     "next_payment_amount": {
       "description": "The amount that will need to be paid at the next_payment_date. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
-    },    
+    },
     "next_payment_date": {
       "description": "The next date at which interest will be paid or accrued_interest balance returned to zero.",
       "type": "string",
