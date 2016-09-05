@@ -204,6 +204,7 @@
       "format": "date-time"
     },
     "status": {
+      "description": "Describes if the loan is active or been cancelled.",
       "type": "string",
       "enum": ["actual", "committed", "cancelled", "defaulted"]
     },
