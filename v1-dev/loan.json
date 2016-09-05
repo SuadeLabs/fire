@@ -129,6 +129,7 @@
       "type": "string"
     },
     "originator_type": {
+      "description": "The type of financial institution that acted as the originator of the loan product.",
       "type": "string",
       "enum": ["mortgage_lender", "spv", "other"]
     },
