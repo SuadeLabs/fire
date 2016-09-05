@@ -13,6 +13,7 @@
       "format": "date-time"
     },
     "accounting_treatment": {
+      "description": "The treatment of an account is determined by which accounting principles are applied (e.g. International Financial Reporting Standards (IFRS), US Generally Accepted Accounting Principles (GAAP), UK GAAP etc.). For example, the treatment of expense is determined by the principles (IFRS/US GAAP/UK GAAP) that underly the process of reporting when expenses are incurred, and when they are then debited and credit impact is taken (and so on).",
       "type": "string"
     },
     "accrued_interest_balance": {
@@ -37,7 +38,7 @@
       "description": "Is the derivative an asset or a liability from the firm point of view?",
       "type": "string",
       "enum": ["asset", "liability"]
-    },    
+    },
     "balance": {
       "description": "The balance of the loan or capital still to be repaid. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
@@ -158,8 +159,8 @@
     "repayment_frequency": {
       "description": "Repayment frequency of the loan refers to how often the repayments occur.",
       "type": "string",
-      "enum": ["daily", "weekly", "bi_weekly", "monthly", "quarterly", "semi_annually", "annually", "at_maturity"] 
-    },    
+      "enum": ["daily", "weekly", "bi_weekly", "monthly", "quarterly", "semi_annually", "annually", "at_maturity"]
+    },
     "repayment_type": {
       "description": "Repayment type of the loan refers to whether the customer will be repaying capital + interest, just interest or a combination of the two.",
       "type": "string",
