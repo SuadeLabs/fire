@@ -160,6 +160,7 @@
       "type": "number"
     },
     "rate_type": {
+      "description": "Describes the type of interest rate applied to the loan.",
       "type": "string",
       "enum": ["fixed", "variable", "tracker", "combined"]
     },
