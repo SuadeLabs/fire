@@ -199,6 +199,7 @@
       }
     },
     "start_date": {
+      "description": "The timestamp that the trade or financial product commences. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
       "format": "date-time"
     },
