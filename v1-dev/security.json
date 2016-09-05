@@ -23,7 +23,7 @@
       "type": "integer"
     },
     "asset_liability": {
-      "description": "Is the derivative an asset or a liability from the firm point of view?",
+      "description": "A security is valued by amortised cost or fair value. If the valuation leads to expected outflows of economic benefits then the security is a liability on the firm's balance sheet. If the valuation leads to expected inflows of economic benefits then the security is an asset on the firm's balance sheet. ",
       "type": "string",
       "enum": ["asset", "liability"]
     },
