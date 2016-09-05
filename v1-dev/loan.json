@@ -45,6 +45,7 @@
       "type": "integer"
     },
     "base_rate": {
+      "description": "The official interest rate paid on commercial bank reserves by the central bank of an area or region. The base rate represents the basis of the repayment rate on the borrowed funds at the given date as agreed in the terms of the loan.",
       "type": "string",
       "enum": ["ZERO", "UKBRBASE", "FDTR"]
     },
