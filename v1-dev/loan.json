@@ -138,7 +138,7 @@
       "type": "string"
     },
     "provision_amount": {
-      "description": "The amount of the account that is provisioned by the financial institution. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "description": "The amount of reserves that is provisioned by the financial institution to cover the potential loss on the loan. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
       "minimum": 0
     },
