@@ -148,6 +148,7 @@
       "enum": ["none", "other"]
     },
     "purpose": {
+      "description": "The underlying reason the borrower has requested the loan.",
       "type": "string",
       "enum": [
         "house_purchase", "first_time_buyer", "buy_to_let", "buy_to_let_house_purchase", "buy_to_let_remortgage", "buy_to_let_further_advance",
