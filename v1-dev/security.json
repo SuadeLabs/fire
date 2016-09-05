@@ -32,6 +32,7 @@
       "type": "integer"
     },
     "base_rate": {
+      "description": "The base rate represents the basis of the rate on the balance at the given date as agreed in the terms of the financial product.",
       "type": "string",
       "enum": ["ZERO", "UKBRBASE", "FDTR"]
     },
