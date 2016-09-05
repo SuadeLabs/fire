@@ -86,6 +86,7 @@
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/currency_code"
     },
     "impairment_amount": {
+      "description": "A loan is considered to be impaired when it is probable that not all of the related principal and interest payments will be collected. The impairment amount for a loan is the allowance for loan impairments set aside by the firm that accounts for the event that the loan becomes impaired in the future.",
       "type": "integer",
       "minimum": 0
     },
