@@ -25,9 +25,9 @@
     "arrears_balance": {
       "description": "The balance of the capital amount that is considered to be in arrears (for overdrafts/credit cards). Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
-    },  
+    },
     "asset_liability": {
-      "description": "Is the derivative an asset or a liability from the firm point of view?",
+      "description": "An account is either an asset or a liability. An account is considered an asset if it is a resource controlled by an entity, as a result of a past event, from which economic benefits are expected to flow to the entity. An account is considered a liability if it is a present obligation arising from a past event - the settlement of which is expected to lead to an outflow of future economic beneifts from the entity.",
       "type": "string",
       "enum": ["asset", "liability"]
     },
