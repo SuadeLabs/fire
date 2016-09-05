@@ -125,6 +125,7 @@
       "type": "boolean"
     },
     "originator_id": {
+      "description": "The unique identifier used by the financial institution to identify the originator of the loan product.",
       "type": "string"
     },
     "originator_type": {
