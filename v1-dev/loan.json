@@ -72,6 +72,7 @@
       }
     },
     "encumbrance_amount": {
+      "description": "The amount of the loan that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
       "minimum": 0
     },
