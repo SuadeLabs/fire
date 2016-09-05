@@ -14,7 +14,8 @@
     },
     "accounting_treatment": {
       "description": "The treatment of an account is determined by which accounting principles are applied (e.g. International Financial Reporting Standards (IFRS), US Generally Accepted Accounting Principles (GAAP), UK GAAP etc.). For example, the treatment of expense is determined by the principles (IFRS/US GAAP/UK GAAP) that underly the process of reporting when expenses are incurred, and when they are then debited and credit impact is taken (and so on).",
-      "type": "string"
+      "type": "string",
+	    "enum": ["IFRS", "IAS","Country-specific GAAP"]
     },
     "accrued_interest_balance": {
       "description": "The accrued interest due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
