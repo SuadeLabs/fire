@@ -44,6 +44,10 @@
       "description": "The LEI code for the customer legal entity (for corporate customers).",
       "type": "string"
     },
+    "legal_entity_name": {
+      "description": "The official legal name of the entity.",
+      "type": "string"
+    },
     "name": {
       "description": "The name of the customer to be used for display and reference purposes.",
       "type": "string"
