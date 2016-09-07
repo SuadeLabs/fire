@@ -390,3 +390,9 @@ Other refers to a type of security not covered by the above. If you find yoursel
 [fca-indiv]: https://www.handbook.fca.org.uk/handbook/glossary/G3173.html
 [sme]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32003H0361
 [sme-what]: http://ec.europa.eu/growth/smes/business-friendly-environment/sme-definition/index_en.htm
+
+# collateral
+
+An [arrangement][arrangement], including repurchase agreements, under which a collateral provider transfers full ownership of, or full entitlement to, financial collateral to a collateral taker for the purpose of securing or otherwise covering the performance of relevant financial obligations. The collateral type defines the form of the collateral, such as property, shares etc.
+
+[arrangement]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02002L0047-20140702
