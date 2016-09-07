@@ -132,7 +132,7 @@
       "type": "integer"
     },
     "on_balance_sheet": {
-      "description": "Is the security reported on the balance sheet of the financial institution?",
+      "description": "Is the derivative reported on the balance sheet of the financial institution?",
       "type": "boolean"
     },
     "payment_type": {
