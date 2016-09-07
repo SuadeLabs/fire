@@ -5,6 +5,7 @@
   "type": "object",
   "properties": {
     "id": {
+      "description": "The unique identifier for the loan within the financial institution.",
       "type": "string"
     },
     "date": {
