@@ -65,7 +65,7 @@
       "enum": ["cash", "other", "none", "share", "share_agg", "covered_bond", "bond_amortising", "bond", "index_linked_gilt", "frn", "govt_gteed_frn"]
     },
     "currency_code": {
-      "description": "Actual currency of the security in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
+      "description": "Actual currency of the underlying reference index, security or asset for the derivative in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/currency_code"
     },
     "buyer_id": {
