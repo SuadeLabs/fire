@@ -393,6 +393,8 @@ Other refers to a type of security not covered by the above. If you find yoursel
 
 # collateral
 
-An [arrangement][arrangement], including repurchase agreements, under which a collateral provider transfers full ownership of, or full entitlement to, financial collateral to a collateral taker for the purpose of securing or otherwise covering the performance of relevant financial obligations. The collateral type defines the form of the collateral, such as property, shares etc.
+The [provision of assets][arrangement] to secure the performance of an obligation, whereby the assets can be provided: either by transfer of full ownership from a collateral provider to a collateral taker; or by the transfer of possession from a collateral provider to a collateral taker under a security right (e.g. pledge, charge or lien), where the full ownership of the assets remains with the collateral provider.
 
-[arrangement]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02002L0047-20140702
+ The collateral type defines the form of the collateral, such as property, shares, cash etc.
+
+[arrangement]: http://ec.europa.eu/internal_market/financial-markets/docs/collateral/directive-presentation_en.pdf
