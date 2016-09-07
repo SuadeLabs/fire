@@ -92,11 +92,11 @@
       "type": "boolean"
     },
     "mtm_clean": {
-      "description": "The mark-to-market value of the security excluding interest. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "description": "The mark-to-market value of the derivative excluding interest. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "mtm_dirty": {
-      "description": "The mark-to-market value of the security including interest. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "description": "The mark-to-market value of the derivative including interest. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "next_exercise_date": {
