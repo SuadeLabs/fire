@@ -32,6 +32,7 @@ Greece: DGS
 Hungary: National Deposit Insurance Fund (NDIF)
 Ireland: Deposit Guarantee Scheme (DGS)
 Italy: Fondo Interbancario di Tutela dei Depositi (FITD)
+Latvia: Deposit Guarantee Fund (DGF), in accordance with the Deposit Guarantee Law
 Lithuania: 	Valstybės įmonė Indėlių ir investicijų draudimas (VI)
 Malta: Depositor Compensation Scheme (DCS)
 Netherlands: Depositogarantiestelsel (DGS)
