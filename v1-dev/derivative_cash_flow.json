@@ -58,7 +58,7 @@
       "type": "integer"
     },
     "on_balance_sheet": {
-      "description": "Is the security reported on the balance sheet of the financial institution?",
+      "description": "Is the financial product reported on the balance sheet of the financial institution?",
       "type": "boolean"
     },
     "product_name": {
