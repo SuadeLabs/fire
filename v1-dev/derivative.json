@@ -159,7 +159,7 @@
       "enum": ["fixed", "floating"]
     },
     "reporting_lei": {
-      "description": "The LEI code for the legal entity under which the security is being reported.",
+      "description": "The LEI code for the legal entity under which the derivative is being reported.",
       "type": "string",
       "minLength": 20,
       "maxLength": 20
