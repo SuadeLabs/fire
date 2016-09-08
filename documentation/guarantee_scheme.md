@@ -16,6 +16,7 @@ Deposit **guarantee scheme** or ‘DGS’ means any scheme referred to in point 
 ## EU Deposit Guarantee Schemes
 Belgium: Fonds de Protection (Protection Fund)
 Bulgaria: Deposit Insurance Fund (DIF)
+Croatia: State Agency for Deposit Insurance and Bank Resolution (SAD)
 Cyprus: Deposit Protection Scheme (DPS)
 Czech Republic: Deposit Insurance Fund (DIF)
 Denmark: The Guarantee Fund for Depositers and Investors (GFDI)
