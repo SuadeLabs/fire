@@ -38,7 +38,7 @@
     "base_rate": {
       "description": "The official interest rate paid on commercial bank reserves by the central bank of an area or region. The base rate represents the basis of the rate on the balance at the given date as agreed in the terms of the account.",
       "type": "string",
-      "enum": ["ZERO", "UKBRBASE", "FDTR", "EURR002W"]
+      "enum": ["ZERO", "UKBRBASE", "FDTR", "ECB deposit facility rate", "Bulgarian Interest Rate", "Croatian Interest Rate", "Czech Interest Rate", "Denmark Interest Rate", "Hungary Interest Rate", "Poland Interest Rate", "Romanian Interest Rate", "Swedish Interest Rate"]
     },
     "break_dates": {
       "description": "Dates where this contract can be broken (by either party). Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
