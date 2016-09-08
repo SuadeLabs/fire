@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"notional_amount"
-schemas:	[derivative]
+schemas:	[derivative, derivative_cash_flow]
 ---
 
 # notional_amount
