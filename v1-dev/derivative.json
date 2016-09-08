@@ -195,7 +195,7 @@
       "format": "date-time"
     },
     "type": {
-      "description": "This is the type of the security with regards to common regulatory classifications.",
+      "description": "This is the type of the derivative with regards to common regulatory classifications.",
       "type": "string",
       "enum": [
         "vanila_swap", "mtm_swap", "swaption", "call_option", "put_option", "future", "forward", "tarf", "xccy", "cds"
