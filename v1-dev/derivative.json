@@ -128,7 +128,7 @@
       "format": "date-time"
     },
     "notional_amount": {
-      "description": "The notional value is the total value of a derivative's underlying index, security or asset at its spot price with regard to the specifications (i.e. leverage) of the derivative product. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "description": "The notional value is the total value with regard to a derivative's underlying index, security or asset at its spot price in accordance with the specifications (i.e. leverage) of the derivative product. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "on_balance_sheet": {
