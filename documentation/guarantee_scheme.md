@@ -34,6 +34,7 @@ Ireland: Deposit Guarantee Scheme (DGS)
 Italy: Fondo Interbancario di Tutela dei Depositi (FITD)
 Latvia: Deposit Guarantee Fund (DGF), in accordance with the Deposit Guarantee Law
 Lithuania: 	Valstybės įmonė Indėlių ir investicijų draudimas (VI)
+Luxembourg: Fonds de garantie des dépôts Luxembourg (FGDL)
 Malta: Depositor Compensation Scheme (DCS)
 Netherlands: Depositogarantiestelsel (DGS)
 Poland: Bankowy Fundusz Gwarancyjny (BFG)
