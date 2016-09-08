@@ -150,7 +150,7 @@
       "type": "string"
     },
     "rate": {
-      "description": "The full interest rate applied to the security notional in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).",
+      "description": "The full interest rate applied to the derivative notional in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).",
       "type": "number"
     },
     "receive_type": {
