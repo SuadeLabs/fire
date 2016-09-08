@@ -20,6 +20,7 @@ Croatia: State Agency for Deposit Insurance and Bank Resolution (SAD)
 Cyprus: Deposit Protection Scheme (DPS)
 Czech Republic: Deposit Insurance Fund (DIF)
 Denmark: The Guarantee Fund for Depositers and Investors (GFDI)
+Estonia: Deposit Guarantee Scheme (DGS) as defined by the Deposit Guarantee Act
 Finland: Deposit Guarantee Fund (DGF)
 France: Fonds de Garantie des Dépôts (FDG)
 Germany:
