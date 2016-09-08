@@ -75,6 +75,7 @@
       }
     },
     "type": {
+      "description": "The designated financial entity category for this customer",
       "type": "string",
       "enum": [
         "individual", "sme", "corporate", "other", "financial", "natural_person", "intl_org",
