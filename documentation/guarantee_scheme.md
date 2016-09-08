@@ -46,6 +46,8 @@ Spain: Fondos de Garantía de Depósitos (FGD)
 Sweden: National Debt Office – Deposit Insurance (NDO)
 United Kingdom: Financial Services Compensation Scheme (FSCS)
 
+(Note: bank deposits are no longer guaranteed by the Austrian Government).
+
 Note that unless specifically indicated an Institutional Protection Scheme (IPS) is not officially recognised as a DGS.
 
 See also:
