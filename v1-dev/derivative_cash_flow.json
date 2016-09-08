@@ -94,10 +94,10 @@
       "format": "date-time"
     },
     "type": {
-      "description": "This is the type of the financial product with regards to common regulatory classifications.",
+      "description": "This is the type of the derivative cash flow with regards to common regulatory classifications.",
       "type": "string",
       "enum": [
-        "vanila_swap", "mtm_swap", "swaption", "xccy", "cds"
+        "vanilla_swap", "mtm_swap", "swaption", "xccy", "cds"
       ]
     },
     "trade_date": {
