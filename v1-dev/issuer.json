@@ -6,7 +6,12 @@
   "allOf": [{
     "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/entity.json"
   }],
-  "properties": {},
+  "properties": {
+      "id": {
+        "description": "The unique identifier for the issuer within the financial institution.",
+        "type": "string"
+    }
+  },
   "required": ["id", "date"],
   "additionalProperties": true
 }
