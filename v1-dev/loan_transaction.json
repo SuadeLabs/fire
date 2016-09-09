@@ -18,6 +18,7 @@
       "type": "integer"
     },
     "loan_id": {
+      "description": "The unique identifier for the affected loan/s within the financial institution.",
       "type": "string"
     },
     "movement": {
