@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"accrued_interest"
-schemas:	[account, loan]
+schemas:	[account, derivative_cash_flow, derivative, loan, security]
 ---
 
 # accrued_interest
