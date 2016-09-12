@@ -126,6 +126,7 @@
       "format": "date-time"
     },
     "movement": {
+      "description": "The movement parameter describes how the security arrived to the firm.",
       "type": "string",
       "enum": ["cash", "asset", "debt_issue", "cb_omo", "other"]
     },
