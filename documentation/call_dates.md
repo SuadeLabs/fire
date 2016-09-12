@@ -1,6 +1,6 @@
 layout:		property
 title:		"call_dates"
-schemas:	[account]
+schemas:	[account, derivative, security]
 ---
 
 # call_dates
