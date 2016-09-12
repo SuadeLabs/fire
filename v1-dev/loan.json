@@ -210,6 +210,7 @@
       "enum": ["actual", "committed", "cancelled", "defaulted"]
     },
     "type": {
+      "description": "The form of the loan product administered by the financial institution",
       "type": "string",
       "enum": [
         "mortgage", "commercial_property", "commercial", "personal", "auto",
