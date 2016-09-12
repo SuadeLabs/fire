@@ -92,7 +92,7 @@
       "minimum": 0
     },
     "impairment_type": {
-      "description": "Under IAS 39 Financial Instruments: Recognition and Measurement an entity assesses at the end of each reporting period whether there is objective evidence that a loan or group of loans is impaired. The standard states that a loan is impaired and impairment losses are incurred if there is objective evidence of impairment as a result of one or more events that occurred after the exposure was created (the loss event) and that the loss event has an impact on the estimated future cash flows of the loans and these cash flows can be reliably estimated.",
+      "description": "The loss event resulting in the impairment of the loan.",
       "type": "string",
       "enum": ["collective", "individual", "write_off", "none"]
     },
