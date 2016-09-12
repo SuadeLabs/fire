@@ -351,8 +351,8 @@ A government guaranteed floating-rate note.
 Other refers to a type of security not covered by the above. If you find yourself using this often, please [contribute][contributing].
 
 ##### underlying_type
-The receivables or assets underlying the securitisation must be credit claims or receivables with defined terms relating to rental payments or principal and interest payment. Any referenced interest payments should be based on commonly encountered market interest rates and may include terms for caps and floors, but should not reference complex formulae or exotic derivatives.
-A non-exhaustive list of examples of underlying assets that may comply with the above principles, (subject to meeting all other criteria) could include:
+The **receivables or assets underlying the securitisation** must be credit claims or receivables with defined terms relating to rental payments or principal and interest payment. Any referenced interest payments should be based on commonly encountered market interest rates and may include terms for caps and floors, but should not reference complex formulae or exotic derivatives.
+A non-exhaustive list of [examples][ecbexamples] of underlying assets that may comply with the above principles, (subject to meeting all other criteria) could include:
 - residential mortgages,
 - certain commercial real estate mortgages,
 - loans to SMEs,
@@ -360,6 +360,8 @@ A non-exhaustive list of examples of underlying assets that may comply with the 
 - consumer finance loans,
 - credit card receivables, and
 - leasing receivables.
+
+[ecbexamples]: https://www.ecb.europa.eu/pub/pdf/other/ecb-boe_case_better_functioning_securitisation_marketen.pdf
 
 # Account
 ### call
