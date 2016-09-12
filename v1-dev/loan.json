@@ -144,7 +144,7 @@
       "minimum": 0
     },
     "provision_type": {
-      "description": "The provision type parameter details what form of provisions the issuing firm has allocated  to cover potential losses from issuing a loan.",
+      "description": "The provision type parameter details the provisions the issuing firm has allocated to cover potential losses from issuing a loan.",
       "type": "string",
       "enum": ["none", "other"]
     },
