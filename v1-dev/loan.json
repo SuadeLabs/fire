@@ -241,6 +241,11 @@
       "type": "string",
       "enum": ["actual", "committed", "cancelled", "defaulted"]
     },
+    "trade_date": {
+      "description": "The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
     "type": {
       "description": "The form of the loan product administered by the financial institution, with regards to common regulatory classifications.",
       "type": "string",
