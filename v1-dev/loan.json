@@ -77,6 +77,11 @@
       "type": "integer",
       "minimum": 0
     },
+    "encumbrance_type": {
+      "description": "The type of the encumbrance causing the encumbrance_amount.",
+      "type": "string",
+      "enum": ["repo", "covered_bond", "derivative", "none", "other"]
+    },
     "end_date": {
       "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
       "type": "string",
