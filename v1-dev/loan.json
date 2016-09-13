@@ -61,6 +61,7 @@
         "type": "object",
         "properties": {
           "id": {
+            "description": "The unique identifier for the customer/s within the financial institution.",
             "type": "string"
           },
           "income_amount": {
