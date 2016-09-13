@@ -155,6 +155,11 @@
       "type": "string",
       "enum": ["mortgage_lender", "spv", "other"]
     },
+    "prev_payment_date": {
+      "description": "The most recent previous date at which interest was paid or accrued_interest balance returned to zero.",
+      "type": "string",
+      "format": "date-time"
+    },
     "product_name": {
       "description": "The name of the product as given by the financial institution to be used for display and reference purposes.",
       "type": "string"
