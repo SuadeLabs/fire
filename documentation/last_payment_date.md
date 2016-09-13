@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "last_payment_date"
-schemas:    [account, loan]
+schemas:    [account, derivative, loan, security]
 ---
 
 # last_payment_date
