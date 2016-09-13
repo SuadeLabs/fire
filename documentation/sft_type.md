@@ -1,35 +1,35 @@
  ---
 
 layout:     property
-title:      "type"
-schemas:    [account, collateral, customer, loan]
+title:      "sft_type"
+schemas:    [security]
 
---- 
+---
 
 
 # sft_type
 The **sft_type** is used when describing securities financing transactions using the security schema.
 
 ```bash
-├── margin_loan 
-├── repo 
-│   ├── bond_loan 
+├── margin_loan
+├── repo
+│   ├── bond_loan
 │   ├── stock_loan
-│   └── sell_buy_back 
-└── rev_repo 
+│   └── sell_buy_back
+└── rev_repo
     ├── bond_borrow
     ├── stock_borrow
-    └── buy_sell_back 
+    └── buy_sell_back
 ```
 
-**ex.** 
+**ex.**
 > A bank does 6 security deals:
 > - deal #1 - bank executes a repo transaction and lends a covered bond worth 100 in exchange for 90 in cash
 > - deal #2 - bank executes a collateral swap transaction and lends a portfolio of shares worth 100 in exchange for 1 share worth 45 and one index linked gilt worth 50
-> - deal #3 - bank issues commercial paper at par and receives 100 from investors 
+> - deal #3 - bank issues commercial paper at par and receives 100 from investors
 > - deal #4 - bank executes a reverse repo transaction and borrows a bond worth 100 in exchange for 90 in cash
 > - deal #5 - bank is holding 50 of cash
-> - deal #6 - bank is holding 50 worth of auto ABS 
+> - deal #6 - bank is holding 50 worth of auto ABS
 
 
 | id | deal_id | date     | start_date | end_date | value_date | mtm_dirty | sft_type     | type              | movement | asset_liability |
