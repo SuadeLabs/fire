@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"movement"
-schemas:	[loan, security]
+schemas:	[loan_transaction, loan, security]
 ---
 
 # movement
