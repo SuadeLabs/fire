@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"trade_date"
-schemas:	[account, loans]
+schemas:	[account, derivative_cash_flow, derivative, loan, security]
 ---
 
 # trade_date
