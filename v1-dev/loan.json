@@ -92,6 +92,11 @@
       "description": "The currency of the credit facility if not the same as loan currency_code.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/currency_code"
     },
+    "first_payment_date": {
+      "description": "The first payment date for interest payments.",
+      "type": "string",
+      "format": "date-time"
+    },
     "impairment_amount": {
       "description": "A loan is considered to be impaired when it is probable that not all of the related principal and interest payments will be collected. The impairment amount for a loan is the allowance for loan impairments set aside by the firm that accounts for the event that the loan becomes impaired in the future.",
       "type": "integer",
