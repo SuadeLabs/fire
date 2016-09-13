@@ -205,6 +205,12 @@
       "type": "string",
       "enum": ["repayment", "interest_only", "combined", "other"]
     },
+    "reporting_lei": {
+      "description": "The LEI code for the legal entity under which the loan is being reported.",
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 20
+    },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/country_code"
