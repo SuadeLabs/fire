@@ -133,6 +133,11 @@
       "type": "string",
       "enum": ["none", "acquired", "sold", "securitised", "other"]
     },
+    "next_payment_date": {
+      "description": "The next date at which interest will be paid or accrued_interest balance returned to zero.",
+      "type": "string",
+      "format": "date-time"
+    },
     "notional_amount": {
       "description": "The original notional amount of the loan. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
