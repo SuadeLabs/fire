@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"date"
-schemas:	[account, collateral, customer, derivative_cash_flow, derivative, entity, exchange_rate, guarantor, issuer, loan transaction, loan, security]
+schemas:	[account, collateral, customer, derivative_cash_flow, derivative, entity, exchange_rate, guarantor, issuer, loan_transaction, loan, security]
 ---
 
 # date
