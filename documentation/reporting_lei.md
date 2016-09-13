@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"reporting_lei"
-schemas:	[account, loan]
+schemas:	[account, derivative_cash_flow, derivative, loan, security]
 ---
 
 # reporting_lei
