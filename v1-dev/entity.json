@@ -42,7 +42,7 @@
       "maximum": 12
     },
     "lei_code": {
-      "description": "The LEI code for the customer legal entity (for corporate customers).",
+      "description": "The LEI code for the legal entity (for corporates).",
       "type": "string"
     },
     "name": {
