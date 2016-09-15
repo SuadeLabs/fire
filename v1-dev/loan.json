@@ -98,7 +98,7 @@
       "format": "date-time"
     },
     "impairment_amount": {
-      "description": "A loan is considered to be impaired when it is probable that not all of the related principal and interest payments will be collected. The impairment amount for a loan is the allowance for loan impairments set aside by the firm that accounts for the event that the loan becomes impaired in the future.",
+      "description": "The impairment amount for a loan is the allowance for loan impairments set aside by the firm that accounts for the event that the loan becomes impaired in the future.",
       "type": "integer",
       "minimum": 0
     },
