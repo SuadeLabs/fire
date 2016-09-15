@@ -14,7 +14,7 @@
       "format": "date-time"
     },
     "loan_ids": {
-      "description": "The unique identifier for the loan within the financial institution.",
+      "description": "The unique identifiers for the loans within the financial institution.",
       "type": "array",
       "minItems": 1,
       "items": {
