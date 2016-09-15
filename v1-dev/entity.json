@@ -54,7 +54,7 @@
       "type": "string"
     },
     "parent_name": {
-      "description": "The name of the ultimate parent of customer to be used for display and reference purposes.",
+      "description": "The name of the ultimate parent of person or legal entity to be used for display and reference purposes.",
       "type": "string"
     },
     "risk_country_code": {
