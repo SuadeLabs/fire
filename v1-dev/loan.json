@@ -37,7 +37,7 @@
       "type": "integer"
     },
     "asset_liability": {
-      "description": "A loan is either an asset or a liability for a firm that offers a loan. A loan is an asset on a firm's balance sheet when future economic benefits are expected to flow to the firm as a result of issuing the loan. A loan is a liability on a firm's balance sheet if future economic benefits are expected to flow out of the firm. ",
+      "description": "Is the loan an asset or a liability on the firm's balance sheet?",
       "type": "string",
       "enum": ["asset", "liability"]
     },
