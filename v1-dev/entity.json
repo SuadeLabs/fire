@@ -26,7 +26,7 @@
       "description": "The person or entity country of residence. Two-letter country code as defined according to ISO 3166-1."
     },
     "credit_impaired": {
-      "description": "Flag to determine if the customer credit quality is impaired.",
+      "description": "Flag to determine if the entity credit quality is impaired.",
       "type": "boolean"
     },
     "cqs_standardised": {
