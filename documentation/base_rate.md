@@ -9,7 +9,9 @@ schemas: [account, derivative, loan, security]
 ---
 
 ### account
-The [official interest rate][official] paid on commercial bank reserves by the central bank of an area or region. The base rate represents the basis of the rate on the balance at the given date as agreed in the terms of the account.
+The base rate set by the bank that offers the account facility, which typically follows the official central bank interest rate - but it is not guaranteed to do so. The base rate represents the basis of the rate on the balance at the given date as agreed in the terms of the account.
+
+The [official interest rate][official] is the interest rate paid on commercial bank reserves by the central bank of an area or region.
 
 [official]: http://www.bankofengland.co.uk/statistics/pages/iadb/notesiadb/wholesale_baserate.aspx
 
@@ -30,8 +32,10 @@ In practice, the base rate conveys the information that the interest rate is dir
 
 ---
 
-###loan
-The [official interest rate][official] paid on commercial bank reserves by the central bank of an area or region. The base rate represents the basis of the repayment rate on the borrowed funds at the given date as agreed in the terms of the loan.
+### loan
+The base rate set by the bank that offers the loan product, which typically follows the official central bank interest rate - but it is not guaranteed to do so. The base rate represents the basis of the repayment rate on the borrowed funds at the given date as agreed in the terms of the loan.
+
+he [official interest rate][official] is the interest rate paid on commercial bank reserves by the central bank of an area or region.
 
 [official]: http://www.bankofengland.co.uk/statistics/pages/iadb/notesiadb/wholesale_baserate.aspx
 
