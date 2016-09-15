@@ -98,7 +98,7 @@
     "guarantee_scheme": {
       "description": "The Government Deposit Scheme scheme under which the guarantee_amount is guaranteed.",
       "type": "string",
-	  "enum": ["Belgian Protection Fund", "Bulgarian DIF", "Croatian Deposit Insurance", "Cyprus DPS", "Czech Republic DIF", "Denmark GFDI", "Estonia DGS", "Finland DGF", "French FDG", "German EdB", "German EdÖ", "German EdW", "Greek DGS", "Hungarian NDIF", "Irish DGS", "Italian FITD", "Latvian DGF", "Lithuania VI", "Luxembourg FGDL", "Malta DCS", "Netherlands DGS", "Poland BFG", "Portugal FGD", "Romania FGDB", "Slovakia DPF", "Banka Slovenije Guarantee Scheme", "Spanish FGD", "Swedish NDO Deposit Insurance", "UK FSCS"]
+	  "enum": ["be_pf", "bg_dif", "hr_di", "cy_dps", "cz_dif", "dk_gdfi", "ee_dgs", "fi_dgf", "fr_fdg", "de_edb", "de_edo", "de_edw", "gr_dgs", "hu_ndif", "ie_dgs", "it_fitd", "lv_dgf", "lt_vi", "lu_fgdl", "mt_dcs", "nl_dgs", "pl_bfg", "pt_fgd", "ro_fgdb", "sk_dpf", "si_dgs", "es_fgd", "se_ndo", "uk_fscs"]
     },
     "last_payment_date": {
       "description": "The final payment date for interest payments, often coincides with end_date.",
