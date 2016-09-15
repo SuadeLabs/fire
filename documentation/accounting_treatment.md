@@ -42,3 +42,8 @@ The [**accounting treatment for securities**][treatment] is determined by [which
 
 [treatment]: http://www.iasplus.com/en-us/standards/international/ifrs-en-us/ifrs9
 [principles]: http://www.iasplus.com/en-gb/standards
+
+---
+
+### country_specific_gaap
+If **country_specific_gaap** is the selected for accounting_treatment - it refers to the Generally Accepted Accounting Principles (GAAP) of the country denoted in the **country_code** property.
