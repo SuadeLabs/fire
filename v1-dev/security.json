@@ -188,7 +188,7 @@
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/country_code"
     },
     "sft_type": {
-      "description": "Securities Financing Transactions (SFTs) allow market partcipants to access secured funding, through the temporary exchange of assets as a guarantee for a funding transaction. The sft_type parameter defines the transaction mechanism conducted for the SFT for this security product.",
+      "description": "The sft_type parameter defines the transaction mechanism conducted for the SFT for this security product.",
       "type": "string",
       "enum": ["repo", "rev_repo", "sell_buy_back", "buy_sell_back", "bond_loan", "bond_borrow",
                "stock_loan", "stock_borrow", "margin_loan"]
