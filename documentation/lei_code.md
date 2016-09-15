@@ -61,3 +61,20 @@ Individuals acting in a business capacity are eligible to an LEI under certain c
 A policy document published by the ROC on 11 July 2016 sets forth the policy design, definitions, and conditions for issuance of LEIs for international branches (also known as foreign branches). Implementation is expected to start in early 2017, subject to ROC concurrence with an appropriate framework being established to ensure that the conditions described in this document are met.
 
 [leiroc]: https://www.leiroc.org/publications/gls/lou_20150930-1.pdf
+
+##### LEI uses
+
+[***(see here for LEI ROC web link)***][uselink]
+
+At the G-20 Summit of June 2012, the heads of state and government encouraged "global adoption of the LEI to support authorities and market participants in identifying and managing financial risks" (see paragraph 44 of the G20 Communiqué).
+
+The Global LEI System was established for a large range of potential uses including the following:
+
+- by authorities of any jurisdiction or financial sector to assess systemic risk and maintain financial stability, conduct market surveillance and enforcement, supervise market participants, conduct resolution activities, prepare high quality financial data, and to undertake other official functions; and
+- by the private sector to support improved risk management, increased operational efficiency, more accurate calculation of exposures, and other needs.
+
+In addition to the use of the LEI for derivatives reporting, which has entered into force in major markets, authorities are extending reporting requirements for the LEI, where appropriate, to the banking sector, securities issuance, investment holdings for insurance and funds, and other uses such as identification of firms in credit registers. The ROC and its members remain committed to support the introduction of the Global LEI System as a unique identifier of parties to financial transactions.
+
+ROC members have committed to support the introduction of the Global LEI System for official or international identification purposes
+
+[uselink]: https://www.leiroc.org/lei/uses.htm
