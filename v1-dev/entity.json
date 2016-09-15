@@ -50,7 +50,7 @@
       "type": "string"
     },
     "parent_id": {
-      "description": "The unique identifier for the ultimate parent of the customer.",
+      "description": "The unique identifier for the ultimate parent of the person or legal entity.",
       "type": "string"
     },
     "parent_name": {
