@@ -28,7 +28,7 @@
       "enum": ["co", "cr", "eq", "fx", "ir", "other"]
     },
     "asset_liability": {
-      "description": "Derivatives are either a financial **asset** or a financial **liability** on a firm's balance sheet. A derivative is an **asset** on the firm's balance sheet if it has a positive value with regard to the underlying variable (rate, price, or index). A derivative is a **liability** on the firm's balance sheet if it has a negative value with regard to the underlying variable (rate, price, or index).",
+      "description": "Is the derivative a financial asset or a financial liability on a firm's balance sheet?",
       "type": "string",
       "enum": ["asset", "liability"]
     },
