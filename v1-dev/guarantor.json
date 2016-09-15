@@ -6,17 +6,7 @@
   "allOf": [{
     "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/entity.json"
   }],
-  "properties": {
-      "id": {
-        "description": "The unique identifier for the guarantor within the financial institution.",
-        "type": "string"
-      },
-      "date": {
-        "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
-        "type": "string",
-        "format": "date-time"
-    }
-  },
+  "properties": {},
   "required": ["id", "date"],
   "additionalProperties": true
 }
