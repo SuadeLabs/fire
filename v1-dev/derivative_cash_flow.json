@@ -23,7 +23,7 @@
       "enum": ["co", "cr", "eq", "fx", "ir", "other"]
     },
     "asset_liability": {
-      "description": "A derivative cash flow exchange that results in a net positive value after the transaction with regard to the underlying reference index, security or financial instrument is an **asset** on the firm's balance sheet. A derivative cash flow exchange that results in a net negative value after the transaction with regard to the underlying reference index, security or financial instrument is a **liability** on the firm's balance sheet.",
+      "description": "A derivative cash flow exchange that results in a net positive value after the transaction is an asset on the firm's balance sheet. A derivative cash flow exchange that results in a net negative value after the transaction is a liability on the firm's balance sheet.",
       "type": "string",
       "enum": ["asset", "liability"]
     },
