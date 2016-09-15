@@ -48,7 +48,7 @@
     "base_rate": {
       "description": "The base rate represents the basis of the repayment rate on the borrowed funds at the given date as agreed in the terms of the loan.",
       "type": "string",
-      "enum": ["ZERO", "UKBRBASE", "FDTR", "ECB deposit facility rate", "Bulgarian Interest Rate", "Croatian Interest Rate", "Czech Interest Rate", "Denmark Interest Rate", "Hungary Interest Rate", "Poland Interest Rate", "Romanian Interest Rate", "Swedish Interest Rate"]
+      "enum": ["ZERO", "UKBRBASE", "FDTR"]
     },
     "currency_code": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/currency_code"
