@@ -8,7 +8,7 @@ schemas:    [security]
 
 
 # sft_type
-The **sft_type** is used when describing securities financing transactions using the security schema. Securities Financing Transactions (SFTs) allow market partcipants to access secured funding, through the temporary exchange of assets as a guarantee for a funding transaction. 
+The **sft_type** is used when describing securities financing transactions using the security schema. Securities Financing Transactions (SFTs) allow market partcipants to access secured funding, through the temporary exchange of assets as a guarantee for a funding transaction.
 
 ```bash
 ├── margin_loan
