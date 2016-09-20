@@ -62,7 +62,7 @@ A policy document published by the ROC on 11 July 2016 sets forth the policy des
 
 [leiroc]: https://www.leiroc.org/publications/gls/lou_20150930-1.pdf
 
-##### LEI uses
+### LEI uses
 
 [***(see here for LEI ROC web link)***][uselink]
 
