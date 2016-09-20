@@ -127,7 +127,7 @@
     "purpose": {
       "description": "The purpose for which the account was created or is being used.",
       "type": "string",
-      "enum": ["deposit", "cash_management", "ci_service", "collateral", "clearing", "custody", "operational", "firm_operating_expenses", "other"]
+      "enum": ["deposit", "cash_management", "ci_service", "collateral", "clearing", "custody", "ips", "operational", "prime_brokerage", "firm_operating_expenses", "other"]
     },
     "rate": {
       "description": "The full interest rate applied to the account balance in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).",
@@ -136,7 +136,7 @@
     "rate_type": {
       "description": "Describes the type of interest rate applied to the account.",
       "type": "string",
-      "enum": ["fixed", "variable", "tracker", "combined"]
+      "enum": ["fixed", "variable", "tracker", "combined", "preferential"]
     },
     "reporting_lei": {
       "description": "The LEI code for the legal entity under which the account is being reported.",
@@ -173,7 +173,7 @@
       "type": "string",
       "enum": [
         "call", "cd", "checking", "current", "credit_card", "internet_only", "isa", "money_market",
-        "nostro", "bonds", "savings", "payments", "time_deposit", "vostro",
+        "nostro", "notice", "bonds", "savings", "payments", "time_deposit", "vostro",
         "private_banking", "other"
       ]
     },
