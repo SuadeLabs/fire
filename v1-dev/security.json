@@ -223,11 +223,6 @@
       "description": "Can the security be transferred between parties or negotiated on the capital market?",
       "type": "boolean"
     },
-    "underlying_type": {
-      "type": "string",
-      "enum": ["mortgage", "commercial_property", "commercial", "personal", "auto",
-        "trade_finance", "credit_card", "credit_facility", "multiccy_facility", "overdraft", "other"]
-    },
     "value_date": {
       "description": "The timestamp that the trade or financial product was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
