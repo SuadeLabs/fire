@@ -10,7 +10,7 @@
     "count": {
       "description": "Describes the number of loans aggregated into a single row.",
       "type": "integer",
-      "minimum": 2
+      "minimum": 1
     },
     "minimum_balance_eur": {
       "description": "Indicates the minimum balance, in Euros, of each loan within the aggregate.",
