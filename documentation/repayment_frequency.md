@@ -29,3 +29,14 @@ Repayment frequency of the loan refers to how often the repayments occur.
 > "... (i) the range of different options available for reimbursing the credit to the creditor, **including the number, frequency and amount of the regular repayment instalments**;"
 
 [directive]: http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex%3A32014L0017
+
+Valid enums:
+
+- Daily: once per 24 hour period
+- Weekly: once per 7 day period
+- Bi-weekly: twice per 7 day period
+- Monthly: once per calendar month
+- Quarterly: once per 3 calendar months
+- Semi-annually: once per 6 calendar months
+- Annually: once per calendar year
+- At maturity: upon maturity of the loan product
