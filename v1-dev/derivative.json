@@ -14,8 +14,9 @@
       "format": "date-time"
     },
     "accounting_treatment": {
-      "description": "A text field for the firm to link this data to a line on the balance sheet or IFRS9 classification.",
-      "type": "string"
+      "description": "The accounting treatment for derivatives is determined by which accounting principles are applied.",
+      "type": "string",
+	    "enum": ["ifrs", "ias", "country_specific_gaap"]
     },
     "accrued_interest": {
       "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -27,7 +28,7 @@
       "enum": ["co", "cr", "eq", "fx", "ir", "other"]
     },
     "asset_liability": {
-      "description": "Is the derivative an asset or a liability from the firm point of view?",
+      "description": "Is the derivative a financial asset or a financial liability on a firm's balance sheet?",
       "type": "string",
       "enum": ["asset", "liability"]
     },
@@ -36,6 +37,7 @@
       "type": "integer"
     },
     "base_rate": {
+      "description": "The base rate represents the basis of the rate on the balance at the given date as agreed in the terms of the financial product.",
       "type": "string",
       "enum": ["ZERO", "UKBRBASE", "FDTR"]
     },
@@ -63,7 +65,7 @@
       "enum": ["cash", "other", "none", "share", "share_agg", "covered_bond", "bond_amortising", "bond", "index_linked_gilt", "frn", "govt_gteed_frn"]
     },
     "currency_code": {
-      "description": "Actual currency of the security in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
+      "description": "Actual currency of the underlying reference index, security or asset for the derivative in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/currency_code"
     },
     "buyer_id": {
@@ -90,11 +92,11 @@
       "type": "boolean"
     },
     "mtm_clean": {
-      "description": "The mark-to-market value of the security excluding interest. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "description": "The mark-to-market value of the derivative excluding interest. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "mtm_dirty": {
-      "description": "The mark-to-market value of the security including interest. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "description": "The mark-to-market value of the derivative including interest. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "next_exercise_date": {
@@ -105,7 +107,7 @@
     "next_payment_amount": {
       "description": "The amount that will need to be paid at the next_payment_date. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
-    },    
+    },
     "next_payment_date": {
       "description": "The next date at which interest will be paid or accrued_interest balance returned to zero.",
       "type": "string",
@@ -126,11 +128,11 @@
       "format": "date-time"
     },
     "notional_amount": {
-      "description": "The notional value is the total amount of a security's underlying asset at its spot price. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "description": "The notional value is the total value with regard to a derivative's underlying index, security or asset at its spot price in accordance with the specifications (i.e. leverage) of the derivative product. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "on_balance_sheet": {
-      "description": "Is the security reported on the balance sheet of the financial institution?",
+      "description": "Is the derivative reported on the balance sheet of the financial institution?",
       "type": "boolean"
     },
     "payment_type": {
@@ -148,7 +150,7 @@
       "type": "string"
     },
     "rate": {
-      "description": "The full interest rate applied to the security notional in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).",
+      "description": "The full interest rate applied to the derivative notional in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).",
       "type": "number"
     },
     "receive_type": {
@@ -157,7 +159,7 @@
       "enum": ["fixed", "floating"]
     },
     "reporting_lei": {
-      "description": "The LEI code for the legal entity under which the security is being reported.",
+      "description": "The LEI code for the legal entity under which the derivative is being reported.",
       "type": "string",
       "minLength": 20,
       "maxLength": 20
@@ -167,7 +169,7 @@
       "type": "string"
     },
     "risk_country_code": {
-      "description": "Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1",
+      "description": "Two-letter country code describing where the risk for the derivative product resides. In accordance with ISO 3166-1",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/country_code"
     },
     "seller_id": {
@@ -193,10 +195,10 @@
       "format": "date-time"
     },
     "type": {
-      "description": "This is the type of the security with regards to common regulatory classifications.",
+      "description": "This is the type of the derivative with regards to common regulatory classifications.",
       "type": "string",
       "enum": [
-        "vanila_swap", "mtm_swap", "swaption", "call_option", "put_option", "future", "forward", "tarf", "xccy", "cds"
+        "vanilla_swap", "mtm_swap", "swaption", "call_option", "put_option", "future", "forward", "tarf", "xccy", "cds"
       ]
     },
     "trade_date": {

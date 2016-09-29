@@ -5,6 +5,7 @@
   "type": "object",
   "properties": {
     "id": {
+      "description": "The unique identifier for the loan transaction within the financial institution.",
       "type": "string"
     },
     "date": {
@@ -13,15 +14,18 @@
       "format": "date-time"
     },
     "amount": {
+      "description": "The size of the transaction in the loan transaction event. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
-    },    
+    },
     "loan_id": {
+      "description": "The unique identifier for the affected loan/s within the financial institution.",
       "type": "string"
     },
     "movement": {
+      "description": "The movement parameter describes how the loan arrived to the firm.",
       "type": "string",
       "enum": ["none", "acquired", "sold", "securitised", "other"]
-    },    
+    },
     "type": {
       "description": "The type of impact on the balance of the loan.",
       "type": "string",

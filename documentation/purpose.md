@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"purpose"
-schemas:	[account, loan]
+schemas:	[account, loan, security]
 ---
 
 # purpose
@@ -11,15 +11,15 @@ The **purpose** property describes the reason behind the creation or usage of th
 
 ### deposit
 The **deposit** enum value refers to a retail deposit defined in accordance with Article 411 of the [CRR][crr]:
-    
+
 > A liability to a natural person or to an SME, where the natural person or the SME would qualify for the retail exposure class under the Standardised or IRB approaches for credit risk, or a liability to a company which is eligible for the treatment set out in Article 153(4) and where the aggregate deposits by all such enterprises on a group basis do not exceed EUR 1 million.
 
 ### ci_service
 The **ci_service** enum value refers to accounts covered by central institution services or held within a cooperative network.
 
 Opening paragraph 12 of the [LCR][lcr] states that liquidity calculations should take into account:
-> centralised management of liquidity in cooperative and institutional protection scheme networks where the central institution or body plays a role akin to a central bank because the members of the network do not typically have direct access to the latter. 
-> Appropriate rules should, therefore, recognise as liquid assets the sight deposits which are made by the members of the network with the central institution and other liquidity funding available to those from the central institution. 
+> centralised management of liquidity in cooperative and institutional protection scheme networks where the central institution or body plays a role akin to a central bank because the members of the network do not typically have direct access to the latter.
+> Appropriate rules should, therefore, recognise as liquid assets the sight deposits which are made by the members of the network with the central institution and other liquidity funding available to those from the central institution.
 
 Assets placed as a **ci_service** should be considered unencumbered inaccordance with Artcle 7.2(a) of the [LCR][lcr]:
 > assets included in a pool which are available for immediate use as collateral to obtain additional funding under committed but not yet funded credit lines available to the credit institution. This shall include assets placed by a credit institution with the central institution in a cooperative network or institutional protection scheme.

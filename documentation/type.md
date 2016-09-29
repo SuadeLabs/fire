@@ -1,8 +1,8 @@
- ---
+---
 layout:     property
 title:      "type"
-schemas:    [account, collateral, customer, loan]
---- 
+schemas:    [account, collateral, customer, derivative_cash_flow, derivative, entity, guarantor, issuer, loan_aggregate, loan_transaction, loan, security]
+---
 
 
 # type
@@ -47,7 +47,7 @@ Individual is a UK specific definition which is slightly broader than a natural 
 > (c) an unincorporated body of persons which does not consist entirely of bodies corporate and is not a partnership.
 
 ### natural_person
-Natural person refers to a human being as you would expect. It is further defined in the [Data Protection Directive][dpd]: 
+Natural person refers to a human being as you would expect. It is further defined in the [Data Protection Directive][dpd]:
 > Article 2(a):
 > (a) ... an identifiable person is one who can be identified, directly or indirectly, in particular by reference to an identification number or to one or more factors specific to his physical, physiological, mental, economic, cultural or social identity
 
@@ -59,14 +59,14 @@ As defined in the FCA Handbook referencing the Financial Securities and Markets 
 Definition of an SME is based on a set of criteria, while in theory it is possible for this to be a dynamic field based on other relevant data provided (employee count, turnover etc.), often times the data is unavailable or not current and hence firm may wish to identify SMEs directly.
 In this scenario, an SME type will be assumed to comply with the [EU SME Recommendation][sme], further explained in [What is an SME?][sme-what] broadly as:
 
-Company category | Staff headcount | Turnover (or) | Balance sheet total 
+Company category | Staff headcount | Turnover (or) | Balance sheet total
 -----------------|-----------------|---------------|--------------------
 Medium-sized     | < 250           | ≤ € 50 m      | ≤ € 43 m            
 Small            | < 50            | ≤ € 10 m      | ≤ € 10 m            
 Micro            | < 10            | ≤ € 2 m       | ≤ € 2 m             
 
 
-### other 
+### other
 Other means it is known to **not** be one of the other types. If type is unknown it should just be left blank.
 
 ### intl_org
@@ -127,7 +127,7 @@ International Organisations are defined in the [CRR][crr] Article 118:
 > (f) an international financial institution established by two or more Member States, which has the purpose to mobilise funding and provide financial assistance to the benefit of its members that are experiencing or threatened by severe financing problems.
 
 
-### corporate 
+### corporate
 *needs definition*
 ### sovereign  
 *needs definition*
@@ -147,7 +147,7 @@ International Organisations are defined in the [CRR][crr] Article 118:
 *needs definition*
 ### ciu
 *needs definition*
-### ceis 
+### ceis
 *needs definition*
 ### insurer
 *needs definition*
@@ -155,7 +155,7 @@ International Organisations are defined in the [CRR][crr] Article 118:
 *needs definition*
 ### other_financial
 *needs definition*
-### pic 
+### pic
 *needs definition*
 ### credit_union
 *needs definition*
@@ -169,18 +169,18 @@ From [CRR][crr] definitions (80):
 > trade finance‧ means financing, including guarantees, connected to the exchange of goods and services through financial products of fixed short-term maturity, generally of less than one year, without automatic rollover;
 
 ### auto
-LCR Article 13: 
+LCR Article 13:
 > loans or leases for the financing of motor vehicles or trailers (see Article 3 of Directive 2007/46/EC).
 > agricultural or forestry tractors (see Directive 2003/37/EC)
 > tracked vehicles (see Directive 2007/46/EC)
 > Such loans or leases may include ancillary insurance and service products or additional vehicle parts, and in the case of leases, the residual value of leased vehicles.
 
 ### personal
-LCR Article 13: 
+LCR Article 13:
 > loans and credit facilities to individuals resident in a Member State for personal, family or household consumption purposes.
 
-### commercial 
-LCR Article 13: 
+### commercial
+LCR Article 13:
 > commercial loans, leases and credit facilities to undertakings established in a Member State to finance capital expenditures or business operations other than the acquisition or development of commercial real estate
 
 ### commercial_property
@@ -198,8 +198,8 @@ LCR Article 13:
 
 From the Bank of England's [MLAR Definitions][mlar]
 > It is lending to individuals secured by mortgage on land and buildings where the lender has either a first or second (or subsequent) charge, where at least 40% of the land and buildings is used for residential purposes, and where the premises are for occupation by either the borrower (or dependant), or any other third party (e.g. it includes 'buy to let' lending to individuals).
-Only loans where there is a one-to-one correspondence between the loan and a specific security should be included within 'residential loans to individuals'. 
- 
+Only loans where there is a one-to-one correspondence between the loan and a specific security should be included within 'residential loans to individuals'.
+
 ### credit_card
 A **credit_card** is credit facility typically secured by a deposit account or equity in the borrower's property.
 
@@ -229,10 +229,10 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │   ├── bond
 │   ├── bond_amortising
 │   ├── index_linked_gilt
-│   ├── covered_bond 
+│   ├── covered_bond
 │   ├── frn
 │   └── abs
-│       ├── abs_auto 
+│       ├── abs_auto
 │       ├── abs_sme
 │       ├── abs_consumer
 │       ├── abs_other
@@ -240,22 +240,34 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │           ├── rmbs
 │           ├── rmbs_trans
 │           └── cmbs
-├── debt_issue 
+├── sft
+│   ├── margin_loan
+│   ├── repo -
+│   │   ├── cash_loan
+│   │   ├── bond_loan
+│   │   ├── stock_loan
+│   │   └── sell_buy_back
+│   └── rev_repo +
+│       ├── cash_borrow
+│       ├── bond_borrow
+│       ├── stock_borrow
+│       └── buy_sell_back
+├── debt_issue -
 │   ├── commercial_paper
-│   ├── covered_bond_issue 
+│   ├── covered_bond_issue
 │   ├── struct_note
 │   ├── spv_mortgages
 │   ├── spv_other
 │   └── mtn
 │       └── emtn
-├── cash 
+├── cash +
 └── other
 ```
 
 ### cash
 A cash or cash-equivalent security. Consider a securitisation of cash deposits.
 
-### equity_held, 
+### equity_held,
 This is a "catch all" term for *share*, *share_agg* to be used when further granularity is not available or not needed.
 
 ### share, share_agg   "cb_reserve", "cash_ratio_deposit",
@@ -275,7 +287,7 @@ This is a "catch all" term for issuance any of *bond*, *bond_amortising*, *index
 From the [LCR][lcr] introduction (9):
 Covered bonds are debt instruments issued by credit institutions and secured by a cover pool of assets which typically consist of mortgage loans or public sector debt to which investors have a preferential claim in the event of default. Their secured nature and certain additional safety features, such as the requirement on the issuer to replace non-performing assets in the cover pool and maintain the cover pool at a value exceeding the par value of the bonds (‘asset coverage requirement’), have contributed to make covered bonds relatively low-risk, yield-bearing instruments with a key funding role in mortgage markets of most Member States. In certain Member States outstanding covered bond issuance exceeds the pool of outstanding government bonds. Certain covered bonds of credit quality step 1, in particular, exhibited an excellent liquidity performance during the period from 1 January 2008 to 30 June 2012 analysed by the EBA in its report. Nevertheless the EBA recommended treating these covered bonds as level 2A assets to align with BCBS standards. However, in the light of the considerations made above about their credit quality, liquidity performance and role in the funding markets of the Union, it is appropriate for these credit quality step 1 covered bonds to be treated as level 1 assets. In order to avoid excessive concentration risks and unlike other level 1 assets, the holdings of credit quality step 1 covered bonds in the liquidity buffer should be subject to a 70 % cap of the overall buffer, a minimum 7 % haircut and to the diversification requirement.
 
-### emtn, mtn 
+### emtn, mtn
 *needs definition*
 
 ### commercial_paper
@@ -338,11 +350,25 @@ A government guaranteed floating-rate note.
 ### other
 Other refers to a type of security not covered by the above. If you find yourself using this often, please [contribute][contributing].
 
+##### underlying_type
+The **receivables or assets underlying the securitisation** must be credit claims or receivables with defined terms relating to rental payments or principal and interest payment. Any referenced interest payments should be based on commonly encountered market interest rates and may include terms for caps and floors, but should not reference complex formulae or exotic derivatives.
+A non-exhaustive list of [examples][ecbexamples] of underlying assets that may comply with the above principles, (subject to meeting all other criteria) could include:
+- residential mortgages,
+- certain commercial real estate mortgages,
+- loans to SMEs,
+- automobile loans/leases,
+- consumer finance loans,
+- credit card receivables, and
+- leasing receivables.
+
+[ecbexamples]: https://www.ecb.europa.eu/pub/pdf/other/ecb-boe_case_better_functioning_securitisation_marketen.pdf
 
 # Account
 ### call
 *needs definition*
 ### cd
+*needs definition*
+### credit_card
 *needs definition*
 ### checking
 *needs definition*
@@ -377,3 +403,10 @@ Other refers to a type of security not covered by the above. If you find yoursel
 [sme]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32003H0361
 [sme-what]: http://ec.europa.eu/growth/smes/business-friendly-environment/sme-definition/index_en.htm
 
+# collateral
+
+The [provision of assets][arrangement] to secure the performance of an obligation, whereby the assets can be provided: either by transfer of full ownership from a collateral provider to a collateral taker; or by the transfer of possession from a collateral provider to a collateral taker under a security right (e.g. pledge, charge or lien), where the full ownership of the assets remains with the collateral provider.
+
+ The collateral type defines the form of the collateral, such as property, shares, cash etc.
+
+[arrangement]: http://ec.europa.eu/internal_market/financial-markets/docs/collateral/directive-presentation_en.pdf

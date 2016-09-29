@@ -5,6 +5,7 @@
   "type": "object",
   "properties": {
     "id": {
+      "description": "The unique identifier for the loan within the financial institution.",
       "type": "string"
     },
     "date": {
@@ -13,7 +14,9 @@
       "format": "date-time"
     },
     "accounting_treatment": {
-      "type": "string"
+      "description": "The treatment of a loan is determined by which accounting principles are applied.",
+      "type": "string",
+	    "enum": ["ifrs", "ias", "country_specific_gaap"]
     },
     "accrued_interest_balance": {
       "description": "The accrued interest due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -34,15 +37,16 @@
       "type": "integer"
     },
     "asset_liability": {
-      "description": "Is the derivative an asset or a liability from the firm point of view?",
+      "description": "Is the loan an asset or a liability on the firm's balance sheet?",
       "type": "string",
       "enum": ["asset", "liability"]
-    },    
+    },
     "balance": {
       "description": "The balance of the loan or capital still to be repaid. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "base_rate": {
+      "description": "The base rate represents the basis of the repayment rate on the borrowed funds at the given date as agreed in the terms of the loan.",
       "type": "string",
       "enum": ["ZERO", "UKBRBASE", "FDTR"]
     },
@@ -57,6 +61,7 @@
         "type": "object",
         "properties": {
           "id": {
+            "description": "The unique identifier for the customer/s within the financial institution.",
             "type": "string"
           },
           "income_amount": {
@@ -69,10 +74,12 @@
       }
     },
     "encumbrance_amount": {
+      "description": "The amount of the loan that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
       "minimum": 0
     },
     "end_date": {
+      "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
       "type": "string",
       "format": "date-time"
     },
@@ -80,11 +87,18 @@
       "description": "The currency of the credit facility if not the same as loan currency_code.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/currency_code"
     },
+    "first_payment_date": {
+      "description": "The first payment date for interest payments.",
+      "type": "string",
+      "format": "date-time"
+    },
     "impairment_amount": {
+      "description": "The impairment amount for a loan is the allowance for loan impairments set aside by the firm that accounts for the event that the loan becomes impaired in the future.",
       "type": "integer",
       "minimum": 0
     },
     "impairment_type": {
+      "description": "The loss event resulting in the impairment of the loan.",
       "type": "string",
       "enum": ["collective", "individual", "write_off", "none"]
     },
@@ -93,6 +107,11 @@
       "type": "string",
       "minLength": 20,
       "maxLength": 20
+    },
+    "last_payment_date": {
+      "description": "The final payment date for interest payments, often coincides with end_date.",
+      "type": "string",
+      "format": "date-time"
     },
     "limit_amount": {
       "description": "The total credit limit on the loan. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -105,8 +124,14 @@
       "minimum": 0
     },
     "movement": {
+      "description": "The movement parameter describes how the loan arrived to the firm.",
       "type": "string",
       "enum": ["none", "acquired", "sold", "securitised", "other"]
+    },
+    "next_payment_date": {
+      "description": "The next date at which interest will be paid or accrued_interest balance returned to zero.",
+      "type": "string",
+      "format": "date-time"
     },
     "notional_amount": {
       "description": "The original notional amount of the loan. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -117,26 +142,35 @@
       "type": "boolean"
     },
     "originator_id": {
+      "description": "The unique identifier used by the financial institution to identify the originator of the loan product.",
       "type": "string"
     },
     "originator_type": {
+      "description": "The type of financial institution that acted as the originator of the loan product.",
       "type": "string",
       "enum": ["mortgage_lender", "spv", "other"]
+    },
+    "prev_payment_date": {
+      "description": "The most recent previous date at which interest was paid or accrued_interest balance returned to zero.",
+      "type": "string",
+      "format": "date-time"
     },
     "product_name": {
       "description": "The name of the product as given by the financial institution to be used for display and reference purposes.",
       "type": "string"
     },
     "provision_amount": {
-      "description": "The amount of the account that is provisioned by the financial institution. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "description": "The amount of reserves that is provisioned by the financial institution to cover the potential loss on the loan. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
       "minimum": 0
     },
     "provision_type": {
+      "description": "The provision type parameter details the provisions the issuing firm has allocated to cover potential losses from issuing a loan.",
       "type": "string",
       "enum": ["none", "other"]
     },
     "purpose": {
+      "description": "The underlying reason the borrower has requested the loan.",
       "type": "string",
       "enum": [
         "house_purchase", "first_time_buyer", "buy_to_let", "buy_to_let_house_purchase", "buy_to_let_remortgage", "buy_to_let_further_advance",
@@ -148,6 +182,7 @@
       "type": "number"
     },
     "rate_type": {
+      "description": "Describes the type of interest rate applied to the loan.",
       "type": "string",
       "enum": ["fixed", "variable", "tracker", "combined"]
     },
@@ -158,8 +193,8 @@
     "repayment_frequency": {
       "description": "Repayment frequency of the loan refers to how often the repayments occur.",
       "type": "string",
-      "enum": ["daily", "weekly", "bi_weekly", "monthly", "quarterly", "semi_annually", "annually", "at_maturity"] 
-    },    
+      "enum": ["daily", "weekly", "bi_weekly", "monthly", "quarterly", "semi_annually", "annually", "at_maturity"]
+    },
     "repayment_type": {
       "description": "Repayment type of the loan refers to whether the customer will be repaying capital + interest, just interest or a combination of the two.",
       "type": "string",
@@ -167,10 +202,12 @@
     },
     "reporting_lei": {
       "description": "The LEI code for the legal entity under which the loan is being reported.",
-      "type": "string"
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 20
     },
     "reporting_entity_name": {
-      "description": "The name of the reporting legal entity for MI purposes (as LEI code may not be available).",
+      "description": "The name of the reporting legal entity for display purposes (as LEI code may not be available).",
       "type": "string"
     },
     "risk_country_code": {
@@ -182,6 +219,7 @@
       "type": "boolean"
     },
     "securitised": {
+      "description": "Is this loan securitised?",
       "type": "boolean"
     },
     "sources": {
@@ -193,14 +231,22 @@
       }
     },
     "start_date": {
+      "description": "The timestamp that the trade or financial product commences. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
       "format": "date-time"
     },
     "status": {
+      "description": "Describes if the loan is active or been cancelled.",
       "type": "string",
       "enum": ["actual", "committed", "cancelled", "defaulted"]
     },
+    "trade_date": {
+      "description": "The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
     "type": {
+      "description": "The form of the loan product administered by the financial institution, with regards to common regulatory classifications.",
       "type": "string",
       "enum": [
         "mortgage", "commercial_property", "commercial", "personal", "auto",

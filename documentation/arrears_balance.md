@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"arrears_balance"
-schemas:	[loan]
+schemas:	[account, loan]
 ---
 
 # arrears_balance
@@ -11,4 +11,3 @@ See [MLAR][mlar] 2.3.
 
 ---
 [mlar]: http://www.bankofengland.co.uk/pra/documents/regulatorydata/mlar/sup_chapter16_annex19bg_20120401.pdf
-

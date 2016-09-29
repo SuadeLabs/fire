@@ -14,23 +14,25 @@
       "format": "date-time"
     },
     "accounting_treatment": {
-      "description": "An optional text field for the firm to link this data to line on the balance sheet.",
-      "type": "string"
+      "description": "The accounting treatment for securities is determined by which accounting principles are applied.",
+      "type": "string",
+	    "enum": ["ifrs", "ias", "country_specific_gaap"]
     },
     "accrued_interest": {
       "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as an integer number of cents/pence.",
       "type": "integer"
-    },    
+    },
     "asset_liability": {
-      "description": "Is the derivative an asset or a liability from the firm point of view?",
+      "description": "Is the security (valued at either amortised cost or fair value) an asset or a liability on the firm's balance sheet.",
       "type": "string",
       "enum": ["asset", "liability"]
-    },    
+    },
     "balance": {
       "description": "Outstanding amount including accrued interest. Monetary integer number of cents/pence.",
       "type": "integer"
     },
     "base_rate": {
+      "description": "The base rate represents the basis of the rate on the balance at the given date as agreed in the terms of the financial product.",
       "type": "string",
       "enum": ["ZERO", "UKBRBASE", "FDTR"]
     },
@@ -100,7 +102,7 @@
       "format": "date-time"
     },
     "hqla_class": {
-      "description": "What is the HQLA classification of this asset?",
+      "description": "What is the HQLA classification of this security?",
       "type": "string",
       "enum": ["i", "iia", "iib", "ineligible"]
     },
@@ -124,6 +126,7 @@
       "format": "date-time"
     },
     "movement": {
+      "description": "The movement parameter describes how the security arrived to the firm.",
       "type": "string",
       "enum": ["cash", "asset", "debt_issue", "cb_omo", "other"]
     },
@@ -185,7 +188,7 @@
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/country_code"
     },
     "sft_type": {
-      "description": "",
+      "description": "The sft_type parameter defines the transaction mechanism conducted for the SFT for this security product.",
       "type": "string",
       "enum": ["repo", "rev_repo", "sell_buy_back", "buy_sell_back", "bond_loan", "bond_borrow",
                "stock_loan", "stock_borrow", "margin_loan"]
@@ -208,7 +211,7 @@
       "type": "string",
       "enum": [
         "equity_held", "share", "share_agg", "cash", "other", "cb_reserve", "cb_facility", "cash_ratio_deposit",
-        "debt_held", "bond", "index_linked_gilt", "covered_bond", "bond_amortising", 
+        "debt_held", "bond", "index_linked_gilt", "covered_bond", "bond_amortising",
           "abs", "rmbs", "rmbs_trans", "cmbs", "frn", "mbs", "abs_auto", "abs_consumer", "abs_sme",
           "covered_bond_issue", "abs_other", "govt_gteed_frn",
         "debt_issue", "emtn", "mtn", "commercial_paper", "cd", "struct_note", "spv_mortgages", "spv_other"
