@@ -1,6 +1,6 @@
 layout:		property
 title:		"break_dates"
-schemas:	[account]
+schemas:	[account, derivative, security]
 ---
 
 # break_dates

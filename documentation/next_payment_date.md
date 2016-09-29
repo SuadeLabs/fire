@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "next_payment_date"
-schemas:    [account, loan]
+schemas:    [account, derivative, loan, security]
 ---
 
 # next_payment_date

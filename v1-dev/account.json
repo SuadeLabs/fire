@@ -13,8 +13,10 @@
       "type": "string",
       "format": "date-time"
     },
-    "accounting_treatment": {
-      "type": "string"
+    "accounting_treatment":{
+       "description": "The treatment of an account is determined by which accounting principles are applied.",
+       "type": "string",
+       "enum": ["ifrs", "ias", "country_specific_gaap"]
     },
     "accrued_interest": {
       "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -23,9 +25,9 @@
     "arrears_balance": {
       "description": "The balance of the capital amount that is considered to be in arrears (for overdrafts/credit cards). Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
-    },  
+    },
     "asset_liability": {
-      "description": "Is the derivative an asset or a liability from the firm point of view?",
+      "description": "Is the account an asset or a liability on the firm's balance sheet?",
       "type": "string",
       "enum": ["asset", "liability"]
     },
@@ -34,6 +36,7 @@
       "type": "integer"
     },
     "base_rate": {
+      "description": "The base rate represents the basis of the rate on the balance at the given date as agreed in the terms of the account.",
       "type": "string",
       "enum": ["ZERO", "UKBRBASE", "FDTR"]
     },
@@ -94,7 +97,8 @@
     },
     "guarantee_scheme": {
       "description": "The Government Deposit Scheme scheme under which the guarantee_amount is guaranteed.",
-      "type": "string"
+      "type": "string",
+	  "enum": ["be_pf", "bg_dif", "hr_di", "cy_dps", "cz_dif", "dk_gdfi", "ee_dgs", "fi_dgf", "fr_fdg", "de_edb", "de_edo", "de_edw", "gr_dgs", "hu_ndif", "ie_dgs", "it_fitd", "lv_dgf", "lt_vi", "lu_fgdl", "mt_dcs", "nl_dgs", "pl_bfg", "pt_fgd", "ro_fgdb", "sk_dpf", "si_dgs", "es_fgd", "se_ndo", "uk_fscs"]
     },
     "last_payment_date": {
       "description": "The final payment date for interest payments, often coincides with end_date.",
