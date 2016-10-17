@@ -219,13 +219,13 @@ Other refers to a type of security not covered by the above. If you find yoursel
 # Security
 
 ```bash
-├── equity_held +
+├── equity_held
 │   ├── share
 │   └── share_agg
-├── cb_reserve +
-├── cb_facility +
+├── cb_reserve
+├── cb_facility
 ├── cash_ratio_deposit
-├── debt_held +
+├── debt_held
 │   ├── bond
 │   ├── bond_amortising
 │   ├── index_linked_gilt
@@ -242,25 +242,26 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │           └── cmbs
 ├── sft
 │   ├── margin_loan
-│   ├── repo -
+│   ├── repo
 │   │   ├── cash_loan
 │   │   ├── bond_loan
 │   │   ├── stock_loan
 │   │   └── sell_buy_back
-│   └── rev_repo +
+│   └── rev_repo
 │       ├── cash_borrow
 │       ├── bond_borrow
 │       ├── stock_borrow
 │       └── buy_sell_back
-├── debt_issue -
+├── debt_issue
 │   ├── commercial_paper
+│   ├── cd
 │   ├── covered_bond_issue
 │   ├── struct_note
 │   ├── spv_mortgages
 │   ├── spv_other
 │   └── mtn
 │       └── emtn
-├── cash +
+├── cash
 └── other
 ```
 
