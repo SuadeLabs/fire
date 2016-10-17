@@ -174,7 +174,7 @@
       "type": "string",
       "enum": [
         "house_purchase", "first_time_buyer", "buy_to_let", "buy_to_let_house_purchase", "buy_to_let_remortgage", "buy_to_let_further_advance",
-        "buy_to_let_other", "remortgage", "remortgage_other", "lifetime_mortgage", "bridging_loan", "further_advance", "other"
+        "buy_to_let_other", "remortgage", "remortgage_other", "lifetime_mortgage", "bridging_loan", "further_advance", "promotional", "other"
       ]
     },
     "rate": {
@@ -249,7 +249,7 @@
       "description": "The form of the loan product administered by the financial institution, with regards to common regulatory classifications.",
       "type": "string",
       "enum": [
-        "mortgage", "commercial_property", "commercial", "personal", "auto",
+        "mortgage", "commercial_property", "commercial", "personal", "auto", "liquidity_facility",
         "trade_finance", "credit_card", "credit_facility", "multiccy_facility", "overdraft", "other"
       ]
     }
