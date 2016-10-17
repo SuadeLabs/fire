@@ -15,8 +15,7 @@
     },
     "accounting_treatment":{
        "description": "The treatment of an account is determined by which accounting principles are applied.",
-       "type": "string",
-       "enum": ["ifrs", "ias", "country_specific_gaap"]
+       "type": "string"
     },
     "accrued_interest": {
       "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
