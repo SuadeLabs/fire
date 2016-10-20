@@ -102,9 +102,8 @@
       "enum": ["collective", "individual", "write_off", "none"]
     },
     "issuer_id": {
-      "description": "The 20-digit Legal Entity Identifier for the issuer.",
+      "description": "The unique identifier for the issuer of the loan.",
       "type": "string",
-      "minLength": 20,
       "maxLength": 20
     },
     "last_payment_date": {
@@ -173,7 +172,7 @@
       "type": "string",
       "enum": [
         "house_purchase", "first_time_buyer", "buy_to_let", "buy_to_let_house_purchase", "buy_to_let_remortgage", "buy_to_let_further_advance",
-        "buy_to_let_other", "remortgage", "remortgage_other", "lifetime_mortgage", "bridging_loan", "further_advance", "promotional", "other"
+        "buy_to_let_other", "remortgage", "remortgage_other", "lifetime_mortgage", "bridging_loan", "further_advance", "promotional", "liquid_deposit", "other"
       ]
     },
     "rate": {
