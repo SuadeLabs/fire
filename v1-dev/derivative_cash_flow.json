@@ -49,9 +49,9 @@
       "type": "string",
       "enum": ["pay", "receive"]
     },
-    "mna": {
-      "description": "Does this derivative fall under a Master Netting Agreement?",
-      "type": "boolean"
+    "mna_id": {
+      "description": "The unique identifier of the Master Netting Agreement for this derivative cash flow.",
+      "type": "string"
     },
     "notional_amount": {
       "description": "The notional value is the total value with regard to a derivative's underlying index, security or asset at its spot price in accordance with the specifications (i.e. leverage) of the derivative product. Monetary type represented as a naturally positive integer number of cents/pence.",

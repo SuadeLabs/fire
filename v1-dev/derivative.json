@@ -86,9 +86,9 @@
       "type": "string",
       "format": "date-time"
     },
-    "mna": {
-      "description": "Does this derivative fall under a Master Netting Agreement?",
-      "type": "boolean"
+    "mna_id": {
+      "description": "The unique identifier of the Master Netting Agreement for this derivative cash flow.",
+      "type": "string"
     },
     "mtm_clean": {
       "description": "The mark-to-market value of the derivative excluding interest. Monetary type represented as a naturally positive integer number of cents/pence.",
