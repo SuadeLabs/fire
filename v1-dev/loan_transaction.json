@@ -47,7 +47,7 @@
       ]
     },    
     "value_date": {
-      "description": "The timestamp that the transaction was valued or took place. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "description": "The timestamp that the transaction was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
       "format": "date-time"
     }
