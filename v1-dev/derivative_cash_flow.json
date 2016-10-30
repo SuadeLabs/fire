@@ -24,7 +24,7 @@
       "enum": ["asset", "liability"]
     },
     "balance": {
-      "description": "Outstanding amount including accrued interest. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "description": "The contractual balance due on the payment date in the currency given. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "currency_code": {
