@@ -13,10 +13,6 @@
       "type": "string",
       "format": "date-time"
     },
-    "accrued_interest": {
-      "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
-      "type": "integer"
-    },
     "asset_class": {
       "description": "The asset class to which the derivative belongs.",
       "type": "string",
