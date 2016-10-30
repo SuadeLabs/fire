@@ -64,6 +64,11 @@
       "description": "Is the financial product reported on the balance sheet of the financial institution?",
       "type": "boolean"
     },
+    "payment_date": {
+      "description": "The timestamp that the cash flow will occur or was paid. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
     "product_name": {
       "description": "The name of the product as given by the financial institution to be used for display and reference purposes.",
       "type": "string"
