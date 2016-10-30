@@ -35,10 +35,9 @@
       "description": "Counterparty to the cash flow",
       "type": "string"
     },
-    "end_date": {
-      "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
-      "type": "string",
-      "format": "date-time"
+    "derivative_id": {
+      "description": "Unique identifier to the derivative to which this cash flow relates",
+      "type": "string"
     },
     "leg": {
       "description": "The type of the payment leg.",
