@@ -17,7 +17,6 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 ├── corporate
 │   └── sme
 ├── financial
-│   ├── central_bank
 │   ├── credit_institution
 │   ├── investment_firm
 │   ├── sspe
@@ -27,6 +26,10 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   ├── insurer
 │   ├── financial_holding
 │   └── other_financial
+├── central_bank
+├── mdb
+├── credit_union
+├── deposit_broker
 ├── pse
 │   ├── local_authority
 │   ├── regional_govt
@@ -34,9 +37,6 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   └── other_pse
 ├── sovereign
 ├── intl_org
-├── mdb
-├── credit_union
-├── deposit_broker
 └── other
 ```
 
@@ -160,7 +160,7 @@ International Organisations are defined in the [CRR][crr] Article 118:
 ### credit_union
 *needs definition*
 ### deposit_broker
-*needs definition*
+A deposit broker is used in some places in the CRR regulation, however is not well defined. In fact, a [2016 EBA Q&A addresses this lack of definition][deposit-broker-qa] directly.
 
 
 # Loan
@@ -393,6 +393,14 @@ A non-exhaustive list of [examples][ecbexamples] of underlying assets that may c
 *needs definition*
 
 
+# collateral
+
+The [provision of assets][arrangement] to secure the performance of an obligation, whereby the assets can be provided: either by transfer of full ownership from a collateral provider to a collateral taker; or by the transfer of possession from a collateral provider to a collateral taker under a security right (e.g. pledge, charge or lien), where the full ownership of the assets remains with the collateral provider.
+
+ The collateral type defines the form of the collateral, such as property, shares, cash etc.
+
+
+
 ---
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575
 [lcr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
@@ -403,11 +411,5 @@ A non-exhaustive list of [examples][ecbexamples] of underlying assets that may c
 [fca-indiv]: https://www.handbook.fca.org.uk/handbook/glossary/G3173.html
 [sme]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32003H0361
 [sme-what]: http://ec.europa.eu/growth/smes/business-friendly-environment/sme-definition/index_en.htm
-
-# collateral
-
-The [provision of assets][arrangement] to secure the performance of an obligation, whereby the assets can be provided: either by transfer of full ownership from a collateral provider to a collateral taker; or by the transfer of possession from a collateral provider to a collateral taker under a security right (e.g. pledge, charge or lien), where the full ownership of the assets remains with the collateral provider.
-
- The collateral type defines the form of the collateral, such as property, shares, cash etc.
-
+[deposit-broker-qa]: http://www.eba.europa.eu/single-rule-book-qa?p_p_id=questions_and_answers_WAR_questions_and_answersportlet&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&_questions_and_answers_WAR_questions_and_answersportlet_jspPage=%2Fhtml%2Fquestions%2Fviewquestion.jsp&_questions_and_answers_WAR_questions_and_answersportlet_viewTab=1&_questions_and_answers_WAR_questions_and_answersportlet_questionId=1382163&_questions_and_answers_WAR_questions_and_answersportlet_statusSearch=1
 [arrangement]: http://ec.europa.eu/internal_market/financial-markets/docs/collateral/directive-presentation_en.pdf
