@@ -181,8 +181,7 @@
       "type": "string",
       "enum": [
         "call", "cd", "checking", "current", "credit_card", "internet_only", "isa", "money_market",
-        "nostro", "notice", "bonds", "savings", "payments", "time_deposit", "vostro",
-        "private_banking", "other"
+        "nostro", "bonds", "savings", "payments", "time_deposit", "vostro"  , "other"
       ]
     },
     "trade_date": {
