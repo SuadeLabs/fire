@@ -13,6 +13,10 @@
       "type": "string",
       "format": "date-time"
     },
+    "accrued_interest": {
+      "description": "The accrued interest/premium due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer"
+    },
     "asset_class": {
       "description": "The asset class to which the derivative belongs.",
       "type": "string",
@@ -96,15 +100,8 @@
         "type": "string"
       }
     },
-    "type": {
-      "description": "This is the type of the derivative cash flow with regards to common regulatory classifications.",
-      "type": "string",
-      "enum": [
-        "vanilla_swap", "mtm_swap", "swaption", "xccy", "cds"
-      ]
-    },
     "trade_date": {
-      "description": "The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "description": "The date that the derivative cash flow terms were agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
       "format": "date-time"
     },
