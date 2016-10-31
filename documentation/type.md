@@ -326,10 +326,15 @@ Covered bonds are debt instruments issued by credit institutions and secured by 
 *needs definition*
 
 ### commercial_paper
-Commercial paper, in the global financial market, is an unsecured promissory note with a fixed maturity of no more than 270 days.
+Commercial paper, in the global financial market, is an unsecured promissory note with a fixed maturity of, typically, not more than 270 days.
+
+The [Money Market Statistics Regulation][mm-stat] defines it in Annex II as:
+> A debt instrument that is either unsecured or backed by collateral provided by the issuer, which has a maturity of not more than one year and is either interest-bearing or discounted.
 
 ### cd
-Certificate of deposit
+Certificate of deposit is defined in the [Money Market Statistics Regulation][mm-stat] in Annex II as:
+> A fixed-rate debt instrument issued by an MFI (monetary financial institution) entitling the holder to a specific fixed rate of interest over a defined fixed term of up to one year.
+> note: "one year" is defined as transactions with a maturity date of not more than 397 days after the trade date
 
 ### struct_note
 Structured notes (typically a subclass of an EMTN/MTN program)
