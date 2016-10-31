@@ -63,7 +63,7 @@ Company category | Staff headcount | Turnover (or) | Balance sheet total
 -----------------|-----------------|---------------|--------------------
 Medium-sized     | < 250           | ≤ € 50 m      | ≤ € 43 m            
 Small            | < 50            | ≤ € 10 m      | ≤ € 10 m            
-Micro            | < 10            | ≤ € 2 m       | ≤ € 2 m             
+Micro            | < 10            | ≤ € 2 m       | ≤ € 2 m 
 
 
 ### other
@@ -406,51 +406,161 @@ A non-exhaustive list of [examples][ecbexamples] of underlying assets that may c
 [ecbexamples]: https://www.ecb.europa.eu/pub/pdf/other/ecb-boe_case_better_functioning_securitisation_marketen.pdf
 
 # Account
+
+```bash
+├── deposit
+│   ├── current
+│   ├── checking
+│   ├── call
+│   ├── internet_only
+│   ├── time_deposit
+│   ├── savings
+│   └── cd
+├── isa
+├── money_market
+├── nostro
+├── vostro
+├── prepaid_card
+├── debit_card
+├── credit_card
+└── other
+```
+
 ### call
-*needs definition*
+A call account is defined in the [Money Market Statistics Regulation][mm-stat] in Annex II as:
+> any unsecured borrowing/lending redeemable at notice,
+
 ### cd
-*needs definition*
+A deposit account purely holding certificates of deposit (see *Security* **type**)
+
+### prepaid_card
+From the [Interchange Fees for Card-based Payments Regulation][card-fees] Article 2:
+> (35) 'prepaid card' means a category of payment instrument on which electronic money, as defined in point 2 of Article 2 of Directive 2009/110/EC, is stored.
+NB. see credit_card
+
+### debit_card
+From the [Interchange Fees for Card-based Payments Regulation][card-fees] Article 2:
+> (33) 'debit card' means a category of payment instrument that enables the payer to initiate a debit card transaction excluding those with prepaid cards;
+> (4) 'debit card transaction' means a card-based payment transaction, including those with prepaid cards that is not a credit card transaction;
+
+NB. see credit_card
+
 ### credit_card
-*needs definition*
-### checking
-*needs definition*
-### current
-*needs definition*
+A credit card is typically an off-balance sheet, contingent funding obligation whereby a customer has a certian credit limit and may borrow funds at any point, up to that limit, similar to a card-based credit facility.
+
+in the [Interchange Fees for Card-based Payments Regulation][card-fees] they discuss credit and debit cards:
+> There are two main types of credit cards available on the market. With deferred debit cards, the total amount of transactions is debited from the cardholder account at a pre-agreed specific date, usually once a month, without interest to be paid. With other credit cards, the cardholder can use a credit facility in order to reimburse part of the amounts due at a later date than specified, together with interest or other costs.
+
+A credit card is then defined in Article 2 as:
+> (34) 'credit card' means a category of payment instrument that enables the payer to initiate a credit card transaction;
+> (5) 'credit card transaction' means a card-based payment transaction where the amount of the transaction is debited in full or in part at a pre agreed specific calendar month date to the payer, in line with a prearranged credit facility, with or without interest;
+
+### current (checking, demand)
+Any transactional account 
+
 ### internet_only
-*needs definition*
+An internet-only account is one that is offered and only accessible via the internet. The [FCA defines the internet][fca-internet] in their handbook as:
+> The Internet is a unique medium for communicating financial promotions as it provides easy access to a very wide audience. At the same time, it provides very little control over who is able to access the financial promotion.
+
+The distinction here linked to financial promotions suggests that internet-only accounts are sold and managed through a higher risk channel and therefore should be regulated spearately to other accounts.
+
 ### isa
-*needs definition*
+An ISA is an individual savings account which is a scheme of investment satisfying the conditions prescribed in the UK's [ISA Regulations][uk-isa].
+
 ### money_market
-*needs definition*
-### nostro
-*needs definition*
+A money market account is an interest-bearing account that typically pays a higher interest rate than a savings account, and which provides the account holder with limited check-writing ability. 
+
+Money market accounts are accounts where the customer's money has been invested in the "money markets" either directly in money market instruments or money market funds which are described in the [2013 Proposal for the Regulation of Money Market Funds][mmf-prpposal] as providing a key component of corporate banking:
+> On the demand side, MMFs offer a short-term cash management tool that provides a high degree of liquidity, diversification, stability of value combined with a market-based yield. MMFs are mainly used by corporations seeking to invest their excess cash for a short time frame, for example until a major expenditure, such as the payroll, is due.
+
+Money market deposits are mentioned in association with definitions of cash in that they represent *claims for the repayment of money*.
+
+The [Money Market Statistics Regulation][mm-stat] specifically states in Article 1:
+> (10) 'money market instrument' means any of the instruments listed in Annexes I, II and III;
+> (11) 'money market fund' means a collective investment undertaking that requires authorisation as an undertaking for collective investment in transferable securities under Directive 2009/65/EC of the European Parliament and of the Council (6) or is an alternative investment fund under Directive 2011/61/EU of the European Parliament and of the Council (7), invests in short term assets and has as distinct or cumulative objectives offering returns in line with money market rates or preserving the value of an investment;
+
+### nostro and vostro (loro)
+Nostro and vostro (loro) accounts are used in the context of correspondent banking operations which are described in [ECB guidelines on monetary policy instruments][ecb-guidleines] from 2003:
+> Correspondent banking: an arrangement under which one credit institution provides payment and other services to another credit institution. Payments through correspondents are often executed through reciprocal accounts (nostro and loro accounts) to which standing credit lines may be attached. Correspondent banking services are primarily provided across international boundaries but are also known as agency relationships in some domestic contexts. 
+> A loro account is the term used by a correspondent to describe an account held on behalf of a foreign credit institution; the foreign credit institution would in turn regard this account as its nostro account.
+
 ### savings
-*needs definition*
+An account subject to the European Council [Directive on taxation of savings][eur-savings-tax]. A savings account essentially does not allow the customer to use funds in the account as a "medium of exchange" such as writing checks or for making ATM withdrawals. Hence, funds are typically not callable immediately and/or incur a withdrawal penalty such as loss of interest.
+In the US, [Regulation D][reg-d] uses the characteristics of the 'reservation of right' and 'convenient' withdrawals to describe savings accounts:
+> In order to classify an account as a 'savings deposit,' the institution must in its account agreement with the customer reserve the right at any time to require seven days’ advance written notice of an intended withdrawal. In practice, this right is never exercised, but the institution must nevertheless reserve that right in the account agreement. In addition, for an account to be
+classified as a 'savings deposit,' the depositor may make no more than six 'convenient' transfers or withdrawals per month from the account.
+
+
 ### time_deposit
-*needs definition*
-### vostro
-*needs definition*
+A fixed-term deposit with a specific [*end_date*][end-date].
+The US Regulation D describes time deposits as having the following characteristics:
+> Time deposit accounts have the following characteristics:
+> - must have a maturity of at least seven days from
+the date of deposit
+> - may require at least seven days’ prior written
+notice of intent to withdraw funds
+> - must be subject to early withdrawal penalties if
+funds are withdrawn within six days of the date of
+deposit or within six days of the date of the
+immediately preceding partial withdrawal
+> - may be interest-bearing
+> - may be evidenced by a negotiable or nonnegotiable,
+transferable or nontransferable certificate,
+instrument, passbook, book entry, or
+other similar instrument
+> - include club accounts (such as Christmas club or
+vacation club accounts)
+> - no eligibility requirements
+
+### deposit
+Deposit or depository account is defined in the [Directive regarding the mandatory exchange of tax information][exch-tax-info] section 8:
+> The term “Depository Account” includes any commercial, checking, savings, time, or thrift account, or an account that is evidenced by a certificate of deposit, thrift certificate, investment certificate, certificate of indebtedness, or other similar instrument maintained by a Financial Institution in the ordinary course of a banking or similar business. A Depository Account also includes an amount held by an insurance company pursuant to a guaranteed investment contract or similar agreement to pay or credit interest thereon.
+
 ### other
-*needs definition*
+Any other account type that cannot be classified as one of the other types. 
 
 
 # collateral
+The collateral type defines the form of the collateral, such as property or other assets used to secure an obligation.
 
 The [provision of assets][arrangement] to secure the performance of an obligation, whereby the assets can be provided: either by transfer of full ownership from a collateral provider to a collateral taker; or by the transfer of possession from a collateral provider to a collateral taker under a security right (e.g. pledge, charge or lien), where the full ownership of the assets remains with the collateral provider.
 
- The collateral type defines the form of the collateral, such as property, shares, cash etc.
 
 
 
 ---
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575
+
+[card-fees]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2015.123.01.0001.01.ENG
+
 [lcr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
+
 [mlar]: http://www.bankofengland.co.uk/pra/documents/regulatorydata/mlar/sup_chapter16_annex19bg_20120401.pdf
+
 [sftr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32015R2365
+
 [contributing]: https://github.com/SuadeLabs/fire/blob/master/CONTRIBUTING.md
+
 [dpd]: http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:31995L0046:en:HTML
+
 [fca-indiv]: https://www.handbook.fca.org.uk/handbook/glossary/G3173.html
+[fca-internet]: https://www.handbook.fca.org.uk/handbook/PERG/8/22.html
+
+[mm-stat]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R1333
+[mmf-prpposal]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A52013PC0615
+
+[ecb-eurosystem-procedures]: https://www.ecb.europa.eu/ecb/legal/pdf/l_06920040308en00010085.pdf
+[eur-savings-tax]: http://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1477869014542&uri=CELEX:32003L0048
+
+[exch-tax-info]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32014L0107
+
 [sme]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32003H0361
 [sme-what]: http://ec.europa.eu/growth/smes/business-friendly-environment/sme-definition/index_en.htm
+
 [deposit-broker-qa]: http://www.eba.europa.eu/single-rule-book-qa?p_p_id=questions_and_answers_WAR_questions_and_answersportlet&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&_questions_and_answers_WAR_questions_and_answersportlet_jspPage=%2Fhtml%2Fquestions%2Fviewquestion.jsp&_questions_and_answers_WAR_questions_and_answersportlet_viewTab=1&_questions_and_answers_WAR_questions_and_answersportlet_questionId=1382163&_questions_and_answers_WAR_questions_and_answersportlet_statusSearch=1
+
 [arrangement]: http://ec.europa.eu/internal_market/financial-markets/docs/collateral/directive-presentation_en.pdf
+
+[uk-isa]: http://www.legislation.gov.uk/uksi/1998/1870/contents/made
+[end-date]: https://github.com/SuadeLabs/fire/blob/master/documentation/end_date.md
+[reg-d]: http://www.federalreserve.gov/boarddocs/supmanual/cch/int_depos.pdf
