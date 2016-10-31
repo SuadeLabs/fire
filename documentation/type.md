@@ -358,7 +358,9 @@ This type value is in order to indicate whether a the security is subject to tra
 A commercial mortgage-backed security (a subclass of an abs).
 
 ### frn
-A floating-rate note.
+A Floating-rate Note is defined in the [Money Market Statistics Regulation][mm-stat] in Annex II as:
+> A debt instrument for which the periodic interest payments are calculated on the basis of the value, i.e. through fixing of an underlying reference rate such as Euribor on predefined dates known as fixing dates, and which has a maturity of not more than one year.
+> note: "one year" is defined as transactions with a maturity date of not more than 397 days after the trade date
 
 ### govt_gteed_frn
 A government guaranteed floating-rate note.
