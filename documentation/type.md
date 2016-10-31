@@ -137,28 +137,62 @@ International Organisations are defined in the [CRR][crr] Article 118:
 *needs definition*
 ### central_govt
 *needs definition*
-### pse
-*needs definition*
+### pse  
+A public sector entity is defined in the [LCR Regulation][lcr] Article 4:
+> 'public sector entity' means a non-commercial administrative body responsible to central governments, regional governments or local authorities, or to authorities that exercise the same responsibilities as regional governments and local authorities, or a non-commercial undertaking that is owned by or set up and sponsored by central governments, regional governments or local authorities, and that has explicit guarantee arrangements, and may include self-administered bodies governed by law that are under public supervision;
+
 ### credit_institution
-*needs definition*
+Credit institution is defined in the [LCR Regulation][lcr] Article 4:
+> (1) 'credit institution' means an undertaking the business of which is to take deposits or other repayable funds from the public and to grant credits for its own account
+
 ### investment_firm
-*needs definition*
+Investment firm is defined in the [LCR Regulation][lcr] Article 4:
+> 1) "Investment firm" means any legal person whose regular occupation or business is the provision of one or more investment services to third parties and/or the performance of one or more investment activities on a professional basis;
+> Member States may include in the definition of investment firms undertakings which are not legal persons, provided that:
+> (a) their legal status ensures a level of protection for third parties' interests equivalent to that afforded by legal persons, and
+> (b) they are subject to equivalent prudential supervision appropriate to their legal form.
+> However, where a natural person provides services involving the holding of third parties' funds or transferable securities, he may be considered as an investment firm for the purposes of this Directive only if, without prejudice to the other requirements imposed in this Directive and in Directive 93/6/EEC, he complies with the following conditions:
+> (a) the ownership rights of third parties in instruments and funds must be safeguarded, especially in the event of the insolvency of the firm or of its proprietors, seizure, set-off or any other action by creditors of the firm or of its proprietors;
+> (b) the firm must be subject to rules designed to monitor the firm's solvency and that of its proprietors;
+> (c) the firm's annual accounts must be audited by one or more persons empowered, under national law, to audit accounts;
+> (d) where the firm has only one proprietor, he must make provision for the protection of investors in the event of the firm's cessation of business following his death, his incapacity or any other such event;
+
+This definition is further refined in the [LCR Regulation][lcr] to exclude:
+> (a) credit institutions;
+> (b) local firms;
+> (c) firms which are not authorised to provide the ancillary service referred to in point (1) of Section B of Annex I to Directive 2004/39/EC, which provide only one or more of the investment services and activities listed in points 1, 2, 4 and 5 of Section A of Annex I to that Directive, and which are not permitted to hold money or securities belonging to their clients and which for that reason may not at any time place themselves in debt with those clients;
+
+### local_firm
+Local firm is defined in the [LCR Regulation][lcr] Article 4:
+> 'local firm' means a firm dealing for its own account on markets in financial futures or options or other derivatives and on cash markets for the sole purpose of hedging positions on derivatives markets, or dealing for the accounts of other members of those markets and being guaranteed by clearing members of the same markets, where responsibility for ensuring the performance of contracts entered into by such a firm is assumed by clearing members of the same markets
+
 ### sspe
 *needs definition*
+
 ### ciu
-*needs definition*
+A collective investment undertaking is defined in the [LCR Regulation][lcr] Article 4:
+> 'collective investment undertaking' or 'CIU' means a UCITS as defined in Article 1(2) of Directive 2009/65/EC of the European Parliament and of the Council of 13 July 2009 on the coordination of laws, regulations and administrative provisions relating to undertakings for collective investment in transferable securities (UCITS) (21), including, unless otherwise provided, third-country entities which carry out similar activities, which are subject to supervision pursuant to Union law or to the law of a third country which applies supervisory and regulatory requirements at least equivalent to those applied in the Union, an AIF as defined in Article 4(1)(a) of Directive 2011/61/EU of the European Parliament and of the Council of 8 June 2011 on Alternative Investment Fund Managers (22), or a non-EU AIF as defined in Article 4(1)(aa) of that Directive;
+
+
 ### ceis
 *needs definition*
+
 ### insurer
 *needs definition*
+
 ### financial_holding
-*needs definition*
+A financial holding copmany is defined in the [LCR Regulation][lcr] Article 4:
+> (20) 'financial holding company' means a financial institution, the subsidiaries of which are exclusively or mainly institutions or financial institutions, at least one of such subsidiaries being an institution, and which is not a mixed financial holding company;
+
 ### other_financial
-*needs definition*
+Any other type to be classified as financial but not one of the other types witin financial.
+
 ### pic
 *needs definition*
+
 ### credit_union
 *needs definition*
+
 ### deposit_broker
 A deposit broker is used in some places in the CRR regulation, however is not well defined. In fact, a [2016 EBA Q&A addresses this lack of definition][deposit-broker-qa] directly.
 
