@@ -172,7 +172,7 @@
       "type": "string",
       "enum": [
         "house_purchase", "first_time_buyer", "buy_to_let", "buy_to_let_house_purchase", "buy_to_let_remortgage", "buy_to_let_further_advance",
-        "buy_to_let_other", "remortgage", "remortgage_other", "lifetime_mortgage", "bridging_loan", "further_advance", "promotional", "other"
+        "buy_to_let_other", "remortgage", "remortgage_other", "lifetime_mortgage", "bridging_loan", "further_advance", "promotional", "other", "ips"
       ]
     },
     "rate": {
