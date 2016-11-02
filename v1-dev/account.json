@@ -192,6 +192,15 @@
     "withdrawal_penalty": {
       "description": "This is the penalty incurred by the customer for an early withdrawal on this account. An early withdrawal is defined as a withdrawal prior to the next_withdrawal_date. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
+    },
+    "count": {
+      "description": "Describes the number of accounts aggregated into a single row.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "minimum_balance": {
+      "description": "Indicates the minimum balance, in Euros, of each account within the aggregate. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer"
     }
   },
   "required": ["id", "date"],

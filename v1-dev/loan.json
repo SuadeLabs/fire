@@ -250,6 +250,15 @@
         "mortgage", "commercial_property", "commercial", "personal", "auto", "liquidity_facility",
         "trade_finance", "credit_card", "credit_facility", "multiccy_facility", "overdraft", "other"
       ]
+    },
+    "count": {
+      "description": "Describes the number of loans aggregated into a single row.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "minimum_balance_eur": {
+      "description": "Indicates the minimum balance, in Euros, of each loan within the aggregate.",
+      "type": "integer"
     }
   },
   "required": ["id", "date"],
