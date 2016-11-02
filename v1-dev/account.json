@@ -198,7 +198,7 @@
       "type": "integer",
       "minimum": 1
     },
-    "minimum_balance": {
+    "minimum_balance_eur": {
       "description": "Indicates the minimum balance, in Euros, of each account within the aggregate. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     }
