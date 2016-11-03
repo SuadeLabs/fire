@@ -210,10 +210,9 @@
       "type": "string",
       "enum": [
         "equity_held", "share", "share_agg", "cash", "other", "cb_reserve", "cb_facility", "cash_ratio_deposit",
-        "debt_held", "bond", "index_linked_gilt", "covered_bond", "bond_amortising",
-          "abs", "rmbs", "rmbs_trans", "cmbs", "frn", "mbs", "abs_auto", "abs_consumer", "abs_sme",
-          "covered_bond_issue", "abs_other", "govt_gteed_frn",
-        "debt_issue", "emtn", "mtn", "commercial_paper", "cd", "struct_note", "spv_mortgages", "spv_other"
+        "debt", "bond", "index_linked_gilt", "covered_bond", "bond_amortising",
+          "abs", "rmbs", "rmbs_trans", "cmbs", "frn", "mbs", "abs_auto", "abs_consumer", "abs_sme", "abs_other", 
+          "govt_gteed_frn", "emtn", "mtn", "commercial_paper", "cd", "struct_note", "spv_mortgages", "spv_other"
       ]
     },
     "trade_date": {
