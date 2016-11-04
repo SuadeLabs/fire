@@ -252,19 +252,23 @@ Other refers to a type of security not covered by the above. If you find yoursel
 
 # Security
 
-```bash
-├── equity_held
+```
+├── equity
 │   ├── share
 │   └── share_agg
-├── cb_reserve
-├── cb_facility
-├── cash_ratio_deposit
-├── debt_held
+├── debt
 │   ├── bond
 │   ├── bond_amortising
 │   ├── index_linked_gilt
 │   ├── covered_bond
 │   ├── frn
+│   ├── commercial_paper
+│   ├── cd
+│   ├── struct_note
+│   ├── spv_mortgages
+│   ├── spv_other
+│   ├── mtn
+│   │   └── emtn
 │   └── abs
 │       ├── abs_auto
 │       ├── abs_sme
@@ -274,27 +278,9 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │           ├── rmbs
 │           ├── rmbs_trans
 │           └── cmbs
-├── sft
-│   ├── margin_loan
-│   ├── repo
-│   │   ├── cash_loan
-│   │   ├── bond_loan
-│   │   ├── stock_loan
-│   │   └── sell_buy_back
-│   └── rev_repo
-│       ├── cash_borrow
-│       ├── bond_borrow
-│       ├── stock_borrow
-│       └── buy_sell_back
-├── debt_issue
-│   ├── commercial_paper
-│   ├── cd
-│   ├── covered_bond_issue
-│   ├── struct_note
-│   ├── spv_mortgages
-│   ├── spv_other
-│   └── mtn
-│       └── emtn
+├── cb_reserve
+├── cb_facility
+├── cash_ratio_deposit
 ├── cash
 └── other
 ```
@@ -302,22 +288,21 @@ Other refers to a type of security not covered by the above. If you find yoursel
 ### cash
 A cash or cash-equivalent security. Consider a securitisation of cash deposits.
 
-### equity_held,
-This is a "catch all" term for *share*, *share_agg* to be used when further granularity is not available or not needed.
+### equity
+This is a "catch all" term for equity instruments such as *share*, *share_agg* to be used when further granularity is not available or not needed.
 
 ### share, share_agg   "cb_reserve", "cash_ratio_deposit",
 Denotes if the security is a share (stock) or represents an aggregate for a portfolio or package of shares.
 
-### debt_held
-This is a "catch all" term for holding any of *bond*, *bond_amortising*, *index_linked_gilt*, *covered_bond*, *abs*, *residential_mbs*, *non_residential_mbs*, *frn*, *govt_gteed_frn*, to be used when further granularity is not available or not needed.
-
-### debt_issue
-This is a "catch all" term for issuance any of *bond*, *bond_amortising*, *index_linked_gilt*, *covered_bond*, *abs*, *residential_mbs*, *non_residential_mbs*, *frn*, *govt_gteed_frn*, to be used when further granularity is not available or not needed.
+### debt
+This is a "catch all" term for debt of any kind, *bond*, *bond_amortising*, *index_linked_gilt*, *covered_bond*, *abs*, *residential_mbs*, *non_residential_mbs*, *frn*, *govt_gteed_frn*, to be used when further granularity is not available or not needed.
 
 ### bond, bond_amortising
 *needs definition*
+
 ### index_linked_gilt
 *needs definition*
+
 ### covered_bond
 From the [LCR][lcr] introduction (9):
 Covered bonds are debt instruments issued by credit institutions and secured by a cover pool of assets which typically consist of mortgage loans or public sector debt to which investors have a preferential claim in the event of default. Their secured nature and certain additional safety features, such as the requirement on the issuer to replace non-performing assets in the cover pool and maintain the cover pool at a value exceeding the par value of the bonds (‘asset coverage requirement’), have contributed to make covered bonds relatively low-risk, yield-bearing instruments with a key funding role in mortgage markets of most Member States. In certain Member States outstanding covered bond issuance exceeds the pool of outstanding government bonds. Certain covered bonds of credit quality step 1, in particular, exhibited an excellent liquidity performance during the period from 1 January 2008 to 30 June 2012 analysed by the EBA in its report. Nevertheless the EBA recommended treating these covered bonds as level 2A assets to align with BCBS standards. However, in the light of the considerations made above about their credit quality, liquidity performance and role in the funding markets of the Union, it is appropriate for these credit quality step 1 covered bonds to be treated as level 1 assets. In order to avoid excessive concentration risks and unlike other level 1 assets, the holdings of credit quality step 1 covered bonds in the liquidity buffer should be subject to a 70 % cap of the overall buffer, a minimum 7 % haircut and to the diversification requirement.
@@ -340,9 +325,11 @@ Certificate of deposit is defined in the [Money Market Statistics Regulation][mm
 Structured notes (typically a subclass of an EMTN/MTN program)
 
 ### spv_mortgages, spv_other
+*needs definition*
 
 ### abs
 Any asset-backed security.
+*needs definition*
 
 ### rmbs
 A residential mortgage-backed security (a subclass of an abs).
