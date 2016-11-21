@@ -20,7 +20,6 @@
       "items": {
         "anyOf": [
           { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/account.json#" },
-          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/account_aggregate.json#" },
           { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/collateral.json#" },
           { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/customer.json#" },
           { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/derivative.json#" },
