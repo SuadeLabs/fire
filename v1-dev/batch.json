@@ -8,6 +8,10 @@
       "description": "A unique identifier for the data batch",
       "type": "string"
     },
+    "count": {
+      "description": "Number of records in this batch schema",
+      "type": "integer"
+    },
     "data": {
       "description": "An array of data items of a single type",
       "type": "array",
