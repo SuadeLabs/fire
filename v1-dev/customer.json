@@ -10,7 +10,7 @@
     "product_count": {
       "description": "The number of active non-loan products/trades this customer has with the firm.",
       "type": "integer",
-      "minimum": 1
+      "minimum": 0
     },
     "start_date": {
       "description": "The date that the customer first became a customer. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
