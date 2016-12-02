@@ -180,7 +180,7 @@
       "description": "This is the type of the account with regards to common regulatory classifications.",
       "type": "string",
       "enum": [
-        "call", "cd", "checking", "current", "credit_card", "internet_only", "isa", "money_market",
+        "call", "cd", "current", "credit_card", "internet_only", "isa", "money_market",
         "nostro", "bonds", "savings", "payments", "time_deposit", "vostro"  , "other"
       ]
     },
