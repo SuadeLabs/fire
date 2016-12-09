@@ -1,4 +1,4 @@
- ---
+---
 
 layout:     property  
 title:      "sft_type"  
