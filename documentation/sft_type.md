@@ -1,8 +1,8 @@
  ---
 
-layout:     property
-title:      "sft_type"
-schemas:    [security]
+layout:     property  
+title:      "sft_type"  
+schemas:    [security]  
 
 ---
 
