@@ -18,6 +18,7 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   └── sme
 ├── financial
 │   ├── credit_institution
+│   │   └── promotional_lender
 │   ├── investment_firm
 │   ├── sspe
 │   ├── ciu
@@ -144,6 +145,10 @@ A public sector entity is defined in the [LCR Regulation][lcr] Article 4:
 ### credit_institution
 Credit institution is defined in the [LCR Regulation][lcr] Article 4:
 > (1) 'credit institution' means an undertaking the business of which is to take deposits or other repayable funds from the public and to grant credits for its own account
+
+### promotional_lender
+A promotional lender is defined in the [LCR Regulation][lcr] Article 10.1(e):
+> (ii) any credit institution whose purpose is to advance the public policy objectives of the Union or of the central or regional government or local authority in a Member State predominantly through the provision of promotional loans on a non-competitive, not for profit basis, provided that at least 90 % of the loans that it grants are directly or indirectly guaranteed by the central or regional government or local authority and that any exposure to that regional government or local authority, as applicable, is treated as an exposure to the central government of the Member State in accordance with Article 115(2) of Regulation (EU) No 575/2013;
 
 ### investment_firm
 Investment firm is defined in the [LCR Regulation][lcr] Article 4:
