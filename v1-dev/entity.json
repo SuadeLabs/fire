@@ -89,7 +89,7 @@
       "enum": [
         "individual", "sme", "corporate", "other", "financial", "natural_person", "intl_org",
         "sovereign", "central_bank", "local_authority", "regional_govt", "central_govt", "other_pse", "pse", "mdb", "credit_institution",
-        "investment_firm", "sspe", "ciu", "ceis", "insurer", "financial_holding", "other_financial",
+        "investment_firm", "sspe", "ciu", "ceis", "insurer", "financial_holding", "other_financial", "promotional_lender",
         "pic", "credit_union", "deposit_broker"
       ]
     }
