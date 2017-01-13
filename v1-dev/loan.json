@@ -248,7 +248,7 @@
       "type": "string",
       "enum": [
         "mortgage", "commercial_property", "commercial", "personal", "auto", "liquidity_facility",
-        "trade_finance", "credit_card", "credit_facility", "multiccy_facility", "overdraft", "other"
+        "trade_finance", "credit_card", "credit_facility", "multiccy_facility", "nostro", "overdraft", "other"
       ]
     },
     "count": {
