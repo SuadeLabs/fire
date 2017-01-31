@@ -207,6 +207,28 @@ A deposit broker is used in some places in the CRR regulation, however is not we
 From [CRR][crr] definitions (80):
 > trade finance‧ means financing, including guarantees, connected to the exchange of goods and services through financial products of fixed short-term maturity, generally of less than one year, without automatic rollover;
 
+The EBA's [report on the NSFR][eba-nsfr-report] defines trade finance as:
+> The term ‘trade finance’ generally refers to finance that facilitates the trade of goods. Typically, trade finance is provided by banks and financial institutions, which intermediate between the buyer and the seller by providing financing to mitigate the risks involved in international as well as domestic trade. 
+
+It goes on to classify trade finance into further sub-categories:
+> The risk involved in the trade of goods relates to the gap between the payment for and the delivery of the goods (referred to as the ‘trade cycle’ finance gap). Through trade finance, the seller of goods reduces the payment risk while the buyer aims to reduce the delivery risk from the seller. The duration between the shipping of the goods and the final delivery determines the term of the trade finance transaction, which is typically short term. Moreover, the term of trade financing transactions is directly related to the shipment of the goods, which means that there is no automatic rollover of the transactions. Trade finance can take different forms: 
+> - trade credit insurance;
+> - letters of credit (documentary credits);
+> - bank guarantees;
+> - export/import loans; and
+> - factoring or forfaiting.
+
+### trade_credit_insurance
+From the EBA's [report on the NSFR][eba-nsfr-report], section 6.2.1:
+> A seller providing trade credit is exposed to the credit risk of the buyer. Trade credit insurance provides the seller with protection against the risk of non-payment by the buyer. The nonpayment may be due to the insolvency of the buyer or, in an international trade, due to political risks that prevent payment.
+
+### letter_of_credit
+From the EBA's [report on the NSFR][eba-nsfr-report], section 6.2.2:
+> When goods are traded, the seller and the buyer need to agree on the process of how to pay for the goods. While the buyer may be reluctant to prepay for the traded goods, the seller may also be unwilling to ship the goods before payment is made. In this situation, a bank can intermediate between the trading partners by providing an import letter of credit (L/C) to the buyer of the goods, which guarantees payment to the seller. 
+> A L/C is a contingent liability and payment is only made by the bank to the seller from funds in the buyer’s account when the documentation of shipping is presented.
+
+
+
 ### auto
 LCR Article 13:
 > loans or leases for the financing of motor vehicles or trailers (see Article 3 of Directive 2007/46/EC).
