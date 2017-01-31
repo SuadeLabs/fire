@@ -282,11 +282,10 @@ Other refers to a type of security not covered by the above. If you find yoursel
 ```
 ├── equity
 │   ├── share
+│   │   └── preference_share
 │   └── share_agg
 ├── debt
 │   ├── bond
-│   ├── bond_amortising
-│   ├── index_linked_gilt
 │   ├── covered_bond
 │   ├── frn
 │   ├── commercial_paper
@@ -318,21 +317,26 @@ A cash or cash-equivalent security. Consider a securitisation of cash deposits.
 ### equity
 This is a "catch all" term for equity instruments such as *share*, *share_agg* to be used when further granularity is not available or not needed.
 
-### share, share_agg   "cb_reserve", "cash_ratio_deposit",
+### share, share_agg 
 Denotes if the security is a share (stock) or represents an aggregate for a portfolio or package of shares.
+
+### preference_share
+*needs definition*
 
 ### debt
 This is a "catch all" term for debt of any kind, *bond*, *bond_amortising*, *index_linked_gilt*, *covered_bond*, *abs*, *residential_mbs*, *non_residential_mbs*, *frn*, *govt_gteed_frn*, to be used when further granularity is not available or not needed.
 
-### bond, bond_amortising
-*needs definition*
-
-### index_linked_gilt
+### bond
 *needs definition*
 
 ### covered_bond
 From the [LCR][lcr] introduction (9):
 Covered bonds are debt instruments issued by credit institutions and secured by a cover pool of assets which typically consist of mortgage loans or public sector debt to which investors have a preferential claim in the event of default. Their secured nature and certain additional safety features, such as the requirement on the issuer to replace non-performing assets in the cover pool and maintain the cover pool at a value exceeding the par value of the bonds (‘asset coverage requirement’), have contributed to make covered bonds relatively low-risk, yield-bearing instruments with a key funding role in mortgage markets of most Member States. In certain Member States outstanding covered bond issuance exceeds the pool of outstanding government bonds. Certain covered bonds of credit quality step 1, in particular, exhibited an excellent liquidity performance during the period from 1 January 2008 to 30 June 2012 analysed by the EBA in its report. Nevertheless the EBA recommended treating these covered bonds as level 2A assets to align with BCBS standards. However, in the light of the considerations made above about their credit quality, liquidity performance and role in the funding markets of the Union, it is appropriate for these credit quality step 1 covered bonds to be treated as level 1 assets. In order to avoid excessive concentration risks and unlike other level 1 assets, the holdings of credit quality step 1 covered bonds in the liquidity buffer should be subject to a 70 % cap of the overall buffer, a minimum 7 % haircut and to the diversification requirement.
+
+In accordance with the [UCITS Directive][ucits], and the [FCA handbook][fca-covered-bond]:  
+> bonds are issued by a credit institution which has its registered office in a Member State and is subject by law to special public supervision designed to protect bond-holders. In particular, sums deriving from the issue of those bonds shall be invested in accordance with the law in assets which, during the whole period of validity of the bonds, are capable of covering claims attaching to the bonds and which, in the event of failure of the issuer, would be used on a priority basis for the reimbursement of the principal and payment of the accrued interest.
+
+More information on covered_bond issuers in Europe can be found [here][eu-covered-bonds-info].
 
 ### emtn, mtn
 *needs definition*
@@ -402,6 +406,12 @@ A government guaranteed floating-rate note.
 > (b) securities or commodities lending and securities or commodities borrowing;
 > (c) a buy-sell back transaction or sell-buy back transaction;
 > (d) a margin lending transaction;
+
+### cb_reserve 
+*needs definition*
+
+### cash_ratio_deposit
+*needs definition*
 
 ### other
 Other refers to a type of security not covered by the above. If you find yourself using this often, please [contribute][contributing].
@@ -578,3 +588,8 @@ The [provision of assets][arrangement] to secure the performance of an obligatio
 [uk-isa]: http://www.legislation.gov.uk/uksi/1998/1870/contents/made
 [end-date]: https://github.com/SuadeLabs/fire/blob/master/documentation/end_date.md
 [reg-d]: http://www.federalreserve.gov/boarddocs/supmanual/cch/int_depos.pdf
+[eba-nsfr-report]: https://www.eba.europa.eu/documents/10180/983359/EBA-Op-2015-22+NSFR+Report.pdf
+[fca-covered-bond]: https://www.handbook.fca.org.uk/handbook/glossary/G2083.html
+[ucits]: http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2009:302:0032:0096:en:PDF
+[eu-covered-bonds-info]: http://ec.europa.eu/finance/investment/legal_texts/index_en.htm
+
