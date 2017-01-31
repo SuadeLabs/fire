@@ -108,11 +108,7 @@
     "hqla_class": {
       "description": "What is the HQLA classification of this security?",
       "type": "string",
-      "enum": ["i", "iia", "iib", "ineligible"]
-    },
-    "hqla_exclude": {
-      "description": "Excluded from HQLA reporting for operational or credit enhancement reasons.",
-      "type": "boolean"
+      "enum": ["i", "iia", "iib", "ineligible", "exclude"]
     },
     "isin_code": {
       "description": "The unique International Securities Identification Number for the security according to ISO 6166.",
