@@ -227,8 +227,6 @@ From the EBA's [report on the NSFR][eba-nsfr-report], section 6.2.2:
 > When goods are traded, the seller and the buyer need to agree on the process of how to pay for the goods. While the buyer may be reluctant to prepay for the traded goods, the seller may also be unwilling to ship the goods before payment is made. In this situation, a bank can intermediate between the trading partners by providing an import letter of credit (L/C) to the buyer of the goods, which guarantees payment to the seller. 
 > A L/C is a contingent liability and payment is only made by the bank to the seller from funds in the buyer’s account when the documentation of shipping is presented.
 
-
-
 ### auto
 LCR Article 13:
 > loans or leases for the financing of motor vehicles or trailers (see Article 3 of Directive 2007/46/EC).
@@ -267,6 +265,11 @@ A **credit_card** is credit facility typically secured by a deposit account or e
 ### credit_facility, multiccy_facility
 From Annex I of the [CRR][crr]:
 > agreements to lend, purchase securities, provide guarantees or acceptance facilities
+
+### nostro
+Nostro loans are the firm's accounts at other financial institutions which are in effect loans to other firms. Nostros are used in the context of correspondent banking operations which are described in [ECB guidelines on monetary policy instruments][ecb-guidleines] from 2003:
+> Correspondent banking: an arrangement under which one credit institution provides payment and other services to another credit institution. Payments through correspondents are often executed through reciprocal accounts (nostro and loro accounts) to which standing credit lines may be attached. Correspondent banking services are primarily provided across international boundaries but are also known as agency relationships in some domestic contexts. 
+> A loro (vostro) account is the term used by a correspondent to describe an account held on behalf of a foreign credit institution; the foreign credit institution would in turn regard this account as its nostro account.
 
 ### other
 Other refers to a type of security not covered by the above. If you find yourself using this often, please [contribute][contributing].
@@ -442,7 +445,6 @@ A non-exhaustive list of [examples][ecbexamples] of underlying assets that may c
 │   └── cd
 ├── isa
 ├── money_market
-├── nostro
 ├── vostro
 ├── prepaid_card
 ├── debit_card
@@ -503,7 +505,7 @@ The [Money Market Statistics Regulation][mm-stat] specifically states in Article
 > (10) 'money market instrument' means any of the instruments listed in Annexes I, II and III;
 > (11) 'money market fund' means a collective investment undertaking that requires authorisation as an undertaking for collective investment in transferable securities under Directive 2009/65/EC of the European Parliament and of the Council (6) or is an alternative investment fund under Directive 2011/61/EU of the European Parliament and of the Council (7), invests in short term assets and has as distinct or cumulative objectives offering returns in line with money market rates or preserving the value of an investment;
 
-### nostro and vostro (loro)
+### vostro (loro)
 Nostro and vostro (loro) accounts are used in the context of correspondent banking operations which are described in [ECB guidelines on monetary policy instruments][ecb-guidleines] from 2003:
 > Correspondent banking: an arrangement under which one credit institution provides payment and other services to another credit institution. Payments through correspondents are often executed through reciprocal accounts (nostro and loro accounts) to which standing credit lines may be attached. Correspondent banking services are primarily provided across international boundaries but are also known as agency relationships in some domestic contexts. 
 > A loro account is the term used by a correspondent to describe an account held on behalf of a foreign credit institution; the foreign credit institution would in turn regard this account as its nostro account.
