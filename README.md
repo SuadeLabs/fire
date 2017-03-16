@@ -30,6 +30,9 @@ The FIRE data format is supported by the [European Commission][euc], the [Open D
 
 Please see the [contributing guidelines][contributing] or get in touch (info at suade dot org) if you would like to participate from a knowledge or tech point of view.
 
+### Random FIRE Data Generator
+Included is a [random data generator][random-fire] which will generate data in line with the FIRE schema, but not necessarily realistic. (eg. You might get a loan with a balance of 10 but accrued interest of 1 million) *Note: This is a work in progress*
+
 ### Versioning
 Each release of the FIRE schemas can be found under their respective directories (labeled "v<version>"). If there's a "-dev" suffix, that means that it's a version that's currently in development and should not yet be used in a stable production environment, as there are still changes likely to be made. Versions without the "-dev" suffix are considered stable - and although changes may still be made to them (bug fixes, documentation, etc), those changes are all guaranteed to be backwards compatible with the initial release of that version.
 
@@ -42,3 +45,4 @@ Each release of the FIRE schemas can be found under their respective directories
 [euc]:		http://ec.europa.eu/index_en.htm
 [odi]:		http://opendata.institute/
 [odine]:	https://opendataincubator.eu/
+[random-fire]:      https://github.com/SuadeLabs/fire/blob/master/random_fire_generator.py
