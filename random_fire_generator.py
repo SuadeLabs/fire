@@ -42,7 +42,8 @@ def random_text(n):
 
 
 def random_date():
-    return fake.date_time().strftime('%Y-%m-%dT%H:%M:%SZ')
+    d = fake.date_time_between(start_date="-10y", end_date="+30y")
+    return d.strftime('%Y-%m-%dT%H:%M:%SZ')
 
 
 def insert(product, attr, attr_value):
@@ -95,7 +96,7 @@ def generate_product_fire(schema):
     # print "batch: ", batch
     schema_attrs = schema["properties"].keys()
 
-    for N in range(3):
+    for N in range(100000):
         p = {}
         batch["data"].append(p)
         for attr in schema_attrs:
@@ -182,10 +183,10 @@ def generate_product_fire(schema):
                     continue
 
                 else:
-                    logging.warn(
-                        "Failed to determine attr type for "
-                        "{} {}".format(schema["title"][:-7], attr)
-                    )
+                    # logging.warn(
+                    #     "Failed to determine attr type for "
+                    #     "{} {}".format(schema["title"][:-7], attr)
+                    # )
                     continue
 
     # logging.warn(json.dumps(product))
