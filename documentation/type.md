@@ -151,7 +151,7 @@ A promotional lender is defined in the [LCR Regulation][lcr] Article 10.1(e):
 > (ii) any credit institution whose purpose is to advance the public policy objectives of the Union or of the central or regional government or local authority in a Member State predominantly through the provision of promotional loans on a non-competitive, not for profit basis, provided that at least 90 % of the loans that it grants are directly or indirectly guaranteed by the central or regional government or local authority and that any exposure to that regional government or local authority, as applicable, is treated as an exposure to the central government of the Member State in accordance with Article 115(2) of Regulation (EU) No 575/2013;
 
 ### investment_firm
-Investment firm is defined in the [LCR Regulation][lcr] Article 4:
+Investment firm is defined in the [LCR Regulation][lcr] Article 3:
 > 1) "Investment firm" means any legal person whose regular occupation or business is the provision of one or more investment services to third parties and/or the performance of one or more investment activities on a professional basis;
 > Member States may include in the definition of investment firms undertakings which are not legal persons, provided that:
 > (a) their legal status ensures a level of protection for third parties' interests equivalent to that afforded by legal persons, and
@@ -168,14 +168,14 @@ This definition is further refined in the [LCR Regulation][lcr] to exclude:
 > (c) firms which are not authorised to provide the ancillary service referred to in point (1) of Section B of Annex I to Directive 2004/39/EC, which provide only one or more of the investment services and activities listed in points 1, 2, 4 and 5 of Section A of Annex I to that Directive, and which are not permitted to hold money or securities belonging to their clients and which for that reason may not at any time place themselves in debt with those clients;
 
 ### local_firm
-Local firm is defined in the [LCR Regulation][lcr] Article 4:
+Local firm is defined in the [LCR Regulation][lcr] Article 3:
 > 'local firm' means a firm dealing for its own account on markets in financial futures or options or other derivatives and on cash markets for the sole purpose of hedging positions on derivatives markets, or dealing for the accounts of other members of those markets and being guaranteed by clearing members of the same markets, where responsibility for ensuring the performance of contracts entered into by such a firm is assumed by clearing members of the same markets
 
 ### sspe
 *needs definition*
 
 ### ciu
-A collective investment undertaking is defined in the [LCR Regulation][lcr] Article 4:
+A collective investment undertaking is defined in the [LCR Regulation][lcr] Article 3:
 > 'collective investment undertaking' or 'CIU' means a UCITS as defined in Article 1(2) of Directive 2009/65/EC of the European Parliament and of the Council of 13 July 2009 on the coordination of laws, regulations and administrative provisions relating to undertakings for collective investment in transferable securities (UCITS) (21), including, unless otherwise provided, third-country entities which carry out similar activities, which are subject to supervision pursuant to Union law or to the law of a third country which applies supervisory and regulatory requirements at least equivalent to those applied in the Union, an AIF as defined in Article 4(1)(a) of Directive 2011/61/EU of the European Parliament and of the Council of 8 June 2011 on Alternative Investment Fund Managers (22), or a non-EU AIF as defined in Article 4(1)(aa) of that Directive;
 
 
@@ -186,14 +186,15 @@ A collective investment undertaking is defined in the [LCR Regulation][lcr] Arti
 *needs definition*
 
 ### financial_holding
-A financial holding copmany is defined in the [LCR Regulation][lcr] Article 4:
+A financial holding copmany is defined in the [LCR Regulation][lcr] Article 3:
 > (20) 'financial holding company' means a financial institution, the subsidiaries of which are exclusively or mainly institutions or financial institutions, at least one of such subsidiaries being an institution, and which is not a mixed financial holding company;
 
 ### other_financial
 Any other type to be classified as financial but not one of the other types witin financial.
 
 ### pic
-*needs definition*
+A financial holding copmany is defined in the [LCR Regulation][lcr] Article 3:
+> 'personal investment company' (‘PIC’) means an undertaking or a trust whose owner or beneficial owner, respectively, is a natural person or a group of closely related natural persons, which was set up with the sole purpose of managing the wealth of the owners and which does not carry out any other commercial, industrial or professional activity. The purpose of the PIC may include other ancillary activities such as segregating the owners' assets from corporate assets, facilitating the transmission of assets within a family or preventing a split of the assets after the death of a member of the family, provided these are connected to the main purpose of managing the owners' wealth;
 
 ### credit_union
 *needs definition*
@@ -385,30 +386,6 @@ A Floating-rate Note is defined in the [Money Market Statistics Regulation][mm-s
 
 ### govt_gteed_frn
 A government guaranteed floating-rate note.
-
-### stock_loan, stock_borrow, bond_loan, bond_borrow
-[SFT Regulation][sftr] Article 3(7):
-> 'securities or commodities lending' or 'securities or commodities borrowing' means a transaction by which a counterparty transfers securities or commodities subject to a commitment that the borrower will return equivalent securities or commodities on a future date or when requested to do so by the transferor, that transaction being considered as securities or commodities lending for the counterparty transferring the securities or commodities and being considered as securities or commodities borrowing for the counterparty to which they are transferred;
-
-### buy_sell_back, sell_buy_back
-[SFT Regulation][sftr] Article 3(8):
-> 'buy-sell back transaction' or 'sell-buy back transaction' means a transaction by which a counterparty buys or sells securities, commodities, or guaranteed rights relating to title to securities or commodities, agreeing, respectively, to sell or to buy back securities, commodities or such guaranteed rights of the same description at a specified price on a future date, that transaction being a buy-sell back transaction for the counterparty buying the securities, commodities or guaranteed rights, and a sell-buy back transaction for the counterparty selling them, such buy-sell back transaction or sell-buy back transaction not being governed by a repurchase agreement or by a reverse-repurchase agreement within the meaning of point (9);
-
-### repo, rev_repo
-[SFT Regulation][sftr] Article 3(9):
-> 'repurchase transaction' means a transaction governed by an agreement by which a counterparty transfers securities, commodities, or guaranteed rights relating to title to securities or commodities where that guarantee is issued by a recognised exchange which holds the rights to the securities or commodities and the agreement does not allow a counterparty to transfer or pledge a particular security or commodity to more than one counterparty at a time, subject to a commitment to repurchase them, or substituted securities or commodities of the same description at a specified price on a future date specified, or to be specified, by the transferor, being a repurchase agreement for the counterparty selling the securities or commodities and a reverse repurchase agreement for the counterparty buying them;
-
-### margin_loan
-[SFT Regulation][sftr] Article 3(10):
->'margin lending transaction' means a transaction in which a counterparty extends credit in connection with the purchase, sale, carrying or trading of securities, but not including other loans that are secured by collateral in the form of securities;
-
-### sft
-[SFT Regulation][sftr] Article 3(11):
-> 'securities financing transaction' or 'SFT' means:
-> (a) a repurchase transaction;
-> (b) securities or commodities lending and securities or commodities borrowing;
-> (c) a buy-sell back transaction or sell-buy back transaction;
-> (d) a margin lending transaction;
 
 ### cb_reserve 
 *needs definition*

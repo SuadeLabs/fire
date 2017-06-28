@@ -18,6 +18,9 @@ A **variable** rate type indicates that the interest rate is less predictable an
 ### tracker
 A **tracker** rate type is a sub-category of **variable** rate types and indicates a direct relationship between the interest rate and the base_rate. For example base_rate + 1%.
 
+### preferential
+A **preferential** rate type indicates that the interest rate applied is a teaser or 
+
 
 ---
 [mlar]: http://www.bankofengland.co.uk/pra/documents/regulatorydata/mlar/sup_chapter16_annex19bg_20120401.pdf
