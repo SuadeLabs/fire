@@ -92,6 +92,12 @@ From [CRR][crr] definitions (96):
 > internal hedge means a position that materially offsets the component risk elements between a trading book and a non-trading book position or sets of positions;
 
 
+## Security
+### derivative_collateral
+Defined in accordance with Article 30(1) of the [LCR][lcr] regulation:
+> collateral posted for contracts listed in Annex II of Regulation (EU) No. 575/2013 and credit derivatives.
+
+
 ---
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575
 [lcr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
