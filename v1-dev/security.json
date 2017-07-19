@@ -13,9 +13,8 @@
       "type": "string",
       "format": "date-time"
     },
-    "accounting_treatment": {
-      "description": "The accounting treatment for securities is determined by which accounting principles are applied.",
-      "type": "string"
+    "accounting_treatment":{
+       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/accounting_treatment"
     },
     "accrued_interest": {
       "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as an integer number of cents/pence.",
