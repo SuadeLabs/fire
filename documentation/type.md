@@ -316,7 +316,8 @@ Other refers to a type of security not covered by the above. If you find yoursel
 ```
 
 ### cash
-A cash or cash-equivalent security. Consider a securitisation of cash deposits.
+A cash or cash-equivalent security such as a securitisation of cash deposits. Within Finrep Annex V part (2):
+> "Cash on hand" includes holdings of national and foreign banknotes and coins in circulation that are commonly used to make payments.
 
 ### equity
 This is a "catch all" term for equity instruments such as *share*, *share_agg* to be used when further granularity is not available or not needed.
@@ -388,7 +389,8 @@ A Floating-rate Note is defined in the [Money Market Statistics Regulation][mm-s
 A government guaranteed floating-rate note.
 
 ### cb_reserve 
-*needs definition*
+As defined in Finrep Annex V part (2):
+> include balances receivable on demand at central banks.
 
 ### cash_ratio_deposit
 *needs definition*
