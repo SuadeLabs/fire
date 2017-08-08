@@ -3,15 +3,16 @@
        "description": "The accounting treatment in accordance with IAS/IFRS9 accounting principles.",
        "type": "string",
        "enum": [
-         "fv_designated",
-         "fv_designated_mandatory",
          "held_for_trading",
+         "fv_thru_pnl"
+         "fv_mandatorily"
+         "fv_oci"
+         "amortised_cost",
+
          "held_for_hedge",
          "available_for_sale",
          "loans_and_recs",
          "held_to_maturity",
-         "amortised_cost",
-         "fv_oci"
       ]
   },
   "currency_code": {
