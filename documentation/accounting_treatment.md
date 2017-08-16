@@ -1,7 +1,7 @@
 ---
 
-layout: property  
-title: "accounting_treatment"  
+layout: property
+title: "accounting_treatment"
 schemas: [account, derivative, loan, security]
 
 ---
@@ -10,40 +10,27 @@ schemas: [account, derivative, loan, security]
 
 ---
 
-### account
-The [**treatment of an account**][treatment] is determined by [which accounting principles are applied][principles] (e.g. International Financial Reporting Standards (IFRS), US Generally Accepted Accounting Principles (GAAP), UK GAAP etc.).
+The accounting treatment of a product refers to which accounting classification or portfolio the asset/liability belongs within the [IFRS9][ifrs9] regime in accordance with Regulation (EU) 2015/534 (ECB/2015/13) applied by the financial firm.
 
-[principles]: http://www.iasplus.com/en-gb/standards/ifrs-in-the-uk-1
-[treatment]: http://ec.europa.eu/finance/company-reporting/index_en.htm
+### cb_or_demand
+Cash balances at central banks and other demand deposits in accordance with IFRS.
 
-For example, the *treatment of expense* is determined by the principles (IFRS/US GAAP/UK GAAP) that underly the process of reporting *when* expenses are incurred, and *when* they are then debited and credit impact is taken (and so on).
+### held_for_trading
+Financial assets held for trading in accordance with IFRS.
 
----
+### fv_thru_pnl
+Financial assets measured at fair value through profit and loss and designated as such upon initial recognition or subsequently in accordance with IFRS, except those classified as financial assets held for trading.
 
-### derivative
-The [**accounting treatment for derivatives**][treatment] is determined by [which accounting principles are applied][principles] (e.g. International Financial Reporting Standards (IFRS), International Accounting Standards (IAS), United Kingdom Generally Accepted Accounting Principles (UK GAAP) etc.).
+### fv_mandatorily
+Non-trading financial assets mandatorily measured at fair value through profit or loss in accordance with IFRS.
 
-[treatment]: http://www.iasplus.com/en-us/standards/international/ifrs-en-us/ifrs9
-[principles]: http://www.iasplus.com/en-gb/standards
+### fv_oci
+Financial assets measured at fair value through other comprehensive income due to business model and cash-flows characteristics in accordance with IFRS.
 
----
-
-### loan
-The [**treatment of a loan**][treatment] is determined by [which accounting principles are applied][principles] (e.g. International Financial Reporting Standards (IFRS), US Generally Accepted Accounting Principles (GAAP), UK GAAP etc.).
-
-[principles]: http://www.iasplus.com/en-gb/standards/ifrs-in-the-uk-1
-[treatment]: http://ec.europa.eu/finance/company-reporting/index_en.htm
+### amortised_cost
+Financial assets measured at amortised cost in accordance with IFRS.
 
 
 ---
 
-### security
-The [**accounting treatment for securities**][treatment] is determined by [which accounting principles are applied][principles] (e.g. International Financial Reporting Standards (IFRS), International Accounting Standards (IAS), United Kingdom Generally Accepted Accounting Principles (UK GAAP) etc.).
-
-[treatment]: http://www.iasplus.com/en-us/standards/international/ifrs-en-us/ifrs9
-[principles]: http://www.iasplus.com/en-gb/standards
-
----
-
-### country_specific_gaap
-If **country_specific_gaap** is the selected for accounting_treatment - it refers to the Generally Accepted Accounting Principles (GAAP) of the country denoted in the **country_code** property.
+[ifrs9]: https://www.iasplus.com/en-gb/standards/ifrs-en-gb/ifrs9
