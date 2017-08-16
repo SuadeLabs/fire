@@ -3,16 +3,17 @@
        "description": "The accounting treatment in accordance with IAS/IFRS9 accounting principles.",
        "type": "string",
        "enum": [
-         "held_for_trading",
-         "fv_thru_pnl",
-         "fv_mandatorily",
-         "fv_oci",
-         "amortised_cost",
-         "held_for_hedge",
-         "available_for_sale",
-         "loans_and_recs",
-         "held_to_maturity"
-      ]
+          "cb_or_demand",
+          "held_for_trading",
+          "fv_thru_pnl",
+          "fv_mandatorily",
+          "fv_oci",
+          "amortised_cost",
+          "held_for_hedge",
+          "available_for_sale",
+          "loans_and_recs",
+          "held_to_maturity"
+        ]
   },
   "currency_code": {
     "description": "Currency in accordance with ISO 4217 standards plus CNH for practical considerations.",
