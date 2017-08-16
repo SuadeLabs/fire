@@ -107,7 +107,7 @@
     "impairment_type": {
       "description": "The loss event resulting in the impairment of the loan.",
       "type": "string",
-      "enum": ["collective", "individual", "write_off", "none"]
+      "enum": ["collective", "individual", "write_off"]
     },
     "issuer_id": {
       "description": "The unique identifier for the issuer of the loan.",
