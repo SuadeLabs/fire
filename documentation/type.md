@@ -228,6 +228,10 @@ From the EBA's [report on the NSFR][eba-nsfr-report], section 6.2.2:
 > When goods are traded, the seller and the buyer need to agree on the process of how to pay for the goods. While the buyer may be reluctant to prepay for the traded goods, the seller may also be unwilling to ship the goods before payment is made. In this situation, a bank can intermediate between the trading partners by providing an import letter of credit (L/C) to the buyer of the goods, which guarantees payment to the seller. 
 > A L/C is a contingent liability and payment is only made by the bank to the seller from funds in the buyer’s account when the documentation of shipping is presented.
 
+### project_finance
+As defined in [Supervisory Reporting][sup-rep] part 2(5):
+> 'Project finance loans' include loans that are recovered solely from the income of the projects financed by them.
+
 ### auto
 LCR Article 13:
 > loans or leases for the financing of motor vehicles or trailers (see Article 3 of Directive 2007/46/EC).
@@ -274,11 +278,6 @@ Nostro loans are the firm's accounts at other financial institutions which are i
 
 ### other
 Other refers to a type of security not covered by the above. If you find yourself using this often, please [contribute][contributing].
-
-### overdraft
-*put as loan type or deduce from a negative balance?*
-
-
 
 
 # Security
@@ -431,6 +430,7 @@ A non-exhaustive list of [examples][ecbexamples] of underlying assets that may c
 └── other
 ```
 
+
 ### call
 A call account is defined in the [Money Market Statistics Regulation][mm-stat] in Annex II as:
 > any unsecured borrowing/lending redeemable at notice,
@@ -573,4 +573,4 @@ The [provision of assets][arrangement] to secure the performance of an obligatio
 [fca-covered-bond]: https://www.handbook.fca.org.uk/handbook/glossary/G2083.html
 [ucits]: http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2009:302:0032:0096:en:PDF
 [eu-covered-bonds-info]: http://ec.europa.eu/finance/investment/legal_texts/index_en.htm
-
+[sup-rep]: http://publications.europa.eu/resource/cellar/37c79802-fe90-11e3-831f-01aa75ed71a1.0006.03/DOC_1
