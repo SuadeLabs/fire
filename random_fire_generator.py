@@ -1,23 +1,26 @@
-from faker import Faker
-from datetime import datetime
+import argparse
 import json
+import iso3166
 import logging
 import random
-import iso3166
 import timeit
+from datetime import datetime
+from faker import Faker
 
 
-fake = Faker()
 fire_schemas = [
     "v1-dev/account.json",
+    "v1-dev/customer.json",
+    "v1-dev/derivative.json",
     "v1-dev/derivative_cash_flow.json",
+    "v1-dev/guarantor.json",
+    "v1-dev/issuer.json",
     "v1-dev/loan.json",
+    "v1-dev/loan_transaction.json",
     "v1-dev/security.json"
 ]
-
-
-def random_integer(min, max):
-    return random.randrange(min, max)
+WRITE_PATH = ""
+fake = Faker()
 
 
 def random_currency():
@@ -27,6 +30,25 @@ def random_currency():
 def random_country():
     country_codes = [c[1] for c in iso3166.countries]
     return random.choice(country_codes)
+
+
+def random_accounting_treatment():
+    accounting_treatments = [
+        "fv_designated",
+        "fv_designated_mandatory",
+        "held_for_trading",
+        "held_for_hedge",
+        "available_for_sale",
+        "loans_and_recs",
+        "held_to_maturity",
+        "amortised_cost",
+        "fv_oci"
+    ]
+    return random.choice(accounting_treatments)
+
+
+def random_integer(min, max):
+    return random.randrange(min, max)
 
 
 def random_enum(enum_list):
@@ -50,7 +72,7 @@ def insert(product, attr, attr_value):
     return product["data"][0].update({attr: attr_value})
 
 
-def generate_random_fires(fire_schemas, config=None):
+def generate_random_fires(fire_schemas, n=100):
     """
     Given a list of fire product schemas (account, loan, derivative_cash_flow,
     security), generate random data and associated random relations (customer,
@@ -66,7 +88,8 @@ def generate_random_fires(fire_schemas, config=None):
     for fire_schema in fire_schemas:
         f = open(fire_schema, "r")
         schema = json.load(f)
-        data = generate_product_fire(schema)
+        data_type = fire_schema.split("/")[-1].split(".json")[0]
+        data = generate_product_fire(schema, data_type, n)
         batches.append(data)
 
     end_time = timeit.default_timer() - start_time
@@ -80,23 +103,41 @@ def generate_random_fires(fire_schemas, config=None):
 
 def write_batches_to_files(batches):
     for b in batches:
-        f = open(str(b["date"]) + "_" + str(b["name"]) + ".json", "w+")
+        filename = "[" + str(b["date"]) + "] " + str(b["name"]) + ".json"
+        f = open(filename.replace(" ", "_"), "w+")
         f.write(json.dumps(b))
         f.close()
 
 
-def generate_product_fire(schema):
-    # print schema
+def include_embedded_schema_properties(schema):
+    try:
+        for i in range(len(schema["allOf"])):
+            inherited_schema = schema["allOf"][i]["$ref"].split("/")[-1]
+            f = open("v1-dev/" + inherited_schema, "r")
+            inherited_schema = json.load(f)
+            schema["properties"] = dict(
+                schema["properties"].items() +
+                inherited_schema["properties"].items()
+            )
+
+    except KeyError:
+        pass
+
+    return schema
+
+
+def generate_product_fire(schema, data_type, n):
     now = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
     batch = {
         "name": "Random_FIRE_{}s".format(schema["title"][:-7]),
         "date": now,
         "data": []
     }
-    # print "batch: ", batch
+
+    schema = include_embedded_schema_properties(schema)
     schema_attrs = schema["properties"].keys()
 
-    for N in range(100000):
+    for i in range(n):
         p = {}
         batch["data"].append(p)
         for attr in schema_attrs:
@@ -104,13 +145,13 @@ def generate_product_fire(schema):
             attr_obj = schema["properties"][attr]
 
             if attr == "id":
-                attr_value = str(N)
-                batch["data"][N].update({attr: attr_value})
+                attr_value = str(i)
+                batch["data"][i].update({attr: attr_value})
                 continue
 
             elif attr == "date":
                 attr_value = now
-                batch["data"][N].update({attr: attr_value})
+                batch["data"][i].update({attr: attr_value})
                 continue
 
             elif attr in ["currency_code", "facility_currency_code"]:
@@ -121,7 +162,11 @@ def generate_product_fire(schema):
                 attr_value = random_country()
                 continue
 
-            elif attr == "isin_code":
+            elif attr == "accounting_treatment":
+                attr_value = random_accounting_treatment()
+                continue
+
+            elif attr in ["isin_code" or "underlying_isin_code"]:
                 attr_value = random_text(12)
                 continue
 
@@ -139,7 +184,7 @@ def generate_product_fire(schema):
 
                 if attr_type == "number":
                     attr_value = random_integer(0, 500) / 100.0
-                    batch["data"][N].update({attr: attr_value})
+                    batch["data"][i].update({attr: attr_value})
                     continue
 
                 elif attr_type == "integer":
@@ -153,7 +198,7 @@ def generate_product_fire(schema):
                         attr_max = 100000
 
                     attr_value = random_integer(attr_min, attr_max)
-                    batch["data"][N].update({attr: attr_value})
+                    batch["data"][i].update({attr: attr_value})
                     continue
 
                 elif attr_type == "string":
@@ -174,12 +219,12 @@ def generate_product_fire(schema):
                             #     "Simple stringing {}".format(attr))
                             attr_value = random_word(1)
 
-                    batch["data"][N].update({attr: attr_value})
+                    batch["data"][i].update({attr: attr_value})
                     continue
 
                 elif attr_type == "boolean":
                     attr_value = random.choice([True, False])
-                    batch["data"][N].update({attr: attr_value})
+                    batch["data"][i].update({attr: attr_value})
                     continue
 
                 else:
@@ -194,4 +239,15 @@ def generate_product_fire(schema):
 
 
 if __name__ == "__main__":
-    write_batches_to_files(generate_random_fires(fire_schemas))
+    parser = argparse.ArgumentParser(
+        description="Generate random FIRE data points."
+    )
+    parser.add_argument(
+        "count",
+        type=int,
+        help="Integer number of FIRE data points to generate \
+              for each data type"
+    )
+    args = parser.parse_args()
+
+    write_batches_to_files(generate_random_fires(fire_schemas, args.count))
