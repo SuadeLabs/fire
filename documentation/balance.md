@@ -12,7 +12,7 @@ More precisely, from an [IFRS 9][ifrs9] accounting point of view, the balance is
 any loss allowance.
 
 This is a *monetary type* and as [it is impossible to squeeze infinitely many Real numbers into a finite number of bits][floats], we represent monetary types as integer numbers of cents/pence to reduce potential rounding errors. So $10.35 becomes 1035.
-Don't forget to divide by 100 (or the relevant minor unit denomination) when presenting information to a user. The relevant minor unit denomination should be determined from the [**currency**][ccy]'s corresponding ['E'][E] value.
+Don't forget to divide by 100 (or the relevant minor unit denomination) when presenting information to a user. The relevant minor unit denomination should be determined from the currency's corresponding ['E'][E] value.
 
 
 ---
@@ -20,6 +20,5 @@ Don't forget to divide by 100 (or the relevant minor unit denomination) when pre
 [face]: https://en.wikipedia.org/wiki/Face_value
 [par]: https://en.wikipedia.org/wiki/Par_value
 [floats]: https://en.wikipedia.org/wiki/Floating_point#Accuracy_problems
-[ccy]: https://github.com/suadelabs/fire/blob/master/documentation/currency.md
 [E]: https://en.wikipedia.org/wiki/ISO_4217#Active_codes
 [ifrs9]: https://www.iasplus.com/en-gb/standards/ifrs-en-gb/ifrs9
