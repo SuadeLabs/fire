@@ -1,15 +1,16 @@
+---
 layout:		property
 title:		"country_code"
 schemas:	[account, collateral, customer, loan]
 ---
 
 # country_code
-The **country\_code** represents location, registration, jurisdiction or country of domicile of the product, customer or collateral. This reflects where product or entity is from an operational standpoint rather than a legal point of view (although in many cases it is the same).
+The **country_code** represents location, registration, jurisdiction or country of domicile of the product, customer or collateral. This reflects where product or entity is from an operational standpoint rather than a legal point of view (although in many cases it is the same).
 
 Countries are represented as 2-letter codes in accordance with [ISO 3166-1][iso3166].
 
 ### Member States
-EU Regulations often refer to *Member States* which refers to European Economic Area countries as clarified by the EBA in [this Q&A][member-state-qa].
+EU Regulations often refer to *Member States* which refers to European Economic Area (EEA) countries as clarified by the EBA in [this Q&A][member-state-qa].
 
 For the avoidance of doubt, the EEA list is:
 Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden and the UK which comprise the list of EU Members and also Iceland, Liechtenstein and Norway who are part of the single market but not part of the EU.
