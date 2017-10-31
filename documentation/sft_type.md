@@ -19,18 +19,6 @@ The **sft_type** is used when describing securities financing transactions using
 
 
 ```bash
-├── margin_loan
-├── repo
-│   ├── bond_loan
-│   ├── stock_loan
-│   └── sell_buy_back
-└── rev_repo
-    ├── bond_borrow
-    ├── stock_borrow
-    └── buy_sell_back
-```
-
-```bash
 ├── repo
 ├── rev_repo
 ├── lending
