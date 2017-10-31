@@ -18,7 +18,7 @@ schemas:		[a list of schemas where this data_item is used]
 ```
 
 # JSON
-JSON is short for "Javascript Object Notation" and defines the format for an "object." An object in programming terms can be a variable, data structure or a function (basically anything). More commonly, in Object-Oriented programming an object typically refers to an Instance of a Class. That is to say, a specific description of something more general. Like a Goat being an instance of the Class "Animal." 
+JSON is short for "Javascript Object Notation" and defines the format for an "object". An object in programming terms can be a variable, data structure or a function (basically anything). More commonly, in Object-Oriented programming an object typically refers to an Instance of a Class. That is to say, a specific description of something more general. Like a Goat being an instance of the Class "Animal". 
 
 For our purposes, we can just consider JSON to be the data and a JSON-schema to just define the format for that data, ie. what it needs to *look like* so the computer can understand where things are when it receives it.
 
@@ -89,17 +89,17 @@ An **integer** is a number without a fraction or exponent part.
 > ex 1. 4  
 > ex 2. 26908289076124561671021
 
-An **number** is a number with or without a fraction or exponent part.
+A **number** is a number with or without a fraction or exponent part.
 
 > ex 1. 26908289076124561671021  
 > ex 2. 269082.89076124561671021
 
-An **string** is a list of characters (except " or \ ) inside "quotes". You can think of a string as a word. Note that the "word" can also contain numbers (like your national insurance number). But also note that numbers represented as strings need to be converted back to numbers if you want to add or multiply them.
+A **string** is a list of characters (except " or \ ) inside "quotes". You can think of a string as a word. Note that the "word" can also contain numbers (like your national insurance number). But also note that numbers represented as strings need to be converted back to numbers if you want to add or multiply them.
 
 > ex 1. "sheep"  
 > ex 2. "AS546NB8"
 
-A **boolean** is simple *true* or *false* flag. Note that the true/false flag is lowercase and not inside "quotes." 
+A **boolean** is simple *true* or *false* flag. Note that the true/false flag is lowercase and not inside "quotes". 
 
 > ex 1. true  
 > ex 2. false
@@ -141,12 +141,12 @@ You get the idea, sometimes we need more information. This is where the **format
 
 The following is the list of the formats specified in the JSON Schema specification:
 
-- "date-time": Date representation, as defined by RFC 3339, section 5.6.
-- "email": Internet email address, see RFC 5322, section 3.4.1.
-- "hostname": Internet host name, see RFC 1034, section 3.1.
-- "ipv4": IPv4 address, according to dotted-quad ABNF syntax as defined in RFC 2673, section 3.2.
-- "ipv6": IPv6 address, as defined in RFC 2373, section 2.2.
-- "uri": A universal resource identifier (URI), according to RFC3986.
+- "date-time": Date representation, as defined by [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6).
+- "email": Internet email address, see [RFC 5322, section 3.4.1](https://tools.ietf.org/html/rfc5322#section-3.4.1).
+- "hostname": Internet host name, see [RFC 1034, section 3.1](https://tools.ietf.org/html/rfc1034).
+- "ipv4": IPv4 address, according to dotted-quad ABNF syntax as defined in [RFC 2673, section 3.2](https://tools.ietf.org/html/rfc2673).
+- "ipv6": IPv6 address, as defined in [RFC 2373, section 2.2](https://tools.ietf.org/html/rfc2373#section-2.2).
+- "uri": A universal resource identifier (URI), according to [RFC3986](https://tools.ietf.org/html/rfc3986).
 
 The one we use most commonly from this is the **"date-time"** format and it basically means your dates and timestamps need to be a valid string but also look like this: YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. 
 
