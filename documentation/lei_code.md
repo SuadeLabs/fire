@@ -6,18 +6,17 @@ schemas:	[entity]
 
 # lei_code
 
-***(The below is lifted from the [Legal Entity Identifier Regulatory Oversight Committee's website][web]).***
-
-[web]: https://www.leiroc.org/lei.htm
-
-The Legal Entity Identifier (LEI) is a 20-character reference code to uniquely identify legally distinct entities that engage in financial transactions and associated reference data. Two fundamental principles of the LEI code are:
+According to the [Legal Entity Identifier Regulatory Oversight Committee][web], the Legal Entity Identifier (LEI) is a 20-character reference code to uniquely identify legally distinct entities that engage in financial transactions and associated reference data. Two fundamental principles of the LEI code are:
 
 - Uniqueness: an LEI is assigned to a unique entity. Once assigned to an entity, and even if this entity has for instance ceased to exist, a code should never be assigned to another entity.
 - Exclusivity: a legal entity that has obtained an LEI cannot obtain another one. Entities may port the maintenance of their LEI from one operator to another. The LEI remains unchanged in the process.
 
 You will find below information on the structure of LEI codes, the components of the reference data associated to each LEI and the definition of entities eligible to obtain an LEI.
 
-Entities who wish to obtain an LEI should consult the page, How to Obtain an LEI. The GLEIF publishes a centralised data base of LEIs. A search function was added in October 2015, where you can check if an entity has an LEI, or access the reference data associated with an LEI, including verifying whether the LEI is current and can be used in regulatory reporting (registration status: "issued"or "pending transfer").
+Entities who wish to obtain an LEI should consult the page, [How to Obtain an LEI][lei2]. The GLEIF publishes a centralised data base of LEIs. 
+
+[web]: https://www.leiroc.org/lei.htm
+[lei2]: https://staging.leiroc.org/lei/how.htm
 
 ### Structure of the LEI code
 
@@ -34,7 +33,7 @@ The number allocation scheme was further specified in Annex 2 of the Financial S
 
 ### Reference data
 
-As specified in ISO 17442:2012, the reference data stored in the LEI data base for each entity includes:
+As specified in [ISO 17442:2012][isolink], the reference data stored in the LEI data base for each entity includes:
 
 - The official name of the legal entity;
 - The address of the headquarters of the legal entity;
@@ -52,9 +51,9 @@ Beyond the "level 1" "business card" information described above and already col
 
 ### Entities eligible for an LEI
 
-ISO 17442:2012 states that the ISO standard "specifies the elements of an unambiguous Legal Entity Identifier scheme to identify the legal entities relevant to any financial transaction.
+[ISO 17442:2012]][isolink] states that the ISO standard "specifies the elements of an unambiguous Legal Entity Identifier scheme to identify the legal entities relevant to any financial transaction".
 
-The term "legal entities" includes, but is not limited to, unique parties that are legally or financially responsible for the performance of financial transactions or have the legal right in their jurisdiction to enter independently into legal contracts, regardless of whether they are incorporated or constituted in some other way (e.g. trust, partnership, contractual). It excludes natural persons, but includes governmental organizations and supranationals." (source: International Organisation for Standardisation, http://www.iso.org/iso/catalogue_detail?csnumber=59771)
+The term "legal entities" includes, but is not limited to, unique parties that are legally or financially responsible for the performance of financial transactions or have the legal right in their jurisdiction to enter independently into legal contracts, regardless of whether they are incorporated or constituted in some other way (e.g. trust, partnership, contractual). It excludes natural persons, but includes governmental organizations and supranationals." [¹](http://www.iso.org/iso/catalogue_detail?csnumber=59771)
 
 Individuals acting in a business capacity are eligible to an LEI under certain conditions described by the ROC on [30 September 2015][leiroc].
 
@@ -62,19 +61,3 @@ A policy document published by the ROC on 11 July 2016 sets forth the policy des
 
 [leiroc]: https://www.leiroc.org/publications/gls/lou_20150930-1.pdf
 
-### LEI uses
-
-[***(see here for LEI ROC web link)***][uselink]
-
-At the G-20 Summit of June 2012, the heads of state and government encouraged "global adoption of the LEI to support authorities and market participants in identifying and managing financial risks" (see paragraph 44 of the G20 Communiqué).
-
-The Global LEI System was established for a large range of potential uses including the following:
-
-- by authorities of any jurisdiction or financial sector to assess systemic risk and maintain financial stability, conduct market surveillance and enforcement, supervise market participants, conduct resolution activities, prepare high quality financial data, and to undertake other official functions; and
-- by the private sector to support improved risk management, increased operational efficiency, more accurate calculation of exposures, and other needs.
-
-In addition to the use of the LEI for derivatives reporting, which has entered into force in major markets, authorities are extending reporting requirements for the LEI, where appropriate, to the banking sector, securities issuance, investment holdings for insurance and funds, and other uses such as identification of firms in credit registers. The ROC and its members remain committed to support the introduction of the Global LEI System as a unique identifier of parties to financial transactions.
-
-ROC members have committed to support the introduction of the Global LEI System for official or international identification purposes
-
-[uselink]: https://www.leiroc.org/lei/uses.htm
