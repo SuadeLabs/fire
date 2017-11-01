@@ -15,7 +15,7 @@ The amount of reserves that is provisioned by the financial institution to cover
 
 [frs]: http://www.iasplus.com/en-gb/standards/uk-gaap/frs102
 
-**FCA: [Forbearance and Impairment Provisions][fca] – ‘Mortgages’: Good Practice:**
+[**FCA: Forbearance and Impairment Provisions – ‘Mortgages’: Good Practice:**][fca]
 
 All potential impairment indicators are identified, reported and monitored at all customer contact points
 across the firm.
@@ -23,7 +23,7 @@ across the firm.
 All potential impairment indicators, forbearance provided, volumes of live accounts and their associated
 loss risks are monitored, fully reported through management and board committee structures, and
 incorporated into all decision-making processes of the firm where loss risk is evaluated or used (eg
-provisions, capital, credit decisions, product pricing, strategy and forecasting, and planning).**This
+provisions, capital, credit decisions, product pricing, strategy and forecasting, and planning). **This
 assessment considers the forbearance actions taken** and the type and level of customer difficulty.
 
 This reporting and loss risk assessment is segmented by type of potential impairment indicator, whether
