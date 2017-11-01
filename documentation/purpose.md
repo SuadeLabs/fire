@@ -25,10 +25,10 @@ Assets placed as a **ci_service** should be considered unencumbered inaccordance
 > assets included in a pool which are available for immediate use as collateral to obtain additional funding under committed but not yet funded credit lines available to the credit institution. This shall include assets placed by a credit institution with the central institution in a cooperative network or institutional protection scheme.
 
 ### collateral
-The **collateral** enum type identifies an account or deposit received as collateral and hence, not classified as a liability for the purposes of Article 27 and 29 of the [LCR][lcr]. Collateral held in an account should have a corresponding [**account_id**][account_id] in the collateral schema.
+The **collateral** enum type identifies an account or deposit received as collateral and hence, not classified as a liability for the purposes of Article 27 and 29 of the [LCR][lcr]. Collateral held in an account should have a corresponding [**id**][id] in the collateral schema.
 
 ### operational
-The **clearing** enum value indicates that the account or deposit is being maintained for clearing, settlement, custody or cash_management services in the context of an operational relationship and hence can be treated as a very short term exposure. *(further granularity needed or  exists?)*
+The **clearing** enum value indicates that the account or deposit is being maintained for clearing, settlement, custody or cash management services in the context of an **operational** relationship and hence can be treated as a very short term exposure. 
 
 Clearing and comparable services from the [CRR][crr] Article 422.4:
 > Clearing, custody or cash management or other comparable services referred to in points (a) and (d) of paragraph 3 only covers such services to the extent that they are rendered in the context of an established relationship on which the depositor has substantial dependency. They shall not merely consist in correspondent banking or prime brokerage services and the institution shall have evidence that the client is unable to withdraw amounts legally due over a 30 day horizon without compromising its operational functioning.
@@ -47,7 +47,7 @@ Operational deposit from the [CRR][crr] Article 27.6:
 As opposed to short-term definition within **operational**, **custody** here refers to the long-term custody of financial assets such as those held for safekeeping by a custodian bank.
 
 ### prime_brokerage
-Describes an account held for prime brokerage reasons but not including those contained above for operational reasons.
+Describes an account held for prime brokerage reasons but not including those contained above for operational reasons. These accounts are used for prime brokerage service transactions which are in essence investment activities including securities lending, leveraged trade executions and cash management, among other things.
 
 ### other
 The **other** enum value can be used when none of the other enum values apply or the value is *unknown*.
@@ -57,10 +57,10 @@ The **other** enum value can be used when none of the other enum values apply or
 The **house_purchase** value indicates that the purpose of the loan is for the purchase of residential property for occupation by the borrower.
 
 ### first_time_buyer
-The **first_time_buyer** value is a term used in British and Irish property markets and defined in the Bank of England's [Mortgage Lending & Administration (MLAR) Definitions][mlardef]. It is a sub-category of a **house_purchase** where "the tenure of the main borrower immediately before this advance was not owner-occupier."
+The **first_time_buyer** value is a term used in the British and Irish property markets and defined in the Bank of England's [Mortgage Lending & Administration (MLAR) Definitions][mlardef] section E6.1/2 It is a sub-category of a **house_purchase** where "the tenure of the main borrower immediately before this advance was not owner-occupier."
 
 ### buy_to_let
-The **buy_to_let** value is a term used in British property markets where the borrower is purchasing the property with a view of renting it out on a commercial basis to an *unrelated third party*. See [MLAR Definitions][mlardef] section E6.2.
+The **buy_to_let** value is a term used in the British property market where the borrower is purchasing the property with a view of renting it out on a commercial basis to an *unrelated third party*. See [MLAR Definitions][mlardef] section E6.2.
 
 ### remortgage
 The **remortgage** value indicates a re-mortgage or refinancing of an existing property by an existing customer of the firm who had a loan with a **house_purchase** purpose. Note that this does not include re-mortgages of **first_time_buyer** and **buy_to_let** loans which should retain their respective purposes in the event of a re-mortgage. See [MLAR Definitions][mlardef] section E6.4/5.
@@ -83,7 +83,7 @@ From [CRR][crr] definitions (79):
 
 ### repo / reverse_repo
 From [CRR][crr] definitions (82):
-> repurchase agreement‧ and ‧reverse repurchase agreement‧ mean any agreement in which an institution or its counterparty transfers securities or commodities or guaranteed rights relating to either of the following:
+> repurchase agreement and reverse repurchase agreement mean any agreement in which an institution or its counterparty transfers securities or commodities or guaranteed rights relating to either of the following:
 > (a) title to securities or commodities where that guarantee is issued by a recognised exchange which holds the rights to the securities or commodities and the agreement does not allow an institution to transfer or pledge a particular security or commodity to more than one counterparty at one time, subject to a commitment to repurchase them;
 > (b) substituted securities or commodities of the same description at a specified price on a future date specified, or to be specified, by the transferor, being a repurchase agreement for the institution selling the securities or commodities and a reverse repurchase agreement for the institution buying them;
 
@@ -91,15 +91,14 @@ From [CRR][crr] definitions (82):
 From [CRR][crr] definitions (96):
 > internal hedge means a position that materially offsets the component risk elements between a trading book and a non-trading book position or sets of positions;
 
-
 ## Security
 ### derivative_collateral
 Defined in accordance with Article 30(1) of the [LCR][lcr] regulation:
-> collateral posted for contracts listed in Annex II of Regulation (EU) No. 575/2013 and credit derivatives.
+> "collateral posted for contracts listed in [Annex II of Regulation (EU) No. 575/2013](http://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32013R0575) and credit derivatives".
 
 
 ---
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575
 [lcr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
-[account_id]: https://github.com/suadelabs/fire/blob/master/documentation/account_id.md
+[id]: https://github.com/SuadeLabs/fire/blob/master/documentation/id.md
 [mlardef]: http://www.bankofengland.co.uk/pra/documents/regulatorydata/mlar/sup_chapter16_annex19bg_20120401.pdf
