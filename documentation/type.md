@@ -4,10 +4,9 @@ title:      "type"
 schemas:    [account, collateral, customer, derivative_cash_flow, derivative, entity, guarantor, issuer, loan_aggregate, loan_transaction, loan, security]
 ---
 
-
 # type
 
-# Customer, Issuer, Guarantor, Entity
+# customer, issuer, guarantor, entity
 Customer, issuer, guarantor and entity schemas share a lot of common type attributes so they are grouped together here. Also, due to the complexity of this property, the variety of reporting granularity and the larger issue of data quality at firms, the fields are not all mutually exclusive and should be thought of more as a tree rather than unique items:
 
 ```bash
@@ -42,22 +41,22 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 ```
 
 ### individual
-Individual is a UK specific definition which is slightly broader than a natural person and defined in the FCA Handbook Glossary under [individual][fca-indiv]:
+Individual is a UK specific definition which is slightly broader than a natural person and defined in the [FCA Handbook Glossary][fca-indiv] under individual:
 > (a) a natural person; or
 > (b) a partnership consisting of two or three persons not all of whom are bodies corporate; or
 > (c) an unincorporated body of persons which does not consist entirely of bodies corporate and is not a partnership.
 
 ### natural_person
-Natural person refers to a human being as you would expect. It is further defined in the [Data Protection Directive][dpd]:
+Natural person refers to a human being, as you would expect. It is further defined in the [Data Protection Directive][dpd]:
 > Article 2(a):
 > (a) ... an identifiable person is one who can be identified, directly or indirectly, in particular by reference to an identification number or to one or more factors specific to his physical, physiological, mental, economic, cultural or social identity
 
 ### partnership
-As defined in the FCA Handbook referencing the Financial Securities and Markets Act:
+As defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G843.html):
 > (in accordance with section 417(1) of the Act (Definitions)) any partnership, including a partnership constituted under the law of a country or territory outside the United Kingdom, but not including a limited liability partnership.
 
 ### sme
-Definition of an SME is based on a set of criteria, while in theory it is possible for this to be a dynamic field based on other relevant data provided (employee count, turnover etc.), often times the data is unavailable or not current and hence firm may wish to identify SMEs directly.
+The definition of an SME is based on a set of criteria, while in theory it is possible for this to be a dynamic field based on other relevant data provided (employee count, turnover etc.), often times the data is unavailable or not current and hence firm may wish to identify SMEs directly.
 In this scenario, an SME type will be assumed to comply with the [EU SME Recommendation][sme], further explained in [What is an SME?][sme-what] broadly as:
 
 Company category | Staff headcount | Turnover (or) | Balance sheet total
@@ -70,13 +69,9 @@ Micro            | < 10            | ≤ € 2 m       | ≤ € 2 m
 ### other
 Other means it is known to **not** be one of the other types. If type is unknown it should just be left blank.
 
-### intl_org
-This is a list, CRR 118, referenced in LCR 10(g)
-
-
 ### financial
 Article 411 of the [CRR][crr]:
-> financial customer‧ means a customer that performs one or more of the activities listed in Annex I to Directive 2013/36/EU as its main business, or is one of the following:
+> financial customer means a customer that performs one or more of the activities listed in Annex I to Directive 2013/36/EU as its main business, or is one of the following:
 > (a) a credit institution;
 > (b) an investment firm;
 > (c) an SSPE;
@@ -100,7 +95,7 @@ Article 411 of the [CRR][crr]:
 > (l) a third-country undertaking with a main business comparable to any of the entities referred to in points (a) to (k);
 
 ### mdb
-Multilateral Development Banks are defined in the [CRR][crr] Article 117:
+Multilateral Development Banks are defined in the [CRR][crr] Article 117 as:
 > The Inter-American Investment Corporation, the Black Sea Trade and Development Bank, the Central American Bank for Economic Integration and the CAF-Development Bank of Latin America shall be considered multilateral development banks.
 > ...
 > (a) the International Bank for Reconstruction and Development;
@@ -127,17 +122,21 @@ International Organisations are defined in the [CRR][crr] Article 118:
 > (e) the European Stability Mechanism;
 > (f) an international financial institution established by two or more Member States, which has the purpose to mobilise funding and provide financial assistance to the benefit of its members that are experiencing or threatened by severe financing problems.
 
-
 ### corporate
 *needs definition*
+
 ### sovereign  
 *needs definition*
+
 ### central_bank
 *needs definition*
+
 ### regional_govt
 *needs definition*
+
 ### central_govt
 *needs definition*
+
 ### pse  
 A public sector entity is defined in the [LCR Regulation][lcr] Article 4:
 > 'public sector entity' means a non-commercial administrative body responsible to central governments, regional governments or local authorities, or to authorities that exercise the same responsibilities as regional governments and local authorities, or a non-commercial undertaking that is owned by or set up and sponsored by central governments, regional governments or local authorities, and that has explicit guarantee arrangements, and may include self-administered bodies governed by law that are under public supervision;
