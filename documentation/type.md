@@ -123,13 +123,20 @@ International Organisations are defined in the [CRR][crr] Article 118:
 > (f) an international financial institution established by two or more Member States, which has the purpose to mobilise funding and provide financial assistance to the benefit of its members that are experiencing or threatened by severe financing problems.
 
 ### corporate
-*needs definition*
+An organisation with government approval to conduct business (or other activities).
 
 ### sovereign  
-*needs definition*
+As defined in the [FCA handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2971.html), a sovereign is:
+
+(a) the EU; or
+(b) a Member State including a government department, an agency, or a special purpose vehicle of the Member State; or
+(c) in the case of a federal Member State, a member of the federation; or
+(d) a special purpose vehicle for several Member States; or
+(e) an international financial institution established by two or more Member States which has the purpose of mobilising funding and provide financial assistance to the benefit of its members that are experiencing or threatened by severe financing problems; or
+(f) the European Investment Bank.
 
 ### central_bank
-*needs definition*
+A **central bank** is often a nationalised institution in charge of the production and distribution of money and credit in the system it resides over. It is usually responsible for monetary policay and the regulation of member banks.
 
 ### regional_govt
 *needs definition*
