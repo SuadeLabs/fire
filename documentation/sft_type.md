@@ -6,7 +6,6 @@ schemas:    [security]
 
 ---
 
-
 # sft_type
 The **sft_type** is used when describing securities financing transactions using the security schema. Securities Financing Transactions (SFTs) allow market partcipants to access secured funding, through the temporary exchange of assets as a guarantee for a funding transaction.
 
@@ -71,3 +70,4 @@ The **sft_type** is used when describing securities financing transactions using
 | 8  | 4       | 18/08/16 | 16/08/16   | 15/09/16 | 18/08/16   | 50        |              | cash              | cash       | asset           |
 | 9  | 5       | 18/08/16 | 16/08/16   | 15/09/16 | 18/08/16   | 50        |              | abs_auto          | asset      | asset           |
 
+[sftr]: http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32015R2365&qid=1466153681918
