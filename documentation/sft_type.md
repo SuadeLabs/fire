@@ -49,7 +49,7 @@ The **sft_type** is used when describing securities financing transactions using
 >'margin lending transaction' means a transaction in which a counterparty extends credit in connection with the purchase, sale, carrying or trading of securities, but not including other loans that are secured by collateral in the form of securities;
 
 
-**ex.**
+**example**
 > A bank does 6 security deals:
 > - deal #1 - bank executes a repo transaction and lends a covered bond worth 100 in exchange for 90 in cash
 > - deal #2 - bank executes a collateral swap transaction and lends a portfolio of shares worth 100 in exchange for 1 share worth 45 and one index linked gilt worth 50
