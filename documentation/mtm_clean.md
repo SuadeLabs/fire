@@ -5,7 +5,7 @@ schemas:	[security, derivative]
 ---
 
 # mtm_clean
-The **clean price** of a [security/derivative] is the price excluding any interest that has accrued since issue or the most recent coupon payment. This is to be compared to the dirty price, which is the price of a [security/derivative] including the accrued interest.
+The **clean price** of a security/derivative is the price excluding any interest that has accrued since issue or the most recent coupon payment. This is to be compared to the dirty price, which is the price of a security/derivative including the accrued interest.
 
 > **Clean Price = Dirty Price - Accrued Interest**
 
