@@ -5,7 +5,7 @@ schemas:    [account, derivative, loan, security]
 ---
 
 # first_payment_date
-The **first_payment_date** is the first time interest on the account or loan was paid. It is in date-time format in accordance with the ISO 8601 standard (YYYY-MM-DDTHH:MM:SSZ).
+The **first_payment_date** is the first time interest on the account or loan is paid. It is in date-time format in accordance with the ISO 8601 standard (YYYY-MM-DDTHH:MM:SSZ).
 
 See also:
 [**prev_payment_date**][ppd]
