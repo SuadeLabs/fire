@@ -14,7 +14,7 @@ The **limit_amount** parameter describes the total credit limit on the loan prod
 
 [dir2008]: http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2008:133:0066:0092:EN:PDF
 
-The **FCA Consumer Credit sourcebook** in [Chapter 5: Responsible Lending, CONC 5.3 Conduct of business in relation to creditworthiness and affordability][conc3] say:
+The **FCA Consumer Credit sourcebook** in [Chapter 5: Responsible Lending, CONC 5.3 Conduct of business in relation to creditworthiness and affordability][conc3] states:
 
 > For a regulated credit agreement for running-account credit the firm, in making its creditworthiness assessment or the assessment required by [■ CONC 5.2.2R][conc2] (Creditworthiness assessment: before agreement):
 (a) **should consider the customer's ability to repay the maximum amount of credit available (equivalent to the credit limit) under the agreement within a reasonable period**;
