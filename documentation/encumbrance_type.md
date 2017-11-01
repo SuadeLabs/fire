@@ -7,11 +7,9 @@ schemas:	[account, collateral]
 # encumbrance_type
 The **encumbrance_type** describes the nature and reason behind the [**encumbrance_amount**][encumbrance_amount].
 
-With regards to asset encumbrance the EBA [mentions][eba-report] repos, covered bonds and derivatives.
+With regards to asset encumbrance the [EBA][eba-report] mentions repos, covered bonds and derivatives.
 
-For real estate collateral, we include real_estate.
-
-*(Consider further enums, particularly with regards to more specific real estate collateral: liens, easement ...)*
+Encumbrance can also apply to real estate, including mortgages, easements, and property tax liens
 
 ---
 [encumbrance_amount]: https://github.com/suadelabs/fire/blob/master/documentation/encumbrance_amount.md
