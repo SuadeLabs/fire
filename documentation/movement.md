@@ -7,7 +7,7 @@ schemas:	[loan_transaction, loan, security]
 # movement
 The **movement** parameter describes how an asset or liability arrived to the firm.
 
-# Loan
+# loan
 ### acquired
 ### none
 ### securitised
@@ -15,7 +15,7 @@ The **movement** parameter describes how an asset or liability arrived to the fi
 ### other
 
 
-# Security
+# security
 ### cash
 Cash on hand or cash leg of a securities financing transaction.
 ### asset
