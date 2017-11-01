@@ -7,8 +7,6 @@ schemas:	[loan]
 # secured
 Parameter to determine whether a loan is **secured** or **unsecured**.
 
-According to the FCA Handbook these are defined as:
-
 [**Unsecured Lending**](https://www.handbook.fca.org.uk/handbook/glossary/G1338.html?filter-title=unsecured) is "lending where the mortgage lender does not take a mortgage or other form of security in respect of the credit provided to the customer."
 
 [**Unsecured Debt**](https://www.handbook.fca.org.uk/handbook/glossary/G1630.html?filter-title=unsecured) is "debt that does not fall within the definition of secured debt."
