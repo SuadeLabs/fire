@@ -35,10 +35,11 @@ Some examples of Level 2B Assets are:
 Assets that do not qualify for any of the HQLA classes set out in Chapter 2 of the LCR Regulation (or otherwise deemed ineligible by the firm or it's national supervisor) should be classified as **ineligible**.
 
 ### exclude
-The **hqla_exlcude** identifier is used to provide a manual override to exclude certain securities from an HQLA report for *credit enhancement or for operational reasons* according to [LCR][lcr] Article 8 and in particular:
+The [**hqla_exlcude**][hqlaex] identifier is used to provide a manual override to exclude certain securities from an HQLA report for *credit enhancement or for operational reasons* according to [LCR][lcr] Article 8 and in particular:
 > Assets used to provide credit enhancement in structured transactions or to cover operational costs of the credit institutions shall not be deemed as readily accessible to a credit institution.
 
 
 ---
 [breg]: http://www.bis.org/publ/bcbs238.pdf
+[hqlaex]: https://github.com/SuadeLabs/fire/blob/master/documentation/hqla_exclude.md
 [lcr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
