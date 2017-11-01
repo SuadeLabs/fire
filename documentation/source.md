@@ -5,7 +5,7 @@ schemas:	[account, collateral, customer, derivative_cash_flow, derivative, loan_
 ---
 
 # source
-Similar to the [**product_name**][product_name] property, the **source** property is designed to aid the institution with [BCBS-239][bcbs239] principles of data control and governance. It is a strong value for the firm to indicate the source system for the data attribute.
+Similar to the [**product_name**][product_name] property, the **source** property is designed to aid the institution with principles of data control and governance as outlined by the [Basel Committee on Banking Supervision][bcbs239]. It is a strong value for the firm to indicate the source system for the data attribute.
 
 Note that this is different from the "source" that can be obtained in the transmission and can be used to indicate the original source system of the data item.
 
