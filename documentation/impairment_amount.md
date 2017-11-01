@@ -6,8 +6,6 @@ schemas:	[loan]
 
 # impairment_amount
 
----
-
 Impairment refers to the amount of loss allowances that are held against or are allocated to the instrument on the reporting reference date. This data attribute applies to instruments subject to impairment under the applied accounting standard. Under IFRS, the accumulated impairment relates to the following amounts:
 
 1. loss allowance at an amount equal to 12-month expected credit losses;
