@@ -1,10 +1,11 @@
+---
 layout:		property
 title:		"currency_code"
 schemas:	[account, collateral, derivative_cash_flow, derivative, exchange_rate, loan, security]
 ---
 
 # currency_code
-The **currency_code** represents the currency of the data object and all the relevant monetary types such as [**accrued_interest**][acc], [**balance**][bal].
+The **currency_code** represents the currency of the data object and all the relevant monetary types.
 
 Currencies are represented as 3-letter codes in accordance with [ISO 4217][iso4217] standards.
 
