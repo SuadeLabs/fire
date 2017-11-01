@@ -5,7 +5,7 @@ schemas:	[account, collateral, customer, derivative_cash_flow, derivative, excha
 ---
 
 # id
-The **id** property appears in almost every schema and is the unique an identifier for that product, customer, transaction etc. within the financial institution. This field is important because it serves as the common identifier that is retained as data passes from one system to another.
+The **id** property appears in almost every schema and is the unique identifier for that product, customer, transaction etc. within the financial institution. This field is important because it serves as the common identifier that is retained as data passes from one system to another.
 
 A [unique identifier][unid] allows a transaction to be traced back to the payer or originator, by accompanying transfers of funds.
 
