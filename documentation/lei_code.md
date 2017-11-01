@@ -31,6 +31,18 @@ The number allocation scheme was further specified in Annex 2 of the Financial S
 
 [isolink]: http://www.iso.org/iso/catalogue_detail?csnumber=59771
 
+### Entities eligible for an LEI
+
+[ISO 17442:2012]][isolink] states that the ISO standard "specifies the elements of an unambiguous Legal Entity Identifier scheme to identify the legal entities relevant to any financial transaction".
+
+The term "legal entities" includes, but is not limited to, unique parties that are legally or financially responsible for the performance of financial transactions or have the legal right in their jurisdiction to enter independently into legal contracts, regardless of whether they are incorporated or constituted in some other way (e.g. trust, partnership, contractual). It excludes natural persons, but includes governmental organizations and supranationals." [¹](http://www.iso.org/iso/catalogue_detail?csnumber=59771)
+
+Individuals acting in a business capacity are eligible to an LEI under certain conditions described by the ROC on [30 September 2015][leiroc].
+
+A policy document published by the ROC on 11 July 2016 sets forth the policy design, definitions, and conditions for issuance of LEIs for international branches (also known as foreign branches). Implementation is expected to start in early 2017, subject to ROC concurrence with an appropriate framework being established to ensure that the conditions described in this document are met.
+
+[leiroc]: https://www.leiroc.org/publications/gls/lou_20150930-1.pdf
+
 ### Reference data
 
 As specified in [ISO 17442:2012][isolink], the reference data stored in the LEI data base for each entity includes:
@@ -48,16 +60,4 @@ As specified in [ISO 17442:2012][isolink], the reference data stored in the LEI 
 The ROC adopted a common data format (CDF) in 2014 defining with more granularity the content of an LEI record.
 
 Beyond the "level 1" "business card" information described above and already collected by the Global LEI System, the objective is to progressively extend the reference data to "level 2" data on relationships among entities. As a first step, the ROC established in December 2014 a task force to develop a proposal for collecting in the Global LEI System information on the direct and ultimate parents of legal entities. A public consultation was launched on 7 September 2015 on this topic. Phased implementation of such information is expected to begin in 2016.
-
-### Entities eligible for an LEI
-
-[ISO 17442:2012]][isolink] states that the ISO standard "specifies the elements of an unambiguous Legal Entity Identifier scheme to identify the legal entities relevant to any financial transaction".
-
-The term "legal entities" includes, but is not limited to, unique parties that are legally or financially responsible for the performance of financial transactions or have the legal right in their jurisdiction to enter independently into legal contracts, regardless of whether they are incorporated or constituted in some other way (e.g. trust, partnership, contractual). It excludes natural persons, but includes governmental organizations and supranationals." [¹](http://www.iso.org/iso/catalogue_detail?csnumber=59771)
-
-Individuals acting in a business capacity are eligible to an LEI under certain conditions described by the ROC on [30 September 2015][leiroc].
-
-A policy document published by the ROC on 11 July 2016 sets forth the policy design, definitions, and conditions for issuance of LEIs for international branches (also known as foreign branches). Implementation is expected to start in early 2017, subject to ROC concurrence with an appropriate framework being established to ensure that the conditions described in this document are met.
-
-[leiroc]: https://www.leiroc.org/publications/gls/lou_20150930-1.pdf
 
