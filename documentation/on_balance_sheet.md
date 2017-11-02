@@ -9,5 +9,5 @@ The **on_balance_sheet** property is a boolean (true/false) indicator to determi
 
 The risk classification of off-balance sheet items can be found in ANNEX I of the [CRR][crr].
 
----
+
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575
