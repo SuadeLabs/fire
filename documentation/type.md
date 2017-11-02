@@ -303,73 +303,58 @@ A **deposit broker** can be an individual or a firm that facilitates the placeme
 # Loan
 ### trade_finance
 From [CRR][crr] definitions (80):
-> trade finance‧ means financing, including guarantees, connected to the exchange of goods and services through financial products of fixed short-term maturity, generally of less than one year, without automatic rollover;
-
-The EBA's [report on the NSFR][eba-nsfr-report] defines trade finance as:
-> The term ‘trade finance’ generally refers to finance that facilitates the trade of goods. Typically, trade finance is provided by banks and financial institutions, which intermediate between the buyer and the seller by providing financing to mitigate the risks involved in international as well as domestic trade. 
-
-It goes on to classify trade finance into further sub-categories:
-> The risk involved in the trade of goods relates to the gap between the payment for and the delivery of the goods (referred to as the ‘trade cycle’ finance gap). Through trade finance, the seller of goods reduces the payment risk while the buyer aims to reduce the delivery risk from the seller. The duration between the shipping of the goods and the final delivery determines the term of the trade finance transaction, which is typically short term. Moreover, the term of trade financing transactions is directly related to the shipment of the goods, which means that there is no automatic rollover of the transactions. Trade finance can take different forms: 
-> - trade credit insurance;
-> - letters of credit (documentary credits);
-> - bank guarantees;
-> - export/import loans; and
-> - factoring or forfaiting.
+> Trade finance means financing, including guarantees, connected to the exchange of goods and services through financial products of fixed short-term maturity, generally of less than one year, without automatic rollover;
 
 ### trade_credit_insurance
-From the EBA's [report on the NSFR][eba-nsfr-report], section 6.2.1:
+From the [EBA's][eba-nsfr-report] report on the NSFR, section 6.2.1 outlines what **trade credit insurance** is:
 > A seller providing trade credit is exposed to the credit risk of the buyer. Trade credit insurance provides the seller with protection against the risk of non-payment by the buyer. The nonpayment may be due to the insolvency of the buyer or, in an international trade, due to political risks that prevent payment.
 
 ### letter_of_credit
-From the EBA's [report on the NSFR][eba-nsfr-report], section 6.2.2:
+From the [EBA's][eba-nsfr-report] report on the NSFR, section 6.2.2, a **letter of credit** is:
 > When goods are traded, the seller and the buyer need to agree on the process of how to pay for the goods. While the buyer may be reluctant to prepay for the traded goods, the seller may also be unwilling to ship the goods before payment is made. In this situation, a bank can intermediate between the trading partners by providing an import letter of credit (L/C) to the buyer of the goods, which guarantees payment to the seller. 
 > A L/C is a contingent liability and payment is only made by the bank to the seller from funds in the buyer’s account when the documentation of shipping is presented.
 
 ### project_finance
-As defined in [Supervisory Reporting][sup-rep] part 2(5):
+As defined in [Supervisory Reporting][sup-rep] part 2(5)(41)(l):
 > 'Project finance loans' include loans that are recovered solely from the income of the projects financed by them.
 
 ### auto
-LCR Article 13:
+As outlined in [LCR][lcr] Article 13(2)(g)(iv):
 > loans or leases for the financing of motor vehicles or trailers (see Article 3 of Directive 2007/46/EC).
 > agricultural or forestry tractors (see Directive 2003/37/EC)
 > tracked vehicles (see Directive 2007/46/EC)
 > Such loans or leases may include ancillary insurance and service products or additional vehicle parts, and in the case of leases, the residual value of leased vehicles.
 
 ### personal
-LCR Article 13:
+As outlined in [LCR][lcr] Article 13(2)(g)(v):
 > loans and credit facilities to individuals resident in a Member State for personal, family or household consumption purposes.
 
 ### commercial
-LCR Article 13:
+As outlined in [LCR][lcr] Article 13(2)(g)(iii):
 > commercial loans, leases and credit facilities to undertakings established in a Member State to finance capital expenditures or business operations other than the acquisition or development of commercial real estate
 
 ### commercial_property
 This includes commercial loans or mortgages that do not fall under **commercial** due to their real estate connection and do not classify as **mortgage** either due to the customer not being an individual or the occupation of the property not being residential.
 
 ### margin
-From LCR Article 3 Definitions:
+**Margin** is defined in [LCR][lcr] Article 3(12):
 > margin loans means collateralised loans extended to customers for the purpose of taking leveraged trading positions.
 
 ### mortgage
 A **mortgage** is a residential loan to a individuals secured with a one-to-one correspondence to land or property.
 
-LCR Article 13:
+As outlined in [LCR][lcr] Article 13(2)(g)(i)
 > loans secured with a first-ranking mortgage granted to individuals for the acquisition of their main residence
-
-From the Bank of England's [MLAR Definitions][mlar]
-> It is lending to individuals secured by mortgage on land and buildings where the lender has either a first or second (or subsequent) charge, where at least 40% of the land and buildings is used for residential purposes, and where the premises are for occupation by either the borrower (or dependant), or any other third party (e.g. it includes 'buy to let' lending to individuals).
-Only loans where there is a one-to-one correspondence between the loan and a specific security should be included within 'residential loans to individuals'.
 
 ### credit_card
 A **credit_card** is credit facility typically secured by a deposit account or equity in the borrower's property.
 
 ### credit_facility, multiccy_facility
-From Annex I of the [CRR][crr]:
+From Annex I of the [CRR][crr], credit facilities are:
 > agreements to lend, purchase securities, provide guarantees or acceptance facilities
 
 ### nostro
-Nostro loans are the firm's accounts at other financial institutions which are in effect loans to other firms. Nostros are used in the context of correspondent banking operations which are described in [ECB guidelines on monetary policy instruments][ecb-guidleines] from 2003:
+Nostro loans are the firm's accounts at other financial institutions which are in effect loans to other firms. Nostros are used in the context of correspondent banking operations which are described in by the [ECB] (https://www.ecb.europa.eu/paym/t2/shared/pdf/target2_glossary.pdf):
 > Correspondent banking: an arrangement under which one credit institution provides payment and other services to another credit institution. Payments through correspondents are often executed through reciprocal accounts (nostro and loro accounts) to which standing credit lines may be attached. Correspondent banking services are primarily provided across international boundaries but are also known as agency relationships in some domestic contexts. 
 > A loro (vostro) account is the term used by a correspondent to describe an account held on behalf of a foreign credit institution; the foreign credit institution would in turn regard this account as its nostro account.
 
@@ -412,7 +397,7 @@ Other refers to a type of security not covered by the above. If you find yoursel
 ```
 
 ### cash
-A cash or cash-equivalent security such as a securitisation of cash deposits. Within Finrep Annex V part (2):
+A **cash** or cash-equivalent security such as a securitisation of cash deposits. Within Finrep Annex V part (2):
 > "Cash on hand" includes holdings of national and foreign banknotes and coins in circulation that are commonly used to make payments.
 
 ### equity
