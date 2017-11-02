@@ -31,5 +31,5 @@ or may not also involve the existence of arrears e.g. building finance case
 with interest roll up, no arrears, but a current valuation is less than the
 outstanding debt). 
 
----
+
 [mlar]: http://www.bankofengland.co.uk/pra/documents/regulatorydata/mlar/sup_chapter16_annex19bg_20120401.pdf
