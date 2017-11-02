@@ -553,12 +553,8 @@ Money market accounts are accounts where the customer's money has been invested 
 
 Money market deposits are mentioned in association with definitions of cash in that they represent *claims for the repayment of money*.
 
-The [Money Market Statistics Regulation][mm-stat] specifically states in Article 1:
-> (10) 'money market instrument' means any of the instruments listed in Annexes I, II and III;
-> (11) 'money market fund' means a collective investment undertaking that requires authorisation as an undertaking for collective investment in transferable securities under Directive 2009/65/EC of the European Parliament and of the Council (6) or is an alternative investment fund under Directive 2011/61/EU of the European Parliament and of the Council (7), invests in short term assets and has as distinct or cumulative objectives offering returns in line with money market rates or preserving the value of an investment;
-
 ### vostro (loro)
-Nostro and vostro (loro) accounts are used in the context of correspondent banking operations which are described in [ECB guidelines on monetary policy instruments][ecb-guidleines] from 2003:
+Nostro and vostro (loro) accounts are used in the context of correspondent banking operations which are described in [ECB guidelines on monetary policy instruments][ecb-guidelines] from 2003:
 > Correspondent banking: an arrangement under which one credit institution provides payment and other services to another credit institution. Payments through correspondents are often executed through reciprocal accounts (nostro and loro accounts) to which standing credit lines may be attached. Correspondent banking services are primarily provided across international boundaries but are also known as agency relationships in some domestic contexts. 
 > A loro account is the term used by a correspondent to describe an account held on behalf of a foreign credit institution; the foreign credit institution would in turn regard this account as its nostro account.
 
@@ -568,10 +564,9 @@ In the US, [Regulation D][reg-d] uses the characteristics of the 'reservation of
 > In order to classify an account as a 'savings deposit,' the institution must in its account agreement with the customer reserve the right at any time to require seven days’ advance written notice of an intended withdrawal. In practice, this right is never exercised, but the institution must nevertheless reserve that right in the account agreement. In addition, for an account to be
 classified as a 'savings deposit,' the depositor may make no more than six 'convenient' transfers or withdrawals per month from the account.
 
-
 ### time_deposit
-A fixed-term deposit with a specific [*end_date*][end-date].
-The US Regulation D describes time deposits as having the following characteristics:
+A fixed-term deposit with a specific [**end_date**][end-date].
+The [US Regulation D][reg-d] describes time deposits as having the following characteristics:
 > Time deposit accounts have the following characteristics:
 > - must have a maturity of at least seven days from
 the date of deposit
@@ -601,12 +596,10 @@ Any other account type that cannot be classified as one of the other types.
 # collateral
 The collateral type defines the form of the collateral, such as property or other assets used to secure an obligation.
 
-The [provision of assets][arrangement] to secure the performance of an obligation, whereby the assets can be provided: either by transfer of full ownership from a collateral provider to a collateral taker; or by the transfer of possession from a collateral provider to a collateral taker under a security right (e.g. pledge, charge or lien), where the full ownership of the assets remains with the collateral provider.
+The [EC Collateral Directive][arrangement] states:
+> The assets can be provided: either by transfer of full ownership from a collateral provider to a collateral taker; or by the transfer of possession from a collateral provider to a collateral taker under a security right (e.g. pledge, charge or lien), where the full ownership of the assets remains with the collateral provider.
 
 
-
-
----
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575
 
 [card-fees]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2015.123.01.0001.01.ENG
