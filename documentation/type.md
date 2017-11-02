@@ -43,9 +43,9 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 ### individual
 Individual is a UK specific definition which is slightly broader than a natural person and defined in the [FCA Handbook Glossary][fca-indiv] under individual:
 > (a) a natural person; or
-
+>
 > (b) a partnership consisting of two or three persons not all of whom are bodies corporate; or
-
+>
 > (c) an unincorporated body of persons which does not consist entirely of bodies corporate and is not a partnership.
 
 ### natural_person
@@ -75,42 +75,42 @@ Other means it is known to **not** be one of the other types. If type is unknown
 Article 411 of the [CRR][crr]:
 > financial customer means a customer that performs one or more of the activities listed in Annex I to Directive 2013/36/EU as its main business, or is one of the following:
 > (a) a credit institution;
-
+>
 > (b) an investment firm;
-
+>
 > (c) an SSPE;
-
+>
 > (d) a CIU;
-
+>
 > (e) a non-open ended investment scheme;
-
+>
 > (f) an insurance undertaking;
-
+>
 > (g) a financial holding company or mixed-financial holding company.
-
+>
 > 'financial sector entity' means any of the following:
 > (a) an institution;
-
+>
 > (b) a financial institution;
-
+>
 > (c) an ancillary services undertaking included in the consolidated financial situation of an institution;
-
+>
 > (d) an insurance undertaking;
-
+>
 > (e) a third-country insurance undertaking;
-
+>
 > (f) a reinsurance undertaking;
-
+>
 > (g) a third-country reinsurance undertaking;
-
+>
 > (h) an insurance holding company;
-
+>
 > (i) a mixed-activity holding company
-
+>
 > (j) a mixed-activity insurance holding company as defined in point (g) of Article 212(1) of Directive 2009/138/EC;
-
+>
 > (k) an undertaking excluded from the scope of Directive 2009/138/EC in accordance with Article 4 of that Directive;
-
+>
 > (l) a third-country undertaking with a main business comparable to any of the entities referred to in points (a) to (k);
 
 ### mdb
@@ -118,45 +118,45 @@ Multilateral Development Banks are defined in the [CRR][crr] Article 117 as:
 > The Inter-American Investment Corporation, the Black Sea Trade and Development Bank, the Central American Bank for Economic Integration and the CAF-Development Bank of Latin America shall be considered multilateral development banks.
 > ...
 > (a) the International Bank for Reconstruction and Development;
-
+>
 > (b) the International Finance Corporation;
-
+>
 > (c) the Inter-American Development Bank;
-
+>
 > (d) the Asian Development Bank;
-
+>
 > (e) the African Development Bank;
-
+>
 > (f) the Council of Europe Development Bank;
-
+>
 > (g) the Nordic Investment Bank;
-
+>
 > (h) the Caribbean Development Bank;
-
+>
 > (i) the European Bank for Reconstruction and Development;
-
+>
 > (j) the European Investment Bank;
-
+>
 > (k) the European Investment Fund;
-
+>
 > (l) the Multilateral Investment Guarantee Agency;
-
+>
 > (m) the International Finance Facility for Immunisation;
-
+>
 > (n) the Islamic Development Bank.
 
 ### intl_org
 International Organisations are defined in [CRR][crr] Article 118:
 > (a) the Union;
-
+>
 > (b) the International Monetary Fund;
-
+>
 > (c) the Bank for International Settlements;
-
+>
 > (d) the European Financial Stability Facility;
-
+>
 > (e) the European Stability Mechanism;
-
+>
 > (f) an international financial institution established by two or more Member States, which has the purpose to mobilise funding and provide financial assistance to the benefit of its members that are experiencing or threatened by severe financing problems.
 
 ### corporate
@@ -166,15 +166,15 @@ An organisation with government approval to conduct business (or other activitie
 As defined in the [FCA handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2971.html), a sovereign is:
 
 >(a) the EU; or
-
+>
 >(b) a Member State including a government department, an agency, or a special purpose vehicle of the Member State; or
-
+>
 >(c) in the case of a federal Member State, a member of the federation; or
-
+>
 >(d) a special purpose vehicle for several Member States; or
-
+>
 >(e) an international financial institution established by two or more Member States which has the purpose of mobilising funding and provide financial assistance to the benefit of its members that are experiencing or threatened by severe financing problems; or
-
+>
 >(f) the European Investment Bank.
 
 ### central_bank
@@ -190,11 +190,11 @@ A **central government** is the government of a nation-state. While some countri
 A public sector entity is defined in the [FCA handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2242.html) as any of the following:
 
 >(a) non-commercial administrative bodies responsible to central governments, regional governments or local authorities; or
-
+>
 >(b) authorities that exercise the same responsibilities as regional and local authorities; or
-
+>
 >(c) non commercial undertakings owned by central governments that have explicit guarantee arrangements; or
-
+>
 >(d) self administered bodies governed by law that are under public supervision.
 
 ### credit_institution
@@ -209,17 +209,17 @@ A promotional lender is defined by the EU [here][lcr] Article 10.1(e):
 Investment firm is defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G596.html) as:
 >(1) any person whose regular occupation or business is the provision of one or more investment services to third parties and/or the performance of one or more investment activities on a professional basis.
 [Note: article 4(1)(1) of MiFID]
-
+>
 >(2) (in REC) a MiFID investment firm, or a person who would be a MiFID investment firm if it had its head office in the EEA.
-
+>
 >(3) (in IFPRU and BIPRU 12) has the meaning in article 4(1)(2) of the EU CRR.
-
+>
 >(4) (in GENPRU (except GENPRU 3) and BIPRU (except BIPRU 12) any of the following:
 >(a) a firm in (3); and
 >(b) a BIPRU firm.
-
+>
 >(5) (in SYSC 19A(IFPRU Remuneration Code)) a firm in (3).
-
+>
 >(6)	(in SYSC 19D (Dual-regulated firms Remuneration Code)) a firm in (3) that is a UK designated investment firm.
 
 ### local_firm
@@ -230,12 +230,11 @@ Local firm is defined by the EU [here][lcr] Article 4(1)(4):
 A securitisation special purpose entity is defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2277.html) as: 
 
 >(1) (in accordance with Article 4(44) of the Banking Consolidation Directive (Definitions) and for the purposes of BIPRU) a corporation, trust or other entity, other than a credit institution, organised for carrying on a securitisation or securitisations (within the meaning of paragraph (2) of the definition of securitisation), the activities of which are limited to those appropriate to accomplishing that objective, the structure of which is intended to isolate the obligations of the SSPE from those of the originator, and the holders of the beneficial interests in which have the right to pledge or exchange those interests without restriction.
-
+>
 >(2) (in MIPRU) a corporation, trust or other entity that has the following characteristics:
 > (a) it is organised for carrying on a securitisation or securitisations (within the meaning of paragraph (2) of the definition of securitisation);
 > (b) its activities are limited to those appropriate to accomplishing such securitisation or securitisations; and
 > (c) its structure is intended to isolate its obligations from those of the originator.
-
 
 ### ciu
 A collective investment undertaking is defined by the EU [here][lcr] Article 4(1)(7):
@@ -249,31 +248,31 @@ The [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G569.html?d
 >a firm with permission to effect or carry out contracts of insurance (other than a UK ISPV ).
 Where [insurance](https://www.handbook.fca.org.uk/handbook/glossary/G218.html?date=2015-12-31) consists of:
 >(1) (in relation to a specified investment) the investment, specified in article 75 of the Regulated Activities Order (Contracts of insurance), which is rights under a contract of insurance in (2).
-
+>
 >(2) (in relation to a contract) (in accordance with article 3(1) of the Regulated Activities Order (Interpretation)) any contract of insurance which is a long-term insurance contract or a general insurance contract, including:
-
+>
 > (a) fidelity bonds, performance bonds, administration bonds, bail bonds, customs bonds or similar contracts of guarantee, where these are:
-
+>
 >   (i) effected or carried out by a person not carrying on a banking business;
-
+>
 >   (ii) not effected merely incidentally to some other business carried on by the person effecting them; and
-
+>
 >   (iii) effected in return for the payment of one or more premiums;
-
+>
 > (b) tontines;
-
+>
 > (c) capital redemption contracts or pension fund management contracts, where these are effected or carried out by a person who:
-
+>
 >   (i) does not carry on a banking business; and
-
+>
 >   (ii) otherwise carries on the regulated activity of effecting or carrying out contracts of insurance;
-
+>
 > (d) contracts to pay annuities on human life;
-
+>
 > (e) contracts of a kind referred to in article 2(2)(e) of the Consolidated Life Directive (Collective insurance etc); and
-
+>
 > (f) contracts of a kind referred to in article 2(3) of the Consolidated Life Directive (Social insurance);
-
+>
 >but not including a funeral plan contract (or a contract which would be a funeral plan contract but for the exclusion in article 60 of the Regulated Activities Order (Plans covered by insurance or trust arrangements)); in this definition, "annuities on human life" does not include superannuation allowances and annuities payable out of any fund applicable solely to the relief and maintenance of persons engaged, or who have been engaged, in any particular profession, trade or employment, or of the dependants of such persons.
 
 ### financial_holding
@@ -292,10 +291,10 @@ A **credit union** is defined by the [FCA](https://www.fca.org.uk/firms/credit-u
 >A credit union is a financial co-operative owned by its members.
 >The services that credit unions can offer include:
 > deposit-taking
-
+>
 > savings
-
->lending
+>
+> lending
 These services are regulated activities.
 
 ### deposit_broker
