@@ -114,7 +114,7 @@ Multilateral Development Banks are defined in the [CRR][crr] Article 117 as:
 > (n) the Islamic Development Bank.
 
 ### intl_org
-International Organisations are defined in the [CRR][crr] Article 118:
+International Organisations are defined in [CRR][crr] Article 118:
 > (a) the Union;
 > (b) the International Monetary Fund;
 > (c) the Bank for International Settlements;
@@ -128,78 +128,118 @@ An organisation with government approval to conduct business (or other activitie
 ### sovereign  
 As defined in the [FCA handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2971.html), a sovereign is:
 
-(a) the EU; or
-(b) a Member State including a government department, an agency, or a special purpose vehicle of the Member State; or
-(c) in the case of a federal Member State, a member of the federation; or
-(d) a special purpose vehicle for several Member States; or
-(e) an international financial institution established by two or more Member States which has the purpose of mobilising funding and provide financial assistance to the benefit of its members that are experiencing or threatened by severe financing problems; or
-(f) the European Investment Bank.
+>(a) the EU; or
+>(b) a Member State including a government department, an agency, or a special purpose vehicle of the Member State; or
+>(c) in the case of a federal Member State, a member of the federation; or
+>(d) a special purpose vehicle for several Member States; or
+>(e) an international financial institution established by two or more Member States which has the purpose of mobilising funding and provide financial assistance to the benefit of its members that are experiencing or threatened by severe financing problems; or
+>(f) the European Investment Bank.
 
 ### central_bank
-A **central bank** is often a nationalised institution in charge of the production and distribution of money and credit in the system it resides over. It is usually responsible for monetary policay and the regulation of member banks.
+A **central bank** is often a nationalised institution in charge of the production and distribution of money and credit in the system it resides over. It is usually responsible for monetary policy and the regulation of member banks.
 
 ### regional_govt
-*needs definition*
+A **regional government** is a government entity that only has control on a specific geographic area. 
 
 ### central_govt
-*needs definition*
+A **central government** is the government of a nation-state. While some countries may have **regional governments** that operate autonomously, the **central goverment** is the governing system that is concerned with issues that affect the entire nation.
 
 ### pse  
-A public sector entity is defined in the [LCR Regulation][lcr] Article 4:
-> 'public sector entity' means a non-commercial administrative body responsible to central governments, regional governments or local authorities, or to authorities that exercise the same responsibilities as regional governments and local authorities, or a non-commercial undertaking that is owned by or set up and sponsored by central governments, regional governments or local authorities, and that has explicit guarantee arrangements, and may include self-administered bodies governed by law that are under public supervision;
+A public sector entity is defined in the [FCA handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2242.html) as any of the following:
+
+>(a) non-commercial administrative bodies responsible to central governments, regional governments or local authorities; or
+>(b) authorities that exercise the same responsibilities as regional and local authorities; or
+>(c) non commercial undertakings owned by central governments that have explicit guarantee arrangements; or
+>(d) self administered bodies governed by law that are under public supervision.
 
 ### credit_institution
-Credit institution is defined in the [LCR Regulation][lcr] Article 4:
+Credit institution is defined in Article 4 of [CRR][crr]:
 > (1) 'credit institution' means an undertaking the business of which is to take deposits or other repayable funds from the public and to grant credits for its own account
 
 ### promotional_lender
-A promotional lender is defined in the [LCR Regulation][lcr] Article 10.1(e):
+A promotional lender is defined by the EU [here][lcr] Article 10.1(e):
 > (ii) any credit institution whose purpose is to advance the public policy objectives of the Union or of the central or regional government or local authority in a Member State predominantly through the provision of promotional loans on a non-competitive, not for profit basis, provided that at least 90 % of the loans that it grants are directly or indirectly guaranteed by the central or regional government or local authority and that any exposure to that regional government or local authority, as applicable, is treated as an exposure to the central government of the Member State in accordance with Article 115(2) of Regulation (EU) No 575/2013;
 
 ### investment_firm
-Investment firm is defined in the [LCR Regulation][lcr] Article 3:
-> 1) "Investment firm" means any legal person whose regular occupation or business is the provision of one or more investment services to third parties and/or the performance of one or more investment activities on a professional basis;
-> Member States may include in the definition of investment firms undertakings which are not legal persons, provided that:
-> (a) their legal status ensures a level of protection for third parties' interests equivalent to that afforded by legal persons, and
-> (b) they are subject to equivalent prudential supervision appropriate to their legal form.
-> However, where a natural person provides services involving the holding of third parties' funds or transferable securities, he may be considered as an investment firm for the purposes of this Directive only if, without prejudice to the other requirements imposed in this Directive and in Directive 93/6/EEC, he complies with the following conditions:
-> (a) the ownership rights of third parties in instruments and funds must be safeguarded, especially in the event of the insolvency of the firm or of its proprietors, seizure, set-off or any other action by creditors of the firm or of its proprietors;
-> (b) the firm must be subject to rules designed to monitor the firm's solvency and that of its proprietors;
-> (c) the firm's annual accounts must be audited by one or more persons empowered, under national law, to audit accounts;
-> (d) where the firm has only one proprietor, he must make provision for the protection of investors in the event of the firm's cessation of business following his death, his incapacity or any other such event;
+Investment firm is defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G596.html) as:
+>(1) any person whose regular occupation or business is the provision of one or more investment services to third parties and/or the performance of one or more investment activities on a professional basis.
+[Note: article 4(1)(1) of MiFID]
 
-This definition is further refined in the [LCR Regulation][lcr] to exclude:
-> (a) credit institutions;
-> (b) local firms;
-> (c) firms which are not authorised to provide the ancillary service referred to in point (1) of Section B of Annex I to Directive 2004/39/EC, which provide only one or more of the investment services and activities listed in points 1, 2, 4 and 5 of Section A of Annex I to that Directive, and which are not permitted to hold money or securities belonging to their clients and which for that reason may not at any time place themselves in debt with those clients;
+>(2) (in REC) a MiFID investment firm, or a person who would be a MiFID investment firm if it had its head office in the EEA.
+
+>(3) (in IFPRU and BIPRU 12) has the meaning in article 4(1)(2) of the EU CRR.
+
+>(4) (in GENPRU (except GENPRU 3) and BIPRU (except BIPRU 12) any of the following:
+>(a) a firm in (3); and
+>(b) a BIPRU firm.
+
+>(5) (in SYSC 19A(IFPRU Remuneration Code)) a firm in (3).
+
+>(6)	(in SYSC 19D (Dual-regulated firms Remuneration Code)) a firm in (3) that is a UK designated investment firm.
 
 ### local_firm
-Local firm is defined in the [LCR Regulation][lcr] Article 3:
+Local firm is defined by the EU [here][lcr] Article 4(1)(4):
 > 'local firm' means a firm dealing for its own account on markets in financial futures or options or other derivatives and on cash markets for the sole purpose of hedging positions on derivatives markets, or dealing for the accounts of other members of those markets and being guaranteed by clearing members of the same markets, where responsibility for ensuring the performance of contracts entered into by such a firm is assumed by clearing members of the same markets
 
 ### sspe
-*needs definition*
+A securitisation special purpose entity is defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2277.html) as: 
+
+>(1) (in accordance with Article 4(44) of the Banking Consolidation Directive (Definitions) and for the purposes of BIPRU) a corporation, trust or other entity, other than a credit institution, organised for carrying on a securitisation or securitisations (within the meaning of paragraph (2) of the definition of securitisation), the activities of which are limited to those appropriate to accomplishing that objective, the structure of which is intended to isolate the obligations of the SSPE from those of the originator, and the holders of the beneficial interests in which have the right to pledge or exchange those interests without restriction.
+
+>(2) (in MIPRU) a corporation, trust or other entity that has the following characteristics:
+>(a) it is organised for carrying on a securitisation or securitisations (within the meaning of paragraph (2) of the definition of securitisation);
+>(b) its activities are limited to those appropriate to accomplishing such securitisation or securitisations; and
+>(c) its structure is intended to isolate its obligations from those of the originator.
+
 
 ### ciu
-A collective investment undertaking is defined in the [LCR Regulation][lcr] Article 3:
+A collective investment undertaking is defined by the EU [here][lcr] Article 4(1)(7):
 > 'collective investment undertaking' or 'CIU' means a UCITS as defined in Article 1(2) of Directive 2009/65/EC of the European Parliament and of the Council of 13 July 2009 on the coordination of laws, regulations and administrative provisions relating to undertakings for collective investment in transferable securities (UCITS) (21), including, unless otherwise provided, third-country entities which carry out similar activities, which are subject to supervision pursuant to Union law or to the law of a third country which applies supervisory and regulatory requirements at least equivalent to those applied in the Union, an AIF as defined in Article 4(1)(a) of Directive 2011/61/EU of the European Parliament and of the Council of 8 June 2011 on Alternative Investment Fund Managers (22), or a non-EU AIF as defined in Article 4(1)(aa) of that Directive;
-
 
 ### ceis
 *needs definition*
 
 ### insurer
-*needs definition*
+The [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G569.html?date=2015-12-31) defines an **insurer** as: 
+>a firm with permission to effect or carry out contracts of insurance (other than a UK ISPV ).
+Where [insurance](https://www.handbook.fca.org.uk/handbook/glossary/G218.html?date=2015-12-31) consists of:
+>(1) (in relation to a specified investment) the investment, specified in article 75 of the Regulated Activities Order (Contracts of insurance), which is rights under a contract of insurance in (2).
+
+>(2) (in relation to a contract) (in accordance with article 3(1) of the Regulated Activities Order (Interpretation)) any contract of insurance which is a long-term insurance contract or a general insurance contract, including:
+
+> (a) fidelity bonds, performance bonds, administration bonds, bail bonds, customs bonds or similar contracts of guarantee, where these are:
+
+>   (i) effected or carried out by a person not carrying on a banking business;
+
+>   (ii) not effected merely incidentally to some other business carried on by the person effecting them; and
+
+>   (iii) effected in return for the payment of one or more premiums;
+
+> (b) tontines;
+
+> (c) capital redemption contracts or pension fund management contracts, where these are effected or carried out by a person who:
+
+>   (i) does not carry on a banking business; and
+
+>   (ii) otherwise carries on the regulated activity of effecting or carrying out contracts of insurance;
+
+> (d) contracts to pay annuities on human life;
+
+> (e) contracts of a kind referred to in article 2(2)(e) of the Consolidated Life Directive (Collective insurance etc); and
+
+> (f) contracts of a kind referred to in article 2(3) of the Consolidated Life Directive (Social insurance);
+
+>but not including a funeral plan contract (or a contract which would be a funeral plan contract but for the exclusion in article 60 of the Regulated Activities Order (Plans covered by insurance or trust arrangements)); in this definition, "annuities on human life" does not include superannuation allowances and annuities payable out of any fund applicable solely to the relief and maintenance of persons engaged, or who have been engaged, in any particular profession, trade or employment, or of the dependants of such persons.
 
 ### financial_holding
-A financial holding copmany is defined in the [LCR Regulation][lcr] Article 3:
+A financial holding copmany is defined by the EU [here][lcr] Article 4(1)(20):
 > (20) 'financial holding company' means a financial institution, the subsidiaries of which are exclusively or mainly institutions or financial institutions, at least one of such subsidiaries being an institution, and which is not a mixed financial holding company;
 
 ### other_financial
 Any other type to be classified as financial but not one of the other types witin financial.
 
 ### pic
-A financial holding copmany is defined in the [LCR Regulation][lcr] Article 3:
+A financial holding copmany is defined by the EU [here](http://eur-lex.europa.eu/eli/reg_del/2015/61/oj) Article 3:
 > 'personal investment company' (‘PIC’) means an undertaking or a trust whose owner or beneficial owner, respectively, is a natural person or a group of closely related natural persons, which was set up with the sole purpose of managing the wealth of the owners and which does not carry out any other commercial, industrial or professional activity. The purpose of the PIC may include other ancillary activities such as segregating the owners' assets from corporate assets, facilitating the transmission of assets within a family or preventing a split of the assets after the death of a member of the family, provided these are connected to the main purpose of managing the owners' wealth;
 
 ### credit_union
