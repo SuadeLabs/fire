@@ -354,7 +354,7 @@ From Annex I of the [CRR][crr], credit facilities are:
 > agreements to lend, purchase securities, provide guarantees or acceptance facilities
 
 ### nostro
-Nostro loans are the firm's accounts at other financial institutions which are in effect loans to other firms. Nostros are used in the context of correspondent banking operations which are described in by the [ECB] (https://www.ecb.europa.eu/paym/t2/shared/pdf/target2_glossary.pdf):
+Nostro loans are the firm's accounts at other financial institutions which are in effect loans to other firms. Nostros are used in the context of correspondent banking operations which are described by the [ECB](https://www.ecb.europa.eu/paym/t2/shared/pdf/target2_glossary.pdf):
 > Correspondent banking: an arrangement under which one credit institution provides payment and other services to another credit institution. Payments through correspondents are often executed through reciprocal accounts (nostro and loro accounts) to which standing credit lines may be attached. Correspondent banking services are primarily provided across international boundaries but are also known as agency relationships in some domestic contexts. 
 > A loro (vostro) account is the term used by a correspondent to describe an account held on behalf of a foreign credit institution; the foreign credit institution would in turn regard this account as its nostro account.
 
@@ -397,7 +397,7 @@ Other refers to a type of security not covered by the above. If you find yoursel
 ```
 
 ### cash
-A **cash** or cash-equivalent security such as a securitisation of cash deposits. Within Finrep Annex V part (2):
+A **cash** or cash-equivalent security such as a securitisation of cash deposits. Within [Finrep Annex V part (2)(1)(1.1)(1)](https://www.eba.europa.eu/documents/10180/359626/Annex+V_Instructions_FINREP.docx/26727402-6339-4c33-bb5a-d8e659c27371):
 > "Cash on hand" includes holdings of national and foreign banknotes and coins in circulation that are commonly used to make payments.
 
 ### equity
@@ -407,52 +407,43 @@ This is a "catch all" term for equity instruments such as *share*, *share_agg* t
 Denotes if the security is a share (stock) or represents an aggregate for a portfolio or package of shares.
 
 ### preference_share
-*needs definition*
+The [FCA](https://www.handbook.fca.org.uk/handbook/glossary/G1587.html) defines a **preference share** as:
+> A share conferring preference as to income or return of capital which does not form part of the equity share capital of a company
 
 ### debt
 This is a "catch all" term for debt of any kind, *bond*, *bond_amortising*, *index_linked_gilt*, *covered_bond*, *abs*, *residential_mbs*, *non_residential_mbs*, *frn*, *govt_gteed_frn*, to be used when further granularity is not available or not needed.
 
 ### bond
-*needs definition*
+A **bond** is a type of loan whereby an investor lends money to an entity for a defined period of time at a fixed or floating interest rate. 
 
 ### covered_bond
-From the [LCR][lcr] introduction (9):
-Covered bonds are debt instruments issued by credit institutions and secured by a cover pool of assets which typically consist of mortgage loans or public sector debt to which investors have a preferential claim in the event of default. Their secured nature and certain additional safety features, such as the requirement on the issuer to replace non-performing assets in the cover pool and maintain the cover pool at a value exceeding the par value of the bonds (‘asset coverage requirement’), have contributed to make covered bonds relatively low-risk, yield-bearing instruments with a key funding role in mortgage markets of most Member States. In certain Member States outstanding covered bond issuance exceeds the pool of outstanding government bonds. Certain covered bonds of credit quality step 1, in particular, exhibited an excellent liquidity performance during the period from 1 January 2008 to 30 June 2012 analysed by the EBA in its report. Nevertheless the EBA recommended treating these covered bonds as level 2A assets to align with BCBS standards. However, in the light of the considerations made above about their credit quality, liquidity performance and role in the funding markets of the Union, it is appropriate for these credit quality step 1 covered bonds to be treated as level 1 assets. In order to avoid excessive concentration risks and unlike other level 1 assets, the holdings of credit quality step 1 covered bonds in the liquidity buffer should be subject to a 70 % cap of the overall buffer, a minimum 7 % haircut and to the diversification requirement.
-
-In accordance with the [UCITS Directive][ucits], and the [FCA handbook][fca-covered-bond]:  
-> bonds are issued by a credit institution which has its registered office in a Member State and is subject by law to special public supervision designed to protect bond-holders. In particular, sums deriving from the issue of those bonds shall be invested in accordance with the law in assets which, during the whole period of validity of the bonds, are capable of covering claims attaching to the bonds and which, in the event of failure of the issuer, would be used on a priority basis for the reimbursement of the principal and payment of the accrued interest.
-
-More information on covered_bond issuers in Europe can be found [here][eu-covered-bonds-info].
+From the [LCR][lcr] Introduction (8):
+> Covered bonds are debt instruments issued by credit institutions and secured by a cover pool of assets which typically consist of mortgage loans or public sector debt to which investors have a preferential claim in the event of default. Their secured nature and certain additional safety features, such as the requirement on the issuer to replace non-performing assets in the cover pool and maintain the cover pool at a value exceeding the par value of the bonds (‘asset coverage requirement’), have contributed to make covered bonds relatively low-risk, yield-bearing instruments with a key funding role in mortgage markets of most Member States. In certain Member States outstanding covered bond issuance exceeds the pool of outstanding government bonds. Certain covered bonds of credit quality step 1, in particular, exhibited an excellent liquidity performance during the period from 1 January 2008 to 30 June 2012 analysed by the EBA in its report. Nevertheless the EBA recommended treating these covered bonds as level 2A assets to align with BCBS standards. However, in the light of the considerations made above about their credit quality, liquidity performance and role in the funding markets of the Union, it is appropriate for these credit quality step 1 covered bonds to be treated as level 1 assets. In order to avoid excessive concentration risks and unlike other level 1 assets, the holdings of credit quality step 1 covered bonds in the liquidity buffer should be subject to a 70 % cap of the overall buffer, a minimum 7 % haircut and to the diversification requirement.
 
 ### emtn, mtn
-*needs definition*
+A Euro medium-term note is a medium-term (less than 5 years), flexible debt instrument that is traded and issued outside of the US and Canada. A medium-term note is the same but is traded in the US and Canada.
 
 ### commercial_paper
-Commercial paper, in the global financial market, is an unsecured promissory note with a fixed maturity of, typically, not more than 270 days.
-
-The [Money Market Statistics Regulation][mm-stat] defines it in Annex II as:
-> A debt instrument that is either unsecured or backed by collateral provided by the issuer, which has a maturity of not more than one year and is either interest-bearing or discounted.
+Commercial paper is an unsecured promissory note with a fixed maturity of, typically, not more than 270 days.
 
 ### cd
-Certificate of deposit is defined in the [Money Market Statistics Regulation][mm-stat] in Annex II as:
-> A fixed-rate debt instrument issued by an MFI (monetary financial institution) entitling the holder to a specific fixed rate of interest over a defined fixed term of up to one year.
-> note: "one year" is defined as transactions with a maturity date of not more than 397 days after the trade date
+A certificate of deposit is also a promissory note, however can only be issued by a bank. It has a fixed maturity and specified fixed interest rate.
 
 ### struct_note
-Structured notes (typically a subclass of an EMTN/MTN program)
+The [FCA](https://www.fca.org.uk/consumers/structured-products) defines structured notes as:
+> a type of fixed-term investment where the amount you earn depends on the performance of a specific market (such as the FTSE 100) or specific assets (such as shares in individual companies)
 
 ### spv_mortgages, spv_other
-*needs definition*
+A special purpose vehicle is a separate legal entity created to fulfil a certain purpose for the parent.
 
 ### abs
-Any asset-backed security.
-*needs definition*
+An asset-backed security is a security whose income payments and hence value are derived from and collateralised (or "backed") by a specified pool of underlying assets. The pool of assets is typically a group of small and illiquid assets which are unable to be sold individually. Pooling the assets into financial instruments allows them to be sold to general investors, a process called securitisation. This allows the risk of investing in the underlying assets to be diversified because each security will represent a fraction of the total value of the diverse pool of underlying assets. The pools of underlying assets can include common payments from credit cards, auto loans, and mortgage loans, to esoteric cash flows from aircraft leases, royalty payments and movie revenues.
 
 ### rmbs
-A residential mortgage-backed security (a subclass of an abs).
+A residential mortgage-backed security (a subclass of an ABS).
 
 ### rmbs_trans
-This type value is in order to indicate whether a the security is subject to transitional provisions for securitisations backed by residential loans:  
+This type value is in order to indicate whether the security is subject to transitional provisions for securitisations backed by residential loans:  
 [LCR][lcr] Article 37:
 > 1.   By derogation from Article 13, securitisations issued before 1 October 2015, where the underlying exposures are residential loans as referred to in point (g)(i) of Article 13(2), shall qualify as Level 2B assets if they meet all the requirements set out in Article 13 other than the loan-to-value or loan-to-income requirements set out in that point (g)(i) of Article 13(2).
 
@@ -462,7 +453,7 @@ This type value is in order to indicate whether a the security is subject to tra
 A commercial mortgage-backed security (a subclass of an abs).
 
 ### frn
-A Floating-rate Note is defined in the [Money Market Statistics Regulation][mm-stat] in Annex II as:
+A floating-rate note is defined in the [Money Market Statistics Regulation][mm-stat] in Annex II as:
 > A debt instrument for which the periodic interest payments are calculated on the basis of the value, i.e. through fixing of an underlying reference rate such as Euribor on predefined dates known as fixing dates, and which has a maturity of not more than one year.
 > note: "one year" is defined as transactions with a maturity date of not more than 397 days after the trade date
 
@@ -470,11 +461,12 @@ A Floating-rate Note is defined in the [Money Market Statistics Regulation][mm-s
 A government guaranteed floating-rate note.
 
 ### cb_reserve 
-As defined in Finrep Annex V part (2):
+As defined in [Finrep Annex V part (2)(1)(1.1)(2)](https://www.eba.europa.eu/documents/10180/359626/Annex+V_Instructions_FINREP.docx/26727402-6339-4c33-bb5a-d8e659c27371)
 > include balances receivable on demand at central banks.
 
 ### cash_ratio_deposit
-*needs definition*
+The [BofE](http://www.bankofengland.co.uk/statistics/Documents/faq/crds.pdf) defines this as:
+> non-interest bearing deposits lodged with the Bank of England by eligible institutions (ie. banks and building societies), who have reported average eligible liabilities (ELs) of over £600 million over a calculation period. The level of each institution's CRD is currently calculated twice-yearly (currently in May and November) at 0.18% of average ELs, over the previous six end-calendar months, in excess of £600mn. The value bands and ratios were specified by HM Treasury in the Cash Ratio Deposits (Value Bands and Ratios) Order (2013 No 1189).
 
 ### other
 Other refers to a type of security not covered by the above. If you find yourself using this often, please [contribute][contributing].
@@ -512,42 +504,41 @@ A non-exhaustive list of [examples][ecbexamples] of underlying assets that may c
 └── other
 ```
 
-
 ### call
 A call account is defined in the [Money Market Statistics Regulation][mm-stat] in Annex II as:
-> any unsecured borrowing/lending redeemable at notice,
+> A debt instrument in which the issuer has a call option, i.e. an option to redeem the instrument early, with a final repayment date of not more than one year from the date of issuance.
 
 ### cd
-A deposit account purely holding certificates of deposit (see *Security* **type**)
+A deposit account purely holding certificates of deposit (see *cd* *Security* **type**)
 
 ### prepaid_card
-From the [Interchange Fees for Card-based Payments Regulation][card-fees] Article 2:
-> (35) 'prepaid card' means a category of payment instrument on which electronic money, as defined in point 2 of Article 2 of Directive 2009/110/EC, is stored.
-NB. see credit_card
+From the [Interchange Fees for Card-based Payments Regulation][card-fees] Article 2(35):
+> prepaid card means a category of payment instrument on which electronic money, as defined in point 2 of Article 2 of Directive 2009/110/EC, is stored.
+NB. see **credit_card**
 
 ### debit_card
-From the [Interchange Fees for Card-based Payments Regulation][card-fees] Article 2:
-> (33) 'debit card' means a category of payment instrument that enables the payer to initiate a debit card transaction excluding those with prepaid cards;
-> (4) 'debit card transaction' means a card-based payment transaction, including those with prepaid cards that is not a credit card transaction;
+From the [Interchange Fees for Card-based Payments Regulation][card-fees] Article 2(33) and (4):
+> debit card means a category of payment instrument that enables the payer to initiate a debit card transaction excluding those with prepaid cards;
+> debit card transaction means a card-based payment transaction, including those with prepaid cards that is not a credit card transaction;
 
-NB. see credit_card
+NB. see **credit_card**
 
 ### credit_card
 A credit card is typically an off-balance sheet, contingent funding obligation whereby a customer has a certian credit limit and may borrow funds at any point, up to that limit, similar to a card-based credit facility.
 
-in the [Interchange Fees for Card-based Payments Regulation][card-fees] they discuss credit and debit cards:
+The [Interchange Fees for Card-based Payments Regulation][card-fees] states that:
 > There are two main types of credit cards available on the market. With deferred debit cards, the total amount of transactions is debited from the cardholder account at a pre-agreed specific date, usually once a month, without interest to be paid. With other credit cards, the cardholder can use a credit facility in order to reimburse part of the amounts due at a later date than specified, together with interest or other costs.
 
-A credit card is then defined in Article 2 as:
-> (34) 'credit card' means a category of payment instrument that enables the payer to initiate a credit card transaction;
-> (5) 'credit card transaction' means a card-based payment transaction where the amount of the transaction is debited in full or in part at a pre agreed specific calendar month date to the payer, in line with a prearranged credit facility, with or without interest;
+A credit card is then defined in Article 2 (34) and (5) as:
+> credit card means a category of payment instrument that enables the payer to initiate a credit card transaction;
+> credit card transaction means a card-based payment transaction where the amount of the transaction is debited in full or in part at a pre agreed specific calendar month date to the payer, in line with a prearranged credit facility, with or without interest;
 
 ### current (checking, demand)
-Any transactional account 
+Any transactional account .
 
 ### internet_only
-An internet-only account is one that is offered and only accessible via the internet. The [FCA defines the internet][fca-internet] in their handbook as:
-> The Internet is a unique medium for communicating financial promotions as it provides easy access to a very wide audience. At the same time, it provides very little control over who is able to access the financial promotion.
+An internet-only account is one that is offered and only accessible via the internet. The [FCA][fca-internet] defines the internet in their handbook as:
+> a unique medium for communicating financial promotions as it provides easy access to a very wide audience. At the same time, it provides very little control over who is able to access the financial promotion.
 
 The distinction here linked to financial promotions suggests that internet-only accounts are sold and managed through a higher risk channel and therefore should be regulated spearately to other accounts.
 
