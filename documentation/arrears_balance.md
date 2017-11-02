@@ -9,5 +9,5 @@ The **arrears_balance** is the difference between the amount of payments contrac
 
 See [MLAR][mlar] 2.3.
 
----
+
 [mlar]: http://www.bankofengland.co.uk/pra/documents/regulatorydata/mlar/sup_chapter16_annex19bg_20120401.pdf
