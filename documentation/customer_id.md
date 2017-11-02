@@ -9,5 +9,5 @@ The **customer_id** is the unique an identifier for the customer within the fina
 
 Users should be careful that when aggregating similar data from different sources, that unique ids are maintained to avoid conflicts or overwriting of data.
 
----
+
 [lei]: https://www.gleif.org/
