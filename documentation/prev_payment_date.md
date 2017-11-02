@@ -12,7 +12,7 @@ See also:
 [**next_payment_date**][npd]
 [**last_payment_date**][lpd]
 
----
+
 [fpd]: https://github.com/suadelabs/fire/blob/master/documentation/first_payment_date.md
 [npd]: https://github.com/suadelabs/fire/blob/master/documentation/next_payment_date.md
 [lpd]: https://github.com/suadelabs/fire/blob/master/documentation/last_payment_date.md
