@@ -43,7 +43,9 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 ### individual
 Individual is a UK specific definition which is slightly broader than a natural person and defined in the [FCA Handbook Glossary][fca-indiv] under individual:
 > (a) a natural person; or
+
 > (b) a partnership consisting of two or three persons not all of whom are bodies corporate; or
+
 > (c) an unincorporated body of persons which does not consist entirely of bodies corporate and is not a partnership.
 
 ### natural_person
@@ -73,25 +75,42 @@ Other means it is known to **not** be one of the other types. If type is unknown
 Article 411 of the [CRR][crr]:
 > financial customer means a customer that performs one or more of the activities listed in Annex I to Directive 2013/36/EU as its main business, or is one of the following:
 > (a) a credit institution;
+
 > (b) an investment firm;
+
 > (c) an SSPE;
+
 > (d) a CIU;
+
 > (e) a non-open ended investment scheme;
+
 > (f) an insurance undertaking;
+
 > (g) a financial holding company or mixed-financial holding company.
 
 > 'financial sector entity' means any of the following:
 > (a) an institution;
+
 > (b) a financial institution;
+
 > (c) an ancillary services undertaking included in the consolidated financial situation of an institution;
+
 > (d) an insurance undertaking;
+
 > (e) a third-country insurance undertaking;
+
 > (f) a reinsurance undertaking;
+
 > (g) a third-country reinsurance undertaking;
+
 > (h) an insurance holding company;
+
 > (i) a mixed-activity holding company
+
 > (j) a mixed-activity insurance holding company as defined in point (g) of Article 212(1) of Directive 2009/138/EC;
+
 > (k) an undertaking excluded from the scope of Directive 2009/138/EC in accordance with Article 4 of that Directive;
+
 > (l) a third-country undertaking with a main business comparable to any of the entities referred to in points (a) to (k);
 
 ### mdb
@@ -99,27 +118,45 @@ Multilateral Development Banks are defined in the [CRR][crr] Article 117 as:
 > The Inter-American Investment Corporation, the Black Sea Trade and Development Bank, the Central American Bank for Economic Integration and the CAF-Development Bank of Latin America shall be considered multilateral development banks.
 > ...
 > (a) the International Bank for Reconstruction and Development;
+
 > (b) the International Finance Corporation;
+
 > (c) the Inter-American Development Bank;
+
 > (d) the Asian Development Bank;
+
 > (e) the African Development Bank;
+
 > (f) the Council of Europe Development Bank;
+
 > (g) the Nordic Investment Bank;
+
 > (h) the Caribbean Development Bank;
+
 > (i) the European Bank for Reconstruction and Development;
+
 > (j) the European Investment Bank;
+
 > (k) the European Investment Fund;
+
 > (l) the Multilateral Investment Guarantee Agency;
+
 > (m) the International Finance Facility for Immunisation;
+
 > (n) the Islamic Development Bank.
 
 ### intl_org
 International Organisations are defined in [CRR][crr] Article 118:
 > (a) the Union;
+
 > (b) the International Monetary Fund;
+
 > (c) the Bank for International Settlements;
+
 > (d) the European Financial Stability Facility;
+
 > (e) the European Stability Mechanism;
+
 > (f) an international financial institution established by two or more Member States, which has the purpose to mobilise funding and provide financial assistance to the benefit of its members that are experiencing or threatened by severe financing problems.
 
 ### corporate
@@ -129,10 +166,15 @@ An organisation with government approval to conduct business (or other activitie
 As defined in the [FCA handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2971.html), a sovereign is:
 
 >(a) the EU; or
+
 >(b) a Member State including a government department, an agency, or a special purpose vehicle of the Member State; or
+
 >(c) in the case of a federal Member State, a member of the federation; or
+
 >(d) a special purpose vehicle for several Member States; or
+
 >(e) an international financial institution established by two or more Member States which has the purpose of mobilising funding and provide financial assistance to the benefit of its members that are experiencing or threatened by severe financing problems; or
+
 >(f) the European Investment Bank.
 
 ### central_bank
@@ -148,8 +190,11 @@ A **central government** is the government of a nation-state. While some countri
 A public sector entity is defined in the [FCA handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2242.html) as any of the following:
 
 >(a) non-commercial administrative bodies responsible to central governments, regional governments or local authorities; or
+
 >(b) authorities that exercise the same responsibilities as regional and local authorities; or
+
 >(c) non commercial undertakings owned by central governments that have explicit guarantee arrangements; or
+
 >(d) self administered bodies governed by law that are under public supervision.
 
 ### credit_institution
@@ -187,9 +232,9 @@ A securitisation special purpose entity is defined in the [FCA Handbook](https:/
 >(1) (in accordance with Article 4(44) of the Banking Consolidation Directive (Definitions) and for the purposes of BIPRU) a corporation, trust or other entity, other than a credit institution, organised for carrying on a securitisation or securitisations (within the meaning of paragraph (2) of the definition of securitisation), the activities of which are limited to those appropriate to accomplishing that objective, the structure of which is intended to isolate the obligations of the SSPE from those of the originator, and the holders of the beneficial interests in which have the right to pledge or exchange those interests without restriction.
 
 >(2) (in MIPRU) a corporation, trust or other entity that has the following characteristics:
->(a) it is organised for carrying on a securitisation or securitisations (within the meaning of paragraph (2) of the definition of securitisation);
->(b) its activities are limited to those appropriate to accomplishing such securitisation or securitisations; and
->(c) its structure is intended to isolate its obligations from those of the originator.
+> (a) it is organised for carrying on a securitisation or securitisations (within the meaning of paragraph (2) of the definition of securitisation);
+> (b) its activities are limited to those appropriate to accomplishing such securitisation or securitisations; and
+> (c) its structure is intended to isolate its obligations from those of the originator.
 
 
 ### ciu
@@ -243,11 +288,18 @@ A financial holding copmany is defined by the EU [here](http://eur-lex.europa.eu
 > 'personal investment company' (‘PIC’) means an undertaking or a trust whose owner or beneficial owner, respectively, is a natural person or a group of closely related natural persons, which was set up with the sole purpose of managing the wealth of the owners and which does not carry out any other commercial, industrial or professional activity. The purpose of the PIC may include other ancillary activities such as segregating the owners' assets from corporate assets, facilitating the transmission of assets within a family or preventing a split of the assets after the death of a member of the family, provided these are connected to the main purpose of managing the owners' wealth;
 
 ### credit_union
-*needs definition*
+A **credit union** is defined by the [FCA](https://www.fca.org.uk/firms/credit-unions) as:
+>A credit union is a financial co-operative owned by its members.
+>The services that credit unions can offer include:
+> deposit-taking
+
+> savings
+
+>lending
+These services are regulated activities.
 
 ### deposit_broker
-A deposit broker is used in some places in the CRR regulation, however is not well defined. In fact, a [2016 EBA Q&A addresses this lack of definition][deposit-broker-qa] directly.
-
+A **deposit broker** can be an individual or a firm that facilitates the placement of deposits with insured depository institutions. Deposit brokers offer investors an assortment of fixed-term investment products, which earn low-risk returns.
 
 # Loan
 ### trade_finance
