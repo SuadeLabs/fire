@@ -134,7 +134,7 @@
     "purpose": {
       "description": "The purpose for which the account was created or is being used.",
       "type": "string",
-      "enum": ["deposit", "cash_management", "ci_service", "collateral", "clearing", "custody", "ips", "operational", "prime_brokerage", "firm_operating_expenses", "other"]
+      "enum": ["deposit", "cash_management", "ci_service", "collateral", "clearing", "custody", "ips", "operational", "prime_brokerage", "firm_operating_expenses", "employee", "system", "critical_service", "tax", "other"]
     },
     "rate": {
       "description": "The full interest rate applied to the account balance in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).",
@@ -180,7 +180,7 @@
       "type": "string",
       "enum": [
         "call", "cd", "current", "credit_card", "internet_only", "isa", "money_market",
-        "bonds", "savings", "payments", "time_deposit", "vostro", "other"
+        "bonds", "savings", "payments", "time_deposit", "vostro", "provision", "other"
       ]
     },
     "trade_date": {
