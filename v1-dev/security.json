@@ -186,6 +186,11 @@
       "description": "Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/country_code"
     },
+    "seniority": {
+      "description": "The seniority of the security in the event of sale or bankruptcy of the issuer.",
+      "type": "string",
+      "enum": ["senior_secured", "secured", "senior_unsecured", "senior_subordinated", "subordinated", "junior_subordinated"]
+    },
     "sft_type": {
       "description": "The sft_type parameter defines the transaction mechanism conducted for the SFT for this security product.",
       "type": "string",
