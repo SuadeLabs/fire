@@ -189,7 +189,7 @@
     "seniority": {
       "description": "The seniority of the security in the event of sale or bankruptcy of the issuer.",
       "type": "string",
-      "enum": ["senior_secured", "secured", "senior_unsecured", "senior_subordinated", "subordinated", "junior_subordinated"]
+      "enum": ["senior_secured", "secured", "senior_unsecured", "subordinated_secured", "subordinated", "subordinated_unsecured"]
     },
     "sft_type": {
       "description": "The sft_type parameter defines the transaction mechanism conducted for the SFT for this security product.",
