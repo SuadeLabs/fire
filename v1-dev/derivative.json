@@ -13,6 +13,10 @@
       "type": "string",
       "format": "date-time"
     },
+    "deal_id": {
+        "description": "The unique identifier used by the financial institution for the deal to which this derivative belongs.",
+        "type": "string"
+    },
     "accounting_treatment":{
        "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/accounting_treatment"
     },
@@ -57,17 +61,12 @@
         "format": "date-time"
       }
     },
-    "collateral_type": {
-      "description": "The type of underlying collateral.",
-      "type": "string",
-      "enum": ["cash", "other", "none", "share", "share_agg", "covered_bond", "bond_amortising", "bond", "index_linked_gilt", "frn", "govt_gteed_frn"]
-    },
     "currency_code": {
       "description": "Actual currency of the underlying reference index, security or asset for the derivative in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/currency_code"
     },
-    "buyer_id": {
-      "description": "The unique identifier used by the financial institution to identify the buyer for this product.",
+    "customer_id": {
+      "description": "The unique identifier used by the financial institution to identify the customer for this product.",
       "type": "string"
     },
     "end_date": {
@@ -170,10 +169,6 @@
       "description": "Two-letter country code describing where the risk for the derivative product resides. In accordance with ISO 3166-1",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/country_code"
     },
-    "seller_id": {
-      "description": "The unique identifier used by the financial institution to identify the seller for this product.",
-      "type": "string"
-    },
     "settlement_type": {
       "description": "The type of settlement for the contract.",
       "type": "string",
@@ -204,11 +199,9 @@
       "type": "string",
       "format": "date-time"
     },
-    "underlying_isin_code": {
-      "description": "The unique International Securities Identification Number for the underlying security according to ISO 6166.",
-      "type": "string",
-      "minLength": 12,
-      "maxLength": 12
+    "underlying_id": {
+      "description": "The unique identifier used by the financial institution to identify the underlying instrument for this product.",
+      "type": "string"
     },
     "value_date": {
       "description": "The timestamp that the derivative was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
