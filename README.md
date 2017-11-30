@@ -1,5 +1,11 @@
+---
+layout:		readme
+title:		"Home"
+---
 
 # Financial Regulatory (FIRE) Data Format
+
+---
 
 [![Project Website](https://img.shields.io/badge/website-fire-red.svg)][fire]
 [![Apache 2.0 License](https://img.shields.io/badge/LICENSE-Apache_2.0-yellow.svg)][license]
