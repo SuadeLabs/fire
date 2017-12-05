@@ -3,8 +3,13 @@ layout:		schema
 title:		"guarantor"
 ---
 
-# guarantor
+# Guarantor Schema
 
 ---
 
 Data schema to define a guarantor for a security.
+
+### Properties
+
+Name | Type | Description
+--- | --- | ---

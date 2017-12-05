@@ -3,8 +3,13 @@ layout:		schema
 title:		"issuer"
 ---
 
-# issuer
+# Issuer Schema
 
 ---
 
 Data schema to define an issuer for a security.
+
+### Properties
+
+Name | Type | Description
+--- | --- | ---

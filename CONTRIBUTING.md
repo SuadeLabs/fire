@@ -1,7 +1,6 @@
 ---
 layout:     readme
 title:      "Contributing"
-sort:       2
 ---
 
 # contributing

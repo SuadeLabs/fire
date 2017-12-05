@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "FIRE Data Batch Schema",
+  "title": "Batch Schema",
   "description": "FIRE schema for representing bulk collections of bank objects.",
   "type": "object",
   "properties": {
