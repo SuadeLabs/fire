@@ -3,15 +3,13 @@
 
 ### INTRODUCTION
 
-
  * [Introduction](README.md)
  * [General](documentation/README.md)
- * [FAQs](faqs.md)
+ * [FAQs](documentation/faqs.md)
  * [Contributing](CONTRIBUTING.md)
 
 
 ### SCHEMAS 
-
 
  * [Account](documentation/schemas/account.md)
  * [Batch](documentation/schemas/batch.md)
@@ -19,18 +17,15 @@
  * [Customer](documentation/schemas/customer.md)
  * [Derivative](documentation/schemas/derivative.md)
  * [Derivative_cash_flow](documentation/schemas/derivative_cash_flow.md)
- * [Entity](documentation/schemas/entity.md)
  * [Exchange_rate](documentation/schemas/exchange_rate.md)
  * [Guarantor](documentation/schemas/guarantor.md)
  * [Issuer](documentation/schemas/issuer.md)
  * [Loan](documentation/schemas/loan.md)
  * [Loan_transaction](documentation/schemas/loan_transaction.md)
  * [Security](documentation/schemas/security.md)
- * [Types](documentation/schemas/types.md)
  
 
 ### PROPERTIES
-
  
  * [accounting_treatment](documentation/properties/accounting_treatment.md)
  * [accrued_interest](documentation/properties/accrued_interest.md)

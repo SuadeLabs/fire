@@ -14,5 +14,5 @@ Countries are represented as 2-letter codes in accordance with [ISO 3166-1][iso3
 
 See also [**country_code**][cc].
 
-[cc]: https://github.com/suadelabs/fire/blob/master/documentation/country_code.md
+[cc]: https://github.com/suadelabs/fire/blob/master/documentation/properties/country_code.md
 [iso3166]: https://en.wikipedia.org/wiki/ISO_3166-1
