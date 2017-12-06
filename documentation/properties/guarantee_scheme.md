@@ -47,7 +47,7 @@ Deposit **guarantee scheme** or ‘DGS’ means any scheme referred to in point 
 - Slovenia **(si_dgs)**: The central bank of the Republic of Slovenia (Banka Slovenije)
 - Spain **(es_fgd)**: Fondos de Garantía de Depósitos (FGD)
 - Sweden **(se_ndo)**: National Debt Office – Deposit Insurance (NDO)
-- United Kingdom **(uk_fscs)**: Financial Services Compensation Scheme (FSCS)
+- United Kingdom **(gb_fscs)**: Financial Services Compensation Scheme (FSCS)
 
 (Note: bank deposits are no longer guaranteed by the Austrian Government).
 
