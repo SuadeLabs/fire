@@ -52,6 +52,7 @@
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/currency_code"
     },
     "customers": {
+      "description": "The list of customers for this loan",
       "type": "array",
       "minItems": 1,
       "uniqueItems": true,
