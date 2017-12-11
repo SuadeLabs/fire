@@ -23,5 +23,5 @@ amount of interest which accrued during his ownership. In order to calculate the
 
 [boe]: http://www.bankofengland.co.uk/education/Documents/ccbs/handbooks/pdf/ccbshb20.pdf
 
-See also [**mtm_clean**](https://github.com/SuadeLabs/fire/blob/master/documentation/mtm_clean.md).
+See also [**mtm_clean**](https://github.com/SuadeLabs/fire/blob/master/documentation/properties/mtm_clean.md).
 

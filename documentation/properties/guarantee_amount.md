@@ -14,4 +14,4 @@ So if a customer has multiple accounts protected under the same guarantee scheme
 
 ---
 [1]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014L0049
-[gscheme]: https://github.com/suadelabs/fire/blob/master/documentation/guarantee_scheme.md
+[gscheme]: https://github.com/suadelabs/fire/blob/master/documentation/properties/guarantee_scheme.md

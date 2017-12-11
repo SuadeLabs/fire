@@ -635,7 +635,7 @@ The [EC Collateral Directive][arrangement] states:
 [arrangement]: http://ec.europa.eu/internal_market/financial-markets/docs/collateral/directive-presentation_en.pdf
 
 [uk-isa]: http://www.legislation.gov.uk/uksi/1998/1870/contents/made
-[end-date]: https://github.com/SuadeLabs/fire/blob/master/documentation/end_date.md
+[end-date]: https://github.com/SuadeLabs/fire/blob/master/documentation/properties/end_date.md
 [reg-d]: http://www.federalreserve.gov/boarddocs/supmanual/cch/int_depos.pdf
 [eba-nsfr-report]: https://www.eba.europa.eu/documents/10180/983359/EBA-Op-2015-22+NSFR+Report.pdf
 [fca-covered-bond]: https://www.handbook.fca.org.uk/handbook/glossary/G2083.html

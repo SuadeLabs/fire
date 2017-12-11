@@ -13,5 +13,5 @@ The **rate** property describes the full interest rate applied to the balance of
 The **rate** should be recorded as a percentage in decimal format. ie. 3.5% should be represented as 3.5 and not 0.035. There is no restriction to the precision of the number (number of decimal places).
 
 
-[accrued_interest]: https://github.com/suadelabs/fire/blob/master/documentation/accrued_interest.md
-[base_rate]: https://github.com/suadelabs/fire/blob/master/documentation/base_rate.md
+[accrued_interest]: https://github.com/suadelabs/fire/blob/master/documentation/properties/accrued_interest.md
+[base_rate]: https://github.com/suadelabs/fire/blob/master/documentation/properties/base_rate.md

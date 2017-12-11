@@ -26,4 +26,4 @@ A **preferential** rate type is often a temporary lower interest rate compared t
 
 ---
 [mlar]: http://www.bankofengland.co.uk/pra/documents/regulatorydata/mlar/sup_chapter16_annex19bg_20120401.pdf
-[br]: https://github.com/SuadeLabs/fire/blob/master/documentation/base_rate.md
+[br]: https://github.com/SuadeLabs/fire/blob/master/documentation/properties/base_rate.md

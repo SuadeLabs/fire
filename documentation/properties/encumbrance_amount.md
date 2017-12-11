@@ -42,5 +42,5 @@ Further reading:
 [eba-report]:  https://www.eba.europa.eu/documents/10180/974844/EBA+Report+on+Asset+Encumbrance-+September+2015.pdf/e6e2a6ee-6708-4430-a506-5f68ff70736d
 [gmra]: http://www.icmagroup.org/Regulatory-Policy-and-Market-Practice/short-term-markets/Repo-Markets/global-master-repurchase-agreement-gmra/
 [lcr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
-[encumbrance_type]: https://github.com/suadelabs/fire/blob/master/documentation/encumbrance_type.md
+[encumbrance_type]: https://github.com/suadelabs/fire/blob/master/documentation/properties/encumbrance_type.md
 [biscgfs49]: http://www.bis.org/publ/cgfs49.pdf

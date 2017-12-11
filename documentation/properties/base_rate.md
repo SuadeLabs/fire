@@ -24,10 +24,10 @@ Basis can be defined as "the difference between the spot price of a given cash m
 
 In practice, the base rate conveys the information that the interest rate is directly or indirectly linked to another rate or index. For the purposes of consistency, the relevant Bloomberg Index ticker is used with "ZERO" used to indicate that there is no related base rate used for the determination of the interest rate.
 
-[date]: https://github.com/suadelabs/fire/blob/master/documentation/date.md
+[date]: https://github.com/suadelabs/fire/blob/master/documentation/properties/date.md
 [basis]: https://en.wikipedia.org/wiki/Basis_trading
-[ir]: https://github.com/suadelabs/fire/blob/master/documentation/rate.md
-[balance]: https://github.com/suadelabs/fire/blob/master/documentation/balance.md
+[ir]: https://github.com/suadelabs/fire/blob/master/documentation/properties/rate.md
+[balance]: https://github.com/suadelabs/fire/blob/master/documentation/properties/balance.md
 [ys]: https://en.wikipedia.org/wiki/Yield_spread
 
 ---
@@ -48,8 +48,8 @@ Basis can be defined as "the difference between the spot price of a given cash m
 
 In practice, the base rate conveys the information that the interest rate is directly or indirectly linked to another rate or index. For the purposes of consistency, the relevant Bloomberg Index ticker is used with "ZERO" used to indicate that there is no related base rate used for the determination of the interest rate.
 
-[date]: https://github.com/suadelabs/fire/blob/master/documentation/date.md
+[date]: https://github.com/suadelabs/fire/blob/master/documentation/properties/date.md
 [basis]: https://en.wikipedia.org/wiki/Basis_trading
-[ir]: https://github.com/suadelabs/fire/blob/master/documentation/rate.md
-[balance]: https://github.com/suadelabs/fire/blob/master/documentation/balance.md
+[ir]: https://github.com/suadelabs/fire/blob/master/documentation/properties/rate.md
+[balance]: https://github.com/suadelabs/fire/blob/master/documentation/properties/balance.md
 [ys]: https://en.wikipedia.org/wiki/Yield_spread

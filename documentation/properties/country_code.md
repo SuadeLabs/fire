@@ -30,7 +30,7 @@ See also [**risk_country_code**][rcc].
 
 
 ---
-[end]: https://github.com/suadelabs/fire/blob/master/documentation/end_date.md
+[end]: https://github.com/suadelabs/fire/blob/master/documentation/properties/end_date.md
 [iso3166]: https://en.wikipedia.org/wiki/ISO_3166-1
 [member-state-qa]: https://www.eba.europa.eu/single-rule-book-qa/-/qna/view/publicId/2013_233
-[rcc]: https://github.com/suadelabs/fire/blob/master/documentation/risk_country_code.md
+[rcc]: https://github.com/suadelabs/fire/blob/master/documentation/properties/risk_country_code.md

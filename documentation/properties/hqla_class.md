@@ -43,5 +43,5 @@ The [**hqla_exlcude**][hqlaex] identifier is used to provide a manual override t
 
 ---
 [breg]: http://www.bis.org/publ/bcbs238.pdf
-[hqlaex]: https://github.com/SuadeLabs/fire/blob/master/documentation/hqla_exclude.md
+[hqlaex]: https://github.com/SuadeLabs/fire/blob/master/documentation/properties/hqla_exclude.md
 [lcr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061

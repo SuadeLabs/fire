@@ -16,6 +16,6 @@ See also:
 [**last_payment_date**][lpd]
 
 ---
-[ppd]: https://github.com/suadelabs/fire/blob/master/documentation/prev_payment_date.md
-[npd]: https://github.com/suadelabs/fire/blob/master/documentation/next_payment_date.md
-[lpd]: https://github.com/suadelabs/fire/blob/master/documentation/last_payment_date.md
+[ppd]: https://github.com/suadelabs/fire/blob/master/documentation/properties/prev_payment_date.md
+[npd]: https://github.com/suadelabs/fire/blob/master/documentation/properties/next_payment_date.md
+[lpd]: https://github.com/suadelabs/fire/blob/master/documentation/properties/last_payment_date.md

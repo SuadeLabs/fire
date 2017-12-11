@@ -13,4 +13,4 @@ The **call_dates** represents a list (an array) of dates in the terms of a finan
 If there are no **call_date**s, the property should be omitted and it is assumed that the product can be called at any time prior to the [**end_date**][end].
 
 ---
-[end]: https://github.com/suadelabs/fire/blob/master/documentation/end_date.md
+[end]: https://github.com/suadelabs/fire/blob/master/documentation/properties/end_date.md

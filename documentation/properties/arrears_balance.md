@@ -8,7 +8,7 @@ schemas:	[account, loan]
 
 ---
 
-The **arrears_balance** is the difference between the amount of payments contractually due by the borrower minus the amount of the payments actually made by the borrower. Note that this should include [**accrued_interest**](https://github.com/SuadeLabs/fire/blob/master/documentation/accrued_interest.md) up to the reporting date.
+The **arrears_balance** is the difference between the amount of payments contractually due by the borrower minus the amount of the payments actually made by the borrower. Note that this should include [**accrued_interest**](https://github.com/SuadeLabs/fire/blob/master/documentation/properties/accrued_interest.md) up to the reporting date.
 
 See [MLAR][mlar] Section F.2.2
 

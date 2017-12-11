@@ -23,7 +23,7 @@ The account is active in a transactional way, *transactional* being defined in a
 > that account.
 
 ### cancelled
-The account has been cancelled but funds will be rolled-over in to another account on the [**end_date**](https://github.com/SuadeLabs/fire/blob/master/documentation/end_date.md).
+The account has been cancelled but funds will be rolled-over in to another account on the [**end_date**](https://github.com/SuadeLabs/fire/blob/master/documentation/properties/end_date.md).
 
 ### cancelled_payout_agreed
 The account has been cancelled and the funds are known to be leaving the financial institution.

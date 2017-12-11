@@ -12,4 +12,4 @@ When quoting the price of currency it is done on a relative basis with currency 
 
 The International Organization for Standardization (ISO) set the standard (ISO standard 4217) of the three letter abbreviations used for currencies.
 
-See also [**quote_currency_code**](https://github.com/SuadeLabs/fire/blob/master/documentation/quote_currency_code.md)
+See also [**quote_currency_code**](https://github.com/SuadeLabs/fire/blob/master/documentation/properties/quote_currency_code.md)

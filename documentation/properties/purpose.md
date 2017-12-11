@@ -103,5 +103,5 @@ Defined in accordance with Article 30(1) of the [LCR][lcr] regulation:
 ---
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575
 [lcr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
-[id]: https://github.com/SuadeLabs/fire/blob/master/documentation/id.md
+[id]: https://github.com/SuadeLabs/fire/blob/master/documentation/properties/id.md
 [mlardef]: http://www.bankofengland.co.uk/pra/documents/regulatorydata/mlar/sup_chapter16_annex19bg_20120401.pdf
