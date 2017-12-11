@@ -23,4 +23,4 @@ payment. In most bond markets, accrued interest is calculated on the following b
 
 [boe]: http://www.bankofengland.co.uk/education/Documents/ccbs/handbooks/pdf/ccbshb20.pdf
 
-See also [**mtm_dirty**](https://github.com/SuadeLabs/fire/blob/master/documentation/properties/mtm_dirty.md).
+See also [**mtm_dirty**](https://github.com/suadelabs/fire/blob/master/documentation/properties/mtm_dirty.md).
