@@ -62,27 +62,32 @@ The **house_purchase** value indicates that the purpose of the loan is for the p
 ### first_time_buyer
 The **first_time_buyer** value is a term used in the British and Irish property markets and defined in the Bank of England's [Mortgage Lending & Administration (MLAR) Definitions][mlardef] section E6.1/2 It is a sub-category of a **house_purchase** where "the tenure of the main borrower immediately before this advance was not owner-occupier."
 
+### bridging_loan
+A **bridging_loan** is a short-term financing option used typically used for property owners to finance the period between buying a new property and selling an old one when the timing of the two does not match. It can also be used by property developers or investors who value speed over cost.
+
 ### buy_to_let
 The **buy_to_let** value is a term used in the British property market where the borrower is purchasing the property with a view of renting it out on a commercial basis to an *unrelated third party*. See [MLAR Definitions][mlardef] section E6.2.
 
-### remortgage
-The **remortgage** value indicates a re-mortgage or refinancing of an existing property by an existing customer of the firm who had a loan with a **house_purchase** purpose. Note that this does not include re-mortgages of **first_time_buyer** and **buy_to_let** loans which should retain their respective purposes in the event of a re-mortgage. See [MLAR Definitions][mlardef] section E6.4/5.
+### internal_hedge
+From [CRR][crr] definitions (96):
+> internal hedge means a position that materially offsets the component risk elements between a trading book and a non-trading book position or sets of positions;
 
-### remortgage_other
-The **remortgage_other** value indicates a re-mortgage by a new customer who is refinancing a loan from another lender.
+### ips
+From [CRR][crr] Article 113(7):
+> An **institutional protection scheme** is a contractual or statutory liability arrangement which protects those institutions and in particular ensures their liquidty and solvency where necessary;
 
 ### lifetime_mortgage
 A **lifetime_mortgage** is a very specific kind of British mortgage contract and is defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G1294.html). It is geared towards customers of a certain age in order to release equity and typically repayment occurs at the time of the customers death when the property is sold.
 
-### bridging_loan
-A **bridging_loan** is a short-term financing option used typically used for property owners to finance the period between buying a new property and selling an old one when the timing of the two does not match. It can also be used by property developers or investors who value speed over cost.
-
-### other
-The **other** enum value can be used when none of the other enum values apply or the value is *unknown*.
+### remortgage
+The **remortgage** value indicates a re-mortgage or refinancing of an existing property by an existing customer of the firm who had a loan with a **house_purchase** purpose. Note that this does not include re-mortgages of **first_time_buyer** and **buy_to_let** loans which should retain their respective purposes in the event of a re-mortgage. See [MLAR Definitions][mlardef] section E6.4/5.
 
 ### speculative_property
 From [CRR][crr] definitions (79):
 > speculative immovable property financing‧ means loans for the purposes of the acquisition of or development or construction on land in relation to immovable property, or of and in relation to such property, with the intention of reselling for profit;
+
+### remortgage_other
+The **remortgage_other** value indicates a re-mortgage by a new customer who is refinancing a loan from another lender.
 
 ### repo / reverse_repo
 From [CRR][crr] definitions (82):
@@ -90,9 +95,8 @@ From [CRR][crr] definitions (82):
 > (a) title to securities or commodities where that guarantee is issued by a recognised exchange which holds the rights to the securities or commodities and the agreement does not allow an institution to transfer or pledge a particular security or commodity to more than one counterparty at one time, subject to a commitment to repurchase them;
 > (b) substituted securities or commodities of the same description at a specified price on a future date specified, or to be specified, by the transferor, being a repurchase agreement for the institution selling the securities or commodities and a reverse repurchase agreement for the institution buying them;
 
-### internal_hedge
-From [CRR][crr] definitions (96):
-> internal hedge means a position that materially offsets the component risk elements between a trading book and a non-trading book position or sets of positions;
+### other
+The **other** enum value can be used when none of the other enum values apply or the value is *unknown*.
 
 ## Security
 ### derivative_collateral
