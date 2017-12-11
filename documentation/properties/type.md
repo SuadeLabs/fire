@@ -339,7 +339,7 @@ As outlined in [LCR][lcr] Article 13(2)(g)(iii):
 This includes commercial loans or mortgages that do not fall under **commercial** due to their real estate connection and do not classify as **mortgage** either due to the customer not being an individual or the occupation of the property not being residential.
 
 ### liquidity_facility
-A **liquidity_facility** means the securitisation position arising from a contractual agreement to provide funding to ensure timeliness of cash flows to investors.
+A **liquidity_facility** means the securitisation position arising from a contractual agreement to provide funding to ensure timeliness of cash flows to investors, as outlined in Article 242(3) in [CRR][crr].
 
 ### margin
 **Margin** is defined in [LCR][lcr] Article 3(12):
