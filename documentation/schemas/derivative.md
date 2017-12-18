@@ -3,11 +3,22 @@ layout:		schema
 title:		"derivative"
 ---
 
-# Derivative Schema
+# derivative
+A derivative is a contract which derives its value from an underlying reference index, security or asset.
+
+### Margining
+Derivatives, being contracts tied to the value of underlyings, require regualar margining in order to "rebalance" the risk between counterparties. 
+
+Initial margin refers to the amount of collateral (cash or securities) posted upfront and is captured in the **initial_margin** property. 
+
+Variation margin is a similar concept and refers to the regular rebalancing that occurs. The variation margin is equal to the mark-to-market differences between buyer and seller. Variation margin is defined in the [Risk Mitigation part][otc-risk-regs] of the OTC Derivatives, CCPs and Trade Repositories Regulation:
+
+> **variation margin** means the collateral collected by a counterparty to reflect the results of the daily marking-to-market or marking-to-model of outstanding contracts referred to in Article 11(2) of Regulation (EU) No 648/2012;
 
 ---
+[otc-risk-regs]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R2251
 
-A derivative is a contract which derives its value from an underlying reference index, security or asset.
+
 
 ### Properties
 
@@ -55,3 +66,5 @@ type | <div class="enum-description">This is the type of the derivative with reg
 trade_date | <div class="enum-description">The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.</div> | string | - 
 underlying_id | <div class="enum-description">The unique identifier used by the financial institution to identify the underlying instrument for this product.</div> | string | - 
 value_date | <div class="enum-description">The timestamp that the derivative was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.</div> | string | - 
+=======
+>>>>>>> Updates to top-level schema docs

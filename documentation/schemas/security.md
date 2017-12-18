@@ -3,11 +3,23 @@ layout:		schema
 title:		"security"
 ---
 
-# Security Schema
-
----
-
+# security
 A security represents a tradable financial instrument held or financed by an institution for investment or collateral.
+
+A security represents a tradable financial instrument (excluding derivatives) held or financed by an institution for investment or collateral. Generally speaking, securities are typically fungible instruments with ISIN codes. 
+
+From the FCA Handbook a security is defined as:
+> (a) share (article 76);
+> (b) debenture (article 77);
+> (ba) alternative debenture (article 77A);
+> (c) government and public security (article 78);
+> (d) warrant (article 79);
+> (e) certificate representing certain securities (article 80);
+> (f) unit (article 81);
+> (g) stakeholder pension scheme (article 82(1));
+> (ga) personal pension scheme (article 82(2));
+> (h) rights to or interests in investments in (a) to (g) (article 89).
+
 
 ### Properties
 
@@ -59,3 +71,4 @@ type | <div class="enum-description">This is the type of the security with regar
 trade_date | <div class="enum-description">The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.</div> | string | - 
 transferable | <div class="enum-description">Can the security be transferred between parties or negotiated on the capital market?</div> | boolean | - 
 value_date | <div class="enum-description">The timestamp that the trade or financial product was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.</div> | string | - 
+=======
