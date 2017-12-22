@@ -79,6 +79,10 @@
       "type": "string",
       "format": "date-time"
     },
+    "inital_margin": {
+      "description": "Upfront margin posted/received for the trade. Monetary type as integer number of cents.",
+      "type": "integer"
+    },
     "last_payment_date": {
       "description": "The final payment date for interest payments, often coincides with end_date.",
       "type": "string",
