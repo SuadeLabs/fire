@@ -191,7 +191,7 @@
     "uk_funding_type": {
       "description": "Funding type calculated according to BIPRU 12.5",
       "type": "string",
-      "enum": ["A", "B"]
+      "enum": ["a", "b"]
     },
     "withdrawal_penalty": {
       "description": "This is the penalty incurred by the customer for an early withdrawal on this account. An early withdrawal is defined as a withdrawal prior to the next_withdrawal_date. Monetary type represented as a naturally positive integer number of cents/pence.",
