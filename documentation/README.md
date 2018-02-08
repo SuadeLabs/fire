@@ -191,9 +191,14 @@ and this would be an invalid input:
 {"animal_type": "horse"}
 ```
 
+# More information
+The JSON spec can be found [here][json] and JSON-schema spec cane be found [here][json-schema].
 
 ---
 [boole]:  https://en.wikipedia.org/wiki/George_Boole
 [iso]:    https://en.wikipedia.org/wiki/International_Organization_for_Standardization
 [ifrs]:   https://en.wikipedia.org/wiki/International_Financial_Reporting_Standards
 [enum]:   https://en.wikipedia.org/wiki/Enumeration
+[json]:   http://json.org
+[json-schema]:  http://json-schema.org/
+
