@@ -19,6 +19,7 @@ Don't forget to divide by 100 (or the relevant minor unit denomination) when pre
 
 
 ---
+
 [date]: https://github.com/suadelabs/fire/blob/master/documentation/properties/date.md
 [face]: https://en.wikipedia.org/wiki/Face_value
 [par]: https://en.wikipedia.org/wiki/Par_value
