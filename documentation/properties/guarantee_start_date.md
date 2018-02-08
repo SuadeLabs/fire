@@ -18,6 +18,8 @@ The FCA defines a [**guarantee**][fca2] with regard to a securitised derivative 
 
 > "(2) (as defined in the [PD Regulation][PD]) any arrangement intended to ensure that any obligation material to the issue will be duly serviced, whether in the form of guarantee, surety, keep well agreement, mono-line insurance policy or other equivalent commitment."
 
+---
+
 [fca2]: https://www.handbook.fca.org.uk/handbook/glossary/G1770.html
 [secd]: https://www.handbook.fca.org.uk/handbook/glossary/G1060.html
 [lr]: https://www.handbook.fca.org.uk/handbook/LR/19/2.html#D59

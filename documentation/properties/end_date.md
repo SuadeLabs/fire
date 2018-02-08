@@ -17,4 +17,5 @@ It is possible that for some products, particularly cash-related accounts, there
 See also [**date**][date].
 
 ---
+
 [date]: 		https://github.com/suadelabs/fire/blob/master/documentation/properties/date.md

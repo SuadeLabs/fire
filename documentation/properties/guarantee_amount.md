@@ -13,5 +13,6 @@ The **guarantee_amount** is the amount covered for the deposit account under the
 So if a customer has multiple accounts protected under the same guarantee scheme, the sum of the guarantee amounts in each of those accounts should equal EUR 100 000 or the national equivalent.
 
 ---
+
 [1]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014L0049
 [gscheme]: https://github.com/suadelabs/fire/blob/master/documentation/properties/guarantee_scheme.md

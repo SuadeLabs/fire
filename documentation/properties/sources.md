@@ -12,5 +12,7 @@ Similar to the [**product_name**][product_name] property, the **sources** proper
 
 Note that this is different from the "source" that can be obtained in the transmission and can be used to indicate the original source system of the data item.
 
+---
+
 [product_name]: https://github.com/suadelabs/fire/blob/master/documentation/properties/product_name.md
 [bcbs239]: http://www.bis.org/publ/bcbs239.pdf
