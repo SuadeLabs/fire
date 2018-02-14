@@ -110,6 +110,11 @@
       "type": "string",
       "enum": ["collective", "individual", "write_off"]
     },
+    "interest_repayment_frequency": {
+      "description": "Repayment frequency of the loan interest, if different from principal.",
+      "type": "string",
+      "enum": ["daily", "weekly", "bi_weekly", "monthly", "quarterly", "semi_annually", "annually", "at_maturity"]
+    },
     "issuer_id": {
       "description": "The unique identifier for the issuer of the loan.",
       "type": "string",
@@ -198,7 +203,7 @@
       "type": "boolean"
     },
     "repayment_frequency": {
-      "description": "Repayment frequency of the loan refers to how often the repayments occur.",
+      "description": "Repayment frequency of the loan.",
       "type": "string",
       "enum": ["daily", "weekly", "bi_weekly", "monthly", "quarterly", "semi_annually", "annually", "at_maturity"]
     },
@@ -223,10 +228,6 @@
     },
     "secured": {
       "description": "Is this loan secured or unsecured?",
-      "type": "boolean"
-    },
-    "securitised": {
-      "description": "Is this loan securitised?",
       "type": "boolean"
     },
     "sources": {
