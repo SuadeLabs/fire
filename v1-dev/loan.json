@@ -77,6 +77,11 @@
       "type": "integer",
       "minimum": 0
     },
+    "encumbrance_end_date": {
+      "description": "Date encumbrance amount goes to zero. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
+      "type": "string",
+      "format": "date-time"
+    },
     "end_date": {
       "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
       "type": "string",
