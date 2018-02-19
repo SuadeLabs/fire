@@ -21,6 +21,8 @@ From the FCA Handbook a security is defined as:
 > (h) rights to or interests in investments in (a) to (g) (article 89).
 
 
+ - [JSON Schema on GitHub](https://github.com/SuadeLabs/fire/blob/master/v1-dev/security.json)
+
 ### Properties
 
 Name | Description | Type | Enum

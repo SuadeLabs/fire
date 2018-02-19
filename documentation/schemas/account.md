@@ -7,7 +7,9 @@ title:		"account"
 
 ---
 
-An Account represents a financial account that describes the funds that a customer has entrusted to a financial institution in the form of deposits or credit balances.
+An Account represents a financial account that describes the funds that a customer has entrusted to a financial institution in the form of deposits or credit balances. 
+
+ - [JSON Schema on GitHub](https://github.com/SuadeLabs/fire/blob/master/v1-dev/account.json)
 
 ### Properties
 

@@ -9,6 +9,8 @@ title:		"guarantor"
 
 Data schema to define a guarantor for a security.
 
+ - [JSON Schema on GitHub](https://github.com/SuadeLabs/fire/blob/master/v1-dev/guarantor.json)
+
 ### Properties
 
 Name | Description | Type | Enum

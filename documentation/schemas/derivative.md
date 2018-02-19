@@ -6,6 +6,8 @@ title:		"derivative"
 # derivative
 A derivative is a contract which derives its value from an underlying reference index, security or asset.
 
+ - [JSON Schema on GitHub](https://github.com/SuadeLabs/fire/blob/master/v1-dev/derivative.json)
+
 ### Margining
 Derivatives, being contracts tied to the value of underlyings, require regualar margining in order to "rebalance" the risk between counterparties. 
 

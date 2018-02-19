@@ -9,6 +9,8 @@ title:		"loan_transaction"
 
 A Loan Transaction is an event that has an impact on a loan, typically the balance.
 
+ - [JSON Schema on GitHub](https://github.com/SuadeLabs/fire/blob/master/v1-dev/loan_transaction.json)
+
 ### Properties
 
 Name | Description | Type | Enum

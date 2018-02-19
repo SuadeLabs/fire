@@ -9,6 +9,8 @@ title:		"batch"
 
 FIRE schema for representing bulk collections of bank objects.
 
+ - [JSON Schema on GitHub](https://github.com/SuadeLabs/fire/blob/master/v1-dev/batch.json)
+
 ### Properties
 
 Name | Description | Type | Enum

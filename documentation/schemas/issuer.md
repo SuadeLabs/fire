@@ -9,6 +9,8 @@ title:		"issuer"
 
 Data schema to define an issuer for a security.
 
+ - [JSON Schema on GitHub](https://github.com/SuadeLabs/fire/blob/master/v1-dev/issuer.json)
+
 ### Properties
 
 Name | Description | Type | Enum

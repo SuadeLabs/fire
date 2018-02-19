@@ -9,6 +9,8 @@ title:		"customer"
 
 Data schema to define a customer or legal entity related to a financial product or transaction.
 
+ - [JSON Schema on GitHub](https://github.com/SuadeLabs/fire/blob/master/v1-dev/customer.json)
+
 ### Properties
 
 Name | Description | Type | Enum

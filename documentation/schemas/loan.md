@@ -9,6 +9,8 @@ title:		"loan"
 
 Data schema defining the characteristics of a loan product.
 
+ - [JSON Schema on GitHub](https://github.com/SuadeLabs/fire/blob/master/v1-dev/loan.json)
+
 ### Properties
 
 Name | Description | Type | Enum
