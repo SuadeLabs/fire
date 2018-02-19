@@ -9,7 +9,7 @@ title:		"exchange_rate"
 
 An Exchange Rate represents the conversion rate between two currencies.
 
- - [JSON Schema on GitHub](https://github.com/SuadeLabs/fire/blob/master/v1-dev/exchange_rate.json)
+ - [JSON Schema on GitHub](https://github.com/SuadeLabs/fire/blob/master/v1-dev/exchange rate.json)
 
 ### Properties
 

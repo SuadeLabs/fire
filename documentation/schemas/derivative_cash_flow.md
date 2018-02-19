@@ -9,7 +9,7 @@ title:		"derivative_cash_flow"
 
 A derivative cash flow where two parties exchange cash flows (or assets) derived from an underlying reference index, security or financial instrument.
 
- - [JSON Schema on GitHub](https://github.com/SuadeLabs/fire/blob/master/v1-dev/derivative_cash_flow.json)
+ - [JSON Schema on GitHub](https://github.com/SuadeLabs/fire/blob/master/v1-dev/derivative cash flow.json)
 
 ### Properties
 
