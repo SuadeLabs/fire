@@ -1,7 +1,7 @@
 ---
-layout: property
-title: Initial Margin
-schemas: ["derivative"]
+layout:     property
+title:      "initial_margin"
+schemas:    ["derivative"]
 ---
 
 # initial_margin
