@@ -35,8 +35,9 @@ Valid enums:
 
 - Daily: once per 24 hour period
 - Weekly: once per 7 day period
-- Bi-weekly: twice per 7 day period
+- Bi-weekly: oncer per 2 weeks
 - Monthly: once per calendar month
+- Bi-monthly: once per 2 months
 - Quarterly: once per 3 calendar months
 - Semi-annually: once per 6 calendar months
 - Annually: once per calendar year
