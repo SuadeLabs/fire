@@ -38,6 +38,7 @@ Further reading:
 [BIS CGFS Paper No. 49][biscgfs49]
 
 ---
+
 [eba-pres]: http://www.eba.europa.eu/documents/10180/109116/Public+Hearing+Asset+Encumbrance.pdf
 [eba-report]:  https://www.eba.europa.eu/documents/10180/974844/EBA+Report+on+Asset+Encumbrance-+September+2015.pdf/e6e2a6ee-6708-4430-a506-5f68ff70736d
 [gmra]: http://www.icmagroup.org/Regulatory-Policy-and-Market-Practice/short-term-markets/Repo-Markets/global-master-repurchase-agreement-gmra/

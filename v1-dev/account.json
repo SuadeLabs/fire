@@ -96,7 +96,7 @@
     "guarantee_scheme": {
       "description": "The Government Deposit Scheme scheme under which the guarantee_amount is guaranteed.",
       "type": "string",
-	    "enum": [
+      "enum": [
         "be_pf", "bg_dif", "hr_di", "cy_dps", "cz_dif", "dk_gdfi", "ee_dgs", "fi_dgf", "fr_fdg",  "gb_fscs",
         "de_edb", "de_edo", "de_edw", "gr_dgs", "hu_ndif", "ie_dgs", "it_fitd", "lv_dgf", "lt_vi",
         "lu_fgdl", "mt_dcs", "nl_dgs", "pl_bfg", "pt_fgd", "ro_fgdb", "sk_dpf", "si_dgs", "es_fgd",
@@ -188,10 +188,10 @@
       "type": "string",
       "format": "date-time"
     },
-	"uk_funding_type": {
+    "uk_funding_type": {
       "description": "Funding type calculated according to BIPRU 12.5",
       "type": "string",
-      "enum": ["A", "B"]
+      "enum": ["a", "b"]
     },
     "withdrawal_penalty": {
       "description": "This is the penalty incurred by the customer for an early withdrawal on this account. An early withdrawal is defined as a withdrawal prior to the next_withdrawal_date. Monetary type represented as a naturally positive integer number of cents/pence.",

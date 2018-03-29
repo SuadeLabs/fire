@@ -65,6 +65,7 @@
  * [impairment_amount](documentation/properties/impairment_amount.md)
  * [impairment_type](documentation/properties/impairment_type.md)
  * [income_amount](documentation/properties/income_amount.md)
+ * [initial_margin](documentation/properties/initial_margin.md)
  * [isin_code](documentation/properties/isin_code.md)
  * [last_payment_date](documentation/properties/last_payment_date.md)
  * [lei_code](documentation/properties/lei_code.md)

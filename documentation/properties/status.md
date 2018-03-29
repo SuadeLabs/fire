@@ -41,5 +41,6 @@ This is a loan that was committed but then later cancelled due to refusal by cus
 ### defaulted
 This is a loan where the customer has defaulted or is non-performing.
 
+---
 
 [lcr]:  http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061

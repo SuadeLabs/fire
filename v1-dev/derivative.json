@@ -79,7 +79,7 @@
       "type": "string",
       "format": "date-time"
     },
-    "inital_margin": {
+    "initial_margin": {
       "description": "Upfront margin posted/received for the trade. Monetary type as integer number of cents.",
       "type": "integer"
     },

@@ -14,5 +14,6 @@ schemas:	[account, collateral, customer, derivative_cash_flow, derivative, entit
 
 This means that if another data object is received with the same "date" but at a different hour, minute or second, then it will not conflict with the existing data point. It therefore follows that the existing data might be overwritten if the same "date" and "id" are transmitted (depending on the way the back-end/database is implemented).
 
+---
 
 [id]: https://github.com/suadelabs/fire/blob/master/documentation/properties/id.md

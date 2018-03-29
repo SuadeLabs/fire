@@ -25,6 +25,12 @@
       "type": "string",
       "enum": ["asset", "liability"]
     },
+    "cb_haircut": {
+      "description": "The haircut as determined by the firm's central bank",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
     "balance": {
       "description": "Outstanding amount including accrued interest. Monetary integer number of cents/pence.",
       "type": "integer"
@@ -127,7 +133,7 @@
     "movement": {
       "description": "The movement parameter describes how the security arrived to the firm.",
       "type": "string",
-      "enum": ["cash", "asset", "debt_issue", "cb_omo", "other"]
+      "enum": ["cash", "asset", "issuance", "debt_issue", "cb_omo", "other"]
     },
     "mtm_clean": {
       "description": "The mark-to-market value of the security excluding interest. Monetary number of cents/pence.",

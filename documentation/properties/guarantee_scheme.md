@@ -59,9 +59,9 @@ See also:
 [Deposit Guarantee Schemes - FAQs Memo][2]
 [Deposit Guarantee Schemes - Further FAQs][3]
 
+---
 
 [dgs]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014L0049
 [2]: http://europa.eu/rapid/press-release_MEMO-15-6153_en.htm
 [3]: http://europa.eu/rapid/press-release_MEMO-15-6165_en.htm
-
 [iso3166]:  https://en.wikipedia.org/wiki/ISO_3166-1

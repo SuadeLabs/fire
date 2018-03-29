@@ -9,6 +9,8 @@ title:		"collateral"
 
 Data schema to define collateral (currently can reference loans or accounts).
 
+ - [JSON Schema on GitHub](https://github.com/SuadeLabs/fire/blob/master/v1-dev/collateral.json)
+
 ### Properties
 
 Name | Description | Type | Enum
