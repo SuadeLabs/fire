@@ -1,3 +1,4 @@
+
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Security Schema",
@@ -121,7 +122,7 @@
       "enum": ["i", "iia", "iib", "ineligible", "exclude"]
     },
     "insolvency_rank": {
-      "description": "The The insolvency ranking.",
+      "description": "The insolvency ranking as per the national legal fraamework of the reporting institution.",
       "type": "integer",
       "minimum": 1
     },
