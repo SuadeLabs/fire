@@ -25,6 +25,11 @@
       "type": "string",
       "enum": ["asset", "liability"]
     },
+    "capital_tier": {
+      "description": "The capital tiers based on own funds requirements.",
+      "type": "string",
+      "enum": ["tier_1", "ce_tier_1", "add_tier_1", "tier_2", "anc_tier_2", "bas_tier_2", "tier_3", "anc_tier_3", "bas_tier_3"]
+    },
     "cb_haircut": {
       "description": "The haircut as determined by the firm's central bank",
       "type": "number",
@@ -115,6 +120,11 @@
       "type": "string",
       "enum": ["i", "iia", "iib", "ineligible", "exclude"]
     },
+    "insolvency_rank": {
+      "description": "The The insolvency ranking.",
+      "type": "integer",
+      "minimum": 1
+    },
     "isin_code": {
       "description": "The unique International Securities Identification Number for the security according to ISO 6166.",
       "type": "string",
@@ -129,6 +139,10 @@
       "description": "The final payment date for interest payments, often coincides with end_date.",
       "type": "string",
       "format": "date-time"
+    },
+    "mna_id": {
+      "description": "The unique identifier of the Master Netting Agreement this security falls under. Typically where used as derivatives collateral.",
+      "type": "string"
     },
     "movement": {
       "description": "The movement parameter describes how the security arrived to the firm.",
