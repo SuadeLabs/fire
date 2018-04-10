@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Agreement Schema",
+  "description": "An agreement represents the standard terms agreed between two parties.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The unique identifier for the agreement within the financial institution.",
+      "type": "string"
+    },
+    "date": {
+      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "country_code": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/country_code",
+      "description": "The country code for the governing law of the agreement. Two-letter country code as defined according to ISO 3166-1."
+    },
+    "customer_id": {
+      "description": "The unique identifier used by the financial institution to identify the counterparty to this agreement.",
+      "type": "string"
+    },
+    "start_date": {
+      "description": "The timestamp that the agreement commences. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "stay_protocol": {
+      "description": "Indicates whether a stay protocol has been signed by one or both parties to the agreement.",
+      "type": "string",
+      "enum": [
+         "self", "customer", "both"
+      ]
+    },
+    "type": {
+      "description": "The type of agreement.",
+      "type": "string",
+      "enum": [
+         "isda", "isda_2002", "isda_1992", "isda_1987", "isda_1986", "isda_1985", "other_isda",
+         "gmra", "icma_2011", "icma_2000", "icma_1995", "icma_1992", "other_gmra",
+         "other"
+      ]
+    }
+  },
+  "required": ["id", "date"],
+  "additionalProperties": true
+}
