@@ -78,6 +78,14 @@
       "description": "The timestamp that the collateral was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
       "format": "date-time"
+    },
+    "vol_adj": {
+      "description": "The volatility adjustment appropriate to the collateral.",
+      "type": "number"
+    },
+    "vol_adj_fx": {
+      "description": "The volatility adjustment appropriate to currency mismatch.",
+      "type": "number"
     }
   },
   "required": ["id", "date", "value"],
