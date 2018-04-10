@@ -72,6 +72,11 @@
         "required": ["id", "income_amount"]
       }
     },
+    "ccf": {
+      "description": "The credit conversion factor that indicates the proportion of the undrawn amount that would be drawn down on default.",
+      "type": "number",
+      "minimum": 0
+    },
     "encumbrance_amount": {
       "description": "The amount of the loan that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
@@ -231,6 +236,14 @@
       "description": "Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/country_code"
     },
+    "risk_weight_std": {
+      "description": "The standardised approach risk weight represented as a decimal/float such that 1.5% is 0.015.",
+      "type": "number"
+    },
+    "risk_weight_irb": {
+      "description": "The internal risk weight represented as a decimal/float such that 1.5% is 0.015.",
+      "type": "number"
+    },
     "secured": {
       "description": "Is this loan secured or unsecured?",
       "type": "boolean"
@@ -265,6 +278,10 @@
         "mortgage", "commercial_property", "commercial", "personal", "auto", "liquidity_facility",
         "trade_finance", "credit_card", "credit_facility", "multiccy_facility", "nostro", "other"
       ]
+    },
+    "vol_adj": {
+      "description": "The volatility adjustment appropriate to the exposure.",
+      "type": "number"
     },
     "count": {
       "description": "Describes the number of loans aggregated into a single row.",
