@@ -61,10 +61,6 @@
       "description": "The unique identifier for the ultimate parent of the person or legal entity.",
       "type": "string"
     },
-    "parent_name": {
-      "description": "The name of the ultimate parent of person or legal entity to be used for display and reference purposes.",
-      "type": "string"
-    },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/country_code"
