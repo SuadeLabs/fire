@@ -30,7 +30,7 @@
       "description": "Indicates whether a stay protocol has been signed by one or both parties to the agreement.",
       "type": "string",
       "enum": [
-         "self", "customer", "both"
+         "self_signed", "customer", "both"
       ]
     },
     "type": {
