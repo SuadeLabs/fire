@@ -123,7 +123,7 @@
     "interest_repayment_frequency": {
       "description": "Repayment frequency of the loan interest, if different from principal.",
       "type": "string",
-      "enum": ["daily", "weekly", "bi_weekly", "monthly", "quarterly", "semi_annually", "annually", "at_maturity"]
+      "enum": ["daily", "weekly", "bi_weekly", "monthly", "bi_monthly", "quarterly", "semi_annually", "annually", "at_maturity"]
     },
     "issuer_id": {
       "description": "The unique identifier for the issuer of the loan.",
