@@ -10,6 +10,7 @@ from faker import Faker
 
 fire_schemas = [
     "v1-dev/account.json",
+    "v1-dev/curve.json",
     "v1-dev/customer.json",
     "v1-dev/derivative.json",
     "v1-dev/derivative_cash_flow.json",
@@ -105,7 +106,7 @@ def write_batches_to_files(batches):
     for b in batches:
         filename = "[" + str(b["date"]) + "] " + str(b["name"]) + ".json"
         f = open(filename.replace(" ", "_"), "w+")
-        f.write(json.dumps(b))
+        f.write(json.dumps(b, indent=2))
         f.close()
 
 
