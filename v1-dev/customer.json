@@ -8,7 +8,7 @@
   }],
   "properties": {
     "product_count": {
-      "description": "The number of active non-loan products/trades this customer has with the firm.",
+      "description": "The number of active products/trades this customer has with the firm.",
       "type": "integer",
       "minimum": 0
     },
