@@ -47,7 +47,9 @@
     },
     "lei_code": {
       "description": "The LEI code for the legal entity (for corporates).",
-      "type": "string"
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 20
     },
     "legal_entity_name": {
       "description": "The official legal name of the entity.",
