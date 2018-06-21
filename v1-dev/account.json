@@ -113,6 +113,10 @@
       "type": "string",
       "format": "date-time"
     },
+    "ledger_code": {
+      "description": "The internal ledger code or line item name.",
+      "type": "string"
+    },
     "next_payment_date": {
       "description": "The next date at which interest will be paid or accrued_interest balance returned to zero.",
       "type": "string",
