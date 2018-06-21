@@ -14,7 +14,7 @@
       "format": "date-time"
     },
     "accounting_treatment":{
-       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/accounting_treatment"
+       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/accounting_treatment"
     },
     "accrued_interest": {
       "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -58,11 +58,11 @@
     },
     "country_code": {
       "description": "Two-letter country code for account location/jurisdiction. In accordance with ISO 3166-1.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/country_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
     },
     "currency_code": {
       "description": "Actual currency of the Account in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/currency_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
     },
     "customer_id": {
       "description": "The unique identifier used by the financial institution to identify the customer that owns the account.",
@@ -164,7 +164,11 @@
     },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the account resides. In accordance with ISO 3166-1",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/country_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
+    },
+    "source": {
+      "description": "The source where this data originated.",
+      "type": "string"
     },
     "sources": {
       "description": "Identifiers for data sources. Useful for analytics and MI purposes.",
@@ -201,6 +205,10 @@
       "description": "Funding type calculated according to BIPRU 12.5",
       "type": "string",
       "enum": ["a", "b"]
+    },
+    "version_id": {
+      "description": "The version identifier of the data such as the firm's internal batch identifier.",
+      "type": "string"
     },
     "withdrawal_penalty": {
       "description": "This is the penalty incurred by the customer for an early withdrawal on this account. An early withdrawal is defined as a withdrawal prior to the next_withdrawal_date. Monetary type represented as a naturally positive integer number of cents/pence.",

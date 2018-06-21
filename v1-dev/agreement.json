@@ -14,11 +14,15 @@
       "format": "date-time"
     },
     "country_code": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/country_code",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code",
       "description": "The country code for the governing law of the agreement. Two-letter country code as defined according to ISO 3166-1."
     },
     "customer_id": {
       "description": "The unique identifier used by the financial institution to identify the counterparty to this agreement.",
+      "type": "string"
+    },
+    "source": {
+      "description": "The source where this data originated.",
       "type": "string"
     },
     "start_date": {
@@ -41,6 +45,10 @@
          "gmra", "icma_2011", "icma_2000", "icma_1995", "icma_1992", "other_gmra",
          "other"
       ]
+    },
+    "version_id": {
+      "description": "The version identifier of the data such as the firm's internal batch identifier.",
+      "type": "string"
     }
   },
   "required": ["id", "date"],

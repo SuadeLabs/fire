@@ -18,7 +18,7 @@
         "type": "string"
     },
     "accounting_treatment":{
-       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/accounting_treatment"
+       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/accounting_treatment"
     },
     "accrued_interest": {
       "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -63,7 +63,7 @@
     },
     "currency_code": {
       "description": "Actual currency of the underlying reference index, security or asset for the derivative in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/currency_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
     },
     "customer_id": {
       "description": "The unique identifier used by the financial institution to identify the customer for this product.",
@@ -176,12 +176,16 @@
     },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the derivative product resides. In accordance with ISO 3166-1",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/country_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
     },
     "settlement_type": {
       "description": "The type of settlement for the contract.",
       "type": "string",
       "enum": ["cash", "physical"]
+    },
+    "source": {
+      "description": "The source where this data originated.",
+      "type": "string"
     },
     "sources": {
       "description": "Identifiers for data sources. Useful for analytics and MI purposes.",
@@ -216,6 +220,10 @@
       "description": "The timestamp that the derivative was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
       "format": "date-time"
+    },
+    "version_id": {
+      "description": "The version identifier of the data such as the firm's internal batch identifier.",
+      "type": "string"
     }
   },
   "required": ["id", "date"],

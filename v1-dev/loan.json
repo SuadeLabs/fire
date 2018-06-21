@@ -14,7 +14,7 @@
       "format": "date-time"
     },
     "accounting_treatment":{
-       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/accounting_treatment"
+       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/accounting_treatment"
     },
     "accrued_interest_balance": {
       "description": "The accrued interest due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -49,7 +49,7 @@
       "enum": ["ZERO", "UKBRBASE", "FDTR"]
     },
     "currency_code": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/currency_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
     },
     "customers": {
       "description": "The list of customers for this loan",
@@ -94,7 +94,7 @@
     },
     "facility_currency_code": {
       "description": "The currency of the credit facility if not the same as loan currency_code.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/currency_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
     },
     "first_payment_date": {
       "description": "The first payment date for interest payments.",
@@ -195,7 +195,7 @@
       "description": "The underlying reason the borrower has requested the loan.",
       "type": "string",
       "enum": [
-        "house_purchase", "first_time_buyer", "buy_to_let", "buy_to_let_house_purchase", "buy_to_let_remortgage", "buy_to_let_further_advance",
+        "house_purchase", "first_time_buyer", "buy_to_let", "consumer_buy_to_let", "buy_to_let_house_purchase", "buy_to_let_remortgage", "buy_to_let_further_advance",
         "buy_to_let_other", "remortgage", "remortgage_other", "lifetime_mortgage", "bridging_loan", "further_advance", "promotional", "other", "ips"
       ]
     },
@@ -234,7 +234,7 @@
     },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/country_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
     },
     "risk_weight_std": {
       "description": "The standardised approach risk weight represented as a decimal/float such that 1.5% is 0.015.",
@@ -247,6 +247,10 @@
     "secured": {
       "description": "Is this loan secured or unsecured?",
       "type": "boolean"
+    },
+    "source": {
+      "description": "The source where this data originated.",
+      "type": "string"
     },
     "sources": {
       "description": "Identifiers for data sources. Useful for analytics and MI purposes.",
@@ -278,6 +282,10 @@
         "mortgage", "commercial_property", "commercial", "personal", "auto", "liquidity_facility",
         "trade_finance", "credit_card", "credit_facility", "multiccy_facility", "nostro", "other"
       ]
+    },
+    "version_id": {
+      "description": "The version identifier of the data such as the firm's internal batch identifier.",
+      "type": "string"
     },
     "vol_adj": {
       "description": "The volatility adjustment appropriate to the exposure.",

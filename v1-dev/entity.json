@@ -22,7 +22,7 @@
       "type": "string"
     },
     "country_code": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/country_code",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code",
       "description": "The person or entity country of residence. Two-letter country code as defined according to ISO 3166-1."
     },
     "credit_impaired": {
@@ -63,13 +63,17 @@
     },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/country_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
     },
     "sic_code": {
       "description": "The UK SIC 2007 standard industry and sector classification.",
       "type": "integer",
       "minimum": 0,
       "maximum": 99999
+    },
+    "source": {
+      "description": "The source where this data originated.",
+      "type": "string"
     },
     "sources": {
       "description": "Identifiers for data sources. Useful for analytics and MI purposes.",
@@ -88,6 +92,10 @@
         "investment_firm", "sspe", "ciu", "ceis", "insurer", "financial_holding", "other_financial", "promotional_lender",
         "pic", "credit_union", "deposit_broker", "pension_fund", "partnership"
       ]
+    },
+    "version_id": {
+      "description": "The version identifier of the data such as the firm's internal batch identifier.",
+      "type": "string"
     }
   },
   "required": ["id", "date"],

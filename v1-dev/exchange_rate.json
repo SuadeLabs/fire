@@ -15,7 +15,7 @@
     },
     "base_currency_code": {
       "description": "The base currency in accordance with ISO 4217 standards.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/currency_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
     },
     "quote": {
       "description": "The amount of the quote currency received in exchange for 1 unit of the base currency.",
@@ -23,7 +23,15 @@
     },
     "quote_currency_code": {
       "description": "The quoted currency in accordance with ISO 4217 standards.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/currency_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+    },
+    "source": {
+      "description": "The source where this data originated.",
+      "type": "string"
+    },
+    "version_id": {
+      "description": "The version identifier of the data such as the firm's internal batch identifier.",
+      "type": "string"
     }
   },
   "required": ["id", "date", "base_currency_code", "quote", "quote_currency_code"],

@@ -15,7 +15,7 @@
       "format": "date-time"
     },
     "accounting_treatment":{
-       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/accounting_treatment"
+       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/accounting_treatment"
     },
     "accrued_interest": {
       "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as an integer number of cents/pence.",
@@ -66,7 +66,7 @@
     },
     "country_code": {
       "description": "Two-letter country code for security location/jurisdiction. In accordance with ISO 3166-1.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/country_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
     },
     "cqs_standardised": {
       "description": "The credit quality step for standardised approach.",
@@ -82,7 +82,7 @@
     },
     "currency_code": {
       "description": "Actual currency of the security in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/currency_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
     },
     "customer_id": {
       "description": "The unique identifier used by the financial institution to identify the customer for this product.",
@@ -205,7 +205,7 @@
     },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/types.json#/country_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
     },
     "seniority": {
       "description": "The seniority of the security in the event of sale or bankruptcy of the issuer.",
@@ -217,6 +217,10 @@
       "type": "string",
       "enum": ["repo", "rev_repo", "sell_buy_back", "buy_sell_back", "bond_loan", "bond_borrow",
                "stock_loan", "stock_borrow", "margin_loan"]
+    },
+    "source": {
+      "description": "The source where this data originated.",
+      "type": "string"
     },
     "sources": {
       "description": "Identifiers for data sources. Useful for analytics and MI purposes.",
@@ -254,6 +258,10 @@
       "description": "The timestamp that the trade or financial product was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
       "format": "date-time"
+    },
+    "version_id": {
+      "description": "The version identifier of the data such as the firm's internal batch identifier.",
+      "type": "string"
     }
   },
   "required": ["id", "date"],
