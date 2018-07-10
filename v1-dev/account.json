@@ -117,6 +117,11 @@
       "description": "The internal ledger code or line item name.",
       "type": "string"
     },
+    "limit_amount ": {
+      "description": "The maximum amount the customer can go overdrawn in their account.",
+      "type": "integer"
+    },
+
     "next_payment_date": {
       "description": "The next date at which interest will be paid or accrued_interest balance returned to zero.",
       "type": "string",
