@@ -35,6 +35,8 @@ product_name | <div class="enum-description">The name of the product as given by
 reporting_lei | <div class="enum-description">The LEI code for the legal entity under which the security is being reported.</div> | string | - 
 reporting_entity_name | <div class="enum-description">The name of the reporting legal entity for display purposes (as LEI code may not be available).</div> | string | - 
 settlement_type | <div class="enum-description">The type of settlement for the contract.</div> | string | <div class="enum-list"><span class="enum-item" style="float:left; position:relative;">cash</span><span class="enum-comma" style="display:block; position:relative; float:left; width:auto;">,&nbsp;</span><br class="line-jump" style="display:none;"/><span class="enum-item" style="float:left; position:relative;">physical</span><span class="enum-comma" style="display:block; position:relative; float:left; width:auto;">,&nbsp;</span><br class="line-jump" style="display:none;"/> 
+source | <div class="enum-description">The source where this data originated.</div> | string | - 
 sources | <div class="enum-description">Identifiers for data sources. Useful for analytics and MI purposes.</div> | array | - 
 trade_date | <div class="enum-description">The date that the derivative cash flow terms were agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.</div> | string | - 
 value_date | <div class="enum-description">The timestamp that the cash flow was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.</div> | string | - 
+version_id | <div class="enum-description">The version identifier of the data such as the firm's internal batch identifier.</div> | string | - 

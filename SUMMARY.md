@@ -12,8 +12,10 @@
 ### SCHEMAS 
 
  * [Account](documentation/schemas/account.md)
+ * [Agreement](documentation/schemas/agreement.md)
  * [Batch](documentation/schemas/batch.md)
  * [Collateral](documentation/schemas/collateral.md)
+ * [Curve](documentation/schemas/curve.md)
  * [Customer](documentation/schemas/customer.md)
  * [Derivative](documentation/schemas/derivative.md)
  * [Derivative_cash_flow](documentation/schemas/derivative_cash_flow.md)
@@ -26,7 +28,7 @@
  
 
 ### PROPERTIES
- 
+
  * [accounting_treatment](documentation/properties/accounting_treatment.md)
  * [accrued_interest](documentation/properties/accrued_interest.md)
  * [administration](documentation/properties/administration.md)
@@ -105,11 +107,13 @@
  * [sft_type](documentation/properties/sft_type.md)
  * [sic_code](documentation/properties/sic_code.md)
  * [sources](documentation/properties/sources.md)
+ * [source](documentation/properties/source.md)
  * [start_date](documentation/properties/start_date.md)
  * [status](documentation/properties/status.md)
  * [trade_date](documentation/properties/trade_date.md)
  * [transferable](documentation/properties/transferable.md)
  * [type](documentation/properties/type.md)
+ * [version_id](documentation/properties/version_id.md)
  * [value](documentation/properties/value.md)
  * [value_date](documentation/properties/value_date.md)
  * [withdrawal_penalty](documentation/properties/withdrawal_penalty.md)
