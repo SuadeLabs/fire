@@ -21,16 +21,15 @@ The FIRE data schemas and code samples are licensed under the [Apache 2.0 Licens
 The FIRE data format is supported by the [European Commission][euc], the [Open Data Institute][odi] and the [Open Data Incubator for Europe][odine].
 
 
-
 <div class="image-group" style="width:100%; height:auto; margin:25px; text-align:center; background-color: white">
     <a href="http://ec.europa.eu/index_en.htm" target="_blank">
-        <img src="https://suade.org/images/eu_commission.png" width="30%"/>
+        <img src="/documentation/images/eu_commission.png" width="30%"/>
     </a>
     <a href="http://opendata.institute/" target="_blank">
-        <img src="https://suade.org/images/odi.png" width="30%"/>
+        <img src="./documentation/images/odi.png" width="30%"/>
     </a>
     <a href="https://opendataincubator.eu/" target="_blank">
-        <img src="https://suade.org/images/odine.png" width="30%"/>
+        <img src="./documentation/images/odine.png" width="30%"/>
     </a>
 </div>
 
