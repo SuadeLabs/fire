@@ -1,14 +1,14 @@
 ---
 layout:		property
 title:		"limit_amount"
-schemas:	[account,loan]
+schemas:	[account, loan]
 ---
 
 # limit_amount
 
 ---
 
-The **limit_amount** parameter describes the total credit limit on the loan or account (overdraft). The monetary type is represented as an integer number of cents/pence.
+The **limit_amount** parameter describes the total credit limit on the loan or account (overdraft). The monetary type is represented as an integer number of cents/pence. Note that for loans this is typically a positive number (as balances are positive) and a negative number for accounts (where a negative balance denotes an overdraft).
 
 [**The European Commission's Consumer Credit Directive**][dir2008] defines the 'total amount of credit’ as:
 
