@@ -117,7 +117,7 @@
       "description": "The internal ledger code or line item name.",
       "type": "string"
     },
-    "limit_amount ": {
+    "limit_amount": {
       "description": "The minimum balance the customer can go overdrawn in their account.",
       "type": "integer"
     },
