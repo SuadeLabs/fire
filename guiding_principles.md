@@ -31,26 +31,31 @@ Schema properties should try to avoid logical inconsistencies. In other words, o
 eg. There should not be a security type titled "government_bond" and a "issuer-type-is-government" flag. 
 
 This might seem ok:
+
 | **security type** | **issuer-type-is-govt** |
 |-------------------|-------------------------|
 | government_bond   | Y                       |
 
 This has the potential to create contradictory data of the nature:
+
 | **security type** | **issuer-type-is-govt** |
 |-------------------|-------------------------|
 | governemnt_bond   | N                       |
 
 Better would be:
+
 | **security type** | **issuer-type-is-govt** |
 |-------------------|-------------------------|
 | bond              | Y                       |
 
 Even better would be:
+
 | **security type** | **issuer type** |
 |-------------------|-----------------|
 | bond              | government      |
 
 Why? Because flags are limiting and can still lead to inconsistencies:
+
 | **security type** | **issuer-type-is-govt** | **issuer-type-is-retail** |
 |-------------------|-------------------------|---------------------------|
 | bond              | Y                       | Y                         |
