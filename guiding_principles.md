@@ -73,6 +73,7 @@ eg. It would be unwise to have a loan balance in original currency and USD. This
 | 100         | EUR              | 130        |
 
 Better is to just have an original currency and an exchange rate.
+Note: you can still do this in your database, just make sure you pick one "truth" when transmitting it to someone else.
 
 ---
 [license]:  https://github.com/suadelabs/fire/LICENSE
