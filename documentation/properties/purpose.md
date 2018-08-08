@@ -107,9 +107,19 @@ The **other** enum value can be used when none of the other enum values apply or
 Defined in accordance with Article 30(1) of the [LCR][lcr] regulation:
 > "collateral posted for contracts listed in [Annex II of Regulation (EU) No. 575/2013](http://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32013R0575) and credit derivatives".
 
+## Trading Capacity
+### deal
+Indicates that the transaction results from the executing firm dealing on its own account uner Article 4(6) of [Directive 2014/65/EU][mifid]. 
+
+### mtch
+Indicates that the the transaction results from the executing firm carrying out matched principal trading under Article 4(38) of [Directive 2014/65/EU][mifid].
+
+### aotc
+Indicates that a transaction does not result from the executing firm carrying out matched principal trading or dealing on its own account. This field shall indicate that the transaction was carried out under any other capacity.
 
 ---
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575
 [lcr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
 [id]: https://github.com/suadelabs/fire/blob/master/documentation/properties/id.md
+[mifid]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014L0065 
 [mlardef]: http://www.bankofengland.co.uk/pra/documents/regulatorydata/mlar/sup_chapter16_annex19bg_20120401.pdf
