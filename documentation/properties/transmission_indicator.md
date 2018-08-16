@@ -1,10 +1,10 @@
 ---
 layout:     property
-title:      "transmission_order_indicator"
+title:      "transmission_indicator"
 schemas:    [security, derivative]
 ---
 
-# transmission_order_indicator
+# transmission_indicator
 
 Some firms do not execute client orders for financial instruments but rather they transmit them to another firm to be executed. The purpose of this property is to indicate that there was a transmission within a chain to another investment firm that did not meet the conditions of Article 4 of [Commission Delegated Regulation (EU) 2017/590][rts]. 
 
