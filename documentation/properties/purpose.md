@@ -109,6 +109,7 @@ Defined in accordance with Article 30(1) of the [LCR][lcr] regulation:
 
 ## Trading Capacity
 ### deal
+
 Indicates that the transaction results from the executing firm dealing on its own account uner Article 4(6) of [Directive 2014/65/EU][mifid]. 
 
 ### mtch
@@ -116,6 +117,7 @@ Indicates that the the transaction results from the executing firm carrying out 
 
 ### aotc
 Indicates that a transaction does not result from the executing firm carrying out matched principal trading or dealing on its own account. This field shall indicate that the transaction was carried out under any other capacity.
+
 
 ---
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575
