@@ -109,17 +109,19 @@ Defined in accordance with Article 30(1) of the [LCR][lcr] regulation:
 
 ## Trading Capacity
 ### deal
-The **deal** value indicates that the transaction results from the executing firm dealing on its own account under Article 4(6) of [Directive 2014/65/EU][mifid]. 
+
+Indicates that the transaction results from the executing firm dealing on its own account uner Article 4(6) of [Directive 2014/65/EU][mifid]. 
 
 ### mtch
-The **mtch** value indicates that the transaction results from the executing firm carrying out matched principal trading under Article 4(38) of [Directive 2014/65/EU][mifid].
+Indicates that the the transaction results from the executing firm carrying out matched principal trading under Article 4(38) of [Directive 2014/65/EU][mifid].
 
 ### aotc
-The **aotc** value is used when the transaction does not result from the executing firm carrying out matched principal trading or dealing on its own account. The field shall indicate that the transaction was carried out under any other capacity.
+Indicates that a transaction does not result from the executing firm carrying out matched principal trading or dealing on its own account. This field shall indicate that the transaction was carried out under any other capacity.
+
 
 ---
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575
 [lcr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
 [id]: https://github.com/suadelabs/fire/blob/master/documentation/properties/id.md
-[mifid]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014L0065
+[mifid]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014L0065 
 [mlardef]: http://www.bankofengland.co.uk/pra/documents/regulatorydata/mlar/sup_chapter16_annex19bg_20120401.pdf
