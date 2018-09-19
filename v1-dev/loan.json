@@ -164,14 +164,14 @@
       "type": "string",
       "format": "date-time"
     },
-    "notional_amount": {
-      "description": "The original notional amount of the loan. Monetary type represented as a naturally positive integer number of cents/pence.",
-      "type": "integer"
-    },
     "next_reset_date": {
       "description": "The date on which the interest rate is next reset.",
       "type": "string",
       "format": "date-time"
+    },
+    "notional_amount": {
+      "description": "The original notional amount of the loan. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer"
     },
     "on_balance_sheet": {
       "description": "Is the loan reported on the balance sheet of the financial institution?",
