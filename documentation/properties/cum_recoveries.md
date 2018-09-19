@@ -8,7 +8,9 @@ schemas:    [loan]
 
 ---
 
-[Regulation (EU) 2016/867][2016/867] defines this attribute as the total amount recovered since the date of default. It is further described in the [AnaCredit Module Part II][module] as the amount received from the start of the latest default of the instrument until the reporting reference date. For the purpose of this attribute, 'default' has the definition in accordance with Article 178 of [Regulation  (EU) No 575/2013][CRR]
+[Regulation (EU) 2016/867][2016/867] defines this attribute as the total amount recovered since the date of default. It is further described in the [AnaCredit Module Part II][module] as the amount received from the start of the latest default of the instrument until the reporting reference date. For the purpose of this attribute, 'default' has the definition in accordance with Article 178 of [Regulation  (EU) No 575/2013][CRR].
+
+The minimum amount recorded should be 0. 
 
 ---
 [2016/867]: https://www.ecb.europa.eu/ecb/legal/pdf/celex_32016r0867_en_txt.pdf 
