@@ -53,7 +53,7 @@
       "enum": ["ZERO", "UKBRBASE", "FDTR"]
     },
     "cum_recoveries": {
-      "description": "The total amount recovered since the date of default.",
+      "description": "The total amount recovered since the date of default of the instrument.",
       "type": "integer",
       "minimum": 0
     },
