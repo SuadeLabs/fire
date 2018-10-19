@@ -209,7 +209,7 @@
       ]
     },
     "rate": {
-      "description": "The full interest rate applied to the loan balance. Note that for tracker rates this includes the benchmark (ie. not the credit spread). Percentages represented as a decimal/float such that 1.5% is 0.015.",
+      "description": "The full interest rate applied to the loan balance. Note that for tracker rates this includes the benchmark (ie. not the credit spread). Percentages represented as a decimal/float, so 1.5 implies 1.5%.",
       "type": "number"
     },
     "rate_type": {
