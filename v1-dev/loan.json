@@ -20,6 +20,10 @@
       "description": "The accrued interest due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
+    "accumulated_changes_fv": {
+      "description": "Accumulated changes in fair value due to credit risk.",
+      "type": "integer"
+    },
     "administration": {
       "description": "How the loan was administered by the lender.",
       "type": "string",
@@ -47,6 +51,11 @@
       "description": "The base rate represents the basis of the repayment rate on the borrowed funds at the given date as agreed in the terms of the loan.",
       "type": "string",
       "enum": ["ZERO", "UKBRBASE", "FDTR"]
+    },
+    "cum_recoveries": {
+      "description": "The total amount recovered since the date of default of the instrument.",
+      "type": "integer",
+      "minimum": 0
     },
     "currency_code": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
