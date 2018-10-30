@@ -13,6 +13,10 @@
       "type": "string",
       "format": "date-time"
     },
+	"address_city": {
+	  "description": "City, town or village.",
+	  "type": "string"
+	},
     "boe_industry_code": {
       "description": "Bank of England industry code.",
       "type": "string"
