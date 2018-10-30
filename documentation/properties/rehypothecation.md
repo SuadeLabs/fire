@@ -6,7 +6,6 @@ schemas:	[security]
 
 # rehypothecation
 
-*[Needs definition]*
 
 ---
 
