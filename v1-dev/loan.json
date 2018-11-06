@@ -52,6 +52,10 @@
       "type": "string",
       "enum": ["ZERO", "UKBRBASE", "FDTR"]
     },
+    "behavioral_curve_id": {
+      "description": "The unique identifier for the behavioral curve used by the financial institution.",
+      "type": "string"
+    },
     "cum_recoveries": {
       "description": "The total amount recovered since the date of default of the instrument.",
       "type": "integer",
