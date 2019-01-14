@@ -28,6 +28,7 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   ├── insurer
 │   ├── financial_holding
 │   └── other_financial
+├── ccp
 ├── central_bank
 ├── mdb
 ├── credit_union
@@ -72,6 +73,10 @@ Micro            | < 10            | ≤ € 2 m       | ≤ € 2 m
 
 ### other
 Other means it is known to **not** be one of the other types. If type is unknown it should just be left blank.
+
+### ccp
+As defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2979.html) 
+> A legal person that interposes itself between the counterparties to the contracts traded on one or more financial markets, becoming the buyer to every seller and the seller to every buyer, as defined in article 2(1) of EMIR.
 
 ### financial
 Article 411 of the [CRR][crr]:
