@@ -28,6 +28,7 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   ├── insurer
 │   ├── financial_holding
 │   └── other_financial
+├── ccp
 ├── central_bank
 ├── mdb
 ├── credit_union
@@ -72,6 +73,13 @@ Micro            | < 10            | ≤ € 2 m       | ≤ € 2 m
 
 ### other
 Other means it is known to **not** be one of the other types. If type is unknown it should just be left blank.
+
+### ccp
+As defined in Article 2(1) of [EMIR]() and the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2979.html):
+> "CCP" means a legal person that interposes itself between the counterparties to the contracts traded on one or more financial markets, becoming the buyer to every seller and the seller to every buyer
+
+From the [US FDIC Regulatory Capital Rules](https://www.fdic.gov/regulations/laws/federal/2013/2013-09-10_final-rule-interim.pdf):
+> Central counterparty (CCP) means a counterparty (for example, a clearing house) that facilitates trades between counterparties in one or more financial markets by either guaranteeing trades or novating contracts.
 
 ### financial
 Article 411 of the [CRR][crr]:
@@ -608,6 +616,8 @@ The [EC Collateral Directive][arrangement] states:
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575
 
 [card-fees]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2015.123.01.0001.01.ENG
+
+[emir]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32012R0648
 
 [lcr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
 
