@@ -75,8 +75,8 @@ Micro            | < 10            | ≤ € 2 m       | ≤ € 2 m
 Other means it is known to **not** be one of the other types. If type is unknown it should just be left blank.
 
 ### ccp
-As defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2979.html) 
-> A legal person that interposes itself between the counterparties to the contracts traded on one or more financial markets, becoming the buyer to every seller and the seller to every buyer, as defined in article 2(1) of EMIR.
+As defined in Article 2(1) of [EMIR]() and the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2979.html):
+> "CCP" means a legal person that interposes itself between the counterparties to the contracts traded on one or more financial markets, becoming the buyer to every seller and the seller to every buyer
 
 ### financial
 Article 411 of the [CRR][crr]:
@@ -613,6 +613,8 @@ The [EC Collateral Directive][arrangement] states:
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575
 
 [card-fees]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2015.123.01.0001.01.ENG
+
+[emir]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32012R0648
 
 [lcr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
 
