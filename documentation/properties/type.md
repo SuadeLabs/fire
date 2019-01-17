@@ -78,6 +78,9 @@ Other means it is known to **not** be one of the other types. If type is unknown
 As defined in Article 2(1) of [EMIR]() and the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2979.html):
 > "CCP" means a legal person that interposes itself between the counterparties to the contracts traded on one or more financial markets, becoming the buyer to every seller and the seller to every buyer
 
+From the [US FDIC Regulatory Capital Rules](https://www.fdic.gov/regulations/laws/federal/2013/2013-09-10_final-rule-interim.pdf):
+> Central counterparty (CCP) means a counterparty (for example, a clearing house) that facilitates trades between counterparties in one or more financial markets by either guaranteeing trades or novating contracts.
+
 ### financial
 Article 411 of the [CRR][crr]:
 > financial customer means a customer that performs one or more of the activities listed in Annex I to Directive 2013/36/EU as its main business, or is one of the following:
