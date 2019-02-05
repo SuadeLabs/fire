@@ -38,13 +38,20 @@
       ]
     },
     "type": {
-      "description": "The type of agreement.",
+      "description": "The type of the master agreement.",
       "type": "string",
       "enum": [
          "isda", "isda_2002", "isda_1992", "isda_1987", "isda_1986", "isda_1985", "other_isda",
          "gmra", "icma_2011", "icma_2000", "icma_1995", "icma_1992", "other_gmra",
          "other"
       ]
+    },
+    "credit_support_type": {
+        "description": "The type of credit support document",
+        "type": "string",
+        "enum": [
+            "csa_isda_1994", "csa_isda_1995", "csd_isda_1995", "scsa_isda_2013"
+        ]
     },
     "version_id": {
       "description": "The version identifier of the data such as the firm's internal batch identifier.",
