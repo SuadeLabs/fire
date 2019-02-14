@@ -27,7 +27,7 @@
     "accrued_interest_balance": {
       "description": "The accrued interest due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
-    
+    },
     "administration": {
       "description": "How the loan was administered by the lender.",
       "type": "string",
