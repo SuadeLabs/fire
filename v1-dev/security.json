@@ -12,12 +12,12 @@
     "date": {
       "description": "The observation or effective date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
-      "format": "date-time"
-	},
-	"acc_change_fv_before_taxes": {
+      "format": "date-time"    
+    },
+    "acc_change_fv_before_taxes": {
       "description": "Accumulated change in fair value before taxes.",
       "type": "integer"
-	},
+    },
     "acc_changes_fv_credit_risk": {
       "description": "Accumulated changes in fair value due to credit risk.",
       "type": "integer"
