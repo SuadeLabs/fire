@@ -500,14 +500,14 @@ A non-exhaustive list of [examples][ecbexamples] of underlying assets that may c
 # Account
 
 ```bash
-├── deposit
-│   ├── current
-│   ├── checking
-│   ├── call
-│   ├── internet_only
-│   ├── time_deposit
-│   ├── savings
-│   └── cd
+├── current
+├── call
+├── internet_only
+├── savings
+├── time_deposit
+├── bonds
+├── retail_bonds
+├── cd
 ├── isa
 ├── money_market
 ├── vostro
@@ -547,7 +547,14 @@ A credit card is then defined in Article 2 (34) and (5) as:
 > credit card transaction means a card-based payment transaction where the amount of the transaction is debited in full or in part at a pre agreed specific calendar month date to the payer, in line with a prearranged credit facility, with or without interest;
 
 ### current (checking, demand)
-Any transactional account .
+Any transactional account.
+
+### bonds
+Any account containing notes, bonds or other securities instruments.
+
+### retail_bonds
+As referenced in the [LCR][lcr] Regulation Article 28 (6) as any account: 
+> containing notes, bonds and other securities issued which are sold exclusively in the retail market and held in a retail account. Limitations shall be placed such that those instruments cannot be bought and held by parties other than retail customers.
 
 ### internet_only
 An internet-only account is one that is offered and only accessible via the internet. The [FCA][fca-internet] defines the internet in their handbook as:

@@ -203,7 +203,7 @@
       "type": "string",
       "enum": [
         "call", "cd", "current", "credit_card", "internet_only", "isa", "money_market",
-        "bonds", "savings", "payments", "time_deposit", "vostro", "provision", "other"
+        "bonds", "retail_bonds", "savings", "payments", "time_deposit", "vostro", "provision", "other"
       ]
     },
     "trade_date": {
