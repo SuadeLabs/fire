@@ -14,11 +14,11 @@
       "type": "string",
       "format": "date-time"    
     },
-    "acc_change_fv_before_taxes": {
+    "acc_fv_change_before_taxes": {
       "description": "Accumulated change in fair value before taxes.",
       "type": "integer"
     },
-    "acc_changes_fv_credit_risk": {
+    "acc_fv_change_credit_risk": {
       "description": "Accumulated changes in fair value due to credit risk.",
       "type": "integer"
     },
