@@ -17,7 +17,7 @@
       "description": "Accumulated change in fair value before taxes.",
       "type": "integer"
     },
-    "acc_changes_fv_credit_risk": {
+    "acc_change_fv_credit_risk": {
       "description": "Accumulated changes in fair value due to credit risk.",
       "type": "integer"
     },
