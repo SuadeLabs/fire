@@ -11,6 +11,10 @@ title: FIRE data examples
 * [time_deposit_1year](time_deposit_1year.json)
 * [time_deposit_1year_with_6_month_withdrawal_option](time_deposit_1year_with_6_month_withdrawal_option.json)
 
+# Agreement examples
+* [master_netting_agreement_with_csa](master_netting_agreement_with_csa.json)
+* [master_netting_agreement_without_csa](master_netting_agreement_without_csa.json)
+
 # Derivative examples
 * [derivative_with_initial_margin](derivative_with_initial_margin.json)
 
