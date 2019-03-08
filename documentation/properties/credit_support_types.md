@@ -32,7 +32,25 @@ The [Standard CSA][scsa] for both the English and New York law Annexes, publishe
 
 The Standard Credit Support Annex (SCSA or Standard CSA) seeks to standardize market practice regarding embedded optionality in current CSAs, promote the adoption of overnight index swap discounting for derivatives, and align the mechanics and economics of collateralization between the bilateral and cleared OTC derivative markets. Additionally, the SCSA seeks to create a homogeneous valuation framework, reducing current barriers to novation and valuation disputes
 
+---
+
+# Additional definitions related to credit_support_types
+
+---
+### Credit Support Amount (Variation margin)
+The [Credit Support Amount][isda_csa] defined by ISDA.
+
+Unless modified by the parties, the “Credit Support Amount” is the amount of Eligible Credit Support that the Secured Party is entitled to hold as of aparticular Valuation Date. In other words, it is the exposure of the Secured Party to the Chargor, adjusted to reflect agreed thresholds, minimum transfer amounts and so on.
+
+### Unmargined derivatives
+The [Standardised approach for measuring counterparty credit risk][bis_sa_ccr] from BIS, published in 2014.
+
+For  unmargined  transactions(that  is,  where  variation  margin  (VM)  is  not  exchanged,  but collateral other than VM may be present)
+
+
 [csa_1995]: https://www.isda.org/a/JnMDE/1995-ISDA-Credit-Support-Annex-English-Law.pdf
 [csd_1995]: https://www.isda.org/book/1995-isda-credit-support-deed-pdf/
 [csa_1994]: https://www.isda.org/book/1994-isda-credit-support-annex-security-int-ny-law/
 [scsa]: https://www.isda.org/2013/06/07/the-2013-standard-credit-support-annex/
+[isda_csa]: https://www.isda.org/a/ktMDE/UG-to-1995-ISDA-Credit-Support-Documents-English-Law.pdf
+[bis_sa_ccr]: https://www.bis.org/publ/bcbs279.pdf

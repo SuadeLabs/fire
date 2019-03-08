@@ -1,0 +1,61 @@
+{
+	"agreement": [{
+		"id": "MNA1",
+		"date": "2018-12-31 00:00:00",
+		"start_date": "2017-01-31 00:00:00",
+		"country_code": "GB",
+		"type": "isda",
+		"credit_support_type": "csd_isda_1995"
+	}],
+	"customer": [{
+		"id": "customer_ci",
+		"date": "2018-12-31 00:00:00",
+		"type": "credit_institution",
+		"country_code": "GB"
+	}],
+	"derivative": [{
+			"id": "vanilla_swap_receivable_200",
+			"date": "2018-12-31 00:00:00",
+			"trade_date": "2018-12-31 00:00:00",
+			"start_date": "2018-12-31 00:00:00",
+			"end_date": "2020-12-31 00:00:00",
+			"asset_liability": "asset",
+			"currency_code": "GBP",
+			"initial_margin": 9000,
+			"balance": 10000,
+			"mtm_dirty": 20000,
+			"mna_id": "MNA1",
+			"customer_id": "customer_ci",
+			"type": "vanilla_swap"
+		},
+		{
+			"id": "vanilla_swap_payable_100",
+			"date": "2018-12-31 00:00:00",
+			"trade_date": "2018-12-31 00:00:00",
+			"start_date": "2018-12-31 00:00:00",
+			"end_date": "2020-12-31 00:00:00",
+			"asset_liability": "liability",
+			"currency_code": "GBP",
+			"initial_margin": -4500,
+			"balance": -5000,
+			"mtm_dirty": -10000,
+			"mna_id": "MNA1",
+			"customer_id": "customer_ci",
+			"type": "vanilla_swap"
+		}
+	],
+	"security": [{
+		"id": "vm_cash_received_50",
+		"date": "2018-12-31 00:00:00",
+		"trade_date": "2018-12-31 00:00:00",
+		"start_date": "2018-12-31 00:00:00",
+		"asset_liability": "liability",
+		"currency_code": "GBP",
+		"balance": 5000,
+		"mtm_dirty": 5000,
+		"type": "cash",
+		"purpose": "derivative_collateral",
+		"mna_id": "MNA1",
+		"customer_id": "customer_ci"
+	}]
+}
