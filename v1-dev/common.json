@@ -35,8 +35,8 @@
       "SOS", "SRD", "SSP", "STN", "SYP", "SZL", "THB", "TJS", "TMT", "TND",
       "TOP", "TRY", "TTD", "TWD", "TZS", "UAH", "UGX", "USD", "USN", "USS",
       "UYI", "UYU", "UZS", "VES", "VND", "VUV", "WST", "XAF", "XAG", "XAU",
-      "XBA", "XBB", "XBC", "XBD", "XCD", "XDR", "XFU", "XOF", "XPD", "XPF",
-      "XPT", "XSU", "XTS", "XUA", "XXX", "YER", "ZAR", "ZMW", "CNH"
+      "XBA", "XBB", "XBC", "XBD", "XCD", "XDR", "XOF", "XPD", "XPF", "XPT",
+      "XSU", "XTS", "XUA", "XXX", "YER", "ZAR", "ZMW", "CNH"
     ]
   },
   "country_code": {
