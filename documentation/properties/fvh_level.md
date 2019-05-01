@@ -7,8 +7,9 @@ schemas:    [account, derivative, loan, security]
 # fvh_level
 
 ---
+**fvh_level** is represented as an integer 1, 2 or 3.
 
-# Level 1 inputs
+### 1 (Level 1 inputs)
 [Level 1 inputs][ifrs13] are quoted prices (unadjusted) in active markets for identical
 assets or liabilities that the entity can access at the measurement date.
 
@@ -16,7 +17,7 @@ A quoted price in an active market provides the most reliable evidence of fair
 value and shall be used without adjustment to measure fair value whenever
 available.
 
-# Level 2
+### 2 (Level 2 inputs)
 [Level 2 inputs][ifrs13] are inputs other than quoted prices included within Level 1 that
 are observable for the asset or liability, either directly or indirectly.
 
@@ -33,7 +34,7 @@ intervals;
 * implied volatilities; and
 * credit spreads.
 
-# Level 3
+### 3 (Level 3 inputs)
 [Level 3 inputs][ifrs13] are unobservable inputs for the asset or liability.
 
 Unobservable inputs shall be used to measure fair value to the extent that
