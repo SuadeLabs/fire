@@ -74,6 +74,12 @@
       "type": "string",
       "format": "date-time"
     },
+    "fvh_level": {
+      "description": "Fair value hierarchy category according to IFRS 13.93 (b)",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
     "first_payment_date": {
       "description": "The first payment date for interest payments.",
       "type": "string",
