@@ -117,6 +117,12 @@
       "description": "The currency of the credit facility if not the same as loan currency_code.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
     },
+    "fvh_level": {
+      "description": "Fair value hierarchy category according to IFRS 13.93 (b)",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
     "first_payment_date": {
       "description": "The first payment date for interest payments.",
       "type": "string",

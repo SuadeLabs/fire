@@ -12,7 +12,7 @@
     "date": {
       "description": "The observation or effective date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
-      "format": "date-time"    
+      "format": "date-time"
     },
     "acc_fv_change_before_taxes": {
       "description": "Accumulated change in fair value before taxes.",
@@ -109,6 +109,12 @@
       "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
       "type": "string",
       "format": "date-time"
+    },
+    "fvh_level": {
+      "description": "Fair value hierarchy category according to IFRS 13.93 (b)",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
     },
     "first_payment_date": {
       "description": "The first payment date for interest payments.",
