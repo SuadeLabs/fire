@@ -4,6 +4,9 @@ title: Guiding Principles
 ---
 
 # Guiding principles
+The guiding principles are composed of:
+* [Project principles](#project-principles)
+* [Schema design principles](#schema-design-principles)
 
 ## Project principles
 The FIRE project should be:
@@ -19,13 +22,27 @@ This should be a given but is unfortunately not very common in the financial ind
 
 
 ## Schema design principles
-The FIRE Data schema specifications should respect the following schema design principles:
+The FIRE Data schema specifications should respect the following 3 schema design principles. Note that the terms data attributes and schema properties are interchangeably used.
 
-### Properties should always be true
-Schema properties should be truths and not depend on the application for which they will be used. In the same way that your date of birth doesn't change depending on who's asking, properties should follow the same philosophy. Practically, this means data should not be dependent on the intended computation, visualisation, report or application. Data should simply represent a labelling of a contract or entity based on purely legal definitions. As such, every pull request requires a corresponding, documented, legal reference, preferably to a current financial regulation.
+### 1. Data attributes should always be true
+Schema properties (data attributes) should be self-evident truths and not depend on the application for which they will be used. In the same way that your date of birth doesn't change depending on who's asking, properties should follow the same philosophy. Practically, this means data should not be dependent on the intended computation, visualisation, report or application. Data should simply represent a labelling of a contract or entity based on purely legal definitions. As such, every pull request requires a corresponding, documented, legal reference, preferably to a currently in-force financial regulation.
 
+### 2. Data attributes should be atomic
+Schema properties should uniquely describe the data. Properties should be fundamental, atomic units of measurement. One property should not be derivable from other properties. Similar to the "flags" problem, schema properties should not have embedded logic. This was often done with legacy systems for performance reasons when databases were fast, CPUs slow and memory expensive, but today, most applications are I/O bound. You may still choose to store secondary or derived data, but this is the concern of the application and it's specific goals rather than the underlying fundamental data.
 
-### Consistent
+eg. It would be unwise to have a loan balance in original currency and USD. This inevitably leads to data of the form:
+
+| **balance** | **original ccy** | **in USD** |
+|-------------|------------------|------------|
+| 100         | EUR              | 120        |
+| 100         | USD              | 90         |
+| 100         | EUR              | 130        |
+
+> Can you spot the problem?
+
+Better is to just have an original currency and an exchange rate.
+
+### 3. Data attributes should be consistent
 Schema properties should try to avoid logical inconsistencies. In other words, one schema property should not contradict another. This is a common occurrence in legacy systems where schemas were updated without a big picture consideration. This typically manifests itself in the form of flags
 
 eg. There should not be a security type titled "government_bond" and a "issuer-type-is-government" flag. 
@@ -60,20 +77,6 @@ Why? Because flags are limiting and can still lead to inconsistencies:
 |-------------------|-------------------------|---------------------------|
 | bond              | Y                       | Y                         |
 
-
-### Coherent
-Schema properties should uniquely describe the data. One property should not be derivable from other properties. Similar to the "flags" problem, schema properties should not have embedded logic. This was often done with legacy systems for performance reasons when databases were fast, CPUs slow and memory expensive, but today, most applications are I/O bound.
-
-eg. It would be unwise to have a loan balance in original currency and USD. This inevitably leads to data of the form:
-
-| **balance** | **original ccy** | **in USD** |
-|-------------|------------------|------------|
-| 100         | EUR              | 120        |
-| 100         | USD              | 90         |
-| 100         | EUR              | 130        |
-
-Better is to just have an original currency and an exchange rate.
-Note: you can still do this in your database, just make sure you pick one "truth" when transmitting it to someone else.
 
 ---
 [license]:  https://github.com/suadelabs/fire/LICENSE
