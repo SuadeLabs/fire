@@ -324,6 +324,13 @@ From the [EBA's][eba-nsfr-report] report on the NSFR, section 6.2.2, a **letter 
 > When goods are traded, the seller and the buyer need to agree on the process of how to pay for the goods. While the buyer may be reluctant to prepay for the traded goods, the seller may also be unwilling to ship the goods before payment is made. In this situation, a bank can intermediate between the trading partners by providing an import letter of credit (L/C) to the buyer of the goods, which guarantees payment to the seller. 
 > A L/C is a contingent liability and payment is only made by the bank to the seller from funds in the buyer’s account when the documentation of shipping is presented.
 
+### guarantee
+From EU [Supervisory Reporting][sup-rep] part 2(9):
+> 'Financial guarantees' are contracts that require the issuer to make specified payments to reimburse the holder of a loss it incurs, because a specified debtor fails to make payment when due in accordance with the original or modified terms of a debt instrument. Under IFRS or compatible National GAAP, these contracts meet the IAS 39.9 and IFRS 4.A definition of financial guarantee contracts. The following items of Annex I of the CRR shall be classified as 'financial guarantees':
+> (a) Guarantees having the character of credit substitute.
+> (b) Credit derivatives that meet the definition of financial guarantee.
+> (c) Irrevocable standby letters of credit having the character of credit substitutes.
+
 ### project_finance
 As defined in [Supervisory Reporting][sup-rep] part 2(5)(41)(l):
 > 'Project finance loans' include loans that are recovered solely from the income of the projects financed by them.

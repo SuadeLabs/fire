@@ -311,7 +311,7 @@
       "description": "The form of the loan product administered by the financial institution, with regards to common regulatory classifications.",
       "type": "string",
       "enum": [
-        "mortgage", "commercial_property", "commercial", "personal", "auto", "liquidity_facility",
+        "mortgage", "commercial_property", "commercial", "personal", "auto", "liquidity_facility", "letter_of_credit", "guarantee",
         "trade_finance", "credit_card", "credit_facility", "multiccy_facility", "nostro", "other"
       ]
     },
