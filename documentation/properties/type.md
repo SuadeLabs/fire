@@ -380,11 +380,12 @@ Other refers to a type of security not covered by the above. If you find yoursel
 ```
 ├── equity
 │   ├── share
-│   │   └── preference_share
+│   │   └── pref_share
 │   └── share_agg
 ├── debt
 │   ├── bond
 │   ├── covered_bond
+│   ├── convertible_bond
 │   ├── frn
 │   ├── commercial_paper
 │   ├── cd
@@ -419,7 +420,7 @@ This is a "catch all" term for equity instruments such as *share*, *share_agg* t
 ### share, share_agg 
 Denotes if the security is a share (stock) or represents an aggregate for a portfolio or package of shares.
 
-### preference_share
+### pref_share
 The [FCA](https://www.handbook.fca.org.uk/handbook/glossary/G1587.html) defines a **preference share** as:
 > A share conferring preference as to income or return of capital which does not form part of the equity share capital of a company
 
@@ -432,6 +433,12 @@ A **bond** is a type of loan whereby an investor lends money to an entity for a 
 ### covered_bond
 From the [LCR][lcr] Introduction (8):
 > Covered bonds are debt instruments issued by credit institutions and secured by a cover pool of assets which typically consist of mortgage loans or public sector debt to which investors have a preferential claim in the event of default. Their secured nature and certain additional safety features, such as the requirement on the issuer to replace non-performing assets in the cover pool and maintain the cover pool at a value exceeding the par value of the bonds (‘asset coverage requirement’), have contributed to make covered bonds relatively low-risk, yield-bearing instruments with a key funding role in mortgage markets of most Member States. In certain Member States outstanding covered bond issuance exceeds the pool of outstanding government bonds. Certain covered bonds of credit quality step 1, in particular, exhibited an excellent liquidity performance during the period from 1 January 2008 to 30 June 2012 analysed by the EBA in its report. Nevertheless the EBA recommended treating these covered bonds as level 2A assets to align with BCBS standards. However, in the light of the considerations made above about their credit quality, liquidity performance and role in the funding markets of the Union, it is appropriate for these credit quality step 1 covered bonds to be treated as level 1 assets. In order to avoid excessive concentration risks and unlike other level 1 assets, the holdings of credit quality step 1 covered bonds in the liquidity buffer should be subject to a 70 % cap of the overall buffer, a minimum 7 % haircut and to the diversification requirement.
+
+### convertible_bond
+Generally, a **convertible_bond** is a security which gives the investor the right to convert the security into shares at an agreed price on an agreed basis.
+
+From the [European system of national and regional accounts][2013-549]
+> bonds, which may, at the option of the holder, be converted into the equity of the issuer, at which point they are classified as shares;
 
 ### emtn, mtn
 A Euro medium-term note is a medium-term (less than 5 years), flexible debt instrument that is traded and issued outside of the US and Canada. A medium-term note is the same but is traded in the US and Canada.
@@ -662,3 +669,4 @@ The [EC Collateral Directive][arrangement] states:
 [ucits]: http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2009:302:0032:0096:en:PDF
 [eu-covered-bonds-info]: http://ec.europa.eu/finance/investment/legal_texts/index_en.htm
 [sup-rep]: http://publications.europa.eu/resource/cellar/37c79802-fe90-11e3-831f-01aa75ed71a1.0006.03/DOC_1
+[2013-549]: https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32013R0549
