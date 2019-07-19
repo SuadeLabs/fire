@@ -142,6 +142,11 @@
       "type": "integer",
       "minimum": 0
     },
+    "impairment_status": {
+      "description": "The recognition stage for the impairment of the loan.",
+      "type": "string",
+      "enum": ["stage_1", "stage_2", "stage_3"]
+    },
     "impairment_type": {
       "description": "The loss event resulting in the impairment of the loan.",
       "type": "string",
