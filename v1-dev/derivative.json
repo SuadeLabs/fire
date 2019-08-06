@@ -69,6 +69,10 @@
       "description": "The unique identifier used by the financial institution to identify the customer for this product.",
       "type": "string"
     },
+    "delta": {
+      "description": "Price sensitivity to the underlying.",
+      "type": "number"
+    },
     "end_date": {
       "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
       "type": "string",
@@ -84,6 +88,10 @@
       "description": "The first payment date for interest payments.",
       "type": "string",
       "format": "date-time"
+    },
+    "gamma": {
+      "description": "Second-order price sensitivity to the underlying or rate of change of the delta.",
+      "type": "number"
     },
     "initial_margin": {
       "description": "Upfront margin posted/received for the trade. Monetary type as integer number of cents.",
@@ -180,6 +188,10 @@
       "description": "The name of the reporting legal entity for display purposes (as LEI code may not be available).",
       "type": "string"
     },
+    "rho": {
+      "description": "Price sensitivity to interest rates.",
+      "type": "number"
+    },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the derivative product resides. In accordance with ISO 3166-1",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
@@ -206,6 +218,10 @@
       "type": "string",
       "format": "date-time"
     },
+    "theta": {
+      "description": "Price sensitivity with respect to time.",
+      "type": "number"
+    },
     "type": {
       "description": "This is the type of the derivative with regards to common regulatory classifications.",
       "type": "string",
@@ -226,6 +242,10 @@
       "description": "The timestamp that the derivative was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
       "format": "date-time"
+    },
+    "vega": {
+      "description": "Price sensitivity to volatility.",
+      "type": "number"
     },
     "version_id": {
       "description": "The version identifier of the data such as the firm's internal batch identifier.",
