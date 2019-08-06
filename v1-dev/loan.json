@@ -180,7 +180,7 @@
     "movement": {
       "description": "The movement parameter describes how the loan arrived to the firm.",
       "type": "string",
-      "enum": ["none", "acquired", "sold", "securitised", "other"]
+      "enum": ["acquired", "sold", "securitised", "syndicated", "syndicated_lead", "other"]
     },
     "next_payment_date": {
       "description": "The next date at which interest will be paid or accrued_interest balance returned to zero.",

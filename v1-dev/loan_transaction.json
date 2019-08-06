@@ -24,11 +24,6 @@
       "description": "The unique identifier for the affected loan/s within the financial institution.",
       "type": "string"
     },
-    "movement": {
-      "description": "The movement parameter describes how the loan arrived to the firm.",
-      "type": "string",
-      "enum": ["none", "acquired", "sold", "securitised", "other"]
-    },
     "source": {
       "description": "The source where this data originated.",
       "type": "string"
