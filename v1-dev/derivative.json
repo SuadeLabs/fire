@@ -226,7 +226,7 @@
       "description": "This is the type of the derivative with regards to common regulatory classifications.",
       "type": "string",
       "enum": [
-        "vanilla_swap", "mtm_swap", "call_swaption", "put_swaption", "call_option", "put_option", "future", "forward", "tarf", "xccy", "cds"
+        "vanilla_swap", "mtm_swap", "option", "call_swaption", "put_swaption", "call_option", "put_option", "future", "forward", "tarf", "xccy", "cds"
       ]
     },
     "trade_date": {
