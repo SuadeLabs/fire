@@ -27,7 +27,7 @@
     "asset_class": {
       "description": "The asset class to which the derivative belongs.",
       "type": "string",
-      "enum": ["co", "cr", "eq", "fx", "ir", "other"]
+      "enum": ["co", "cr", "cr_index", "cr_single", "eq", "eq_index", "eq_single", "fx", "ir", "energy", "oil", "gas", "coal", "electricity", "metals", "silver", "gold", "agri", "sugar", "coffee", "corn", "other"]
     },
     "asset_liability": {
       "description": "Is the derivative a financial asset or a financial liability on a firm's balance sheet?",
@@ -237,6 +237,19 @@
     "underlying_id": {
       "description": "The unique identifier used by the financial institution to identify the underlying instrument for this product.",
       "type": "string"
+    },
+    "underlying_strike": {
+      "description": "Strike price on the underlying.",
+      "type": "number"
+    },
+    "underlying_price": {
+      "description": "Current price on the underlying.",
+      "type": "number"
+    },
+    "underlying_schema": {
+      "description": "The reference schema for the ID in underlying_id",
+      "type": "string",
+      "enum": ["security", "derivative"]
     },
     "value_date": {
       "description": "The timestamp that the derivative was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
