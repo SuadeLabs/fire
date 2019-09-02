@@ -244,7 +244,7 @@
       "enum": ["issuer", "security", "derivative"]
     },
     "underlying_price": {
-      "description": "Current price on the underlying.",
+      "description": "Current price/value of the underlying.",
       "type": "number"
     },
     "underlying_strike": {
