@@ -238,18 +238,18 @@
       "description": "The unique identifier used by the financial institution to identify the underlying instrument for this product.",
       "type": "string"
     },
-    "underlying_strike": {
-      "description": "Strike price on the underlying.",
-      "type": "number"
+    "underlying_data_type": {
+      "description": "The reference data type for the ID in underlying_id",
+      "type": "string",
+      "enum": ["issuer", "security", "derivative"]
     },
     "underlying_price": {
       "description": "Current price on the underlying.",
       "type": "number"
     },
-    "underlying_schema": {
-      "description": "The reference schema for the ID in underlying_id",
-      "type": "string",
-      "enum": ["security", "derivative"]
+    "underlying_strike": {
+      "description": "Strike price on the underlying.",
+      "type": "number"
     },
     "value_date": {
       "description": "The timestamp that the derivative was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
