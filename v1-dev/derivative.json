@@ -202,16 +202,8 @@
       "enum": ["cash", "physical"]
     },
     "source": {
-      "description": "The source where this data originated.",
+      "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
       "type": "string"
-    },
-    "sources": {
-      "description": "Identifiers for data sources. Useful for analytics and MI purposes.",
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "type": "string"
-      }
     },
     "start_date": {
       "description": "The timestamp that the trade or financial product commences. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
