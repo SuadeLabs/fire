@@ -169,6 +169,11 @@
       "description": "The name of the product as given by the financial institution to be used for display and reference purposes.",
       "type": "string"
     },
+    "purpose": {
+      "description": "The purpose for which the derivative is being held.",
+      "type": "string",
+      "enum": ["reference"]
+    },
     "rate": {
       "description": "The full interest rate applied to the derivative notional in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).",
       "type": "number"
