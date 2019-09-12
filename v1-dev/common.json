@@ -71,5 +71,10 @@
       "XL", "XM", "XN", "XO", "XP", "XQ", "XR", "XS", "XT", "XU", "XV",
       "XW", "XX", "XY", "XZ", "ZZ"
     ]
+  },
+  "regulatory_book": {
+    "description": "The type of portfolio in which the instrument is held.",
+    "type": "string",
+    "enum": ["trading_book", "banking_book"]
   }
 }
