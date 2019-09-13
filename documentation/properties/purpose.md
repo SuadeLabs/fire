@@ -55,6 +55,11 @@ Describes an account held for prime brokerage reasons but not including those co
 ### other
 The **other** enum value can be used when none of the other enum values apply or the value is *unknown*.
 
+## Derivative
+### reference
+Use this enumeration value to refer to derivatives which are underlyings of other derivative positions (e.g. swaptions)
+In the context of [CRR][crr] Article 329, a reference derivative would be the underlying swap of a swaption.
+
 ## Loan
 ### house_purchase
 The **house_purchase** value indicates that the purpose of the loan is for the purchase of residential property for occupation by the borrower.
@@ -107,6 +112,9 @@ The **other** enum value can be used when none of the other enum values apply or
 Defined in accordance with Article 30(1) of the [LCR][lcr] regulation:
 > "collateral posted for contracts listed in [Annex II of Regulation (EU) No. 575/2013](http://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32013R0575) and credit derivatives".
 
+### reference
+Use this enumeration value to refer to securities which are underlyings of derivative positions (e.g. bond futures).
+In the context of [CRR][crr] Article 328, a reference security would be the underlying bond of a bond future position.
 
 ---
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575
