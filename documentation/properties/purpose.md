@@ -57,7 +57,7 @@ The **other** enum value can be used when none of the other enum values apply or
 
 ## Derivative
 ### reference
-Use this enumeration value to refer to derivatives which are underlyings of other derivative positions (e.g. swaptions)
+Use this enumeration value to refer to derivatives which are underlyings of other derivative positions (e.g. swaptions).
 In the context of [CRR][crr] Article 329, a reference derivative would be the underlying swap of a swaption.
 
 ## Loan
