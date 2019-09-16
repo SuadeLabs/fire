@@ -1,11 +1,11 @@
 ---
 layout:     property
-title:      "implied_volatility"
+title:      "implied_vol"
 schemas:    [derivative]
 ---
 
-# implied_volatility
+# implied_vol
 
 ---
 
-The **implied_volatility** used in the option pricing model.
+The **implied_vol** is the implied volatility used in the option pricing model.
