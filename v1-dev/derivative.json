@@ -93,7 +93,7 @@
       "description": "Second-order price sensitivity to the underlying or rate of change of the delta.",
       "type": "number"
     },
-    "implied_volatility": {
+    "implied_vol": {
       "description": "Options: implied volatility used to compute mtm and greeks.",
       "type": "number"
     },
