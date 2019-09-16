@@ -93,12 +93,16 @@
       "description": "Second-order price sensitivity to the underlying or rate of change of the delta.",
       "type": "number"
     },
+    "implied_vol": {
+      "description": "Options: implied volatility used to compute mtm and greeks.",
+      "type": "number"
+    },
     "initial_margin": {
       "description": "Upfront margin posted/received for the trade. Monetary type as integer number of cents.",
       "type": "integer"
     },
     "insolvency_rank": {
-      "description": "The insolvency ranking as per the national legal fraamework of the reporting institution.",
+      "description": "The insolvency ranking as per the national legal framework of the reporting institution.",
       "type": "integer",
       "minimum": 1
     },
@@ -169,6 +173,11 @@
       "description": "The name of the product as given by the financial institution to be used for display and reference purposes.",
       "type": "string"
     },
+    "purpose": {
+      "description": "The purpose for which the derivative is being held.",
+      "type": "string",
+      "enum": ["reference"]
+    },
     "rate": {
       "description": "The full interest rate applied to the derivative notional in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).",
       "type": "number"
@@ -177,6 +186,9 @@
       "description": "The type of the receive leg.",
       "type": "string",
       "enum": ["fixed", "floating"]
+    },
+    "regulatory_book": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/regulatory_book"
     },
     "reporting_lei": {
       "description": "The LEI code for the legal entity under which the derivative is being reported.",
