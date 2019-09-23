@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"purpose"
-schemas:	[account, loan, security]
+schemas:	[account, loan, security, derivative, derivative_cash_flow]
 ---
 
 # purpose
@@ -59,6 +59,10 @@ The **other** enum value can be used when none of the other enum values apply or
 ### reference
 Use this enumeration value to refer to derivatives which are underlyings of other derivative positions (e.g. swaptions).
 In the context of [CRR][crr] Article 329, a reference derivative would be the underlying swap of a swaption.
+
+## Derivative Cash Flow
+### reference
+Use this enumeration value to refer to derivative cash flows which are calculated in order to decompose derivatives in combinations of long and short flows. See [CRR][crr] Articles 328 to 331.
 
 ## Loan
 ### house_purchase

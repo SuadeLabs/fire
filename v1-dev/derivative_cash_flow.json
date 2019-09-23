@@ -77,6 +77,11 @@
       "description": "The name of the product as given by the financial institution to be used for display and reference purposes.",
       "type": "string"
     },
+    "purpose": {
+      "description": "The purpose for which the derivative cash flow is calculated",
+      "type": "string",
+      "enum": ["reference"]
+    },
     "regulatory_book": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/regulatory_book"
     },
