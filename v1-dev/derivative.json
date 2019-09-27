@@ -111,6 +111,10 @@
       "type": "string",
       "format": "date-time"
     },
+    "ledger_code": {
+      "description": "The internal ledger code or line item name.",
+      "type": "string"
+    },
     "mna_id": {
       "description": "The unique identifier of the Master Netting Agreement for this derivative cash flow.",
       "type": "string"

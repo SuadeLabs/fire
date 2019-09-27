@@ -165,6 +165,10 @@
       "type": "string",
       "format": "date-time"
     },
+    "ledger_code": {
+      "description": "The internal ledger code or line item name.",
+      "type": "string"
+    },
     "mna_id": {
       "description": "The unique identifier of the Master Netting Agreement this security falls under. Typically where used as derivatives collateral.",
       "type": "string"
