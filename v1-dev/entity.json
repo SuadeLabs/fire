@@ -13,10 +13,10 @@
       "type": "string",
       "format": "date-time"
     },
-	"address_city": {
-	  "description": "City, town or village.",
-	  "type": "string"
-	},
+    "address_city": {
+      "description": "City, town or village.",
+      "type": "string"
+    },
     "boe_industry_code": {
       "description": "Bank of England industry code.",
       "type": "string"
@@ -24,6 +24,11 @@
     "boe_sector_code": {
       "description": "Bank of England sector code.",
       "type": "string"
+    },
+    "count": {
+      "description": "Describes the number of entities represented by this record. eg. joint customers should have a count > 1.",
+      "type": "integer",
+      "minimum": 1
     },
     "country_code": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code",
