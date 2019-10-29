@@ -72,6 +72,10 @@
     "currency_code": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
     },
+    "customer_id": {
+      "description": "The unique identifier used by the financial institution to identify the customer.",
+      "type": "string"
+    },
     "customers": {
       "description": "The list of customers for this loan",
       "type": "array",
@@ -243,6 +247,11 @@
       "description": "Describes the type of interest rate applied to the loan.",
       "type": "string",
       "enum": ["fixed", "variable", "tracker", "combined"]
+    },
+    "ref_income_amount": {
+      "description": "The reference income used for the customer(s) for this loan. Monetary type represented as an integer number of cents/pence.",
+      "type": "integer",
+      "minimum": 0
     },
     "regulated": {
       "description": "Is this loan regulated or unregulated?",
