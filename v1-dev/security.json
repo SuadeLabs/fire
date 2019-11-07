@@ -249,6 +249,36 @@
       "enum": ["repo", "rev_repo", "sell_buy_back", "buy_sell_back", "bond_loan", "bond_borrow",
                "stock_loan", "stock_borrow", "margin_loan"]
     },
+    "rating_lt_fitch": {
+        "description": "Fitch long term credit ratings",
+        "type":"string",
+        "enum":["AAA", "AA+", "AA", "AA-", "A+", "A", "A-", "BBB+", "BBB", "BBB-", "BB+", "BB", "BB-", "B+", "B", "B-", "CCC", "DDD", "DD", "D"]
+    },
+    "rating_st_fitch": {
+        "description": "Fitch short term credit ratings",
+        "type":"string",
+        "enum":["F1+", "F1", "F2", "F3", "B", "C"]
+    },
+    "rating_lt_moodys": {
+        "description": "Moody's long term credit ratings",
+        "type":"string",
+        "enum":["AAA", "AA+", "AA", "AA-", "A+", "A", "A-", "BBB+", "BBB", "BBB-", "BB+", "BB", "BB-", "B+", "B", "B-", "CCC+", "CCC", "CCC-", "CC", "C", "D"]
+    },
+    "rating_st_moodys": {
+        "description": "Moodys short term credit ratings",
+        "type":"string",
+        "enum":["A-1", "A-2", "A-3", "B", "C"]
+    },
+    "rating_lt_snp": {
+        "description": "S&P long term credit ratings",
+        "type":"string",
+        "enum":["Aaa", "Aa1", "Aa2", "Aa3", "A1", "A2", "A3", "Baa1", "Baa2", "Baa3", "Ba1", "Ba2", "Ba3", "B1", "B2", "B3", "Caa1", "Caa2", "Caa3", "Ca", "C"]
+    },
+    "rating_st_snp": {
+        "description": "S&P short term credit ratings",
+        "type":"string",
+        "enum":["P-1", "P-2", "P-3"]
+    },
     "source": {
       "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
       "type": "string"
