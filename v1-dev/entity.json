@@ -25,10 +25,6 @@
       "description": "Bank of England sector code.",
       "type": "string"
     },
-    "nrs_code":{
-      "description": "The unique identifier for the legal entity as defined by the national reporting system",
-      "type": "string"
-    },
     "count": {
       "description": "Describes the number of entities represented by this record. eg. joint customers should have a count > 1.",
       "type": "integer",
