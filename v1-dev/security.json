@@ -32,7 +32,7 @@
     "asset_liability": {
       "description": "Is the security (valued at either amortised cost or fair value) an asset or a liability on the firm's balance sheet.",
       "type": "string",
-      "enum": ["asset", "liability"]
+      "enum": ["asset", "liability", "equity"]
     },
     "capital_tier": {
       "description": "The capital tiers based on own funds requirements.",
