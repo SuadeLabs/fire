@@ -50,6 +50,16 @@
       "minimum": 1,
       "maximum": 12
     },
+    "fitch_lt": {
+        "description": "Fitch long term credit ratings",
+        "type":"string",
+        "enum":["AAA", "AA+", "AA", "AA-", "A+", "A", "A-", "BBB+", "BBB", "BBB-", "BB+", "BB", "BB-", "B+", "B", "B-", "CCC", "DDD", "DD", "D"]
+    },
+    "fitch_st": {
+        "description": "Fitch short term credit ratings",
+        "type":"string",
+        "enum":["F1+", "F1", "F2", "F3", "B", "C"]
+    },
     "intra_group": {
       "description": "Flag to indicate that this should be considered an intra-group entity.",
       "type": "boolean"
@@ -63,6 +73,16 @@
     "legal_entity_name": {
       "description": "The official legal name of the entity.",
       "type": "string"
+    },
+    "moodys_lt": {
+        "description": "Moody's long term credit ratings",
+        "type":"string",
+        "enum":["AAA", "AA+", "AA", "AA-", "A+", "A", "A-", "BBB+", "BBB", "BBB-", "BB+", "BB", "BB-", "B+", "B", "B-", "CCC+", "CCC", "CCC-", "CC", "C", "D"]
+    },
+    "moodys_st": {
+        "description": "Moodys short term credit ratings",
+        "type":"string",
+        "enum":["A-1", "A-2", "A-3", "B", "C"]
     },
     "name": {
       "description": "The name of the person or legal entity to be used for display and reference purposes.",
@@ -86,32 +106,12 @@
       "minimum": 0,
       "maximum": 99999
     },
-    "rating_lt_fitch": {
-        "description": "Fitch long term credit ratings",
-        "type":"string",
-        "enum":["AAA", "AA+", "AA", "AA-", "A+", "A", "A-", "BBB+", "BBB", "BBB-", "BB+", "BB", "BB-", "B+", "B", "B-", "CCC", "DDD", "DD", "D"]
-    },
-    "rating_st_fitch": {
-        "description": "Fitch short term credit ratings",
-        "type":"string",
-        "enum":["F1+", "F1", "F2", "F3", "B", "C"]
-    },
-    "rating_lt_moodys": {
-        "description": "Moody's long term credit ratings",
-        "type":"string",
-        "enum":["AAA", "AA+", "AA", "AA-", "A+", "A", "A-", "BBB+", "BBB", "BBB-", "BB+", "BB", "BB-", "B+", "B", "B-", "CCC+", "CCC", "CCC-", "CC", "C", "D"]
-    },
-    "rating_st_moodys": {
-        "description": "Moodys short term credit ratings",
-        "type":"string",
-        "enum":["A-1", "A-2", "A-3", "B", "C"]
-    },
-    "rating_lt_snp": {
+    "snp_lt": {
         "description": "S&P long term credit ratings",
         "type":"string",
         "enum":["Aaa", "Aa1", "Aa2", "Aa3", "A1", "A2", "A3", "Baa1", "Baa2", "Baa3", "Ba1", "Ba2", "Ba3", "B1", "B2", "B3", "Caa1", "Caa2", "Caa3", "Ca", "C"]
     },
-    "rating_st_snp": {
+    "snp_st": {
         "description": "S&P short term credit ratings",
         "type":"string",
         "enum":["P-1", "P-2", "P-3"]

@@ -292,12 +292,12 @@
       "description": "This is the type of the security with regards to common regulatory classifications.",
       "type": "string",
       "enum": [
-	"cash", "cb_reserve", "cb_facility", "cash_ratio_deposit",
+        "cash", "cb_reserve", "cb_facility", "cash_ratio_deposit",
         "equity", "share", "share_agg", "pref_share",
         "debt", "bond", "covered_bond", "convertible_bond",
         "abs", "rmbs", "rmbs_trans", "cmbs", "frn", "mbs", "abs_auto", "abs_consumer", "abs_sme", "abs_other",
         "emtn", "mtn", "commercial_paper", "cd", "struct_note", "spv_mortgages", "spv_other",
-	"other"
+        "other"
       ]
     },
     "trade_date": {

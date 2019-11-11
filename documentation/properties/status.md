@@ -22,6 +22,9 @@ The account is active in a transactional way, *transactional* being defined in a
 > transactions are regularly credited and debited respectively against
 > that account.
 
+For US accounts, transactional is defined in [Regulation D][reg-d]:
+> Transaction accounts are defined in section 19 of the FRA and in Regulation D as an account from which the depositor or account holder is permitted to "make transfers or withdrawals by negotiable or transferable instrument, payment order of withdrawal, telephone transfer, or other similar device for the purpose of making payments or transfers to third persons or others...." Demand deposits, negotiable order of withdrawal (NOW) accounts, and share draft accounts are all included in the definition of "transaction account." "Time deposits" and "savings deposits," discussed further below, are excluded from the Regulation D definition of transaction account. See the definition of "transaction accounts" in section 204.2(e) of Regulation D.
+
 ### cancelled
 The account has been cancelled but funds will be rolled-over in to another account on the [**end_date**](https://github.com/SuadeLabs/fire/blob/master/documentation/properties/end_date.md).
 
@@ -44,3 +47,4 @@ This is a loan where the customer has defaulted or is non-performing.
 ---
 
 [lcr]:  http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
+[reg-d]: https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=fe8bd6e281e0788a9ba7efda92e96e2f&mc=true&n=pt12.2.204&r=PART&ty=HTML#se12.2.204_12
