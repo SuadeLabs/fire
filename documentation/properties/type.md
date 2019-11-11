@@ -29,6 +29,7 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   ├── financial_holding
 │   └── other_financial
 ├── ccp
+|   └── qccp
 ├── central_bank
 ├── mdb
 ├── credit_union
@@ -80,6 +81,10 @@ As defined in Article 2(1) of [EMIR]() and the [FCA Handbook](https://www.handbo
 
 From the [US FDIC Regulatory Capital Rules](https://www.fdic.gov/regulations/laws/federal/2013/2013-09-10_final-rule-interim.pdf):
 > Central counterparty (CCP) means a counterparty (for example, a clearing house) that facilitates trades between counterparties in one or more financial markets by either guaranteeing trades or novating contracts.
+
+### qccp
+Article 4 (88) of the [CRR][crr]:
+> Qualifying central counterparty (QCCP) means a central counterparty that has been either authorised in accordance with Article 14 of Regulation (EU) No 648/2012 or recognised in accordance with Article 25 of that Regulation
 
 ### financial
 Article 411 of the [CRR][crr]:

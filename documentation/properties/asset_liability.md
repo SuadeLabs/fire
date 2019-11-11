@@ -75,5 +75,7 @@ If the valuation leads to expected outflows of economic benefits, then the secur
 
 If the valuation leads to expected inflows of economic benefits, then the security is an **asset** on the firm's balance sheet. For example, if an [asset backed security][asset backed security] (e.g. collateralised mortgage obligation) was purchased by a firm expecting to receieve future inflows of economic benefits through repayments of those mortgages, and the security was purchased at a value lower than the expected income from those mortgage repayments over the lifetime of the security, then the security will have a net positive fair value and be an **asset** on the firm's balance sheet.
 
+If the security comes from own funds, it will then be classified as **equity**
+
 [equity security]: http://www.iasplus.com/en-gb/standards/ias/ias39
 [asset backed security]: http://www.iasplus.com/en-gb/standards/ias/ias39
