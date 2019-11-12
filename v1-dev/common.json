@@ -76,5 +76,10 @@
     "description": "The type of portfolio in which the instrument is held.",
     "type": "string",
     "enum": ["trading_book", "banking_book"]
+  },
+  "asset_liability": {
+    "description": "Is the trade an asset, a liability, or equity on the firm's balance sheet?",
+    "type": "string",
+    "enum": ["asset", "liability", "equity"]
   }
 }
