@@ -78,7 +78,7 @@
     "enum": ["trading_book", "banking_book"]
   },
   "asset_liability": {
-    "description": "Is the trade an asset, a liability, or equity on the firm's balance sheet?",
+    "description": "Is the data an asset, a liability, or equity on the firm's balance sheet?",
     "type": "string",
     "enum": ["asset", "liability", "equity"]
   }
