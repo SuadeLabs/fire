@@ -205,8 +205,8 @@
       "description": "This is the type of the account with regards to common regulatory classifications.",
       "type": "string",
       "enum": [
-        "call", "cd", "current", "credit_card", "internet_only", "isa", "money_market", "ira",
-        "bonds", "retail_bonds", "savings", "payments", "time_deposit", "vostro", "provision", "other"
+        "call", "cd", "current", "deferred", "intangible", "goodwill", "credit_card", "internet_only", "isa", "money_market", "ira",
+        "bonds", "retail_bonds", "savings", "payments", "time_deposit", "vostro", "provision", "suspense", "tangible", "ppe", "investment_property", "owner_property", "property", "other"
       ]
     },
     "trade_date": {
