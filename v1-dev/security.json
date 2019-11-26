@@ -141,9 +141,19 @@
       "minimum": 0
     },
     "impairment_status": {
-      "description": "The recognition stage for the impairment.",
+      "description": "The recognition stage for the impairment/expected credit loss of the product.",
       "type": "string",
-      "enum": ["stage_1", "stage_2", "stage_3"]
+      "enum": [
+        "performing",
+        "stage_1",
+        "pass",
+        "stage_2",
+        "substandard",
+        "non_performing",
+        "stage_3",
+        "doubtful",
+        "loss"
+      ]
     },
     "insolvency_rank": {
       "description": "The insolvency ranking as per the national legal fraamework of the reporting institution.",

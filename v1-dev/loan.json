@@ -147,9 +147,19 @@
       "minimum": 0
     },
     "impairment_status": {
-      "description": "The recognition stage for the impairment of the loan.",
+      "description": "The recognition stage for the impairment/expected credit loss of the product.",
       "type": "string",
-      "enum": ["stage_1", "stage_2", "stage_3"]
+      "enum": [
+        "performing",
+        "stage_1",
+        "pass",
+        "stage_2",
+        "substandard",
+        "non_performing",
+        "stage_3",
+        "doubtful",
+        "loss"
+      ]
     },
     "impairment_type": {
       "description": "The loss event resulting in the impairment of the loan.",
