@@ -14,7 +14,12 @@
           "loans_and_recs",
           "held_to_maturity"
         ]
-  },
+ },
+"asset_class": {
+  "description": "The asset class to which the derivative belongs.",
+  "type": "string",
+  "enum": ["co", "cr", "cr_index", "cr_single", "eq", "eq_index", "eq_single", "fx", "ir", "energy", "oil", "gas", "coal", "electricity", "metals", "precious_metals", "silver", "gold", "platinum", "palladium", "agri", "sugar", "coffee", "corn", "other"]
+ },
   "currency_code": {
     "description": "Currency in accordance with ISO 4217 standards plus CNH for practical considerations.",
     "type": "string",
@@ -38,7 +43,7 @@
       "XAU", "XBA", "XBB", "XBC", "XBD", "XCD", "XDR", "XOF", "XPD", "XPF",
       "XPT", "XSU", "XTS", "XUA", "XXX", "YER", "ZAR", "ZMW", "CNH"
     ]
-  },
+   },
   "country_code": {
     "description": "Two-letter country code as defined according to ISO 3166-1 plus ISO allowed, user-assignable codes (AA, QM to QZ, XA to XZ, and ZZ).",
     "type": "string",
@@ -81,5 +86,10 @@
     "description": "Is the data an asset, a liability, or equity on the firm's balance sheet?",
     "type": "string",
     "enum": ["asset", "liability", "equity"]
-  }
+ },
+ "mic_code": {
+  "description": "The market identifier code as defined by the International Standards Organisation.",
+  "type": "string",
+  "minLength": 4,
+  "maxLength": 4
 }

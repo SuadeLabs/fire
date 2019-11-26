@@ -394,6 +394,7 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │   ├── share
 │   │   └── pref_share
 │   └── share_agg
+│   └── treasury
 ├── debt
 │   ├── bond
 │   ├── covered_bond
@@ -435,6 +436,9 @@ Denotes if the security is a share (stock) or represents an aggregate for a port
 ### pref_share
 The [FCA](https://www.handbook.fca.org.uk/handbook/glossary/G1587.html) defines a **preference share** as:
 > A share conferring preference as to income or return of capital which does not form part of the equity share capital of a company
+
+### treasury
+According to IAS 32.33, if an entity reacquires its own equity instruments, those instruments shall be considered **treasury shares**, and shall be deducted from equity.
 
 ### debt
 This is a "catch all" term for debt of any kind, *bond*, *bond_amortising*, *index_linked_gilt*, *covered_bond*, *abs*, *residential_mbs*, *non_residential_mbs*, *frn*, *govt_gteed_frn*, to be used when further granularity is not available or not needed.
@@ -536,14 +540,18 @@ A non-exhaustive list of [examples][ecbexamples] of underlying assets that may c
 ├── prepaid_card
 ├── debit_card
 ├── credit_card
+├── reserve
+|   └── share_plan
+|   └── reg_loss
+|   └── cf_hedge
 ├── suspense
 ├── tangible
 |    └──  ppe
 |        └── investment_property
 |        └──  owner_property
-|        └──  property           
+|        └──  property  
+├── provision         
 └── other
-
 
 
 ```
@@ -593,7 +601,6 @@ A **deferred** account is an account in which the recognition of certain revenue
 (a) deductible temporary differences;
 (b)the carryforward of unused tax losses; and
 (c) the carryforward of unused tax credits.
-
 
 ### intangible
 An account which holds intangible assets. IAS 38 defines an **intangible asset** as:
@@ -660,7 +667,7 @@ Deposit or depository account is defined in the [Directive regarding the mandato
 An account that holds tangible assets. From the definition of an **intangible asset**, we can infer that tangible assets refers to an asset has physical substance, for example, property or machinery.
 
 ### investment property
-IAS 40.5 defines ** investment property ** as:
+IAS 40.5 defines **investment property** as:
 > property (land or a building - or part of a building - or both) held (by the owner or by the lessee as a right-of-use asset) to earn rentals or for capital appreciation or both, rather than for:
 (a) use in the production or supply of goods or services or for administrative purposes; or
 (b) sale in the ordinary course of business.
@@ -669,10 +676,10 @@ IAS 40.5 defines ** investment property ** as:
 IAS 40.5 defines **owner occupied property** as:
 > property held (by the owner or by the lessee as a right-of-use asset) for use in the production or supply of goods or services or for administrative purposes.
 
-For example, for the reporting of Notice MAS 610/1003, **owner occupied property** includes bank premises. 
+For example, for the reporting of Notice MAS 610/1003, **owner occupied property** includes bank premises.
 
 ### ppe
-IAS 16(6) defines ** property plant and equipment ** as:
+IAS 16(6) defines **property plant and equipment** as:
 > tangible items that:
 (a) are held for use in the production or supply of goods or services, for rental to others, or for administrative purposes; and
 (b) are expected to be used during more than one period.
@@ -681,12 +688,41 @@ IAS 16(6) defines ** property plant and equipment ** as:
 This refers to other **immovable property** not included in investment property or owner occupied property,
 
 ### suspense
-MAS Notice 610 and Notice 1003 refers to **suspense** accounts as all outstanding unreconciled amounts that are kept in suspense. Transactions will be considered to be in ** suspense ** if there is some doubt at the time of reporting regaring how the transaction  should be classified and reported, for example, which ledger should it be posted to.
+Transactions will be considered to be in [**suspense**][suspense] if there is some doubt at the time of reporting regaring how the transaction  should be classified and reported, for example, which ledger should it be posted to.
 
+MAS Notice 610 and Notice 1003 refers to **suspense** accounts as all outstanding unreconciled amounts that are kept in suspense.
+
+[suspense]: https://www.investopedia.com/terms/s/suspenseaccount.asp
+
+### reserve
+An account holding reserves. [Reserves][reserve] are created when a company allocates some of its profit to be put back into the business with the inetntion of using it for a specific purpose.
+
+[reserve]:  https://en.wikipedia.org/wiki/Reserve_(accounting)
+
+### share_plan
+This is a reserve account where funds are held with the purpose of share plans and other equity based compensation.  
+
+### reg_loss
+This is a reserve that is created when an entity allocates funds to a reserve account for the purpose of complying with requirements for minimum **regulatory loss allowances**.
+
+For example, [MAS Notice 612][MAS612] (section 6.3.7) requires locally incorporated domestic systemically important banks to maintain a minimum level of loss allowance equivalent to 1% of the gross carrying amount of selected credit exposures net of collateral. This is referred to as the Minimum Regulatory Loss Allowance. Where the entity's Accounting Loss Allowance (calculated in accordance with the impairment requirements under FRS 109) falls below the Minimum Regulatory Loss Allowance, the entity shall maintain the difference in a non-distributable regulatory loss allowance reserve which shall be appropriated from retained earnings.
+
+[MAS612]: https://www.mas.gov.sg/regulation/notices/notice-612
+
+### cf_hedge
+IFRS 9.6.5.2 defines a **cash flow hedge** as follows:
+ > a hedge of the exposure to variability in cash flows that is attributable to a particular risk associated with all, or a component of, a  recognised asset or liability (such as all or some future interest payments on variable-rate debt) or a highly probable forecast transaction, and could affect profit or loss.
+
+ IFRS 9 refers to the **cash flow hedge reserve** as the separate equity component associated with the hedged item. In hedge accounting under IFRS, this account is a key component of the recognition of a hedging relationship.
+
+ For example, in the EBA's FINREP F.1.3 report, the effective portion of the variation in fair value of hedging derivatives in a cash flow hedge, both for ongoing cash flow hedges and cash flow hedges that no longer apply, is reported as the **cash flow hedge reserve**.
+
+### provision
+IAS 37.10 defines a **provision** as:
+> a liability of uncertain timing or amount
 
 ### other
 Any other account type that cannot be classified as one of the other types.
-
 
 # collateral
 The collateral type defines the form of the collateral, such as property or other assets used to secure an obligation.

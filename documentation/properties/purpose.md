@@ -31,7 +31,7 @@ Assets placed as a **ci_service** should be considered unencumbered inaccordance
 The **collateral** enum type identifies an account or deposit received as collateral and hence, not classified as a liability for the purposes of Article 27 and 29 of the [LCR][lcr]. Collateral held in an account should have a corresponding [**id**][id] in the collateral schema.
 
 ### operational
-The **clearing** enum value indicates that the account or deposit is being maintained for clearing, settlement, custody or cash management services in the context of an **operational** relationship and hence can be treated as a very short term exposure. 
+The **clearing** enum value indicates that the account or deposit is being maintained for clearing, settlement, custody or cash management services in the context of an **operational** relationship and hence can be treated as a very short term exposure.
 
 Clearing and comparable services from the [CRR][crr] Article 422.4:
 > Clearing, custody or cash management or other comparable services referred to in points (a) and (d) of paragraph 3 only covers such services to the extent that they are rendered in the context of an established relationship on which the depositor has substantial dependency. They shall not merely consist in correspondent banking or prime brokerage services and the institution shall have evidence that the client is unable to withdraw amounts legally due over a 30 day horizon without compromising its operational functioning.
@@ -89,7 +89,7 @@ From [CRR][crr] Article 113(7):
 A **lifetime_mortgage** is a very specific kind of British mortgage contract and is defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G1294.html). It is geared towards customers of a certain age in order to release equity and typically repayment occurs at the time of the customers death when the property is sold;
 
 ### promotional_loan
-As outlined in [LCR][lcr] Article 31(9), a **promotional_loan** 
+As outlined in [LCR][lcr] Article 31(9), a **promotional_loan**
 > shall be available only to persons who are not financial customers on a non-competitive, not for profit basis in order to promote public policy objectives of the Union or that Member State's central or regional government. It shall only be possible to draw on such facilities following the reasonably expected demand for a promotional loan and up to the amount of such demand provided there is a subsequent reporting on the use of the funds distributed;
 
 ### remortgage
@@ -112,6 +112,17 @@ From [CRR][crr] definitions (82):
 The **other** enum value can be used when none of the other enum values apply or the value is *unknown*.
 
 ## Security
+
+```bash
+├── investment
+├── collateral
+|    └──  derivative_collateral
+├── reference
+├── share_capital
+|    └──  non_controlling
+├── other
+```
+
 ### derivative_collateral
 Defined in accordance with Article 30(1) of the [LCR][lcr] regulation:
 > "collateral posted for contracts listed in [Annex II of Regulation (EU) No. 575/2013](http://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32013R0575) and credit derivatives".
@@ -120,6 +131,17 @@ Defined in accordance with Article 30(1) of the [LCR][lcr] regulation:
 Use this enumeration value to refer to securities which are underlyings of derivative positions (e.g. bond futures).
 In the context of [CRR][crr] Article 328, a reference security would be the underlying bond of a bond future position.
 
+### share_capital
+This indicates shares that have been [issued][issued] for the purpose of raising capital for the company.     
+
+[issued]: https://www.investopedia.com/terms/s/sharecapital.asp
+
+### non_controlling 
+[Commission Regulation (EC) No 494/2009] [reg] defines **non-controlling interest** as:
+> the equity in a subsidiary not attributable, directly or indirectly, to a parent.
+
+
+[reg]: https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32009R0494&from=EN
 ---
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575
 [lcr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
