@@ -73,7 +73,7 @@ Company category | Staff headcount | Turnover (or) | Balance sheet total
 -----------------|-----------------|---------------|--------------------
 Medium-sized     | < 250           | ≤ € 50 m      | ≤ € 43 m            
 Small            | < 50            | ≤ € 10 m      | ≤ € 10 m            
-Micro            | < 10            | ≤ € 2 m       | ≤ € 2 m 
+Micro            | < 10            | ≤ € 2 m       | ≤ € 2 m
 
 
 ### other
@@ -200,7 +200,7 @@ As defined in the [FCA handbook](https://www.handbook.fca.org.uk/handbook/glossa
 A **central bank** is often a nationalised institution in charge of the production and distribution of money and credit in the system it resides over. It is usually responsible for monetary policy and the regulation of member banks.
 
 ### regional_govt
-A **regional government** is a government entity that only has control on a specific geographic area. 
+A **regional government** is a government entity that only has control on a specific geographic area.
 
 ### central_govt
 A **central government** is the government of a nation-state. While some countries may have **regional governments** that operate autonomously, the **central goverment** is the governing system that is concerned with issues that affect the entire nation.
@@ -299,7 +299,7 @@ Local firm is defined by the EU [here][lcr] Article 4(1)(4):
 > 'local firm' means a firm dealing for its own account on markets in financial futures or options or other derivatives and on cash markets for the sole purpose of hedging positions on derivatives markets, or dealing for the accounts of other members of those markets and being guaranteed by clearing members of the same markets, where responsibility for ensuring the performance of contracts entered into by such a firm is assumed by clearing members of the same markets
 
 ### sspe
-A securitisation special purpose entity is defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2277.html) as: 
+A securitisation special purpose entity is defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2277.html) as:
 
 >(1) (in accordance with Article 4(44) of the Banking Consolidation Directive (Definitions) and for the purposes of BIPRU) a corporation, trust or other entity, other than a credit institution, organised for carrying on a securitisation or securitisations (within the meaning of paragraph (2) of the definition of securitisation), the activities of which are limited to those appropriate to accomplishing that objective, the structure of which is intended to isolate the obligations of the SSPE from those of the originator, and the holders of the beneficial interests in which have the right to pledge or exchange those interests without restriction.
 >
@@ -313,7 +313,7 @@ A collective investment undertaking is defined by the EU [here][lcr] Article 4(1
 > 'collective investment undertaking' or 'CIU' means a UCITS as defined in Article 1(2) of Directive 2009/65/EC of the European Parliament and of the Council of 13 July 2009 on the coordination of laws, regulations and administrative provisions relating to undertakings for collective investment in transferable securities (UCITS) (21), including, unless otherwise provided, third-country entities which carry out similar activities, which are subject to supervision pursuant to Union law or to the law of a third country which applies supervisory and regulatory requirements at least equivalent to those applied in the Union, an AIF as defined in Article 4(1)(a) of Directive 2011/61/EU of the European Parliament and of the Council of 8 June 2011 on Alternative Investment Fund Managers (22), or a non-EU AIF as defined in Article 4(1)(aa) of that Directive;
 
 ### insurer
-The [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G569.html?date=2015-12-31) defines an **insurer** as: 
+The [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G569.html?date=2015-12-31) defines an **insurer** as:
 >a firm with permission to effect or carry out contracts of insurance (other than a UK ISPV ).
 Where [insurance](https://www.handbook.fca.org.uk/handbook/glossary/G218.html?date=2015-12-31) consists of:
 >(1) (in relation to a specified investment) the investment, specified in article 75 of the Regulated Activities Order (Contracts of insurance), which is rights under a contract of insurance in (2).
@@ -380,7 +380,7 @@ From the [EBA's][eba-nsfr-report] report on the NSFR, section 6.2.1 outlines wha
 
 ### letter_of_credit
 From the [EBA's][eba-nsfr-report] report on the NSFR, section 6.2.2, a **letter of credit** is:
-> When goods are traded, the seller and the buyer need to agree on the process of how to pay for the goods. While the buyer may be reluctant to prepay for the traded goods, the seller may also be unwilling to ship the goods before payment is made. In this situation, a bank can intermediate between the trading partners by providing an import letter of credit (L/C) to the buyer of the goods, which guarantees payment to the seller. 
+> When goods are traded, the seller and the buyer need to agree on the process of how to pay for the goods. While the buyer may be reluctant to prepay for the traded goods, the seller may also be unwilling to ship the goods before payment is made. In this situation, a bank can intermediate between the trading partners by providing an import letter of credit (L/C) to the buyer of the goods, which guarantees payment to the seller.
 > A L/C is a contingent liability and payment is only made by the bank to the seller from funds in the buyer’s account when the documentation of shipping is presented.
 
 ### guarantee
@@ -434,7 +434,7 @@ From Annex I of the [CRR][crr], credit facilities are:
 
 ### nostro
 Nostro loans are the firm's accounts at other financial institutions which are in effect loans to other firms. Nostros are used in the context of correspondent banking operations which are described by the [ECB](https://www.ecb.europa.eu/paym/t2/shared/pdf/target2_glossary.pdf):
-> Correspondent banking: an arrangement under which one credit institution provides payment and other services to another credit institution. Payments through correspondents are often executed through reciprocal accounts (nostro and loro accounts) to which standing credit lines may be attached. Correspondent banking services are primarily provided across international boundaries but are also known as agency relationships in some domestic contexts. 
+> Correspondent banking: an arrangement under which one credit institution provides payment and other services to another credit institution. Payments through correspondents are often executed through reciprocal accounts (nostro and loro accounts) to which standing credit lines may be attached. Correspondent banking services are primarily provided across international boundaries but are also known as agency relationships in some domestic contexts.
 > A loro (vostro) account is the term used by a correspondent to describe an account held on behalf of a foreign credit institution; the foreign credit institution would in turn regard this account as its nostro account.
 
 ### other
@@ -483,7 +483,7 @@ A **cash** or cash-equivalent security such as a securitisation of cash deposits
 ### equity
 This is a "catch all" term for equity instruments such as *share*, *share_agg* to be used when further granularity is not available or not needed.
 
-### share, share_agg 
+### share, share_agg
 Denotes if the security is a share (stock) or represents an aggregate for a portfolio or package of shares.
 
 ### pref_share
@@ -494,7 +494,7 @@ The [FCA](https://www.handbook.fca.org.uk/handbook/glossary/G1587.html) defines 
 This is a "catch all" term for debt of any kind, *bond*, *bond_amortising*, *index_linked_gilt*, *covered_bond*, *abs*, *residential_mbs*, *non_residential_mbs*, *frn*, *govt_gteed_frn*, to be used when further granularity is not available or not needed.
 
 ### bond
-A **bond** is a type of loan whereby an investor lends money to an entity for a defined period of time at a fixed or floating interest rate. 
+A **bond** is a type of loan whereby an investor lends money to an entity for a defined period of time at a fixed or floating interest rate.
 
 ### covered_bond
 From the [LCR][lcr] Introduction (8):
@@ -546,7 +546,7 @@ A floating-rate note is defined in the [Money Market Statistics Regulation][mm-s
 ### govt_gteed_frn
 A government guaranteed floating-rate note.
 
-### cb_reserve 
+### cb_reserve
 As defined in [Finrep Annex V part (2)(1)(1.1)(2)](https://www.eba.europa.eu/documents/10180/359626/Annex+V_Instructions_FINREP.docx/26727402-6339-4c33-bb5a-d8e659c27371)
 > include balances receivable on demand at central banks.
 
@@ -575,6 +575,9 @@ A non-exhaustive list of [examples][ecbexamples] of underlying assets that may c
 ```bash
 ├── current
 ├── call
+├── deferred
+├── intangible
+|    └──  goodwill
 ├── internet_only
 ├── savings
 ├── time_deposit
@@ -587,7 +590,16 @@ A non-exhaustive list of [examples][ecbexamples] of underlying assets that may c
 ├── prepaid_card
 ├── debit_card
 ├── credit_card
+├── suspense
+├── tangible
+|    └──  ppe
+|        └── investment_property
+|        └──  owner_property
+|        └──  property           
 └── other
+
+
+
 ```
 
 ### call
@@ -626,8 +638,24 @@ Any transactional account.
 Any account containing notes, bonds or other securities instruments.
 
 ### retail_bonds
-As referenced in the [LCR][lcr] Regulation Article 28 (6) as any account: 
+As referenced in the [LCR][lcr] Regulation Article 28 (6) as any account:
 > containing notes, bonds and other securities issued which are sold exclusively in the retail market and held in a retail account. Limitations shall be placed such that those instruments cannot be bought and held by parties other than retail customers.
+
+### deferred
+A **deferred** account is an account in which the recognition of certain revenue or expenses on the income statement is delayed for a certain period of time. For example, a deferred tax asset, which is reported in F1.01 of FINREP,  is defined by IAS 12.5 as follows:
+> the amounts of income taxes recoverable in future periods in respect of:
+(a) deductible temporary differences;
+(b)the carryforward of unused tax losses; and
+(c) the carryforward of unused tax credits.
+
+
+### intangible
+An account which holds intangible assets. IAS 38 defines an **intangible asset** as:
+> an identifiable non-monetary asset without physical substance.
+
+### goodwill
+**Goodwill** is a type of intangible asset. IFRS3, Appendix A, defines **goodwill** as:
+> an asset representing the future economic benefits arising from other assets acquired in a business combination that are not individually identified and separately recognised.
 
 ### internet_only
 An internet-only account is one that is offered and only accessible via the internet. The [FCA][fca-internet] defines the internet in their handbook as:
@@ -639,7 +667,7 @@ The distinction here linked to financial promotions suggests that internet-only 
 An ISA is an individual savings account which is a scheme of investment satisfying the conditions prescribed in the UK's [ISA Regulations][uk-isa].
 
 ### money_market
-A money market account is an interest-bearing account that typically pays a higher interest rate than a savings account, and which provides the account holder with limited check-writing ability. 
+A money market account is an interest-bearing account that typically pays a higher interest rate than a savings account, and which provides the account holder with limited check-writing ability.
 
 Money market accounts are accounts where the customer's money has been invested in the "money markets" either directly in money market instruments or money market funds which are described in the [2013 Proposal for the Regulation of Money Market Funds][mmf-prpposal] as providing a key component of corporate banking:
 > On the demand side, MMFs offer a short-term cash management tool that provides a high degree of liquidity, diversification, stability of value combined with a market-based yield. MMFs are mainly used by corporations seeking to invest their excess cash for a short time frame, for example until a major expenditure, such as the payroll, is due.
@@ -648,7 +676,7 @@ Money market deposits are mentioned in association with definitions of cash in t
 
 ### vostro (loro)
 Nostro and vostro (loro) accounts are used in the context of correspondent banking operations which are described in [ECB guidelines on monetary policy instruments][ecb-guidelines] from 2003:
-> Correspondent banking: an arrangement under which one credit institution provides payment and other services to another credit institution. Payments through correspondents are often executed through reciprocal accounts (nostro and loro accounts) to which standing credit lines may be attached. Correspondent banking services are primarily provided across international boundaries but are also known as agency relationships in some domestic contexts. 
+> Correspondent banking: an arrangement under which one credit institution provides payment and other services to another credit institution. Payments through correspondents are often executed through reciprocal accounts (nostro and loro accounts) to which standing credit lines may be attached. Correspondent banking services are primarily provided across international boundaries but are also known as agency relationships in some domestic contexts.
 > A loro account is the term used by a correspondent to describe an account held on behalf of a foreign credit institution; the foreign credit institution would in turn regard this account as its nostro account.
 
 ### savings
@@ -680,10 +708,38 @@ vacation club accounts)
 
 ### deposit
 Deposit or depository account is defined in the [Directive regarding the mandatory exchange of tax information][exch-tax-info] section 8:
-> The term “Depository Account” includes any commercial, checking, savings, time, or thrift account, or an account that is evidenced by a certificate of deposit, thrift certificate, investment certificate, certificate of indebtedness, or other similar instrument maintained by a Financial Institution in the ordinary course of a banking or similar business. A Depository Account also includes an amount held by an insurance company pursuant to a guaranteed investment contract or similar agreement to pay or credit interest thereon.
+> The term “Depository Account” includes any commercial, checking, savings, time, or thrift account, or an account that is evidenced by a certificgitcheckoutate of deposit, thrift certificate, investment certificate, certificate of indebtedness, or other similar instrument maintained by a Financial Institution in the ordinary course of a banking or similar business. A Depository Account also includes an amount held by an insurance company pursuant to a guaranteed investment contract or similar agreement to pay or credit interest thereon.
+
+### tangible
+An account that holds tangible assets. From the definition of an **intangible asset**, we can infer that tangible assets refers to an asset has physical substance, for example, property or machinery.
+
+### investment property
+IAS 40.5 defines ** investment property ** as:
+> property (land or a building - or part of a building - or both) held (by the owner or by the lessee as a right-of-use asset) to earn rentals or for capital appreciation or both, rather than for:
+(a) use in the production or supply of goods or services or for administrative purposes; or
+(b) sale in the ordinary course of business.
+
+### owner_property
+IAS 40.5 defines **owner occupied property** as:
+> property held (by the owner or by the lessee as a right-of-use asset) for use in the production or supply of goods or services or for administrative purposes.
+
+For example, for the reporting of Notice MAS 610/1003, **owner occupied property** includes bank premises. 
+
+### ppe
+IAS 16(6) defines ** property plant and equipment ** as:
+> tangible items that:
+(a) are held for use in the production or supply of goods or services, for rental to others, or for administrative purposes; and
+(b) are expected to be used during more than one period.
+
+### property
+This refers to other **immovable property** not included in investment property or owner occupied property,
+
+### suspense
+MAS Notice 610 and Notice 1003 refers to **suspense** accounts as all outstanding unreconciled amounts that are kept in suspense. Transactions will be considered to be in ** suspense ** if there is some doubt at the time of reporting regaring how the transaction  should be classified and reported, for example, which ledger should it be posted to.
+
 
 ### other
-Any other account type that cannot be classified as one of the other types. 
+Any other account type that cannot be classified as one of the other types.
 
 
 # collateral

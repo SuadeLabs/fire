@@ -22,7 +22,7 @@ The FIRE data format is supported by the [European Commission][euc], the [Open D
 
 <div class="image-group" style="width:100%; height:auto; margin:25px; text-align:center; background-color: white">
     <a href="http://ec.europa.eu/index_en.htm" target="_blank">
-        <img src="/documentation/images/eu_commission.png" width="30%"/>
+        <img src="./documentation/images/eu_commission.png" width="30%"/>
     </a>
     <a href="http://opendata.institute/" target="_blank">
         <img src="./documentation/images/odi.png" width="30%"/>

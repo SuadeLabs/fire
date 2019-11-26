@@ -30,9 +30,7 @@
       "enum": ["co", "cr", "cr_index", "cr_single", "eq", "eq_index", "eq_single", "fx", "ir", "energy", "oil", "gas", "coal", "electricity", "metals", "silver", "gold", "agri", "sugar", "coffee", "corn", "other"]
     },
     "asset_liability": {
-      "description": "Is the derivative a financial asset or a financial liability on a firm's balance sheet?",
-      "type": "string",
-      "enum": ["asset", "liability"]
+        "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/asset_liability"
     },
     "balance": {
       "description": "Outstanding amount including accrued interest. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -113,6 +111,10 @@
     },
     "ledger_code": {
       "description": "The internal ledger code or line item name.",
+      "type": "string"
+    },
+    "mic_code": {
+      "description": "The market identifier code as defined by the International Standards Organisation.",
       "type": "string"
     },
     "mna_id": {

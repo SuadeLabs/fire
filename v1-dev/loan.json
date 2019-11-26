@@ -43,9 +43,7 @@
       "type": "integer"
     },
     "asset_liability": {
-      "description": "Is the loan an asset or a liability on the firm's balance sheet?",
-      "type": "string",
-      "enum": ["asset", "liability"]
+        "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/asset_liability"
     },
     "balance": {
       "description": "The balance of the loan or capital still to be repaid. Monetary type represented as a naturally positive integer number of cents/pence.",
