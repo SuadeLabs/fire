@@ -100,6 +100,16 @@
       "description": "The unique identifier for the ultimate parent of the person or legal entity.",
       "type": "string"
     },
+    "relationship":{
+      "description": "Relationship to parent.",
+      "type": "string",
+      "enum": ["jv", "branch", "subsidiary", "parent"]
+    },
+    "reporting_relationship":{
+      "description": "Relationship to reporting entity. See: relationship.",
+      "type": "string",
+      "enum": ["jv", "branch", "subsidiary", "parent"]
+    },
     "risk_group_id":{
       "description": "The unique identifier for the group representing a single risk entity where no relationship of control exists",
       "type": "string"
