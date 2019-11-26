@@ -16,20 +16,26 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   ├── partnership
 │   └── natural_person
 ├── corporate
+│   ├── charity
+│   │   └── community_charity
 │   └── sme
+│       └── supported_sme
 ├── financial
 │   ├── credit_institution
+│   │   ├── merchant_bank
+│   │   ├── state_owned_bank
 │   │   └── promotional_lender
 │   ├── investment_firm
+│   │   ├── ciu
+│   │   ├── pension_fund
+│   │   └── mmkt_fund
 │   ├── sspe
-│   ├── ciu
-│   ├── ceis
 │   ├── pic
 │   ├── insurer
 │   ├── financial_holding
 │   └── other_financial
 ├── ccp
-|   └── qccp
+│   └── qccp
 ├── central_bank
 ├── mdb
 ├── credit_union
@@ -47,9 +53,7 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 ### individual
 Individual is a UK specific definition which is slightly broader than a natural person and defined in the [FCA Handbook Glossary][fca-indiv] under individual:
 > (a) a natural person; or
->
 > (b) a partnership consisting of two or three persons not all of whom are bodies corporate; or
->
 > (c) an unincorporated body of persons which does not consist entirely of bodies corporate and is not a partnership.
 
 ### natural_person
@@ -212,6 +216,11 @@ A public sector entity is defined in the [FCA handbook](https://www.handbook.fca
 >
 >(d) self administered bodies governed by law that are under public supervision.
 
+### statutory_board
+A specific distinction for Singaporean public sector entities. The statutory boards of the Singapore Government are organisations that have been given autonomy to perform an operational function by legal statutes passed as Acts in parliament. The statutes define the purpose, rights and powers of the authority. They usually report to one specific ministry. 
+A more comprehensive list can be found here:
+[Singaporean Statutory Boards][sg-stat-boards]
+
 ### credit_institution
 Credit institution is defined in Article 4 of [CRR][crr]:
 > (1) 'credit institution' means an undertaking the business of which is to take deposits or other repayable funds from the public and to grant credits for its own account
@@ -220,7 +229,40 @@ Credit institution is defined in Article 4 of [CRR][crr]:
 A promotional lender is defined by the EU [here][lcr] Article 10.1(e):
 > (ii) any credit institution whose purpose is to advance the public policy objectives of the Union or of the central or regional government or local authority in a Member State predominantly through the provision of promotional loans on a non-competitive, not for profit basis, provided that at least 90 % of the loans that it grants are directly or indirectly guaranteed by the central or regional government or local authority and that any exposure to that regional government or local authority, as applicable, is treated as an exposure to the central government of the Member State in accordance with Article 115(2) of Regulation (EU) No 575/2013;
 
+### merchant_bank
+**merchant bank** means:
+> a merchant bank approved under section 28 of the Monetary Authority of Singapore Act (Cap. 186);
+
+### state_owned_bank
+Financial institutions where there is majority ownership or control by a government or state. 
+
 ### investment_firm
+*Investment firm* is defined under the Markets in Financial Instruments Directive (MiFID) Article 4(1):
+> any legal person whose regular occupation or business is the provision of one or more investment services to third parties and/or the performance of one or more investment activities on a professional basis.
+
+> Member States may include in the definition of investment firms undertakings which are not legal persons, provided that:
+(a) their legal status ensures a level of protection for third parties' interests equivalent to that afforded by legal persons; and
+(b) they are subject to equivalent prudential supervision appropriate to their legal form.
+However, where a natural person provides services involving the holding of third party funds or transferable securities, that person may be considered to be an investment firm for the purposes of this Directive and of Regulation (EU) No 600/2014 only if, without prejudice to the other requirements imposed in this Directive, in Regulation (EU) No 600/2014, and in Directive 2013/36/EU, that person complies with the following conditions:
+(a) the ownership rights of third parties in instruments and funds must be safeguarded, especially in the event of the insolvency of the firm or of its proprietors, seizure, set-off or any other action by creditors of the firm or of its proprietors;
+(b) the firm must be subject to rules designed to monitor the firm's solvency and that of its proprietors;
+(c) the firm's annual accounts must be audited by one or more persons empowered, under national law, to audit accounts;
+(d) where the firm has only one proprietor, that person must make provision for the protection of investors in the event of the firm's cessation of business following the proprietor's death or incapacity or any other such event.
+
+> Organisational requirements under Article 16 of MiFID 2
+An investment firm should:
+a) maintain and operate an effective organisational and administrative arrangements to taking all reasonable steps designed to prevent conflicts of interest affecting the interests of its clients;
+b) Maintain, operate and review a process for the approval of financial instruments before marketed or distributed to clients, including target market, relevant risks and distribution strategy;
+c) review regularly the financial instruments offered;
+d) make available appropriate information on the financial instrument and the product approval process, including target market;
+e) have in place adequate arrangements to obtain the above information if offers financial instruments that they do not manufacture;
+f) take reasonable steps to ensure continuity and regularity in the performance of investment services and activities (appropriate and proportionate system, resources and procedures);
+g) ensure it takes reasonable steps to avoid undue operational risk in the case of outsourcing of critical functions (internal control and ability to monitor the firms compliance with all obligations needs to remain at the firm);
+h) have sound administrative and accounting procedures, internal control mechanisms, effective procedures for risk assessment and effective control and safeguard arrangements for information processing systems;
+i) have sound security mechanisms to guarantee the security and authentication of the means of transfer of information, minimise risk of data corruption and unauthorized access and to prevent information leakage maintaining the confidentiality of the data at all times;
+j) arrange for records to be kept of all services, activities and transactions undertaken which are sufficient to enable the competent authority to fulfil its supervisory tasks to ascertain the investment firm has complied with all relevant obligations;
+k) records shall include the recording of telephone conversations or electronic communications relate to transactions concluded when dealing on own account and the provision of client order services that relate to the receptions transmission and execution of client orders.
+
 Investment firm is defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G596.html) as:
 >(1) any person whose regular occupation or business is the provision of one or more investment services to third parties and/or the performance of one or more investment activities on a professional basis.
 [Note: article 4(1)(1) of MiFID]
@@ -235,9 +277,24 @@ Investment firm is defined in the [FCA Handbook](https://www.handbook.fca.org.uk
 >
 >(5) (in SYSC 19A(IFPRU Remuneration Code)) a firm in (3).
 >
->(6)	(in SYSC 19D (Dual-regulated firms Remuneration Code)) a firm in (3) that is a UK designated investment firm.
+>(6) (in SYSC 19D (Dual-regulated firms Remuneration Code)) a firm in (3) that is a UK designated investment firm.
 
-### local_firm
+### pension_fund
+*needs definition*
+
+### mmkt_fund
+Money Market Funds are well defined under the EU legislation for [Money Market Funds][mmfr] (MMFR):
+> This Regulation applies to collective investment undertakings that:
+(a) require authorisation as UCITS or are authorised as UCITS under Directive 2009/65/EC or are AIFs under Directive 2011/61/EU;
+(b) invest in short-term assets; and
+(c) have distinct or cumulative objectives offering returns in line with money market rates or preserving the value of the investment.
+
+In other jurisdictions, money market funds are identifiable based on their investments into 'money market instruments' which are typically short-term (< 1 year) and/or undergo regular yield adjustments in line with money markets conditions once per year.
+
+From Directive 2009/65/EC:
+> Money market instruments comprise transferable instru­ments which are normally dealt in on the money market rather than on the regulated markets, for example treasury and local authority bills, certificates of deposit, commer­cial papers, medium-term notes and bankers’ acceptances.
+
+### local_firm (inactive)
 Local firm is defined by the EU [here][lcr] Article 4(1)(4):
 > 'local firm' means a firm dealing for its own account on markets in financial futures or options or other derivatives and on cash markets for the sole purpose of hedging positions on derivatives markets, or dealing for the accounts of other members of those markets and being guaranteed by clearing members of the same markets, where responsibility for ensuring the performance of contracts entered into by such a firm is assumed by clearing members of the same markets
 
@@ -254,9 +311,6 @@ A securitisation special purpose entity is defined in the [FCA Handbook](https:/
 ### ciu
 A collective investment undertaking is defined by the EU [here][lcr] Article 4(1)(7):
 > 'collective investment undertaking' or 'CIU' means a UCITS as defined in Article 1(2) of Directive 2009/65/EC of the European Parliament and of the Council of 13 July 2009 on the coordination of laws, regulations and administrative provisions relating to undertakings for collective investment in transferable securities (UCITS) (21), including, unless otherwise provided, third-country entities which carry out similar activities, which are subject to supervision pursuant to Union law or to the law of a third country which applies supervisory and regulatory requirements at least equivalent to those applied in the Union, an AIF as defined in Article 4(1)(a) of Directive 2011/61/EU of the European Parliament and of the Council of 8 June 2011 on Alternative Investment Fund Managers (22), or a non-EU AIF as defined in Article 4(1)(aa) of that Directive;
-
-### ceis
-*needs definition*
 
 ### insurer
 The [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G569.html?date=2015-12-31) defines an **insurer** as: 
@@ -682,3 +736,5 @@ The [EC Collateral Directive][arrangement] states:
 [eu-covered-bonds-info]: http://ec.europa.eu/finance/investment/legal_texts/index_en.htm
 [sup-rep]: http://publications.europa.eu/resource/cellar/37c79802-fe90-11e3-831f-01aa75ed71a1.0006.03/DOC_1
 [2013-549]: https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32013R0549
+[sg-stat-boards]: https://www.gov.sg/sgdi/statutory-boards
+[mmfr]: https://eur-lex.europa.eu/eli/reg/2017/1131/oj
