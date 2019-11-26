@@ -1,0 +1,39 @@
+{
+	"description": "June three-month EURCAD FX future (taken in April)). Here we keep the derivative as 1 leg but reference an exchange rate in order to get the other currency.",
+    "data": {
+        "derivative": [
+            {
+                "id": "1",
+                "deal_id": "fx-fut123",
+                "date": "2019-04-01T00:00:00",
+                "mtm_dirty": -2,
+                "asset_class": "fx",
+                "currency_code": "EUR",
+                "trade_date": "2019-04-01T00:00:00",
+                "start_date": "2019-06-15T00:00:00",
+                "end_date": "2019-09-15T00:00:00",
+                "notional_amount": -100,
+                "type": "future",
+                "settlement_type": "physical",
+                "underlying_strike": 1.4,
+                "underlying_price": 1.35
+            },
+            {
+                "id": "2",
+                "deal_id": "fx-fut123",
+                "date": "2019-04-01T00:00:00",
+                "mtm_dirty": 2,
+                "asset_class": "fx",
+                "currency_code": "CAD",
+                "trade_date": "2019-04-01T00:00:00",
+                "start_date": "2019-06-15T00:00:00",
+                "end_date": "2019-09-15T00:00:00",
+                "notional_amount": 140,
+                "type": "future",
+                "settlement_type": "physical",
+                "underlying_strike": 0.714,
+                "underlying_price": 0.756
+            }
+        ]
+    }
+}

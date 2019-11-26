@@ -1,0 +1,39 @@
+{
+	"description": "10-year EUR interest rate swap, forward starting in 5 years",
+	"data": {
+		"derivative": [
+			{
+				"id": "1",
+				"deal_id": "5x10y-irswap",
+				"date": "2019-01-01T00:00:00",
+				"trade_date": "2019-01-01T00:00:00",
+				"start_date": "2024-01-01T00:00:00",
+				"end_date": "2034-01-01T00:00:00",
+				"asset_class": "ir",
+				"currency_code": "EUR",
+				"mtm_dirty": 0,
+				"notional_amount": 100,
+				"payment_type": "fixed",
+				"rate": 1.5,
+				"type": "swap",
+				"settlement_type": "cash"
+			},
+			{
+				"id": "2",
+				"deal_id": "5x10y-irswap",
+				"date": "2019-01-01T00:00:00",
+				"trade_date": "2019-01-01T00:00:00",
+				"start_date": "2024-01-01T00:00:00",
+				"end_date": "2034-01-01T00:00:00",
+				"asset_class": "ir",
+				"currency_code": "EUR",
+				"mtm_dirty": 0,
+				"notional_amount": 100,
+				"receive_type": "floating",
+				"rate": 1.75,
+				"type": "swap",
+				"settlement_type": "cash"
+			}
+		]
+	}
+}

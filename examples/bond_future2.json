@@ -1,0 +1,33 @@
+{
+	"description": "Futures on 20-year treasury bond that matures in 2 years",
+	"data": {
+		"derivative": [
+			{
+				"id": "1",
+				"date": "2019-01-01T00:00:00",
+				"mtm_dirty": 100,
+				"asset_class": "ir",
+				"currency_code": "USD",
+				"start_date": "2019-01-01T00:00:00",
+				"end_date": "2021-01-01T00:00:00",
+				"notional_amount": 100,
+				"delta": 0.5,
+				"type": "future",
+				"underlying_security_id": "20ytreasury"
+			}
+		],
+		"security": [
+			{
+				"id": "20ytreasury",
+				"date": "2019-01-01T00:00:00",
+				"mtm_dirty": 100,
+				"currency_code": "GBP",
+				"start_date": "2021-01-01T00:00:00",
+				"end_date": "2041-01-01T00:00:00",
+				"cqs_standardised": 2,
+				"type": "bond",
+				"purpose": "reference"
+			}
+		]
+	}
+}
