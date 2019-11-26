@@ -117,6 +117,26 @@
         "se_ndo", "us_fdic"
       ]
     },
+    "impairment_amount": {
+      "description": "The impairment amount is the allowance set aside by the firm that accounts for the event that the asset becomes impaired in the future.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "impairment_status": {
+      "description": "The recognition stage for the impairment/expected credit loss of the product.",
+      "type": "string",
+      "enum": [
+        "performing",
+        "stage_1",
+        "pass",
+        "stage_2",
+        "substandard",
+        "non_performing",
+        "stage_3",
+        "doubtful",
+        "loss"
+      ]
+    },
     "insolvency_rank": {
       "description": "The insolvency ranking as per the national legal fraamework of the reporting institution.",
       "type": "integer",

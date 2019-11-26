@@ -136,7 +136,7 @@
       "enum": ["i", "iia", "iib", "ineligible", "exclude"]
     },
     "impairment_amount": {
-      "description": "The impairment amount for a security is the allowance set aside by the firm.",
+      "description": "The impairment amount for a security is the allowance set aside by the firm for losses.",
       "type": "integer",
       "minimum": 0
     },
