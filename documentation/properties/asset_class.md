@@ -14,35 +14,36 @@ Primary asset classes are Equities, Rates, Credit, Commodities and Foreign Excha
 
 ```bash
 ── co
-│   ├── metals
+│   └── metals
 │       └── precious metals
-│             └── gold
-│             └── silver
-│             └── platinum
-│             └── palladium
+│       │   ├── gold
+│       │   ├── silver
+│       │   ├── platinum
+│       │   └── palladium
+│       └── precious metals
+│           ├── gold
+│           ├── silver
+│           ├── platinum
+│           └── palladium
 ├── cr
-│   └── cr_index
+│   ├── cr_index
 │   └── cr_single
 ├── eq
-│   └── eq_index
+│   ├── eq_index
 │   └── eq_single
 ├── fx
 ├── ir
 ├── energy
-│   └── oil
-│   └── gas
-│   └── coal
+│   ├── oil
+│   ├── gas
+│   ├── coal
 │   └── electricity
 ├── agri
 │   └── sugar
 │   └── coffee
 │   └── corn  
-├── other
+└── other
 ```
-
-### cr (credit derivatives)
-> Article 30(1) of Commission delegated regulation (EU) 2015/61
-Credit institutions shall report the market value of collateral other than Level 1 which is posted for contracts listed in Annex II of Regulation (EU) No. 575/2013 and credit derivatives.
 
 
 ---
