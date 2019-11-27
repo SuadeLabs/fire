@@ -392,9 +392,9 @@ Other refers to a type of security not covered by the above. If you find yoursel
 ```
 ├── equity
 │   ├── share
+│   │   ├── treasury
 │   │   └── pref_share
 │   └── share_agg
-│   └── treasury
 ├── debt
 │   ├── bond
 │   ├── covered_bond
