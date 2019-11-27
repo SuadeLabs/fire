@@ -10,7 +10,7 @@ schemas:	[loan, security, derivative]
 
 ├── performing
 |   ├── stage_1
-|   |   ├── pass (aka normal)
+|   |   ├── normal (aka pass)
 |   |   └── watch (aka special mention)
 |   └── stage_2
 |       └── substandard
@@ -34,7 +34,7 @@ Some agencies will also refer to *classified* loans as those that fall in substa
 ### stage_1
 **stage_1** assets are financial instruments that either have not deteriorated significantly in credit quality since initial recognition or have low credit risk. In this stage, financial institutions must recognise the expected credit losses that result from default events on a financial instrument that are possible within the 12 months after the reporting date. 
 
-### pass (normal)
+### normal (pass)
 HKMA LCS: 
 > This refers to loans where borrowers are current in meeting commitments and
 full repayment of interest and principal is not in doubt.

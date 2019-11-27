@@ -150,7 +150,7 @@
       "enum": [
         "performing",
         "stage_1",
-        "pass",
+        "normal",
         "stage_2",
         "substandard",
         "non_performing",
