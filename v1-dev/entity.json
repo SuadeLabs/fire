@@ -116,12 +116,6 @@
         "type":"string",
         "enum": ["a1", "a2", "a3", "b", "c", "d"]
     },
-    "ssic_code": {
-      "description": "The Singapore Standard Industrial Classification 2015 (Version 2018)", 
-      "type": "integer",
-      "minimum": 0,
-      "maximum": 99999
-    },
     "source": {
       "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
       "type": "string"
