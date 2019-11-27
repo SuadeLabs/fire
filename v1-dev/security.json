@@ -180,8 +180,7 @@
       "type": "string"
     },
     "mic_code": {
-      "description": "The market identifier code as defined by the International Standards Organisation.",
-      "type": "string"
+        "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/mic_code"
     },
     "mna_id": {
       "description": "The unique identifier of the Master Netting Agreement this security falls under. Typically where used as derivatives collateral.",
@@ -225,7 +224,7 @@
     "purpose": {
       "description": "The purpose for which the security is being held.",
       "type": "string",
-      "enum": ["investment", "collateral", "reference", "derivative_collateral", "other"]
+      "enum": ["investment", "collateral", "reference", "derivative_collateral", "other", "share_capital", "non_controlling"]
     },
     "rate": {
       "description": "The full interest rate applied to the security notional in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).",
@@ -302,12 +301,17 @@
       "type": "string",
       "format": "date-time"
     },
+    "status": {
+      "description": "Describes if capital has been paid up or has been called up but not paid for.",
+      "type": "string",
+      "enum": ["paid_up", "called_up"]
+    },
     "type": {
       "description": "This is the type of the security with regards to common regulatory classifications.",
       "type": "string",
       "enum": [
         "cash", "cb_reserve", "cb_facility", "cash_ratio_deposit",
-        "equity", "share", "share_agg", "pref_share",
+        "equity", "share", "share_agg", "pref_share","treasury",
         "debt", "bond", "covered_bond", "convertible_bond",
         "abs", "rmbs", "rmbs_trans", "cmbs", "frn", "mbs", "abs_auto", "abs_consumer", "abs_sme", "abs_other",
         "emtn", "mtn", "commercial_paper", "cd", "struct_note", "spv_mortgages", "spv_other",

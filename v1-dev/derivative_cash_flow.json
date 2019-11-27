@@ -18,9 +18,7 @@
       "type": "integer"
     },
     "asset_class": {
-      "description": "The asset class to which the derivative belongs.",
-      "type": "string",
-      "enum": ["co", "cr", "cr_index", "cr_single", "eq", "eq_index", "eq_single", "fx", "ir", "energy", "oil", "gas", "coal", "electricity", "metals", "silver", "gold", "agri", "sugar", "coffee", "corn", "other"]
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/asset_class"
     },
     "asset_liability": {
         "description": "A derivative cash flow exchange that results in a net positive value after the transaction is an asset on the firm's balance sheet. A derivative cash flow exchange that results in a net negative value after the transaction is a liability on the firm's balance sheet.",

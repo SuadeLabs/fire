@@ -44,6 +44,16 @@ This is a loan that was committed but then later cancelled due to refusal by cus
 ### defaulted
 This is a loan where the customer has defaulted or is non-performing.
 
+# security
+
+## paid_up
+This indicates that capital has been [paid up][paidup] by the shareholders to the company that issued the shares.
+
+## called_up
+This indicates that capital has been [called up][calledup] by the company issuing the shares but has not been paid yet by the shareholders.
+
+[paidup]: https://www.investopedia.com/terms/p/paidupcapital.asp
+[calledup]: https://www.investopedia.com/ask/answers/073015/what-difference-between-calledup-share-capital-and-paidup-share-capital.asp
 ---
 
 [lcr]:  http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
