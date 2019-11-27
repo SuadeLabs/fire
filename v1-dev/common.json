@@ -14,12 +14,21 @@
           "loans_and_recs",
           "held_to_maturity"
         ]
- },
-"asset_class": {
-  "description": "The asset class to which the derivative belongs.",
-  "type": "string",
-  "enum": ["co", "cr", "cr_index", "cr_single", "eq", "eq_index", "eq_single", "fx", "ir", "energy", "oil", "gas", "coal", "electricity", "metals", "precious_metals", "silver", "gold", "platinum", "palladium", "agri", "sugar", "coffee", "corn", "other"]
- },
+  },
+  "asset_class": {
+    "description": "The asset class to which the derivative belongs.",
+    "type": "string",
+    "enum": [
+      "cr", "cr_index", "cr_single",
+      "eq", "eq_index", "eq_single",
+      "fx",
+      "ir",
+      "co", "energy", "oil", "gas", "coal", "electricity",
+        "metals", "precious_metals", "silver", "gold", "platinum", "palladium",
+        "agri", "sugar", "coffee", "corn",
+      "other"
+    ]
+   },
   "currency_code": {
     "description": "Currency in accordance with ISO 4217 standards plus CNH for practical considerations.",
     "type": "string",
@@ -92,4 +101,5 @@
   "type": "string",
   "minLength": 4,
   "maxLength": 4
+ }
 }
