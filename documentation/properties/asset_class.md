@@ -16,11 +16,6 @@ Primary asset classes are Equities, Rates, Credit, Commodities and Foreign Excha
 ── co
 │   └── metals
 │       └── precious metals
-│       │   ├── gold
-│       │   ├── silver
-│       │   ├── platinum
-│       │   └── palladium
-│       └── precious metals
 │           ├── gold
 │           ├── silver
 │           ├── platinum

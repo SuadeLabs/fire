@@ -1,4 +1,4 @@
- ---
+---
 layout:     property  
 title:      "asset_liability"  
 schemas:    [account, derivative, derivative cash flow, loan, security]  

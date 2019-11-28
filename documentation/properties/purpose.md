@@ -137,7 +137,7 @@ This indicates shares that have been [issued][issued] for the purpose of raising
 [issued]: https://www.investopedia.com/terms/s/sharecapital.asp
 
 ### non_controlling 
-[Commission Regulation (EC) No 494/2009] [reg] defines **non-controlling interest** as:
+[Commission Regulation (EC) No 494/2009][reg] defines **non-controlling interest** as:
 > the equity in a subsidiary not attributable, directly or indirectly, to a parent.
 
 
