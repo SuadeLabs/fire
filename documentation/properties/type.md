@@ -217,7 +217,7 @@ A public sector entity is defined in the [FCA handbook](https://www.handbook.fca
 >(d) self administered bodies governed by law that are under public supervision.
 
 ### statutory_board
-A specific distinction for Singaporean public sector entities. The statutory boards of the Singapore Government are organisations that have been given autonomy to perform an operational function by legal statutes passed as Acts in parliament. The statutes define the purpose, rights and powers of the authority. They usually report to one specific ministry. 
+>A specific distinction for Singaporean public sector entities. The statutory boards of the Singapore Government are organisations that have been given autonomy to perform an operational function by legal statutes passed as Acts in parliament. The statutes define the purpose, rights and powers of the authority. They usually report to one specific ministry.
 A more comprehensive list can be found here:
 [Singaporean Statutory Boards][sg-stat-boards]
 
@@ -358,21 +358,38 @@ A financial holding copmany is defined by the EU [here](http://eur-lex.europa.eu
 ### credit_union
 A **credit union** is defined by the [FCA](https://www.fca.org.uk/firms/credit-unions) as:
 >A credit union is a financial co-operative owned by its members.
->The services that credit unions can offer include:
-> deposit-taking
+> The services that credit unions can offer include:
 >
-> savings
+> - deposit-taking
+> - savings
+> - lending
 >
-> lending
-These services are regulated activities.
+> These services are regulated activities.
 
 ### deposit_broker
-A **deposit broker** can be an individual or a firm that facilitates the placement of deposits with insured depository institutions. Deposit brokers offer investors an assortment of fixed-term investment products, which earn low-risk returns.
+>A **deposit broker** can be an individual or a firm that facilitates the placement of deposits with insured depository institutions. Deposit brokers offer investors an assortment of fixed-term investment products, which earn low-risk returns.
 
 # Loan
+```
+├── mortgage
+├── commercial_property
+├── personal
+├── auto
+├── commercial
+├── credit_card
+├── guarantee
+├── trade_finance
+├── letter_of_credit
+├── credit_facility
+├── liquidity_facility
+├── multiccy_facility
+├── nostro
+└── other
+```
 ### trade_finance
 From [CRR][crr] definitions (80):
-> Trade finance means financing, including guarantees, connected to the exchange of goods and services through financial products of fixed short-term maturity, generally of less than one year, without automatic rollover;
+> Trade finance means financing, including guarantees, connected to the exchange of goods and services through financial products of fixed short-term maturity, generally of less than one year, without automatic
+ rollover;
 
 ### trade_credit_insurance
 From the [EBA's][eba-nsfr-report] report on the NSFR, section 6.2.1 outlines what **trade credit insurance** is:
@@ -606,8 +623,6 @@ A non-exhaustive list of [examples][ecbexamples] of underlying assets that may c
 |        └──  property  
 ├── provision         
 └── other
-
-
 ```
 
 ### call
@@ -777,6 +792,35 @@ IAS 37.10 defines a **provision** as:
 
 ### other
 Any other account type that cannot be classified as one of the other types.
+
+# derivative
+```bash
+├── vanilla_swap
+├── mtm_swap
+├── cds
+├── ois
+├── xccy
+├── option
+|   ├── call_option
+|   └── put_option
+├── call_swaption
+├── put_swaption
+├── forward
+|    ├── future
+|    └── tarf
+└── spot
+```
+### ois
+Overnight Index Swap
+
+### cds
+Credit Default Swap
+
+### tarf
+Target Redemption Forward
+
+### spot
+Spot Exchange
 
 # collateral
 The collateral type defines the form of the collateral, such as property or other assets used to secure an obligation.

@@ -256,6 +256,11 @@
     "minimum_balance_eur": {
       "description": "Indicates the minimum balance, in Euros, of each account within the aggregate. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
+    },
+    "next_repricing_date": {
+      "description": "The date on which the interest rate of the account will be re-calculated. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
     }
   },
   "required": ["id", "date"],

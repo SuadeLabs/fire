@@ -348,6 +348,11 @@
     "minimum_balance_eur": {
       "description": "Indicates the minimum balance, in Euros, of each loan within the aggregate.",
       "type": "integer"
+    },
+    "next_repricing_date": {
+      "description": "The date on which the interest rate of the loan will be re-calculated. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
     }
   },
   "required": ["id", "date"],
