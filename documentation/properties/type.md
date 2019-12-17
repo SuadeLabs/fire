@@ -541,6 +541,7 @@ A non-exhaustive list of [examples][ecbexamples] of underlying assets that may c
 ├── debit_card
 ├── credit_card
 ├── reserve
+|   └── revenue_reserve
 |   └── share_plan
 |   └── reg_loss
 |   └── cf_hedge
@@ -695,9 +696,12 @@ MAS Notice 610 and Notice 1003 refers to **suspense** accounts as all outstandin
 [suspense]: https://www.investopedia.com/terms/s/suspenseaccount.asp
 
 ### reserve
-An account holding reserves. [Reserves][reserve] are created when a company allocates some of its profit to be put back into the business with the inetntion of using it for a specific purpose.
+An account holding reserves. [Reserves][reserve] are created from profit or from capital gains and are retained by an entity for a specific or more general purpose.
 
 [reserve]:  https://en.wikipedia.org/wiki/Reserve_(accounting)
+
+### revenue_reserve
+A type of reserve account. This is created when an entity retains an amount of its distributable profit.     
 
 ### share_plan
 This is a reserve account where funds are held with the purpose of share plans and other equity based compensation.  
