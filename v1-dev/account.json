@@ -227,7 +227,7 @@
       "type": "string",
       "enum": [
         "call", "cd", "current", "deferred", "intangible", "goodwill", "credit_card", "internet_only", "isa", "money_market", "ira",
-        "bonds", "retail_bonds", "savings", "payments", "time_deposit", "vostro", "provision", "suspense", "tangible", "ppe", "investment_property", "owner_property", "property", "reserve", "share_plan", "reg_loss", "cf_hedge", "other"
+        "bonds", "retail_bonds", "savings", "payments", "time_deposit", "vostro", "provision", "suspense", "tangible", "ppe", "investment_property", "owner_property", "property", "reserve", "revenue_reserve", "share_plan", "reg_loss", "cf_hedge", "other"
       ]
     },
     "trade_date": {
