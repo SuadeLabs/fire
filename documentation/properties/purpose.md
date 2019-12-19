@@ -131,8 +131,13 @@ The **other** enum value can be used when none of the other enum values apply or
 ├── reference
 ├── share_capital
 |    └──  non_controlling
+├── trade_finance
+├── aircraft_finance
 └──   other
 ```
+### trade_finance
+From [CRR][crr] definitions (80):
+> **Trade finance** means financing, including guarantees, connected to the exchange of goods and services through financial products of fixed short-term maturity, generally of less than one year, without automatic rollover;
 
 ### derivative_collateral
 Defined in accordance with Article 30(1) of the [LCR][lcr] regulation:

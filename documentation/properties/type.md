@@ -367,7 +367,7 @@ A **credit union** is defined by the [FCA](https://www.fca.org.uk/firms/credit-u
 > These services are regulated activities.
 
 ### deposit_broker
->A **deposit broker** can be an individual or a firm that facilitates the placement of deposits with insured depository institutions. Deposit brokers offer investors an assortment of fixed-term investment products, which earn low-risk returns.
+A **deposit broker** can be an individual or a firm that facilitates the placement of deposits with insured depository institutions. Deposit brokers offer investors an assortment of fixed-term investment products, which earn low-risk returns.
 
 # Loan
 ```
@@ -377,9 +377,7 @@ A **credit union** is defined by the [FCA](https://www.fca.org.uk/firms/credit-u
 ├── auto
 ├── commercial
 ├── credit_card
-├── guarantee
 ├── trade_finance
-├── letter_of_credit
 ├── credit_facility
 ├── liquidity_facility
 ├── multiccy_facility
@@ -388,8 +386,7 @@ A **credit union** is defined by the [FCA](https://www.fca.org.uk/firms/credit-u
 ```
 ### trade_finance
 From [CRR][crr] definitions (80):
-> Trade finance means financing, including guarantees, connected to the exchange of goods and services through financial products of fixed short-term maturity, generally of less than one year, without automatic
- rollover;
+> Trade finance means financing, including guarantees, connected to the exchange of goods and services through financial products of fixed short-term maturity, generally of less than one year, without automatic rollover
 
 ### trade_credit_insurance
 From the [EBA's][eba-nsfr-report] report on the NSFR, section 6.2.1 outlines what **trade credit insurance** is:
@@ -399,13 +396,6 @@ From the [EBA's][eba-nsfr-report] report on the NSFR, section 6.2.1 outlines wha
 From the [EBA's][eba-nsfr-report] report on the NSFR, section 6.2.2, a **letter of credit** is:
 > When goods are traded, the seller and the buyer need to agree on the process of how to pay for the goods. While the buyer may be reluctant to prepay for the traded goods, the seller may also be unwilling to ship the goods before payment is made. In this situation, a bank can intermediate between the trading partners by providing an import letter of credit (L/C) to the buyer of the goods, which guarantees payment to the seller.
 > A L/C is a contingent liability and payment is only made by the bank to the seller from funds in the buyer’s account when the documentation of shipping is presented.
-
-### guarantee
-From EU [Supervisory Reporting][sup-rep] part 2(9):
-> 'Financial guarantees' are contracts that require the issuer to make specified payments to reimburse the holder of a loss it incurs, because a specified debtor fails to make payment when due in accordance with the original or modified terms of a debt instrument. Under IFRS or compatible National GAAP, these contracts meet the IAS 39.9 and IFRS 4.A definition of financial guarantee contracts. The following items of Annex I of the CRR shall be classified as 'financial guarantees':
-> (a) Guarantees having the character of credit substitute.
-> (b) Credit derivatives that meet the definition of financial guarantee.
-> (c) Irrevocable standby letters of credit having the character of credit substitutes.
 
 ### project_finance
 As defined in [Supervisory Reporting][sup-rep] part 2(5)(41)(l):
@@ -487,6 +477,17 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │           ├── rmbs
 │           ├── rmbs_trans
 │           └── cmbs
+├── guarantee
+│   ├── financial_guarantee
+│   │   └── financial_sloc
+│   └── performance_guarantee
+│       ├── warranty
+│       ├── performance_bond
+│       └── performance_sloc
+├── letter_of_credit
+├── bill_of_exchange
+│   └── acceptance
+├── urp
 ├── cb_reserve
 ├── cb_facility
 ├── cash_ratio_deposit
@@ -574,6 +575,26 @@ As defined in [Finrep Annex V part (2)(1)(1.1)(2)](https://www.eba.europa.eu/doc
 ### cash_ratio_deposit
 The [BofE](http://www.bankofengland.co.uk/statistics/Documents/faq/crds.pdf) defines this as:
 > non-interest bearing deposits lodged with the Bank of England by eligible institutions (ie. banks and building societies), who have reported average eligible liabilities (ELs) of over £600 million over a calculation period. The level of each institution's CRD is currently calculated twice-yearly (currently in May and November) at 0.18% of average ELs, over the previous six end-calendar months, in excess of £600mn. The value bands and ratios were specified by HM Treasury in the Cash Ratio Deposits (Value Bands and Ratios) Order (2013 No 1189).
+
+### acceptance
+From EU [Supervisory Reporting][sup-rep] part 2(5)(60)(b):
+> “Acceptances” are obligations by an institution to pay on maturity the face value of a bill of exchange, normally covering the sale of goods. Consequently, they are classified as “trade receivables” on the balance sheet
+
+### financial_guarantee
+From EU [Supervisory Reporting][sup-rep] part 2(9):
+> 'Financial guarantees' are contracts that require the issuer to make specified payments to reimburse the holder of a loss it incurs, because a specified debtor fails to make payment when due in accordance with the original or modified terms of a debt instrument. Under IFRS or compatible National GAAP, these contracts meet the IAS 39.9 and IFRS 4.A definition of financial guarantee contracts. The following items of Annex I of the CRR shall be classified as 'financial guarantees':
+> (a) Guarantees having the character of credit substitute.
+> (b) Credit derivatives that meet the definition of financial guarantee.
+> (c) Irrevocable standby letters of credit having the character of credit substitutes.
+
+### financial_sloc
+Financial standby letter of credit
+
+### performance_sloc
+Performance standby letter of credit
+
+### urp
+Unfunded risk participation
 
 ### other
 Other refers to a type of security not covered by the above. If you find yourself using this often, please [contribute][contributing].
