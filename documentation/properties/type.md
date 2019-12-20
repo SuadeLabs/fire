@@ -474,7 +474,6 @@ Other refers to a type of security not covered by the above. If you find yoursel
 ├── letter_of_credit
 ├── bill_of_exchange
 │   └── acceptance
-├── urp
 ├── cb_reserve
 ├── cb_facility
 ├── cash_ratio_deposit
