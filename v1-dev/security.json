@@ -44,6 +44,10 @@
       "minimum": 0.0,
       "maximum": 1.0
     },
+    "cost_center_code": {
+      "description": "The organizational unit or sub-unit to which costs/profits are booked.",
+      "type": "string"
+    },
     "balance": {
       "description": "Outstanding amount including accrued interest. Monetary integer number of cents/pence.",
       "type": "integer"
