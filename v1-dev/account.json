@@ -184,7 +184,7 @@
     "purpose": {
       "description": "The purpose for which the account was created or is being used.",
       "type": "string",
-      "enum": ["deposit", "cash_management", "ci_service", "collateral", "clearing", "custody", "ips", "operational", "operational_escrow", "escrow", "prime_brokerage", "firm_operating_expenses", "employee", "system", "critical_service", "tax", "other"]
+      "enum": ["admin_expenses", "deposit", "depreciation", "cash_management", "firm_operating_expenses", "ci_service", "collateral", "clearing", "commitments", "custody", "ips", "operational", "operational_escrow", "escrow", "post_employment", "prime_brokerage", "restructuring", "firm_operating_expenses", "employee", "staff_expenses", "system", "critical_service", "tax", "other"]
     },
     "rate": {
       "description": "The full interest rate applied to the account balance in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).",
@@ -230,8 +230,8 @@
       "description": "This is the type of the account with regards to common regulatory classifications.",
       "type": "string",
       "enum": [
-        "call", "cd", "current", "deferred", "intangible", "goodwill", "credit_card", "internet_only", "isa", "money_market", "ira",
-        "bonds", "retail_bonds", "savings", "payments", "time_deposit", "vostro", "provision", "suspense", "tangible", "ppe", "investment_property", "owner_property", "property", "reserve", "revenue_reserve", "share_plan", "reg_loss", "cf_hedge", "other"
+        "call", "cd", "current", "deferred", "dividend", "interim_dividend", "exchange_difference", "fee", "intangible", "disposal_group", "goodwill", "credit_card", "internet_only", "isa", "money_market", "ira",
+        "bonds", "retail_bonds", "savings", "payments", "time_deposit", "vostro", "provision", "suspense", "tangible", "ppe", "investment_property", "owner_property", "property", "owners_of_parent", "reserve", "revenue_reserve", "revaluation_reserve", "retained_earnings", "share_plan", "reg_loss", "cf_hedge", "other"
       ]
     },
     "trade_date": {
