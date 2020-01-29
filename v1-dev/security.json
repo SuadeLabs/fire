@@ -228,7 +228,7 @@
     "purpose": {
       "description": "The purpose for which the security is being held.",
       "type": "string",
-      "enum": ["trade_finance", "aircraft_finance", "investment", "collateral", "reference", "derivative_collateral", "other", "share_capital", "non_controlling"]
+      "enum": ["trade_finance", "aircraft_finance", "investment", "collateral", "reference", "derivative_collateral", "other", "share_capital", "non_controlling", "back_to_back"]
     },
     "rate": {
       "description": "The full interest rate applied to the security notional in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).",
