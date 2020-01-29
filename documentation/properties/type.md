@@ -618,35 +618,33 @@ A non-exhaustive list of [examples][ecbexamples] of underlying assets that may c
 # Account
 
 ```bash
-├── current
-├── call
-├── deferred
-├── intangible
-|    └──  goodwill
-├── internet_only
-├── savings
-├── time_deposit
 ├── bonds
-├── retail_bonds
+├── call
 ├── cd
+├── credit_card
+├── current
+├── debit_card (pending)
+├── internet_only
+├── ira
 ├── isa
 ├── money_market
+├── non_product
+│   ├── deferred
+│   ├── expense
+│   ├── income
+│   ├── intangible
+│   │   └── goodwill
+│   ├── non_deferred
+│   ├── provision
+│   ├── reserve
+│   ├── suspense
+│   └── tangible
+│       └── ppe
+├── prepaid_card (pending)
+├── retail_bonds
+├── savings
+├── time_deposit
 ├── vostro
-├── prepaid_card
-├── debit_card
-├── credit_card
-├── reserve
-|   └── revenue_reserve
-|   └── share_plan
-|   └── reg_loss
-|   └── cf_hedge
-├── suspense
-├── tangible
-|    └──  ppe
-|        └── investment_property
-|        └──  owner_property
-|        └──  property  
-├── provision         
 └── other
 ```
 
@@ -689,20 +687,6 @@ Any account containing notes, bonds or other securities instruments.
 As referenced in the [LCR][lcr] Regulation Article 28 (6) as any account:
 > containing notes, bonds and other securities issued which are sold exclusively in the retail market and held in a retail account. Limitations shall be placed such that those instruments cannot be bought and held by parties other than retail customers.
 
-### deferred
-A **deferred** account is an account in which the recognition of certain revenue or expenses on the income statement is delayed for a certain period of time. For example, a deferred tax asset, which is reported in F1.01 of FINREP,  is defined by IAS 12.5 as follows:
-> the amounts of income taxes recoverable in future periods in respect of:
-(a) deductible temporary differences;
-(b)the carryforward of unused tax losses; and
-(c) the carryforward of unused tax credits.
-
-### intangible
-An account which holds intangible assets. IAS 38 defines an **intangible asset** as:
-> an identifiable non-monetary asset without physical substance.
-
-### goodwill
-**Goodwill** is a type of intangible asset. IFRS3, Appendix A, defines **goodwill** as:
-> an asset representing the future economic benefits arising from other assets acquired in a business combination that are not individually identified and separately recognised.
 
 ### internet_only
 An internet-only account is one that is offered and only accessible via the internet. The [FCA][fca-internet] defines the internet in their handbook as:
@@ -757,20 +741,29 @@ vacation club accounts)
 Deposit or depository account is defined in the [Directive regarding the mandatory exchange of tax information][exch-tax-info] section 8:
 > The term “Depository Account” includes any commercial, checking, savings, time, or thrift account, or an account that is evidenced by a certificgitcheckoutate of deposit, thrift certificate, investment certificate, certificate of indebtedness, or other similar instrument maintained by a Financial Institution in the ordinary course of a banking or similar business. A Depository Account also includes an amount held by an insurance company pursuant to a guaranteed investment contract or similar agreement to pay or credit interest thereon.
 
+### non_product
+This is an overarching term used to define any non-product accounts that may exist on the balance sheet, ledger or other income/P&L accounts.
+
+### deferred
+A **deferred** account is an account in which the recognition of certain revenue or expenses on the income statement is delayed for a certain period of time. For example, a deferred tax asset, which is reported in F1.01 of FINREP,  is defined by IAS 12.5 as follows:
+> the amounts of income taxes recoverable in future periods in respect of:
+(a) deductible temporary differences;
+(b) the carryforward of unused tax losses; and
+(c) the carryforward of unused tax credits.
+
+### non_deferred
+Undeferred is used to avoid confusion with a customer current account. This is in reference to a current asset or current liability eg. (current tax liability) where it is recognised typically within the next 12 months.
+
+### intangible
+An account which holds intangible assets. IAS 38 defines an **intangible asset** as:
+> an identifiable non-monetary asset without physical substance.
+
+### goodwill
+**Goodwill** is a type of intangible asset. IFRS3, Appendix A, defines **goodwill** as:
+> an asset representing the future economic benefits arising from other assets acquired in a business combination that are not individually identified and separately recognised.
+
 ### tangible
 An account that holds tangible assets. From the definition of an **intangible asset**, we can infer that tangible assets refers to an asset has physical substance, for example, property or machinery.
-
-### investment property
-IAS 40.5 defines **investment property** as:
-> property (land or a building - or part of a building - or both) held (by the owner or by the lessee as a right-of-use asset) to earn rentals or for capital appreciation or both, rather than for:
-(a) use in the production or supply of goods or services or for administrative purposes; or
-(b) sale in the ordinary course of business.
-
-### owner_property
-IAS 40.5 defines **owner occupied property** as:
-> property held (by the owner or by the lessee as a right-of-use asset) for use in the production or supply of goods or services or for administrative purposes.
-
-For example, for the reporting of Notice MAS 610/1003, **owner occupied property** includes bank premises.
 
 ### ppe
 IAS 16(6) defines **property plant and equipment** as:
@@ -778,45 +771,27 @@ IAS 16(6) defines **property plant and equipment** as:
 (a) are held for use in the production or supply of goods or services, for rental to others, or for administrative purposes; and
 (b) are expected to be used during more than one period.
 
-### property
-This refers to other **immovable property** not included in investment property or owner occupied property,
-
 ### suspense
-Transactions will be considered to be in [**suspense**][suspense] if there is some doubt at the time of reporting regaring how the transaction  should be classified and reported, for example, which ledger should it be posted to.
+Transactions will be considered to be in [**suspense**][suspense] if there is some doubt at the time of reporting regarding how the transaction  should be classified and reported, for example, which ledger should it be posted to.
 
 MAS Notice 610 and Notice 1003 refers to **suspense** accounts as all outstanding unreconciled amounts that are kept in suspense.
 
 [suspense]: https://www.investopedia.com/terms/s/suspenseaccount.asp
 
-### reserve
-An account holding reserves. [Reserves][reserve] are created from profit or from capital gains and are retained by an entity for a specific or more general purpose.
-
-[reserve]:  https://en.wikipedia.org/wiki/Reserve_(accounting)
-
-### revenue_reserve
-A type of reserve account. This is created when an entity retains an amount of its distributable profit.     
-
-### share_plan
-This is a reserve account where funds are held with the purpose of share plans and other equity based compensation.  
-
-### reg_loss
-This is a reserve that is created when an entity allocates funds to a reserve account for the purpose of complying with requirements for minimum **regulatory loss allowances**.
-
-For example, [MAS Notice 612][MAS612] (section 6.3.7) requires locally incorporated domestic systemically important banks to maintain a minimum level of loss allowance equivalent to 1% of the gross carrying amount of selected credit exposures net of collateral. This is referred to as the Minimum Regulatory Loss Allowance. Where the entity's Accounting Loss Allowance (calculated in accordance with the impairment requirements under FRS 109) falls below the Minimum Regulatory Loss Allowance, the entity shall maintain the difference in a non-distributable regulatory loss allowance reserve which shall be appropriated from retained earnings.
-
-[MAS612]: https://www.mas.gov.sg/regulation/notices/notice-612
-
-### cf_hedge
-IFRS 9.6.5.2 defines a **cash flow hedge** as follows:
- > a hedge of the exposure to variability in cash flows that is attributable to a particular risk associated with all, or a component of, a  recognised asset or liability (such as all or some future interest payments on variable-rate debt) or a highly probable forecast transaction, and could affect profit or loss.
-
- IFRS 9 refers to the **cash flow hedge reserve** as the separate equity component associated with the hedged item. In hedge accounting under IFRS, this account is a key component of the recognition of a hedging relationship.
-
- For example, in the EBA's FINREP F.1.3 report, the effective portion of the variation in fair value of hedging derivatives in a cash flow hedge, both for ongoing cash flow hedges and cash flow hedges that no longer apply, is reported as the **cash flow hedge reserve**.
-
 ### provision
 IAS 37.10 defines a **provision** as:
 > a liability of uncertain timing or amount
+
+### income
+An account representing monies received (over a period).
+
+### expense
+An account representing monies spent (over a period).
+
+### reserve
+An account holding reserves. [Reserves][reserve] are created from profit or from capital gains and are retained by an entity for a specific or more general purpose. Reserves are essentially anything on the equity side of the balance sheet that is not capital.
+
+[reserve]:  https://en.wikipedia.org/wiki/Reserve_(accounting)
 
 ### other
 Any other account type that cannot be classified as one of the other types.
