@@ -183,7 +183,7 @@
     "purpose": {
       "description": "The purpose for which the derivative is being held.",
       "type": "string",
-      "enum": ["reference"]
+      "enum": ["reference", "cva_hedge", "back_to_back"]
     },
     "rate": {
       "description": "The full interest rate applied to the derivative notional in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).",

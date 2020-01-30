@@ -174,6 +174,12 @@ The **other** enum value can be used when it is known that none of the other enu
 Use this enumeration value to refer to derivatives which are underlyings of other derivative positions (e.g. swaptions).
 In the context of [CRR][crr] Article 329, a reference derivative would be the underlying swap of a swaption.
 
+### cva_hedge
+Use this enumeration value to refer to derivatives booked in order to hedge CVA as defined in [CRR][crr] Article 386.
+
+### back_to_back
+Use this enumeration value to highlight back to back trades defined as "exactly matching" in [Pruval Delegated Regulation][pruval] Article 4 (2)
+
 ## Derivative Cash Flow
 ### reference
 Use this enumeration value to refer to derivative cash flows which are calculated in order to decompose derivatives in combinations of long and short flows. See [CRR][crr] Articles 328 to 331.
@@ -270,10 +276,13 @@ This indicates shares that have been [issued][issued] for the purpose of raising
 [Commission Regulation (EC) No 494/2009][reg] defines **non-controlling interest** as:
 > the equity in a subsidiary not attributable, directly or indirectly, to a parent.
 
+### back_to_back
+Use this enumeration value to highlight back to back trades defined as "exactly matching" in [Pruval Delegated Regulation][pruval] Article 4 (2)
+
 
 [reg]: https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32009R0494&from=EN
----
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575
 [lcr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
 [id]: https://github.com/suadelabs/fire/blob/master/documentation/properties/id.md
 [mlardef]: http://www.bankofengland.co.uk/pra/documents/regulatorydata/mlar/sup_chapter16_annex19bg_20120401.pdf
+[pruval]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:JOL_2016_021_R_0005
