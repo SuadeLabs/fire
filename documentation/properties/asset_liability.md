@@ -9,7 +9,7 @@ schemas:    [account, derivative, derivative cash flow, loan, security]
 ---
 
 ### account  
-An account is either an **asset**,  a **liability**, or an **equity** from the firm's point of view.
+An account is either an **asset**,  a **liability**, an **equity** or **pnl** (Profit & Loss) from the firm's point of view.
 
 An account is considered an [**asset**][asset] if it is a present economic resource controlled by the entity as a result of
 past event. For example, a [loan] [loan] is an asset from the issuing entity's point of view, as the issuing entity expects inflows of economic benefits as a result of issuing a loan, as the account holder pays interest and penalties (if applicable).
@@ -17,7 +17,9 @@ past event. For example, a [loan] [loan] is an asset from the issuing entity's p
 An account is considered a [**liability**][liability] if it is a present obligation of the entity to transfer an economic resource
 as a result of past events. For example, a [savings account][savings account] is a liability from the issuing entity's point of view, as the issuing entity expects the issuance of a savings account to lead to an outflow of future economic benefits from the entity, as the issuer pays interest on the funds in the account to the account holder.
 
-An account is considered an [**equity**][equity] if it represents a residual interest in the firm's assets after all of its liabilities have been deducted. For example, a firm may allocate certain amounts of its profits to a [reserve][reserve] account for specific purposes (e.g. a revaluation reserve or a share plan reserve). This reserve acount would be recognised as equity on the firm's balance sheet.
+An account is considered an [**equity**][equity] if it represents a residual interest in the firm's assets after all of its liabilities have been deducted. For example, a firm may allocate certain amounts of its profits to a [reserve][reserve] account for specific purposes (e.g. a revaluation reserve or a share plan reserve). This reserve account would be recognised as equity on the firm's balance sheet. Equity is typically split in to two types of accounts, capital and reserves.
+
+An account is considered [Profit and Loss (**pnl**)][pnl] if it represents income or expenses attributable to the firm over the period defined by the start and end dates.
 
 [asset]: http://www.ifrs.org/-/media/project/conceptual-framework/exposure-draft/published-documents/ed-conceptual-framework.pdf
 [liability]: http://www.ifrs.org/-/media/project/conceptual-framework/exposure-draft/published-documents/ed-conceptual-framework.pdf

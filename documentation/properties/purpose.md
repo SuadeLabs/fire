@@ -8,9 +8,44 @@ schemas:	[account, loan, security, derivative, derivative_cash_flow]
 
 ---
 
-The **purpose** property describes the reason behind the creation or usage of the financial product *as seen from the point of view of the financial institution*.
+The **purpose** property describes the reason behind the creation or usage of the financial product *as seen from the point of view of the firm*.
 
 ## Account
+```bash
+├── admin
+├── cash_management
+├── cf_hedge
+├── ci_service
+├── collateral
+├── commitments
+├── clearing
+├── critical_service
+├── custody
+├── deposit
+├── depreciation
+├── dividend
+├── employee
+├── fees
+├── firm_operations
+├── fx
+├── interest
+├── ips
+├── operational
+├── other
+├── pension
+├── prime_brokerage
+├── property
+│   ├── investment_property
+│   └── own_property
+├── reference
+├── reg_loss
+├── restructuring
+├── revenue_reserve
+├── share_plan
+├── staff
+├── system
+└── tax
+```
 
 ### deposit
 The **deposit** enum value refers to a retail deposit defined in accordance with Article 411 of the [CRR][crr]:
@@ -28,14 +63,24 @@ Assets placed as a **ci_service** should be considered unencumbered inaccordance
 > assets included in a pool which are available for immediate use as collateral to obtain additional funding under committed but not yet funded credit lines available to the credit institution. This shall include assets placed by a credit institution with the central institution in a cooperative network or institutional protection scheme.
 
 ### collateral
-The **collateral** enum type identifies an account or deposit received as collateral and hence, not classified as a liability for the purposes of Article 27 and 29 of the [LCR][lcr]. Collateral held in an account should have a corresponding [**id**][id] in the collateral schema.
+The **collateral** enum type identifies an account or deposit received as collateral and hence, not classified as a liability for the purposes of Article 27 and 29 of the [LCR][lcr]. Collateral held in an account should have a corresponding [**id**][id] in the collateral schema
 
-### operational
+### ips
+*needs definition*
+
+### escrow
+*needs definition*
+
+### operational_escrow
+*needs definition*
+
+### clearing
 The **clearing** enum value indicates that the account or deposit is being maintained for clearing, settlement, custody or cash management services in the context of an **operational** relationship and hence can be treated as a very short term exposure.
 
 Clearing and comparable services from the [CRR][crr] Article 422.4:
 > Clearing, custody or cash management or other comparable services referred to in points (a) and (d) of paragraph 3 only covers such services to the extent that they are rendered in the context of an established relationship on which the depositor has substantial dependency. They shall not merely consist in correspondent banking or prime brokerage services and the institution shall have evidence that the client is unable to withdraw amounts legally due over a 30 day horizon without compromising its operational functioning.
 
+### operational
 Operational deposit from the [CRR][crr] Article 27.6:
 > 6. In order to identify the deposits referred to in point (c) of paragraph 1, a credit institution shall consider that there is an established operational relationship with a non-financial customer, excluding term deposits, savings deposits and brokered deposits, where all of the following criteria are met:
 > (a) the remuneration of the account is priced at least 5 basis points below the prevailing rate for wholesale deposits with comparable characteristics, but need not be negative;
@@ -52,8 +97,77 @@ As opposed to short-term definition within **operational**, **custody** here ref
 ### prime_brokerage
 Describes an account held for prime brokerage reasons but not including those contained above for operational reasons. These accounts are used for prime brokerage service transactions which are in essence investment activities including securities lending, leveraged trade executions and cash management, among other things.
 
+### investment property
+IAS 40.5 defines **investment property** as:
+> property (land or a building - or part of a building - or both) held (by the owner or by the lessee as a right-of-use asset) to earn rentals or for capital appreciation or both, rather than for:
+(a) use in the production or supply of goods or services or for administrative purposes; or
+(b) sale in the ordinary course of business.
+
+### own_property
+IAS 40.5 defines **owner occupied property** as:
+> property held (by the owner or by the lessee as a right-of-use asset) for use in the production or supply of goods or services or for administrative purposes.
+
+For example, for the reporting of Notice MAS 610/1003, **owner occupied property** includes bank premises.
+
+### property
+This refers to other **immovable property** not included in investment property or owner occupied property,
+
+### revenue_reserve
+A type of reserve account. This is created when an entity retains an amount of its distributable profit.     
+
+### share_plan
+This is a reserve account where funds are held with the purpose of share plans and other equity based compensation.  
+
+### reg_loss
+This is a reserve that is created when an entity allocates funds to a reserve account for the purpose of complying with requirements for minimum **regulatory loss allowances**.
+
+For example, [MAS Notice 612][MAS612] (section 6.3.7) requires locally incorporated domestic systemically important banks to maintain a minimum level of loss allowance equivalent to 1% of the gross carrying amount of selected credit exposures net of collateral. This is referred to as the Minimum Regulatory Loss Allowance. Where the entity's Accounting Loss Allowance (calculated in accordance with the impairment requirements under FRS 109) falls below the Minimum Regulatory Loss Allowance, the entity shall maintain the difference in a non-distributable regulatory loss allowance reserve which shall be appropriated from retained earnings.
+
+[MAS612]: https://www.mas.gov.sg/regulation/notices/notice-612
+
+### cf_hedge
+IFRS 9.6.5.2 defines a **cash flow hedge** as follows:
+ > a hedge of the exposure to variability in cash flows that is attributable to a particular risk associated with all, or a component of, a  recognised asset or liability (such as all or some future interest payments on variable-rate debt) or a highly probable forecast transaction, and could affect profit or loss.
+
+IFRS 9 refers to the **cash flow hedge reserve** as the separate equity component associated with the hedged item. In hedge accounting under IFRS, this account is a key component of the recognition of a hedging relationship.
+
+For example, in the EBA's FINREP F.1.3 report, the effective portion of the variation in fair value of hedging derivatives in a cash flow hedge, both for ongoing cash flow hedges and cash flow hedges that no longer apply, is reported as the **cash flow hedge reserve**.
+
+### fees
+*needs definition*
+
+### pension
+*needs definition*
+
+### restructuring
+*needs definition*
+
+### commitments
+*needs definition*
+
+### tax
+*needs definition*
+
+### dividend
+*needs definition*
+
+### interest
+*needs definition*
+
+### fx
+*needs definition*
+
+### admin
+*needs definition*
+
+### staff
+*needs definition*
+
+### depreciation
+An account representing the the change in value attributable (over a period) to assets where depreciation must be accounted for.
+
 ### other
-The **other** enum value can be used when none of the other enum values apply or the value is *unknown*.
+The **other** enum value can be used when it is known that none of the other enum values apply.
 
 ## Derivative
 ### reference
@@ -133,13 +247,13 @@ The **other** enum value can be used when none of the other enum values apply or
 ```bash
 ├── investment
 ├── collateral
-|    └──  derivative_collateral
+│    └──  derivative_collateral
 ├── reference
 ├── share_capital
-|    └──  non_controlling
+│    └──  non_controlling
 ├── trade_finance
 ├── aircraft_finance
-└──   other
+└── other
 ```
 ### trade_finance
 From [CRR][crr] definitions (80):
