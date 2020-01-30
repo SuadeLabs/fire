@@ -94,7 +94,7 @@
   "asset_liability": {
     "description": "Is the data an asset, a liability, or equity on the firm's balance sheet?",
     "type": "string",
-    "enum": ["asset", "liability", "equity"]
+    "enum": ["asset", "liability", "equity", "pnl"]
  },
  "mic_code": {
   "description": "The market identifier code as defined by the International Standards Organisation.",
