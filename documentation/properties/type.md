@@ -633,13 +633,11 @@ A non-exhaustive list of [examples][ecbexamples] of underlying assets that may c
 │   ├── expense
 │   ├── income
 │   ├── intangible
-│   │   └── goodwill
 │   ├── non_deferred
 │   ├── provision
 │   ├── reserve
 │   ├── suspense
 │   └── tangible
-│       └── ppe
 ├── prepaid_card (pending)
 ├── retail_bonds
 ├── savings
@@ -758,18 +756,8 @@ Undeferred is used to avoid confusion with a customer current account. This is i
 An account which holds intangible assets. IAS 38 defines an **intangible asset** as:
 > an identifiable non-monetary asset without physical substance.
 
-### goodwill
-**Goodwill** is a type of intangible asset. IFRS3, Appendix A, defines **goodwill** as:
-> an asset representing the future economic benefits arising from other assets acquired in a business combination that are not individually identified and separately recognised.
-
 ### tangible
 An account that holds tangible assets. From the definition of an **intangible asset**, we can infer that tangible assets refers to an asset has physical substance, for example, property or machinery.
-
-### ppe
-IAS 16(6) defines **property plant and equipment** as:
-> tangible items that:
-(a) are held for use in the production or supply of goods or services, for rental to others, or for administrative purposes; and
-(b) are expected to be used during more than one period.
 
 ### suspense
 Transactions will be considered to be in [**suspense**][suspense] if there is some doubt at the time of reporting regarding how the transaction  should be classified and reported, for example, which ledger should it be posted to.
