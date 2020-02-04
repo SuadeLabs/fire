@@ -8,7 +8,7 @@ schemas:	[account, loan, security, derivative, derivative_cash_flow]
 
 ---
 
-The **purpose** property describes the reason behind the creation or usage of the financial product *as seen from the point of view of the firm*.
+The **purpose** property describes the reason behind the creation or usage of the financial product or account *as seen from the point of view of the firm*.
 
 ## Account
 ```bash
@@ -26,7 +26,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── dividend
 ├── employee
 ├── fees
-├── firm_operations
+├── firm_operating_expenses
 ├── fx
 ├── interest
 ├── ips
@@ -34,6 +34,8 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── other
 ├── pension
 ├── prime_brokerage
+├── ppe
+├── goodwill
 ├── property
 │   ├── investment_property
 │   └── own_property
@@ -162,6 +164,16 @@ For example, in the EBA's FINREP F.1.3 report, the effective portion of the vari
 
 ### staff
 *needs definition*
+
+### goodwill
+**Goodwill** is a type of intangible asset. IFRS3, Appendix A, defines **goodwill** as:
+> an asset representing the future economic benefits arising from other assets acquired in a business combination that are not individually identified and separately recognised.
+
+### ppe
+IAS 16(6) defines **property plant and equipment** as:
+> tangible items that:
+(a) are held for use in the production or supply of goods or services, for rental to others, or for administrative purposes; and
+(b) are expected to be used during more than one period.
 
 ### depreciation
 An account representing the the change in value attributable (over a period) to assets where depreciation must be accounted for.
