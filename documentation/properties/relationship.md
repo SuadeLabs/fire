@@ -11,7 +11,7 @@ The **relationship** is used to describe the link betweek two entities. There ar
 - The relationship between an entity (customer, issuer or guarantor) and it's ultimate parent. 
 - The relationship between an entity (customer, issuer or guarantor) and the reporting_entity.
 
-An entity can be a **branch** or a **subsidiary** of its ultimate parent.
+An entity can be a **parent_branch** or a **parent_subsidiary** of its ultimate parent.
 
 If the entity and the reporting_entity are directly linked, the former can be a **branch**, **subsidiary**, **parent** or **head_office** of the latter.
 
