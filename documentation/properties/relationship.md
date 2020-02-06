@@ -7,10 +7,23 @@ schemas:	[entity]
 # relationship
 
 ---
+The **relationship** is used to describe the link betweek two entities. There are two categories:
+- The relationship between an entity (customer, issuer or guarantor) and it's ultimate parent. 
+- The relationship between an entity (customer, issuer or guarantor) and the reporting_entity.
+
+An entity can be a **parent_branch** or a **parent_subsidiary** of its ultimate parent.
+
+If the entity and the reporting_entity are directly linked, the former can be a **branch**, **subsidiary**, **parent** or **head_office** of the latter.
+
+If the entity and the reporting_entity are not directly linked, the former can be a **parent_subsidiary** or **parent_branch**.
 
 ### parent
-Any undertaking which is not itself a subsidiary of another undertaking and/or effectively exercises a dominant influence over another undertaking.
-See first paragraph of subsidiary definition.
+Any undertaking which is not itself a subsidiary of another undertaking and/or effectively exercises a dominant influence over another undertaking. See first paragraph of subsidiary definition.
+
+
+### head_office
+It is a subcategory of parent that has control over one or many branch offices
+
 
 ### subsidiary
 Controlling interests in other entities. More specifically, from Article 1(1) of the [Directive on Consolidated Accounts][dir-83-349]:
@@ -49,6 +62,12 @@ members or participants
 From Wikipedia [Branch Office][branch-wiki]:
 A branch office is an outlet of a company or, more generally, an organization that – unlike a subsidiary – does not constitute a separate legal entity, while being physically separated from the organization's main office.
 
+
+### parent_subsidiary
+A subsidiary of the parent
+
+### parent_branch
+A branch of the parent
 
 ---
 [dir-83-349]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31983L0349
