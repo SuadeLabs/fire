@@ -171,7 +171,7 @@ def generate_product_fire(schema, data_type, n):
                 attr_value = random_text(12)
                 continue
 
-            elif attr == "reporting_lei":
+            elif attr == "reporting_id":
                 attr_value = random_text(20)
                 continue
 
