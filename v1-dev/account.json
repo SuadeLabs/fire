@@ -131,7 +131,7 @@
         "performing",
         "stage_1",
         "normal",
-	"watch",
+        "watch",
         "stage_2",
         "substandard",
         "non_performing",
@@ -193,9 +193,9 @@
         "cash_management",
         "ips",
         "custody",
-	"operational",
+        "operational",
         "prime_brokerage",
-	"ppe",
+        "ppe",
         "property",
         "investment_property",
         "own_property",
@@ -204,8 +204,8 @@
         "reg_loss",
         "cf_hedge",
         "fees",
-	"firm_operating_expenses",
-	"goodwill",
+        "firm_operating_expenses",
+        "goodwill",
         "pension",
         "restructuring",
         "commitments",
@@ -238,14 +238,12 @@
     "regulatory_book": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/regulatory_book"
     },
-    "reporting_lei": {
-      "description": "The LEI code for the legal entity under which the account is being reported.",
-      "type": "string",
-      "minLength": 20,
-      "maxLength": 20
-    },
     "reporting_entity_name": {
-      "description": "The name of the reporting legal entity for MI purposes (as LEI code may not be available).",
+      "description": "The name of the reporting legal entity for display purposes.",
+      "type": "string"
+    },
+    "reporting_id": {
+      "description": "The internal ID for the legal entity under which the account is being reported.",
       "type": "string"
     },
     "risk_country_code": {

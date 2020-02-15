@@ -155,7 +155,7 @@
         "performing",
         "stage_1",
         "normal",
-	"watch",
+        "watch",
         "stage_2",
         "substandard",
         "non_performing",
@@ -283,14 +283,12 @@
       "type": "string",
       "enum": ["repayment", "interest_only", "combined", "other"]
     },
-    "reporting_lei": {
-      "description": "The LEI code for the legal entity under which the loan is being reported.",
-      "type": "string",
-      "minLength": 20,
-      "maxLength": 20
-    },
     "reporting_entity_name": {
-      "description": "The name of the reporting legal entity for display purposes (as LEI code may not be available).",
+      "description": "The name of the reporting legal entity for display purposes.",
+      "type": "string"
+    },
+    "reporting_id": {
+      "description": "The internal ID for the legal entity under which the account is being reported.",
       "type": "string"
     },
     "risk_country_code": {
