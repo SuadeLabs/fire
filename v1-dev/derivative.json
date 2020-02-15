@@ -197,14 +197,12 @@
     "regulatory_book": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/regulatory_book"
     },
-    "reporting_lei": {
-      "description": "The LEI code for the legal entity under which the derivative is being reported.",
-      "type": "string",
-      "minLength": 20,
-      "maxLength": 20
-    },
     "reporting_entity_name": {
-      "description": "The name of the reporting legal entity for display purposes (as LEI code may not be available).",
+      "description": "The name of the reporting legal entity for display purposes.",
+      "type": "string"
+    },
+    "reporting_id": {
+      "description": "The internal ID for the legal entity under which the account is being reported.",
       "type": "string"
     },
     "rho": {
