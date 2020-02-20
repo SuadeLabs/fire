@@ -629,6 +629,7 @@ A non-exhaustive list of [examples][ecbexamples] of underlying assets that may c
 ├── isa
 ├── money_market
 ├── non_product
+    ├── amortisation
 │   ├── deferred
 │   ├── expense
 │   ├── income
@@ -741,6 +742,10 @@ Deposit or depository account is defined in the [Directive regarding the mandato
 
 ### non_product
 This is an overarching term used to define any non-product accounts that may exist on the balance sheet, ledger or other income/P&L accounts.
+
+### amortisation
+An account which holds the **amortisation amount** of intangible assets measured at cost model. IAS 38.74 defines cost model measurement of intangible assets as follow:
+> After initial recognition intangible assets should be carried at cost less accumulated **amortisation** and impairment losses
 
 ### deferred
 A **deferred** account is an account in which the recognition of certain revenue or expenses on the income statement is delayed for a certain period of time. For example, a deferred tax asset, which is reported in F1.01 of FINREP,  is defined by IAS 12.5 as follows:
