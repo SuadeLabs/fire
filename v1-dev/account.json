@@ -292,7 +292,8 @@
         "savings",
         "time_deposit",
         "vostro",
-        "other"
+        "other",
+        "amortisation"
       ]
     },
     "trade_date": {
