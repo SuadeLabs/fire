@@ -1,9 +1,10 @@
 {
-    "description": "1Y AUD/EUR currency swap. The underlying_price is the current (spot) fx rate (at start it will equal the rate used to exchange notionals at start, otherwise equal to the division of the two notionals. The underlying_strike is the fwd fx rate (used to exchange notionals at the end), note for normal fx swaps, the fwd rate is used at the end. The rate is the interim interest payment rate for each side of the trade.",
+    "description": "1Y AUD/USD currency swap. The underlying_price is the current (spot) fx rate (at start it will equal the rate used to exchange notionals at start, otherwise equal to the division of the two notionals. The underlying_strike is the fwd fx rate (used to exchange notionals at the end), note for normal fx swaps, the fwd rate is used at the end. The rate is the interim interest payment rate for each side of the trade.",
     "data": {
         "derivative": [
             {
                 "id":               "1",
+                "date":             "2019-02-25T00:00:00",
                 "deal_id":          "dalabc",
                 "trade_date":       "2019-02-25T00:00:00",
                 "mtm_dirty":        -2,
@@ -22,6 +23,7 @@
             },
             {
                 "id":               "2",
+                "date":             "2019-02-25T00:00:00",
                 "deal_id":          "dalabc",
                 "trade_date":       "2019-02-25T00:00:00",
                 "mtm_dirty":        2,
