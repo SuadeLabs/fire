@@ -327,6 +327,10 @@
       "description": "The date on which the interest rate of the account will be re-calculated. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
       "format": "date-time"
+    },
+    "risk_weight_std": {
+      "description": "The standardised approach risk weight represented as a decimal/float such that 1.5% is 0.015.",
+      "type": "number"
     }
   },
   "required": ["id", "date"],
