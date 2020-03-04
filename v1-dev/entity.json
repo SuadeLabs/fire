@@ -181,6 +181,10 @@
     "version_id": {
       "description": "The version identifier of the data such as the firm's internal batch identifier.",
       "type": "string"
+    },
+    "national_reporting_code":{
+      "description": "Unique identifier established by the national reporting system",
+      "type": "string"
     }
   },
   "required": ["id", "date"],
