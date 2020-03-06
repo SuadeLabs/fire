@@ -796,6 +796,7 @@ Any other account type that cannot be classified as one of the other types.
 ├── cds
 ├── ois
 ├── xccy
+├── nds
 ├── option
 |   ├── call_option
 |   └── put_option
@@ -803,6 +804,7 @@ Any other account type that cannot be classified as one of the other types.
 ├── put_swaption
 ├── forward
 |    ├── future
+|    ├── ndf
 |    └── tarf
 └── spot
 ```
@@ -817,6 +819,18 @@ Target Redemption Forward
 
 ### spot
 Spot Exchange
+
+### non deliverable forward (ndf)
+A [**non-deliverable forward**][ndf] is a cash-settled, and usually short-term, forward contract. The notional amount is never exchanged, hence the name "non-deliverable." Two parties agree to take opposite sides of a transaction for a set amount of money - at a contracted rate, in the case of a currency NDF. This means that counterparties settle the difference between contracted NDF price and the prevailing spot price. The profit or loss is calculated on the notional amount of the agreement by taking the difference between the agreed-upon rate and the spot rate at the time of settlement
+
+[ndf]: https://www.investopedia.com/terms/n/ndf.asp
+
+### non deliverable swap (nds)
+A [**non-deliverable swap**][nds] is a variation on a currency swap between major and minor currencies that is restricted or not convertible. This means that there is no actual delivery of the two currencies involved in the swap, unlike a typical currency swap where there is physical exchange of currency flows. Instead, periodic settlement of a NDS is done on a cash basis, generally in U.S. dollars.
+
+The settlement value is based on the difference between the exchange rate specified in the swap contract and the spot rate, with one party paying the other the difference. A non-deliverable swap can be viewed as a series of non-deliverable forwards bundled together.
+
+[nds]: https://www.investopedia.com/terms/n/nondeliverableswap.asp
 
 # collateral
 The collateral type defines the form of the collateral, such as property or other assets used to secure an obligation.
