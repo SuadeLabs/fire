@@ -806,6 +806,7 @@ Any other account type that cannot be classified as one of the other types.
 |    ├── future
 |    ├── ndf
 |    └── tarf
+├── fra
 └── spot
 ```
 ### ois
@@ -831,6 +832,12 @@ A [**non-deliverable swap**][nds] is a variation on a currency swap between majo
 The settlement value is based on the difference between the exchange rate specified in the swap contract and the spot rate, with one party paying the other the difference. A non-deliverable swap can be viewed as a series of non-deliverable forwards bundled together.
 
 [nds]: https://www.investopedia.com/terms/n/nondeliverableswap.asp
+
+### forward rate agreement (fra)
+A [**forward rate agreement**][fra] is an interest rate forward contract in which the rate to be paid or received on a specific obligation for a set period of time, beginning at some time in the future, is determined at contract initiation.
+
+[fra]: https://www.bis.org/statistics/glossary.htm?&selection=315&scope=Statistics&c=a&base=term
+
 
 # collateral
 The collateral type defines the form of the collateral, such as property or other assets used to secure an obligation.
