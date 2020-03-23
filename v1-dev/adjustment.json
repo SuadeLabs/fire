@@ -13,20 +13,12 @@
       "type": "string",
       "format": "date-time"
     },
-    "report_type": {
-      "description": "The report that this adjustment relates to.",
-      "type": "string"
-    },
-    "page": {
-      "description": "The page of the report that this adjustment relates to.",
-      "type": "string"
-    },
-    "row": {
-      "description": "The row of the report that this adjustment relates to.",
-      "type": "string"
-    },
     "column": {
       "description": "The column of the report that this adjustment relates to.",
+      "type": "string"
+    },
+    "comment": {
+      "description": "The description or commentary around the adjustment.",
       "type": "string"
     },
     "contribution": {
@@ -42,12 +34,20 @@
       "type": "string",
       "enum": ["sum", "average"]
     },
+    "page": {
+      "description": "The page of the report that this adjustment relates to.",
+      "type": "string"
+    },
+    "report_type": {
+      "description": "The report that this adjustment relates to.",
+      "type": "string"
+    },
     "reporting_entity_name": {
       "description": "The name of the reporting legal entity for display purposes.",
       "type": "string"
     },
-    "comment": {
-      "description": "The description or commentary around the adjustment.",
+    "row": {
+      "description": "The row of the report that this adjustment relates to.",
       "type": "string"
     },
     "version_id": {
