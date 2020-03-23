@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Adjustment Schema",
+  "description": "An adjustment represents a modification to a report.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The unique identifier for the adjustment within the financial institution.",
+      "type": "string"
+    },
+    "date": {
+      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "report_type": {
+      "description": "The report that this adjustment relates to.",
+      "type": "string"
+    },
+    "page": {
+      "description": "The page of the report that this adjustment relates to.",
+      "type": "string"
+    },
+    "row": {
+      "description": "The row of the report that this adjustment relates to.",
+      "type": "string"
+    },
+    "column": {
+      "description": "The column of the report that this adjustment relates to.",
+      "type": "string"
+    },
+    "contribution": {
+      "description": "The contribution this adjustment should make to the specified report cell. Typically a positive/negative number.",
+      "type": "integer"
+    },
+    "currency_code": {
+      "description": "Actual currency of the adjustment in accordance with ISO 4217 standards.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+    },
+    "operator": {
+      "description": "The operation to be taken on the contributions if more than one adjustment is found targeting the same cell. Multiple operators will be groupe, then summed.",
+      "type": "string",
+      "enum": ["sum", "average"]
+    },
+    "reporting_entity_name": {
+      "description": "The name of the reporting legal entity for display purposes.",
+      "type": "string"
+    },
+    "comment": {
+      "description": "The description or commentary around the adjustment.",
+      "type": "string"
+    },
+    "version_id": {
+      "description": "The version identifier of the data such as the firm's internal batch identifier.",
+      "type": "string"
+    }
+  },
+  "required": ["id", "date"],
+  "additionalProperties": true
+}
