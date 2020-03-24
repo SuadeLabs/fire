@@ -13,7 +13,7 @@
       "type": "string",
       "format": "date-time"
     },
-    "column": {
+    "col": {
       "description": "The column of the report that this adjustment relates to.",
       "type": "string"
     },
@@ -64,8 +64,8 @@
     }
   },
   "oneOf": [
-    {"required": ["id", "date", "report_type", "row", "column", "contribution_amount", "currency_code"]},
-    {"required": ["id", "date", "report_type", "row", "column", "contribution_text"]}
+    {"required": ["id", "date", "report_type", "row", "col", "contribution_amount", "currency_code"]},
+    {"required": ["id", "date", "report_type", "row", "col", "contribution_text"]}
   ],
   "additionalProperties": true
 }
