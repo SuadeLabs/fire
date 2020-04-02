@@ -33,11 +33,6 @@
       "description": "The currency of the contribution_amount in accordance with ISO 4217 standards.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
     },
-    "operator": {
-      "description": "The operation to be taken on the contributions if more than one adjustment is found targeting the same cell. Multiple operators will be groupe, then summed.",
-      "type": "string",
-      "enum": ["sum", "average"]
-    },
     "page": {
       "description": "The page of the report that this adjustment relates to.",
       "type": "string"
