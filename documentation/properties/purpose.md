@@ -31,6 +31,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── interest
 ├── ips
 ├── operational
+│   ├── operational_excess
 ├── other
 ├── pension
 ├── prime_brokerage
@@ -83,7 +84,7 @@ Clearing and comparable services from the [CRR][crr] Article 422.4:
 > Clearing, custody or cash management or other comparable services referred to in points (a) and (d) of paragraph 3 only covers such services to the extent that they are rendered in the context of an established relationship on which the depositor has substantial dependency. They shall not merely consist in correspondent banking or prime brokerage services and the institution shall have evidence that the client is unable to withdraw amounts legally due over a 30 day horizon without compromising its operational functioning.
 
 ### operational
-Operational deposit from the [CRR][crr] Article 27.6:
+Operational deposit from the [CRR][lcr] Article 27.6:
 > 6. In order to identify the deposits referred to in point (c) of paragraph 1, a credit institution shall consider that there is an established operational relationship with a non-financial customer, excluding term deposits, savings deposits and brokered deposits, where all of the following criteria are met:
 > (a) the remuneration of the account is priced at least 5 basis points below the prevailing rate for wholesale deposits with comparable characteristics, but need not be negative;
 > (b) the deposit is held in specifically designated accounts and priced without creating economic incentives for the depositor to maintain funds in the deposit in excess of what is needed for the operational relationship;
@@ -92,6 +93,9 @@ Operational deposit from the [CRR][crr] Article 27.6:
 > (i) the relationship with the depositor has existed for at least 24 months;
 > (ii) the deposit is used for a minimum of 2 active services. These services may include direct or indirect access to national or international payment services, security trading or depository services.
 > Only that part of the deposit which is necessary to make use of the service of which the deposit is a by-product shall be treated as an operational deposit. The excess shall be treated as non-operational.
+
+### operational_excess
+Excess operational deposits are defined as the part of the operational deposits (as defined in [CRR][lcr] Article 27.6) held in excess of those required for the provision of operational services. The distinction between operational deposits and excess operational deposits is required for the reporting of section 1.1.3 in the ouflows section of the [CRR][lcr]
 
 ### custody
 As opposed to short-term definition within **operational**, **custody** here refers to the long-term custody of financial assets such as those held for safekeeping by a custodian bank.
@@ -115,10 +119,10 @@ For example, for the reporting of Notice MAS 610/1003, **owner occupied property
 This refers to other **immovable property** not included in investment property or owner occupied property,
 
 ### revenue_reserve
-A type of reserve account. This is created when an entity retains an amount of its distributable profit.     
+A type of reserve account. This is created when an entity retains an amount of its distributable profit.
 
 ### share_plan
-This is a reserve account where funds are held with the purpose of share plans and other equity based compensation.  
+This is a reserve account where funds are held with the purpose of share plans and other equity based compensation.
 
 ### reg_loss
 This is a reserve that is created when an entity allocates funds to a reserve account for the purpose of complying with requirements for minimum **regulatory loss allowances**.
@@ -280,11 +284,11 @@ Use this enumeration value to refer to securities which are underlyings of deriv
 In the context of [CRR][crr] Article 328, a reference security would be the underlying bond of a bond future position.
 
 ### share_capital
-This indicates shares that have been [issued][issued] for the purpose of raising capital for the company.     
+This indicates shares that have been [issued][issued] for the purpose of raising capital for the company.
 
 [issued]: https://www.investopedia.com/terms/s/sharecapital.asp
 
-### non_controlling 
+### non_controlling
 [Commission Regulation (EC) No 494/2009][reg] defines **non-controlling interest** as:
 > the equity in a subsidiary not attributable, directly or indirectly, to a parent.
 
