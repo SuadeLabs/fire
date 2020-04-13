@@ -13,14 +13,11 @@ The **purpose** property describes the reason behind the creation or usage of th
 ## Account
 ```bash
 ├── admin
-├── cash_management
 ├── cf_hedge
 ├── ci_service
 ├── collateral
 ├── commitments
-├── clearing
 ├── critical_service
-├── custody
 ├── deposit
 ├── depreciation
 ├── dividend
@@ -29,9 +26,13 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── firm_operating_expenses
 ├── fx
 ├── interest
-├── ips
 ├── operational
+│   ├── cash_management
+│   ├── clearing
+│   ├── custody
+│   ├── ips
 │   ├── operational_excess
+│   └── operational_escrow
 ├── other
 ├── pension
 ├── prime_brokerage
@@ -69,7 +70,7 @@ Assets placed as a **ci_service** should be considered unencumbered inaccordance
 The **collateral** enum type identifies an account or deposit received as collateral and hence, not classified as a liability for the purposes of Article 27 and 29 of the [LCR][lcr]. Collateral held in an account should have a corresponding [**id**][id] in the collateral schema
 
 ### ips
-*needs definition*
+Within the context of **operational** deposits as defined in Artcle 27.1(d) of the [LCR][lcr], the **ips** enum indicates that the account is maintained by the depositor to obtain cash clearing and central institution services and where the deposit taking institution belongs to an  institutional protection scheme or equivalent network as referred in Article 16 of the [LCR][lcr].
 
 ### escrow
 *needs definition*
@@ -84,7 +85,7 @@ Clearing and comparable services from the [CRR][crr] Article 422.4:
 > Clearing, custody or cash management or other comparable services referred to in points (a) and (d) of paragraph 3 only covers such services to the extent that they are rendered in the context of an established relationship on which the depositor has substantial dependency. They shall not merely consist in correspondent banking or prime brokerage services and the institution shall have evidence that the client is unable to withdraw amounts legally due over a 30 day horizon without compromising its operational functioning.
 
 ### operational
-Operational deposit from the [CRR][lcr] Article 27.6:
+Operational deposit from the [LCR][lcr] Article 27.6:
 > 6. In order to identify the deposits referred to in point (c) of paragraph 1, a credit institution shall consider that there is an established operational relationship with a non-financial customer, excluding term deposits, savings deposits and brokered deposits, where all of the following criteria are met:
 > (a) the remuneration of the account is priced at least 5 basis points below the prevailing rate for wholesale deposits with comparable characteristics, but need not be negative;
 > (b) the deposit is held in specifically designated accounts and priced without creating economic incentives for the depositor to maintain funds in the deposit in excess of what is needed for the operational relationship;
@@ -95,7 +96,7 @@ Operational deposit from the [CRR][lcr] Article 27.6:
 > Only that part of the deposit which is necessary to make use of the service of which the deposit is a by-product shall be treated as an operational deposit. The excess shall be treated as non-operational.
 
 ### operational_excess
-Excess operational deposits are defined as the part of the operational deposits (as defined in [CRR][lcr] Article 27.6) held in excess of those required for the provision of operational services. The distinction between operational deposits and excess operational deposits is required for the reporting of section 1.1.3 in the ouflows section of the [CRR][lcr]
+Excess operational deposits are defined as the part of the operational deposits (as defined in [LCR][lcr] Article 27.6) held in excess of those required for the provision of operational services. The distinction between operational deposits and excess operational deposits is required for the reporting of section 1.1.3 in the ouflows section of the [LCR][lcr]
 
 ### custody
 As opposed to short-term definition within **operational**, **custody** here refers to the long-term custody of financial assets such as those held for safekeeping by a custodian bank.
