@@ -12,8 +12,10 @@ schemas:	[loan, security, derivative]
 ├── performing  
 |   ├── stage_1  
 |   |   ├── normal (aka pass)  
-|   |   └── watch (aka special mention)  
+|   |   ├── watch (aka special mention) 
+|   |   └── stage_1_substandard
 |   └── stage_2  
+|       ├── stage_2_normal (aka pass) 
 |       ├── stage_2_watch (aka special mention) 
 |       └── substandard  
 └── non_performing
