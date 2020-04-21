@@ -11,13 +11,13 @@ schemas:	[loan, security, derivative]
 ```bash
 ├── performing  
 |   ├── stage_1  
-|   |   ├── normal (aka pass)  
-|   |   ├── watch (aka special mention) 
+|   |   ├── stage_1_normal (aka pass)  
+|   |   ├── stage_1_watch (aka special mention) 
 |   |   └── stage_1_substandard
 |   └── stage_2  
 |       ├── stage_2_normal (aka pass) 
 |       ├── stage_2_watch (aka special mention) 
-|       └── substandard  
+|       └── stage_2_substandard  
 └── non_performing
     └── stage_3
         ├── doubtful  
