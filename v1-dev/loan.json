@@ -153,15 +153,22 @@
       "type": "string",
       "enum": [
         "performing",
-        "stage_1",
-        "normal",
-        "watch",
-        "stage_2",
-        "substandard",
         "non_performing",
-        "stage_3",
-        "doubtful",
-        "loss"
+        "risk_stage_1_pass",
+        "risk_stage_2_pass",
+        "risk_stage_3_pass",
+        "risk_stage_1_special_mention",
+        "risk_stage_2_special_mention",
+        "risk_stage_3_special_mention",
+        "risk_stage_1_substandard",
+        "risk_stage_2_substandard",
+        "risk_stage_3_substandard",
+        "risk_stage_1_doubtful",
+        "risk_stage_2_doubtful",
+        "risk_stage_3_doubtful",
+        "risk_stage_1_loss",
+        "risk_stage_2_loss",
+        "risk_stage_3_loss"
       ]
     },
     "impairment_type": {

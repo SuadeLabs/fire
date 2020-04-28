@@ -9,19 +9,23 @@ schemas:	[loan, security, derivative]
 ---
 
 ```bash
-├── performing  
-|   ├── stage_1  
-|   |   ├── stage_1_normal (aka pass)  
-|   |   ├── stage_1_watch (aka special mention) 
-|   |   └── stage_1_substandard
-|   └── stage_2  
-|       ├── stage_2_normal (aka pass) 
-|       ├── stage_2_watch (aka special mention) 
-|       └── stage_2_substandard  
-└── non_performing
-    └── stage_3
-        ├── doubtful  
-        └── loss  
+├── performing
+├── non_performing
+├── risk_stage_1_pass
+├── risk_stage_1_special_mention
+├── risk_stage_1_substandard
+├── risk_stage_1_doubtful
+├── risk_stage_1_loss
+├── risk_stage_2_pass
+├── risk_stage_2_special_mention
+├── risk_stage_2_substandard
+├── risk_stage_2_doubtful
+├── risk_stage_2_loss
+├── risk_stage_3_pass
+├── risk_stage_3_special_mention
+├── risk_stage_3_substandard
+├── risk_stage_3_doubtful
+├── risk_stage_3_loss
 ```
 
 Under [IFRS9][ifrs9] accounting principles, impairment must be recognised in stages and this standard is being adopted globally. Historically, at the most granular level, agencies are largely adopting and documenting industry best practices. Some jurisdictions employ even more detailed assessments with 10 or more categories going in to more granular detail.
