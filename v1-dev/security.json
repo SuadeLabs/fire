@@ -240,6 +240,7 @@
         "collateral",
         "reference",
         "derivative_collateral",
+        "independent_collateral_amount",
         "other",
         "share_capital",
         "non_controlling",

@@ -264,6 +264,7 @@ The **other** enum value can be used when none of the other enum values apply or
 ├── investment
 ├── collateral
 │    └──  derivative_collateral
+│    └──  independent_collateral_amount
 ├── reference
 ├── share_capital
 │    └──  non_controlling
@@ -278,6 +279,10 @@ From [CRR][crr] definitions (80):
 ### derivative_collateral
 Defined in accordance with Article 30(1) of the [LCR][lcr] regulation:
 > "collateral posted for contracts listed in [Annex II of Regulation (EU) No. 575/2013](http://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32013R0575) and credit derivatives".
+
+### independent_collateral_amount (ICA)
+Defined in accordance with [SA-CCR][bis_sa_ccr].
+> ICA represents (i) collateral (other than VM) posted by the counterparty that the bank may seize upon default of the counterparty, the amount of which does not change in response to the value of the transaction it secures and/or (ii) the Independent Amount (IA) parameter as defined in standard industry documentation.
 
 ### reference
 Use this enumeration value to refer to securities which are underlyings of derivative positions (e.g. bond futures).
@@ -302,3 +307,4 @@ Use this enumeration value to highlight back to back trades defined as "exactly 
 [id]: https://github.com/suadelabs/fire/blob/master/documentation/properties/id.md
 [mlardef]: http://www.bankofengland.co.uk/pra/documents/regulatorydata/mlar/sup_chapter16_annex19bg_20120401.pdf
 [pruval]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:JOL_2016_021_R_0005
+[bis_sa_ccr]: https://www.bis.org/publ/bcbs279.pdf
