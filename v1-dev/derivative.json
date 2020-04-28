@@ -61,6 +61,10 @@
       "description": "The organizational unit or sub-unit to which costs/profits are booked.",
       "type": "string"
     },
+    "csa_id": {
+      "description": "The unique identifier of the credit support annex for this derivative",
+      "type": "string"
+    },
     "currency_code": {
       "description": "Actual currency of the underlying reference index, security or asset for the derivative in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
@@ -119,7 +123,7 @@
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/mic_code"
     },
     "mna_id": {
-      "description": "The unique identifier of the Master Netting Agreement for this derivative cash flow.",
+      "description": "The unique identifier of the Master Netting Agreement for this derivative",
       "type": "string"
     },
     "mtm_clean": {

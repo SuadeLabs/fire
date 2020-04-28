@@ -28,6 +28,10 @@
       "description": "The contractual balance due on the payment date in the currency given. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
+    "csa_id": {
+      "description": "The unique identifier of the credit support annex for this derivative cash flow",
+      "type": "string"
+    },
     "currency_code": {
       "description": "Actual currency of the security in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"

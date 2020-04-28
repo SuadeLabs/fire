@@ -43,7 +43,7 @@ The [Credit Support Amount][isda_csa] defined by ISDA.
 Unless modified by the parties, the “Credit Support Amount” is the amount of Eligible Credit Support that the Secured Party is entitled to hold as of aparticular Valuation Date. In other words, it is the exposure of the Secured Party to the Chargor, adjusted to reflect agreed thresholds, minimum transfer amounts and so on.
 
 ### Unmargined derivatives
-The [Standardised approach for measuring counterparty credit risk][bis_sa_ccr] from BIS, published in 2014.
+The [SA-CCR][bis_sa_ccr] from BIS, published in 2014.
 
 For  unmargined  transactions(that  is,  where  variation  margin  (VM)  is  not  exchanged,  but collateral other than VM may be present)
 
