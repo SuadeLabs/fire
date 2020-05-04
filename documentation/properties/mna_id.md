@@ -1,7 +1,7 @@
 ---
-layout:		mna_id
-title:		"purpose"
-schemas:	[derivative, security]
+layout:		property
+title:		"mna_id"
+schemas:	[derivative, derivative_cash_flow, security]
 ---
 
 # mna_id

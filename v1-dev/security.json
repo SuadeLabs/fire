@@ -91,6 +91,10 @@
       "minimum": 1,
       "maximum": 12
     },
+    "csa_id": {
+      "description": "The unique identifier of the credit support annex this security falls under. Typically where used as derivatives collateral.",
+      "type": "string"
+    },
     "currency_code": {
       "description": "Actual currency of the security in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
@@ -236,6 +240,7 @@
         "collateral",
         "reference",
         "derivative_collateral",
+        "independent_collateral_amount",
         "other",
         "share_capital",
         "non_controlling",
