@@ -149,20 +149,7 @@
       "minimum": 0
     },
     "impairment_status": {
-      "description": "The recognition stage for the impairment/expected credit loss of the product.",
-      "type": "string",
-      "enum": [
-        "performing",
-        "stage_1",
-        "normal",
-        "watch",
-        "stage_2",
-        "substandard",
-        "non_performing",
-        "stage_3",
-        "doubtful",
-        "loss"
-      ]
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/impairment_status"
     },
     "impairment_type": {
       "description": "The loss event resulting in the impairment of the loan.",

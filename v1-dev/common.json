@@ -86,6 +86,37 @@
       "XW", "XX", "XY", "XZ", "ZZ"
     ]
   },
+  "impairment_status": {
+    "description": "The recognition stage for the impairment/expected credit loss of the product.",
+    "type": "string",
+    "enum": [
+      "performing",
+      "stage_1",
+      "normal",
+      "watch",
+      "stage_2",
+      "substandard",
+      "non_performing",
+      "stage_3",
+      "doubtful",
+      "loss",
+      "stage_1_normal",
+      "stage_1_watch",
+      "stage_1_substandard",
+      "stage_1_doubtful",
+      "stage_1_loss",
+      "stage_2_normal",
+      "stage_2_watch",
+      "stage_2_substandard",
+      "stage_2_doubtful",
+      "stage_2_loss",
+      "stage_3_normal",
+      "stage_3_watch",
+      "stage_3_substandard",
+      "stage_3_doubtful",
+      "stage_3_loss"
+    ]
+  },
   "regulatory_book": {
     "description": "The type of portfolio in which the instrument is held.",
     "type": "string",

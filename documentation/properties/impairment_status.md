@@ -1,7 +1,7 @@
 ---
 layout:		property  
 title:		"impairment_status"  
-schemas:	[loan, security, derivative]
+schemas:	[account, loan, security, derivative]
 ---
 
 # impairment_status
@@ -9,20 +9,36 @@ schemas:	[loan, security, derivative]
 ---
 
 ```bash
-├── performing  
-|   ├── stage_1  
-|   |   ├── stage_1_normal (aka pass)  
-|   |   ├── stage_1_watch (aka special mention) 
-|   |   └── stage_1_substandard
-|   └── stage_2  
-|       ├── stage_2_normal (aka pass) 
-|       ├── stage_2_watch (aka special mention) 
-|       └── stage_2_substandard  
-└── non_performing
-    └── stage_3
-        ├── doubtful  
-        └── loss  
+├── performing
+│   ├── stage_1
+│   │   ├── normal (aka pass)
+│   │   └── watch (aka special mention)
+│   └── stage_2
+│       └── substandard
+├── non_performing
+│   └── stage_3
+│       ├── doubtful
+│       └── loss 
+│
+├── stage_1_normal
+├── stage_1_watch
+├── stage_1_substandard
+├── stage_1_doubtful
+├── stage_1_loss
+├── stage_2_normal
+├── stage_2_watch
+├── stage_2_substandard
+├── stage_2_doubtful
+├── stage_2_loss
+├── stage_3_normal
+├── stage_3_watch
+├── stage_3_substandard
+├── stage_3_doubtful
+└── stage_3_loss
+
 ```
+
+> NOTE: due to ambiguities in definitions and differences in credit grade and risk stage models, unexpected combinations like IFRS "stage_1" and "doubtful" may be present in a firm's data. To avoid passing judgement on an internal model, we include all 15 combinations of stages and credit grades should firms choose to define their own hierarchy.
 
 Under [IFRS9][ifrs9] accounting principles, impairment must be recognised in stages and this standard is being adopted globally. Historically, at the most granular level, agencies are largely adopting and documenting industry best practices. Some jurisdictions employ even more detailed assessments with 10 or more categories going in to more granular detail.
 
@@ -32,7 +48,7 @@ Further reading:
 * [HKMA Loan classification system][hkma-lcs]
 * [MAS 612][mas612]
 
-Some agencies will also refer to *classified* loans as those that fall in substandard, doubtful and loss categories (occassionally watch/special mention as well).
+Some agencies may also refer to *classified* loans as those that fall in substandard, doubtful and loss categories (occassionally watch/special mention as well).
 
 ### performing
 

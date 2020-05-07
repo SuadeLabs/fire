@@ -97,6 +97,14 @@
       "description": "Second-order price sensitivity to the underlying or rate of change of the delta.",
       "type": "number"
     },
+    "impairment_amount": {
+      "description": "The impairment amount for a security is the allowance set aside by the firm for losses.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "impairment_status": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/impairment_status"
+    },
     "implied_vol": {
       "description": "Options: implied volatility used to compute mtm and greeks.",
       "type": "number"
@@ -279,27 +287,6 @@
     "version_id": {
       "description": "The version identifier of the data such as the firm's internal batch identifier.",
       "type": "string"
-    },
-    "impairment_amount": {
-      "description": "The impairment amount for a security is the allowance set aside by the firm for losses.",
-      "type": "integer",
-      "minimum": 0
-    },
-    "impairment_status": {
-      "description": "The recognition stage for the impairment/expected credit loss of the product.",
-      "type": "string",
-      "enum": [
-        "performing",
-        "stage_1",
-        "normal",
-	      "watch",
-        "stage_2",
-        "substandard",
-        "non_performing",
-        "stage_3",
-        "doubtful",
-        "loss"
-      ]
     }
   },
   "required": ["id", "date"],
