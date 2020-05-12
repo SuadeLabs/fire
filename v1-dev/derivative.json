@@ -267,6 +267,10 @@
       "description": "The unique identifier used by the financial institution to identify the underlying reference security for this derivative.",
       "type": "string"
     },
+    "underlying_quantity": {
+      "description": "Number of underlyings related to the underlying_price/underlying_strike",
+      "type": "number"
+    },
     "underlying_price": {
       "description": "Current price/value of the underlying.",
       "type": "number"
