@@ -15,7 +15,7 @@
 				"notional_amount": 100,
 				"payment_type": "fixed",
 				"rate": 1.5,
-				"type": "swap",
+				"type": "vanilla_swap",
 				"settlement_type": "cash"
 			},
 			{
@@ -31,7 +31,7 @@
 				"notional_amount": 100,
 				"receive_type": "floating",
 				"rate": 1.75,
-				"type": "swap",
+				"type": "vanilla_swap",
 				"settlement_type": "cash"
 			}
 		]

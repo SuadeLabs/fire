@@ -255,6 +255,10 @@
       "type": "string",
       "format": "date-time"
     },
+    "underlying_currency_code": {
+      "description": "Currency of the underlying which should be in line with ISO 4217 standards.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+    },
     "underlying_derivative_id": {
       "description": "The unique identifier used by the financial institution to identify the underlying reference derivative for this derivative.",
       "type": "string"
@@ -266,6 +270,10 @@
     "underlying_security_id": {
       "description": "The unique identifier used by the financial institution to identify the underlying reference security for this derivative.",
       "type": "string"
+    },
+    "underlying_quantity": {
+      "description": "Number of underlyings related to the underlying_price/underlying_strike",
+      "type": "number"
     },
     "underlying_price": {
       "description": "Current price/value of the underlying.",
