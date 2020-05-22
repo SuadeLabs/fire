@@ -118,6 +118,11 @@
       "type": "integer",
       "minimum": 1
     },
+    "last_exercise_date": {
+      "description": "The last date on which an option can be exercised. For European options, it is the option exercise date",
+      "type": "string",
+      "format": "date-time"
+    },
     "last_payment_date": {
       "description": "The final payment date for interest payments, often coincides with end_date.",
       "type": "string",
