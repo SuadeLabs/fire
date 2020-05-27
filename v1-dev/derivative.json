@@ -118,6 +118,11 @@
       "type": "integer",
       "minimum": 1
     },
+    "last_exercise_date": {
+      "description": "The last date on which an option can be exercised. For European options, it is the option exercise date",
+      "type": "string",
+      "format": "date-time"
+    },
     "last_payment_date": {
       "description": "The final payment date for interest payments, often coincides with end_date.",
       "type": "string",
@@ -247,7 +252,7 @@
       "description": "This is the type of the derivative with regards to common regulatory classifications.",
       "type": "string",
       "enum": [
-        "vanilla_swap", "mtm_swap", "option", "call_swaption", "put_swaption", "call_option", "put_option", "future", "forward", "tarf", "xccy", "cds", "ois", "spot", "ndf", "nds", "fra"
+        "vanilla_swap", "mtm_swap", "option", "call_swaption", "put_swaption", "call_option", "put_option", "future", "forward", "tarf", "xccy", "cds", "ois", "spot", "ndf", "nds", "fra", "cap", "floor"
       ]
     },
     "trade_date": {

@@ -800,8 +800,10 @@ Any other account type that cannot be classified as one of the other types.
 ├── option
 |   ├── call_option
 |   └── put_option
-├── call_swaption
-├── put_swaption
+|   └── call_swaption
+|   └── put_swaption
+|   └── cap
+|   └── floor
 ├── forward
 |    ├── future
 |    ├── ndf
@@ -809,6 +811,12 @@ Any other account type that cannot be classified as one of the other types.
 ├── fra
 └── spot
 ```
+### cap and floor
+Interest rate cap and interest rate floor are a string of individual interest rate options on a floating rate index (e.g. USD-libor-3m) observed for each
+underlying interest rate period. At the end of period:
+- the cap seller pays to the cap buyer the difference between the underlying rate index fixing and the strike if the fixing is observed above the strike. 
+- the floor seller pays to the floor buyer the difference between the strike and the underlying rate index fixing if the fixing is observed below the strike. 
+
 ### ois
 Overnight Index Swap
 
