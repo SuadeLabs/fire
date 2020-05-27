@@ -800,14 +800,14 @@ Any other account type that cannot be classified as one of the other types.
 ├── option
 |   ├── call_option
 |   └── put_option
-|   └── call_swaption # rename receiver_swaption?
-|   └── put_swaption  # rename payer_swaption?
+|   └── call_swaption
+|   └── put_swaption
 |   └── cap
 |   └── floor
 ├── forward
 |    ├── future
 |    ├── ndf
-|    └── tarf  # is this type used??? the generic type would be range_accrual
+|    └── tarf
 ├── fra
 └── spot
 ```
