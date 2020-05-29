@@ -277,7 +277,6 @@
       "type": "string",
       "enum": ["1d", "1m", "2m", "3m", "6m", "12m"]
    },
-
     "underlying_issuer_id": {
       "description": "The unique identifier used by the financial institution to identify the underlying reference issuer for this derivative.",
       "type": "string"
