@@ -28,6 +28,7 @@ Primary asset classes are Equities, Rates, Credit, Commodities and Foreign Excha
 │   └── eq_single
 ├── fx
 ├── ir
+│   └── inflation
 ├── energy
 │   ├── oil
 │   ├── gas
