@@ -268,6 +268,15 @@
       "description": "The unique identifier used by the financial institution to identify the underlying reference derivative for this derivative.",
       "type": "string"
     },
+    "underlying_index": {
+      "description": "The name of a derivative contract underlying which can be used for all derivative asset classes (e.g. interest rate index, credit index, equity index",
+      "type": "string"
+    },
+    "underlying_index_tenor": {
+      "description": "The designated maturity of the underlying interest rate index used in the underlying_index property for interest rate derivatives",
+      "type": "string",
+      "enum": ["1d", "1m", "2m", "3m", "6m", "12m"]
+   },
     "underlying_issuer_id": {
       "description": "The unique identifier used by the financial institution to identify the underlying reference issuer for this derivative.",
       "type": "string"
