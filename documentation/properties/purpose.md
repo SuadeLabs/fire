@@ -18,9 +18,18 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── collateral
 ├── commitments
 ├── critical_service
+├── dealing_revenue
+│   ├── dealing_revenue_fx
+│   │   └── dealing_revenue_fx_nse
+│   ├── dealing_revenue_securities
+│   │   └── dealing_revenue_securities_nse
+│   └── dealing_revenue_derivatives
+│       └── dealing_revenue_derivatives_nse
 ├── deposit
 ├── depreciation
 ├── dividend
+│   └── dividend_from_collective_investment_schemes
+│       └── dividend_from_money_market_funds
 ├── employee
 ├── fees
 │   ├── credit_card_fees
@@ -156,15 +165,6 @@ For example, in the EBA's FINREP F.1.3 report, the effective portion of the vari
 ### fees
 Describes an account that holds the amount of fee/commission income as reported in a Profit and Loss report.
 
-
-│   ├── credit_card_fees
-│   ├── current_account_fees
-│   │   └── overdraft_fees
-│   ├── insurance_fees
-│   ├── investment_banking_fees
-│   └── loans_and_advances_fees
-
-
 ### credit_card_fees
 Describes an account that holds the amount of fees income originating from **credit cards**.
 
@@ -195,8 +195,35 @@ Describes an account that holds the amount of fees income originating from **loa
 ### tax
 *needs definition*
 
+### dealing_revenue
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of tradable instruments.
+
+### dealing_revenue_fx
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **fx instruments**.
+
+### dealing_revenue_securities
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **securities**.
+
+### dealing_revenue_derivatives
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **derivative instruments**.
+
+### dealing_revenue_fx_nse
+Describes an account that holds the Net Spread Earnings (NSE) amount arising from the purchase and sale of **fx instruments**. The NSE is indentified as the difference between the price paid/offered by the reporting entity and the price available in the open market (mid-market price) at the time of the transaction.
+
+### dealing_revenue_securities_nse
+Describes an account that holds the Net Spread Earnings (NSE) amount arising from the purchase and sale of **securities**. The NSE is indentified as the difference between the price paid/offered by the reporting entity and the price available in the open market (mid-market price) at the time of the transaction.
+
+### dealing_revenue_derivatives_nse
+Describes an account that holds the Net Spread Earnings (NSE) amount arising from the purchase and sale of **derivative instruments**. The NSE is indentified as the difference between the price paid/offered by the reporting entity and the price available in the open market (mid-market price) at the time of the transaction.
+
 ### dividend
-*needs definition*
+Describes an account that holds the amount of dividends paid or received as reported in a Profit and Loss report.
+
+### dividend_from_collective_investment_schemes
+Describes an account that holds the amount of dividends received from **collective investment schemes**.
+
+### dividend_from_money_market_funds
+Describes an account that holds the amount of dividends received from **money market funds**.
 
 ### interest
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report
