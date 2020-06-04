@@ -23,6 +23,12 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── dividend
 ├── employee
 ├── fees
+│   ├── credit_card_fees
+│   ├── current_account_fees
+│   │   └── overdraft_fees
+│   ├── insurance_fees
+│   ├── investment_banking_fees
+│   └── loans_and_advances_fees
 ├── firm_operating_expenses
 ├── fx
 ├── interest
@@ -148,7 +154,34 @@ IFRS 9 refers to the **cash flow hedge reserve** as the separate equity componen
 For example, in the EBA's FINREP F.1.3 report, the effective portion of the variation in fair value of hedging derivatives in a cash flow hedge, both for ongoing cash flow hedges and cash flow hedges that no longer apply, is reported as the **cash flow hedge reserve**.
 
 ### fees
-*needs definition*
+Describes an account that holds the amount of fee/commission income as reported in a Profit and Loss report.
+
+
+│   ├── credit_card_fees
+│   ├── current_account_fees
+│   │   └── overdraft_fees
+│   ├── insurance_fees
+│   ├── investment_banking_fees
+│   └── loans_and_advances_fees
+
+
+### credit_card_fees
+Describes an account that holds the amount of fees income originating from **credit cards**.
+
+### current_account_fees
+Describes an account that holds the amount of fees income originating from **current accounts**.
+
+### overdraft_fees
+Describes an account that holds the amount of fees income originating from **overdraft accounts**.
+
+### insurance_fees
+Describes an account that holds the amount of fees income originating from **insurance** activities.
+
+### investment_banking_fees
+Describes an account that holds the amount of fees income originating from **investment banking** activities. This includes advisory, brokerage and underwriting activities.
+
+### loans_and_advances_fees
+Describes an account that holds the amount of fees income originating from **loans and advances.
 
 ### pension
 *needs definition*
