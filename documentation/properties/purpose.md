@@ -26,6 +26,13 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── firm_operating_expenses
 ├── fx
 ├── interest
+│   ├── interest_on_bonds_and_FRNs
+│   ├── interest_on_deposits
+│   ├── interest_on_derivatives
+│   │   └── interest_on_derivatives_in_economic_hedges
+│   ├── interest_on_loans_and_advances
+│   ├── interest_on_money_market_instruments
+│   └── interest_on_securities_financing_transactions
 ├── operational
 │   ├── cash_management
 │   ├── clearing
@@ -159,7 +166,28 @@ For example, in the EBA's FINREP F.1.3 report, the effective portion of the vari
 *needs definition*
 
 ### interest
-*needs definition*
+Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report
+
+### interest_on_money_market_instruments
+Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **money market instruments**.
+
+### interest_on_derivatives
+Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **derivative instruments**.
+
+### interest_on_derivatives_in_economic_hedges
+Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **derivative instruments** used as hedging instruments and where the hedged items generate interest.
+
+### interest_on_loans_and_advances
+Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **loans and advances**.
+
+### interest_on_deposits
+Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **deposits**.
+
+### interest_on_securities_financing_transactions
+Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **Securities Financing Transactions**.
+
+### interest_on_bonds_and_FRNs
+Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **bonds and Floating Rate Notes**.
 
 ### fx
 *needs definition*
