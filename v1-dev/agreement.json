@@ -34,6 +34,10 @@
       "description": "Smallest amount of collateral that can be transferred. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
+    "number_of_disputes": {
+      "description": "Indicates the number of disputes threshold to be used in the margin period of risk",
+      "type": "integer"
+    },
     "source": {
       "description": "The source where this data originated.",
       "type": "string"
