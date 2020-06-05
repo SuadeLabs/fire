@@ -23,6 +23,7 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 ├── financial
 │   ├── credit_institution
 │   │   ├── merchant_bank
+│   │   ├── building_society
 │   │   ├── state_owned_bank
 │   │   └── promotional_lender
 │   ├── investment_firm
@@ -44,6 +45,9 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   ├── local_authority
 │   ├── regional_govt
 │   ├── central_govt
+│   ├── public_corporation
+│   ├── social_security_fund
+│   ├── statutory_board
 │   └── other_pse
 ├── sovereign
 ├── intl_org
@@ -131,6 +135,8 @@ Article 411 of the [CRR][crr]:
 > (k) an undertaking excluded from the scope of Directive 2009/138/EC in accordance with Article 4 of that Directive;
 >
 > (l) a third-country undertaking with a main business comparable to any of the entities referred to in points (a) to (k);
+>
+> (m) a building society
 
 ### mdb
 Multilateral Development Banks are defined in the [CRR][crr] Article 117 as:
@@ -220,6 +226,21 @@ A public sector entity is defined in the [FCA handbook](https://www.handbook.fca
 >A specific distinction for Singaporean public sector entities. The statutory boards of the Singapore Government are organisations that have been given autonomy to perform an operational function by legal statutes passed as Acts in parliament. The statutes define the purpose, rights and powers of the authority. They usually report to one specific ministry.
 A more comprehensive list can be found here:
 [Singaporean Statutory Boards][sg-stat-boards]
+
+
+### public_corporation
+In the UK, public corporations are corporate bodies, sometimes with plc or Ltd in their title. Ownership by government
+may be total, as in the case of those corporations established by Act of Parliament, or through majority share-holdings.
+Public control is over broad aspects of policy; public corporations are free to manage their day to day operations independently.
+Trust ports in Northern Ireland and ports belonging to public corporations continue to be classed as ‘public corporations’, as do certain airport companies, which were set up by local authorities under the terms of the 1986 Airports Act. 
+A list of these entities can be found at www.ons.gov.uk/economy/nationalaccounts/uksectoraccounts/datasets/publicsectorclassificationguide.
+
+### social_security_fund
+Social security funds are social insurance programmes covering the community as a whole or large sections of the community that are imposed and controlled by a government unit. They generally involve compulsory contributions by employees or employers or both, and the terms on which benefits are paid to recipients are determined by a government unit.
+Social security funds have to be distinguished from other social insurance programmes which are determined by mutual agreement between individual employers and their employees.
+Note: This item corresponds to HF.1.2 in the ICHA-HF classification of health care financing (see SHA, chapters 6 and 11).
+Source Publication: OECD Health Data 2001: A Comparative Analysis of 30 Countries, OECD, Paris, 2001, data sources, definitions and methods.
+Cross References: Social security funds - SNA
 
 ### credit_institution
 Credit institution is defined in Article 4 of [CRR][crr]:
@@ -368,6 +389,9 @@ A **credit union** is defined by the [FCA](https://www.fca.org.uk/firms/credit-u
 
 ### deposit_broker
 A **deposit broker** can be an individual or a firm that facilitates the placement of deposits with insured depository institutions. Deposit brokers offer investors an assortment of fixed-term investment products, which earn low-risk returns.
+
+### building_society
+A financial institution that offers a variety of savings accounts to attract deposits, mainly from the general public, and which specializes in the provision of long-term mortgage loans used to purchase property. They have entered into arrangements with other financial institutions that have enabled them to provide their depositors with limited banking facilities (the use of cheque books and credit cards, for instance) and other financial services, a development that has been given added impetus by the BUILDING SOCIETIES ACT 1986.
 
 # Loan
 ```
