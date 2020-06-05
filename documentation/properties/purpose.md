@@ -39,6 +39,22 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── investment_banking_fees
 │   └── loans_and_advances_fees
 ├── firm_operating_expenses
+│   ├── computer_and_it_costs
+│   ├── non_life_insurance_premiums
+│   ├── occupancy_costs
+│   ├── other_expenditures
+│   ├── rent
+│   └──  staff
+│       ├── annual_bonus_accruals
+│       ├── benefits_in_kind
+│       ├── employee_stock_options
+│       ├── national_insurance_contributions
+│       ├── other_social_contributions
+│       ├── other_staff_costs
+│       ├── other_staff_remunerations
+│       ├── pension
+│       ├── redundancy_and_severance_payments
+│       └── regular_wages_and_one_off_bonuses
 ├── fx
 ├── interest
 │   ├── interest_on_bonds_and_FRNs
@@ -48,6 +64,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── interest_on_loans_and_advances
 │   ├── interest_on_money_market_instruments
 │   └── interest_on_securities_financing_transactions
+├── intra_group_fees_and_cost_recharges
 ├── operational
 │   ├── cash_management
 │   ├── clearing
@@ -56,7 +73,6 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── operational_excess
 │   └── operational_escrow
 ├── other
-├── pension
 ├── prime_brokerage
 ├── ppe
 ├── goodwill
@@ -68,7 +84,6 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── restructuring
 ├── revenue_reserve
 ├── share_plan
-├── staff
 ├── system
 └── tax
 ```
@@ -181,7 +196,7 @@ Describes an account that holds the amount of fees income originating from **ins
 Describes an account that holds the amount of fees income originating from **investment banking** activities. This includes advisory, brokerage and underwriting activities.
 
 ### loans_and_advances_fees
-Describes an account that holds the amount of fees income originating from **loans and advances.
+Describes an account that holds the amount of fees income originating from **loans and advances**.
 
 ### pension
 *needs definition*
@@ -249,6 +264,12 @@ Describes an account that holds the amount of interests receivable/payable as re
 ### interest_on_bonds_and_FRNs
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **bonds and Floating Rate Notes**.
 
+### intra_group_fees_and_cost_recharges
+Describes an account that holds the amount of:
+    - Intra-group fees receivable and payable where the counterparty is an intra-group entity. Or;
+    - Cost recharges that are costs of a centrally managed service allocated
+    and charged to each group entity (e.g. IT support).
+
 ### fx
 *needs definition*
 
@@ -269,10 +290,58 @@ IAS 16(6) defines **property plant and equipment** as:
 (b) are expected to be used during more than one period.
 
 ### depreciation
-An account representing the the change in value attributable (over a period) to assets where depreciation must be accounted for.
+An account representing the change in value attributable (over a period) to assets where depreciation must be accounted for.
 
 ### other
 The **other** enum value can be used when it is known that none of the other enum values apply.
+
+### rent
+Describes an account representing the amount of **rent** to be paid or received by the reporting entity.
+
+### annual_bonus_accruals
+Describes an account representing the part of staff expenses corresponding to the **annual_bonus_accruals** paid by the reporting entity.
+
+### computer_and_it_costs
+Describes an account representing the part of operating expenses corresponding to the **computer_and_it_costs** paid by the reporting entity.
+
+### benefits_in_kind
+Describes an account representing the part of staff expenses corresponding to the **benefits_in_kind** paid by the reporting entity.
+Bank Of England defines **benefits_in_kind** as items where the cost is separately identifiable and would normally fall within expenditure, such as staff canteens, luncheon vouchers, sports club membership, nurseries, health care and staff savings schemes that do not form part of employee stock options
+BoE Form PL definitions: https://www.bankofengland.co.uk/statistics/data-collection/osca/forms-definitions-validations
+
+### employee_stock_options
+Describes an account representing the part of staff expenses corresponding to the **employee_stock_options** paid by the reporting entity.
+
+### national_insurance_contributions
+Describes an account representing the part of staff expenses corresponding to the **national_insurance_contributions** paid by the reporting entity.
+
+### non_life_insurance_premiums
+Describes an account representing the part of operating expenses corresponding to the **non_life_insurance_premiums** paid by the reporting entity.
+Bank Of England defines **non_life_insurance_premiums** as premiums payable to provide cover against various events or accidents resulting in damage to goods or property, or harm to persons as a result of natural or human causes (fires,floods, crashes, collisions, sinkings, theft, violence, accidents, sickness, etc.) or against financial losses resulting from events such as sickness, unemployment, accidents, etc.
+BoE Form PL definitions: https://www.bankofengland.co.uk/statistics/data-collection/osca/forms-definitions-validations
+
+### occupancy_costs
+Describes an account representing the part of operating expenses corresponding to the **occupancy_costs** paid by the reporting entity. As per the Bank of England definition, this would inlcude costs relating to land and other buildings, such as rent, non-domestic rates and energy costs. It would also include any costs relating to moving or vacating buildings.
+BoE Form PL definitions: https://www.bankofengland.co.uk/statistics/data-collection/osca/forms-definitions-validations
+
+### other_expenditures
+Describes an account representing the part of operating expenses that would not fall in any of the other available categories for operating expenses.
+
+### other_social_contributions
+Describes an account representing the part of staff expenses corresponding to social contributions not included in any of the other available categories for staff expenses.
+
+### other_staff_remunerations
+Describes an account representing the part of staff expenses corresponding to staff remuneration not included in any of the other available categories for staff expenses.
+
+### other_staff_costs
+Describes an account representing the part of staff expenses corresponding to staff costs not included in any of the other available categories for staff expenses.
+
+### redundancy_and_severance_payments
+Describes an account representing the part of staff expenses corresponding to redundancy and severance payments made by the reporting entity.
+
+### regular_wages_and_one_off_bonuses
+Describes an account representing the part of staff expenses corresponding to regular compensation payable to all employees. As per the Bank Of England definition this includes overtime payments, commissions and any other cash benefit payments. It Also includes any one-off bonuses that relate to a specific piece of work or performance in the current period. One-off bonuses could include any other non-regular bonus or cash remuneration paid to employees that is not part of the annual bonus accrual.
+BoE Form PL definitions: https://www.bankofengland.co.uk/statistics/data-collection/osca/forms-definitions-validations
 
 ## Derivative
 ### reference
