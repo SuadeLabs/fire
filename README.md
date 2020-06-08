@@ -37,7 +37,11 @@ The FIRE data standard is supported by the [European Commission][euc], the [Open
 Please see the [contributing guidelines][contributing] and [guiding principles][guiding-principles] if you would like to contribute to this project.
 
 ### Random FIRE Data Generator
-Included is a [random data generator][random-fire] which will generate data in line with the FIRE schema, but not necessarily realistic. (eg. You might get a loan with a balance of 10 but accrued interest of 1 million) 
+Included is a [random data generator][random-fire] which will generate data in line with the FIRE schema, but not necessarily realistic. (eg. You might get a loan with a balance of 10 but accrued interest of 1 million)
+
+### Testing
+You can run tests locally with via `./run_tests.sh`
+
 
 ---
 [fire]:         https://suade.org/fire/
