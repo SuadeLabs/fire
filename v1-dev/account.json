@@ -290,7 +290,7 @@
       "format": "date-time"
     },
     "uk_funding_type": {
-      "description": "Funding type calculated according to BIPRU 12.5",
+      "description": "Funding type calculated according to BIPRU 12.5/12.6",
       "type": "string",
       "enum": ["a", "b"]
     },
