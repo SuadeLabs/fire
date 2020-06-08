@@ -1,10 +1,10 @@
 ---
 layout:		property
-title:		"income_amount"
+title:		"ref_income_amount"
 schemas:	[loan]
 ---
 
-# income_amount
+# ref_income_amount
 
 ---
 

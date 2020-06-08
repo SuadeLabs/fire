@@ -6,7 +6,7 @@ title:		"Home"
 # Financial Regulatory (FIRE) Data Standard
 
 ---
-
+[![Build Status](https://travis-ci.org/SuadeLabs/fire.svg?branch=master)](https://travis-ci.org/SuadeLabs/fire)
 [![Project Website](https://img.shields.io/badge/website-fire-red.svg)][fire]
 [![Apache 2.0 License](https://img.shields.io/badge/LICENSE-Apache_2.0-yellow.svg)][license]
 [![Join the chat at https://gitter.im/SuadeLabs/fire](https://badges.gitter.im/SuadeLabs/fire.svg)][gitter]
@@ -15,7 +15,7 @@ title:		"Home"
 ### What is the FIRE data standard?
 The Financial Regulatory data standard defines a common specification for the transmission of granular data between regulatory systems in finance. Regulatory data refers to the data that underlies regulatory submissions, requirements, calculations and is used for policy, monitoring and supervision purposes.
 
-The FIRE data schemas and code samples are licensed under the [Apache 2.0 License][apache] which has been chosen for being open, permissive and already widely accepted within financial sector (think Hadoop, Cassandra, ActiveMQ).
+The FIRE data schemas and code samples are licensed under the [Apache 2.0 License][apache] which has been chosen for being open, permissive and already widely accepted within the financial sector (think Hadoop, Cassandra, ActiveMQ).
 
 The FIRE data standard is supported by the [European Commission][euc], the [Open Data Institute][odi] and the [Open Data Incubator for Europe][odine] via the Horizon 2020 funding programme.
 
@@ -37,7 +37,11 @@ The FIRE data standard is supported by the [European Commission][euc], the [Open
 Please see the [contributing guidelines][contributing] and [guiding principles][guiding-principles] if you would like to contribute to this project.
 
 ### Random FIRE Data Generator
-Included is a [random data generator][random-fire] which will generate data in line with the FIRE schema, but not necessarily realistic. (eg. You might get a loan with a balance of 10 but accrued interest of 1 million) 
+Included is a [random data generator][random-fire] which will generate data in line with the FIRE schema, but not necessarily realistic. (eg. You might get a loan with a balance of 10 but accrued interest of 1 million)
+
+### Testing
+You can run tests locally with via `./run_tests.sh`
+
 
 ---
 [fire]:         https://suade.org/fire/

@@ -25,8 +25,17 @@
       "description": "The unique identifier used by the financial institution to identify the counterparty to this agreement.",
       "type": "string"
     },
+    "margin_frequency": {
+      "description": "Indicates the periodic timescale after which collateral may be called",
+      "type": "string",
+      "enum": ["daily", "weekly"]
+    },
     "minimum_transfer_amount": {
       "description": "Smallest amount of collateral that can be transferred. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer"
+    },
+    "number_of_disputes": {
+      "description": "Indicates the number of disputes threshold to be used in the margin period of risk",
       "type": "integer"
     },
     "source": {
