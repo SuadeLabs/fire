@@ -2,8 +2,10 @@ import json
 import os
 import unittest
 from . import (
-    SCHEMA_FILES, SCHEMA_NAMES, SCHEMAS_DIR, 
-    DOC_NAMES
+    DOC_NAMES,
+    SCHEMAS_DIR,
+    SCHEMA_FILES,
+    SCHEMA_NAMES,
 )
 
 
@@ -41,9 +43,8 @@ class TestSchemas(unittest.TestCase):
         print("No documenation found for properties: {}".format(no_docs))
         # TODO: Add docs!
         # self.assertFalse(
-        #     no_docs, 
+        #     no_docs,
         #     "No documenation found for properties: {}".format(no_docs)
         # )
         # for doc in DOC_NAMES:
         #     self.assertIn(doc, properties)
-
