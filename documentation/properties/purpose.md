@@ -28,8 +28,8 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── deposit
 ├── depreciation
 ├── dividend
-│   └── dividend_from_collective_investment_scheme
-│   │   └── dividend_from_money_market_fund
+│   └── dividend_from_cis
+│   │   └── dividend_from_money_mkt
 │   └── manufactured_dividend
 ├── donation
 ├── employee
@@ -50,7 +50,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── occupancy_cost
 │   ├── other_expenditure
 │   ├── rent
-│   └──  staff
+│   └── staff
 │       ├── annual_bonus_accruals
 │       ├── benefit_in_kind
 │       ├── employee_stock_option
@@ -66,7 +66,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── interest_on_bond_and_FRN
 │   ├── interest_on_deposit
 │   ├── interest_on_derivative
-│   │   └── interest_on_derivative_in_economic_hedge
+│   │   └── interest_on_derivative_hedge
 │   ├── interest_on_loan_and_advance
 │   │   └── interest_on_ecgd_lending
 │   ├── interest_on_money_market_instrument
@@ -260,10 +260,10 @@ Describes an account that holds the Net Spread Earnings (NSE) amount arising fro
 ### dividend
 Describes an account that holds the amount of dividends paid or received as reported in a Profit and Loss report.
 
-### dividend_from_collective_investment_scheme
+### dividend_from_cis
 Describes an account that holds the amount of dividends received from **collective investment schemes**.
 
-### dividend_from_money_market_fund
+### dividend_from_money_mkt
 Describes an account that holds the amount of dividends received from **money market funds**.
 
 ### interest
@@ -275,7 +275,7 @@ Describes an account that holds the amount of interests receivable/payable as re
 ### interest_on_derivative
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **derivative instruments**.
 
-### interest_on_derivative_in_economic_hedge
+### interest_on_derivative_hedge
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **derivative instruments** used as hedging instruments and where the hedged items generate interest.
 
 ### interest_on_loan_and_advance
