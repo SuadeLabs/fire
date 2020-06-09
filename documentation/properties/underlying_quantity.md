@@ -8,7 +8,7 @@ schemas:    [derivative]
 
 ---
 
-The **underlying_quantity** is the number of underlyings related to the underlying_price or the underlying_strike.
+The **underlying_quantity** is the number of underlyings related to the underlying_price or the strike.
 It should be populated such that this equality holds true: notional_amount = underlying_quantity * underlying_price.
 It is mostly relevant for Equity and Commodity derivatives.
 

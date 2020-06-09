@@ -1,6 +1,7 @@
 
 {
-	"description": "Forward rate agreement bought for time period starting in 6 months and ending in 12 months. The rate is the rate which is locked in, the underlying_strike is this same fwd rate and the underlying_price is the current reference rate.",
+	"description": "Forward rate agreement bought for time period starting in 6 months and ending in 12 months. The rate is the rate which is locked in,
+	the underlying_price is the current reference rate.",
 	"data": {
 		"derivative": [
 			{
@@ -8,15 +9,16 @@
 				"date": "2019-01-01T00:00:00",
 				"mtm_dirty": -10,
 				"asset_class": "ir",
+				"type": "fra",
+				"position": "short",
 				"currency_code": "USD",
-				"start_date": "2019-06-01T00:00:00",
-				"end_date": "2020-01-01T00:00:00",
 				"notional_amount": 100,
 				"rate": 1.5,
-				"receive_type": "floating",
-				"type": "fra",
+				"underlying_index": "EURIBOR",
+				"underlying_index_tenor": "3m",
+				"start_date": "2019-06-01T00:00:00",
+				"end_date": "2020-01-01T00:00:00",
 				"settlement_type": "cash",
-				"underlying_strike": 1.5,
 				"underlying_price": 1.4
 			}
 		]

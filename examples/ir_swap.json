@@ -14,7 +14,7 @@
 				"currency_code": "EUR",
 				"mtm_dirty": 0,
 				"notional_amount": 100,
-				"position": 1,
+				"position": "long",
 				"leg_type": "fixed",
 				"rate": 1.5
 			},
@@ -30,7 +30,7 @@
 				"currency_code": "EUR",
 				"mtm_dirty": 0,
 				"notional_amount": 100,
-				"position": 1,
+				"position": "short",
 				"leg_type": "floating",
 				"underlying_index": "EURIBOR",
 				"underlying_index_tenor": "3m",

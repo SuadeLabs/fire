@@ -296,15 +296,11 @@
       "type": "string"
     },
     "underlying_quantity": {
-      "description": "Number of underlyings related to the underlying_price/underlying_strike",
+      "description": "Number of underlying units related to the underlying_price",
       "type": "number"
     },
     "underlying_price": {
       "description": "Current price/value of the underlying.",
-      "type": "number"
-    },
-    "underlying_strike": {
-      "description": "Strike price on the underlying.",
       "type": "number"
     },
     "strike": {
