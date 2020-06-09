@@ -132,6 +132,11 @@
       "description": "The internal ledger code or line item name.",
       "type": "string"
     },
+    "leg_type": {
+      "description": "Describe the payoff type of the derivative leg.",
+      "type": "string",
+      "enum": ["fixed", "floating", "indexed", "call", "put"]
+    },
     "mic_code": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/mic_code"
     },
@@ -192,6 +197,11 @@
       "description": "The most recent previous date at which interest was paid or accrued_interest balance returned to zero.",
       "type": "string",
       "format": "date-time"
+    },
+    "position": {
+      "description": "Specifies the market position, i.e. long or short, of the derivative leg",
+      "type": "string",
+      "enum": ["long", "short"]
     },
     "product_name": {
       "description": "The name of the product as given by the financial institution to be used for display and reference purposes.",
@@ -295,6 +305,10 @@
     },
     "underlying_strike": {
       "description": "Strike price on the underlying.",
+      "type": "number"
+    },
+    "strike": {
+      "description": "Strike price of the option, which is compared to the underlying price on the option exercise date.",
       "type": "number"
     },
     "value_date": {
