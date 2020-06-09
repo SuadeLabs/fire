@@ -19,17 +19,17 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── commitments
 ├── critical_service
 ├── dealing_revenue
-│   ├── dealing_revenue_fx
-│   │   └── dealing_revenue_fx_nse
-│   ├── dealing_revenue_security
-│   │   └── dealing_revenue_security_nse
-│   └── dealing_revenue_derivative
-│       └── dealing_revenue_derivative_nse
+│   ├── dealing_rev_fx
+│   │   └── dealing_rev_fx_nse
+│   ├── dealing_rev_sec
+│   │   └── dealing_rev_sec_nse
+│   └── dealing_rev_deriv
+│       └── dealing_rev_deriv_nse
 ├── deposit
 ├── depreciation
 ├── dividend
-│   └── dividend_from_cis
-│   │   └── dividend_from_money_mkt
+│   └── div_from_cis
+│   │   └── div_from_money_mkt
 │   └── manufactured_dividend
 ├── donation
 ├── employee
@@ -37,16 +37,16 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── credit_card_fee
 │   ├── current_account_fee
 │   │   └── overdraft_fee
-│   ├── derivative_fe
+│   ├── derivative_fee
 │   ├── insurance_fee
 │   ├── investment_banking_fee
 │   ├── loan_and_advance_fee
-│   ├── other_financial_service_fee
-│   └── other_non_financial_service_fee
+│   ├── other_fs_fee
+│   └── other_non_fs_fee
 ├── fines
 ├── firm_operating_expenses
 │   ├── computer_and_it_cost
-│   ├── non_life_insurance_premium
+│   ├── non_life_ins_premium
 │   ├── occupancy_cost
 │   ├── other_expenditure
 │   ├── rent
@@ -54,25 +54,25 @@ The **purpose** property describes the reason behind the creation or usage of th
 │       ├── annual_bonus_accruals
 │       ├── benefit_in_kind
 │       ├── employee_stock_option
-│       ├── national_insurance_contribution
-│       ├── other_social_contribution
+│       ├── ni_contribution
+│       ├── other_social_contrib
 │       ├── other_staff_cost
-│       ├── other_staff_remuneration
+│       ├── other_staff_rem
 │       ├── pension
-│       ├── redundancy_and_severance_payment
-│       └── regular_wages_and_one_off_bonus
+│       ├── redundancy_pymt
+│       └── regular_wages
 ├── fx
 ├── interest
-│   ├── interest_on_bond_and_FRN
-│   ├── interest_on_deposit
-│   ├── interest_on_derivative
-│   │   └── interest_on_derivative_hedge
-│   ├── interest_on_loan_and_advance
-│   │   └── interest_on_ecgd_lending
-│   ├── interest_on_money_market_instrument
-│   └── interest_on_securities_financing_transaction
-├── intra_group_fee_and_cost_recharge
-├── investment_in_subsidiary
+│   ├── int_on_bond_and_frn
+│   ├── int_on_deposit
+│   ├── int_on_derivative
+│   │   └── int_on_deriv_hedge
+│   ├── int_on_loan_and_adv
+│   │   └── int_on_ecgd_lending
+│   ├── int_on_money_mkt
+│   └── int_on_sft
+├── intra_group_fee
+├── inv_in_subsidiary
 ├── operational
 │   ├── cash_management
 │   ├── clearing
@@ -212,10 +212,10 @@ Describes an account that holds the amount of fees receivables originating from 
 ### investment_banking_fee
 Describes an account that holds the amount of fees receivables/payables originating from **investment banking** activities. This includes advisory, brokerage and underwriting activities.
 
-### other_financial_service_fee
+### other_fs_fee
 Describes an account that holds the amount of fees receivables/payables originating from **financial services** and that do not fall under any of the other categories of fees. These could include fees receivable for guarantees payable under break clauses, fees for administering loans on behalf of other lenders.
 
-### other_non_financial_service_fee
+### other_non_fs_fee
 Describes an account that holds the amount of fees receivables/payables originating from **services that cannot be classified as financial**. These could include executor and trustee services, computer bureau services.
 
 ### pension
@@ -239,22 +239,22 @@ Describes an account representing the amount of **corporation tax** paid, receiv
 ### dealing_revenue
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of tradable instruments.
 
-### dealing_revenue_fx
+### dealing_rev_fx
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **fx instruments**.
 
-### dealing_revenue_security
+### dealing_rev_sec
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **securities**.
 
-### dealing_revenue_derivative
+### dealing_rev_deriv
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **derivative instruments**.
 
-### dealing_revenue_fx_nse
+### dealing_rev_fx_nse
 Describes an account that holds the Net Spread Earnings (NSE) amount arising from the purchase and sale of **fx instruments**. The NSE is indentified as the difference between the price paid/offered by the reporting entity and the price available in the open market (mid-market price) at the time of the transaction.
 
-### dealing_revenue_security_nse
+### dealing_rev_sec_nse
 Describes an account that holds the Net Spread Earnings (NSE) amount arising from the purchase and sale of **securities**. The NSE is indentified as the difference between the price paid/offered by the reporting entity and the price available in the open market (mid-market price) at the time of the transaction.
 
-### dealing_revenue_derivative_nse
+### dealing_rev_deriv_nse
 Describes an account that holds the Net Spread Earnings (NSE) amount arising from the purchase and sale of **derivative instruments**. The NSE is indentified as the difference between the price paid/offered by the reporting entity and the price available in the open market (mid-market price) at the time of the transaction.
 
 ### dividend
@@ -269,31 +269,31 @@ Describes an account that holds the amount of dividends received from **money ma
 ### interest
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report
 
-### interest_on_money_market_instrument
+### int_on_money_mkt
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **money market instruments**.
 
-### interest_on_derivative
+### int_on_deriv
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **derivative instruments**.
 
-### interest_on_derivative_hedge
+### int_on_deriv_hedge
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **derivative instruments** used as hedging instruments and where the hedged items generate interest.
 
-### interest_on_loan_and_advance
+### int_on_loan_and_adv
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **loans and advances**.
 
-### interest_on_ecgd_lending
+### int_on_ecgd_lending
 Describes an account that holds the amount of interests receivable/payable where the interest amount originates from **loans** guaranteed by the Export Credits Guarantee Department (ECGD) also known as UK Export Finance.
 
-### interest_on_deposit
+### int_on_deposit
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **deposits**.
 
-### interest_on_securities_financing_transaction
+### int_on_sft
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **Securities Financing Transactions**.
 
-### interest_on_bond_and_FRN
+### int_on_bond_and_frn
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **bonds and Floating Rate Notes**.
 
-### intra_group_fee_and_cost_recharge
+### intra_group_fee
 Describes an account that holds the amount of:
     - Intra-group fees receivable and payable where the counterparty is an intra-group entity. Or;
     - Cost recharges that are costs of a centrally managed service allocated
@@ -341,10 +341,10 @@ BoE Form PL definitions: https://www.bankofengland.co.uk/statistics/data-collect
 ### employee_stock_options
 Describes an account representing the part of staff expenses corresponding to the **employee_stock_options** paid by the reporting entity.
 
-### national_insurance_contributions
+### ni_contributions
 Describes an account representing the part of staff expenses corresponding to the **national_insurance_contributions** paid by the reporting entity.
 
-### non_life_insurance_premiums
+### non_life_ins_premium
 Describes an account representing the part of operating expenses corresponding to the **non_life_insurance_premiums** paid by the reporting entity.
 Bank Of England defines **non_life_insurance_premiums** as premiums payable to provide cover against various events or accidents resulting in damage to goods or property, or harm to persons as a result of natural or human causes (fires,floods, crashes, collisions, sinkings, theft, violence, accidents, sickness, etc.) or against financial losses resulting from events such as sickness, unemployment, accidents, etc.
 BoE Form PL definitions: https://www.bankofengland.co.uk/statistics/data-collection/osca/forms-definitions-validations
@@ -356,19 +356,19 @@ BoE Form PL definitions: https://www.bankofengland.co.uk/statistics/data-collect
 ### other_expenditure
 Describes an account representing the part of operating expenses that would not fall in any of the other available categories for operating expenses.
 
-### other_social_contribution
+### other_social_contrib
 Describes an account representing the part of staff expenses corresponding to social contributions not included in any of the other available categories for staff expenses.
 
-### other_staff_remuneration
+### other_staff_rem
 Describes an account representing the part of staff expenses corresponding to staff remuneration not included in any of the other available categories for staff expenses.
 
 ### other_staff_cost
 Describes an account representing the part of staff expenses corresponding to staff costs not included in any of the other available categories for staff expenses.
 
-### redundancy_and_severance_payment
+### redundancy_pymt
 Describes an account representing the part of staff expenses corresponding to redundancy and severance payments made by the reporting entity.
 
-### regular_wages_and_one_off_bonus
+### regular_wages
 Describes an account representing the part of staff expenses corresponding to regular compensation payable to all employees. As per the Bank Of England definition this includes overtime payments, commissions and any other cash benefit payments. It Also includes any one-off bonuses that relate to a specific piece of work or performance in the current period. One-off bonuses could include any other non-regular bonus or cash remuneration paid to employees that is not part of the annual bonus accrual.
 BoE Form PL definitions: https://www.bankofengland.co.uk/statistics/data-collection/osca/forms-definitions-validations
 
@@ -378,7 +378,7 @@ Describes an account representing the amount of fines or compensation payments p
 ### donation
 Describes an account representing the amount of voluntary contributions made to non-profit institutions.
 
-### investment_in_subsidiary
+### inv_in_subsidiary
 Describes an account representing the profit or loss made on investments in subsidiaries, associates and special purpose entities.
 
 ### manufactured_dividend
