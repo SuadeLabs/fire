@@ -789,7 +789,7 @@ An account holding reserves. [Reserves][reserve] are created from profit or from
 ### other
 Any other account type that cannot be classified as one of the other types.
 
-# derivative
+# derivative_type
 ```bash
 ├── vanilla_swap
 ├── mtm_swap
@@ -845,6 +845,36 @@ The settlement value is based on the difference between the exchange rate specif
 A [**forward rate agreement**][fra] is an interest rate forward contract in which the rate to be paid or received on a specific obligation for a set period of time, beginning at some time in the future, is determined at contract initiation.
 
 [fra]: https://www.bis.org/statistics/glossary.htm?&selection=315&scope=Statistics&c=a&base=term
+
+# leg_type
+The **leg_type** is used to describe the payoff type of a derivative leg, which may be part of an instrument refered to in the derivative_type attibute (eg. vanilla_swap). The atribute is an enum with the following members:
+
+```bash
+├── fixed
+├── floating
+├── indexed
+├── call
+└── put
+```
+### fixed
+- leg paying fixed interest amounts equal to  **rate** multiplied by **notional_amount**, adjusted according to the day count fraction of each calculation period
+
+### floating
+- leg paying variable interest amounts equal to **notional_amount** multiplied by the value of the **underlying_index**, adjusted according to the day count fraction of each calculation period
+
+### indexed
+- leg which pays variable principal amounts equal to the **notional amount** multiplied the performance of the **underlying_index** or the underlying_security (referred to as its **underlying_security_id**) on each payment date. An index leg can also pay floating rate interest amounts equal to **rate** multiplied by the indexed **notional_amount**,adjusted according to the day count fraction of each calculation period
+
+
+### call
+- leg with pays a variable amount equal to the **notional_amount** multiplied by max(0, underlying - strike), where underlying is the **underlying_index** or the underlying_security (referred to as its **underlying_security_id**)
+
+### put
+- leg with pays a variable amount equal to the **notional_amount** multiplied by max(0, strike - underlying), where underlying is the **underlying_index** or the underlying_security (referred to as its **underlying_security_id**)
+
+
+### fixed
+fixed leg paying a fixed rate
 
 
 # collateral

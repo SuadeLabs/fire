@@ -16,8 +16,7 @@
                 "delta": -1,
                 "type": "future",
                 "settlement_type": "physical",
-                "underlying_strike": 1.4,
-                "underlying_price": 1.35
+                "rate": 1.4
             },
             {
                 "id": "2",
@@ -32,9 +31,7 @@
                 "notional_amount": 140,
                 "delta": 1,
                 "type": "future",
-                "settlement_type": "physical",
-                "underlying_strike": 0.714,
-                "underlying_price": 0.756
+                "settlement_type": "physical"
             }
         ]
     }

@@ -3,6 +3,7 @@
 	"data": {
 		"derivative": [
 			{
+				"type": "vanilla_swap",
 				"id": "1",
 				"deal_id": "5x10y-irswap",
 				"date": "2019-01-01T00:00:00",
@@ -13,12 +14,12 @@
 				"currency_code": "EUR",
 				"mtm_dirty": 0,
 				"notional_amount": 100,
-				"payment_type": "fixed",
-				"rate": 1.5,
-				"type": "vanilla_swap",
-				"settlement_type": "cash"
+				"position": "long",
+				"leg_type": "fixed",
+				"rate": 1.5
 			},
 			{
+				"type": "vanilla_swap",
 				"id": "2",
 				"deal_id": "5x10y-irswap",
 				"date": "2019-01-01T00:00:00",
@@ -29,10 +30,11 @@
 				"currency_code": "EUR",
 				"mtm_dirty": 0,
 				"notional_amount": 100,
-				"receive_type": "floating",
-				"rate": 1.75,
-				"type": "vanilla_swap",
-				"settlement_type": "cash"
+				"position": "short",
+				"leg_type": "floating",
+				"underlying_index": "EURIBOR",
+				"underlying_index_tenor": "3m",
+				"rate": 0.35
 			}
 		]
 	}

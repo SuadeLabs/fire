@@ -1,5 +1,7 @@
 {
-    "description": "1Y AUD/EUR cross-currency swap. The underlying_price is the current (spot) fx rate (at start it will equal the rate used to exchange notionals at start, otherwise equal to the division of the two notionals. The underlying_strike is the fwd fx rate (used to exchange notionals at the end), note for xccy swaps, the same rate is used at the end. The rate is the interim interest payment rate for each side of the trade.",
+    "description": "1Y AUD/EUR cross-currency swap. The underlying_price is the current (spot) fx rate (at start it will equal the rate used to 
+    exchange notionals at start, otherwise equal to the division of the two notionals.
+    The rate is the interim interest payment rate for each leg of the swap.",
     "data": {
         "derivative": [
             {
@@ -8,16 +10,15 @@
                 "trade_date":       "2019-02-25T00:00:00",
                 "mtm_dirty":        -2,
                 "asset_class":      "fx",
+				"position":         "long",
+				"leg_type":         "fixed",
                 "currency_code":    "AUD",
-                "trade_date":       "2019-02-25T00:00:00",
                 "start_date":       "2019-02-27T00:00:00",
                 "end_date":         "2020-02-26T00:00:00",
                 "notional_amount":  80000,
                 "rate":             0.045,
                 "type":             "xccy_swap",
                 "settlement_type":  "physical",
-                "receive_leg":      "fixed",
-                "underlying_strike": 1.0275,
                 "underlying_price":  1.03
             },
             {
@@ -26,8 +27,9 @@
                 "trade_date":       "2019-02-25T00:00:00",
                 "mtm_dirty":        2,
                 "asset_class":      "fx",
+				"position":         "short",
+				"leg_type":         "fixed",
                 "currency_code":    "USD",
-                "trade_date":       "2019-02-25T00:00:00",
                 "start_date":       "2019-02-27T00:00:00",
                 "end_date":         "2020-02-26T00:00:00",
                 "notional_amount":  -82200,
@@ -35,7 +37,6 @@
                 "type":             "xccy_swap",
                 "settlement_type":  "physical",
                 "payment_leg":      "fixed",
-                "underlying_strike": 0.973,
                 "underlying_price":  0.98
             }
         ]
