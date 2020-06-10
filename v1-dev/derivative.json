@@ -303,6 +303,10 @@
       "description": "Current price/value of the underlying.",
       "type": "number"
     },
+    "underling_strike": {
+      "description": "Strike price of the option, which is compared to the underlying price on the option exercise date.",
+      "type": "number"
+    },
     "strike": {
       "description": "Strike price of the option, which is compared to the underlying price on the option exercise date.",
       "type": "number"
