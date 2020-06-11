@@ -1,7 +1,6 @@
 
 {
-	"description": "Forward rate agreement bought for time period starting in 6 months and ending in 12 months. The rate is the rate which is locked in,
-	the underlying_price is the current reference rate.",
+	"description": "Forward rate agreement bought for time period starting in 6 months and ending in 12 months. The rate is the rate which is locked in, the underlying_price is the current reference rate.",
 	"data": {
 		"derivative": [
 			{
