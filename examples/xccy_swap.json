@@ -1,7 +1,5 @@
 {
-    "description": "1Y AUD/EUR cross-currency swap. The underlying_price is the current (spot) fx rate (at start it will equal the rate used to 
-    exchange notionals at start, otherwise equal to the division of the two notionals.
-    The rate is the interim interest payment rate for each leg of the swap.",
+    "description": "1Y AUD/EUR cross-currency swap. The underlying_price is the current (spot) fx rate (at start it will equal the rate used to exchange notionals at start, otherwise equal to the division of the two notionals. The rate is the interim interest payment rate for each leg of the swap.",
     "data": {
         "derivative": [
             {
@@ -17,7 +15,7 @@
                 "end_date":         "2020-02-26T00:00:00",
                 "notional_amount":  80000,
                 "rate":             0.045,
-                "type":             "xccy_swap",
+                "type":             "xccy",
                 "settlement_type":  "physical",
                 "underlying_price":  1.03
             },
@@ -32,9 +30,9 @@
                 "currency_code":    "USD",
                 "start_date":       "2019-02-27T00:00:00",
                 "end_date":         "2020-02-26T00:00:00",
-                "notional_amount":  -82200,
+                "notional_amount":  82200,
                 "rate":             0.085,
-                "type":             "xccy_swap",
+                "type":             "xccy",
                 "settlement_type":  "physical",
                 "payment_leg":      "fixed",
                 "underlying_price":  0.98

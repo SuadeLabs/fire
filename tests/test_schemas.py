@@ -4,6 +4,8 @@ import re
 import unittest
 from . import (
     DOC_NAMES,
+    EXAMPLES_DIR,
+    EXAMPLE_FILES,
     SCHEMAS_DIR,
     SCHEMA_FILES,
     SCHEMA_NAMES,
@@ -21,6 +23,10 @@ class TestSchemas(unittest.TestCase):
     def test_jsons_are_valid(self):
         for schema_name in SCHEMA_FILES:
             with open(os.path.join(SCHEMAS_DIR, schema_name)) as json_schema:
+                self.assertTrue(json.load(json_schema))
+
+        for example_name in EXAMPLE_FILES:
+            with open(os.path.join(EXAMPLES_DIR, example_name)) as json_schema:
                 self.assertTrue(json.load(json_schema))
 
     def test_enum_registry(self):
