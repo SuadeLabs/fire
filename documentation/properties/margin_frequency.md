@@ -6,7 +6,9 @@ schemas:	[agreement]
 
 # margin_frequency
 
-In a credit support annex, the **margin_frequency** is the periodic timescale after which collateral may be called.
+In a credit support annex, the **margin_frequency** is the periodic timescale at which variation margin is exchanged. Can be one of the following values:
+    - "daily", "weekly", "daily_settled"
+Cleared derivatives which are settled daily can be flagged as daily_settled."
 
 ## Magin frequency in regulation
 

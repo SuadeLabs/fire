@@ -26,9 +26,9 @@
       "type": "string"
     },
     "margin_frequency": {
-      "description": "Indicates the periodic timescale after which collateral may be called",
+      "description": "Indicates the periodic timescale at which variation margin is exchanged. Cleared derivatives which are daily settled can be flagged as daily_settled.",
       "type": "string",
-      "enum": ["daily", "weekly"]
+      "enum": ["daily", "weekly", "daily_settled"]
     },
     "minimum_transfer_amount": {
       "description": "Smallest amount of collateral that can be transferred. Monetary type represented as a naturally positive integer number of cents/pence.",
