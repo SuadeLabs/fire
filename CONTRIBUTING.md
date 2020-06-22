@@ -22,7 +22,7 @@ title:      "Contributing"
 
 # Keep in mind
 Ensure you respect the project's [guiding principles][guiding-principles]
-Ensure that you follow the community guidelines: [https://suade.org/fire/guidelines/](https://suade.org/fire/guidelines/)
+Ensure that you follow the community guidelines: [https://suade.org/fire/guidelines.html](https://suade.org/fire/guidelines.html)
  
  ---
 [guiding-principles]: guiding_principles.md
