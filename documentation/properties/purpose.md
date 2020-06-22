@@ -296,7 +296,7 @@ Describes an account that holds the amount of interests receivable/payable as re
 ### int_on_bond_and_frn
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **bonds and Floating Rate Notes**.
 
-### int_on_bridging_finance
+### int_on_bridging_loan
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **bridging finance loans**.
 
 ### int_on_mortgage

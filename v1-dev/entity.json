@@ -178,8 +178,9 @@
         "sspe",
         "state_owned_bank",
         "statutory_board",
-        "supported_sme"
-      ] 
+        "supported_sme",
+        "unincorporated_biz"
+      ]
     },
     "version_id": {
       "description": "The version identifier of the data such as the firm's internal batch identifier.",
