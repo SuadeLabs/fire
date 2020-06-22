@@ -68,6 +68,9 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── int_on_derivative
 │   │   └── int_on_deriv_hedge
 │   ├── int_on_loan_and_adv
+│   │   ├── int_on_bridging_finance
+│   │   ├── int_on_mortgage
+│   │   ├── int_on_credit_card
 │   │   └── int_on_ecgd_lending
 │   ├── int_on_money_mkt
 │   └── int_on_sft
@@ -292,6 +295,15 @@ Describes an account that holds the amount of interests receivable/payable as re
 
 ### int_on_bond_and_frn
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **bonds and Floating Rate Notes**.
+
+### int_on_bridging_finance
+Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **bridging finance loans**.
+
+### int_on_mortgage
+Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **loans secured on dwellings**.
+
+### int_on_credit_card
+Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **credit card lending**.
 
 ### intra_group_fee
 Describes an account that holds the amount of:
