@@ -51,6 +51,7 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   └── other_pse
 ├── sovereign
 ├── intl_org
+├── unincorporated_biz
 └── other
 ```
 
@@ -75,8 +76,8 @@ In this scenario, an SME type will be assumed to comply with the [EU SME Recomme
 
 Company category | Staff headcount | Turnover (or) | Balance sheet total
 -----------------|-----------------|---------------|--------------------
-Medium-sized     | < 250           | ≤ € 50 m      | ≤ € 43 m            
-Small            | < 50            | ≤ € 10 m      | ≤ € 10 m            
+Medium-sized     | < 250           | ≤ € 50 m      | ≤ € 43 m
+Small            | < 50            | ≤ € 10 m      | ≤ € 10 m
 Micro            | < 10            | ≤ € 2 m       | ≤ € 2 m
 
 
@@ -187,7 +188,7 @@ International Organisations are defined in [CRR][crr] Article 118:
 ### corporate
 An organisation with government approval to conduct business (or other activities).
 
-### sovereign  
+### sovereign
 As defined in the [FCA handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2971.html), a sovereign is:
 
 >(a) the EU; or
@@ -211,7 +212,7 @@ A **regional government** is a government entity that only has control on a spec
 ### central_govt
 A **central government** is the government of a nation-state. While some countries may have **regional governments** that operate autonomously, the **central goverment** is the governing system that is concerned with issues that affect the entire nation.
 
-### pse  
+### pse
 A public sector entity is defined in the [FCA handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2242.html) as any of the following:
 
 >(a) non-commercial administrative bodies responsible to central governments, regional governments or local authorities; or
@@ -232,7 +233,7 @@ A more comprehensive list can be found here:
 In the UK, public corporations are corporate bodies, sometimes with plc or Ltd in their title. Ownership by government
 may be total, as in the case of those corporations established by Act of Parliament, or through majority share-holdings.
 Public control is over broad aspects of policy; public corporations are free to manage their day to day operations independently.
-Trust ports in Northern Ireland and ports belonging to public corporations continue to be classed as ‘public corporations’, as do certain airport companies, which were set up by local authorities under the terms of the 1986 Airports Act. 
+Trust ports in Northern Ireland and ports belonging to public corporations continue to be classed as ‘public corporations’, as do certain airport companies, which were set up by local authorities under the terms of the 1986 Airports Act.
 A list of these entities can be found at www.ons.gov.uk/economy/nationalaccounts/uksectoraccounts/datasets/publicsectorclassificationguide.
 
 ### social_security_fund
@@ -255,7 +256,7 @@ A promotional lender is defined by the EU [here][lcr] Article 10.1(e):
 > a merchant bank approved under section 28 of the Monetary Authority of Singapore Act (Cap. 186);
 
 ### state_owned_bank
-Financial institutions where there is majority ownership or control by a government or state. 
+Financial institutions where there is majority ownership or control by a government or state.
 
 ### investment_firm
 *Investment firm* is defined under the Markets in Financial Instruments Directive (MiFID) Article 4(1):
@@ -392,6 +393,10 @@ A **deposit broker** can be an individual or a firm that facilitates the placeme
 
 ### building_society
 A financial institution that offers a variety of savings accounts to attract deposits, mainly from the general public, and which specializes in the provision of long-term mortgage loans used to purchase property. They have entered into arrangements with other financial institutions that have enabled them to provide their depositors with limited banking facilities (the use of cheque books and credit cards, for instance) and other financial services, a development that has been given added impetus by the BUILDING SOCIETIES ACT 1986.
+
+### unincorporated_biz
+Unincorporated business other than unlimited liability partnerships. Sole traders would fall in this category.
+
 
 # Loan
 ```
@@ -561,7 +566,7 @@ An asset-backed security is a security whose income payments and hence value are
 A residential mortgage-backed security (a subclass of an ABS).
 
 ### rmbs_trans
-This type value is in order to indicate whether the security is subject to transitional provisions for securitisations backed by residential loans:  
+This type value is in order to indicate whether the security is subject to transitional provisions for securitisations backed by residential loans:
 [LCR][lcr] Article 37:
 > 1.   By derogation from Article 13, securitisations issued before 1 October 2015, where the underlying exposures are residential loans as referred to in point (g)(i) of Article 13(2), shall qualify as Level 2B assets if they meet all the requirements set out in Article 13 other than the loan-to-value or loan-to-income requirements set out in that point (g)(i) of Article 13(2).
 
@@ -838,8 +843,8 @@ Any other account type that cannot be classified as one of the other types.
 ### cap and floor
 Interest rate cap and interest rate floor are a string of individual interest rate options on a floating rate index (e.g. USD-libor-3m) observed for each
 underlying interest rate period. At the end of period:
-- the cap seller pays to the cap buyer the difference between the underlying rate index fixing and the strike if the fixing is observed above the strike. 
-- the floor seller pays to the floor buyer the difference between the strike and the underlying rate index fixing if the fixing is observed below the strike. 
+- the cap seller pays to the cap buyer the difference between the underlying rate index fixing and the strike if the fixing is observed above the strike.
+- the floor seller pays to the floor buyer the difference between the strike and the underlying rate index fixing if the fixing is observed below the strike.
 
 ### ois
 Overnight Index Swap
