@@ -324,6 +324,7 @@
         "expense",
         "income",
         "intangible",
+        "pre_paid_card",
         "provision",
         "reserve",
         "suspense",

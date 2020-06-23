@@ -397,6 +397,11 @@ A financial institution that offers a variety of savings accounts to attract dep
 ### unincorporated_biz
 Unincorporated business other than unlimited liability partnerships. Sole traders would fall in this category.
 
+### charity
+
+### community_charity
+Charity serving communities . Include non-profitable institutions serving households
+
 
 # Loan
 ```
@@ -642,6 +647,10 @@ A non-exhaustive list of [examples][ecbexamples] of underlying assets that may c
 - credit card receivables, and
 - leasing receivables.
 
+
+### index_linked
+Index-linked bonds are bonds whoese notional amount and interest amount are linked on the intial and final values of an index, generally an inflation index
+
 [ecbexamples]: https://www.ecb.europa.eu/pub/pdf/other/ecb-boe_case_better_functioning_securitisation_marketen.pdf
 
 # Account
@@ -668,7 +677,7 @@ A non-exhaustive list of [examples][ecbexamples] of underlying assets that may c
 │   ├── reserve
 │   ├── suspense
 │   └── tangible
-├── prepaid_card (pending)
+├── prepaid_card
 ├── retail_bonds
 ├── savings
 ├── time_deposit
@@ -685,7 +694,7 @@ A deposit account purely holding certificates of deposit (see *cd* *Security* **
 
 ### prepaid_card
 From the [Interchange Fees for Card-based Payments Regulation][card-fees] Article 2(35):
-> prepaid card means a category of payment instrument on which electronic money, as defined in point 2 of Article 2 of Directive 2009/110/EC, is stored.
+> prepaid card means a category of payment instrument on which electronic money, as defined in point 2 of Article 2 of Directive 2009/110/EC, is stored. For BoE, include cash-loaded smart cards or electronic money schemes, for which pre-payment has been received
 NB. see **credit_card**
 
 ### debit_card
