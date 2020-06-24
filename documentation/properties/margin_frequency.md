@@ -9,12 +9,18 @@ schemas:	[agreement]
 ```bash
 ├── daily
 │   └── daily_settled
-└── weekly
+├── weekly
+├── bi_weekly
+└── monthly
 ```
 
-In a credit support annex, the **margin_frequency** is the periodic timescale at which variation margin is exchanged. 
+In a credit support annex, the **margin_frequency** is the periodic timescale at which variation margin is exchanged. Can be one of the following values:
+    daily
+    daily_settled (applies to derivative margined and settled daily (when facing a ccp))
+    weekly
+    bi_weekly (every two weeks)
+    monthly
     
-Cleared derivatives which are settled daily can be flagged as **daily_settled**.
 
 ## Magin frequency in regulation
 
