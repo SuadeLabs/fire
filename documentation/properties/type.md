@@ -397,6 +397,12 @@ A financial institution that offers a variety of savings accounts to attract dep
 ### unincorporated_biz
 Unincorporated business other than unlimited liability partnerships. Sole traders would fall in this category.
 
+### charity
+A non-profit institution.
+
+### community_charity
+Charity serving communities and individuals. Includes non-profit institutions serving households.
+
 
 # Loan
 ```
@@ -528,7 +534,7 @@ The [FCA](https://www.handbook.fca.org.uk/handbook/glossary/G1587.html) defines 
 According to IAS 32.33, if an entity reacquires its own equity instruments, those instruments shall be considered **treasury shares**, and shall be deducted from equity.
 
 ### debt
-This is a "catch all" term for debt of any kind, *bond*, *bond_amortising*, *index_linked_gilt*, *covered_bond*, *abs*, *residential_mbs*, *non_residential_mbs*, *frn*, *govt_gteed_frn*, to be used when further granularity is not available or not needed.
+This is a "catch all" term for debt of any kind, *bond*, *bond_amortising*, *covered_bond*, *abs*, *residential_mbs*, *non_residential_mbs*, *frn*, *govt_gteed_frn*, to be used when further granularity is not available or not needed.
 
 ### bond
 A **bond** is a type of loan whereby an investor lends money to an entity for a defined period of time at a fixed or floating interest rate.
@@ -642,6 +648,10 @@ A non-exhaustive list of [examples][ecbexamples] of underlying assets that may c
 - credit card receivables, and
 - leasing receivables.
 
+
+### index_linked
+Index-linked securities are securities whose notional amount and interest amount are linked on the intial and final values of an index, generally an inflation index
+
 [ecbexamples]: https://www.ecb.europa.eu/pub/pdf/other/ecb-boe_case_better_functioning_securitisation_marketen.pdf
 
 # Account
@@ -668,7 +678,7 @@ A non-exhaustive list of [examples][ecbexamples] of underlying assets that may c
 │   ├── reserve
 │   ├── suspense
 │   └── tangible
-├── prepaid_card (pending)
+├── prepaid_card
 ├── retail_bonds
 ├── savings
 ├── time_deposit
@@ -685,15 +695,12 @@ A deposit account purely holding certificates of deposit (see *cd* *Security* **
 
 ### prepaid_card
 From the [Interchange Fees for Card-based Payments Regulation][card-fees] Article 2(35):
-> prepaid card means a category of payment instrument on which electronic money, as defined in point 2 of Article 2 of Directive 2009/110/EC, is stored.
-NB. see **credit_card**
+> prepaid card means a category of payment instrument on which electronic money, as defined in point 2 of Article 2 of Directive 2009/110/EC, is stored. This can also include cash-loaded smart cards or electronic money schemes, for which pre-payment has been received.
 
 ### debit_card
 From the [Interchange Fees for Card-based Payments Regulation][card-fees] Article 2(33) and (4):
 > debit card means a category of payment instrument that enables the payer to initiate a debit card transaction excluding those with prepaid cards;
 > debit card transaction means a card-based payment transaction, including those with prepaid cards that is not a credit card transaction;
-
-NB. see **credit_card**
 
 ### credit_card
 A credit card is typically an off-balance sheet, contingent funding obligation whereby a customer has a certian credit limit and may borrow funds at any point, up to that limit, similar to a card-based credit facility.

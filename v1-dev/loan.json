@@ -114,6 +114,11 @@
       "type": "string",
       "format": "date-time"
     },
+    "encumbrance_type": {
+      "description": "The type of the encumbrance causing the encumbrance_amount.",
+      "type": "string",
+      "enum": ["abs", "cb_funding", "covered_bond"]
+    },
     "end_date": {
       "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
       "type": "string",
@@ -317,7 +322,7 @@
       "description": "The form of the loan product administered by the financial institution, with regards to common regulatory classifications.",
       "type": "string",
       "enum": [
-        "mortgage", "commercial_property", "commercial", "personal", "auto", "liquidity_facility", "trade_finance", "credit_card", "credit_facility", "multiccy_facility", "nostro", "other"
+        "auto", "commercial_property", "commercial", "credit_card", "credit_facility", "financial_lease", "liquidity_facility", "mortgage", "personal", "trade_finance", "multiccy_facility", "nostro", "other"
       ]
     },
     "version_id": {
