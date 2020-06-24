@@ -398,9 +398,10 @@ A financial institution that offers a variety of savings accounts to attract dep
 Unincorporated business other than unlimited liability partnerships. Sole traders would fall in this category.
 
 ### charity
+A non-profit institution.
 
 ### community_charity
-Charity serving communities . Include non-profitable institutions serving households
+Charity serving communities and individuals. Includes non-profit institutions serving households.
 
 
 # Loan
