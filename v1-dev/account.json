@@ -231,6 +231,7 @@
         "loan_and_advance_fee",
         "ni_contribution",
         "manufactured_dividend",
+        "mortgage_fee",
         "non_life_ins_premium",
         "occupancy_cost",
         "operational",
@@ -264,6 +265,7 @@
         "staff",
         "system",
         "tax",
+        "unsecured_loan_fee",
         "write_off"
       ]
     },
