@@ -41,6 +41,8 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── insurance_fee
 │   ├── investment_banking_fee
 │   ├── loan_and_advance_fee
+│   │   ├── mortgage_fee
+│   │   └── unsecured_loan_fee
 │   ├── other_fs_fee
 │   └── other_non_fs_fee
 ├── fines
@@ -206,8 +208,14 @@ Describes an account that holds the amount of fees receivables/payables originat
 ### derivative_fee
 Describes an account that holds the amount of fees receivables/payables originating from **overdraft accounts**.
 
+### mortgage_fee
+Describes an account that holds the amount of fees receivables originating from **mortgage products**.
+
 ### overdraft_fee
 Describes an account that holds the amount of fees receivables originating from **overdraft accounts**.
+
+### unsecured_loan_fee
+Describes an account that holds the amount of fees receivables originating from **unsecured personal loans**.
 
 ### insurance_fee
 Describes an account that holds the amount of fees receivables originating from **insurance** activities.
