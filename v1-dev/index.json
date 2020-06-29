@@ -1,0 +1,55 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Index Schema",
+    "description": "An index represent the proportion of each constituent in a basket of securities or entities.",
+    "type": "object",
+    "properties": {
+      "id": {
+        "description": "The unique identifier for the index.",
+        "type": "string"
+      },
+      "date": {
+        "description": "The observation date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+        "type": "string",
+        "format": "date-time"
+      },
+      "cqs_standardised": {
+        "description": "The credit quality step for standardised approach.",
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 6
+      },
+      "composition": {
+        "description": "Constituents and their proportion in the index.",
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+          "type": "object",
+          "properties": {
+            "reference_id": {
+              "description": "The reference item for the weight. (e.g. ISIN).",
+              "type": "string"
+            },
+            "weight": {
+              "description": "The proportion of the reference in the index. It is recorded as a percentage in decimal format.",
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0
+            }
+          },
+          "required": ["reference_id", "value"]
+        }
+      },
+      "name": {
+        "description": "The internal name of the index.",
+        "type": "string"
+      },
+      "version_id": {
+        "description": "The version identifier of the data such as the firm's internal batch identifier.",
+        "type": "string"
+      }
+    },
+    "required": ["id", "date", "composition"],
+    "additionalProperties": true
+  }
