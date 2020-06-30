@@ -1,0 +1,33 @@
+{
+    "description": "Equity index future contract on a dummy index traded on dummy exchange AAAA. Dummy index is only made of 3 constituents.",
+    "data": {
+        "derivative": [
+            {
+                "id": "eq_future_w_index",
+                "date": "2020-01-31T00:00:00",
+                "trade_date": "2020-01-01T00:00:00",
+                "start_date": "2020-01-01T00:00:00",
+                "asset_liability": "asset",
+                "currency_code": "EUR",
+                "asset_class": "eq_index",
+                "type": "future",
+                "mic_code": "AAAA",
+                "underlying_index": "dummy_index",
+                "mtm_dirty": 100,
+                "notional_amount": 10000
+            }
+        ],
+        "index": [
+            {
+                "id": "dummy_index",
+                "date": "2020-01-31T00:00:00",
+                "composition": [
+                    {"reference_id": "dummyisin123", "weight": 0.5},
+                    {"reference_id": "dummyisin456", "weight": 0.25},
+                    {"reference_id": "dummyisin789", "weight": 0.25}
+                ],
+                "name": "internal dummy index name"
+            }
+        ]
+    }
+}

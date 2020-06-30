@@ -32,7 +32,9 @@ class TestSchemas(unittest.TestCase):
     def test_enum_registry(self):
         for schema in SCHEMA_FILES:
             enums = schema_enum_registry(schema)
-            if schema in ["batch.json", "guarantor.json", "issuer.json"]:
+            if schema in [
+                "batch.json", "guarantor.json", "issuer.json", "index.json"
+            ]:
                 self.assertFalse(enums)
             else:
                 self.assertTrue(enums)

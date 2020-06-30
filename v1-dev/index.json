@@ -32,7 +32,7 @@
               "type": "string"
             },
             "weight": {
-              "description": "The proportion of the reference in the index. It is recorded as a percentage in decimal format.",
+              "description": "The proportion of the reference in the index. It is recorded in decimal format.",
               "type": "number",
               "minimum": 0.0,
               "maximum": 1.0
