@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"name"
-schemas:	[entity]
+schemas:	[entity, index]
 ---
 
 # name

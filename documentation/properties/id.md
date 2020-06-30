@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"id"
-schemas:	[account, collateral, customer, derivative_cash_flow, derivative, exchange_rate, guarantor, issuer, loan_transaction, loan, security]
+schemas:	[account, collateral, customer, derivative_cash_flow, derivative, exchange_rate, guarantor, issuer, index, loan_transaction, loan, security]
 ---
 
 # id
