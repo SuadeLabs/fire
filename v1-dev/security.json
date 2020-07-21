@@ -155,6 +155,28 @@
       "type": "integer",
       "minimum": 1
     },
+    "index_composition": {
+      "description": "Constituents and their proportion in an index.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "properties": {
+          "reference_id": {
+            "description": "The reference security id for the weight.",
+            "type": "string"
+          },
+          "weight": {
+            "description": "The proportion of the reference in the index. It is recorded in decimal format.",
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 1.0
+          }
+        },
+        "required": ["reference_id", "weight"]
+      }
+    },
     "isin_code": {
       "description": "The unique International Securities Identification Number for the security according to ISO 6166.",
       "type": "string",
@@ -342,6 +364,7 @@
         "frn",
         "guarantee",
         "index_linked",
+        "index",
         "letter_of_credit",
         "mbs",
         "mtn",

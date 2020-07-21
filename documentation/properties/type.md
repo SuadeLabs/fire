@@ -513,6 +513,7 @@ Other refers to a type of security not covered by the above. If you find yoursel
 ├── cb_facility
 ├── cash_ratio_deposit
 ├── cash
+├── index
 └── other
 ```
 
@@ -648,11 +649,14 @@ A non-exhaustive list of [examples][ecbexamples] of underlying assets that may c
 - credit card receivables, and
 - leasing receivables.
 
-
 ### index_linked
-Index-linked securities are securities whose notional amount and interest amount are linked on the intial and final values of an index, generally an inflation index
+Index-linked securities are securities whose notional amount and interest amount are linked on the intial and final values of an index, generally an inflation index.
 
 [ecbexamples]: https://www.ecb.europa.eu/pub/pdf/other/ecb-boe_case_better_functioning_securitisation_marketen.pdf
+
+### index
+Index securities are reference records recording the details of an index using the index_composition field.
+
 
 # Account
 
