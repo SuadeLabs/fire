@@ -834,6 +834,7 @@ Any other account type that cannot be classified as one of the other types.
 ├── vanilla_swap
 ├── mtm_swap
 ├── cds
+├── ccds
 ├── ois
 ├── xccy
 ├── nds
@@ -862,6 +863,10 @@ Overnight Index Swap
 
 ### cds
 Credit Default Swap
+
+### ccds
+Contingent Credit Default Swap
+Protection on the mark-to-market of a specifc derivative transaction in case of a credit event affecting the transaction counterparty
 
 ### tarf
 Target Redemption Forward

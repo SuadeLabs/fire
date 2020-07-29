@@ -44,6 +44,10 @@
       "description": "Unique identifier to the derivative to which this cash flow relates",
       "type": "string"
     },
+    "forward_rate": {
+      "description": "Rate used to set a variable cash flow on the reset_date",
+      "type": "number",
+    },
     "leg": {
       "description": "The type of the payment leg.",
       "type": "string",
@@ -93,6 +97,11 @@
     "reporting_id": {
       "description": "The internal ID for the legal entity under which the account is being reported.",
       "type": "string"
+    },
+    "reset_date": {
+      "description": "Date on which a variable cash flow amount is set. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
     },
     "settlement_type": {
       "description": "The type of settlement for the contract.",
