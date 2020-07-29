@@ -448,6 +448,7 @@ Use this enumeration value to refer to derivative cash flows which are calculate
 ├── promotional
 ├── remortgage
 ├── remortgage_other
+├── speculative_property
 ├── consumer_buy_to_let
 ├── further_advance
 └── other
