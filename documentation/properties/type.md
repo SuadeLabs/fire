@@ -850,7 +850,8 @@ Any other account type that cannot be classified as one of the other types.
 |    ├── ndf
 |    └── tarf
 ├── fra
-└── spot
+|── spot
+└── variance_swap
 ```
 ### cap and floor
 Interest rate cap and interest rate floor are a string of individual interest rate options on a floating rate index (e.g. USD-libor-3m) observed for each
@@ -890,6 +891,10 @@ The settlement value is based on the difference between the exchange rate specif
 A [**forward rate agreement**][fra] is an interest rate forward contract in which the rate to be paid or received on a specific obligation for a set period of time, beginning at some time in the future, is determined at contract initiation.
 
 [fra]: https://www.bis.org/statistics/glossary.htm?&selection=315&scope=Statistics&c=a&base=term
+
+### variance_swap
+A variance swap is an instrument which allows investors to trade future realized (or historical) volatility against current implied volatility. 
+
 
 # leg_type
 The **leg_type** is used to describe the payoff type of a derivative leg, which may be part of an instrument refered to in the derivative_type attibute (eg. vanilla_swap). The atribute is an enum with the following members:
