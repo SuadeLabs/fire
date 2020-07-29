@@ -46,7 +46,7 @@
     },
     "forward_rate": {
       "description": "Rate used to set a variable cash flow on the reset_date",
-      "type": "number",
+      "type": "number"
     },
     "leg": {
       "description": "The type of the payment leg.",
