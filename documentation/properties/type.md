@@ -834,7 +834,7 @@ Any other account type that cannot be classified as one of the other types.
 ├── vanilla_swap
 ├── mtm_swap
 ├── cds
-├── ccds
+|    └── ccds
 ├── ois
 ├── xccy
 ├── nds
@@ -863,11 +863,16 @@ underlying interest rate period. At the end of period:
 Overnight Index Swap
 
 ### cds
-Credit Default Swap
+A [**credit default swap**][cds] means a derivative contract in which one party pays a fee to another party in return for a payment or other benefit in the case of a credit event relating to a reference entity and of any other default, relating to that derivative contract, which has a similar economic effect;
+
+[cds]:  https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32012R0236
+
 
 ### ccds
-Contingent Credit Default Swap
-Protection on the mark-to-market of a specifc derivative transaction in case of a credit event affecting the transaction counterparty
+A [**contingent credit default swap**][ccds] (CCDS) is a variation of a credit default swap (CDS) where an additional triggering event is required. 
+
+[ccds]: https://www.investopedia.com/terms/c/contingent-credit-default-swap.asp
+
 
 ### tarf
 Target Redemption Forward
