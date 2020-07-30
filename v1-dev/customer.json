@@ -7,6 +7,11 @@
     "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/entity.json"
   }],
   "properties": {
+    "clearing_threshold": {
+      "description": "Status of the clearing threshold as defined in EMIR",
+      "type": "string",
+      "enum": ["above", "below"]
+    },
     "product_count": {
       "description": "The number of active products/trades this customer has with the firm.",
       "type": "integer",
