@@ -834,7 +834,7 @@ Any other account type that cannot be classified as one of the other types.
 ├── vanilla_swap
 ├── mtm_swap
 ├── cds
-|    └── ccds
+|   └── ccds
 ├── ois
 ├── xccy
 ├── nds
@@ -846,11 +846,11 @@ Any other account type that cannot be classified as one of the other types.
 |   └── cap
 |   └── floor
 ├── forward
-|    ├── future
-|    ├── ndf
-|    └── tarf
+|   ├── future
+|   ├── ndf
+|   └── tarf
 ├── fra
-|── spot
+├── spot
 └── variance_swap
 ```
 ### cap and floor
