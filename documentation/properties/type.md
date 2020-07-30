@@ -834,6 +834,7 @@ Any other account type that cannot be classified as one of the other types.
 ├── vanilla_swap
 ├── mtm_swap
 ├── cds
+|   └── ccds
 ├── ois
 ├── xccy
 ├── nds
@@ -845,11 +846,12 @@ Any other account type that cannot be classified as one of the other types.
 |   └── cap
 |   └── floor
 ├── forward
-|    ├── future
-|    ├── ndf
-|    └── tarf
+|   ├── future
+|   ├── ndf
+|   └── tarf
 ├── fra
-└── spot
+├── spot
+└── variance_swap
 ```
 ### cap and floor
 Interest rate cap and interest rate floor are a string of individual interest rate options on a floating rate index (e.g. USD-libor-3m) observed for each
@@ -861,7 +863,16 @@ underlying interest rate period. At the end of period:
 Overnight Index Swap
 
 ### cds
-Credit Default Swap
+A [**credit default swap**][cds] means a derivative contract in which one party pays a fee to another party in return for a payment or other benefit in the case of a credit event relating to a reference entity and of any other default, relating to that derivative contract, which has a similar economic effect;
+
+[cds]:  https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32012R0236
+
+
+### ccds
+A [**contingent credit default swap**][ccds] (CCDS) is a variation of a credit default swap (CDS) where an additional triggering event is required. 
+
+[ccds]: https://www.investopedia.com/terms/c/contingent-credit-default-swap.asp
+
 
 ### tarf
 Target Redemption Forward
@@ -885,6 +896,10 @@ The settlement value is based on the difference between the exchange rate specif
 A [**forward rate agreement**][fra] is an interest rate forward contract in which the rate to be paid or received on a specific obligation for a set period of time, beginning at some time in the future, is determined at contract initiation.
 
 [fra]: https://www.bis.org/statistics/glossary.htm?&selection=315&scope=Statistics&c=a&base=term
+
+### variance_swap
+A variance swap is an instrument which allows investors to trade future realized (or historical) volatility against current implied volatility. 
+
 
 # leg_type
 The **leg_type** is used to describe the payoff type of a derivative leg, which may be part of an instrument refered to in the derivative_type attibute (eg. vanilla_swap). The atribute is an enum with the following members:

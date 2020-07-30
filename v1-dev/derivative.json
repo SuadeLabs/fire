@@ -262,7 +262,7 @@
       "description": "This is the type of the derivative with regards to common regulatory classifications.",
       "type": "string",
       "enum": [
-        "vanilla_swap", "mtm_swap", "option", "call_swaption", "put_swaption", "call_option", "put_option", "future", "forward", "tarf", "xccy", "cds", "ois", "spot", "ndf", "nds", "fra", "cap", "floor"
+        "vanilla_swap", "mtm_swap", "option", "call_swaption", "put_swaption", "call_option", "put_option", "future", "forward", "tarf", "xccy", "cds", "ois", "spot", "ndf", "nds", "fra", "cap", "floor", "ccds", "variance_swap"
       ]
     },
     "trade_date": {
@@ -285,7 +285,7 @@
     "underlying_index_tenor": {
       "description": "The designated maturity of the underlying interest rate index used in the underlying_index property for interest rate derivatives",
       "type": "string",
-      "enum": ["1d", "1m", "2m", "3m", "6m", "12m"]
+      "enum": ["1d", "7d", "1m", "2m", "3m", "4m", "5m", "6m", "7m", "8m", "9m", "12m"]
    },
     "underlying_issuer_id": {
       "description": "The unique identifier used by the financial institution to identify the underlying reference issuer for this derivative.",
