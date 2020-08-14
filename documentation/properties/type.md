@@ -939,6 +939,10 @@ The [EC Collateral Directive][arrangement] states:
 > The assets can be provided: either by transfer of full ownership from a collateral provider to a collateral taker; or by the transfer of possession from a collateral provider to a collateral taker under a security right (e.g. pledge, charge or lien), where the full ownership of the assets remains with the collateral provider.
 
 
+### immovable_property
+As per Artcile 124(1) [CRR][crr], this identifies **immovable property**
+collateral that cannot be classified as residential or commercial property.
+
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575
 
 [card-fees]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2015.123.01.0001.01.ENG
