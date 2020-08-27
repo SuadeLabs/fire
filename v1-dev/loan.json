@@ -36,7 +36,7 @@
     "arrears_arrangement": {
       "description": "The arrangement the lender has made with the borrower regarding the amount referenced in the arrears_balance.",
       "type": "string",
-      "enum": ["temporary", "formal", "possessed", "none"]
+      "enum": ["temporary", "formal", "possessed", "none", "modified_tnc", "refinancing"]
     },
     "arrears_balance": {
       "description": "The balance of the loan or capital amount that is considered to be in arrears. Monetary type represented as a naturally positive integer number of cents/pence.",

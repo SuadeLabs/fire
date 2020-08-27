@@ -36,3 +36,11 @@ outstanding debt).
 
 
 [mlar]: http://www.bankofengland.co.uk/pra/documents/regulatorydata/mlar/sup_chapter16_annex19bg_20120401.pdf
+
+### modified_tnc
+A modification of the previous terms and conditions of a contract that the debtor is considered unable to comply with due to its financial difficulties (‘troubled debt’) resulting in insufficient debt service ability and that would not  have  been  granted  had  the  debtor  not  been  experiencing  financial  difficulties (in relation to forbearance status).
+
+### refinancing
+A total or partial refinancing of a troubled debt contract, that would not have been granted had the debtor not been experiencing financial difficulties (in relation to forbearance status).
+
+FINREP 19 ANNEX 3(ANNEX 5) - https://eba.europa.eu/sites/default/documents/files/documents/10180/2321183/b67323ac-27fa-482d-926e-ae7ba3e90cb8/Annex%20III%20%28Annex%205%20%28FINREP%29%29.pdf
