@@ -8,7 +8,11 @@ schemas:	[loan]
 
 ---
 
-The **arrears_arrangement** is the property of a loan that describes how the borrower and lender are dealing with the unpaid capital or interest payments indicated in the **arrears_balance**. The options include:
+The **arrears_arrangement** is the property of a loan (debt) that describes how the borrower and lender are dealing with the unpaid capital or interest payments indicated in the **arrears_balance**. An arrears_arrangement does not necessarily require a positive arrears_balance as an arrangement may be reached between lender and borrower in anticipation of a future arrears situation eg. *Forbearance*. Forbearance is not an extremely well-defined concept within accounting standards. As such we have adopted the [forbearance definitions and categorisation adopted by the EBA][eba-forbearance-its] and used in the [Finrep ITS][finrep-its]. See also: [BBVA research paper on the topic][bbva-forbearance].
+
+[eba-forbearance-its]: https://eba.europa.eu/documents/10180/449824/EBA-ITS-2013-03+Final+draft+ITS+on+Forbearance+and+Non-performing+exposures.pdf/a55b9933-be43-4cae-b872-9184c90135b9
+[bbva-forbearance]: https://www.bbvaresearch.com/wp-content/uploads/2017/12/2017-12-IFRS-9-Impact-on-forbearance-practices.pdf
+[finrep-its]: https://eba.europa.eu/sites/default/documents/files/documents/10180/2321183/b67323ac-27fa-482d-926e-ae7ba3e90cb8/Annex%20III%20%28Annex%205%20%28FINREP%29%29.pdf
 
 ### temporary
 This indicates cases where the lender has made a temporary concession to the borrower to assist them with their payments of the **arrears_balance**. 
@@ -36,3 +40,9 @@ outstanding debt).
 
 
 [mlar]: http://www.bankofengland.co.uk/pra/documents/regulatorydata/mlar/sup_chapter16_annex19bg_20120401.pdf
+
+### modified_tnc
+A modification of the previous terms and conditions of a contract that the debtor is considered unable to comply with due to its financial difficulties ("troubled debt") resulting in insufficient debt service ability and that would not  have  been  granted  had  the  debtor  not  been  experiencing  financial  difficulties (in relation to forbearance status).
+
+### refinancing
+A total or partial refinancing of a troubled debt contract, that would not have been granted had the debtor not been experiencing financial difficulties (in relation to forbearance status).
