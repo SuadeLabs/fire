@@ -25,9 +25,10 @@
       "description": "The unique identifier used by the financial institution to identify the counterparty to this agreement.",
       "type": "string"
     },
-    "incurred_cva": {
-      "description": "The amount of credit valuation adjustements being recognised by the institution as an incurred write-down, calculated without taking into account any offsetting debit value adjustment attributed to the firm's own credit risk, that has been already excluded from own funds.",
-      "type": "integer"
+    "netting_eligibility": {
+      "description": "Indicates if netting is applicable to the transactions covered by the agreement under CRR Article 296",
+      "type": "string",
+      "enum": ["crr", "non-crr"]
     },
     "margin_frequency": {
       "description": "Indicates the periodic timescale at which variation margin is exchanged. Cleared derivatives which are daily settled can be flagged as daily_settled.",
