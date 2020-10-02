@@ -69,10 +69,6 @@
       "description": "The notional value is the total value with regard to a derivative's underlying index, security or asset at its spot price in accordance with the specifications (i.e. leverage) of the derivative product. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
-    "amortising_amount": {
-      "description": "Positive (negative) amount by which the period notional amount decreases (increases) on the last day (payment_date)of the period. Monetary type represented as a naturally positive integer number of cents/pence.",
-      "type": "integer"
-    },
     "on_balance_sheet": {
       "description": "Is the financial product reported on the balance sheet of the financial institution?",
       "type": "boolean"
