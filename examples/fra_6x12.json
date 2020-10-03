@@ -1,24 +1,25 @@
 
 {
-	"description": "Forward rate agreement bought for time period starting in 6 months and ending in 12 months. The rate is the rate which is locked in, the underlying_price is the current reference rate.",
+	"description": "Short 6x12 forward rate agreement; starting in 6 months and ending in 12 months",
 	"data": {
 		"derivative": [
 			{
 				"id": "6x12-fra",
-				"date": "2019-01-01T00:00:00",
-				"mtm_dirty": -10,
+				"date": "2020_03_31T00:00:00",
 				"asset_class": "ir",
 				"type": "fra",
+				"leg_type": "floating",
 				"position": "short",
 				"currency_code": "USD",
-				"notional_amount": 100,
-				"rate": 1.5,
+				"notional_amount": 10000,
+                "trade_date": "2019-11-25T00:00:00",
+                "start_date": "2020-05-27T00:00:00",
+                "end_date": "2020-11-27T00:00:00",
+				"settlement_type": "cash",
 				"underlying_index": "EURIBOR",
 				"underlying_index_tenor": "3m",
-				"start_date": "2019-06-01T00:00:00",
-				"end_date": "2020-01-01T00:00:00",
-				"settlement_type": "cash",
-				"underlying_price": 1.4
+				"rate": 0.005,
+				"mtm_dirty": -25
 			}
 		]
 	}
