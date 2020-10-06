@@ -1,13 +1,11 @@
 ---
 layout:		property
-title:		"number_of_disputes"
+title:		"margin_period_of_risk"
 schemas:	[agreement]
 ---
 
-# number_of_disputes
+# margin_period_of_risk
 
-The **number_of_disputes** is defined in accordance with Article 285(4) of the [CRR][CRR]:
-> If an institution has been involved in more than two margin call disputes on a particular netting set over the immediately preceding two quarters that have lasted longer than the applicable margin period of risk under paragraphs 2 and 3, the institution shall use a margin period of risk that is at least double the period specified in paragraphs 2 and 3 for that netting set for the subsequent two quarters.
-
+The **margin_period_of_risk** attribute allows insitutions to provide their estimate of the margin period of risk (MPOR) for the transactions covered by the agreement (CSA) [CRE 52.50]. As the MPOR is subject to a regualtory floor, it can be left empty.
 ---
-[CRR]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02013R0575-20191225
+[CRE52]: https://www.bis.org/basel_framework/chapter/CRE/52.htm?tldate=20201231&inforce=20220101

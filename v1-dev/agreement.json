@@ -47,6 +47,10 @@
       "description": "Indicates the number of disputes threshold to be used in the margin period of risk",
       "type": "integer"
     },
+    "margin_period_of_risk": {
+      "description": "Margin period of risk estimated for the transactions covered by the [CSA] agreement",
+      "type": "integer"
+    },
     "source": {
       "description": "The source where this data originated.",
       "type": "string"
