@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"incurred_cva"
-schemas:	[entity]
+schemas:	[customer]
 ---
 
 # incurred_cva
