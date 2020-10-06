@@ -1,4 +1,3 @@
----
 layout:		property
 title:		"number_of_disputes"
 schemas:	[agreement]

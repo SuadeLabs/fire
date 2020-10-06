@@ -29,6 +29,11 @@
       "description": "The amount of credit valuation adjustements being recognised by the institution as an incurred write-down, calculated without taking into account any offsetting debit value adjustment attributed to the firm's own credit risk, that has been already excluded from own funds.",
       "type": "integer"
     },
+    "netting_recognition": {
+      "description": "indicates if a contractual netting agreements is recognized as risk-reducing pursuant to CRR Articles 295 to 298",
+      "type": "string",
+      "enum": ["crr"]
+    },
     "margin_frequency": {
       "description": "Indicates the periodic timescale at which variation margin is exchanged. Cleared derivatives which are daily settled can be flagged as daily_settled.",
       "type": "string",
@@ -40,6 +45,10 @@
     },
     "number_of_disputes": {
       "description": "Indicates the number of disputes threshold to be used in the margin period of risk",
+      "type": "integer"
+    },
+    "margin_period_of_risk": {
+      "description": "Margin period of risk estimated for the transactions covered by the [CSA] agreement",
       "type": "integer"
     },
     "source": {
