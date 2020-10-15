@@ -84,7 +84,7 @@
         "description": "The type of credit support document",
         "type": "string",
         "enum": [
-            "csa_isda_1994", "csa_isda_1995", "csd_isda_1995", "scsa_isda_2013"
+            "csa_isda_1994", "csa_isda_1995", "csd_isda_1995", "scsa_isda_2013", "one_way_csa"
         ]
     },
     "version_id": {
