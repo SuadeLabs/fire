@@ -26,13 +26,12 @@
       "type": "string"
     },
     "incurred_cva": {
-      "description": "The amount of credit valuation adjustements being recognised by the institution as an incurred write-down, calculated without taking into account any offsetting debit value adjustment attributed to the firm's own credit risk, that has been already excluded from own funds.",
-      "type": "integer"
+      "description": "The amount of credit valuation adjustements being recognised by the institution as an incurred write-down, calculated without taking into account any offsetting debit value adjustment attributed to the firm's own credit risk, that has been already excluded from own funds.",      "type": "integer"
     },
-    "netting_recognition": {
-      "description": "indicates if a contractual netting agreements is recognized as risk-reducing pursuant to CRR Articles 295 to 298",
+    "netting_restriction": {
+      "description": "popluated if any netting restriction apllies, in relation to the nature of the agrement (e.g. one-way csa), the jurisdiction of the counterparty or a legal_opinion, which would prevent recognizing the agreement as risk-reducing, pursuant to CRR Articles 295 to 298",
       "type": "string",
-      "enum": ["crr"]
+      "enum": ["national_supervision", "restrictive_covenant", "one_way_csa"]
     },
     "margin_frequency": {
       "description": "Indicates the periodic timescale at which variation margin is exchanged. Cleared derivatives which are daily settled can be flagged as daily_settled.",

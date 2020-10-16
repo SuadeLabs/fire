@@ -32,8 +32,6 @@ The [Standard CSA][scsa] for both the English and New York law Annexes, publishe
 
 The Standard Credit Support Annex (SCSA or Standard CSA) seeks to standardize market practice regarding embedded optionality in current CSAs, promote the adoption of overnight index swap discounting for derivatives, and align the mechanics and economics of collateralization between the bilateral and cleared OTC derivative markets. Additionally, the SCSA seeks to create a homogeneous valuation framework, reducing current barriers to novation and valuation disputes
 
-### one_way_csa
-Indicates the the csa is a one-way csa (countrertparty does not post variation marging)
 ---
 
 # Additional definitions related to credit_support_types
