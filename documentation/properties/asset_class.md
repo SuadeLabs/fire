@@ -35,9 +35,10 @@ Primary asset classes are Foreign Exchange, Interest Rates, Credit, Equities, Co
 │   │    ├── coal
 │   │    └── electricity
 │   └── agri
-│        ├── sugar
-│        ├── coffee
-│        └── corn
+│   │    ├── sugar
+│   │    ├── coffee
+│   │    └── corn
+│   └── co_other
 └── other
 ```
 
