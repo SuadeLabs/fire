@@ -26,8 +26,12 @@
       "type": "string"
     },
     "incurred_cva": {
-      "description": "The amount of credit valuation adjustements being recognised by the institution as an incurred write-down, calculated without taking into account any offsetting debit value adjustment attributed to the firm's own credit risk, that has been already excluded from own funds.",
-      "type": "integer"
+      "description": "The amount of credit valuation adjustements being recognised by the institution as an incurred write-down, calculated without taking into account any offsetting debit value adjustment attributed to the firm's own credit risk, that has been already excluded from own funds.",      "type": "integer"
+    },
+    "netting_restriction": {
+      "description": "populated only if any netting restriction applies, in relation to the nature of the agreement (e.g. one-way csa) or the enforceability of netting in the jurisdiction of the counterparty, preventing the recognition of the agreement as risk-reducing, pursuant to CRR Articles 295 to 298",
+      "type": "string",
+      "enum": ["national_supervision", "restrictive_covenant", "one_way_csa"]
     },
     "netting_recognition": {
       "description": "indicates if a contractual netting agreements is recognized as risk-reducing pursuant to CRR Articles 295 to 298",
@@ -84,7 +88,7 @@
         "description": "The type of credit support document",
         "type": "string",
         "enum": [
-            "csa_isda_1994", "csa_isda_1995", "csd_isda_1995", "scsa_isda_2013"
+            "csa_isda_1994", "csa_isda_1995", "csd_isda_1995", "scsa_isda_2013", "one_way_csa"
         ]
     },
     "version_id": {
