@@ -14,6 +14,17 @@ The **hqla_class** of a security product is the classification of the security w
 
 > The objective of the LCR is to promote the short-term resilience of the liquidity risk profile of banks. It does this by ensuring that banks have an adequate stock of unencumbered high-quality liquid assets (HQLA) that can be converted easily and immediately in private markets into cash to meet their liquidity needs for a 30 calendar day liquidity stress scenario. The LCR will improve the banking sector’s ability to absorb shocks arising from financial and economic stress, whatever the source, thus reducing the risk of spillover from the financial sector to the real economy.
 
+```bash
+├── i
+│   └── i_non_op
+├── iia
+│   └── iia_non_op
+├── iib
+│   └── iib_non_op
+├── ineligible
+└── exclude
+```
+
 ### i
 Some examples of Level 1 Assets are:
 - Coins and bank notes
@@ -21,17 +32,26 @@ Some examples of Level 1 Assets are:
 - Qualifying central bank reserves
 - Domestic sovereign or central bank debt for non-0% risk-weighted sovereigns
 
+### i_non_op
+Level 1 Assets that do not meet all operational requirements for a liquid asset, as defined in [LCR][lcr] Article 8.
+
 ### iia
 Some examples of Level 2A Assets are:
 - Sovereign, central bank, multilateral development banks, and public sector entity assets qualifying for 20% risk weighting
 - Qualifying corporate debt securities rated AA- or higher
 - Qualifying covered bonds rated AA- or higher
 
+### iia_non_op
+Level 2A Assets that do not meet all operational requirements for a liquid asset, as defined in [LCR][lcr] Article 8.
+
 ### iib
 Some examples of Level 2B Assets are:
 - Qualifying residential mortgage backed securities
 - Qualifying corporate debt securities rated between A+ and BBB-
 - Qualifying common equity shares
+
+### iib_non_op
+Level 2B Assets that do not meet all operational requirements for a liquid asset, as defined in [LCR][lcr] Article 8.
 
 ### ineligible
 Assets that do not qualify for any of the HQLA classes set out in Chapter 2 of the LCR Regulation (or otherwise deemed ineligible by the firm or it's national supervisor) should be classified as **ineligible**.
