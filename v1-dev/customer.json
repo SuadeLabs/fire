@@ -12,6 +12,10 @@
       "type": "string",
       "enum": ["above", "below"]
     },
+    "incurred_cva": {
+      "description": "The amount of credit valuation adjustements being recognised by the institution as an incurred write-down, calculated without taking into account any offsetting debit value adjustment attributed to the firm's own credit risk, that has been already excluded from own funds.",
+      "type": "integer"
+    },
     "product_count": {
       "description": "The number of active products/trades this customer has with the firm.",
       "type": "integer",
@@ -26,10 +30,6 @@
       "description": "The status of the relationship with the customer from the firm's point of view.",
       "type": "string",
       "enum": ["established"]
-    },
-    "incurred_cva": {
-      "description": "The amount of credit valuation adjustements being recognised by the institution as an incurred write-down, calculated without taking into account any offsetting debit value adjustment attributed to the firm's own credit risk, that has been already excluded from own funds.",
-      "type": "integer"
     }
   },
   "required": ["id", "date"],

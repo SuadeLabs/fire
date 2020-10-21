@@ -21,12 +21,28 @@
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code",
       "description": "The country code for the governing law of the agreement. Two-letter country code as defined according to ISO 3166-1."
     },
-    "customer_id": {
+    "credit_support_type": {
+      "description": "The type of credit support document",
+      "type": "string",
+      "enum": [
+          "csa_isda_1994", "csa_isda_1995", "csd_isda_1995", "scsa_isda_2013"
+      ]
+  },
+  "customer_id": {
       "description": "The unique identifier used by the financial institution to identify the counterparty to this agreement.",
       "type": "string"
     },
-    "incurred_cva": {
-      "description": "The amount of credit valuation adjustements being recognised by the institution as an incurred write-down, calculated without taking into account any offsetting debit value adjustment attributed to the firm's own credit risk, that has been already excluded from own funds.",
+    "margin_frequency": {
+      "description": "Indicates the periodic timescale at which variation margin is exchanged. Cleared derivatives which are daily settled can be flagged as daily_settled.",
+      "type": "string",
+      "enum": ["daily", "daily_settled", "weekly", "bi_weekly", "monthly"]
+    },
+    "margin_period_of_risk": {
+      "description": "Margin period of risk estimated for the transactions covered by the [CSA] agreement",
+      "type": "integer"
+    },
+    "minimum_transfer_amount": {
+      "description": "Smallest amount of collateral that can be transferred. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer"
     },
     "netting_restriction": {
@@ -34,21 +50,8 @@
       "type": "string",
       "enum": ["national_supervision", "restrictive_covenant", "one_way_csa"]
     },
-    "margin_frequency": {
-      "description": "Indicates the periodic timescale at which variation margin is exchanged. Cleared derivatives which are daily settled can be flagged as daily_settled.",
-      "type": "string",
-      "enum": ["daily", "daily_settled", "weekly", "bi_weekly", "monthly"]
-    },
-    "minimum_transfer_amount": {
-      "description": "Smallest amount of collateral that can be transferred. Monetary type represented as a naturally positive integer number of cents/pence.",
-      "type": "integer"
-    },
     "number_of_disputes": {
       "description": "Indicates the number of disputes threshold to be used in the margin period of risk",
-      "type": "integer"
-    },
-    "margin_period_of_risk": {
-      "description": "Margin period of risk estimated for the transactions covered by the [CSA] agreement",
       "type": "integer"
     },
     "source": {
@@ -79,13 +82,6 @@
          "gmra", "icma_2011", "icma_2000", "icma_1995", "icma_1992", "other_gmra",
          "other"
       ]
-    },
-    "credit_support_type": {
-        "description": "The type of credit support document",
-        "type": "string",
-        "enum": [
-            "csa_isda_1994", "csa_isda_1995", "csd_isda_1995", "scsa_isda_2013"
-        ]
     },
     "version_id": {
       "description": "The version identifier of the data such as the firm's internal batch identifier.",
