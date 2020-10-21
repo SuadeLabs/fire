@@ -7,10 +7,18 @@
     "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/entity.json"
   }],
   "properties": {
+    "base_currency_code": {
+      "description": "Currency in accordance with ISO 4217. It should be consistent with minimum transfer amount and threshold.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+    },
     "clearing_threshold": {
       "description": "Status of the clearing threshold as defined in EMIR",
       "type": "string",
       "enum": ["above", "below"]
+    },
+    "incurred_cva": {
+      "description": "The amount of credit valuation adjustements being recognised by the institution as an incurred write-down, calculated without taking into account any offsetting debit value adjustment attributed to the firm's own credit risk, that has been already excluded from own funds.",
+      "type": "integer"
     },
     "product_count": {
       "description": "The number of active products/trades this customer has with the firm.",
@@ -26,10 +34,6 @@
       "description": "The status of the relationship with the customer from the firm's point of view.",
       "type": "string",
       "enum": ["established"]
-    },
-    "incurred_cva": {
-      "description": "The amount of credit valuation adjustements being recognised by the institution as an incurred write-down, calculated without taking into account any offsetting debit value adjustment attributed to the firm's own credit risk, that has been already excluded from own funds.",
-      "type": "integer"
     }
   },
   "required": ["id", "date"],
