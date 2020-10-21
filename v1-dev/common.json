@@ -26,6 +26,7 @@
       "co", "energy", "oil", "gas", "coal", "electricity",
         "metals", "precious_metals", "silver", "gold", "platinum", "palladium",
         "agri", "sugar", "coffee", "corn",
+        "co_other",
       "other"
     ]
    },
