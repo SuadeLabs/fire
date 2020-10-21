@@ -8,7 +8,7 @@ schemas:	[account, collateral, customer, loan]
 
 ---
 
-The **country_code** represents location, registration, jurisdiction or country of domicile of the product, customer or collateral. This reflects where product or entity is from an operational standpoint rather than a legal point of view (although in many cases it is the same).
+The **country_code** represents location, registration, jurisdiction or country of domicile of the product, customer or collateral (booking location). This reflects where product or entity is from an operational standpoint rather than a legal point of view (although in many cases it is the same).
 
 Countries are represented as 2-letter codes in accordance with [ISO 3166-1][iso3166].
 

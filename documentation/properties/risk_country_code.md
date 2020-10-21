@@ -8,7 +8,7 @@ schemas:	[account, derivative, entity, loan, security]
 
 ---
 
-The **risk_country_code** represents location or jurisdiction of where the risk of the product or entity resides. This can be a subjective field and can depend on a number of factors such as country of domicile, the primary stock exchange on which a product trades, the location from which the majority of its revenue comes, its reporting currency or other factors.
+The **risk_country_code** represents location or jurisdiction of where the risk of the product or entity resides (trading location). This can be a subjective field and can depend on a number of factors such as country of domicile, the primary stock exchange on which a product trades, the location from which the majority of its revenue comes, its reporting currency or other factors.
 
 Countries are represented as 2-letter codes in accordance with [ISO 3166-1][iso3166].
 
