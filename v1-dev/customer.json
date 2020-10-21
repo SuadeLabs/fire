@@ -7,6 +7,10 @@
     "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/entity.json"
   }],
   "properties": {
+    "base_currency_code": {
+      "description": "Currency in accordance with ISO 4217. It should be consistent with minimum transfer amount and threshold.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+    },
     "clearing_threshold": {
       "description": "Status of the clearing threshold as defined in EMIR",
       "type": "string",
