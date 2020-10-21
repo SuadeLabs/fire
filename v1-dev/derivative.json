@@ -236,6 +236,10 @@
       "description": "Price sensitivity to interest rates.",
       "type": "number"
     },
+    "country_code": {
+      "description": "Two-letter country code for derivative location/jurisdiction. In accordance with ISO 3166-1.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
+    },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the derivative product resides. In accordance with ISO 3166-1",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
