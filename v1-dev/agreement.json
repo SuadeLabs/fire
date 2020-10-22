@@ -46,7 +46,7 @@
       "type": "integer"
     },
     "netting_restriction": {
-      "description": "populated only if any netting restriction applies, in relation to the nature of the agreement (e.g. one-way csa) or the enforceability of netting in the jurisdiction of the counterparty, preventing the recognition of the agreement as risk-reducing, pursuant to CRR Articles 295 to 298",
+      "description": "populated only if any netting restriction applies, in relation to the nature of the agreement or the enforceability of netting in the jurisdiction of the counterparty, preventing the recognition of the agreement as risk-reducing, pursuant to CRR Articles 295 to 298",
       "type": "string",
       "enum": ["national_supervision", "restrictive_covenant"]
     },
