@@ -839,25 +839,21 @@ Any other account type that cannot be classified as one of the other types.
 ├── xccy
 ├── nds
 ├── option
-|   ├── call_option
-|   └── put_option
-|   └── call_swaption
-|   └── put_swaption
-|   └── cap
-|   └── floor
+|   ├── option
+|   └── swaption
+|   └── cap_floor
 ├── forward
 |   ├── future
-|   ├── ndf
-|   └── tarf
+|   └── ndf
 ├── fra
 ├── spot
 └── variance_swap
 ```
-### cap and floor
-Interest rate cap and interest rate floor are a string of individual interest rate options on a floating rate index (e.g. USD-libor-3m) observed for each
-underlying interest rate period. At the end of period:
-- the cap seller pays to the cap buyer the difference between the underlying rate index fixing and the strike if the fixing is observed above the strike.
-- the floor seller pays to the floor buyer the difference between the strike and the underlying rate index fixing if the fixing is observed below the strike.
+### cap_floor
+Options with multiple exercise and payment periods, generally used in relation to interest rate indices, but also in other asset classes
+
+### swaption
+Options which give the buyer the right to enter into an interest rate swap with the option seller, with either a physical settlement or a cash-settlement.
 
 ### ois
 Overnight Index Swap
@@ -873,9 +869,6 @@ A [**contingent credit default swap**][ccds] (CCDS) is a variation of a credit d
 
 [ccds]: https://www.investopedia.com/terms/c/contingent-credit-default-swap.asp
 
-
-### tarf
-Target Redemption Forward
 
 ### spot
 Spot Exchange

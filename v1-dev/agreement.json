@@ -32,6 +32,10 @@
       "description": "The unique identifier used by the financial institution to identify the counterparty to this agreement.",
       "type": "string"
     },
+    "guarantor_id": {
+      "description": "The unique identifier used by the financial institution to identify the guarantor of the transactions covered by this agreement.",
+      "type": "string"
+    },
     "margin_frequency": {
       "description": "Indicates the periodic timescale at which variation margin is exchanged. Cleared derivatives which are daily settled can be flagged as daily_settled.",
       "type": "string",

@@ -3,30 +3,34 @@
 	"data": {
 		"derivative": [
 			{
-				"id": "1",
-				"date": "2019-01-01T00:00:00",
-				"mtm_dirty": 100,
-				"asset_class": "ir",
-				"currency_code": "USD",
-				"start_date": "2019-01-01T00:00:00",
-				"end_date": "2020-01-01T00:00:00",
-				"next_exercise_date": "2020-01-01T00:00:00",
-				"notional_amount": 100,
-				"delta": 0.5,
-				"type": "call_option",
-				"underlying_security_id": "bond123",
-				"settlement_type": "physical"
+				"id": 						"1",
+				"date": 					"2019-12-31T00:00:00",
+				"asset_class": 				"equity_single",
+				"position": 		        "long",
+				"type": 					"option",
+				"leg_type": 				"call",
+				"currency_code": 			"USD",
+				"underlying_quantity":		100,
+				"strike":					40,
+				"underlying_security_id": 	"EquityABC",
+				"trade_date": 				"2019-12-05T00:00:00",
+				"start_date": 				"2019-12-07T00:00:00",
+				"end_date": 				"2020-12-07T00:00:00",
+				"last_exercise_date": 		"2020-12-05T00:00:00",
+				"settlement_type": 			"cash",
+				"underlying_price":			25,
+				"mtm_dirty": 				10
 			}
 		],
 		"security": [
 			{
-				"id": "bond123",
-				"date": "2019-01-01T00:00:00",
-				"mtm_dirty": 100,
-				"currency_code": "GBP",
-				"start_date": "2017-01-01T00:00:00",
-				"type": "equity",
-				"purpose": "reference"
+				"id": 						"EquityABC",
+				"date": 					"2019-12-31T00:00:00",
+				"type": 					"equity",
+				"currency_code": 			"GBP",
+				"start_date": 				"2017-01-01T00:00:00",
+				"end_date": 				"",
+				"purpose": 					"reference"
 			}
 		]
 	}

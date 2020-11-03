@@ -3,53 +3,22 @@
 	"data": {
 		"derivative": [
 			{
-				"id": "1",
-				"date": "2019-01-01T00:00:00",
-				"mtm_dirty": 5,
-				"asset_class": "ir",
-				"currency_code": "USD",
-				"start_date": "2019-01-01T00:00:00",
-				"end_date": "2019-06-01T00:00:00",
-				"next_exercise_date": "2020-01-01T00:00:00",
-				"notional_amount": 100,
+				"id": 					"1",
+				"date": 				"2019-01-01T00:00:00",
+				"mtm_dirty": 			5,
+				"asset_class": 			"ir",
+				"currency_code": 		"USD",
+				"notional_amount": 		100,
+				"type": 			    "swaption",
+				"leg_type": 		    "put",
+				"position": 		    "short",
+				"start_date": 			"2019-01-01T00:00:00",
+				"end_date": 			"2019-06-01T00:00:00",
+				"next_exercise_date": 	"2020-01-01T00:00:00",
+				"strike":				0.01,
+				"underlying_price":		0.02,
 				"delta": 0.51,
-				"type": "call_swaption",
-				"underlying_derivative_id": "5yr-irswap",
-				"settlement_type": "cash"
-			},
-			{
-				"id": "5yr-irswap",
-				"deal_id": "swapdeal",
-				"date": "2019-01-01T00:00:00",
-				"trade_date": "2019-01-01T00:00:00",
-				"start_date": "2019-06-01T00:00:00",
-				"end_date": "2024-06-01T00:00:00",
-				"asset_class": "ir",
-				"currency_code": "EUR",
-				"mtm_dirty": 0,
-				"notional_amount": 100,
-				"payment_type": "fixed",
-				"rate": 1.5,
-				"type": "swap",
-				"settlement_type": "cash",
-				"purpose": "reference"
-			},
-			{
-				"id": "5yr-irswap-optional-leg-detail",
-				"deal_id": "swapdeal",
-				"date": "2019-01-01T00:00:00",
-				"trade_date": "2019-01-01T00:00:00",
-				"start_date": "2019-06-01T00:00:00",
-				"end_date": "2024-06-01T00:00:00",
-				"asset_class": "ir",
-				"currency_code": "EUR",
-				"mtm_dirty": 0,
-				"notional_amount": 100,
-				"receive_type": "floating",
-				"rate": 1.75,
-				"type": "swap",
-				"settlement_type": "cash",
-				"purpose": "reference"
+				"settlement_type": 		"cash"
 			}
 		]
 	}
