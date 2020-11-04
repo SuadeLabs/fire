@@ -188,11 +188,6 @@
       "description": "Is the derivative reported on the balance sheet of the financial institution?",
       "type": "boolean"
     },
-    "payment_type": {
-      "description": "The type of the payment leg.",
-      "type": "string",
-      "enum": ["fixed", "floating"]
-    },
     "prev_payment_date": {
       "description": "The most recent previous date at which interest was paid or accrued_interest balance returned to zero.",
       "type": "string",
@@ -215,11 +210,6 @@
     "rate": {
       "description": "The full interest rate applied to the derivative notional in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).",
       "type": "number"
-    },
-    "receive_type": {
-      "description": "The type of the receive leg.",
-      "type": "string",
-      "enum": ["fixed", "floating"]
     },
     "regulatory_book": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/regulatory_book"
@@ -266,7 +256,7 @@
       "description": "This is the type of the derivative with regards to common regulatory classifications.",
       "type": "string",
       "enum": [
-        "vanilla_swap", "mtm_swap", "option", "call_swaption", "put_swaption", "call_option", "put_option", "future", "forward", "tarf", "xccy", "cds", "ois", "spot", "ndf", "nds", "fra", "cap", "floor", "ccds", "variance_swap"
+        "vanilla_swap", "mtm_swap", "option", "swaption", "future", "forward", "xccy", "cds", "ois", "spot", "ndf", "nds", "fra", "cap_floor", "ccds", "variance_swap"
       ]
     },
     "trade_date": {
