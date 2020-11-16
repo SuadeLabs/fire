@@ -150,6 +150,7 @@ Operational deposit from the [LCR][lcr] Article 27.6:
 > (i) the relationship with the depositor has existed for at least 24 months;
 > (ii) the deposit is used for a minimum of 2 active services. These services may include direct or indirect access to national or international payment services, security trading or depository services.
 > Only that part of the deposit which is necessary to make use of the service of which the deposit is a by-product shall be treated as an operational deposit. The excess shall be treated as non-operational.
+Where the depositor is the reporting entity, the loan schema should be used. Where the depositor is the other party, the account schema should be used.
 
 ### operational_excess
 Excess operational deposits are defined as the part of the operational deposits (as defined in [LCR][lcr] Article 27.6) held in excess of those required for the provision of operational services. The distinction between operational deposits and excess operational deposits is required for the reporting of section 1.1.3 in the ouflows section of the [LCR][lcr]
@@ -445,6 +446,7 @@ Use this enumeration value to refer to derivative cash flows which are calculate
 │   └── buy_to_let_other
 ├── ips
 ├── lifetime_mortgage
+├── operational
 ├── promotional
 ├── remortgage
 ├── remortgage_other
@@ -475,6 +477,9 @@ From [CRR][crr] Article 113(7):
 
 ### lifetime_mortgage
 >A **lifetime_mortgage** is a very specific kind of British mortgage contract and is defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G1294.html). It is geared towards customers of a certain age in order to release equity and typically repayment occurs at the time of the customers death when the property is sold;
+
+### operational 
+*(see operational under account)*
 
 ### promotional
 As outlined in [LCR][lcr] Article 31(9), a **promotional loan**
