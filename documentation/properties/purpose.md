@@ -446,6 +446,7 @@ Use this enumeration value to refer to derivative cash flows which are calculate
 │   └── buy_to_let_other
 ├── ips
 ├── lifetime_mortgage
+├── operational
 ├── promotional
 ├── remortgage
 ├── remortgage_other
@@ -476,6 +477,9 @@ From [CRR][crr] Article 113(7):
 
 ### lifetime_mortgage
 >A **lifetime_mortgage** is a very specific kind of British mortgage contract and is defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G1294.html). It is geared towards customers of a certain age in order to release equity and typically repayment occurs at the time of the customers death when the property is sold;
+
+### operational 
+*(see operational under account)*
 
 ### promotional
 As outlined in [LCR][lcr] Article 31(9), a **promotional loan**
