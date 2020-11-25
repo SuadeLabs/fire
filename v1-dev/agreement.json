@@ -47,7 +47,8 @@
     },
     "minimum_transfer_amount": {
       "description": "Smallest amount of collateral that can be transferred. Monetary type represented as a naturally positive integer number of cents/pence.",
-      "type": "integer"
+      "type": "integer",
+      "monetary": true
     },
     "netting_restriction": {
       "description": "populated only if any netting restriction applies, in relation to the nature of the agreement or the enforceability of netting in the jurisdiction of the counterparty, preventing the recognition of the agreement as risk-reducing, pursuant to CRR Articles 295 to 298",
@@ -76,7 +77,8 @@
     },
     "threshold": {
       "description": "Amount below which collateral is not required. Monetary type represented as a naturally positive integer number of cents/pence.",
-      "type": "integer"
+      "type": "integer",
+      "monetary": true
     },
     "type": {
       "description": "The type of the master agreement.",

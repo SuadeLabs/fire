@@ -15,25 +15,29 @@
     },
     "acc_fv_change_before_taxes": {
       "description": "Accumulated change in fair value before taxes.",
-      "type": "integer"
+      "type": "integer",
+      "monetary": true
     },
     "accounting_treatment":{
        "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/accounting_treatment"
     },
     "accrued_interest": {
       "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
-      "type": "integer"
+      "type": "integer",
+      "monetary": true
     },
     "arrears_balance": {
       "description": "The balance of the capital amount that is considered to be in arrears (for overdrafts/credit cards). Monetary type represented as a naturally positive integer number of cents/pence.",
-      "type": "integer"
+      "type": "integer",
+      "monetary": true
     },
     "asset_liability": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/asset_liability"
     },
     "balance": {
       "description": "The contractual balance on the date and in the currency given. Monetary type represented as a naturally positive integer number of cents/pence.",
-      "type": "integer"
+      "type": "integer",
+      "monetary": true
     },
     "base_rate": {
       "description": "The base rate represents the basis of the rate on the balance at the given date as agreed in the terms of the account.",
@@ -86,7 +90,8 @@
     "encumbrance_amount": {
       "description": "The amount of the account that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
-      "minimum": 0
+      "minimum": 0,
+      "monetary": true
     },
     "encumbrance_type": {
       "description": "The type of the encumbrance causing the encumbrance_amount.",
@@ -107,7 +112,8 @@
     "guarantee_amount": {
       "description": "The amount of the account that is guaranteed under a Government Deposit Guarantee Scheme. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
-      "minimum": 0
+      "minimum": 0,
+      "monetary": true
     },
     "guarantee_scheme": {
       "description": "The Government Deposit Scheme scheme under which the guarantee_amount is guaranteed.",
@@ -122,13 +128,14 @@
     "impairment_amount": {
       "description": "The impairment amount is the allowance set aside by the firm that accounts for the event that the asset becomes impaired in the future.",
       "type": "integer",
-      "minimum": 0
+      "minimum": 0,
+      "monetary": true
     },
     "impairment_status": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/impairment_status"
     },
     "insolvency_rank": {
-      "description": "The insolvency ranking as per the national legal fraamework of the reporting institution.",
+      "description": "The insolvency ranking as per the national legal framework of the reporting institution.",
       "type": "integer",
       "minimum": 1
     },
@@ -143,7 +150,8 @@
     },
     "limit_amount": {
       "description": "The minimum balance the customer can go overdrawn in their account.",
-      "type": "integer"
+      "type": "integer",
+      "monetary": true
     },
     "next_payment_date": {
       "description": "The next date at which interest will be paid or accrued_interest balance returned to zero.",
@@ -356,7 +364,8 @@
     },
     "withdrawal_penalty": {
       "description": "This is the penalty incurred by the customer for an early withdrawal on this account. An early withdrawal is defined as a withdrawal prior to the next_withdrawal_date. Monetary type represented as a naturally positive integer number of cents/pence.",
-      "type": "integer"
+      "type": "integer",
+      "monetary": true
     },
     "count": {
       "description": "Describes the number of accounts aggregated into a single row.",
@@ -365,7 +374,8 @@
     },
     "minimum_balance_eur": {
       "description": "Indicates the minimum balance, in Euros, of each account within the aggregate. Monetary type represented as a naturally positive integer number of cents/pence.",
-      "type": "integer"
+      "type": "integer",
+      "monetary": true
     },
     "next_repricing_date": {
       "description": "The date on which the interest rate of the account will be re-calculated. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
