@@ -15,7 +15,8 @@
     },
     "accrued_interest": {
       "description": "The accrued interest/premium due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
-      "type": "integer"
+      "type": "integer",
+      "monetary": true
     },
     "asset_class": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/asset_class"
@@ -26,7 +27,8 @@
     },
     "balance": {
       "description": "The contractual balance due on the payment date in the currency given. Monetary type represented as a naturally positive integer number of cents/pence.",
-      "type": "integer"
+      "type": "integer",
+      "monetary": true
     },
     "csa_id": {
       "description": "The unique identifier of the credit support annex for this derivative cash flow",
@@ -59,15 +61,18 @@
     },
     "mtm_clean": {
       "description": "The mark-to-market value of the derivative cash flow excluding interest/premium/coupons. Monetary type represented as a naturally positive integer number of cents/pence.",
-      "type": "integer"
+      "type": "integer",
+      "monetary": true
     },
     "mtm_dirty": {
       "description": "The mark-to-market value of the derivative cash flow including interest/premium/coupons. Monetary type represented as a naturally positive integer number of cents/pence.",
-      "type": "integer"
+      "type": "integer",
+      "monetary": true
     },
     "notional_amount": {
       "description": "The notional value is the total value with regard to a derivative's underlying index, security or asset at its spot price in accordance with the specifications (i.e. leverage) of the derivative product. Monetary type represented as a naturally positive integer number of cents/pence.",
-      "type": "integer"
+      "type": "integer",
+      "monetary": true
     },
     "on_balance_sheet": {
       "description": "Is the financial product reported on the balance sheet of the financial institution?",

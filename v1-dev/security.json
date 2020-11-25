@@ -16,18 +16,21 @@
     },
     "acc_fv_change_before_taxes": {
       "description": "Accumulated change in fair value before taxes.",
-      "type": "integer"
+      "type": "integer",
+      "monetary": true
     },
     "acc_fv_change_credit_risk": {
       "description": "Accumulated changes in fair value due to credit risk.",
-      "type": "integer"
+      "type": "integer",
+      "monetary": true
     },
     "accounting_treatment":{
        "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/accounting_treatment"
     },
     "accrued_interest": {
       "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as an integer number of cents/pence.",
-      "type": "integer"
+      "type": "integer",
+      "monetary": true
     },
     "asset_liability": {
         "description": "Is the security (valued at either amortised cost or fair value) an asset or a liability on the firm's balance sheet.",
@@ -50,7 +53,8 @@
     },
     "balance": {
       "description": "Outstanding amount including accrued interest. Monetary integer number of cents/pence.",
-      "type": "integer"
+      "type": "integer",
+      "monetary": true
     },
     "base_rate": {
       "description": "The base rate represents the basis of the rate on the balance at the given date as agreed in the terms of the financial product.",
@@ -110,7 +114,8 @@
     "encumbrance_amount": {
       "description": "The amount of the security that is encumbered by potential future commitments or legal liabilities such as within a repo pool. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
-      "minimum": 0
+      "minimum": 0,
+      "monetary": true
     },
     "end_date": {
       "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
@@ -145,7 +150,8 @@
     "impairment_amount": {
       "description": "The impairment amount for a security is the allowance set aside by the firm for losses.",
       "type": "integer",
-      "minimum": 0
+      "minimum": 0,
+      "monetary": true
     },
     "impairment_status": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/impairment_status"
@@ -210,11 +216,13 @@
     },
     "mtm_clean": {
       "description": "The mark-to-market value of the security excluding interest. Monetary number of cents/pence.",
-      "type": "integer"
+      "type": "integer",
+      "monetary": true
     },
     "mtm_dirty": {
       "description": "The mark-to-market value of the security including interest. Monetary number of cents/pence.",
-      "type": "integer"
+      "type": "integer",
+      "monetary": true
     },
     "next_payment_date": {
       "description": "The next date at which interest will be paid or accrued_interest balance returned to zero.",
@@ -223,7 +231,8 @@
     },
     "notional_amount": {
       "description": "The notional value is the total amount of a security's underlying asset at its spot price. Monetary number of cents.",
-      "type": "integer"
+      "type": "integer",
+      "monetary": true
     },
     "on_balance_sheet": {
       "description": "Is the security reported on the balance sheet of the financial institution?",
