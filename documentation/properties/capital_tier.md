@@ -22,7 +22,7 @@ period).
 
 - add_tier_1:
 
-- ce_tier_1_grandfathered: Instruments which are considered as grandfathered 
+- cet1_grandfathered: Instruments which are considered as grandfathered 
 as CET1 Capital , in that they no longer meet the tighter restrictions 
 introduced  in the CRR\CRR2 regulation for CET1 capital, but are still included 
 in transitional arrangements.
