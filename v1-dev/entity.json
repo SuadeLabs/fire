@@ -53,12 +53,12 @@
     "fitch_lt": {
         "description": "Fitch long term credit ratings",
         "type":"string",
-        "enum": ["aaa", "aa_plus", "aa", "aa_minus", "a_plus", "a", "a_minus", "bbb_plus", "bbb", "bbb_minus", "bb_plus", "bb", "bb_minus", "b_plus", "b", "b_minus", "ccc_plus", "ccc", "ccc_minus", "cc", "c", "d"]
+        "enum": ["aaa", "aa_plus", "aa", "aa_minus", "a_plus", "a", "a_minus", "bbb_plus", "bbb", "bbb_minus", "bb_plus", "bb", "bb_minus", "b_plus", "b", "b_minus", "ccc_plus", "ccc", "ccc_minus", "cc", "c", "rd", "d"]
     },
     "fitch_st": {
         "description": "Fitch short term credit ratings",
         "type":"string",
-        "enum": ["f1_plus", "f1", "f2", "f3", "b", "c", "d"]
+        "enum": ["f1_plus", "f1", "f2", "f3", "b", "c", "rd", "d"]
     },
     "intra_group": {
       "description": "Flag to indicate that this should be considered an intra-group entity.",
