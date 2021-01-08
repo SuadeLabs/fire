@@ -6,6 +6,15 @@ schemas:    [security]
 
 # capital_tier
 
+```bash
+├── tier_1
+├── ce_tier_1
+├── add_tier_1
+├── cet1_grandfathered
+├── at1_grandfathered
+└── t2_grandfathered
+```
+
 Capital tier of an instrument in accordance with CRR2 regulation 
 (REGULATION (EU) No 575/2013 AS AMENDED BY REGULATION (EU) 2019/876 (CRR2) ).
 
@@ -16,13 +25,15 @@ reflected in CRR and CRR2 (and  hence they are ‘grandfathered’ and dealt
 with in a special way by transitional arrangements during  a transitional 
 period). 
 
-- tier_1:  
 
-- ce_tier_1:
+### tier_1
 
-- add_tier_1:
+### ce_tier_1
 
-- cet1_grandfathered: Instruments which are considered as grandfathered 
+### add_tier_1
+
+### cet1_grandfathered
+Instruments which are considered as grandfathered 
 as CET1 Capital , in that they no longer meet the tighter restrictions 
 introduced  in the CRR\CRR2 regulation for CET1 capital, but are still included 
 in transitional arrangements.
@@ -34,7 +45,8 @@ Directive 2006/48/EC notwithstanding that the conditions laid down in
 Article 28 or, where applicable, Article 29 of the CRR Regulation are not met.
 
 
-- at_1_grandfathered:  Instruments which are considered as grandfathered 
+### at1_grandfathered
+Instruments which are considered as grandfathered 
 as additional tier 1 capital , in that they no longer meet the tighter 
 restrictions introduced  in the CRR\CRR2 regulation for additional tier 1 
 capital, but are still included in transitional arrangements.
@@ -45,7 +57,8 @@ of Article 57 and Article 154(8) and (9) of Directive 2006/48/EC
 notwithstanding that the conditions laid down in Article 52 of this Regulation
 are not met.
 
-- t2_grandfathered:  Instruments which are considered as grandfathered 
+### t2_grandfathered
+Instruments which are considered as grandfathered 
 as tier 2 capital , in that they no longer meet the tighter 
 restrictions introduced  in the CRR\CRR2 regulation for tier 2 
 capital, but are still included in transitional arrangements.
