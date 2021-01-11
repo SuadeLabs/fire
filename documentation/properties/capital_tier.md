@@ -27,10 +27,25 @@ period).
 
 
 ### tier_1
+Securities classed as tier 1 capital instruments, these include securities 
+classed as common equity tier 1 and securities classed as additional tier 1 
+capital instruments.
 
 ### ce_tier_1
+Securities classed as common equity tier 1 (CET1) capital instruments.
+As set out in CRR Article 26, these are  capital instruments, 
+provided that the conditions laid down in CRR Article 28 or, where applicable,
+Article 29 are met.
 
 ### add_tier_1
+Securities classed as additional tier 1 capital instruments.
+As set out in CRR Article 51, these are capital instruments, where the 
+conditions laid down in Article 52(1) are met.
+
+### tier_2
+Securities classed as Tier 2 capital instruments.
+As set out in CRR Article 62 these are capital instruments where the 
+conditions laid down in Article 63 are met.
 
 ### cet1_grandfathered
 Instruments which are considered as grandfathered 
@@ -43,7 +58,6 @@ of Article 22 of Directive 86/635/EEC, that qualified as original own funds
 under the national transposition measures for point (a) of Article 57 of 
 Directive 2006/48/EC notwithstanding that the conditions laid down in 
 Article 28 or, where applicable, Article 29 of the CRR Regulation are not met.
-
 
 ### at1_grandfathered
 Instruments which are considered as grandfathered 
