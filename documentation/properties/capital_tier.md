@@ -12,7 +12,13 @@ schemas:    [security]
 ├── add_tier_1
 ├── cet1_grandfathered
 ├── at1_grandfathered
-└── t2_grandfathered
+├── tier_2
+├── anc_tier_2
+├── bas_tier_2
+├── t2_grandfathered
+├── tier_3
+├── anc_tier_3
+└── bas_tier_3
 ```
 
 Capital tier of an instrument in accordance with CRR2 regulation 
