@@ -39,7 +39,7 @@
     "capital_tier": {
       "description": "The capital tiers based on own funds requirements.",
       "type": "string",
-      "enum": ["tier_1", "ce_tier_1", "add_tier_1", "tier_2", "anc_tier_2", "bas_tier_2", "tier_3", "anc_tier_3", "bas_tier_3"]
+      "enum": ["tier_1", "ce_tier_1", "add_tier_1", "tier_2", "cet1_grandfathered" , "at1_grandfathered" , "t2_grandfathered" ,"anc_tier_2", "bas_tier_2", "tier_3", "anc_tier_3", "bas_tier_3"]
     },
     "cb_haircut": {
       "description": "The haircut as determined by the firm's central bank",
