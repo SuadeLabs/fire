@@ -25,7 +25,7 @@ reflected in CRR and CRR2 (and  hence they are ‘grandfathered’ and dealt
 with in a special way by transitional arrangements during  a transitional 
 period). 
 
-
+The fields here are listed in a flat structure as they are mutaully exclusive.
 ### tier_1
 Securities classed as tier 1 capital instruments, these include securities 
 classed as common equity tier 1 and securities classed as additional tier 1 
