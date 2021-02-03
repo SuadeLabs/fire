@@ -106,6 +106,10 @@
       "description": "The unique identifier for the group representing a single risk entity where no relationship of control exists",
       "type": "string"
     },
+    "risk_group_id_secondary":{
+      "description": "The unique identifier for the secondary group representing a single risk entity where no relationship of control exists",
+      "type": "string"
+    },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
