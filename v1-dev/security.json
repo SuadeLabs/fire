@@ -264,7 +264,8 @@
         "reference",
         "segregated_collateral",
         "share_capital",
-        "trade_finance"
+        "trade_finance",
+        "default_fund"
      ]
     },
     "rate": {

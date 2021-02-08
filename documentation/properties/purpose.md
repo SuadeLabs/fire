@@ -504,7 +504,8 @@ The **other** enum value can be used when none of the other enum values apply or
 ├── collateral
 │    ├──  derivative_collateral
 │    ├──  independent_collateral_amount
-│    └──  segregated_collateral
+│    ├──  segregated_collateral
+│    └──  default_fund
 ├── reference
 ├── share_capital
 │    └──  non_controlling
@@ -526,6 +527,10 @@ Defined in accordance with [SA-CCR][bis_sa_ccr].
 
 ### segregated_collateral (ICA)
 Defined in accordance with [[CRR] Art.276(1)(g)], in order to identify "any collateral posted to the counterparty that is segregated from the assets of that counterparty and, as a result of that segregation, is bankruptcy remote in the event of the default or insolvency of that counterparty".
+
+### default_fund
+Defined in accordance with [[CRR]], A CCP's default fund is a mechanism that allows the sharing (mutualisation) of losses among the CCP's clearing members.
+default fund' means a fund established by a CCP in accordance with Article 42 of Regulation (EU) No 648/2012 and used in accordance with Article 45 of that Regulation
 
 ### reference
 Use this enumeration value to refer to securities which are underlyings of derivative positions (e.g. bond futures).

@@ -48,9 +48,11 @@ This is a loan where the customer has defaulted or is non-performing.
 
 ## paid_up
 This indicates that capital has been [paid up][paidup] by the shareholders to the company that issued the shares.
+When used in combination with the purpose attribute, 'default_fund', equates to prefunded default fund contributions.
 
 ## called_up
 This indicates that capital has been [called up][calledup] by the company issuing the shares but has not been paid yet by the shareholders.
+When used in combination with the purpose attribute, 'default_fund', equates to unfunded default fund contributions.
 
 [paidup]: https://www.investopedia.com/terms/p/paidupcapital.asp
 [calledup]: https://www.investopedia.com/ask/answers/073015/what-difference-between-calledup-share-capital-and-paidup-share-capital.asp
