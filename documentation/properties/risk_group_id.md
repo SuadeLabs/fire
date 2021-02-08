@@ -8,7 +8,7 @@ schemas:	[entity]
 
 ---
 
-The **risk_group_id** represents the unique identifier for the group representing a single risk entity where no relationship of control exists. [CRR article Article 4(1)(39)][crr]
+The **risk_group_id** is an identifier for a group of economically connected entities representing a single risk entity where no relationship of control exists between the entities. Economic interconnectedness is defined in the [CRR Article 4(1)(39)(b)][crr].
 
 See also [**risk_group_id_2**][cc].
 
