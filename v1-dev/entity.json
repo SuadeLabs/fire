@@ -106,8 +106,8 @@
       "description": "The unique identifier for the group representing a single risk entity where no relationship of control exists",
       "type": "string"
     },
-    "risk_group_id_secondary":{
-      "description": "The unique identifier for the secondary group representing a single risk entity where no relationship of control exists",
+    "risk_group_id_2":{
+      "description": "The unique identifier for the secondary group representing a risk entity where no relationship of control exists",
       "type": "string"
     },
     "risk_country_code": {
