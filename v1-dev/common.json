@@ -138,5 +138,10 @@
   "type": "string",
   "minLength": 4,
   "maxLength": 4
+ },
+ "ccf": {
+  "description": "The credit conversion factor that indicates the proportion of the undrawn amount that would be drawn down on default.",
+  "type": "number",
+  "minimum": 0
  }
 }
