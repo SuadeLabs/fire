@@ -183,6 +183,11 @@
         "required": ["reference_id", "weight"]
       }
     },
+    "interest_repayment_frequency": {
+      "description": "Repayment frequency of the interest.",
+      "type": "string",
+      "enum": ["daily", "weekly", "bi_weekly", "monthly", "bi_monthly", "quarterly", "semi_annually", "annually", "at_maturity"]
+    },
     "isin_code": {
       "description": "The unique International Securities Identification Number for the security according to ISO 6166.",
       "type": "string",
