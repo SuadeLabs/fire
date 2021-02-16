@@ -926,6 +926,18 @@ fixed leg paying a fixed rate
 
 
 # collateral
+```bash
+├── residential_property
+|   └── multifamily
+├── farm
+├── commercial_property
+├── immovable_property
+├── guarantee
+├── debenture
+├── life_policy
+├── cash
+└── other
+```
 The collateral type defines the form of the collateral, such as property or other assets used to secure an obligation.
 
 The [EC Collateral Directive][arrangement] states:

@@ -453,6 +453,8 @@ Use this enumeration value to refer to derivative cash flows which are calculate
 ├── speculative_property
 ├── consumer_buy_to_let
 ├── further_advance
+├── agriculture
+├── construction
 └── other
 ```
 ### house_purchase
