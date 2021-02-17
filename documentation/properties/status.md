@@ -62,10 +62,13 @@ When used in combination with the purpose attribute, 'default_fund', equates to 
 [reg-d]: https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=fe8bd6e281e0788a9ba7efda92e96e2f&mc=true&n=pt12.2.204&r=PART&ty=HTML#se12.2.204_12
 
 ## segregated
-Collateral held by a central counterparty in a bankruptcy remote fashion i.e in a way that does not give such person a beneficial interest 
-in such property and will not result in such property being subject to legally enforceable claims by such persons creditors, or to a court-ordered 
-stay of the return of such property, if such person becomes insolvent or bankrupt.
+Collateral held by a central counterparty in a bankruptcy remote fashion.
+Bankcruptcy remote: in a way that does not give such person a beneficial interest in such property and will not result in such property being 
+subject to legally enforceable claims by such persons creditors, or to a court-ordered stay of the return of such property, if such person becomes 
+insolvent or bankrupt.
 
 ## unsegregated
-Collateral not held by a central counterparty in a bankruptcy remote fashion. i.e. collateral held by a pariticpant in the transaction 
-for which the collateral is intended, or by a central counterparty that does not hold the collateral in a bankruptcy remote fashion.
+Collateral not held by a central counterparty in a bankruptcy remote fashion. 
+Bankcruptcy remote: in a way that does not give such person a beneficial interest in such property and will not result in such property being 
+subject to legally enforceable claims by such persons creditors, or to a court-ordered stay of the return of such property, if such person becomes 
+insolvent or bankrupt.
