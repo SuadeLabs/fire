@@ -497,6 +497,39 @@ From [CRR][crr] definitions (79):
 ### remortgage_other
 >The **remortgage_other** value indicates a re-mortgage by a new customer who is refinancing a loan from another lender.
 
+### agriculture
+Loans given for the purpose of financing agriculture development or production.
+FFEIC definition:
+> loans to finance agricultural production and other loans to farmers:
+(1) Loans and advances made for the purpose of financing agricultural production, including
+the growing and storing of crops, the marketing or carrying of agricultural products by the
+growers thereof, and the breeding, raising, fattening, or marketing of livestock.
+(2) Loans and advances made for the purpose of financing fisheries and forestries, including
+loans to commercial fishermen.
+(3) Agricultural notes and other notes of farmers that the bank has discounted for, or
+purchased from, merchants and dealers, either with or without recourse to the seller.
+(4) Loans to farmers that are guaranteed by the Farmers Home Administration (FmHA) or by
+the Small Business Administration (SBA) and that are extended, serviced, and collected
+by a party other than the FmHA or SBA. Include SBA “Guaranteed Interest Certificates,”
+which represent a beneficial interest in the entire SBA-guaranteed portion of an individual
+loan, provided the loan is for the financing of agricultural production or other lending to
+farmers. (Exclude SBA “Guaranteed Loan Pool Certificates,” which represent an
+undivided interest in a pool of SBA-guaranteed portions of loans. SBA “Guaranteed Loan
+Pool Certificates” should be reported as securities in Schedule RC-B, item 2, or, if held
+for trading, in Schedule RC, item 5.)
+(5) Loans and advances to farmers for purchases of farm machinery, equipment, and
+implements.
+(6) Loans and advances to farmers for all other purposes associated with the maintenance or
+operations of the farm, including purchases of private passenger automobiles and other
+retail consumer goods and provisions for the living expenses of farmers or ranchers and
+their families.
+
+
+### construction
+Loans given for the purpose of construction, development or re-development of a site.
+FFEIC definition:
+> loans secured by real estate made to finance (a) land development (i.e., the process of improving land – laying sewers, water pipes, etc.) preparatory to erecting new structures or (b) the on-site construction of industrial, commercial, residential, or farm buildings.
+
 ### other
 The **other** enum value can be used when none of the other enum values apply or the value is *unknown*.
 
