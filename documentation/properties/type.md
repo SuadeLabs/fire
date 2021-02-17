@@ -943,6 +943,15 @@ The collateral type defines the form of the collateral, such as property or othe
 The [EC Collateral Directive][arrangement] states:
 > The assets can be provided: either by transfer of full ownership from a collateral provider to a collateral taker; or by the transfer of possession from a collateral provider to a collateral taker under a security right (e.g. pledge, charge or lien), where the full ownership of the assets remains with the collateral provider.
 
+### residential_property
+Property composed of one or more dwellings.
+
+
+### multifamily
+Property composed of five or more residential dwellings.
+[US Census Bureau definition][us-census-multifamily]:
+> buildings with five units or more
+
 
 ### immovable_property
 As per Artcile 124(1) [CRR][crr], this identifies **immovable property**
@@ -993,3 +1002,6 @@ collateral that cannot be classified as residential or commercial property.
 [2013-549]: https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32013R0549
 [sg-stat-boards]: https://www.gov.sg/sgdi/statutory-boards
 [mmfr]: https://eur-lex.europa.eu/eli/reg/2017/1131/oj
+[us-census-multifamily]: https://www.census.gov/construction/nrc/index.html
+
+
