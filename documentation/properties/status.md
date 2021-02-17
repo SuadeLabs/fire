@@ -62,13 +62,10 @@ When used in combination with the purpose attribute, 'default_fund', equates to 
 [reg-d]: https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=fe8bd6e281e0788a9ba7efda92e96e2f&mc=true&n=pt12.2.204&r=PART&ty=HTML#se12.2.204_12
 
 ## segregated
-Collateral held by a central counterparty in a bankruptcy remote fashion.
-Bankcruptcy remote: in a way that does not give such person a beneficial interest in such property and will not result in such property being 
-subject to legally enforceable claims by such persons creditors, or to a court-ordered stay of the return of such property, if such person becomes 
-insolvent or bankrupt.
+Segregated refers to collateral which is held in a bankruptcy-remote manner according to the description included in CRE54.18 to CRE54.23.
+[Bankruptcy remote]: https://www.bis.org/basel_framework/chapter/DIS/42.htm?inforce=20220101&published=20191215
 
 ## unsegregated
-Collateral not held by a central counterparty in a bankruptcy remote fashion. 
-Bankcruptcy remote: in a way that does not give such person a beneficial interest in such property and will not result in such property being 
-subject to legally enforceable claims by such persons creditors, or to a court-ordered stay of the return of such property, if such person becomes 
-insolvent or bankrupt.
+Unsegregated refers to collateral that is not held in a bankruptcy-remote manner according to the description included in CRE54.18 to CRE54.23.
+[Bankruptcy remote]: https://www.bis.org/basel_framework/chapter/DIS/42.htm?inforce=20220101&published=20191215
+
