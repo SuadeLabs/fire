@@ -346,7 +346,7 @@
       "format": "date-time"
     },
     "status": {
-      "description": "Describes if capital has been paid up or has been called up but not paid for.",
+      "description": "Provides additional information regarding the status of the security.",
       "type": "string",
       "enum": ["paid_up", "called_up", "bankruptcy_remote"]
     },
