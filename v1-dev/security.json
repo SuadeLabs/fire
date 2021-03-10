@@ -344,7 +344,7 @@
     "status": {
       "description": "Describes if capital has been paid up or has been called up but not paid for.",
       "type": "string",
-      "enum": ["paid_up", "called_up", "segregated", "unsegregated"]
+      "enum": ["paid_up", "called_up", "bankruptcy_remote"]
     },
     "type": {
       "description": "This is the type of the security with regards to common regulatory classifications.",
