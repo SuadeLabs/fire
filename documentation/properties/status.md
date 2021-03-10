@@ -60,3 +60,11 @@ When used in combination with the purpose attribute, 'default_fund', equates to 
 
 [lcr]:  http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
 [reg-d]: https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=fe8bd6e281e0788a9ba7efda92e96e2f&mc=true&n=pt12.2.204&r=PART&ty=HTML#se12.2.204_12
+
+## bankruptcy_remote
+This indicates that the reporting institution has determined that the security will not be available to an entity’s creditors 
+in the event of the insolvency of that entity. When used in combination with the purpose attributes indicates that collateral 
+posted by the reporting institution to its counterparty as initial or variation margin, is held in a bankruptcy-remote manner, 
+and is therefore segregated from the counterparty's assets, as defined in Articles 276(1)(g) and 300(1) CRR.
+When bankruptcy_remote is used in conjuction with the purpose 'custody', this indicates that the security held in custody will 
+not be available to the custodian's creditors in the event of the insolvency of the custodian.
