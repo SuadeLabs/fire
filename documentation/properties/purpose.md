@@ -504,7 +504,6 @@ The **other** enum value can be used when none of the other enum values apply or
 ├── collateral
 │    ├──  derivative_collateral
 │    ├──  independent_collateral_amount
-│    ├──  segregated_collateral
 │    └──  default_fund
 ├── reference
 ├── share_capital
