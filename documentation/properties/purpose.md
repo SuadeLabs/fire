@@ -455,6 +455,7 @@ Use this enumeration value to refer to derivative cash flows which are calculate
 ├── further_advance
 ├── agriculture
 ├── construction
+├── project_finance
 └── other
 ```
 ### house_purchase
@@ -524,11 +525,14 @@ operations of the farm, including purchases of private passenger automobiles and
 retail consumer goods and provisions for the living expenses of farmers or ranchers and
 their families.
 
-
 ### construction
 Loans given for the purpose of construction, development or re-development of a site.
 FFEIC definition:
 > loans secured by real estate made to finance (a) land development (i.e., the process of improving land – laying sewers, water pipes, etc.) preparatory to erecting new structures or (b) the on-site construction of industrial, commercial, residential, or farm buildings.
+
+### project_finance
+As defined in [Supervisory Reporting][sup-rep] part 2(5)(41)(l):
+> 'Project finance loans' include loans that are recovered solely from the income of the projects financed by them.
 
 ### other
 The **other** enum value can be used when none of the other enum values apply or the value is *unknown*.

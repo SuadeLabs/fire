@@ -614,10 +614,6 @@ From the [EBA's][eba-nsfr-report] report on the NSFR, section 6.2.2, a **letter 
 > When goods are traded, the seller and the buyer need to agree on the process of how to pay for the goods. While the buyer may be reluctant to prepay for the traded goods, the seller may also be unwilling to ship the goods before payment is made. In this situation, a bank can intermediate between the trading partners by providing an import letter of credit (L/C) to the buyer of the goods, which guarantees payment to the seller.
 > A L/C is a contingent liability and payment is only made by the bank to the seller from funds in the buyer’s account when the documentation of shipping is presented.
 
-### project_finance
-As defined in [Supervisory Reporting][sup-rep] part 2(5)(41)(l):
-> 'Project finance loans' include loans that are recovered solely from the income of the projects financed by them.
-
 ### acceptance
 From EU [Supervisory Reporting][sup-rep] part 2(5)(60)(b):
 > “Acceptances” are obligations by an institution to pay on maturity the face value of a bill of exchange, normally covering the sale of goods. Consequently, they are classified as “trade receivables” on the balance sheet
