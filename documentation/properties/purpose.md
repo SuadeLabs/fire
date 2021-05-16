@@ -420,6 +420,11 @@ Describes an account representing the amount of a provision beeing released as a
 Describes an account representing the amount of a provision beeing written-off as a risk materialised (e.g. the loan for which the provision was originally registered is deemed irrecoverable).
 
 ## Derivative
+```bash
+├── reference
+├── cva_hedge
+└── back_to_back
+```
 ### reference
 Use this enumeration value to refer to derivatives which are underlyings of other derivative positions (e.g. swaptions).
 In the context of [CRR][crr] Article 329, a reference derivative would be the underlying swap of a swaption.
@@ -431,6 +436,9 @@ Use this enumeration value to refer to derivatives booked in order to hedge CVA 
 Use this enumeration value to highlight back to back trades defined as "exactly matching" in [Pruval Delegated Regulation][pruval] Article 4 (2)
 
 ## Derivative Cash Flow
+```bash
+└── reference
+```
 ### reference
 Use this enumeration value to refer to derivative cash flows which are calculated in order to decompose derivatives in combinations of long and short flows. See [CRR][crr] Articles 328 to 331.
 
@@ -539,16 +547,19 @@ The **other** enum value can be used when none of the other enum values apply or
 
 ## Security
 ```bash
-├── investment
 ├── collateral
 │    ├──  derivative_collateral
 │    ├──  independent_collateral_amount
+│    ├──  custody
 │    └──  default_fund
 ├── reference
 ├── share_capital
 │    └──  non_controlling
+├── investment
 ├── trade_finance
 ├── aircraft_finance
+├── insurance
+├── back_to_back
 └── other
 ```
 ### trade_finance
@@ -583,6 +594,7 @@ This indicates shares that have been [issued][issued] for the purpose of raising
 ### back_to_back
 Use this enumeration value to highlight back to back trades defined as "exactly matching" in [Pruval Delegated Regulation][pruval] Article 4 (2)
 
+---
 
 [reg]: https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32009R0494&from=EN
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575

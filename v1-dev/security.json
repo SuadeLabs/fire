@@ -198,6 +198,11 @@
       "description": "The unique identifier for the issuer within the financial institution.",
       "type": "string"
     },
+    "issue_size":{
+      "description": "The size of the issue denominated in the original currency of the security",
+      "type": "integer",
+      "monetary": true
+    },
     "last_payment_date": {
       "description": "The final payment date for interest payments, often coincides with end_date.",
       "type": "string",
@@ -206,6 +211,11 @@
     "ledger_code": {
       "description": "The internal ledger code or line item name.",
       "type": "string"
+    },
+    "maturity": {
+      "description": "The maturity of the security at the time of issuance in years",
+      "type": "number",
+      "minimum": 0.0
     },
     "mic_code": {
         "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/mic_code"
@@ -348,7 +358,7 @@
     "status": {
       "description": "Provides additional information regarding the status of the security.",
       "type": "string",
-      "enum": ["paid_up", "called_up", "bankruptcy_remote"]
+      "enum": ["paid_up", "called_up", "bankruptcy_remote", "non_operational"]
     },
     "type": {
       "description": "This is the type of the security with regards to common regulatory classifications.",
@@ -408,6 +418,10 @@
     "transferable": {
       "description": "Can the security be transferred between parties or negotiated on the capital market?",
       "type": "boolean"
+    },
+    "value_change":{
+      "description": "The level of increase (or decline) of the security's price during a 30 day calendar period in percentage terms",
+      "type": "number"
     },
     "value_date": {
       "description": "The timestamp that the trade or financial product was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
