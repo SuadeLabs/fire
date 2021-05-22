@@ -198,6 +198,16 @@
       "description": "The unique identifier for the issuer within the financial institution.",
       "type": "string"
     },
+    "issue_size":{
+      "description": "The size of the issue denominated in the original currency of the security",
+      "type": "integer",
+      "monetary": true
+    },
+    "issue_maturity": {
+      "description": "The original maturity of the issue in years",
+      "type": "number",
+      "minimum": 0.0
+    },
     "last_payment_date": {
       "description": "The final payment date for interest payments, often coincides with end_date.",
       "type": "string",
@@ -348,7 +358,12 @@
     "status": {
       "description": "Provides additional information regarding the status of the security.",
       "type": "string",
-      "enum": ["paid_up", "called_up", "bankruptcy_remote"]
+      "enum": ["paid_up", "called_up", "bankruptcy_remote", "non_operational"]
+    },
+    "stress_change":{
+      "description": "The level of variation on the security's price or haircut or during a 30 day calendar market stress period in percentage terms",
+      "type": "number",
+      "minimum": 0.0
     },
     "type": {
       "description": "This is the type of the security with regards to common regulatory classifications.",

@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"status"
-schemas:	[account, customer, loan]
+schemas:	[account, customer, loan, security]
 ---
 
 # status
@@ -10,7 +10,14 @@ schemas:	[account, customer, loan]
 
 The **status** property indicates the current state of the financial product. A product can be active, cancelled, defaulted, committed etc. This is generally used to differentiate potential offers committed by the institution (lending decision taken) but not yet accepted by a customer. The status could also indicate liabilities which have been cancelled but are still being held within the dataset (until maturity or otherwise).
 
-# account
+## Account
+
+```bash
+├── active
+├── transactional
+├── cancelled
+└── cancelled_payout_agreed
+```
 ### active
 The account is active and in use by the customer.
 
@@ -31,7 +38,20 @@ The account has been cancelled but funds will be rolled-over in to another accou
 ### cancelled_payout_agreed
 The account has been cancelled and the funds are known to be leaving the financial institution.
 
-# loan
+## Customer
+
+```bash
+└── established
+```
+### established
+The reporting institution has determined that the counterparty is part of an established relationship in accordance with the [Liquidity Regulations][lcr] Article 24 (2).
+## Loan
+```bash
+├── actual
+├── committed
+├── cancelled
+└── defaulted
+```
 ### actual
 This is a live loan.
 
@@ -44,27 +64,36 @@ This is a loan that was committed but then later cancelled due to refusal by cus
 ### defaulted
 This is a loan where the customer has defaulted or is non-performing.
 
-# security
+## Security
+```bash
+├── paid_up
+├── called_up
+├── bankruptcy_remote
+└── non_operational
+```
 
-## paid_up
+### paid_up
 This indicates that capital has been [paid up][paidup] by the shareholders to the company that issued the shares.
 When used in combination with the purpose attribute, 'default_fund', equates to prefunded default fund contributions.
 
-## called_up
+### called_up
 This indicates that capital has been [called up][calledup] by the company issuing the shares but has not been paid yet by the shareholders.
 When used in combination with the purpose attribute, 'default_fund', equates to unfunded default fund contributions.
 
 [paidup]: https://www.investopedia.com/terms/p/paidupcapital.asp
 [calledup]: https://www.investopedia.com/ask/answers/073015/what-difference-between-calledup-share-capital-and-paidup-share-capital.asp
----
 
-[lcr]:  http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
-[reg-d]: https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=fe8bd6e281e0788a9ba7efda92e96e2f&mc=true&n=pt12.2.204&r=PART&ty=HTML#se12.2.204_12
-
-## bankruptcy_remote
+### bankruptcy_remote
 This indicates that the reporting institution has determined that the security will not be available to an entity’s creditors 
 in the event of the insolvency of that entity. When used in combination with the purpose attributes indicates that collateral 
 posted by the reporting institution to its counterparty as initial or variation margin, is held in a bankruptcy-remote manner, 
 and is therefore segregated from the counterparty's assets, as defined in Articles 276(1)(g) and 300(1) CRR.
 When bankruptcy_remote is used in conjuction with the purpose 'custody', this indicates that the security held in custody will 
 not be available to the custodian's creditors in the event of the insolvency of the custodian.
+
+### non_operational
+This indicates that the security does not meet the requirements set in Article 8 of the [Liquidity Regulations][lcr]
+
+---
+[lcr]:  http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
+[reg-d]: https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=fe8bd6e281e0788a9ba7efda92e96e2f&mc=true&n=pt12.2.204&r=PART&ty=HTML#se12.2.204_12
