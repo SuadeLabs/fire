@@ -203,19 +203,24 @@
       "type": "integer",
       "monetary": true
     },
-    "issue_maturity": {
-      "description": "The original maturity of the issue in years",
-      "type": "number",
-      "minimum": 0.0
+    "issue_date":{
+      "description": "The date on which the security is issued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
     },
     "last_payment_date": {
-      "description": "The final payment date for interest payments, often coincides with end_date.",
+      "description": "The final payment date for interest payments, often coincides with end_date or the maturity date",
       "type": "string",
       "format": "date-time"
     },
     "ledger_code": {
       "description": "The internal ledger code or line item name.",
       "type": "string"
+    },
+    "maturity_date": {
+      "description": "The date on which the principal repayment of the security is due. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
     },
     "mic_code": {
         "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/mic_code"
