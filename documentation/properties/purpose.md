@@ -437,10 +437,26 @@ Use this enumeration value to highlight back to back trades defined as "exactly 
 
 ## Derivative Cash Flow
 ```bash
-└── reference
+├── reference
+├── principal
+└── interest
 ```
 ### reference
 Use this enumeration value to refer to derivative cash flows which are calculated in order to decompose derivatives in combinations of long and short flows. See [CRR][crr] Articles 328 to 331.
+
+### principal
+Use this enumeration value when derivative cashflows data are uploaded as two
+distinct batches, one for principal and one for interest cashflows.
+For rows uploaded as "principal", the values populated in the "balance" column
+refer to principal cashflows (accreting and/or amortising) only, and do not
+include any interest flows
+
+
+### interest
+Use this enumeration value when derivative cashflows data are uploaded as two
+distinct batches, one for principal and one for interest cashflows.
+For rows uploaded as "interest", the values populated in the "balance" column
+refer to interest cashflows only, and do not include any principal flows
 
 ## Loan
 ```bash
