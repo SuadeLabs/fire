@@ -1,41 +1,36 @@
-{
-    "description": "1Y AUD/USD fx swap. The notional amounts represent the spot exchange occuring on the start date. The rate is used to derive the forward notional on each leg and is exchanged on the end date (80k AUD vs 84k USD)",
-    "data": {
-        "derivative": [
-            {
-                "id":               "1",
-                "date":             "2019-02-25T00:00:00",
-                "trade_date":       "2019-02-25T00:00:00",
-                "start_date":       "2019-02-27T00:00:00",
-                "end_date":         "2020-02-26T00:00:00",
-                "deal_id":          "deal_fxswap_audusd",
-                "mtm_dirty":        -2,
-                "asset_class":      "fx",
-                "type":             "vanilla_swap",
-                "currency_code":    "AUD",
-                "notional_amount":  80000,
-				"position":         "short",
-				"leg_type":         "fixed",
-                "rate":             1,
-                "delta":            1
-            },
-            {
-                "id":               "2",
-                "date":             "2019-02-25T00:00:00",
-                "trade_date":       "2019-02-25T00:00:00",
-                "start_date":       "2019-02-27T00:00:00",
-                "end_date":         "2020-02-26T00:00:00",
-                "deal_id":          "deal_fxswap_audusd",
-                "mtm_dirty":        2,
-                "asset_class":      "fx",
-                "type":             "vanilla_swap",
-                "currency_code":    "USD",
-                "notional_amount":  82200,
-				"position":         "short",
-				"leg_type":         "fixed",
-                "rate":             1.021898,
-                "delta":            -1
-            }
-        ]
+[
+    {
+        "id": "1",
+        "date": "2019-02-25T00:00:00",
+        "trade_date": "2019-02-25T00:00:00",
+        "start_date": "2019-02-27T00:00:00",
+        "end_date": "2020-02-26T00:00:00",
+        "deal_id": "deal_fxswap_audusd",
+        "mtm_dirty": -2,
+        "asset_class": "fx",
+        "type": "vanilla_swap",
+        "currency_code": "AUD",
+        "notional_amount": 8000000,
+        "position": "short",
+        "leg_type": "fixed",
+        "rate": 1,
+        "delta": 1
+    },
+    {
+        "id": "2",
+        "date": "2019-02-25T00:00:00",
+        "trade_date": "2019-02-25T00:00:00",
+        "start_date": "2019-02-27T00:00:00",
+        "end_date": "2020-02-26T00:00:00",
+        "deal_id": "deal_fxswap_audusd",
+        "mtm_dirty": 2,
+        "asset_class": "fx",
+        "type": "vanilla_swap",
+        "currency_code": "USD",
+        "notional_amount": 8220000,
+        "position": "short",
+        "leg_type": "fixed",
+        "rate": 1.021898,
+        "delta": -1
     }
-}
+]

@@ -1,14 +1,14 @@
 {
-  "id": "vanilla_swap_with_im_received",
-  "date": "2018-12-31 00:00:00",
-  "trade_date": "2018-12-31 00:00:00",
-  "start_date": "2018-12-31 00:00:00",
-  "end_date": "2020-12-31 00:00:00",
-  "asset_liability": "asset",
-  "currency_code": "GBP",
-  "initial_margin": 9000,
-  "balance": 10000,
-  "mtm_dirty": 20000,
-  "mna_id": "MNA1",
-  "type": "vanilla_swap"
+    "id": "vanilla_swap_with_im_received",
+    "date": "2018-12-31 00:00:00",
+    "trade_date": "2018-12-31 00:00:00",
+    "start_date": "2018-12-31 00:00:00",
+    "end_date": "2020-12-31 00:00:00",
+    "asset_liability": "asset",
+    "currency_code": "GBP",
+    "initial_margin": 9000,
+    "balance": 10000,
+    "mtm_dirty": 20000,
+    "mna_id": "MNA1",
+    "type": "vanilla_swap"
 }

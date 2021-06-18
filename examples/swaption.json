@@ -1,25 +1,18 @@
 {
-	"description": "1-year European payer swaption on a 10-year swap, physical settlement",
-	"data": {
-		"derivative": [
-			{
-				"id": 				    "1y into 10y payer_swaption",
-				"date":                 "2020_03_31T00:00:00",
-				"asset_class": 		    "ir",
-				"type": 			    "swaption",
-				"leg_type": 		    "put",
-				"position": 		    "short",
-				"currency_code": 	    "EUR",
-				"notional_amount": 	    10000,
-                "trade_date":           "2019-02-25T00:00:00",
-                "start_date":           "2019-02-27T00:00:00",
-                "end_date":             "2020-02-27T00:00:00",
-                "last_payment_date":    "2030-02-27T00:00:00",
-                "last_exercise_date":   "2020-02-25T00:00:00",
-                "strike": 			    0.01,
-                "settlement_type":      "physical",
-				"mtm_dirty": 		    -100
-			}
-		]
-	}
+	"id": "1y into 10y payer_swaption",
+	"date": "2020_03_31T00:00:00",
+	"asset_class": "ir",
+	"type": "swaption",
+	"leg_type": "put",
+	"position": "short",
+	"currency_code": "EUR",
+	"notional_amount": 10000,
+	"trade_date": "2019-02-25T00:00:00",
+	"start_date": "2019-02-27T00:00:00",
+	"end_date": "2020-02-27T00:00:00",
+	"last_payment_date": "2030-02-27T00:00:00",
+	"last_exercise_date": "2020-02-25T00:00:00",
+	"strike": 0.01,
+	"settlement_type": "physical",
+	"mtm_dirty": -100
 }

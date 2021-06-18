@@ -1,19 +1,24 @@
 {
-	"agreement": [{
-		"id": "MNA1",
-		"date": "2018-12-31 00:00:00",
-		"start_date": "2017-01-31 00:00:00",
-		"country_code": "GB",
-		"type": "isda",
-		"credit_support_type": "csd_isda_1995"
-	}],
-	"customer": [{
-		"id": "customer_ccp",
-		"date": "2018-12-31 00:00:00",
-		"type": "ccp",
-		"country_code": "GB"
-	}],
-	"derivative": [{
+	"agreement": [
+		{
+			"id": "MNA1",
+			"date": "2018-12-31 00:00:00",
+			"start_date": "2017-01-31 00:00:00",
+			"country_code": "GB",
+			"type": "isda",
+			"credit_support_type": "csd_isda_1995"
+		}
+	],
+	"customer": [
+		{
+			"id": "customer_ccp",
+			"date": "2018-12-31 00:00:00",
+			"type": "ccp",
+			"country_code": "GB"
+		}
+	],
+	"derivative": [
+		{
 			"id": "vanilla_swap_receivable_200",
 			"date": "2018-12-31 00:00:00",
 			"trade_date": "2018-12-31 00:00:00",
