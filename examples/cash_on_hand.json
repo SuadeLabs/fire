@@ -1,0 +1,8 @@
+{
+    "id": "cash_on_hand",
+    "date": "2019-01-01T00:00:00",
+    "balance": 100000,
+    "currency_code": "GBP",
+    "asset_liability": "asset",
+    "security_type": "cash"
+}

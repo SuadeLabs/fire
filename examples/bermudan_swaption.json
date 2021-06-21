@@ -1,25 +1,18 @@
 {
-	"description": "Cash-settled Bermudan swaption with annual exercise dates referencing 5-year interest rate swap",
-	"data": {
-		"derivative": [
-			{
-				"id": 					"1",
-				"date": 				"2019-01-01T00:00:00",
-				"mtm_dirty": 			5,
-				"asset_class": 			"ir",
-				"currency_code": 		"USD",
-				"notional_amount": 		100,
-				"type": 			    "swaption",
-				"leg_type": 		    "put",
-				"position": 		    "short",
-				"start_date": 			"2019-01-01T00:00:00",
-				"end_date": 			"2019-06-01T00:00:00",
-				"next_exercise_date": 	"2020-01-01T00:00:00",
-				"strike":				0.01,
-				"underlying_price":		0.02,
-				"delta": 0.51,
-				"settlement_type": 		"cash"
-			}
-		]
-	}
+	"id": "1",
+	"date": "2019-01-01T00:00:00",
+	"mtm_dirty": 5,
+	"asset_class": "ir",
+	"currency_code": "USD",
+	"notional_amount": 100,
+	"type": "swaption",
+	"leg_type": "put",
+	"position": "short",
+	"start_date": "2019-01-01T00:00:00",
+	"end_date": "2019-06-01T00:00:00",
+	"next_exercise_date": "2020-01-01T00:00:00",
+	"strike": 0.01,
+	"underlying_price": 0.02,
+	"delta": 0.51,
+	"settlement_type": "cash"
 }

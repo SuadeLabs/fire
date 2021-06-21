@@ -1,41 +1,35 @@
-
-{
-    "description": "100 EUR for 140 CAD spot trade",
-    "data": {
-        "derivative": [
-            {
-                "id": "1",
-                "deal_id": "fx-spot123",
-                "date": "2019-04-30T00:00:00",
-                "mtm_dirty": -2,
-                "asset_class": "fx",
-                "currency_code": "EUR",
-                "trade_date": "2019-04-30T00:00:00",
-                "start_date": "2019-05-02T00:00:00",
-                "end_date": "2019-05-02T00:00:00",
-                "notional_amount": 100,
-                "delta": -1,
-                "type": "spot",
-                "settlement_type": "physical",
-                "rate": 1.4,
-                "underlying_price": 1.4
-            },
-            {
-                "id": "2",
-                "deal_id": "fx-spot123",
-                "date": "2019-04-30T00:00:00",
-                "mtm_dirty": -2,
-                "asset_class": "fx",
-                "currency_code": "CAD",
-                "trade_date": "2019-04-30T00:00:00",
-                "start_date": "2019-05-02T00:00:00",
-                "end_date": "2019-05-02T00:00:00",
-                "notional_amount": 140,
-                "delta": 1,
-                "type": "spot",
-                "settlement_type": "physical",
-                "underlying_price": 0.714
-            }
-        ]
+[
+    {
+        "id": "1",
+        "deal_id": "fx-spot123",
+        "date": "2019-04-30T00:00:00",
+        "mtm_dirty": -2,
+        "asset_class": "fx",
+        "currency_code": "EUR",
+        "trade_date": "2019-04-30T00:00:00",
+        "start_date": "2019-05-02T00:00:00",
+        "end_date": "2019-05-02T00:00:00",
+        "notional_amount": 10000,
+        "delta": -1,
+        "type": "spot",
+        "settlement_type": "physical",
+        "rate": 1.4,
+        "underlying_price": 1.4
+    },
+    {
+        "id": "2",
+        "deal_id": "fx-spot123",
+        "date": "2019-04-30T00:00:00",
+        "mtm_dirty": -2,
+        "asset_class": "fx",
+        "currency_code": "CAD",
+        "trade_date": "2019-04-30T00:00:00",
+        "start_date": "2019-05-02T00:00:00",
+        "end_date": "2019-05-02T00:00:00",
+        "notional_amount": 14000,
+        "delta": 1,
+        "type": "spot",
+        "settlement_type": "physical",
+        "underlying_price": 0.714
     }
-}
+]

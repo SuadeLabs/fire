@@ -1,13 +1,13 @@
 {
- "id": "vm_cash_received",
- "date": "2018-12-31 00:00:00",
- "trade_date": "2018-12-31 00:00:00",
- "start_date": "2018-12-31 00:00:00",
- "asset_liability": "liability",
- "currency_code": "GBP",
- "balance": 10000,
- "mtm_dirty": 10000,
- "type": "cash",
- "purpose": "derivative_collateral",
- "mna_id": "MNA2"
+    "id": "vm_cash_received",
+    "date": "2018-12-31 00:00:00",
+    "trade_date": "2018-12-31 00:00:00",
+    "start_date": "2018-12-31 00:00:00",
+    "asset_liability": "liability",
+    "currency_code": "GBP",
+    "balance": 10000,
+    "mtm_dirty": 10000,
+    "type": "cash",
+    "purpose": "derivative_collateral",
+    "mna_id": "MNA2"
 }
