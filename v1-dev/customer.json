@@ -32,6 +32,12 @@
       "type": "integer",
       "minimum": 0
     },
+    "risk_profile": {
+      "description": "The evaluation of the customer's willingness and/or capacity to take on financial risk.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10
+    },
     "start_date": {
       "description": "The date that the customer first became a customer. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
