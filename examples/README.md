@@ -13,11 +13,14 @@ The following are a few examples of common financial trades.
     - [Savings account with notice](#savings-account-with-notice)
     - [1-year time deposit](#1-year-time-deposit)
     - [1-year time deposit with 6-month withdrawal option](#1-year-time-deposit-with-6-month-withdrawal-option)
+    - [PNL interest income](#pnl-interest-income)
+    - [PNL salary expenses](#pnl-salary-expenses)
   - [Agreement examples](#agreement-examples)
     - [Master netting agreement with csa](#master-netting-agreement-with-csa)
     - [Master netting agreement without csa](#master-netting-agreement-without-csa)
   - [Loan examples](#loan-examples)
     - [BBL/CBIL](#bblcbil)
+    - [Nostro account](#nostro-account)
   - [Derivative examples](#derivative-examples)
     - [Bermudan swaption](#bermudan-swaption)
     - [Credit default swap](#credit-default-swap)
@@ -32,10 +35,13 @@ The following are a few examples of common financial trades.
     - [IR swap](#ir-swap)
     - [Swaption](#swaption)
   - [Security examples](#security-examples)
+    - [Core equity tier-1 capital](#core-equity-tier-1-capital)
     - [Cash on-hand](#cash-on-hand)
     - [Cash receivable](#cash-receivable)
     - [Cash payable](#cash-payable)
     - [Reverse repo](#reverse-repo)
+    - [Repo](#repo)
+    - [Bank guarantee issued](#bank-guarantee-issued)
     - [Variation margin cash posted](#variation-margin-cash-posted)
     - [Variation margin cash received](#variation-margin-cash-received)
     - [Variation margin bond posted](#variation-margin-bond-posted)
@@ -70,13 +76,21 @@ The following are a few examples of common financial trades.
 ```json
 {{#include savings_account_with_notice.json:5:}}
 ```
-#### 1-year time deposit 
+#### 1-year time deposit
 ```json
 {{#include time_deposit_1year.json:5:}}
 ```
 #### 1-year time deposit with 6-month withdrawal option
 ```json
 {{#include time_deposit_1year_with_6_month_withdrawal_option.json:5:}}
+```
+#### PNL interest income
+```json
+{{#include pnl_interest_income.json:5:}}
+```
+#### PNL salary expenses
+```json
+{{#include pnl_salary_expenses.json:5:}}
 ```
 ### Agreement examples
 #### Master netting agreement with csa
@@ -93,7 +107,7 @@ These loans can be represented as a combination of two independent loans.
 
 The first loan is a 25K GBP payable quarterly during 1 year (From Aug 1st, 2020 to Aug 1st, 2021).
 ```json
-{   
+{
     "id": "BBL1",
     "date": "2020-08-08T00:00:00+00:00",
     "balance": 2500000,
@@ -126,7 +140,7 @@ If you are working with reports that separates inflows from outflows, you will g
 
 To eliminate this excess, we can introduce a third loan.
 ```json
-{   
+{
     "id": "BBL_netting",
     "date": "2020-08-08T00:00:00+00:00",
     "balance": -2500000,
@@ -138,6 +152,11 @@ To eliminate this excess, we can introduce a third loan.
 }
 ```
 **Please download the complete [examples](bbl_loans.json)**
+#### Nostro account
+Nostro account, of 1000 GBP, held at another credit institution
+```json
+{{#include nostro_account.json:5:}}
+```
 ### Derivative examples
 #### Bermudan swaption
 Cash-settled Bermudan swaption with annual exercise dates referencing 5-year interest rate swap.
@@ -199,6 +218,11 @@ Short 6x12 forward rate agreement; starting in 6 months and ending in 12 months.
 {{#include swaption.json:5:}}
 ```
 ### Security examples
+#### Core equity tier-1 capital
+Core equity tier 1 capital of 1000 GBP
+```json
+{{#include cet_1_capital.json:5:}}
+```
 #### Cash on-hand
 Cash balance representing 1000 GBP.
 ```json
@@ -216,10 +240,23 @@ security with isin 'DUMMYISIN123'.
 {{#include cash_payable.json:5:}}
 ```
 #### Reverse repo
-Reverse repo transaction with a cash leg on 150 GBP, and a security leg of 140
-GBP, starting on June 1st, 2021 and ending on July 1st, 2021.
+Reverse repo transaction with a cash leg of 150 GBP, and a security leg of 140
+GBP, starting on June 1st, 2021 and ending on July 1st, 2021. The maturity date
+on the security leg refers to the maturity of the bond received as collateral.
 ```json
 {{#include rev_repo.json:5:}}
+```
+#### Repo
+Repo transaction with a cash leg of 150 GBP, and a security leg of 140
+GBP, starting on June 1st, 2021 and ending on July 1st, 2021. The maturity date
+on the security leg refers to the maturity of the bond posted as collateral.
+```json
+{{#include repo.json:5:}}
+```
+#### Bank guarantee issued
+Guarantee of 1000 GBP issued by the bank for a customer
+```json
+{{#include bank_guarantee_issued.json:5:}}
 ```
 #### Variation margin cash posted
 ```json
