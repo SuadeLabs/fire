@@ -13,8 +13,8 @@ The following are a few examples of common financial trades.
     - [Savings account with notice](#savings-account-with-notice)
     - [1-year time deposit](#1-year-time-deposit)
     - [1-year time deposit with 6-month withdrawal option](#1-year-time-deposit-with-6-month-withdrawal-option)
-    - [PNL interest income](#PNL-interest-income)
-    - [PNL wages and salaries expenses](#PNL-salary-expenses)
+    - [PNL interest income](#pnl-interest-income)
+    - [PNL salary expenses](#pnl-salary-expenses)
   - [Agreement examples](#agreement-examples)
     - [Master netting agreement with csa](#master-netting-agreement-with-csa)
     - [Master netting agreement without csa](#master-netting-agreement-without-csa)
@@ -35,7 +35,7 @@ The following are a few examples of common financial trades.
     - [IR swap](#ir-swap)
     - [Swaption](#swaption)
   - [Security examples](#security-examples)
-    - [CET1 capital](#Core-equity-tier-1-capital)
+    - [Core equity tier-1 capital](#core-equity-tier-1-capital)
     - [Cash on-hand](#cash-on-hand)
     - [Cash receivable](#cash-receivable)
     - [Cash payable](#cash-payable)
@@ -253,7 +253,7 @@ on the security leg refers to the maturity of the bond posted as collateral.
 ```json
 {{#include repo.json:5:}}
 ```
-#### bank guarantee issued
+#### Bank guarantee issued
 Guarantee of 1000 GBP issued by the bank for a customer
 ```json
 {{#include bank_guarantee_issued.json:5:}}
