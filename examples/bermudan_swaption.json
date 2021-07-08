@@ -1,5 +1,5 @@
 {
-	"id": "1",
+	"id": "1y into 10y receiver swaption exercisable every year, physical settlement",
 	"date": "2019-01-01T00:00:00",
 	"mtm_dirty": 5,
 	"asset_class": "ir",
@@ -9,10 +9,11 @@
 	"leg_type": "put",
 	"position": "short",
 	"start_date": "2019-01-01T00:00:00",
-	"end_date": "2019-06-01T00:00:00",
+	"end_date": "2020-01-01T00:00:00",
+	"last_payment_date": "2030-01-01T00:00:00",
 	"next_exercise_date": "2020-01-01T00:00:00",
-	"strike": 0.01,
+	"strike": 0.02,
 	"underlying_price": 0.02,
-	"delta": 0.51,
-	"settlement_type": "cash"
+	"delta": 0.50,
+	"settlement_type": "physical"
 }

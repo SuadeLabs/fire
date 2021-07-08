@@ -3,30 +3,19 @@
 	"data": {
 		"derivative": [
 			{
-				"id": "1",
-				"date": "2019-01-01T00:00:00",
-				"mtm_dirty": 100,
+				"id": "T-Bond Mar21 future",
+				"date": "2019-04-30T00:00:00",
 				"asset_class": "ir",
-				"currency_code": "USD",
-				"start_date": "2019-01-01T00:00:00",
-				"end_date": "2021-01-01T00:00:00",
-				"notional_amount": 100,
-				"delta": 0.5,
 				"type": "future",
-				"underlying_security_id": "20ytreasury"
-			}
-		],
-		"security": [
-			{
-				"id": "20ytreasury",
-				"date": "2019-01-01T00:00:00",
-				"mtm_dirty": 100,
-				"currency_code": "GBP",
-				"start_date": "2021-01-01T00:00:00",
-				"end_date": "2041-01-01T00:00:00",
-				"cqs_standardised": 2,
-				"type": "bond",
-				"purpose": "reference"
+				"leg_type": "indexed",
+				"currency_code": "USD",
+				"notional_amount": 100,
+				"trade_date": "2019-04-01T00:00:00",
+				"start_date": "2019-04-01T00:00:00",
+				"end_date": "2021-03-15T00:00:00",
+				"last_payment_date": "2041-03-15T00:00:00",
+				"underlying_index": "T-bondMar41",
+				"settlement_type": "physical"
 			}
 		]
 	}

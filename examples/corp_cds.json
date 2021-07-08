@@ -1,31 +1,46 @@
 {
-	"derivative": [
-		{
-			"id": "1",
-			"date": "2019-01-01T00:00:00",
-			"mtm_dirty": 3,
-			"asset_class": "cr_single",
-			"currency_code": "USD",
-			"notional_amount": 100,
-			"leg_type": "indexed",
-			"position": "short",
-			"start_date": "2019-01-01T00:00:00",
-			"end_date": "2024-01-01T00:00:00",
-			"delta": 1.0,
-			"rate": 2.55,
-			"type": "cds",
-			"underlying_issuer_id": "issuer-123",
-			"settlement_type": "cash"
-		}
-	],
-	"issuer": [
-		{
-			"id": "issuer-123",
-			"date": "2019-01-01T00:00:00",
-			"country_code": "FR",
-			"snp_lt": "aa_plus",
-			"moodys_lt": "aa1",
-			"type": "corporate"
-		}
-	]
+	"description": "5y corp cds",
+	"data": {
+		"derivative": [
+			{
+				"id": "corp_cds",
+				"date": "2019-01-01T00:00:00",
+				"type": "cds",
+				"asset_class": "cr_single",
+				"currency_code": "USD",
+				"position": "short",
+				"notional_amount": 100,
+				"leg_type": "indexed",
+				"start_date": "2019-01-01T00:00:00",
+				"end_date": "2024-01-01T00:00:00",
+				"rate": 2.55,
+				"underlying_security_id": "corp_Jun29",
+				"settlement_type": "cash"
+			}
+		],
+		"security": [
+			{
+				"id": "corp_Jun28",
+				"date": "2019-01-01T00:00:00",
+				"type": "bond",
+				"underlying_issuer_id": "corp_issuer",
+				"isin_code": "XS1234567890",
+				"currency_code": "USD",
+				"start_date": "2018-07-01 00:00:00",
+				"end_date": "2028-07-01 00:00:00",
+				"cqs_standardised": 3
+			}
+		],
+		"issuer": [
+			{
+				"id": "corp_Jun28",
+				"date": "2019-01-01T00:00:00",
+				"type": "corporate",
+				"cqs_standardised": 3,
+				"country_code": "FR",
+				"snp_lt": "aa_plus",
+				"moodys_lt": "aa1"
+			}
+		]
+	}
 }

@@ -1,34 +1,21 @@
 {
-	"description": "June three-month bond future (taken out in April) with physical delivery.",
+	"description": "June IMM 2019 Bund future",
 	"data": {
 		"derivative": [
 			{
-				"id": "1",
+				"id": "Bund June IMM future",
 				"date": "2019-04-30T00:00:00",
-				"mtm_dirty": -2,
 				"asset_class": "ir",
-				"currency_code": "USD",
-				"trade_date": "2019-04-01T00:00:00",
-				"start_date": "2019-06-01T00:00:00",
-				"end_date": "2019-09-01T00:00:00",
-				"notional_amount": 100,
-				"delta": 0.99,
 				"type": "future",
-				"settlement_type": "physical",
-				"underlying_security_id": "bond123"
-			}
-		],
-		"security": [
-			{
-				"id": "bond123",
-				"date": "2019-01-01T00:00:00",
-				"mtm_dirty": 100,
-				"currency_code": "GBP",
-				"start_date": "2015-01-01T00:00:00",
-				"end_date": "2025-01-01T00:00:00",
-				"cqs_standardised": 2,
-				"type": "bond",
-				"purpose": "reference"
+				"leg_type": "indexed",
+				"currency_code": "EUR",
+				"notional_amount": 100,
+				"trade_date": "2019-04-01T00:00:00",
+				"start_date": "2019-04-01T00:00:00",
+				"end_date": "2019-06-15T00:00:00",
+				"last_payment_date": "2029-08-15T00:00:00",
+				"underlying_index": "BUND2029",
+				"settlement_type": "physical"
 			}
 		]
 	}
