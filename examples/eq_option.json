@@ -1,31 +1,34 @@
 {
-	"derivative": [
-		{
-			"id": "1",
-			"date": "2019-12-31T00:00:00",
-			"asset_class": "equity_single",
-			"position": "long",
-			"type": "option",
-			"leg_type": "call",
-			"currency_code": "USD",
-			"underlying_quantity": 100,
-			"strike": 40,
-			"underlying_security_id": "EquityABC",
-			"trade_date": "2019-12-05T00:00:00",
-			"start_date": "2019-12-07T00:00:00",
-			"end_date": "2020-12-07T00:00:00",
-			"last_exercise_date": "2020-12-05T00:00:00",
-			"settlement_type": "cash",
-			"underlying_price": 25,
-			"mtm_dirty": 10
-		}
-	],
+	"description": "Long 100 call on EquityABC @ 40",
+	"data": {
+		"derivative": [
+			{
+				"date": "2019-12-31T00:00:00",
+				"id": "1",
+				"asset_class": "equity_single",
+				"type": "option",
+				"underlying_security_id": "EquityABC",
+				"leg_type": "call",
+				"position": "long",
+				"currency_code": "USD",
+				"underlying_quantity": 100,
+				"strike": 40,
+				"trade_date": "2019-12-05T00:00:00",
+				"start_date": "2019-12-07T00:00:00",
+				"end_date": "2020-12-07T00:00:00",
+				"last_exercise_date": "2020-12-05T00:00:00",
+				"settlement_type": "cash",
+				"underlying_price": 25,
+				"mtm_dirty": 10
+			}
+		]
+	},
 	"security": [
 		{
-			"id": "EquityABC",
 			"date": "2019-12-31T00:00:00",
+			"id": "EquityABC",
 			"type": "equity",
-			"currency_code": "GBP",
+			"currency_code": "USD",
 			"start_date": "2017-01-01T00:00:00",
 			"purpose": "reference"
 		}

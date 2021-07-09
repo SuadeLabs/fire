@@ -1,30 +1,27 @@
 {
-    "description": "Long 10-year AUD/EUR cross-currency swap. The rate is the interim rate for the fixed leg of the swap.",
+    "description": "Long 10-year forward_starting AUD/EUR cross-currency swap",
     "data": {
         "derivative": [
             {
-                "id": "AUDUSD_xccy_long",
-                "deal_id": "AUDUSD_xccy",
                 "date": "2020_03_31T00:00:00",
-                "trade_date": "2019-02-25T00:00:00",
-                "start_date": "2019-02-27T00:00:00",
-                "end_date": "2029-02-27T00:00:00",
+                "id": "AUDUSD_xccy:AUD",
+                "deal_id": "AUDUSD_xccy",
                 "asset_class": "fx",
                 "type": "xccy",
-                "position": "long",
                 "leg_type": "fixed",
+                "position": "long",
                 "currency_code": "AUD",
                 "notional_amount": 14000,
                 "rate": 0.01,
-                "mtm_dirty": 11400
+                "trade_date": "2019-02-25T00:00:00",
+                "start_date": "2020-02-27T00:00:00",
+                "end_date": "2030-02-27T00:00:00",
+                "mtm_dirty": 1140
             },
             {
-                "id": "AUDUSD_xccy_short",
-                "deal_id": "AUDUSD_xccy",
                 "date": "2020_03_31T00:00:00",
-                "trade_date": "2019-02-25T00:00:00",
-                "start_date": "2019-02-27T00:00:00",
-                "end_date": "2029-02-27T00:00:00",
+                "id": "AUDUSD_xccy:USD",
+                "deal_id": "AUDUSD_xccy",
                 "asset_class": "fx",
                 "type": "xccy",
                 "position": "short",
@@ -33,36 +30,60 @@
                 "notional_amount": 10000,
                 "underlying_index": "USD_LIBOR_BBA",
                 "underlying_index_tenor": "3m",
-                "mtm_dirty": -120
+                "trade_date": "2019-02-25T00:00:00",
+                "start_date": "2020-02-27T00:00:00",
+                "end_date": "2030-02-27T00:00:00"
             }
         ],
         "derivative_cash_flow": [
             {
-                "deal_id": "AUDUSD_xccy_long_final_exchange",
-                "derivative_id": "AUDUSD_xccy_long",
-                "currency_code": "USD",
                 "date": "2020_03_31T00:00:00",
+                "bank_id": "AUDUSD_xccy:AUD_initial_exchange",
+                "derivative_id": "AUDUSD_xccy:AUD",
+                "currency_code": "AUD",
+                "notional_amount": 14000,
+                "reset_date": "2019-02-27T00:00:00",
+                "payment_date": "2019-02-27T00:00:00",
+                "balance": -14000,
+                "purpose": "principal"
+            },
+            {
+                "date": "2020_03_31T00:00:00",
+                "bank_id": "AUDUSD_xccy:AUD_final_exchange",
+                "derivative_id": "AUDUSD_xccy:AUD",
+                "currency_code": "AUD",
+                "notional_amount": 14000,
                 "reset_date": "2029-02-27T00:00:00",
                 "payment_date": "2029-02-27T00:00:00",
-                "notional_amount": 14000,
                 "balance": 14000,
                 "purpose": "principal"
             },
             {
                 "date": "2020_03_31T00:00:00",
-                "deal_id": "AUDUSD_xccy_short_final_exchange",
-                "derivative_id": "AUDUSD_xccy_long",
+                "deal_id": "AUDUSD_xccy:USD_initial_exchange",
+                "derivative_id": "AUDUSD_xccy:USD",
                 "currency_code": "USD",
+                "notional_amount": 10000,
+                "reset_date": "2019-02-27T00:00:00",
+                "payment_date": "2019-02-27T00:00:00",
+                "balance": 10000,
+                "purpose": "principal"
+            },
+            {
+                "date": "2020_03_31T00:00:00",
+                "deal_id": "AUDUSD_xccy:USD_final_exchange",
+                "derivative_id": "AUDUSD_xccy:USD",
+                "currency_code": "USD",
+                "notional_amount": 10000,
                 "reset_date": "2029-02-27T00:00:00",
                 "payment_date": "2029-02-27T00:00:00",
-                "notional_amount": 10000,
                 "balance": -10000,
                 "purpose": "principal"
             },
             {
                 "date": "2020_03_31T00:00:00",
-                "deal_id": "AUDUSD_xccy_long_int_1",
-                "derivative_id": "AUDUSD_xccy",
+                "bank_id": "AUDUSD_xccy:AUD_1",
+                "derivative_id": "AUDUSD_xccy:AUD",
                 "currency_code": "USD",
                 "reset_date": "2020-02-27T00:00:00",
                 "payment_date": "2021-02-27T00:00:00",
@@ -73,8 +94,8 @@
             {},
             {
                 "date": "2020_03_31T00:00:00",
-                "deal_id": "AUDUSD_xccy_long_int_8",
-                "derivative_id": "AUDUSD_xccy",
+                "bank_id": "AUDUSD_xccy:AUD_8",
+                "derivative_id": "AUDUSD_xccy:AUD",
                 "currency_code": "USD",
                 "reset_date": "2028-02-27T00:00:00",
                 "payment_date": "2029-02-27T00:00:00",
@@ -82,10 +103,11 @@
                 "balance": 140,
                 "purpose": "interest"
             },
+            {},
             {
                 "date": "2020_03_31T00:00:00",
-                "deal_id": "AUDUSD_xccy_short_int_1",
-                "derivative_id": "AUDUSD_xccy",
+                "bank_id": "AUDUSD_xccy:USD_1",
+                "derivative_id": "AUDUSD_xccy:USD",
                 "currency_code": "USD",
                 "reset_date": "2020-02-27T00:00:00",
                 "payment_date": "2020-05-27T00:00:00",
@@ -97,8 +119,8 @@
             {},
             {
                 "date": "2020_03_31T00:00:00",
-                "deal_id": "AUDUSD_xccy_short_int_32",
-                "derivative_id": "AUDUSD_xccy",
+                "bank_id": "AUDUSD_xccy:USD_32",
+                "derivative_id": "AUDUSD_xccy:USD",
                 "currency_code": "USD",
                 "reset_date": "2028-11-27T00:00:00",
                 "payment_date": "2029-02-27T00:00:00",

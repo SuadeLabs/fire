@@ -14,7 +14,7 @@
 				"start_date": "2019-01-01T00:00:00",
 				"end_date": "2024-01-01T00:00:00",
 				"rate": 2.55,
-				"underlying_security_id": "corp_Jun29",
+				"underlying_security_id": "corp_Jun28",
 				"settlement_type": "cash"
 			}
 		],

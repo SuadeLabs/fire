@@ -1,9 +1,11 @@
 {
+	"description": "long EUR 0% 1y digital floor vs Euribor 3M",
+	"data": {
 	"derivative": [
 		{
-			"id": "long 1y digital floor vs 3s:long floor",
-			"deal_id": "long 1y digital floor vs 3s",
 			"date": "2020_03_31T00:00:00",
+			"id": "1y digital floor:long floor",
+			"deal_id": "1y digital floor",
 			"asset_class": "ir",
 			"type": "cap_floor",
 			"leg_type": "put",
@@ -15,15 +17,14 @@
 			"trade_date": "2019-02-25T00:00:00",
 			"start_date": "2019-02-27T00:00:00",
 			"end_date": "2020-02-27T00:00:00",
-			"next_exercise_date": "2019-05-25T00:00:00",
-			"strike": 0.0,
-			"underlying_price": 0.01,
+			"last_exercise_date": "2019-05-25T00:00:00",
+			"strike": 0.0005,
 			"mtm_dirty": -40
 		},
 		{
-			"id": "long 1y digital floor vs 3s:short floor",
-			"deal_id": "long 1y digital floor vs 3s",
 			"date": "2020_03_31T00:00:00",
+			"id": "1y digital floor:short floor",
+			"deal_id": "1y digital floor",
 			"asset_class": "ir",
 			"type": "cap_floor",
 			"leg_type": "put",
@@ -35,96 +36,88 @@
 			"trade_date": "2019-02-25T00:00:00",
 			"start_date": "2019-02-27T00:00:00",
 			"end_date": "2020-02-27T00:00:00",
-			"next_exercise_date": "2019-05-25T00:00:00",
-			"strike": -0.01,
-			"underlying_price": 0.01,
-			"mtm_dirty": 110
+			"last_exercise_date": "2019-05-25T00:00:00",
+			"strike": -0.0005,
 		}
 	],
 	"derivative_cash_flows": [
 		{
-			"id": "long 1y digital floor vs 3s:long floor 2",
-			"derivative_id": "long 1y digital floor vs 3s:long floor",
+			"id": "1y digital floor:long floor_1",
+			"derivative_id": "1y digital floor:long floor",
 			"date": "2020_03_31T00:00:00",
 			"trade_date": "2019-02-25T00:00:00",
 			"asset_class": "ir",
 			"leg": "receive",
 			"currency_code": "EUR",
 			"notional_amount": 100000,
-			"balance": 0,
 			"reset_date": "2019-05-27T00:00:00",
 			"payment_date": "2019-08-27T00:00:00",
+			"forward_rate": 0.0025
+		},
+		{
+			"id": "1y digital floor:long floor_2",
+			"derivative_id": "1y digital floor:long floor",
+			"date": "2020_03_31T00:00:00",
+			"trade_date": "2019-02-25T00:00:00",
+			"asset_class": "ir",
+			"leg": "receive",
+			"currency_code": "EUR",
+			"notional_amount": 100000,
+			"reset_date": "2019-08-27T00:00:00",
+			"payment_date": "2019-11-27T00:00:00",
 			"forward_rate": 0.005
 		},
 		{
-			"id": "long 1y digital floor vs 3s:long floor 3",
-			"derivative_id": "long 1y digital floor vs 3s:long floor",
+			"id": "1y digital floor:long floor_3",
+			"derivative_id": "1y digital floor:long floor",
 			"date": "2020_03_31T00:00:00",
 			"trade_date": "2019-02-25T00:00:00",
 			"asset_class": "ir",
 			"leg": "receive",
 			"currency_code": "EUR",
 			"notional_amount": 100000,
-			"balance": 0,
-			"reset_date": "2019-08-27T00:00:00",
-			"payment_date": "2019-11-27T00:00:00",
-			"forward_rate": 0.01
-		},
-		{
-			"id": "long 1y digital floor vs 3s:long floor 4",
-			"derivative_id": "long 1y digital floor vs 3s:long floor",
-			"date": "2020_03_31T00:00:00",
-			"trade_date": "2019-02-25T00:00:00",
-			"asset_class": "ir",
-			"leg": "receive",
-			"currency_code": "EUR",
-			"notional_amount": 100000,
-			"balance": 0,
 			"reset_date": "2019-11-27T00:00:00",
 			"payment_date": "2020-02-27T00:00:00",
-			"forward_rate": 0.015
+			"forward_rate": 0.0075
 		},
 		{
-			"id": "long 1y digital floor vs 3s:short floor 2",
-			"derivative_id": "long 1y digital floor vs 3s:short floor",
+			"id": "1y digital floor:short floor_1",
+			"derivative_id": "1y digital floor:short floor",
 			"date": "2020_03_31T00:00:00",
 			"trade_date": "2019-02-25T00:00:00",
 			"asset_class": "ir",
 			"leg": "pay",
 			"currency_code": "EUR",
 			"notional_amount": 100000,
-			"balance": 0,
 			"reset_date": "2019-05-27T00:00:00",
 			"payment_date": "2019-08-27T00:00:00",
+			"forward_rate": 0.0025
+		},
+		{
+			"id": "1y digital floor:short floor_2",
+			"derivative_id": "1y digital floor:short floor",
+			"date": "2020_03_31T00:00:00",
+			"trade_date": "2019-02-25T00:00:00",
+			"asset_class": "ir",
+			"leg": "pay",
+			"currency_code": "EUR",
+			"notional_amount": 100000,
+			"reset_date": "2019-08-27T00:00:00",
+			"payment_date": "2019-11-27T00:00:00",
 			"forward_rate": 0.005
 		},
 		{
-			"id": "long 1y digital floor vs 3s:short floor 3",
-			"derivative_id": "long 1y digital floor vs 3s:short floor",
+			"id": "1y digital floor:short floor_3",
+			"derivative_id": "1y digital floor:short floor",
 			"date": "2020_03_31T00:00:00",
 			"trade_date": "2019-02-25T00:00:00",
 			"asset_class": "ir",
 			"leg": "pay",
 			"currency_code": "EUR",
 			"notional_amount": 100000,
-			"balance": 0,
-			"reset_date": "2019-08-27T00:00:00",
-			"payment_date": "2019-11-27T00:00:00",
-			"forward_rate": 0.01
-		},
-		{
-			"id": "long 1y digital floor vs 3s:short floor 4",
-			"derivative_id": "long 1y digital floor vs 3s:short floor",
-			"date": "2020_03_31T00:00:00",
-			"trade_date": "2019-02-25T00:00:00",
-			"asset_class": "ir",
-			"leg": "pay",
-			"currency_code": "EUR",
-			"notional_amount": 100000,
-			"balance": 0,
 			"reset_date": "2019-11-27T00:00:00",
 			"payment_date": "2020-02-27T00:00:00",
-			"forward_rate": 0.015
+			"forward_rate": 0.0075
 		}
 	]
 }
