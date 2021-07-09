@@ -1,5 +1,5 @@
 {
-	"description": "June IMM 2019 Bund future",
+	"description": "June IMM Bund future (underlying index is the expected CTD on the reporting date)",
 	"data": {
 		"derivative": [
 			{
@@ -9,13 +9,15 @@
 				"type": "future",
 				"leg_type": "indexed",
 				"currency_code": "EUR",
-				"notional_amount": 100,
+				"notional_amount": 10000,
+				"rate": 125.5,
+				"underlying_index": "BUND0829",
 				"trade_date": "2019-04-01T00:00:00",
 				"start_date": "2019-04-01T00:00:00",
 				"end_date": "2019-06-15T00:00:00",
 				"last_payment_date": "2029-08-15T00:00:00",
-				"underlying_index": "BUND2029",
-				"settlement_type": "physical"
+				"settlement_type": "physical",
+				"mtm_dirty": -25
 			}
 		]
 	}

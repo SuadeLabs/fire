@@ -1,40 +1,51 @@
 {
-	"description": "Long 10y EUR irs vs Euribor 3M, bullet",
+	"description": "Short 5y EUR total return swap on EquityABC",
 	"data": {
         "derivative": [
             {
                 "date": "2020-03-31T00:00:00",
-                "id": "eur_10y_irs_fixed",
-                "deal_id": "eur_10y_irs",
+                "id": "eur_equity_trs:equity_leg",
+                "deal_id": "eur_equity_trs",
                 "asset_class": "ir",
                 "type": "vanilla_swap",
-                "currency_code": "EUR",
-                "leg_type": "fixed",
-                "position": "long",
-                "notional_amount": 10000,
-                "trade_date": "2019-02-25T00:00:00",
-                "start_date": "2019-02-27T00:00:00",
-                "end_date": "2029-02-27T00:00:00",
-                "rate": 0.01,
-                "mtm_dirty": 70
-            },
-            {
-                "date": "2020-03-31T00:00:00",
-                "id": "eur_10y_irs_floating",
-                "deal_id": "long_eur_10y_irs",
-                "asset_class": "ir",
-                "type": "vanilla_swap",
-                "leg_type": "floating",
+                "leg_type": "indexed",
                 "position": "short",
                 "currency_code": "EUR",
                 "notional_amount": 10000,
-                "rate": 0.0025,
+				"underlying_security_id": "EquityABC",
+                "trade_date": "2019-02-25T00:00:00",
+                "start_date": "2019-02-27T00:00:00",
+                "end_date": "2024-02-27T00:00:00",
+                "mtm_dirty": 140
+            },
+            {
+                "date": "2020-03-31T00:00:00",
+                "id": "eur_equity_trs:floating_leg",
+                "deal_id": "long_eur_equity_trs",
+                "asset_class": "ir",
+                "type": "vanilla_swap",
+                "leg_type": "floating",
+                "position": "long",
+                "currency_code": "EUR",
+                "notional_amount": 10000,
+                "rate": 0.0225,
                 "underlying_index": "EURIBOR",
                 "underlying_index_tenor": "3m",
                 "trade_date": "2019-02-25T00:00:00",
                 "start_date": "2019-02-27T00:00:00",
-                "end_date": "2029-02-27T00:00:00"
+                "end_date": "2024-02-27T00:00:00"
             }
         ]
-    }
+    },
+	"security": [
+		{
+            "date": "2020-03-31T00:00:00",
+			"id": "EquityABC",
+			"type": "equity",
+			"currency_code": "USD",
+			"start_date": "2020-03-31T00:00:00",
+			"issue_date": "2017-03-01T00:00:00",
+			"purpose": "reference"
+		}
+	]
 }
