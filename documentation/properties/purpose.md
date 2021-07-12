@@ -160,7 +160,7 @@ As opposed to short-term definition within **operational**, **custody** here ref
 ### prime_brokerage
 Describes an account held for prime brokerage reasons but not including those contained above for operational reasons. These accounts are used for prime brokerage service transactions which are in essence investment activities including securities lending, leveraged trade executions and cash management, among other things.
 
-### investment property
+### investment_property
 IAS 40.5 defines **investment property** as:
 > property (land or a building - or part of a building - or both) held (by the owner or by the lessee as a right-of-use asset) to earn rentals or for capital appreciation or both, rather than for:
 (a) use in the production or supply of goods or services or for administrative purposes; or
@@ -568,12 +568,20 @@ The **other** enum value can be used when none of the other enum values apply or
 ├── share_capital
 │    └──  non_controlling
 ├── investment
+│    ├──  investment_advice
+│    └──  portfolio_management
 ├── trade_finance
 ├── aircraft_finance
 ├── insurance
 ├── back_to_back
 └── other
 ```
+### investment_advice
+The [Mifid Directive][midifdir] defines in Article 4(4) investment advice as:
+> provision of personal recommendations to a client, either upon its request or at the initiative of the investment firm, in respect of one or more transactions relating to financial instruments.
+### portfolio_management
+The [Mifid Directive][midifdir] defines in Article 4(8) portfolio management as:
+> managing portfolios in accordance with mandates given by clients on a discretionary client-by-client basis where such portfolios include one or more financial instruments.
 ### trade_finance
 From [CRR][crr] definitions (80):
 > **Trade finance** means financing, including guarantees, connected to the exchange of goods and services through financial products of fixed short-term maturity, generally of less than one year, without automatic rollover;
@@ -609,6 +617,7 @@ Use this enumeration value to highlight back to back trades defined as "exactly 
 ---
 
 [reg]: https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32009R0494&from=EN
+[midifdir]: https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX:32014L0065
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575
 [lcr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
 [id]: https://github.com/suadelabs/fire/blob/master/documentation/properties/id.md

@@ -783,7 +783,8 @@ This is an overarching term used to define any non-product accounts that may exi
 ### amortisation
 An account which holds the **amortisation amount** of intangible assets measured at cost model. IAS 38.74 defines cost model measurement of intangible assets as follow:
 > After initial recognition intangible assets should be carried at cost less accumulated **amortisation** and impairment losses
-
+### depreciation
+An account representing the change in value attributable (over a period) to assets where depreciation must be accounted for.
 ### deferred
 A **deferred** account is an account in which the recognition of certain revenue or expenses on the income statement is delayed for a certain period of time. For example, a deferred tax asset, which is reported in F1.01 of FINREP,  is defined by IAS 12.5 as follows:
 > the amounts of income taxes recoverable in future periods in respect of:
