@@ -26,6 +26,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   └── dealing_rev_deriv
 │       └── dealing_rev_deriv_nse
 ├── deposit
+├── dgs_contribution
 ├── dividend
 │   └── div_from_cis
 │   │   └── div_from_money_mkt
@@ -63,7 +64,6 @@ The **purpose** property describes the reason behind the creation or usage of th
 │       ├── redundancy_pymt
 │       └── regular_wages
 ├── fx
-├── gtee_scheme_contribution
 ├── interest
 │   ├── int_on_bond_and_frn
 │   ├── int_on_deposit
@@ -108,7 +108,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 └── write_off
 ```
 
-### gtee_scheme_contribution
+### dgs_contribution
 Describes an account representing the **contributions to deposit guarantee schemes** paid by the reporting entity as defined by Annex 5 Part 2.48i of the [ITS on supervisory reporting][its]
 
 ### res_fund_contribution
