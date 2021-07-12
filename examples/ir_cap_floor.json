@@ -1,13 +1,13 @@
 {
 	"derivative": [
 		{
-			"id": "short 1y collar vs 3s:short cap",
-			"deal_id": "short 1y collar vs 3s",
-			"date": "2020_03_31T00:00:00",
+			"date": "2020-03-31T00:00:00",
+			"id": "short_eur_1y_collar:short_cap",
+			"deal_id": "short_eur_1y_collar",
 			"asset_class": "ir",
-			"position": "short",
 			"type": "cap_floor",
 			"leg_type": "call",
+			"position": "short",
 			"currency_code": "EUR",
 			"notional_amount": 10000,
 			"underlying_index": "EURIBOR",
@@ -21,13 +21,13 @@
 			"mtm_dirty": -40
 		},
 		{
-			"id": "short 1y collar vs 3s:long floor",
-			"deal_id": "short 1y collar vs 3s",
-			"date": "2020_03_31T00:00:00",
+			"date": "2020-03-31T00:00:00",
+			"id": "short_eur_1y_collar:long_floor",
+			"deal_id": "short_eur_1y_collar",
 			"asset_class": "ir",
-			"position": "long",
 			"type": "cap_floor",
 			"leg_type": "put",
+			"position": "long",
 			"currency_code": "EUR",
 			"notional_amount": 10000,
 			"underlying_index": "EURIBOR",
@@ -43,9 +43,9 @@
 	],
 	"derivative_cash_flows": [
 		{
-			"id": "short 1y collar vs 3s:short cap 2",
-			"derivative_id": "short 1y collar vs 3s:short cap",
-			"date": "2020_03_31T00:00:00",
+			"date": "2020-03-31T00:00:00",
+			"id": "short_eur_1y_collar:short_cap 2",
+			"derivative_id": "short_eur_1y_collar:short_cap",
 			"trade_date": "2019-02-25T00:00:00",
 			"asset_class": "ir",
 			"leg": "pay",
@@ -57,9 +57,9 @@
 			"forward_rate": 0.005
 		},
 		{
-			"id": "short 1y collar vs 3s:short cap 3",
-			"derivative_id": "short 1y collar vs 3s:short cap",
-			"date": "2020_03_31T00:00:00",
+			"date": "2020-03-31T00:00:00",
+			"id": "short_eur_1y_collar:short_cap 3",
+			"derivative_id": "short_eur_1y_collar:short_cap",
 			"trade_date": "2019-02-25T00:00:00",
 			"asset_class": "ir",
 			"leg": "pay",
@@ -71,9 +71,9 @@
 			"forward_rate": 0.01
 		},
 		{
-			"id": "short 1y collar vs 3s:short cap 4",
-			"derivative_id": "short 1y collar vs 3s:short cap",
-			"date": "2020_03_31T00:00:00",
+			"date": "2020-03-31T00:00:00",
+			"id": "short_eur_1y_collar:short_cap 4",
+			"derivative_id": "short_eur_1y_collar:short_cap",
 			"trade_date": "2019-02-25T00:00:00",
 			"asset_class": "ir",
 			"leg": "pay",
@@ -85,9 +85,9 @@
 			"forward_rate": 0.015
 		},
 		{
-			"id": "short 1y collar vs 3s:long floor 2",
-			"derivative_id": "short 1y collar vs 3s:long floor",
-			"date": "2020_03_31T00:00:00",
+			"date": "2020-03-31T00:00:00",
+			"id": "short_eur_1y_collar:long_floor 2",
+			"derivative_id": "short_eur_1y_collar:long_floor",
 			"trade_date": "2019-02-25T00:00:00",
 			"asset_class": "ir",
 			"leg": "receive",
@@ -99,9 +99,9 @@
 			"forward_rate": 0.005
 		},
 		{
-			"id": "short 1y collar vs 3s:long floor 3",
-			"derivative_id": "short 1y collar vs 3s:long floor",
-			"date": "2020_03_31T00:00:00",
+			"date": "2020-03-31T00:00:00",
+			"id": "short_eur_1y_collar:long_floor 3",
+			"derivative_id": "short_eur_1y_collar:long_floor",
 			"trade_date": "2019-02-25T00:00:00",
 			"asset_class": "ir",
 			"leg": "receive",
@@ -113,9 +113,9 @@
 			"forward_rate": 0.01
 		},
 		{
-			"id": "short 1y collar vs 3s:long floor 4",
-			"derivative_id": "short 1y collar vs 3s:long floor",
-			"date": "2020_03_31T00:00:00",
+			"date": "2020-03-31T00:00:00",
+			"id": "short_eur_1y_collar:long_floor 4",
+			"derivative_id": "short_eur_1y_collar:long_floor",
 			"trade_date": "2019-02-25T00:00:00",
 			"asset_class": "ir",
 			"leg": "receive",

@@ -26,7 +26,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   └── dealing_rev_deriv
 │       └── dealing_rev_deriv_nse
 ├── deposit
-├── depreciation
+├── dgs_contribution
 ├── dividend
 │   └── div_from_cis
 │   │   └── div_from_money_mkt
@@ -97,6 +97,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── release
 ├── reg_loss
 ├── restructuring
+├── res_fund_contribution
 ├── revaluation
 ├── revenue_reserve
 ├── share_plan
@@ -106,6 +107,12 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   └── corporation_tax
 └── write_off
 ```
+
+### dgs_contribution
+Describes an account representing the **contributions to deposit guarantee schemes** paid by the reporting entity as defined by Annex 5 Part 2.48i of the [ITS on supervisory reporting][its]
+
+### res_fund_contribution
+Describes an account representing the **contributions to resolution funds** paid by the reporting entity as defined by Annex 5 Part 2.48i of the [ITS on supervisory reporting][its]
 
 ### deposit
 The **deposit** enum value refers to a retail deposit defined in accordance with Article 411 of the [CRR][crr]:
@@ -161,7 +168,7 @@ As opposed to short-term definition within **operational**, **custody** here ref
 ### prime_brokerage
 Describes an account held for prime brokerage reasons but not including those contained above for operational reasons. These accounts are used for prime brokerage service transactions which are in essence investment activities including securities lending, leveraged trade executions and cash management, among other things.
 
-### investment property
+### investment_property
 IAS 40.5 defines **investment property** as:
 > property (land or a building - or part of a building - or both) held (by the owner or by the lessee as a right-of-use asset) to earn rentals or for capital appreciation or both, rather than for:
 (a) use in the production or supply of goods or services or for administrative purposes; or
@@ -338,9 +345,6 @@ IAS 16(6) defines **property plant and equipment** as:
 > tangible items that:
 (a) are held for use in the production or supply of goods or services, for rental to others, or for administrative purposes; and
 (b) are expected to be used during more than one period.
-
-### depreciation
-An account representing the change in value attributable (over a period) to assets where depreciation must be accounted for.
 
 ### other
 The **other** enum value can be used when it is known that none of the other enum values apply.
@@ -572,12 +576,20 @@ The **other** enum value can be used when none of the other enum values apply or
 ├── share_capital
 │    └──  non_controlling
 ├── investment
+│    ├──  investment_advice
+│    └──  portfolio_management
 ├── trade_finance
 ├── aircraft_finance
 ├── insurance
 ├── back_to_back
 └── other
 ```
+### investment_advice
+The [Mifid Directive][midifdir] defines in Article 4(4) investment advice as:
+> provision of personal recommendations to a client, either upon its request or at the initiative of the investment firm, in respect of one or more transactions relating to financial instruments.
+### portfolio_management
+The [Mifid Directive][midifdir] defines in Article 4(8) portfolio management as:
+> managing portfolios in accordance with mandates given by clients on a discretionary client-by-client basis where such portfolios include one or more financial instruments.
 ### trade_finance
 From [CRR][crr] definitions (80):
 > **Trade finance** means financing, including guarantees, connected to the exchange of goods and services through financial products of fixed short-term maturity, generally of less than one year, without automatic rollover;
@@ -613,9 +625,11 @@ Use this enumeration value to highlight back to back trades defined as "exactly 
 ---
 
 [reg]: https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32009R0494&from=EN
+[midifdir]: https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX:32014L0065
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575
 [lcr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
 [id]: https://github.com/suadelabs/fire/blob/master/documentation/properties/id.md
 [mlardef]: http://www.bankofengland.co.uk/pra/documents/regulatorydata/mlar/sup_chapter16_annex19bg_20120401.pdf
 [pruval]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:JOL_2016_021_R_0005
 [bis_sa_ccr]: https://www.bis.org/publ/bcbs279.pdf
+[its]: https://www.eba.europa.eu/sites/default/documents/files/document_library/Risk%20Analysis%20and%20Data/Reporting%20Frameworks/Reporting%20framework%203.0/3.0%20phase%202/972659/ITS%20on%20supervisory%20reporting%20-%20corrigendum.zip

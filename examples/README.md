@@ -15,49 +15,43 @@ The following are a few examples of common financial trades.
     - [1-year time deposit with 6-month withdrawal option](#1-year-time-deposit-with-6-month-withdrawal-option)
     - [PNL interest income](#pnl-interest-income)
     - [PNL salary expenses](#pnl-salary-expenses)
-  - [Agreement examples](#agreement-examples)
-    - [Master netting agreement with csa](#master-netting-agreement-with-csa)
-    - [Master netting agreement without csa](#master-netting-agreement-without-csa)
   - [Loan examples](#loan-examples)
     - [BBL/CBIL](#bblcbil)
     - [Nostro account](#nostro-account)
   - [Derivative examples](#derivative-examples)
     - [Bermudan swaption](#bermudan-swaption)
-    - [Credit default swap](#credit-default-swap)
-    - [Derivative with initial margin](#derivative-with-initial-margin)
+    - [Bond future](#bond-future)
+    - [Cross-currency swap](#cross-currency-swap)
+    - [Commodity option](#commodity-option)
+    - [Credit default swap  - Index](#credit-default-swap----index)
+    - [Credit default swap - Single name](#credit-default-swap---single-name)
     - [Equity option](#equity-option)
+    - [Equity total return swap](#equity-total-return-swap)
     - [Forward rate agreement](#forward-rate-agreement)
+    - [FX future](#fx-future)
     - [FX option](#fx-option)
     - [FX spot](#fx-spot)
     - [FX swap](#fx-swap)
-    - [IR cap floor](#ir-cap-floor)
-    - [IR digital floor](#ir-digital-floor)
-    - [IR swap](#ir-swap)
+    - [Interest rate cap floor](#interest-rate-cap-floor)
+    - [Interest rate digital floor](#interest-rate-digital-floor)
+    - [Interest rate future](#interest-rate-future)
+    - [Interest rate swap](#interest-rate-swap)
+    - [Interest rate swap amortising](#interest-rate-swap-amortising)
+    - [Interest rate swap collateralised](#interest-rate-swap-collateralised)
     - [Swaption](#swaption)
   - [Security examples](#security-examples)
+    - [Bank guarantee issued](#bank-guarantee-issued)
     - [Core equity tier-1 capital](#core-equity-tier-1-capital)
     - [Cash on-hand](#cash-on-hand)
     - [Cash receivable](#cash-receivable)
     - [Cash payable](#cash-payable)
+    - [Collateral posted to ccp on non-derivatives](#collateral-posted-to-ccp-on-non-derivatives)
+    - [Initial margin posted](#initial-margin-posted)
+    - [Independent amount received](#independent-amount-received)
     - [Reverse repo](#reverse-repo)
     - [Repo](#repo)
-    - [Bank guarantee issued](#bank-guarantee-issued)
     - [Variation margin cash posted](#variation-margin-cash-posted)
     - [Variation margin cash received](#variation-margin-cash-received)
-    - [Variation margin bond posted](#variation-margin-bond-posted)
-    - [Variation margin bond received](#variation-margin-bond-received)
-- [Test case examples](#test-case-examples)
-  - [Derivatives with Variation Margin (VM)](#derivatives-with-variation-margin-vm)
-    - [Gross receivables with VM received](#gross-receivables-with-vm-received)
-    - [Gross receivables with VM posted/given](#gross-receivables-with-vm-postedgiven)
-  - [Derivatives with Initial Margin (IM)](#derivatives-with-initial-margin-im)
-    - [Derivatives facing credit institution](#derivatives-facing-credit-institution)
-    - [Derivatives facing central clearing party (CCP)](#derivatives-facing-central-clearing-party-ccp)
-  - [Non-margined derivatives](#non-margined-derivatives)
-    - [In-the-money derivatives](#in-the-money-derivatives)
-    - [Out-the-money derivatives](#out-the-money-derivatives)
-  - [Non-derivatives IM posted to a CCP (e.g. RepoClear)](#non-derivatives-im-posted-to-a-ccp-eg-repoclear)
-    - [Collateral posted to ccp on non-derivatives](#collateral-posted-to-ccp-on-non-derivatives)
 ## Individual element examples
 ### Account examples
 #### Current account
@@ -91,15 +85,6 @@ The following are a few examples of common financial trades.
 #### PNL salary expenses
 ```json
 {{#include pnl_salary_expenses.json:5:}}
-```
-### Agreement examples
-#### Master netting agreement with csa
-```json
-{{#include master_netting_agreement_with_csa.json:5:}}
-```
-#### Master netting agreement without csa
-```json
-{{#include master_netting_agreement_without_csa.json:5:}}
 ```
 ### Loan examples
 #### BBL/CBIL
@@ -159,65 +144,115 @@ Nostro account, of 1000 GBP, held at another credit institution
 ```
 ### Derivative examples
 #### Bermudan swaption
-Cash-settled Bermudan swaption with annual exercise dates referencing 5-year interest rate swap.
+Short USD 1y into 10y receiver swaption exercisable annually with physical settlement
 ```json
 {{#include bermudan_swaption.json:5:}}
 ```
-#### Credit default swap
-Corporate CDS maturing in 5 years. Protection seller
+#### Bond future
+June IMM Bund future (underlying index is the expected CTD on the reporting date)
 ```json
-{{#include corp_cds.json:5:}}
+{{#include bond_future.json:5:}}
 ```
-#### Derivative with initial margin
+Futures on 20-year treasury bond that matures in 2 years
 ```json
-{{#include derivative_with_initial_margin.json:5:}}
+{{#include bond_future2.json:5:}}
+```
+#### Cross-currency swap
+Long 10-year forward_starting AUD/EUR cross-currency swap
+```json
+{{#include xccy_swap.json:5:}}
+```
+#### Commodity option
+Long 100 June21 at-the-money copper put
+```json
+{{#include commodity_option.json:5:}}
+```
+#### Credit default swap  - Index
+Index CDS; CDS on the cdx_na_ig index
+```json
+{{#include cds_index.json:5:}}
+```
+#### Credit default swap - Single name
+Single name CDS; reference obligation US corporate bond with July 2028 maturity
+```json
+{{#include cds_single_name.json:5:}}
 ```
 #### Equity option
-1Y European Option on a stock.
+Long 100 1-year 40 call on EquityABC.
 ```json
-{{#include eq_option.json:5:}}
+{{#include equity_option.json:5:}}
+```
+#### Equity total return swap
+Short 5y EUR total return swap on EquityABC
+```json
+{{#include equity_total_return_swap.json:5:}}
 ```
 #### Forward rate agreement
-Short 6x12 forward rate agreement; starting in 6 months and ending in 12 months.
+Short 6x12 USD FRA
 ```json
 {{#include fra_6x12.json:5:}}
 ```
+#### FX future
+Long June EURCAD future
+```json
+{{#include fx_future.json:5:}}
+```
 #### FX option
-3m ATM USD Call JPY Put (European).
+Short USD call YEN put FX option, exercise on Match 2020
 ```json
 {{#include fx_option.json:5:}}
 ```
 #### FX spot
-100 EUR for 140 CAD spot trade.
+Long EURCAD spot (100 EUR for 140 CAD spot trade)
 ```json
 {{#include fx_spot.json:5:}}
 ```
 #### FX swap
-1Y AUD/USD fx swap. The notional amounts represent the spot exchange occuring on the start date. The rate is used to derive the forward notional on each leg and is exchanged on the end date (80k AUD vs 84k USD).
+Short 1-year AUDUSD fx swap. The notional amounts are used to calculate the spot rate (occuring on the start date).
 ```json
 {{#include fx_swap.json:5:}}
 ```
-#### IR cap floor
-1-year EUR collar vs euribor_3m, spot starting.
+#### Interest rate cap floor
+Short 1y collar vs Euribor 3M
 ```json
 {{#include ir_cap_floor.json:5:}}
 ```
-#### IR digital floor
-1-year EUR 100 0% digital floor vs euribor_3m, spot starting.
+#### Interest rate digital floor
+Long EUR 1y 0% digital floor vs Euribor 3M
 ```json
 {{#include ir_digital_floor.json:5:}}
 ```
-#### IR swap
-5-year EUR interest rate swap, forward starting in 5 years.
+#### Interest rate future
+June three-month cash-settled interest rate future.
 ```json
-{{#include ir_swap.json:5:}}
+{{#include ir_future.json:5:}}
+```
+#### Interest rate swap
+Long 10y EUR irs vs Euribor 3M, bullet
+```json
+{{#include interest_rate_swap.json:5:}}
+```
+#### Interest rate swap amortising
+Long 2y EUR irs vs Euribor 6M, amortising annually
+```json
+{{#include interest_rate_swap_amortising.json:5:}}
+```
+#### Interest rate swap collateralised
+Long 10y EUR irs vs Euribor 3M, collateralised
+```json
+{{#include interest_rate_swap_collateralised.json:5:}}
 ```
 #### Swaption
-1-year European payer swaption on a 10-year swap, physical settlement.
+Short USD 1y into 10y payer swaptionwith physical settlement
 ```json
 {{#include swaption.json:5:}}
 ```
 ### Security examples
+#### Bank guarantee issued
+Guarantee of 1000 GBP issued by the bank for a customer
+```json
+{{#include bank_guarantee_issued.json:5:}}
+```
 #### Core equity tier-1 capital
 Core equity tier 1 capital of 1000 GBP
 ```json
@@ -239,6 +274,22 @@ security with isin 'DUMMYISIN123'.
 ```json
 {{#include cash_payable.json:5:}}
 ```
+#### Collateral posted to ccp on non-derivatives
+Non-derivatives IM posted to a CCP (e.g. RepoClear)
+> Security has "purpose" = "collateral" which signals it is not linked to derivative transactions.
+```json
+{{#include security_collateral_posted_ccp_non_deriv.json:5:}}
+```
+#### Initial margin posted
+Bond collateral used as initial margin posted
+```json
+{{#include collateral_initial_margin_bond_posted.json:5:}}
+```
+#### Independent amount received
+Bond collateral used as independent amount received
+```json
+{{#include collateral_independent_amount_bond_received.json:5:}}
+```
 #### Reverse repo
 Reverse repo transaction with a cash leg of 150 GBP, and a security leg of 140
 GBP, starting on June 1st, 2021 and ending on July 1st, 2021. The maturity date
@@ -253,74 +304,14 @@ on the security leg refers to the maturity of the bond posted as collateral.
 ```json
 {{#include repo.json:5:}}
 ```
-#### Bank guarantee issued
-Guarantee of 1000 GBP issued by the bank for a customer
-```json
-{{#include bank_guarantee_issued.json:5:}}
-```
 #### Variation margin cash posted
+Cash collateral used as variation margin posted
 ```json
-{{#include variation_margin_cash_posted.json:5:}}
+{{#include collateral_variation_margin_cash_posted.json:5:}}
 ```
 #### Variation margin cash received
+Cash collateral used as variation margin received
 ```json
-{{#include variation_margin_cash_received.json:5:}}
-```
-#### Variation margin bond posted
-```json
-{{#include variation_margin_bond_posted.json:5:}}
-```
-#### Variation margin bond received
-```json
-{{#include variation_margin_bond_received.json:5:}}
+{{#include collateral_variation_margin_cash_received.json:5:}}
 ```
 ---
-## Test case examples
-### Derivatives with Variation Margin (VM)
-#### Gross receivables with VM received
-> 2 Derivatives: one is receivable at 200 GBP and the other payable at 100 GBP so the overall gross position is +100 GBP.
-
-> 1 Security: 50 GBP cash collateral received as variation margin.
-```json
-{{#include derivative_receivables_with_vm_received.json:5:}}
-```
-> Note the derivatives and the security are linked through the mna_id which matches the agreement id.
-#### Gross receivables with VM posted/given
-> 2 Derivatives: one is payable at 200 GBP and the other receivable at 100 GBP so the overall gross position is -100 GBP.
-
-> 1 Security: 50 GBP cash collateral posted as variation margin.
-```json
-{{#include derivative_payables_with_vm_posted.json:5:}}
-```
-> Note the derivatives and the security are linked through the mna_id which matches the agreement id.
-
-### Derivatives with Initial Margin (IM)
-#### Derivatives facing credit institution
-> Note IM is directly populated on the derivative schema.
-```json
-{{#include derivative_with_im_facing_ci.json:5:}}
-```
-#### Derivatives facing central clearing party (CCP)
-> Note IM is directly populated on the derivative schema.
-```json
-{{#include derivative_with_im_facing_ccp.json:5:}}
-```
-### Non-margined derivatives
-#### In-the-money derivatives
-> 2 Derivatives with positive mtm.
-```json
-{{#include derivative_unmargined_itm.json:5:}}
-```
-> Note the MNA does not have the "credit_support_type" property.
-#### Out-the-money derivatives
-> 2 Derivatives with negative mtm.
-```json
-{{#include derivative_unmargined_otm.json:5:}}
-```
-> Note the MNA does not have the "credit_support_type" property.
-### Non-derivatives IM posted to a CCP (e.g. RepoClear)
-#### Collateral posted to ccp on non-derivatives
-> Security has "purpose" = "collateral" which signals it is not linked to derivative transactions.
-```json
-{{#include security_collateral_posted_ccp_non_deriv.json:5:}}
-```

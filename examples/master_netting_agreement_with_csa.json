@@ -1,8 +1,0 @@
-{
-    "id": "MNA1",
-    "date": "2018-12-31 00:00:00",
-    "start_date": "2017-01-31 00:00:00",
-    "country_code": "GB",
-    "type": "isda",
-    "credit_support_type": "csd_isda_1995"
-}
