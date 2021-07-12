@@ -279,6 +279,8 @@
         "independent_collateral_amount",
         "insurance",
         "investment",
+        "investment_advice",
+        "portfolio_management",
         "non_controlling",
         "other",
         "reference",
