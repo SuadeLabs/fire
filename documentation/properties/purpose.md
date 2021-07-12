@@ -63,6 +63,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │       ├── redundancy_pymt
 │       └── regular_wages
 ├── fx
+├── gtee_scheme_contribution
 ├── interest
 │   ├── int_on_bond_and_frn
 │   ├── int_on_deposit
@@ -96,6 +97,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── release
 ├── reg_loss
 ├── restructuring
+├── res_fund_contribution
 ├── revaluation
 ├── revenue_reserve
 ├── share_plan
@@ -105,6 +107,12 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   └── corporation_tax
 └── write_off
 ```
+
+### gtee_scheme_contribution
+Describes an account representing the **contributions to deposit guarantee schemes** paid by the reporting entity as defined by Annex 5 Part 2.48i of the [ITS on supervisory reporting][its]
+
+### res_fund_contribution
+Describes an account representing the **contributions to resolution funds** paid by the reporting entity as defined by Annex 5 Part 2.48i of the [ITS on supervisory reporting][its]
 
 ### deposit
 The **deposit** enum value refers to a retail deposit defined in accordance with Article 411 of the [CRR][crr]:
@@ -624,3 +632,4 @@ Use this enumeration value to highlight back to back trades defined as "exactly 
 [mlardef]: http://www.bankofengland.co.uk/pra/documents/regulatorydata/mlar/sup_chapter16_annex19bg_20120401.pdf
 [pruval]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:JOL_2016_021_R_0005
 [bis_sa_ccr]: https://www.bis.org/publ/bcbs279.pdf
+[its]: https://www.eba.europa.eu/sites/default/documents/files/document_library/Risk%20Analysis%20and%20Data/Reporting%20Frameworks/Reporting%20framework%203.0/3.0%20phase%202/972659/ITS%20on%20supervisory%20reporting%20-%20corrigendum.zip
