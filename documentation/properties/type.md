@@ -668,8 +668,9 @@ Index securities are reference records recording the details of an index using t
 ├── isa
 ├── money_market
 ├── non_product
-    ├── amortisation
+│   ├── amortisation
 │   ├── deferred
+│   ├── depreciation
 │   ├── expense
 │   ├── income
 │   ├── intangible

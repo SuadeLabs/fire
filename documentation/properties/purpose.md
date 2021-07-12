@@ -26,7 +26,6 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   └── dealing_rev_deriv
 │       └── dealing_rev_deriv_nse
 ├── deposit
-├── depreciation
 ├── dividend
 │   └── div_from_cis
 │   │   └── div_from_money_mkt
@@ -338,9 +337,6 @@ IAS 16(6) defines **property plant and equipment** as:
 > tangible items that:
 (a) are held for use in the production or supply of goods or services, for rental to others, or for administrative purposes; and
 (b) are expected to be used during more than one period.
-
-### depreciation
-An account representing the change in value attributable (over a period) to assets where depreciation must be accounted for.
 
 ### other
 The **other** enum value can be used when it is known that none of the other enum values apply.
