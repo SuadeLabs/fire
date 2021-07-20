@@ -57,7 +57,7 @@ This has the potential to create contradictory data of the nature:
 
 | **security type** | **issuer-type-is-govt** |
 |-------------------|-------------------------|
-| governemnt_bond   | N                       |
+| government_bond   | N                       |
 
 Better would be:
 
