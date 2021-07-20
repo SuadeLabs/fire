@@ -186,7 +186,7 @@
     "interest_repayment_frequency": {
       "description": "Repayment frequency of the interest.",
       "type": "string",
-      "enum": ["daily", "weekly", "bi_weekly", "monthly", "bi_monthly", "quarterly", "semi_annually", "annually", "at_maturity"]
+      "enum": ["daily", "weekly", "bi_weekly", "monthly", "bi_monthly", "quarterly", "semi_annually", "annually", "at_maturity", "biennially", "sesquiennially"]
     },
     "isin_code": {
       "description": "The unique International Securities Identification Number for the security according to ISO 6166.",
@@ -444,6 +444,12 @@
       "description": "The date on which the interest rate of the security will be re-calculated. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
       "format": "date-time"
+    },
+    "risk_profile": {
+      "description": "The evaluation of the financial risk associated to the portfolio",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10
     }
   },
   "required": ["id", "date"],
