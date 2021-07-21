@@ -42,3 +42,5 @@ Valid enums:
 - Semi-annually: once per 6 calendar months
 - Annually: once per calendar year
 - At maturity: upon maturity of the loan product
+- Biennially: once every 2 years
+- Sesquiennially: once every 1 year and a half

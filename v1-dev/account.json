@@ -145,7 +145,7 @@
     "interest_repayment_frequency": {
       "description": "Repayment frequency of the interest.",
       "type": "string",
-      "enum": ["daily", "weekly", "bi_weekly", "monthly", "bi_monthly", "quarterly", "semi_annually", "annually", "at_maturity"]
+      "enum": ["daily", "weekly", "bi_weekly", "monthly", "bi_monthly", "quarterly", "semi_annually", "annually", "at_maturity", "biennially", "sesquiennially"]
     },
     "last_payment_date": {
       "description": "The final payment date for interest payments, often coincides with end_date.",
