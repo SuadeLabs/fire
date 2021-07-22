@@ -1,10 +1,10 @@
 ---
 layout:		property
-title:		"default_fund_ccp"
+title:		"df_ccp"
 schemas:	[customer]
 ---
 
-# default_fund_ccp
+# df_ccp
 
 ---
 
