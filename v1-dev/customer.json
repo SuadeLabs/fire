@@ -47,6 +47,21 @@
       "description": "The status of the relationship with the customer from the firm's point of view.",
       "type": "string",
       "enum": ["established"]
+    },
+    "k_ccp": {
+      "description": "Hypothetical capital of the QCCP in accordance with Article 50c of Regulation (EU) No 648/2012",
+      "type": "integer",
+      "monetary": true
+    },
+    "default_fund_ccp": {
+      "description": "The pre-funded financial resources of the CCP in accordance with Article 50c of Regulation (EU) No 648/2012",
+      "type": "integer",
+      "monetary": true
+    },
+    "default_fund_cm": {
+      "description": "The sum of pre-funded contributions of all clearing members of the QCCP in accordance with Article 50c of Regulation (EU) No 648/2012.",
+      "type": "integer",
+      "monetary": true
     }
   },
   "required": ["id", "date"],
