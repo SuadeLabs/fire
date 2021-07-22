@@ -13,17 +13,32 @@
       "minimum": 0,
       "monetary": true
     },
-    "currency_code": {
-      "description": "Currency in accordance with ISO 4217. It should be consistent with annual_debit_turnover and incurred_cva.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
-    },
     "clearing_threshold": {
       "description": "Status of the clearing threshold as defined in EMIR",
       "type": "string",
       "enum": ["above", "below"]
     },
+    "currency_code": {
+      "description": "Currency in accordance with ISO 4217. It should be consistent with annual_debit_turnover and incurred_cva.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+    },
+    "df_ccp": {
+      "description": "The pre-funded financial resources of the CCP in accordance with Article 50c of Regulation (EU) No 648/2012",
+      "type": "integer",
+      "monetary": true
+    },
+    "df_cm": {
+      "description": "The sum of pre-funded contributions of all clearing members of the QCCP in accordance with Article 50c of Regulation (EU) No 648/2012.",
+      "type": "integer",
+      "monetary": true
+    },
     "incurred_cva": {
       "description": "The amount of credit valuation adjustements being recognised by the institution as an incurred write-down, calculated without taking into account any offsetting debit value adjustment attributed to the firm's own credit risk, that has been already excluded from own funds.",
+      "type": "integer",
+      "monetary": true
+    },
+    "k_ccp": {
+      "description": "Hypothetical capital of the QCCP in accordance with Article 50c of Regulation (EU) No 648/2012",
       "type": "integer",
       "monetary": true
     },
@@ -47,21 +62,6 @@
       "description": "The status of the relationship with the customer from the firm's point of view.",
       "type": "string",
       "enum": ["established"]
-    },
-    "k_ccp": {
-      "description": "Hypothetical capital of the QCCP in accordance with Article 50c of Regulation (EU) No 648/2012",
-      "type": "integer",
-      "monetary": true
-    },
-    "default_fund_ccp": {
-      "description": "The pre-funded financial resources of the CCP in accordance with Article 50c of Regulation (EU) No 648/2012",
-      "type": "integer",
-      "monetary": true
-    },
-    "default_fund_cm": {
-      "description": "The sum of pre-funded contributions of all clearing members of the QCCP in accordance with Article 50c of Regulation (EU) No 648/2012.",
-      "type": "integer",
-      "monetary": true
     }
   },
   "required": ["id", "date"],
