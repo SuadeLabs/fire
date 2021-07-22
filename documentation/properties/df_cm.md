@@ -1,10 +1,10 @@
 ---
 layout:		property
-title:		"default_fund_cm"
+title:		"df_cm"
 schemas:	[customer]
 ---
 
-# default_fund_cm
+# df_cm
 
 ---
 
