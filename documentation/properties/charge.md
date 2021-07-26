@@ -1,13 +1,18 @@
 ---
 layout:		property
 title:		"charge"
-schemas:	["loan"]
+schemas:	[collateral]
 ---
-
 # charge
 
 ---
 
-The **charge** indicates the lender's charge or lien-level over the collateral. It is an integer with the minimum value being 0. 
+The **charge** property indicates the charge that the lender has on the collateral of the loan. To avoid an open-ended enum value, we use integers to represent the order of charge:
 
-1 indicates first charge, 2 second and so on. 0 indicates a combination of charge levels.
+* 0 = mixed/combination of charge levels
+* 1 = first charge
+* 2 = second charge
+* 3 = third charge
+* ... and so on
+
+The absence of the **charge** property indicates that the lender has no charge on the collateral and/or that the loan is unsecured.

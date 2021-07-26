@@ -132,35 +132,96 @@ class TestSchemas(unittest.TestCase):
             "snp_st",
             "fitch_st",
             "fitch_lt"
-
-
         ]
         for schema_name in SCHEMA_FILES:
-            print "=====", schema_name
             enums = schema_enum_registry(schema_name)
             for enum in enums:
                 if enum in exceptions:
                     continue
-                print(enum)
-                print(sorted([str(e) for e in enums[enum]]))
+                # print(sorted([str(e) for e in enums[enum]]))
                 self.assertEqual(enums[enum], sorted(enums[enum]))
 
     def test_property_has_docs(self):
-        """TODO: add documentation for adjustment schema"""
-        properties = all_properties()
+        """
+        Ensure there are docs for every new attribute
 
+        TODO: add docs and remove legacy exceptions
+        """
+        exceptions = [
+            "account_ids",
+            "accrued_interest_balance",
+            "behavioral_curve_id",
+            "cb_haircut",
+            "ccf",
+            "col",
+            "comment",
+            "contribution_amount",
+            "contribution_text",
+            "customers",
+            "data",
+            "delta",
+            "derivative_id",
+            "encumbrance_end_date",
+            "facility_currency_code",
+            "forward_rate",
+            "gamma",
+            "guarantor_id",
+            "insolvency_rank",
+            "interest_repayment_frequency",
+            "intra_group",
+            "issuer_id",
+            "ledger_code",
+            "leg",
+            "legal_entity_name",
+            "links",
+            "loan_id",
+            "loan_ids",
+            "national_reporting_code",
+            "next_exercise_date",
+            "next_payment_amount",
+            "next_receive_amount",
+            "next_receive_date",
+            "next_repricing_date",
+            "next_reset_date",
+            "page",
+            "payment_date",
+            "provision_type",
+            "report_type",
+            "reporting_relationship",
+            "reset_date",
+            "rho",
+            "risk_weight_irb",
+            "risk_weight_std",
+            "row",
+            "seniority",
+            "settlement_type",
+            "stay_protocol",
+            "theta",
+            "underlying_derivative_id",
+            "underlying_issuer_id",
+            "underlying_price",
+            "underlying_security_id",
+            "underlying_strike",
+            "values",
+            "vega",
+            "vol_adj",
+            "vol_adj_fx"
+        ]
+
+        properties = all_properties()
         self.assertTrue(properties)
 
         no_docs = []
         for p in properties:
-            if p not in DOC_NAMES:
+            if p not in DOC_NAMES + exceptions:
                 no_docs.append(p)
 
-        print("No documenation found for properties: {}".format(no_docs))
-        # TODO: Add docs!
-        # self.assertFalse(
-        #     no_docs,
-        #     "No documenation found for properties: {}".format(no_docs)
-        # )
-        # for doc in DOC_NAMES:
-        #     self.assertIn(doc, properties)
+        self.assertFalse(
+            no_docs,
+            "No documenation found for properties: {}".format(no_docs)
+        )
+        for doc in DOC_NAMES:
+            self.assertTrue(
+                doc in properties,
+                "No property found for documenation: {}".format(doc)
+            )
