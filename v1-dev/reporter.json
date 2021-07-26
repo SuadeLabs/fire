@@ -12,7 +12,15 @@
         "relationship": {
             "description": "Relationship to parent.",
             "type": "string",
-            "enum": ["jv", "branch", "subsidiary", "parent", "head_office", "parent_subsidiary", "parent_branch"]
+            "enum": [
+              "branch",
+              "head_office",
+              "jv",
+              "parent",
+              "parent_branch",
+              "parent_subsidiary",
+              "subsidiary"
+            ]
         }
     }
 }

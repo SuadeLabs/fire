@@ -4,23 +4,6 @@
   "description": "Data schema to define collateral (currently can reference loans or accounts).",
   "type": "object",
   "properties": {
-    "id": {
-      "description": "The unique identifier for the collateral within the financial institution.",
-      "type": "string"
-    },
-    "date": {
-      "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
-      "type": "string",
-      "format": "date-time"
-    },
-    "loan_ids": {
-      "description": "The unique identifiers for the loans within the financial institution.",
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "type": "string"
-      }
-    },
     "account_ids": {
       "description": "The unique identifier/s for the account/s within the financial institution.",
       "type": "array",
@@ -37,6 +20,11 @@
     "currency_code": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
     },
+    "date": {
+      "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
+      "type": "string",
+      "format": "date-time"
+    },
     "encumbrance_amount": {
       "description": "The amount of the collateral that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
@@ -46,12 +34,31 @@
     "encumbrance_type": {
       "description": "The type of the encumbrance causing the encumbrance_amount.",
       "type": "string",
-      "enum": ["repo", "covered_bond", "derivative", "real_estate", "none", "other"]
+      "enum": [
+        "covered_bond",
+        "derivative",
+        "none",
+        "other",
+        "real_estate",
+        "repo"
+      ]
     },
     "end_date": {
       "description": "The end date for recognition of the collateral",
       "type": "string",
       "format": "date-time"
+    },
+    "id": {
+      "description": "The unique identifier for the collateral within the financial institution.",
+      "type": "string"
+    },
+    "loan_ids": {
+      "description": "The unique identifiers for the loans within the financial institution.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
     },
     "regulatory_book": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/regulatory_book"
@@ -68,8 +75,18 @@
     "type": {
       "description": "The collateral type defines the form of the collateral provided",
       "type": "string",
-      "enum": ["residential_property", "commercial_property", "guarantee", "debenture", "life_policy", "cash", "other", "immovable_property",
-      "farm", "multifamily"]
+      "enum": [
+        "cash",
+        "commercial_property",
+        "debenture",
+        "farm",
+        "guarantee",
+        "immovable_property",
+        "life_policy",
+        "multifamily",
+        "other",
+        "residential_property"
+      ]
     },
     "value": {
       "description": "The valuation as used by the bank for the collateral on the value_date. Monetary type represented as a naturally positive integer number of cents/pence.",

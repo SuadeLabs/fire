@@ -4,15 +4,6 @@
   "description": "A derivative cash flow where two parties exchange cash flows (or assets) derived from an underlying reference index, security or financial instrument.",
   "type": "object",
   "properties": {
-    "id": {
-      "description": "The unique identifier for the derivative within the financial institution.",
-      "type": "string"
-    },
-    "date": {
-      "description": "The observation or effective date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
-      "type": "string",
-      "format": "date-time"
-    },
     "accrued_interest": {
       "description": "The accrued interest/premium due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
@@ -22,8 +13,8 @@
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/asset_class"
     },
     "asset_liability": {
-        "description": "A derivative cash flow exchange that results in a net positive value after the transaction is an asset on the firm's balance sheet. A derivative cash flow exchange that results in a net negative value after the transaction is a liability on the firm's balance sheet.",
-        "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/asset_liability"
+      "description": "A derivative cash flow exchange that results in a net positive value after the transaction is an asset on the firm's balance sheet. A derivative cash flow exchange that results in a net negative value after the transaction is a liability on the firm's balance sheet.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/asset_liability"
     },
     "balance": {
       "description": "The contractual balance due on the payment date in the currency given. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -42,6 +33,11 @@
       "description": "Counterparty to the cash flow",
       "type": "string"
     },
+    "date": {
+      "description": "The observation or effective date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
     "derivative_id": {
       "description": "Unique identifier to the derivative to which this cash flow relates",
       "type": "string"
@@ -49,6 +45,10 @@
     "forward_rate": {
       "description": "Rate used to set a variable cash flow on the reset_date",
       "type": "number"
+    },
+    "id": {
+      "description": "The unique identifier for the derivative within the financial institution.",
+      "type": "string"
     },
     "leg": {
       "description": "The type of the payment leg.",
@@ -90,7 +90,11 @@
     "purpose": {
       "description": "The purpose for which the derivative cash flow is calculated",
       "type": "string",
-      "enum": ["reference", "principal", "interest"]
+      "enum": [
+        "interest",
+        "principal",
+        "reference"
+      ]
     },
     "regulatory_book": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/regulatory_book"

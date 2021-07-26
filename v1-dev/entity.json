@@ -4,15 +4,6 @@
   "description": "Data schema to define a person or legal entity.",
   "type": "object",
   "properties": {
-    "id": {
-      "description": "The unique identifier for the person or legal entity within the financial institution.",
-      "type": "string"
-    },
-    "date": {
-      "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
-      "type": "string",
-      "format": "date-time"
-    },
     "address_city": {
       "description": "City, town or village.",
       "type": "string"
@@ -34,9 +25,11 @@
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code",
       "description": "The person or entity country of residence. Two-letter country code as defined according to ISO 3166-1."
     },
-    "credit_impaired": {
-      "description": "Flag to determine if the entity credit quality is impaired.",
-      "type": "boolean"
+    "cqs_irb": {
+      "description": "The credit quality step for internal ratings based approach.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12
     },
     "cqs_standardised": {
       "description": "The credit quality step for standardised approach.",
@@ -44,35 +37,42 @@
       "minimum": 1,
       "maximum": 6
     },
-    "cqs_irb": {
-      "description": "The credit quality step for internal ratings based approach.",
-      "type": "integer",
-      "minimum": 1,
-      "maximum": 12
+    "credit_impaired": {
+      "description": "Flag to determine if the entity credit quality is impaired.",
+      "type": "boolean"
+    },
+    "date": {
+      "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
     },
     "fitch_lt": {
-        "description": "Fitch long term credit ratings",
-        "type":"string",
-        "enum": ["aaa", "aa_plus", "aa", "aa_minus", "a_plus", "a", "a_minus", "bbb_plus", "bbb", "bbb_minus", "bb_plus", "bb", "bb_minus", "b_plus", "b", "b_minus", "ccc_plus", "ccc", "ccc_minus", "cc", "c", "rd", "d"]
+      "description": "Fitch long term credit ratings",
+      "type":"string",
+      "enum": ["aaa", "aa_plus", "aa", "aa_minus", "a_plus", "a", "a_minus", "bbb_plus", "bbb", "bbb_minus", "bb_plus", "bb", "bb_minus", "b_plus", "b", "b_minus", "ccc_plus", "ccc", "ccc_minus", "cc", "c", "rd", "d"]
     },
     "fitch_st": {
-        "description": "Fitch short term credit ratings",
+      "description": "Fitch short term credit ratings",
         "type":"string",
         "enum": ["f1_plus", "f1", "f2", "f3", "b", "c", "rd", "d"]
+      },
+    "id": {
+      "description": "The unique identifier for the person or legal entity within the financial institution.",
+      "type": "string"
     },
     "intra_group": {
       "description": "Flag to indicate that this should be considered an intra-group entity.",
       "type": "boolean"
+    },
+    "legal_entity_name": {
+      "description": "The official legal name of the entity.",
+      "type": "string"
     },
     "lei_code": {
       "description": "The LEI code for the legal entity (for corporates).",
       "type": "string",
       "minLength": 20,
       "maxLength": 20
-    },
-    "legal_entity_name": {
-      "description": "The official legal name of the entity.",
-      "type": "string"
     },
     "moodys_lt": {
         "description": "Moody's long term credit ratings",
@@ -88,6 +88,10 @@
       "description": "The name of the person or legal entity to be used for display and reference purposes.",
       "type": "string"
     },
+    "national_reporting_code":{
+      "description": "Unique identifier established by the national reporting system",
+      "type": "string"
+    },
     "parent_id": {
       "description": "The unique identifier for the ultimate parent of the person or legal entity.",
       "type": "string"
@@ -95,12 +99,16 @@
     "relationship":{
       "description": "Relationship to parent.",
       "type": "string",
-      "enum": ["jv", "branch", "subsidiary", "parent", "head_office", "parent_subsidiary", "parent_branch"]
+      "enum": ["branch", "head_office", "jv", "parent", "parent_branch", "parent_subsidiary", "subsidiary"]
     },
     "reporting_relationship":{
       "description": "Relationship to reporting entity. See: relationship.",
       "type": "string",
-      "enum": ["jv", "branch", "subsidiary", "parent", "head_office", "parent_subsidiary", "parent_branch"]
+      "enum": ["branch", "head_office", "jv", "parent", "parent_branch", "parent_subsidiary", "subsidiary"]
+    },
+    "risk_country_code": {
+      "description": "Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
     },
     "risk_group_id":{
       "description": "The unique identifier for the group representing a single risk entity where no relationship of control exists",
@@ -110,35 +118,31 @@
       "description": "The secondary identifier for the secondary group representing a single risk entity where no relationship of control exists",
       "type": "string"
     },
-    "risk_country_code": {
-      "description": "Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
-    },
     "sic_code": {
       "description": "The UK SIC 2007 standard industry and sector classification.",
       "type": "integer",
       "minimum": 0,
       "maximum": 99999
     },
+    "snp_lt": {
+      "description": "S&P long term credit ratings",
+      "type":"string",
+      "enum": ["aaa", "aa_plus", "aa", "aa_minus", "a_plus", "a", "a_minus", "bbb_plus", "bbb", "bbb_minus", "bb_plus", "bb", "bb_minus", "b_plus", "b", "b_minus", "ccc_plus", "ccc", "ccc_minus", "cc", "c", "d"]
+    },
+    "snp_st": {
+      "description": "S&P short term credit ratings",
+      "type":"string",
+      "enum": ["a1", "a2", "a3", "b", "c", "d"]
+    },
+    "source": {
+      "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
+      "type": "string"
+    },
     "ssic_code": {
       "description": "The Singaporean standard industry and sector classification.",
       "type": "integer",
       "minimum": 0,
       "maximum": 99999
-    },
-    "snp_lt": {
-        "description": "S&P long term credit ratings",
-        "type":"string",
-        "enum": ["aaa", "aa_plus", "aa", "aa_minus", "a_plus", "a", "a_minus", "bbb_plus", "bbb", "bbb_minus", "bb_plus", "bb", "bb_minus", "b_plus", "b", "b_minus", "ccc_plus", "ccc", "ccc_minus", "cc", "c", "d"]
-    },
-    "snp_st": {
-        "description": "S&P short term credit ratings",
-        "type":"string",
-        "enum": ["a1", "a2", "a3", "b", "c", "d"]
-    },
-    "source": {
-      "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
-      "type": "string"
     },
     "type": {
       "description": "The designated financial or legal entity category this person or legal entity falls under",
@@ -188,10 +192,6 @@
     },
     "version_id": {
       "description": "The version identifier of the data such as the firm's internal batch identifier.",
-      "type": "string"
-    },
-    "national_reporting_code":{
-      "description": "Unique identifier established by the national reporting system",
       "type": "string"
     }
   },

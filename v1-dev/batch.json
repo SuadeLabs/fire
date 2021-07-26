@@ -4,10 +4,6 @@
   "description": "FIRE schema for representing bulk collections of bank objects.",
   "type": "object",
   "properties": {
-    "name": {
-      "description": "A unique identifier for the data batch",
-      "type": "string"
-    },
     "count": {
       "description": "Number of records in this batch",
       "type": "integer",
@@ -51,7 +47,11 @@
         },
         "required": ["rel", "href"]
       }
+    },
+    "name": {
+      "description": "A unique identifier for the data batch",
+      "type": "string"
     }
   },
-  "required": ["name", "data"]
+  "required": ["data", "name"]
 }

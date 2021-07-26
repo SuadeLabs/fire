@@ -4,15 +4,6 @@
   "description": "A Loan Transaction is an event that has an impact on a loan, typically the balance.",
   "type": "object",
   "properties": {
-    "id": {
-      "description": "The unique identifier for the loan transaction within the financial institution.",
-      "type": "string"
-    },
-    "date": {
-      "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
-      "type": "string",
-      "format": "date-time"
-    },
     "amount": {
       "description": "The size of the transaction in the loan transaction event. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
@@ -20,6 +11,15 @@
     },
     "currency_code": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+    },
+    "date": {
+      "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "id": {
+      "description": "The unique identifier for the loan transaction within the financial institution.",
+      "type": "string"
     },
     "loan_id": {
       "description": "The unique identifier for the affected loan/s within the financial institution.",
@@ -33,9 +33,17 @@
       "description": "The type of impact on the balance of the loan.",
       "type": "string",
       "enum": [
-        "advance", "further_advance", "interest", "interest_repayment",
-        "capitalisation", "capital_repayment", "sale", "write_off",
-        "due", "received", "other"
+        "advance",
+        "capital_repayment",
+        "capitalisation",
+        "due",
+        "further_advance",
+        "interest",
+        "interest_repayment",
+        "other",
+        "received",
+        "sale",
+        "write_off"
       ]
     },
     "value_date": {

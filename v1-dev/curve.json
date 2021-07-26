@@ -4,18 +4,18 @@
   "description": "A Curve represents a series of points on a plot. Typically, interest rates, volatility or forward prices.",
   "type": "object",
   "properties": {
-    "id": {
-      "description": "The unique identifier for the curve.",
-      "type": "string"
+    "currency_code": {
+      "description": "The currency reference code in accordance with ISO 4217 standards.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
     },
     "date": {
       "description": "The observation date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
       "format": "date-time"
     },
-    "currency_code": {
-      "description": "The currency reference code in accordance with ISO 4217 standards.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+    "id": {
+      "description": "The unique identifier for the curve.",
+      "type": "string"
     },
     "name": {
       "description": "The internal name of the curve.",
@@ -24,6 +24,15 @@
     "source": {
       "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
       "type": "string"
+    },
+    "type": {
+      "description": "The curve type.",
+      "type": "string",
+      "enum": [
+        "behavioral",
+        "rate",
+        "volatility"
+      ]
     },
     "values": {
       "description": "The list of values for this curve.",
@@ -61,11 +70,6 @@
     "version_id": {
       "description": "The version identifier of the data such as the firm's internal batch identifier.",
       "type": "string"
-    },
-    "type": {
-      "description": "The curve type.",
-      "type": "string",
-      "enum": ["rate", "volatility", "behavioral"]
     }
   },
   "required": ["id", "date", "values"],

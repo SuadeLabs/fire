@@ -2,6 +2,7 @@ import json
 import os
 import re
 import unittest
+from collections import OrderedDict
 from . import (
     DOC_NAMES,
     EXAMPLES_DIR,
@@ -98,6 +99,51 @@ class TestSchemas(unittest.TestCase):
                             len(v), 22,
                             len_error(schema, enum, v, len(v))
                         )
+
+    def test_schema_properties_are_alphabetical(self):
+        """
+        JSON may not care about order, but we do. For the schemas to be
+        human readable, it helps when properties are in alphabetical order.
+        """
+        for schema_name in SCHEMA_FILES:
+            with open(os.path.join(SCHEMAS_DIR, schema_name)) as json_schema:
+                schema = json.load(json_schema, object_pairs_hook=OrderedDict)  # noqa
+                if "properties" in schema:
+                    properties = schema["properties"].keys()
+                else:
+                    properties = schema.keys()
+
+                self.assertEqual(properties, sorted(properties))
+
+    def test_schema_enums_are_alphabetical(self):
+        """
+        Oh yeah, Enums, too.
+
+        Except if the order has a mathematical relationship (eg. frequencies)
+        """
+        exceptions = [
+            "underlying_index_tenor",
+            "margin_frequency",
+            "repayment_frequency",
+            "interest_repayment_frequency",
+            "moodys_lt",
+            "moodys_st",
+            "snp_lt",
+            "snp_st",
+            "fitch_st",
+            "fitch_lt"
+
+
+        ]
+        for schema_name in SCHEMA_FILES:
+            print "=====", schema_name
+            enums = schema_enum_registry(schema_name)
+            for enum in enums:
+                if enum in exceptions:
+                    continue
+                print(enum)
+                print(sorted([str(e) for e in enums[enum]]))
+                self.assertEqual(enums[enum], sorted(enums[enum]))
 
     def test_property_has_docs(self):
         """TODO: add documentation for adjustment schema"""

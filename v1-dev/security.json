@@ -5,15 +5,6 @@
   "description": "A security represents a tradable financial instrument held or financed by an institution for investment or collateral.",
   "type": "object",
   "properties": {
-    "id": {
-      "description": "The unique identifier for the security within the financial institution.",
-      "type": "string"
-    },
-    "date": {
-      "description": "The observation or effective date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
-      "type": "string",
-      "format": "date-time"
-    },
     "acc_fv_change_before_taxes": {
       "description": "Accumulated change in fair value before taxes.",
       "type": "integer",
@@ -25,7 +16,7 @@
       "monetary": true
     },
     "accounting_treatment":{
-       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/accounting_treatment"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/accounting_treatment"
     },
     "accrued_interest": {
       "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as an integer number of cents/pence.",
@@ -35,22 +26,7 @@
     "asset_liability": {
         "description": "Is the security (valued at either amortised cost or fair value) an asset or a liability on the firm's balance sheet.",
         "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/asset_liability"
-    },
-    "capital_tier": {
-      "description": "The capital tiers based on own funds requirements.",
-      "type": "string",
-      "enum": ["tier_1", "ce_tier_1", "add_tier_1", "tier_2", "cet1_grandfathered" , "at1_grandfathered" , "t2_grandfathered" ,"anc_tier_2", "bas_tier_2", "tier_3", "anc_tier_3", "bas_tier_3"]
-    },
-    "cb_haircut": {
-      "description": "The haircut as determined by the firm's central bank",
-      "type": "number",
-      "minimum": 0.0,
-      "maximum": 1.0
-    },
-    "cost_center_code": {
-      "description": "The organizational unit or sub-unit to which costs/profits are booked.",
-      "type": "string"
-    },
+      },
     "balance": {
       "description": "Outstanding amount including accrued interest. Monetary integer number of cents/pence.",
       "type": "integer",
@@ -59,7 +35,11 @@
     "base_rate": {
       "description": "The base rate represents the basis of the rate on the balance at the given date as agreed in the terms of the financial product.",
       "type": "string",
-      "enum": ["ZERO", "UKBRBASE", "FDTR"]
+      "enum": [
+        "FDTR",
+        "UKBRBASE",
+        "ZERO"
+      ]
     },
     "break_dates": {
       "description": "Dates where this contract can be broken (by either party). Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
@@ -79,21 +59,49 @@
         "format": "date-time"
       }
     },
+    "capital_tier": {
+      "description": "The capital tiers based on own funds requirements.",
+      "type": "string",
+      "enum": [
+        "add_tier_1",
+        "anc_tier_2",
+        "anc_tier_3",
+        "at1_grandfathered",
+        "bas_tier_2",
+        "bas_tier_3",
+        "ce_tier_1",
+        "cet1_grandfathered",
+        "t2_grandfathered",
+        "tier_1",
+        "tier_2",
+        "tier_3"
+      ]
+    },
+    "cb_haircut": {
+      "description": "The haircut as determined by the firm's central bank",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "cost_center_code": {
+      "description": "The organizational unit or sub-unit to which costs/profits are booked.",
+      "type": "string"
+    },
     "country_code": {
       "description": "Two-letter country code for security location/jurisdiction. In accordance with ISO 3166-1.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
-    },
-    "cqs_standardised": {
-      "description": "The credit quality step for standardised approach.",
-      "type": "integer",
-      "minimum": 1,
-      "maximum": 6
     },
     "cqs_irb": {
       "description": "The credit quality step for internal ratings based approach.",
       "type": "integer",
       "minimum": 1,
       "maximum": 12
+    },
+    "cqs_standardised": {
+      "description": "The credit quality step for standardised approach.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 6
     },
     "csa_id": {
       "description": "The unique identifier of the credit support annex this security falls under. Typically where used as derivatives collateral.",
@@ -106,6 +114,11 @@
     "customer_id": {
       "description": "The unique identifier used by the financial institution to identify the customer for this product.",
       "type": "string"
+    },
+    "date": {
+      "description": "The observation or effective date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
     },
     "deal_id": {
       "description": "The unique identifier used by the financial institution to identify the deal for this product that links it to other products of the same or different type.",
@@ -122,14 +135,29 @@
       "type": "string",
       "format": "date-time"
     },
+    "first_payment_date": {
+      "description": "The first payment date for interest payments.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "fitch_lt": {
+        "description": "Fitch long term credit ratings",
+        "type":"string",
+        "enum": ["aaa", "aa_plus", "aa", "aa_minus", "a_plus", "a", "a_minus", "bbb_plus", "bbb", "bbb_minus", "bb_plus", "bb", "bb_minus", "b_plus", "b", "b_minus", "ccc_plus", "ccc", "ccc_minus", "cc", "c", "rd", "d"]
+    },
+    "fitch_st": {
+        "description": "Fitch short term credit ratings",
+        "type":"string",
+        "enum": ["f1_plus", "f1", "f2", "f3", "b", "c", "rd", "d"]
+    },
     "fvh_level": {
       "description": "Fair value hierarchy category according to IFRS 13.93 (b)",
       "type": "integer",
       "minimum": 1,
       "maximum": 3
     },
-    "first_payment_date": {
-      "description": "The first payment date for interest payments.",
+    "guarantee_start_date": {
+      "description": "The first day the security became guaranteed by the guarantor. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
       "type": "string",
       "format": "date-time"
     },
@@ -137,15 +165,14 @@
       "description": "The unique identifier for the guarantor within the financial institution.",
       "type": "string"
     },
-    "guarantee_start_date": {
-      "description": "The first day the security became guaranteed by the guarantor. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
-      "type": "string",
-      "format": "date-time"
-    },
     "hqla_class": {
       "description": "What is the HQLA classification of this security?",
       "type": "string",
-      "enum": ["i", "i_non_op", "iia", "iia_non_op", "iib", "iib_non_op", "ineligible", "exclude"]
+      "enum": ["exclude", "i", "i_non_op", "iia", "iia_non_op", "iib", "iib_non_op", "ineligible"]
+    },
+    "id": {
+      "description": "The unique identifier for the security within the financial institution.",
+      "type": "string"
     },
     "impairment_amount": {
       "description": "The impairment amount for a security is the allowance set aside by the firm for losses.",
@@ -155,11 +182,6 @@
     },
     "impairment_status": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/impairment_status"
-    },
-    "insolvency_rank": {
-      "description": "The insolvency ranking as per the national legal fraamework of the reporting institution.",
-      "type": "integer",
-      "minimum": 1
     },
     "index_composition": {
       "description": "Constituents and their proportion in an index.",
@@ -183,6 +205,11 @@
         "required": ["reference_id", "weight"]
       }
     },
+    "insolvency_rank": {
+      "description": "The insolvency ranking as per the national legal fraamework of the reporting institution.",
+      "type": "integer",
+      "minimum": 1
+    },
     "interest_repayment_frequency": {
       "description": "Repayment frequency of the interest.",
       "type": "string",
@@ -194,19 +221,19 @@
       "minLength": 12,
       "maxLength": 12
     },
-    "issuer_id": {
-      "description": "The unique identifier for the issuer within the financial institution.",
-      "type": "string"
+    "issue_date":{
+      "description": "The date on which the security is issued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
     },
     "issue_size":{
       "description": "The size of the issue denominated in the original currency of the security",
       "type": "integer",
       "monetary": true
     },
-    "issue_date":{
-      "description": "The date on which the security is issued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
-      "type": "string",
-      "format": "date-time"
+    "issuer_id": {
+      "description": "The unique identifier for the issuer within the financial institution.",
+      "type": "string"
     },
     "last_payment_date": {
       "description": "The final payment date for interest payments, often coincides with end_date or the maturity date",
@@ -229,10 +256,20 @@
       "description": "The unique identifier of the Master Netting Agreement this security falls under. Typically where used as derivatives collateral.",
       "type": "string"
     },
+    "moodys_lt": {
+        "description": "Moody's long term credit ratings",
+        "type":"string",
+        "enum": ["aaa", "aa1", "aa2", "aa3", "a1", "a2", "a3", "baa1", "baa2", "baa3", "ba1", "ba2", "ba3", "b1", "b2", "b3", "caa1", "caa2", "caa3", "ca", "c"]
+    },
+    "moodys_st": {
+        "description": "Moodys short term credit ratings",
+        "type":"string",
+        "enum": ["p1", "p2", "p3", "np"]
+    },
     "movement": {
       "description": "The movement parameter describes how the security arrived to the firm.",
       "type": "string",
-      "enum": ["cash", "asset", "issuance", "debt_issue", "cb_omo", "other"]
+      "enum": ["asset", "cash", "cb_omo", "debt_issue", "issuance", "other"]
     },
     "mtm_clean": {
       "description": "The mark-to-market value of the security excluding interest. Monetary number of cents/pence.",
@@ -246,6 +283,11 @@
     },
     "next_payment_date": {
       "description": "The next date at which interest will be paid or accrued_interest balance returned to zero.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "next_repricing_date": {
+      "description": "The date on which the interest rate of the security will be re-calculated. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
       "format": "date-time"
     },
@@ -275,19 +317,19 @@
         "back_to_back",
         "collateral",
         "custody",
+        "default_fund",
         "derivative_collateral",
         "independent_collateral_amount",
         "insurance",
         "investment",
         "investment_advice",
-        "portfolio_management",
         "non_controlling",
         "other",
+        "portfolio_management",
         "reference",
         "share_capital",
-        "trade_finance",
-        "default_fund"
-     ]
+        "trade_finance"
+      ]
     },
     "rate": {
       "description": "The full interest rate applied to the security notional in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).",
@@ -312,6 +354,12 @@
       "description": "Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
     },
+    "risk_profile": {
+      "description": "The evaluation of the financial risk associated to the portfolio",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10
+    },
     "seniority": {
       "description": "The seniority of the security in the event of sale or bankruptcy of the issuer.",
       "type": "string",
@@ -320,28 +368,17 @@
     "sft_type": {
       "description": "The sft_type parameter defines the transaction mechanism conducted for the SFT for this security product.",
       "type": "string",
-      "enum": ["repo", "rev_repo", "sell_buy_back", "buy_sell_back", "bond_loan", "bond_borrow",
-               "stock_loan", "stock_borrow", "margin_loan"]
-    },
-    "fitch_lt": {
-        "description": "Fitch long term credit ratings",
-        "type":"string",
-        "enum": ["aaa", "aa_plus", "aa", "aa_minus", "a_plus", "a", "a_minus", "bbb_plus", "bbb", "bbb_minus", "bb_plus", "bb", "bb_minus", "b_plus", "b", "b_minus", "ccc_plus", "ccc", "ccc_minus", "cc", "c", "rd", "d"]
-    },
-    "fitch_st": {
-        "description": "Fitch short term credit ratings",
-        "type":"string",
-        "enum": ["f1_plus", "f1", "f2", "f3", "b", "c", "rd", "d"]
-    },
-    "moodys_lt": {
-        "description": "Moody's long term credit ratings",
-        "type":"string",
-        "enum": ["aaa", "aa1", "aa2", "aa3", "a1", "a2", "a3", "baa1", "baa2", "baa3", "ba1", "ba2", "ba3", "b1", "b2", "b3", "caa1", "caa2", "caa3", "ca", "c"]
-    },
-    "moodys_st": {
-        "description": "Moodys short term credit ratings",
-        "type":"string",
-        "enum": ["p1", "p2", "p3", "np"]
+      "enum": [
+        "bond_borrow",
+        "bond_loan",
+        "buy_sell_back",
+        "margin_loan",
+        "repo",
+        "rev_repo",
+        "sell_buy_back",
+        "stock_borrow",
+        "stock_loan"
+      ]
     },
     "snp_lt": {
         "description": "S&P long term credit ratings",
@@ -365,12 +402,21 @@
     "status": {
       "description": "Provides additional information regarding the status of the security.",
       "type": "string",
-      "enum": ["paid_up", "called_up", "bankruptcy_remote", "non_operational"]
+      "enum": ["bankruptcy_remote", "called_up", "non_operational", "paid_up"]
     },
     "stress_change":{
       "description": "The level of variation on the security's price or haircut or during a 30 day calendar market stress period in percentage terms",
       "type": "number",
       "minimum": 0.0
+    },
+    "trade_date": {
+      "description": "The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "transferable": {
+      "description": "Can the security be transferred between parties or negotiated on the capital market?",
+      "type": "boolean"
     },
     "type": {
       "description": "This is the type of the security with regards to common regulatory classifications.",
@@ -400,8 +446,8 @@
         "financial_sloc",
         "frn",
         "guarantee",
-        "index_linked",
         "index",
+        "index_linked",
         "letter_of_credit",
         "mbs",
         "mtn",
@@ -422,15 +468,6 @@
         "warranty"
       ]
     },
-    "trade_date": {
-      "description": "The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
-      "type": "string",
-      "format": "date-time"
-    },
-    "transferable": {
-      "description": "Can the security be transferred between parties or negotiated on the capital market?",
-      "type": "boolean"
-    },
     "value_date": {
       "description": "The timestamp that the trade or financial product was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
@@ -439,17 +476,6 @@
     "version_id": {
       "description": "The version identifier of the data such as the firm's internal batch identifier.",
       "type": "string"
-    },
-    "next_repricing_date": {
-      "description": "The date on which the interest rate of the security will be re-calculated. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
-      "type": "string",
-      "format": "date-time"
-    },
-    "risk_profile": {
-      "description": "The evaluation of the financial risk associated to the portfolio",
-      "type": "integer",
-      "minimum": 1,
-      "maximum": 10
     }
   },
   "required": ["id", "date"],

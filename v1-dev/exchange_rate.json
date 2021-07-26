@@ -4,18 +4,18 @@
   "description": "An Exchange Rate represents the conversion rate between two currencies.",
   "type": "object",
   "properties": {
-    "id": {
-      "description": "The unique identifier for the exchange rate within the financial institution.",
-      "type": "string"
+    "base_currency_code": {
+      "description": "The base currency in accordance with ISO 4217 standards.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
     },
     "date": {
       "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
       "format": "date-time"
     },
-    "base_currency_code": {
-      "description": "The base currency in accordance with ISO 4217 standards.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+    "id": {
+      "description": "The unique identifier for the exchange rate within the financial institution.",
+      "type": "string"
     },
     "quote": {
       "description": "The amount of the quote currency received in exchange for 1 unit of the base currency.",
