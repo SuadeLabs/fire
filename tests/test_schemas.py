@@ -113,7 +113,7 @@ class TestSchemas(unittest.TestCase):
                 else:
                     properties = schema.keys()
 
-                self.assertEqual(properties, sorted(properties))
+                self.assertEqual(list(properties), sorted(properties))
 
     def test_schema_enums_are_alphabetical(self):
         """
