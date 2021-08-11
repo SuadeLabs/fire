@@ -105,7 +105,6 @@ class TestSchemas(unittest.TestCase):
         JSON may not care about order, but we do. For the schemas to be
         human readable, it helps when properties are in alphabetical order.
         """
-        exceptions = ["id", "date"]
         for schema_name in SCHEMA_FILES:
             with open(os.path.join(SCHEMAS_DIR, schema_name)) as json_schema:
                 schema = json.load(json_schema, object_pairs_hook=OrderedDict)  # noqa
