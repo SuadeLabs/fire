@@ -4,6 +4,15 @@
   "description": "An adjustment represents a modification to a report.",
   "type": "object",
   "properties": {
+    "id": {
+      "description": "The unique identifier for the record within the firm.",
+      "type": "string"
+    },
+    "date": {
+      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
     "col": {
       "description": "The column of the report that this adjustment relates to.",
       "type": "string"
@@ -24,15 +33,6 @@
     "currency_code": {
       "description": "The currency of the contribution_amount in accordance with ISO 4217 standards.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
-    },
-    "date": {
-      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
-      "type": "string",
-      "format": "date-time"
-    },
-    "id": {
-      "description": "The unique identifier for the adjustment within the financial institution.",
-      "type": "string"
     },
     "page": {
       "description": "The page of the report that this adjustment relates to.",

@@ -4,6 +4,15 @@
   "description": "An agreement represents the standard terms agreed between two parties.",
   "type": "object",
   "properties": {
+    "id": {
+      "description": "The unique identifier for the record within the firm.",
+      "type": "string"
+    },
+    "date": {
+      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
     "base_currency_code": {
       "description": "Currency in accordance with ISO 4217. It should be consistent with minimum transfer amount and threshold.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
@@ -23,17 +32,8 @@
       "description": "The unique identifier used by the financial institution to identify the counterparty to this agreement.",
       "type": "string"
     },
-    "date": {
-      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
-      "type": "string",
-      "format": "date-time"
-    },
     "guarantor_id": {
       "description": "The unique identifier used by the financial institution to identify the guarantor of the transactions covered by this agreement.",
-      "type": "string"
-    },
-    "id": {
-      "description": "The unique identifier for the agreement within the financial institution.",
       "type": "string"
     },
     "margin_frequency": {

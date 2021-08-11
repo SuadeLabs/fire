@@ -4,6 +4,15 @@
   "description": "Data schema to define collateral (currently can reference loans or accounts).",
   "type": "object",
   "properties": {
+    "id": {
+      "description": "The unique identifier for the record within the firm.",
+      "type": "string"
+    },
+    "date": {
+      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
     "account_ids": {
       "description": "The unique identifier/s for the account/s within the financial institution.",
       "type": "array",
@@ -19,11 +28,6 @@
     },
     "currency_code": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
-    },
-    "date": {
-      "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
-      "type": "string",
-      "format": "date-time"
     },
     "encumbrance_amount": {
       "description": "The amount of the collateral that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -47,10 +51,6 @@
       "description": "The end date for recognition of the collateral",
       "type": "string",
       "format": "date-time"
-    },
-    "id": {
-      "description": "The unique identifier for the collateral within the financial institution.",
-      "type": "string"
     },
     "loan_ids": {
       "description": "The unique identifiers for the loans within the financial institution.",

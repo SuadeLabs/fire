@@ -4,6 +4,15 @@
   "description": "Data schema defining the characteristics of a loan product.",
   "type": "object",
   "properties": {
+    "id": {
+      "description": "The unique identifier for the record within the firm.",
+      "type": "string"
+    },
+    "date": {
+      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
     "acc_fv_change_before_taxes": {
       "description": "Accumulated change in fair value before taxes.",
       "type": "integer",
@@ -109,11 +118,6 @@
         "required": ["id", "income_amount"]
       }
     },
-    "date": {
-      "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
-      "type": "string",
-      "format": "date-time"
-    },
     "encumbrance_amount": {
       "description": "The amount of the loan that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
@@ -158,10 +162,6 @@
     },
     "guarantor_id": {
       "description": "The unique identifier for the guarantor of the loan.",
-      "type": "string"
-    },
-    "id": {
-      "description": "The unique identifier for the loan within the financial institution.",
       "type": "string"
     },
     "impairment_amount": {

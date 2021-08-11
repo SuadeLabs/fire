@@ -4,6 +4,15 @@
   "description": "An Account represents a financial account that describes the funds that a customer has entrusted to a financial institution in the form of deposits or credit balances.",
   "type": "object",
   "properties": {
+    "id": {
+      "description": "The unique identifier for the record within the firm.",
+      "type": "string"
+    },
+    "date": {
+      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
     "acc_fv_change_before_taxes": {
       "description": "Accumulated change in fair value before taxes.",
       "type": "integer",
@@ -85,11 +94,6 @@
       "description": "The unique identifier used by the financial institution to identify the customer that owns the account.",
       "type": "string"
     },
-    "date": {
-      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
-      "type": "string",
-      "format": "date-time"
-    },
     "encumbrance_amount": {
       "description": "The amount of the account that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
@@ -158,10 +162,6 @@
         "sk_dpf",
         "us_fdic"
       ]
-    },
-    "id": {
-      "description": "The unique identifier for the account within the financial institution.",
-      "type": "string"
     },
     "impairment_amount": {
       "description": "The impairment amount is the allowance set aside by the firm that accounts for the event that the asset becomes impaired in the future.",

@@ -4,6 +4,15 @@
   "description": "Data schema to define a person or legal entity.",
   "type": "object",
   "properties": {
+    "id": {
+      "description": "The unique identifier for the record within the firm.",
+      "type": "string"
+    },
+    "date": {
+      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
     "address_city": {
       "description": "City, town or village.",
       "type": "string"
@@ -41,11 +50,6 @@
       "description": "Flag to determine if the entity credit quality is impaired.",
       "type": "boolean"
     },
-    "date": {
-      "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
-      "type": "string",
-      "format": "date-time"
-    },
     "fitch_lt": {
       "description": "Fitch long term credit ratings",
       "type":"string",
@@ -56,10 +60,6 @@
         "type":"string",
         "enum": ["f1_plus", "f1", "f2", "f3", "b", "c", "rd", "d"]
       },
-    "id": {
-      "description": "The unique identifier for the person or legal entity within the financial institution.",
-      "type": "string"
-    },
     "intra_group": {
       "description": "Flag to indicate that this should be considered an intra-group entity.",
       "type": "boolean"

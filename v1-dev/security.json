@@ -5,6 +5,15 @@
   "description": "A security represents a tradable financial instrument held or financed by an institution for investment or collateral.",
   "type": "object",
   "properties": {
+    "id": {
+      "description": "The unique identifier for the record within the firm.",
+      "type": "string"
+    },
+    "date": {
+      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
     "acc_fv_change_before_taxes": {
       "description": "Accumulated change in fair value before taxes.",
       "type": "integer",
@@ -115,11 +124,6 @@
       "description": "The unique identifier used by the financial institution to identify the customer for this product.",
       "type": "string"
     },
-    "date": {
-      "description": "The observation or effective date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
-      "type": "string",
-      "format": "date-time"
-    },
     "deal_id": {
       "description": "The unique identifier used by the financial institution to identify the deal for this product that links it to other products of the same or different type.",
       "type": "string"
@@ -169,10 +173,6 @@
       "description": "What is the HQLA classification of this security?",
       "type": "string",
       "enum": ["exclude", "i", "i_non_op", "iia", "iia_non_op", "iib", "iib_non_op", "ineligible"]
-    },
-    "id": {
-      "description": "The unique identifier for the security within the financial institution.",
-      "type": "string"
     },
     "impairment_amount": {
       "description": "The impairment amount for a security is the allowance set aside by the firm for losses.",

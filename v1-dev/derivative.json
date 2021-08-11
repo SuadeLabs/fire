@@ -4,6 +4,15 @@
   "description": "A derivative is a contract which derives its value from an underlying reference index, security or asset.",
   "type": "object",
   "properties": {
+    "id": {
+      "description": "The unique identifier for the record within the firm.",
+      "type": "string"
+    },
+    "date": {
+      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
     "accounting_treatment":{
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/accounting_treatment"
     },
@@ -70,11 +79,6 @@
       "description": "The unique identifier used by the financial institution to identify the customer for this product.",
       "type": "string"
     },
-    "date": {
-      "description": "The observation or effective date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
-      "type": "string",
-      "format": "date-time"
-    },
     "deal_id": {
       "description": "The unique identifier used by the financial institution for the deal to which this derivative belongs.",
         "type": "string"
@@ -102,10 +106,6 @@
     "gamma": {
       "description": "Second-order price sensitivity to the underlying or rate of change of the delta.",
       "type": "number"
-    },
-    "id": {
-      "description": "The unique identifier for the derivative within the financial institution.",
-      "type": "string"
     },
     "impairment_amount": {
       "description": "The impairment amount for a security is the allowance set aside by the firm for losses.",

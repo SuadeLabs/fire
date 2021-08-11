@@ -4,6 +4,15 @@
   "description": "A derivative cash flow where two parties exchange cash flows (or assets) derived from an underlying reference index, security or financial instrument.",
   "type": "object",
   "properties": {
+    "id": {
+      "description": "The unique identifier for the record within the firm.",
+      "type": "string"
+    },
+    "date": {
+      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
     "accrued_interest": {
       "description": "The accrued interest/premium due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
@@ -33,11 +42,6 @@
       "description": "Counterparty to the cash flow",
       "type": "string"
     },
-    "date": {
-      "description": "The observation or effective date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
-      "type": "string",
-      "format": "date-time"
-    },
     "derivative_id": {
       "description": "Unique identifier to the derivative to which this cash flow relates",
       "type": "string"
@@ -45,10 +49,6 @@
     "forward_rate": {
       "description": "Rate used to set a variable cash flow on the reset_date",
       "type": "number"
-    },
-    "id": {
-      "description": "The unique identifier for the derivative within the financial institution.",
-      "type": "string"
     },
     "leg": {
       "description": "The type of the payment leg.",
