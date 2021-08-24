@@ -101,6 +101,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── revaluation
 ├── revenue_reserve
 ├── share_plan
+├── share_premium
 ├── system
 ├── tax
 │   ├── capital_gain_tax
@@ -188,6 +189,9 @@ A type of reserve account. This is created when an entity retains an amount of i
 
 ### share_plan
 This is a reserve account where funds are held with the purpose of share plans and other equity based compensation.
+
+### share_premium
+This is a reserve account whose funds can only be used for purposes provided in the corporate bylaws, such as for share issue costs or issuance of bonus shares, but cannot be used for dividends.
 
 ### reg_loss
 This is a reserve that is created when an entity allocates funds to a reserve account for the purpose of complying with requirements for minimum **regulatory loss allowances**.
