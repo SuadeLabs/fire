@@ -1,7 +1,7 @@
 import os
-import json
 from pyspark.sql.types import *
 import pkg_resources
+import json
 
 
 def load_json(json_file):
@@ -19,7 +19,7 @@ def extract_constraints(schema: StructType, parent: str = None):
             sql_name = "{}.`{}`".format(parent, field.name)
         else:
             sql_name = "`{}`".format(field.name)
-        for exp in field.metadata['constraints']:
+        for exp in json.loads(field.metadata['constraints']):
             constraints.append(exp.format(sql_name))
         if isinstance(field.dataType, StructType):
             extract_constraints(field.dataType, sql_name)
@@ -52,7 +52,7 @@ class FireModel:
             # Nested field, we must read its underlying properties
             # Return a complex struct type
             struct = StructType(self.__load_object(prp))
-            constraints = self.__validate(nullable)
+            constraints = json.dumps(self.__validate(nullable))
             return StructField(name, struct, nullable, metadata={"desc": dsc, "constraints": constraints})
 
         if tpe == "array":
@@ -63,32 +63,32 @@ class FireModel:
             nested_fmt = nested_prp.get('format', None)
             array_struct = self.__process_property_type(name, nested_tpe, nullable, nested_fmt, nested_prp, dsc)
             struct = ArrayType(array_struct)
-            constraints = self.__validate_arrays(prp, nullable)
+            constraints = json.dumps(self.__validate_arrays(prp, nullable))
             return StructField(name, struct, nullable, metadata={"desc": dsc, "constraints": constraints})
 
         if tpe == "number":
-            constraints = self.__validate_numbers(prp, nullable)
+            constraints = json.dumps(self.__validate_numbers(prp, nullable))
             return StructField(name, DoubleType(), nullable, metadata={"desc": dsc, "constraints": constraints})
 
         if tpe == "integer":
-            constraints = self.__validate_numbers(prp, nullable)
+            constraints = json.dumps(self.__validate_numbers(prp, nullable))
             return StructField(name, IntegerType(), nullable, metadata={"desc": dsc, "constraints": constraints})
 
         if tpe == "boolean":
-            constraints = self.__validate(nullable)
+            constraints = json.dumps(self.__validate(nullable))
             return StructField(name, BooleanType(), nullable, metadata={"desc": dsc, "constraints": constraints})
 
         if tpe == "string":
             if not fmt:
-                constraints = self.__validate_strings(prp, nullable)
+                constraints = json.dumps(self.__validate_strings(prp, nullable))
                 return StructField(name, StringType(), nullable, metadata={"desc": dsc, "constraints": constraints})
 
             if fmt == "date-time":
-                constraints = self.__validate_dates(prp, nullable)
+                constraints = json.dumps(self.__validate_dates(prp, nullable))
                 return StructField(name, TimestampType(), nullable, metadata={"desc": dsc, "constraints": constraints})
 
             if fmt == "date":
-                constraints = self.__validate_dates(prp, nullable)
+                constraints = json.dumps(self.__validate_dates(prp, nullable))
                 return StructField(name, DateType(), nullable, metadata={"desc": dsc, "constraints": constraints})
 
             raise Exception("Unsupported format {} for field {}".format(fmt, name))
