@@ -1,33 +1,41 @@
 import unittest
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
-from fire.spark import FireModel
 import pkg_resources
 import fire
 import os
 import json
+from fire.fire.spark import FireModel
+
+from . import (
+    SCHEMA_FILES,
+    SCHEMAS_DIR
+)
 
 
 class FireSparkTest(unittest.TestCase):
 
     def setUp(self):
-        self.spark = SparkSession.builder.appName("FIRE_SPARK").master("local").getOrCreate()
+        self.spark = SparkSession.\
+            builder.\
+            appName("FIRE_SPARK").\
+            master("local").\
+            getOrCreate()
 
     def tearDown(self) -> None:
         self.spark.stop()
 
     def test_schema(self):
-        fire_directory = pkg_resources.resource_filename(fire.__name__, 'data/')
-        for entity in [f.split('.')[0] for f in os.listdir(fire_directory)]:
+        for entity in SCHEMA_FILES:
 
-            json_file = os.path.join(fire_directory, "{}.json".format(entity))
+            json_file = os.path.join(SCHEMAS_DIR, entity)
             with open(json_file) as f:
                 json_model = json.loads(f.read())
                 tpe = json_model.get('type', None)
                 if tpe != "object":
                     break
 
-            model = FireModel().load(entity)
+            model = FireModel(SCHEMAS_DIR).load(entity.split('.')[0])
             self.assertTrue(len(model.schema.fields) > 0)
             for field in model.schema.fields:
                 print(field)
@@ -37,17 +45,18 @@ class FireSparkTest(unittest.TestCase):
 
     def test_schema_apply(self):
         files = "tests/data/collateral.json"
-        model = FireModel().load("collateral")
+        model = FireModel(SCHEMAS_DIR).load("collateral")
         df = self.spark.read.format("json").schema(model.schema).load(files)
         df.show()
         self.assertEqual(1000, df.count())
 
     def test_constraints_apply(self):
         files = "tests/data/collateral.json"
-        model = FireModel().load("collateral")
+        model = FireModel(SCHEMAS_DIR).load("collateral")
         constraints = model.constraints
+        fire_col = F.array([F.expr(c) for c in constraints])
         self.spark.read.format("json").schema(model.schema).load(files) \
-            .select(F.explode(F.array([F.expr(c) for c in constraints])).alias("fire")) \
+            .select(F.explode(fire_col).alias("fire")) \
             .groupBy("fire") \
             .count() \
             .show()

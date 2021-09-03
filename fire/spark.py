@@ -1,5 +1,7 @@
 import os
-from pyspark.sql.types import *
+from pyspark.sql.types import StructType, \
+    StructField, StringType, DoubleType, \
+    IntegerType, BooleanType, DateType, TimestampType, ArrayType
 import pkg_resources
 import json
 
@@ -37,7 +39,10 @@ class FireModel:
 
     def __init__(self, fire_directory=None):
         if not fire_directory:
-            fire_directory = pkg_resources.resource_filename(self.__module__, 'data/')
+            fire_directory = pkg_resources.resource_filename(
+                self.__module__,
+                'data/'
+            )
         self.fire_directory = fire_directory
 
     def __get_array_type(self, tpe, fmt, prp):
@@ -49,7 +54,12 @@ class FireModel:
             for nested_field in nested_fields:
                 nested_field_nullable = nested_field not in nested_required
                 nested_property = nested_prp[nested_field]
-                nested_struct = self.__process_property(nested_field, nested_field_nullable, nested_property, None)
+                nested_struct = self.__process_property(
+                    nested_field,
+                    nested_field_nullable,
+                    nested_property,
+                    None
+                )
                 nested_structs.append(nested_struct)
             return StructType(nested_structs)
         elif tpe == "number":
@@ -69,8 +79,10 @@ class FireModel:
 
     '''
     Converting a FIRE field into a Spark type
-    Simple mapping exercise for atomic types (number, string, etc), this process becomes complex for nested entities
-    For entities of type object, we recursively parse object and map their respective types into StructTypes
+    Simple mapping exercise for atomic types (number, string, etc),
+    this process becomes complex for nested entities
+    For entities of type object, we recursively parse object
+    and map their respective types into StructTypes
     For list, we recursively call that function to extract entity types
     '''
     def __process_property_type(self, name, tpe, nullable, fmt, prp, dsc):
@@ -80,7 +92,12 @@ class FireModel:
             # Return a complex struct type
             struct = StructType(self.__load_object(prp))
             constraints = self.__validate(nullable)
-            return StructField(name, struct, nullable, metadata={"desc": 'dsc', "constraints": constraints})
+            return StructField(
+                name,
+                struct,
+                nullable,
+                metadata={"desc": 'dsc', "constraints": constraints}
+            )
 
         if tpe == "array":
             # Array type, we need to read its underlying properties
@@ -88,38 +105,75 @@ class FireModel:
             nested_prp = prp['items']
             nested_tpe = nested_prp['type']
             nested_fmt = nested_prp.get('format', None)
-            # array_struct = self.__process_property_type(name, nested_tpe, nullable, nested_fmt, nested_prp, dsc)
-            struct = ArrayType(self.__get_array_type(nested_tpe, nested_fmt, nested_prp))
+            struct = ArrayType(
+                self.__get_array_type(nested_tpe, nested_fmt, nested_prp)
+            )
             constraints = self.__validate_arrays(prp, nullable)
-            return StructField(name, struct, nullable, metadata={"desc": 'dsc', "constraints": constraints})
+            return StructField(
+                name,
+                struct,
+                nullable,
+                metadata={"desc": 'dsc', "constraints": constraints}
+            )
 
         if tpe == "number":
             constraints = self.__validate_numbers(prp, nullable)
-            return StructField(name, DoubleType(), nullable, metadata={"desc": 'dsc', "constraints": constraints})
+            return StructField(
+                name,
+                DoubleType(),
+                nullable,
+                metadata={"desc": 'dsc', "constraints": constraints}
+            )
 
         if tpe == "integer":
             constraints = self.__validate_numbers(prp, nullable)
-            return StructField(name, IntegerType(), nullable, metadata={"desc": 'dsc', "constraints": constraints})
+            return StructField(
+                name,
+                IntegerType(),
+                nullable,
+                metadata={"desc": 'dsc', "constraints": constraints}
+            )
 
         if tpe == "boolean":
             constraints = self.__validate(nullable)
-            return StructField(name, BooleanType(), nullable, metadata={"desc": 'dsc', "constraints": constraints})
+            return StructField(
+                name,
+                BooleanType(),
+                nullable,
+                metadata={"desc": 'dsc', "constraints": constraints}
+            )
 
         if tpe == "string":
             if not fmt:
                 constraints = self.__validate_strings(prp, nullable)
-                return StructField(name, StringType(), nullable, metadata={"desc": 'dsc', "constraints": constraints})
+                return StructField(
+                    name,
+                    StringType(),
+                    nullable,
+                    metadata={"desc": 'dsc', "constraints": constraints}
+                )
 
             if fmt == "date-time":
                 constraints = self.__validate_dates(prp, nullable)
-                return StructField(name, TimestampType(), nullable, metadata={"desc": 'dsc', "constraints": constraints})
+                return StructField(
+                    name,
+                    TimestampType(),
+                    nullable,
+                    metadata={"desc": 'dsc', "constraints": constraints}
+                )
 
             if fmt == "date":
                 constraints = self.__validate_dates(prp, nullable)
-                return StructField(name, DateType(), nullable, metadata={"desc": 'dsc', "constraints": constraints})
+                return StructField(
+                    name,
+                    DateType(),
+                    nullable,
+                    metadata={"desc": 'dsc', "constraints": constraints}
+                )
 
-            raise Exception("Unsupported format {} for field {}".format(fmt, name))
-        raise Exception("Unsupported type {} for field {}".format(tpe, name))
+        raise Exception(
+            "Unsupported type {} for field {}".format(tpe, name)
+        )
 
     def __validate_strings(self, prp, nullable):
         constraints = self.__validate(nullable)
@@ -133,13 +187,16 @@ class FireModel:
             constraints.append(exp)
 
         if minimum and maximum:
-            exp = "{{0}} IS NULL OR LENGTH({{0}}) IS BETWEEN {} AND {}".format(int(minimum), int(maximum))
+            exp = "{{0}} IS NULL OR LENGTH({{0}}) IS BETWEEN {} AND {}".\
+                format(int(minimum), int(maximum))
             constraints.append(exp)
         elif minimum:
-            exp = "{{0}} IS NULL OR LENGTH({{0}}) >= {}".format(int(minimum))
+            exp = "{{0}} IS NULL OR LENGTH({{0}}) >= {}".\
+                format(int(minimum))
             constraints.append(exp)
         elif maximum:
-            exp = "{{0}} IS NULL OR LENGTH({{0}}) <= {}".format(int(maximum))
+            exp = "{{0}} IS NULL OR LENGTH({{0}}) <= {}".\
+                format(int(maximum))
             constraints.append(exp)
         return constraints
 
@@ -148,13 +205,16 @@ class FireModel:
         minimum = prp.get('minimum', None)
         maximum = prp.get('maximum', None)
         if minimum and maximum:
-            exp = "{{0}} IS NULL OR {{0}} IS BETWEEN '{}' AND '{}'".format(str(minimum), str(maximum))
+            exp = "{{0}} IS NULL OR {{0}} IS BETWEEN '{}' AND '{}'".\
+                format(str(minimum), str(maximum))
             constraints.append(exp)
         elif minimum:
-            exp = "{{0}} IS NULL OR {{0}} >= '{}'".format(str(minimum))
+            exp = "{{0}} IS NULL OR {{0}} >= '{}'".\
+                format(str(minimum))
             constraints.append(exp)
         elif maximum:
-            exp = "{{0}} IS NULL OR {{0}} <= '{}'".format(str(maximum))
+            exp = "{{0}} IS NULL OR {{0}} <= '{}'".\
+                format(str(maximum))
             constraints.append(exp)
         return constraints
 
@@ -163,30 +223,37 @@ class FireModel:
         minimum = prp.get('minimum', None)
         maximum = prp.get('maximum', None)
         if minimum and maximum:
-            exp = "{{0}} IS NULL OR {{0}} IS BETWEEN {} AND {}".format(float(minimum), float(maximum))
+            exp = "{{0}} IS NULL OR {{0}} IS BETWEEN {} AND {}".\
+                format(float(minimum), float(maximum))
             constraints.append(exp)
         elif minimum:
-            exp = "{{0}} IS NULL OR {{0}} >= {}".format(float(minimum))
+            exp = "{{0}} IS NULL OR {{0}} >= {}".\
+                format(float(minimum))
             constraints.append(exp)
         elif maximum:
-            exp = "{{0}} IS NULL OR {{0}} <= {}".format(float(maximum))
+            exp = "{{0}} IS NULL OR {{0}} <= {}".\
+                format(float(maximum))
             constraints.append(exp)
         return constraints
 
     def __validate_arrays(self, prp, nullable):
         constraints = self.__validate(nullable)
-        # we cannot validate the integrity of each field without exploding array or running complex UDFs
+        # we cannot validate the integrity of each field
+        # without exploding array or running complex UDFs
         # we simply check for array size for now
         minimum = prp.get('minItems', None)
         maximum = prp.get('maxItems', None)
         if minimum and maximum:
-            exp = "{{0}} IS NULL OR SIZE({{0}}) IS BETWEEN {} AND {}".format(float(minimum), float(maximum))
+            exp = "{{0}} IS NULL OR SIZE({{0}}) IS BETWEEN {} AND {}"\
+                .format(float(minimum), float(maximum))
             constraints.append(exp)
         elif minimum:
-            exp = "{{0}} IS NULL OR SIZE({{0}}) >= {}".format(float(minimum))
+            exp = "{{0}} IS NULL OR SIZE({{0}}) >= {}"\
+                .format(float(minimum))
             constraints.append(exp)
         elif maximum:
-            exp = "{{0}} IS NULL OR SIZE({{0}}) <= {}".format(float(maximum))
+            exp = "{{0}} IS NULL OR SIZE({{0}}) <= {}"\
+                .format(float(maximum))
             constraints.append(exp)
         return constraints
 
@@ -200,8 +267,9 @@ class FireModel:
 
     '''
     Process a fire property (i.e. a field) given a name and a property object
-    A field may be a reference to a common object such as currency code, so recursive call may be required
-    We look at field description 
+    A field may be a reference to a common object such as currency code,
+    so recursive call may be required
+    We look at field description
     '''
     def __process_property(self, name, nullable, prp, parent_dsc):
 
@@ -218,7 +286,8 @@ class FireModel:
         # processing referenced property
         if ref:
 
-            # retrieve the name of the Json file and the name of the entity to load
+            # retrieve the name of the Json file and
+            # the name of the entity to load
             ref_object = ref.split('/')[-1]
             ref_json = ref.split('#')[0].split('/')[-1]
 
@@ -226,20 +295,30 @@ class FireModel:
             ref_json_file = os.path.join(self.fire_directory, ref_json)
             ref_json_model = load_json(ref_json_file)
             if ref_object not in ref_json_model.keys():
-                raise Exception("Referencing non existing property {}".format(ref_object))
+                raise Exception(
+                    "Referencing non existing property {}".format(ref_object)
+                )
 
             # processing inline property
             ref_property = ref_json_model[ref_object]
             return self.__process_property(name, nullable, ref_property, dsc)
 
         # processing property
-        struct = self.__process_property_type(name, tpe, nullable, fmt, prp, dsc)
+        struct = self.__process_property_type(
+            name,
+            tpe,
+            nullable,
+            fmt,
+            prp,
+            dsc
+        )
         return struct
 
     '''
     Some entities may be built as a supertype to other entities
     Example: A customer is a supertype to a person entity
-    We load that entire referenced entity as we would be loading any object, parsing json file into spark schema 
+    We load that entire referenced entity as we would
+    be loading any object, parsing json file into spark schema
     '''
     def __load_reference(self, ref):
         ref_object = ref.split('/')[-1]
@@ -249,8 +328,10 @@ class FireModel:
 
     '''
     Core business logic, we process a given entity from a json object
-    An entity contains metadata (e.g. description), required field definition and property value
-    We extract each property, map them to their spark type and return the spark schema for that given entity
+    An entity contains metadata (e.g. description),
+    required field definition and property value
+    We extract each property, map them to their spark
+    type and return the spark schema for that given entity
     '''
     def __load_object(self, model):
         required = model['required']
@@ -272,8 +353,10 @@ class FireModel:
         return schema
 
     '''
-    Entry point, given a name of an entity, we access and parse underlying json object
-    We retrieve all fields, referenced entities, metadata as a spark schema
+    Entry point, given a name of an entity,
+    we access and parse underlying json object
+    We retrieve all fields, referenced entities,
+    metadata as a spark schema
     '''
     def load(self, model):
         json_file = os.path.join(self.fire_directory, "{}.json".format(model))
