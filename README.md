@@ -43,19 +43,17 @@ Included is a [random data generator][random-fire] which will generate data in l
 You can run tests locally with via `./run_tests.sh` or view the [CI test results here][travis-ci]
 
 ### Spark
-Having access to standard models is one thing, ensuring data flows according to these specs is another.
-Using pyspark module, we ensure raw data is schematized according to fire entities specifications and curated based on entities constraints. 
-
-```shell
-pip install git+https://github.com/SuadeLabs/fire
-```
+Fire pyspark module ensures data flows according to the FIRE data model specification, 
+resulting in high quality standards used for the transmission and processing of regulatory data.
+We ensure raw data is schematized according to fire entities specifications and curated based on entities constraints. 
 
 #### Schematizing raw records
 
 Even though records may sometimes "look" structured (e.g. JSON files), enforcing a schema is not just a good 
 practice; in enterprise settings, it guarantees any missing field is still expected, unexpected fields are 
 discarded and data types are fully evaluated (e.g. a date should be treated as a date object and not a string). 
-In the example below, we enforce schema to incoming CSV files. This process is called data schematization.
+In the example below, we enforce schema to incoming CSV files for the collateral. 
+This process is called data schematization.
 
 ```python
 from fire.spark import FireModel
@@ -81,8 +79,7 @@ fire_model = FireModel().load("collateral")
 fire_constraints = fire_model.constraints
 ```
 
-The resulting constraints (expressed as spark SQL) can be evaluated on spark dataframe, 
-resulting in high quality standards used for the transmission and processing of regulatory data.
+The resulting constraints (expressed as spark SQL) can be evaluated on spark dataframe, on batch or in real time. 
 
 ```python
 from pyspark.sql import functions as F
