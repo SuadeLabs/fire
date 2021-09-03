@@ -42,6 +42,61 @@ Included is a [random data generator][random-fire] which will generate data in l
 ### Testing
 You can run tests locally with via `./run_tests.sh` or view the [CI test results here][travis-ci]
 
+### Spark
+Having access to standard models is one thing, ensuring data flows according to these specs is another.
+Using pyspark module, we ensure raw data is schematized according to fire entities specifications and curated based on entities constraints. 
+
+```shell
+pip install git+https://github.com/SuadeLabs/fire
+```
+
+#### Schematizing raw records
+
+Even though records may sometimes "look" structured (e.g. JSON files), enforcing a schema is not just a good 
+practice; in enterprise settings, it guarantees any missing field is still expected, unexpected fields are 
+discarded and data types are fully evaluated (e.g. a date should be treated as a date object and not a string). 
+In the example below, we enforce schema to incoming CSV files. This process is called data schematization.
+
+```python
+from fire.spark import FireModel
+fire_model = FireModel().load("collateral")
+fire_schema = fire_model.schema
+
+collateral_df = spark \
+  .read \
+  .format("csv") \
+  .schema(fire_schema) \
+  .load("/path/to/raw/data")
+```
+
+#### Constraints
+
+Applying a schema is one thing, enforcing its constraints is another. 
+Given the multiplicity properties of an entity, we can detect if a field is mandatory or not. 
+With an enumeration object, we ensure its values consistency. 
+
+```python
+from fire.spark import FireModel
+fire_model = FireModel().load("collateral")
+fire_constraints = fire_model.constraints
+```
+
+The resulting constraints (expressed as spark SQL) can be evaluated on spark dataframe, 
+resulting in high quality standards used for the transmission and processing of regulatory data.
+
+```python
+from pyspark.sql import functions as F
+
+@F.udf("array<string>")
+def failed_expectations(expectations):
+  return [name for name, success in zip(constraints, expectations) if not success]
+
+collateral_invalid = collateral_df \
+    .withColumn("_fire", F.array([F.expr(value) for value in expectations.values()])) \
+    .withColumn("_fire", failed_expectations("_fire")) \
+    .filter(F.size("_fire") > 0)
+```
+
 
 ---
 [fire]:         https://suade.org/fire/
