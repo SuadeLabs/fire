@@ -16,6 +16,7 @@ try:
         url='https://github.com/SuadeLabs/fire',
         packages=find_packages(where='.', include=['fire']),
         package_data={'fire': ['data/*.json']},
+        extras_require=dict(tests=["pytest"]),
         include_package_data=True,
         classifiers=[
             'Programming Language :: Python :: 3',

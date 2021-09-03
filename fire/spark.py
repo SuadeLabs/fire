@@ -19,7 +19,7 @@ def extract_constraints(schema: StructType, parent: str = None):
             sql_name = "{}.`{}`".format(parent, field.name)
         else:
             sql_name = "`{}`".format(field.name)
-        for exp in json.loads(field.metadata['constraints']):
+        for exp in field.metadata['constraints']:
             constraints.append(exp.format(sql_name))
         if isinstance(field.dataType, StructType):
             extract_constraints(field.dataType, sql_name)
@@ -40,6 +40,33 @@ class FireModel:
             fire_directory = pkg_resources.resource_filename(self.__module__, 'data/')
         self.fire_directory = fire_directory
 
+    def __get_array_type(self, tpe, fmt, prp):
+        if tpe == "object":
+            nested_prp = prp['properties']
+            nested_fields = nested_prp.keys()
+            nested_required = set(prp['required'])
+            nested_structs = []
+            for nested_field in nested_fields:
+                nested_field_nullable = nested_field not in nested_required
+                nested_property = nested_prp[nested_field]
+                nested_struct = self.__process_property(nested_field, nested_field_nullable, nested_property, None)
+                nested_structs.append(nested_struct)
+            return StructType(nested_structs)
+        elif tpe == "number":
+            return DoubleType()
+        elif tpe == "integer":
+            return IntegerType()
+        elif tpe == "boolean":
+            return BooleanType()
+        elif tpe == "string":
+            if not fmt:
+                return StringType()
+            elif fmt == "date":
+                return DateType()
+            elif fmt == "date-time":
+                return TimestampType()
+        raise Exception("Unsupported type {}".format(tpe))
+
     '''
     Converting a FIRE field into a Spark type
     Simple mapping exercise for atomic types (number, string, etc), this process becomes complex for nested entities
@@ -52,8 +79,8 @@ class FireModel:
             # Nested field, we must read its underlying properties
             # Return a complex struct type
             struct = StructType(self.__load_object(prp))
-            constraints = json.dumps(self.__validate(nullable))
-            return StructField(name, struct, nullable, metadata={"desc": dsc, "constraints": constraints})
+            constraints = self.__validate(nullable)
+            return StructField(name, struct, nullable, metadata={"desc": 'dsc', "constraints": constraints})
 
         if tpe == "array":
             # Array type, we need to read its underlying properties
@@ -61,35 +88,35 @@ class FireModel:
             nested_prp = prp['items']
             nested_tpe = nested_prp['type']
             nested_fmt = nested_prp.get('format', None)
-            array_struct = self.__process_property_type(name, nested_tpe, nullable, nested_fmt, nested_prp, dsc)
-            struct = ArrayType(array_struct)
-            constraints = json.dumps(self.__validate_arrays(prp, nullable))
-            return StructField(name, struct, nullable, metadata={"desc": dsc, "constraints": constraints})
+            # array_struct = self.__process_property_type(name, nested_tpe, nullable, nested_fmt, nested_prp, dsc)
+            struct = ArrayType(self.__get_array_type(nested_tpe, nested_fmt, nested_prp))
+            constraints = self.__validate_arrays(prp, nullable)
+            return StructField(name, struct, nullable, metadata={"desc": 'dsc', "constraints": constraints})
 
         if tpe == "number":
-            constraints = json.dumps(self.__validate_numbers(prp, nullable))
-            return StructField(name, DoubleType(), nullable, metadata={"desc": dsc, "constraints": constraints})
+            constraints = self.__validate_numbers(prp, nullable)
+            return StructField(name, DoubleType(), nullable, metadata={"desc": 'dsc', "constraints": constraints})
 
         if tpe == "integer":
-            constraints = json.dumps(self.__validate_numbers(prp, nullable))
-            return StructField(name, IntegerType(), nullable, metadata={"desc": dsc, "constraints": constraints})
+            constraints = self.__validate_numbers(prp, nullable)
+            return StructField(name, IntegerType(), nullable, metadata={"desc": 'dsc', "constraints": constraints})
 
         if tpe == "boolean":
-            constraints = json.dumps(self.__validate(nullable))
-            return StructField(name, BooleanType(), nullable, metadata={"desc": dsc, "constraints": constraints})
+            constraints = self.__validate(nullable)
+            return StructField(name, BooleanType(), nullable, metadata={"desc": 'dsc', "constraints": constraints})
 
         if tpe == "string":
             if not fmt:
-                constraints = json.dumps(self.__validate_strings(prp, nullable))
-                return StructField(name, StringType(), nullable, metadata={"desc": dsc, "constraints": constraints})
+                constraints = self.__validate_strings(prp, nullable)
+                return StructField(name, StringType(), nullable, metadata={"desc": 'dsc', "constraints": constraints})
 
             if fmt == "date-time":
-                constraints = json.dumps(self.__validate_dates(prp, nullable))
-                return StructField(name, TimestampType(), nullable, metadata={"desc": dsc, "constraints": constraints})
+                constraints = self.__validate_dates(prp, nullable)
+                return StructField(name, TimestampType(), nullable, metadata={"desc": 'dsc', "constraints": constraints})
 
             if fmt == "date":
-                constraints = json.dumps(self.__validate_dates(prp, nullable))
-                return StructField(name, DateType(), nullable, metadata={"desc": dsc, "constraints": constraints})
+                constraints = self.__validate_dates(prp, nullable)
+                return StructField(name, DateType(), nullable, metadata={"desc": 'dsc', "constraints": constraints})
 
             raise Exception("Unsupported format {} for field {}".format(fmt, name))
         raise Exception("Unsupported type {} for field {}".format(tpe, name))
@@ -102,7 +129,7 @@ class FireModel:
 
         if enum:
             enums = ','.join(["'{}'".format(e) for e in enum])
-            exp = "{{0}} IS NULL OR {{0}} IS IN ({})".format(enums)
+            exp = "{{0}} IS NULL OR {{0}} IN ({})".format(enums)
             constraints.append(exp)
 
         if minimum and maximum:
@@ -251,6 +278,10 @@ class FireModel:
     def load(self, model):
         json_file = os.path.join(self.fire_directory, "{}.json".format(model))
         json_model = load_json(json_file)
+        tpe = json_model.get('type', None)
+        if not tpe or tpe != "object":
+            raise Exception("Can only process entities of type object")
+
         struct = self.__load_object(json_model)
         schema = StructType(struct)
         constraints = extract_constraints(schema)
