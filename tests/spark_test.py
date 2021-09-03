@@ -1,8 +1,6 @@
 import unittest
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
-import pkg_resources
-import fire
 import os
 import json
 from fire.fire.spark import FireModel
