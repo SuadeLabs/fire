@@ -1,12 +1,9 @@
 import unittest
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
-import os
-import json
 from fire.fire.spark import FireModel
 
 from . import (
-    SCHEMA_FILES,
     SCHEMAS_DIR
 )
 
@@ -20,7 +17,7 @@ class FireSparkTest(unittest.TestCase):
             master("local").\
             getOrCreate()
 
-    def tearDown(self) -> None:
+    def tearDown(self):
         self.spark.stop()
 
     def test_schema_apply(self):
