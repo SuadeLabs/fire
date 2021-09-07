@@ -23,24 +23,6 @@ class FireSparkTest(unittest.TestCase):
     def tearDown(self) -> None:
         self.spark.stop()
 
-    def test_schema(self):
-        for entity in SCHEMA_FILES:
-
-            json_file = os.path.join(SCHEMAS_DIR, entity)
-            with open(json_file) as f:
-                json_model = json.loads(f.read())
-                tpe = json_model.get('type', None)
-                if tpe != "object":
-                    break
-
-            model = FireModel(SCHEMAS_DIR).load(entity.split('.')[0])
-            self.assertTrue(len(model.schema.fields) > 0)
-            for field in model.schema.fields:
-                print(field)
-            self.assertTrue(len(model.constraints) > 0)
-            for constraint in model.constraints:
-                print(constraint)
-
     def test_schema_apply(self):
         files = "tests/data/collateral.json"
         model = FireModel(SCHEMAS_DIR).load("collateral")
