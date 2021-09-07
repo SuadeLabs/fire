@@ -13,7 +13,7 @@ def load_json(json_file):
         return json.loads(f.read())
 
 
-def extract_constraints(schema: StructType, parent: str = None):
+def extract_constraints(schema, parent=None):
     constraints = []
     fields = schema.fields
     for field in fields:
@@ -96,7 +96,7 @@ class FireModel:
                 name,
                 struct,
                 nullable,
-                metadata={"desc": 'dsc', "constraints": constraints}
+                metadata={"desc": dsc, "constraints": constraints}
             )
 
         if tpe == "array":
@@ -113,7 +113,7 @@ class FireModel:
                 name,
                 struct,
                 nullable,
-                metadata={"desc": 'dsc', "constraints": constraints}
+                metadata={"desc": dsc, "constraints": constraints}
             )
 
         if tpe == "number":
@@ -122,7 +122,7 @@ class FireModel:
                 name,
                 DoubleType(),
                 nullable,
-                metadata={"desc": 'dsc', "constraints": constraints}
+                metadata={"desc": dsc, "constraints": constraints}
             )
 
         if tpe == "integer":
@@ -131,7 +131,7 @@ class FireModel:
                 name,
                 IntegerType(),
                 nullable,
-                metadata={"desc": 'dsc', "constraints": constraints}
+                metadata={"desc": dsc, "constraints": constraints}
             )
 
         if tpe == "boolean":
@@ -140,7 +140,7 @@ class FireModel:
                 name,
                 BooleanType(),
                 nullable,
-                metadata={"desc": 'dsc', "constraints": constraints}
+                metadata={"desc": dsc, "constraints": constraints}
             )
 
         if tpe == "string":
@@ -150,7 +150,7 @@ class FireModel:
                     name,
                     StringType(),
                     nullable,
-                    metadata={"desc": 'dsc', "constraints": constraints}
+                    metadata={"desc": dsc, "constraints": constraints}
                 )
 
             if fmt == "date-time":
@@ -159,7 +159,7 @@ class FireModel:
                     name,
                     TimestampType(),
                     nullable,
-                    metadata={"desc": 'dsc', "constraints": constraints}
+                    metadata={"desc": dsc, "constraints": constraints}
                 )
 
             if fmt == "date":
@@ -168,7 +168,7 @@ class FireModel:
                     name,
                     DateType(),
                     nullable,
-                    metadata={"desc": 'dsc', "constraints": constraints}
+                    metadata={"desc": dsc, "constraints": constraints}
                 )
 
         raise Exception(
