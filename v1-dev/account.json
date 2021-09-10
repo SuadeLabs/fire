@@ -94,8 +94,8 @@
       "description": "The unique identifier used by the financial institution to identify the customer that owns the account.",
       "type": "string"
     },
-    "deposited_amount": {
-      "description": "Amount deposited within the account as a naturally positive integer number of cents/pence.",
+    "mtd_deposited_amount": {
+      "description": "Month to day amount deposited within the account as a naturally positive integer number of cents/pence.",
       "type": "integer",
       "minimum": 0
     },
@@ -427,8 +427,8 @@
       "description": "The version identifier of the data such as the firm's internal batch identifier.",
       "type": "string"
     },
-    "withdrawal_amount": {
-      "description": "Amount withdrawn from the account as a naturally positive integer number of cents/pence.",
+    "mtd_withdrawal_amount": {
+      "description": "Month to date amount withdrawn from the account as a naturally positive integer number of cents/pence.",
       "type": "integer",
       "minimum": 0
     },

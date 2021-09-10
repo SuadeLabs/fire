@@ -1,11 +1,11 @@
 ---
 layout:     property
-title:      "withdrawal_amount"
+title:      "mtd_withdrawal_amount"
 schemas:    [account]
 ---
 
-# withdrawal_amount
+# mtd_withdrawal_amount
 
 ---
 
-The **withdrawal_amount** represents the amount withdrawn from the account as a naturally positive integer number of cents/pence.
+The **mtd_withdrawal_amount** represents the month to day amount withdrawn from the account as a naturally positive integer number of cents/pence.

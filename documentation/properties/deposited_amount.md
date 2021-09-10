@@ -1,11 +1,11 @@
 ---
 layout:     property
-title:      "deposited_amount"
+title:      "mtd_deposited_amount"
 schemas:    [account]
 ---
 
-# deposited_amount
+# mtd_deposited_amount
 
 ---
 
-The **deposited_amount** represents the amount deposited within the account as a naturally positive integer number of cents/pence.
+The **mtd_deposited_amount** represents the month to day amount deposited within the account as a naturally positive integer number of cents/pence.
