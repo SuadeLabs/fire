@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"deal_id"
-schemas:	[security]
+schemas:	[security, loan]
 ---
 
 # deal_id

@@ -84,6 +84,10 @@
         "type":"string",
         "enum": ["p1", "p2", "p3", "np"]
     },
+    "nace_code": {
+      "description": "The EU NACE economic activity classification.",
+      "type": "string"
+    },
     "name": {
       "description": "The name of the person or legal entity to be used for display and reference purposes.",
       "type": "string"

@@ -118,6 +118,10 @@
         "required": ["id", "income_amount"]
       }
     },
+    "deal_id": {
+      "description": "Identifier used for linking this product as part of a larger deal. e.g. Two components of a single loan or matching a securitisation with it's underlying loan.",
+      "type": "string"
+    },
     "encumbrance_amount": {
       "description": "The amount of the loan that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
