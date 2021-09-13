@@ -94,11 +94,6 @@
       "description": "The unique identifier used by the financial institution to identify the customer that owns the account.",
       "type": "string"
     },
-    "mtd_deposited_amount": {
-      "description": "Month to day amount deposited within the account as a naturally positive integer number of cents/pence.",
-      "type": "integer",
-      "minimum": 0
-    },
     "encumbrance_amount": {
       "description": "The amount of the account that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
@@ -205,6 +200,16 @@
       "description": "Indicates the minimum balance, in Euros, of each account within the aggregate. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
       "monetary": true
+    },
+    "mtd_deposits": {
+      "description": "Month to date amount deposited within the account as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "mtd_withdrawals": {
+      "description": "Month to date amount withdrawn from the account as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "minimum": 0
     },
     "next_payment_date": {
       "description": "The next date at which interest will be paid or accrued_interest balance returned to zero.",
@@ -426,11 +431,6 @@
     "version_id": {
       "description": "The version identifier of the data such as the firm's internal batch identifier.",
       "type": "string"
-    },
-    "mtd_withdrawal_amount": {
-      "description": "Month to date amount withdrawn from the account as a naturally positive integer number of cents/pence.",
-      "type": "integer",
-      "minimum": 0
     },
     "withdrawal_penalty": {
       "description": "This is the penalty incurred by the customer for an early withdrawal on this account. An early withdrawal is defined as a withdrawal prior to the next_withdrawal_date. Monetary type represented as a naturally positive integer number of cents/pence.",

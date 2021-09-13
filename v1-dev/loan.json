@@ -350,7 +350,7 @@
       "description": "Is this loan secured or unsecured?",
       "type": "boolean"
     },
-    "securitisation_deal_id": {
+    "deal_id": {
       "description": "Identifier used for matching a securitisation with it's underlying loan(s) (i.e. MBS).",
       "type": "string"
     },
