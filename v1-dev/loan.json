@@ -119,7 +119,7 @@
       }
     },
     "deal_id": {
-      "description": "Identifier used for matching a securitisation with it's underlying loan(s) (i.e. MBS).",
+      "description": "Identifier used for linking this product as part of a larger deal. e.g. Two components of a single loan or matching a securitisation with it's underlying loan.",
       "type": "string"
     },
     "encumbrance_amount": {
