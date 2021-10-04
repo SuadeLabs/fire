@@ -430,8 +430,8 @@ Describes an account representing the amount of a provision beeing written-off a
 ## Derivative
 ```bash
 ├── reference
-├── client_order_execution
-├── client_order_transmission
+├── client_execution
+├── client_transmission
 ├── cva_hedge
 └── back_to_back
 ```
