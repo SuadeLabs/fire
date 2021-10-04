@@ -430,12 +430,19 @@ Describes an account representing the amount of a provision beeing written-off a
 ## Derivative
 ```bash
 ├── reference
+├── client_order_execution
+├── client_order_transmission
 ├── cva_hedge
 └── back_to_back
 ```
 ### reference
 Use this enumeration value to refer to derivatives which are underlyings of other derivative positions (e.g. swaptions).
 In the context of [CRR][crr] Article 329, a reference derivative would be the underlying swap of a swaption.
+
+### client orders handled 
+client order execution vs client order transmission:
+‘client orders handled’ or ‘COH’ means the value of orders that an investment firm handles for clients, through the
+reception and transmission of client orders and through the execution of orders on behalf of clients; [IFR] Article 4
 
 ### cva_hedge
 Use this enumeration value to refer to derivatives booked in order to hedge CVA as defined in [CRR][crr] Article 386.
