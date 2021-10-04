@@ -440,7 +440,7 @@ Use this enumeration value to refer to derivatives which are underlyings of othe
 In the context of [CRR][crr] Article 329, a reference derivative would be the underlying swap of a swaption.
 
 ### client orders handled 
-client order execution vs client order transmission:
+client execution vs client transmission:
 ‘client orders handled’ or ‘COH’ means the value of orders that an investment firm handles for clients, through the
 reception and transmission of client orders and through the execution of orders on behalf of clients; [IFR] Article 4
 
