@@ -231,7 +231,9 @@
       "enum": [
         "back_to_back",
         "cva_hedge",
-        "reference"
+        "reference",
+        "client_order_execution",
+        "client_order_transmission"
       ]
     },
     "rate": {
