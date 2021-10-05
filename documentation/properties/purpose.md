@@ -447,6 +447,7 @@ on behalf of clients and includes the conclusion of agreements to sell financial
 ### client_transmission
 Transmission pertains to the receiving and communucation of instructions or orders from the client in respect of investment services or financial instruments to another party for execution, such as an operator of a collective investment undertaking or agency broker.
 (FCA Handbook: PERG 13.3 Investment Services and Activities)
+
 ### cva_hedge
 Use this enumeration value to refer to derivatives booked in order to hedge CVA as defined in [CRR][crr] Article 386.
 
