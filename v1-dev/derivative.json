@@ -230,6 +230,8 @@
       "type": "string",
       "enum": [
         "back_to_back",
+        "client_execution",
+        "client_transmission",
         "cva_hedge",
         "reference"
       ]

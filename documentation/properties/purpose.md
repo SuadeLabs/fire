@@ -430,12 +430,26 @@ Describes an account representing the amount of a provision beeing written-off a
 ## Derivative
 ```bash
 ├── reference
+├── client_execution
+├── client_transmission
 ├── cva_hedge
 └── back_to_back
 ```
 ### reference
 Use this enumeration value to refer to derivatives which are underlyings of other derivative positions (e.g. swaptions).
 In the context of [CRR][crr] Article 329, a reference derivative would be the underlying swap of a swaption.
+
+### client_execution
+Derivatives given this purpose value represent execution of orders on behalf of clients.
+‘Execution of orders on behalf of clients’ means acting to conclude agreements to buy or sell one or more financial instruments 
+on behalf of clients and includes the conclusion of agreements to sell financial instruments issued by an investment firm or a credit institution at the moment of their issuance. [Article 4(1)(5) of Directive 2014/65/EU (MiFID].
+
+### client_transmission
+[FCA Handbook: PERG 13.3 Investment Services and Activities](https://www.handbook.fca.org.uk/handbook/PERG/13/3.html)
+> Transmission pertains to the receiving and communucation of instructions or orders from the client in respect of investment services or financial instruments to another party for execution, such as an operator of a collective investment undertaking or agency broker.
+
+More broadly, transmission is discussed in [MiFID 2](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065) in reference to a 'tied agent':
+> (29) 'tied agent' means a natural or legal person who, under the full and unconditional responsibility of only one investment firm on whose behalf it acts, promotes investment and/or ancillary services to clients or prospective clients, receives and transmits instructions or orders from the client in respect of investment services or financial instruments, places financial instruments or provides advice to clients or prospective clients in respect of those financial instruments or services;
 
 ### cva_hedge
 Use this enumeration value to refer to derivatives booked in order to hedge CVA as defined in [CRR][crr] Article 386.
