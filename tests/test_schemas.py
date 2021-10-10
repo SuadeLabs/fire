@@ -58,6 +58,7 @@ class TestSchemas(unittest.TestCase):
             "quote_currency_code",  # ISO 4217
             "underlying_index_tenor",  # day convention
             "base_rate",  # Bloomberg tickers,
+            "nace_code"  # Nace code format: A.01.10
         ]
         long_names = [
             "independent_collateral_amount",
