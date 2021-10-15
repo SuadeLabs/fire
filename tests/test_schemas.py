@@ -234,3 +234,7 @@ class TestSchemas(unittest.TestCase):
                 doc in properties,
                 "No property found for documenation: {}".format(doc)
             )
+
+
+if __name__ == '__main__':
+    unittest.main()
