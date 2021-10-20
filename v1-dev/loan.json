@@ -221,7 +221,7 @@
     "movement": {
       "description": "The movement parameter describes how the loan arrived to the firm.",
       "type": "string",
-      "enum": ["acquired","acquired_credit_impaired", "other", "securitised", "sold", "syndicated", "syndicated_lead"]
+      "enum": ["acquired","acquired_cred_impaired", "other", "securitised", "sold", "syndicated", "syndicated_lead"]
     },
     "next_payment_date": {
       "description": "The next date at which interest will be paid or accrued_interest balance returned to zero.",

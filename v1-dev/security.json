@@ -269,7 +269,7 @@
     "movement": {
       "description": "The movement parameter describes how the security arrived to the firm.",
       "type": "string",
-      "enum": ["asset", "acquired_credit_impaired", "cash", "cb_omo", "debt_issue", "issuance", "other"]
+      "enum": ["acquired_credit_impaired", "asset", "cash", "cb_omo", "debt_issue", "issuance", "other"]
     },
     "mtm_clean": {
       "description": "The mark-to-market value of the security excluding interest. Monetary number of cents/pence.",
