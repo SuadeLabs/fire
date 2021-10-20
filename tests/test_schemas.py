@@ -67,6 +67,7 @@ class TestSchemas(unittest.TestCase):
             "buy_to_let_further_advance",
             "cancelled_payout_agreed",
             "firm_operating_expenses",
+            "acquired_cred_impaired"
         ]
 
         snake_pattern = re.compile("[a-z][a-z0-9]*(_[a-z0-9]*)*")
