@@ -163,12 +163,12 @@
     "relationship":{
       "description": "Relationship to parent.",
       "type": "string",
-      "enum": ["branch", "head_office", "jv", "parent", "parent_branch", "parent_subsidiary", "subsidiary"]
+      "enum": ["branch", "head_office", "jv", "parent", "parent_branch", "parent_subsidiary", "participation", "subsidiary"]
     },
     "reporting_relationship":{
       "description": "Relationship to reporting entity. See: relationship.",
       "type": "string",
-      "enum": ["branch", "head_office", "jv", "parent", "parent_branch", "parent_subsidiary", "subsidiary"]
+      "enum": ["branch", "head_office", "jv", "parent", "parent_branch", "parent_subsidiary", "participation", "subsidiary"]
     },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1",
