@@ -42,6 +42,14 @@ However, (aa) above shall not apply where another undertaking has the rights ref
 ### jv
 Indicates subsidiaries or holdings where ownership is less than 50% or non-controlling.
 
+
+### participation
+[**DNB Reporting Manual**](https://www.dnb.nl/media/cvceu2pl/manual-monetary-reporting_tcm47-379376.pdf)
+A holding is classified as participation equity if the reporting institution (the domestic banking business) holds an interest in the capital of a corporation (either domestic or foreign) that provides it with 10% or more of the voting rights.
+
+This is in line with the criteria on influence and control described in BPM6 (Balance of Payments and International Investment Position Manual, edition 6).
+
+
 ### branch
 From the [Capital Requirements Regulation][crr]:
 > 'branch' means a place of business which forms a legally dependent part of an institution and which carries out directly all or some of the transactions inherent in the business of institutions;
