@@ -18,6 +18,7 @@ The following are a few examples of common financial trades.
   - [Loan examples](#loan-examples)
     - [BBL/CBIL](#bblcbil)
     - [Nostro account](#nostro-account)
+    - [Loan with two customers](#loan-with-two-customers)
   - [Derivative examples](#derivative-examples)
     - [Bermudan swaption](#bermudan-swaption)
     - [Bond future](#bond-future)
@@ -141,6 +142,11 @@ To eliminate this excess, we can introduce a third loan.
 Nostro account, of 1000 GBP, held at another credit institution
 ```json
 {{#include nostro_account.json:5:}}
+```
+#### Loan with two customers
+A loan example showing what the json looks like for loans with two customers
+```json
+{{#include_loan_with_2_customers.json:5:}}
 ```
 ### Derivative examples
 #### Bermudan swaption
