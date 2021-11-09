@@ -38,7 +38,11 @@ def schema_enum_registry(schema_name):
     """
     enums = {}
 
+    if "json" != schema_name[-4:]:
+        schema_name = schema_name + ".json"
+
     schema = fire_load(schema_name)
+
     if schema_name == "common.json":
         properties = schema
     else:
@@ -60,6 +64,12 @@ def all_properties():
         {properties.add(prop) for prop in schema_properties(schema_name)}
 
     return properties
+
+
+def property_doc_name(property_name: str):
+    for doc in DOC_FILES:
+        if property_name + ".md" == doc:
+            return doc
 
 
 def fire_load(schema_name):

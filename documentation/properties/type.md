@@ -419,6 +419,7 @@ Charity serving communities and individuals. Includes non-profit institutions se
 ├── auto
 ├── commercial
 ├── credit_card
+├── financial_lease
 ├── trade_finance
 ├── credit_facility
 ├── liquidity_facility
@@ -451,6 +452,9 @@ This includes commercial loans or mortgages that do not fall under **commercial*
 ### liquidity_facility
 A **liquidity_facility** means the securitisation position arising from a contractual agreement to provide funding to ensure timeliness of cash flows to investors, as outlined in Article 242(3) in [CRR][crr].
 
+### multiccy_facility
+*Needs definition*
+
 ### margin
 **Margin** is defined in [LCR][lcr] Article 3(12):
 > margin loans means collateralised loans extended to customers for the purpose of taking leveraged trading positions.
@@ -472,6 +476,9 @@ From Annex I of the [CRR][crr], credit facilities are:
 Nostro loans are the firm's accounts at other financial institutions which are in effect loans to other firms. Nostros are used in the context of correspondent banking operations which are described by the [ECB](https://www.ecb.europa.eu/paym/t2/shared/pdf/target2_glossary.pdf):
 > Correspondent banking: an arrangement under which one credit institution provides payment and other services to another credit institution. Payments through correspondents are often executed through reciprocal accounts (nostro and loro accounts) to which standing credit lines may be attached. Correspondent banking services are primarily provided across international boundaries but are also known as agency relationships in some domestic contexts.
 > A loro (vostro) account is the term used by a correspondent to describe an account held on behalf of a foreign credit institution; the foreign credit institution would in turn regard this account as its nostro account.
+
+### financial_lease
+*Needs definition*
 
 ### other
 Other refers to a type of security not covered by the above. If you find yourself using this often, please [contribute][contributing].
@@ -566,6 +573,12 @@ Commercial paper is an unsecured promissory note with a fixed maturity of, typic
 ### cd
 A certificate of deposit is also a promissory note, however can only be issued by a bank. It has a fixed maturity and specified fixed interest rate.
 
+### bill_of_exchange
+*Needs definition*
+
+### cb_facility
+*Needs definition*
+
 ### struct_note
 The [FCA](https://www.fca.org.uk/consumers/structured-products) defines structured notes as:
 > a type of fixed-term investment where the amount you earn depends on the performance of a specific market (such as the FTSE 100) or specific assets (such as shares in individual companies)
@@ -575,6 +588,27 @@ A special purpose vehicle is a separate legal entity created to fulfil a certain
 
 ### abs
 An asset-backed security is a security whose income payments and hence value are derived from and collateralised (or "backed") by a specified pool of underlying assets. The pool of assets is typically a group of small and illiquid assets which are unable to be sold individually. Pooling the assets into financial instruments allows them to be sold to general investors, a process called securitisation. This allows the risk of investing in the underlying assets to be diversified because each security will represent a fraction of the total value of the diverse pool of underlying assets. The pools of underlying assets can include common payments from credit cards, auto loans, and mortgage loans, to esoteric cash flows from aircraft leases, royalty payments and movie revenues.
+
+### abs_auto
+*Needs definition*
+
+### abs_sme
+*Needs definition*
+
+### abs_consumer
+*Needs definition*
+
+### abs_other
+*Needs definition*
+
+### mbs
+*Needs definition*
+
+### mtn
+*Needs definition*
+
+### performance_bond
+*Needs definition*
 
 ### rmbs
 A residential mortgage-backed security (a subclass of an ABS).
@@ -637,6 +671,21 @@ Financial standby letter of credit
 
 ### performance_sloc
 Performance standby letter of credit
+
+### performance_guarantee
+*Needs definition*
+
+### share_agg
+*Needs definition*
+
+### spv_other
+*Needs definition*
+
+### urp
+*Needs definition*
+
+### warranty
+*Needs definition*
 
 ### other
 Other refers to a type of security not covered by the above. If you find yourself using this often, please [contribute][contributing].
@@ -741,7 +790,7 @@ The distinction here linked to financial promotions suggests that internet-only 
 An ISA is an individual savings account which is a scheme of investment satisfying the conditions prescribed in the UK's [ISA Regulations][uk-isa].
 
 ### ira
-A trust created or organized in the United States for the exclusive benefit of an individual or his beneficiaries. See [US Code 408][ira]
+A trust created or organized in the United States for the exclusive benefit of an individual or his beneficiaries. See [US Code Title 26, S.408][ira]
 
 ### money_market
 A money market account is an interest-bearing account that typically pays a higher interest rate than a savings account, and which provides the account holder with limited check-writing ability.
@@ -1061,6 +1110,41 @@ An interest rate curve
 
 ### volatility
 A volatility curve (smile)
+
+# loan_transaction
+
+### advance
+*Needs description*
+
+### capital_repayment
+*Needs description*
+
+### capitalisation
+*Needs description*
+
+### due
+*Needs description*
+
+### further_advance
+*Needs description*
+
+### interest
+*Needs description*
+
+### interest_repayment
+*Needs description*
+
+### other
+*Needs description*
+
+### received
+*Needs description*
+
+### sale
+*Needs description*
+
+### write_off
+*Needs description*
 
 
 ---

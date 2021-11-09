@@ -534,6 +534,7 @@ refer to interest cashflows only, and do not include any principal flows
 ├── project_finance
 └── other
 ```
+
 ### house_purchase
 >The **house_purchase** value indicates that the purpose of the loan is for the purchase of residential property for occupation by the borrower.
 
@@ -545,6 +546,25 @@ refer to interest cashflows only, and do not include any principal flows
 
 ### buy_to_let
 >The **buy_to_let** value is a term used in the British property market where the borrower is purchasing the property with a view of renting it out on a commercial basis to an *unrelated third party*. See [MLAR Definitions][mlardef] section E6.2.
+
+### buy_to_let_house_purchase
+Buy-to-let *and* house_purchase. See: **house_purchase**
+
+### buy_to_let_remortgage
+Buy-to-let *and* remortgage. See: **remortgage**
+
+### buy_to_let_further_advance
+Buy-to-let *and* further_advance. See: **further_advance**
+
+### buy_to_let_other
+Buy-to-let *and* other. See: **other**
+
+### consumer_buy_to_let
+*Needs description*
+
+### further_advance
+*Needs description*
+
 
 ### internal_hedge
 >From [CRR][crr] definitions (96):
@@ -669,6 +689,10 @@ This indicates shares that have been [issued][issued] for the purpose of raising
 
 ### back_to_back
 Use this enumeration value to highlight back to back trades defined as "exactly matching" in [Pruval Delegated Regulation][pruval] Article 4 (2)
+
+### aircraft_finance
+*Needs definition*
+
 
 ---
 

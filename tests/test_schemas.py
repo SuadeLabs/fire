@@ -10,7 +10,6 @@ from . import (
     SCHEMAS_DIR,
     SCHEMA_FILES,
     SCHEMA_NAMES,
-    all_properties,
     schema_enum_registry,
 )
 
@@ -60,13 +59,14 @@ class TestSchemas(unittest.TestCase):
             "base_rate",  # Bloomberg tickers,
             "nace_code"  # Nace code format: A.01.10
         ]
-        long_names = [
+        legacy_long_names = [
             "independent_collateral_amount",
             "interest_repayment_frequency",
             "buy_to_let_house_purchase",
             "buy_to_let_further_advance",
             "cancelled_payout_agreed",
             "firm_operating_expenses",
+            # DO NOT ADD TO THIS LIST, FIX YOUR ENUM INSTEAD
         ]
 
         snake_pattern = re.compile("[a-z][a-z0-9]*(_[a-z0-9]*)*")
@@ -80,7 +80,7 @@ class TestSchemas(unittest.TestCase):
                 self.assertEqual(
                     len(enum), match.end(), snake_error(schema, enum, ""))
 
-                if enum not in long_names:
+                if enum not in legacy_long_names:
                     self.assertLessEqual(
                         len(enum), 22,
                         len_error(schema, enum, "", len(enum))
@@ -95,7 +95,7 @@ class TestSchemas(unittest.TestCase):
                     self.assertEqual(
                         len(v), match.end(), snake_error(schema, enum, v))
 
-                    if v not in long_names:
+                    if v not in legacy_long_names:
                         self.assertLessEqual(
                             len(v), 22,
                             len_error(schema, enum, v, len(v))
@@ -149,88 +149,3 @@ class TestSchemas(unittest.TestCase):
                     continue
                 # print(sorted([str(e) for e in enums[enum]]))
                 self.assertEqual(enums[enum], sorted(enums[enum]))
-
-    def test_property_has_docs(self):
-        """
-        Ensure there are docs for every new attribute
-
-        TODO: add docs and remove legacy exceptions
-        """
-        exceptions = [
-            "account_ids",
-            "accrued_interest_balance",
-            "behavioral_curve_id",
-            "cb_haircut",
-            "ccf",
-            "col",
-            "comment",
-            "contribution_amount",
-            "contribution_text",
-            "customers",
-            "data",
-            "delta",
-            "derivative_id",
-            "encumbrance_end_date",
-            "facility_currency_code",
-            "forward_rate",
-            "gamma",
-            "guarantor_id",
-            "insolvency_rank",
-            "interest_repayment_frequency",
-            "intra_group",
-            "issuer_id",
-            "ledger_code",
-            "leg",
-            "legal_entity_name",
-            "links",
-            "loan_id",
-            "loan_ids",
-            "national_reporting_code",
-            "next_exercise_date",
-            "next_payment_amount",
-            "next_receive_amount",
-            "next_receive_date",
-            "next_repricing_date",
-            "next_reset_date",
-            "page",
-            "payment_date",
-            "provision_type",
-            "report_type",
-            "reporting_relationship",
-            "reset_date",
-            "rho",
-            "risk_weight_irb",
-            "risk_weight_std",
-            "row",
-            "seniority",
-            "settlement_type",
-            "stay_protocol",
-            "theta",
-            "underlying_derivative_id",
-            "underlying_issuer_id",
-            "underlying_price",
-            "underlying_security_id",
-            "underlying_strike",
-            "values",
-            "vega",
-            "vol_adj",
-            "vol_adj_fx"
-        ]
-
-        properties = all_properties()
-        self.assertTrue(properties)
-
-        no_docs = []
-        for p in properties:
-            if p not in DOC_NAMES + exceptions:
-                no_docs.append(p)
-
-        self.assertFalse(
-            no_docs,
-            "No documenation found for properties: {}".format(no_docs)
-        )
-        for doc in DOC_NAMES:
-            self.assertTrue(
-                doc in properties,
-                "No property found for documenation: {}".format(doc)
-            )

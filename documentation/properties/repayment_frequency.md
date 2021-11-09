@@ -33,14 +33,35 @@ Repayment frequency of the loan refers to how often the repayments occur.
 
 Valid enums:
 
-- Daily: once per 24 hour period
-- Weekly: once per 7 day period
-- Bi-weekly: oncer per 2 weeks
-- Monthly: once per calendar month
-- Bi-monthly: once per 2 months
-- Quarterly: once per 3 calendar months
-- Semi-annually: once per 6 calendar months
-- Annually: once per calendar year
-- At maturity: upon maturity of the loan product
-- Biennially: once every 2 years
-- Sesquiennially: once every 1 year and a half
+### daily
+once per 24 hour period
+
+### weekly
+once per 7 day period
+
+### bi_weekly
+once per 2 weeks
+
+### monthly
+once per calendar month
+
+### bi_monthly
+once per 2 months
+
+### quarterly
+once per 3 calendar months
+
+### semi_annually
+once per 6 calendar months
+
+### annually
+once per calendar year
+
+### sesquiennially
+once every 1 year and a half
+
+### biennially
+once every 2 years
+
+### at_maturity
+upon maturity of the product (end_date)
