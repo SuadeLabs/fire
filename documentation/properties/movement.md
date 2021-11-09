@@ -9,11 +9,15 @@ schemas:	[loan_transaction, loan, security]
 
 The **movement** parameter describes how an asset or liability arrived to the firm.
 
-# loan
+## loan
 
 ### acquired
 
 This loan has been acquired on its own or part of a larger portfolio acquisition from another firm or has been acquired due to a group restructuring or acquisition.
+
+### acquired_impaired
+
+These assets are those which are "credit impaired" at the time of purchase. For these assets, events that have a detrimental impact on the estimated future cash flows have already occurred. Also known as "Purchased or Originated credit-impaired" assets
 
 ### securitised
 
@@ -40,7 +44,7 @@ The lead bank on a syndicated loan. (see *syndicated*)
 
 None of the above.
 
-# security
+## security
 
 ### cash
 
