@@ -29,6 +29,17 @@ Financial assets measured at fair value through other comprehensive income due t
 Financial assets measured at amortised cost in accordance with IFRS.
 
 
+*Legacy and [IAS39][ias39] based classifications:*
+
+### available_for_sale
+
+### held_for_hedge
+
+### held_to_maturity
+
+### loans_and_recs
+
 ---
 
 [ifrs9]: https://www.iasplus.com/en-gb/standards/ifrs-en-gb/ifrs9
+[ias39]: https://www.iasplus.com/en/standards/ias/ias39

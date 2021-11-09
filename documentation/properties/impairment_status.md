@@ -1,6 +1,6 @@
 ---
-layout:		property  
-title:		"impairment_status"  
+layout:		property
+title:		"impairment_status"
 schemas:	[account, loan, security, derivative]
 ---
 
@@ -18,7 +18,7 @@ schemas:	[account, loan, security, derivative]
 ├── non_performing
 │   └── stage_3
 │       ├── doubtful
-│       └── loss 
+│       └── loss
 │
 ├── stage_1_normal
 ├── stage_1_watch
@@ -53,10 +53,10 @@ Some agencies may also refer to *classified* loans as those that fall in substan
 ### performing
 
 ### stage_1
-**stage_1** assets are financial instruments that either have not deteriorated significantly in credit quality since initial recognition or have low credit risk. In this stage, financial institutions must recognise the expected credit losses that result from default events on a financial instrument that are possible within the 12 months after the reporting date. 
+**stage_1** assets are financial instruments that either have not deteriorated significantly in credit quality since initial recognition or have low credit risk. In this stage, financial institutions must recognise the expected credit losses that result from default events on a financial instrument that are possible within the 12 months after the reporting date.
 
 ### normal (pass)
-HKMA LCS: 
+HKMA LCS:
 > This refers to loans where borrowers are current in meeting commitments and
 full repayment of interest and principal is not in doubt.
 
@@ -111,7 +111,7 @@ From the [Open Risk Manual][orm]:
     Low Credit Risk exception
 
 > The following lists provide some examples:
-	
+
 > **Internal (Management) Indicators**
     Significant changes in internal price indicators of credit risk (the credit spread / premium that would be charged currently for similar risk)
     Other changes in the rates of terms of an existing financial instrument that would be significantly different if the instrument was newly originated
@@ -137,7 +137,7 @@ From the [Open Risk Manual][orm]:
     Actual or expected significant change in the operating results of the borrower. Examples include actual or expected declining revenues or margins, increasing operating risks, working capital deficiencies, decreasing asset quality, increased balance sheet leverage, liquidity, management problems or changes in the scope of business or organisational structure (such as the discontinuance of a segment of the business) that results in a significant change in the borrower’s ability to meet its debt obligations.
 
 > **Example**
-	For the purpose of the EBA 2018 EU-Wide Stress Test projections banks shall, as a backstop, assume that Stage 1 assets which experience a threefold increase of annual point-in-time PD compared to the corresponding value at initial recognition (i.e. a 200% relative increase) undergo a significant increase in credit risk (SICR) and hence become Stage 2. Notably the backstop is defined with reference to the annual PD, not the lifetime PD. 
+	For the purpose of the EBA 2018 EU-Wide Stress Test projections banks shall, as a backstop, assume that Stage 1 assets which experience a threefold increase of annual point-in-time PD compared to the corresponding value at initial recognition (i.e. a 200% relative increase) undergo a significant increase in credit risk (SICR) and hence become Stage 2. Notably the backstop is defined with reference to the annual PD, not the lifetime PD.
 
 ### substandard
 HKMA LCS:
@@ -180,6 +180,51 @@ HKMA LCS:
 
 MAS 612:
 > this indicates that the outstanding credit facility is not collectable, and little or nothing can be done to recover the outstanding amount from any collateral or from the assets of the borrower generally. Consumer loans past due for 180 days or more fall under this classification.
+
+### stage_1_normal
+*Included for completeness, not recommended to use*
+
+### stage_1_watch
+*Included for completeness, not recommended to use*
+
+### stage_1_substandard
+*Included for completeness, not recommended to use*
+
+### stage_1_doubtful
+*Included for completeness, not recommended to use*
+
+### stage_1_loss
+*Included for completeness, not recommended to use*
+
+### stage_2_normal
+*Included for completeness, not recommended to use*
+
+### stage_2_watch
+*Included for completeness, not recommended to use*
+
+### stage_2_substandard
+*Included for completeness, not recommended to use*
+
+### stage_2_doubtful
+*Included for completeness, not recommended to use*
+
+### stage_2_loss
+*Included for completeness, not recommended to use*
+
+### stage_3_normal
+*Included for completeness, not recommended to use*
+
+### stage_3_watch
+*Included for completeness, not recommended to use*
+
+### stage_3_substandard
+*Included for completeness, not recommended to use*
+
+### stage_3_doubtful
+*Included for completeness, not recommended to use*
+
+### stage_3_loss
+*Included for completeness, not recommended to use*
 
 ---
 

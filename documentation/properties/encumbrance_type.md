@@ -14,6 +14,25 @@ With regards to asset encumbrance the [EBA][eba-report] mentions repos, covered 
 
 Encumbrance can also apply to real estate, including mortgages, easements, and property tax liens
 
+### real_estate
+
+### covered_bond
+
+### abs
+
+### cb_funding
+
+### repo
+
+### debenture
+
+### derivative
+
+### other
+
+### none
+
+
 ---
 
 [encumbrance_amount]: https://github.com/suadelabs/fire/blob/master/documentation/properties/encumbrance_amount.md

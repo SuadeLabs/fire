@@ -15,6 +15,7 @@ The **status** property indicates the current state of the financial product. A 
 ```bash
 ├── active
 ├── transactional
+├── other
 ├── cancelled
 └── cancelled_payout_agreed
 ```
@@ -38,6 +39,10 @@ The account has been cancelled but funds will be rolled-over in to another accou
 ### cancelled_payout_agreed
 The account has been cancelled and the funds are known to be leaving the financial institution.
 
+### other
+Any other status
+
+
 ## Customer
 
 ```bash
@@ -45,6 +50,8 @@ The account has been cancelled and the funds are known to be leaving the financi
 ```
 ### established
 The reporting institution has determined that the counterparty is part of an established relationship in accordance with the [Liquidity Regulations][lcr] Article 24 (2).
+
+
 ## Loan
 ```bash
 ├── actual
@@ -84,11 +91,11 @@ When used in combination with the purpose attribute, 'default_fund', equates to 
 [calledup]: https://www.investopedia.com/ask/answers/073015/what-difference-between-calledup-share-capital-and-paidup-share-capital.asp
 
 ### bankruptcy_remote
-This indicates that the reporting institution has determined that the security will not be available to an entity’s creditors 
-in the event of the insolvency of that entity. When used in combination with the purpose attributes indicates that collateral 
-posted by the reporting institution to its counterparty as initial or variation margin, is held in a bankruptcy-remote manner, 
+This indicates that the reporting institution has determined that the security will not be available to an entity’s creditors
+in the event of the insolvency of that entity. When used in combination with the purpose attributes indicates that collateral
+posted by the reporting institution to its counterparty as initial or variation margin, is held in a bankruptcy-remote manner,
 and is therefore segregated from the counterparty's assets, as defined in Articles 276(1)(g) and 300(1) CRR.
-When bankruptcy_remote is used in conjuction with the purpose 'custody', this indicates that the security held in custody will 
+When bankruptcy_remote is used in conjuction with the purpose 'custody', this indicates that the security held in custody will
 not be available to the custodian's creditors in the event of the insolvency of the custodian.
 
 ### non_operational

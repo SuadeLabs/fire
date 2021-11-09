@@ -17,37 +17,96 @@ Deposit **guarantee scheme** or ‘DGS’ means any scheme referred to in point 
 > (c) institutional protection schemes that are officially recognised as DGSs in accordance with Article 4(2);
 
 ## EU Deposit Guarantee Schemes
-- Belgium **(be_pf)**: Fonds de Protection (Protection Fund)
-- Bulgaria **(bg_dif)**: Deposit Insurance Fund (DIF)
-- Croatia **(hr_di)**: State Agency for Deposit Insurance and Bank Resolution (SAD)
-- Cyprus **(cy_dps)**: Deposit Protection Scheme (DPS)
-- Czech Republic **(cz_dif)**: Deposit Insurance Fund (DIF)
-- Denmark **(dk_gdfi)**: The Guarantee Fund for Depositers and Investors (GFDI)
-- Estonia **(ee_dgs)**: Deposit Guarantee Scheme (DGS) as defined by the Deposit Guarantee Act
-- Finland **(fi_dgf)**: Deposit Guarantee Fund (DGF)
-- France **(fr_fdg)**: Fonds de Garantie des Dépôts (FDG)
-- Germany:
-  * Private Banks **(de_edb)**: Entschädigungseinrichtung deutscher Banken GmbH (EdB)
-  * Public Banks **(de_edo)**: VÖB-Entschädigungseinrichtung GmbH (EdÖ)
-  * Brokerage companies **(de_edw)**: Entschädigungseinrichtung der Wertpapierhandelsunternehmen (EdW)
+### be_pf
+Belgium: Fonds de Protection (Protection Fund)
 
-- Greece **(gr_dgs)**: DGS
-- Hungary **(hu_ndif)**: National Deposit Insurance Fund (NDIF)
-- Ireland **(ie_dgs)**: Deposit Guarantee Scheme (DGS)
-- Italy **(it_fitd)**: Fondo Interbancario di Tutela dei Depositi (FITD)
-- Latvia **(lv_dgf)**: Deposit Guarantee Fund (DGF), in accordance with the Deposit Guarantee Law
-- Lithuania **(lt_vi)**: Valstybės įmonė Indėlių ir investicijų draudimas (VI)
-- Luxembourg **(lu_fgdl)**: Fonds de garantie des dépôts Luxembourg (FGDL)
-- Malta **(mt_dcs)**: Depositor Compensation Scheme (DCS)
-- Netherlands **(nl_dgs)**: Depositogarantiestelsel (DGS)
-- Poland **(pl_bfg)**: Bankowy Fundusz Gwarancyjny (BFG)
-- Portugal **(pt_fgd)**: Fundo de Garantia de Depósitos (FGD)
-- Romania **(ro_fgdb)**: Bank Deposit Guarantee Fund (FGDB)
-- Slovakia **(sk_dpf)**: Deposit Protection Fund (DPF)
-- Slovenia **(si_dgs)**: The central bank of the Republic of Slovenia (Banka Slovenije)
-- Spain **(es_fgd)**: Fondos de Garantía de Depósitos (FGD)
-- Sweden **(se_ndo)**: National Debt Office – Deposit Insurance (NDO)
-- United Kingdom **(gb_fscs)**: Financial Services Compensation Scheme (FSCS)
+### bg_dif
+Bulgaria: Deposit Insurance Fund (DIF)
+
+### hr_di
+Croatia: State Agency for Deposit Insurance and Bank Resolution (SAD)
+
+### cy_dps
+Cyprus: Deposit Protection Scheme (DPS)
+
+### cz_dif
+Czech Republic: Deposit Insurance Fund (DIF)
+
+### dk_gdfi
+Denmark: The Guarantee Fund for Depositers and Investors (GFDI)
+
+### ee_dgs
+Estonia: Deposit Guarantee Scheme (DGS) as defined by the Deposit Guarantee Act
+
+### fi_dgf
+Finland: Deposit Guarantee Fund (DGF)
+
+### fr_fdg
+France: Fonds de Garantie des Dépôts (FDG)
+
+### de_edb
+German Private Banks: Entschädigungseinrichtung deutscher Banken GmbH (EdB)
+
+### de_edo
+German Public Banks: VÖB-Entschädigungseinrichtung GmbH (EdÖ)
+
+### de_edw
+German Brokerage companies: Entschädigungseinrichtung der Wertpapierhandelsunternehmen (EdW)
+
+### gr_dgs
+Greece: DGS
+
+### hu_ndif
+Hungary: National Deposit Insurance Fund (NDIF)
+
+### ie_dgs
+Ireland: Deposit Guarantee Scheme (DGS)
+
+### it_fitd
+Italy: Fondo Interbancario di Tutela dei Depositi (FITD)
+
+### lv_dgf
+Latvia: Deposit Guarantee Fund (DGF), in accordance with the Deposit Guarantee Law
+
+### lt_vi
+Lithuania: Valstybės įmonė Indėlių ir investicijų draudimas (VI)
+
+### lu_fgdl
+Luxembourg: Fonds de garantie des dépôts Luxembourg (FGDL)
+
+### mt_dcs
+Malta: Depositor Compensation Scheme (DCS)
+
+### nl_dgs
+Netherlands: Depositogarantiestelsel (DGS)
+
+### pl_bfg
+Poland: Bankowy Fundusz Gwarancyjny (BFG)
+
+### pt_fgd
+Portugal: Fundo de Garantia de Depósitos (FGD)
+
+### ro_fgdb
+Romania: Bank Deposit Guarantee Fund (FGDB)
+
+### sk_dpf
+Slovakia: Deposit Protection Fund (DPF)
+
+### si_dgs
+Slovenia: The central bank of the Republic of Slovenia (Banka Slovenije)
+
+### es_fgd
+Spain: Fondos de Garantía de Depósitos (FGD)
+
+### se_ndo
+Sweden: National Debt Office – Deposit Insurance (NDO)
+
+### gb_fscs
+United Kingdom: Financial Services Compensation Scheme (FSCS)
+
+### us_fdic
+United States: Federal Deposit Insurance Corporation
+
 
 (Note: bank deposits are no longer guaranteed by the Austrian Government).
 

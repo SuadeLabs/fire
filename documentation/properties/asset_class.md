@@ -42,6 +42,87 @@ Primary asset classes are Foreign Exchange, Interest Rates, Credit, Equities, Co
 └── other
 ```
 
+### fx
+*Needs definition*
+
+### ir
+*Needs definition*
+
+### inflation
+*Needs definition*
+
+### cr
+*Needs definition*
+
+### cr_index
+*Needs definition*
+
+### cr_single
+*Needs definition*
+
+### eq
+*Needs definition*
+
+### eq_index
+*Needs definition*
+
+### eq_single
+*Needs definition*
+
+### co
+*Needs definition*
+
+### metals
+*Needs definition*
+
+### precious_metals
+*Needs definition*
+
+### gold
+*Needs definition*
+
+### silver
+*Needs definition*
+
+### platinum
+*Needs definition*
+
+### palladium
+*Needs definition*
+
+### energy
+*Needs definition*
+
+### oil
+*Needs definition*
+
+### gas
+*Needs definition*
+
+### coal
+*Needs definition*
+
+### electricity
+*Needs definition*
+
+### agri
+*Needs definition*
+
+### sugar
+*Needs definition*
+
+### coffee
+*Needs definition*
+
+### corn
+*Needs definition*
+
+### co_other
+*Needs definition*
+
+### other
+*Needs definition*
+
 
 ---
 

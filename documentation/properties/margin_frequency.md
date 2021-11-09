@@ -14,18 +14,25 @@ schemas:	[agreement]
 └── monthly
 ```
 
-In a credit support annex, the **margin_frequency** is the periodic timescale at which variation margin is exchanged. Can be one of the following values:
-    daily
-    daily_settled (applies to derivative margined and settled daily (when facing a ccp))
-    weekly
-    bi_weekly (every two weeks)
-    monthly
-    
-
-## Magin frequency in regulation
-
+In a credit support annex, the **margin_frequency** is the periodic timescale at which variation margin is exchanged.
 In the [Margin Requirements for non-cleared derivatives][bcbs_317], a *sufficient* frequency for exchanging variation margin is defined as **daily**.
 In the [CRR][CRR], the **margin_frequency** is used in Article 285 in order to derive the margin period of risk.
+
+### daily
+Margining occurs on a daily basis.
+
+### daily_settled
+Margining occurs on a daily basis and is also settled daily. (like when facing a ccp)
+
+### weekly
+Margining occurs on a weekly basis.
+
+### bi_weekly
+Margining occurs on a bi_weekly basis.
+
+### monthly
+Margining occurs on a monthly basis.
+
 
 ---
 [bcbs_317]: https://www.bis.org/bcbs/publ/d317.pdf

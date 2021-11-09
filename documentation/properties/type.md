@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "type"
-schemas:    [account, collateral, customer, derivative_cash_flow, derivative, entity, guarantor, issuer, loan_transaction, loan, security]
+schemas:    [account, agreement, collateral, customer, derivative_cash_flow, derivative, entity, guarantor, issuer, loan_transaction, loan, security]
 ---
 
 # type
@@ -80,6 +80,8 @@ Medium-sized     | < 250           | ≤ € 50 m      | ≤ € 43 m
 Small            | < 50            | ≤ € 10 m      | ≤ € 10 m
 Micro            | < 10            | ≤ € 2 m       | ≤ € 2 m
 
+### supported_sme
+An SME with special treatment under the capital adequacy rules, invoking a special multiplier for RWAs
 
 ### other
 Other means it is known to **not** be one of the other types. If type is unknown it should just be left blank.
@@ -212,6 +214,9 @@ A **regional government** is a government entity that only has control on a spec
 ### central_govt
 A **central government** is the government of a nation-state. While some countries may have **regional governments** that operate autonomously, the **central goverment** is the governing system that is concerned with issues that affect the entire nation.
 
+### local_authority
+
+
 ### pse
 A public sector entity is defined in the [FCA handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2242.html) as any of the following:
 
@@ -222,6 +227,8 @@ A public sector entity is defined in the [FCA handbook](https://www.handbook.fca
 >(c) non commercial undertakings owned by central governments that have explicit guarantee arrangements; or
 >
 >(d) self administered bodies governed by law that are under public supervision.
+
+### other_pse
 
 ### statutory_board
 >A specific distinction for Singaporean public sector entities. The statutory boards of the Singapore Government are organisations that have been given autonomy to perform an operational function by legal statutes passed as Acts in parliament. The statutes define the purpose, rights and powers of the authority. They usually report to one specific ministry.
@@ -733,6 +740,9 @@ The distinction here linked to financial promotions suggests that internet-only 
 ### isa
 An ISA is an individual savings account which is a scheme of investment satisfying the conditions prescribed in the UK's [ISA Regulations][uk-isa].
 
+### ira
+A trust created or organized in the United States for the exclusive benefit of an individual or his beneficiaries. See [US Code 408][ira]
+
 ### money_market
 A money market account is an interest-bearing account that typically pays a higher interest rate than a savings account, and which provides the account holder with limited check-writing ability.
 
@@ -832,21 +842,23 @@ Any other account type that cannot be classified as one of the other types.
 ├── vanilla_swap
 ├── mtm_swap
 ├── cds
-|   └── ccds
+│   └── ccds
 ├── ois
 ├── xccy
 ├── nds
 ├── option
-|   ├── option
-|   └── swaption
-|   └── cap_floor
+│   ├── swaption
+│   └── cap_floor
 ├── forward
-|   ├── future
-|   └── ndf
+│   ├── future
+│   └── ndf
 ├── fra
 ├── spot
 └── variance_swap
 ```
+
+### option
+
 ### cap_floor
 Options with multiple exercise and payment periods, generally used in relation to interest rate indices, but also in other asset classes
 
@@ -863,7 +875,7 @@ A [**credit default swap**][cds] means a derivative contract in which one party 
 
 
 ### ccds
-A [**contingent credit default swap**][ccds] (CCDS) is a variation of a credit default swap (CDS) where an additional triggering event is required. 
+A [**contingent credit default swap**][ccds] (CCDS) is a variation of a credit default swap (CDS) where an additional triggering event is required.
 
 [ccds]: https://www.investopedia.com/terms/c/contingent-credit-default-swap.asp
 
@@ -871,62 +883,51 @@ A [**contingent credit default swap**][ccds] (CCDS) is a variation of a credit d
 ### spot
 Spot Exchange
 
-### non deliverable forward (ndf)
-A [**non-deliverable forward**][ndf] is a cash-settled, and usually short-term, forward contract. The notional amount is never exchanged, hence the name "non-deliverable." Two parties agree to take opposite sides of a transaction for a set amount of money - at a contracted rate, in the case of a currency NDF. This means that counterparties settle the difference between contracted NDF price and the prevailing spot price. The profit or loss is calculated on the notional amount of the agreement by taking the difference between the agreed-upon rate and the spot rate at the time of settlement
+### ndf
+A [**non-deliverable forward**][ndf] is a cash-settled, and usually short-term, forward contract. The notional amount is never exchanged, hence the name "non-deliverable." Two parties agree to take opposite sides of a transaction for a set amount of money - at a contracted rate, in the case of a currency NDF. This means that counterparties settle the difference between contracted NDF price and the prevailing spot price. The profit or loss is calculated on the notional amount of the agreement by taking the difference between the agreed-upon rate and the spot rate at the time of settlement.
+NDFs are also known as forward contracts for differences (FCD).
 
 [ndf]: https://www.investopedia.com/terms/n/ndf.asp
 
-### non deliverable swap (nds)
+### nds
 A [**non-deliverable swap**][nds] is a variation on a currency swap between major and minor currencies that is restricted or not convertible. This means that there is no actual delivery of the two currencies involved in the swap, unlike a typical currency swap where there is physical exchange of currency flows. Instead, periodic settlement of a NDS is done on a cash basis, generally in U.S. dollars.
 
 The settlement value is based on the difference between the exchange rate specified in the swap contract and the spot rate, with one party paying the other the difference. A non-deliverable swap can be viewed as a series of non-deliverable forwards bundled together.
 
 [nds]: https://www.investopedia.com/terms/n/nondeliverableswap.asp
 
-### forward rate agreement (fra)
+### fra
 A [**forward rate agreement**][fra] is an interest rate forward contract in which the rate to be paid or received on a specific obligation for a set period of time, beginning at some time in the future, is determined at contract initiation.
 
 [fra]: https://www.bis.org/statistics/glossary.htm?&selection=315&scope=Statistics&c=a&base=term
 
 ### variance_swap
-A variance swap is an instrument which allows investors to trade future realized (or historical) volatility against current implied volatility. 
+A variance swap is an instrument which allows investors to trade future realized (or historical) volatility against current implied volatility.
 
+### forward
+A forward is a non-standardized contract between two parties to buy or sell an asset at a specified future time at a price agreed on at the time of conclusion of the contract, making it a type of derivative instrument. The party agreeing to buy the underlying asset in the future assumes a long position, and the party agreeing to sell the asset in the future assumes a short position. The price agreed upon is called the delivery price, which is equal to the forward price at the time the contract is entered into.
+The price of the underlying instrument, in whatever form, is paid before control of the instrument changes.
 
-# leg_type
-The **leg_type** is used to describe the payoff type of a derivative leg, which may be part of an instrument refered to in the derivative_type attibute (eg. vanilla_swap). The atribute is an enum with the following members:
+### future
+A futures contract (sometimes called futures) is a standardized legal agreement to buy or sell something at a predetermined price at a specified time in the future, between parties not known to each other. The asset transacted is usually a commodity or financial instrument. The predetermined price the parties agree to buy and sell the asset for is known as the forward price. The specified time in the future—which is when delivery and payment occur—is known as the delivery date. Because it is a function of an underlying asset, a futures contract is a derivative product.
 
-```bash
-├── fixed
-├── floating
-├── indexed
-├── call
-└── put
-```
-### fixed
-- leg paying fixed interest amounts equal to  **rate** multiplied by **notional_amount**, adjusted according to the day count fraction of each calculation period
+Contracts are negotiated at futures exchanges, which act as a marketplace between buyers and sellers. The buyer of a contract is said to be the long position holder and the selling party is said to be the short position holder.
 
-### floating
-- leg paying variable interest amounts equal to **notional_amount** multiplied by the value of the **underlying_index**, adjusted according to the day count fraction of each calculation period
+### mtm_swap
 
-### indexed
-- leg which pays variable principal amounts equal to the **notional amount** multiplied the performance of the **underlying_index** or the underlying_security (referred to as its **underlying_security_id**) on each payment date. An index leg can also pay floating rate interest amounts equal to **rate** multiplied by the indexed **notional_amount**,adjusted according to the day count fraction of each calculation period
+### vanilla_swap
 
+### xccy
+A derivative contract, agreed between two counterparties, which specifies the nature of an exchange of payments benchmarked against two interest rate indexes denominated in two different currencies. It also specifies an initial exchange of notional currency in each different currency and the terms of that repayment of notional currency over the life of the swap.
 
-### call
-- leg with pays a variable amount equal to the **notional_amount** multiplied by max(0, underlying - strike), where underlying is the **underlying_index** or the underlying_security (referred to as its **underlying_security_id**)
+The most common XCS, and that traded in interbank markets, is a mark-to-market (MTM) XCS, whereby notional exchanges are regularly made throughout the life of the swap according to FX rate fluctuations. This is done to maintain a swap whose MTM value remains neutral and does not become either a large asset or liability (due to FX rate fluctuations) throughout its life.
 
-### put
-- leg with pays a variable amount equal to the **notional_amount** multiplied by max(0, strike - underlying), where underlying is the **underlying_index** or the underlying_security (referred to as its **underlying_security_id**)
-
-
-### fixed
-fixed leg paying a fixed rate
 
 
 # collateral
 ```bash
 ├── residential_property
-|   └── multifamily
+│   └── multifamily
 ├── farm
 ├── commercial_property
 ├── immovable_property
@@ -944,16 +945,125 @@ The [EC Collateral Directive][arrangement] states:
 ### residential_property
 Property composed of one or more dwellings.
 
+### commercial_property
+*NEEDS Definition*
 
 ### multifamily
 Property composed of five or more residential dwellings.
 [US Census Bureau definition][us-census-multifamily]:
 > buildings with five units or more
 
-
 ### immovable_property
 As per Artcile 124(1) [CRR][crr], this identifies **immovable property**
 collateral that cannot be classified as residential or commercial property.
+
+### farm
+*NEEDS Definition*
+
+
+### guarantee
+*NEEDS Definition*
+
+### debenture
+*NEEDS Definition*
+
+### life_policy
+*NEEDS Definition*
+
+### cash
+*NEEDS Definition*
+
+### other
+*NEEDS Definition*
+
+
+# Agreement
+
+```bash
+├── gmra
+│   ├── icma_1992
+│   ├── icma_1995
+│   ├── icma_2000
+│   ├── icma_2011
+│   └── other_gmra
+├── isda
+│   ├── isda_1985
+│   ├── isda_1986
+│   ├── isda_1987
+│   ├── isda_1992
+│   ├── isda_2002
+│   └── other_isda
+└── other
+```
+
+
+### gmra
+From the [ICMA website][icma-web]:
+Global Master Repurchase Agreement. Covers SFTs like repos, reverse repos, stock lending etc.
+Since the early 1990s ICMA has devoted considerable resources to developing a standard master agreement for repo transactions in conjunction with the Securities Industry and Financial Markets Association (SIFMA). The first version of the GMRA was published in 1992 and followed by substantially revised versions in 1995, 2000 and 2011.
+
+ICMA obtains and annually updates opinions from numerous jurisdictions worldwide on the GMRA 1995, 2000 and 2011 versions.
+
+**The ERCC recently took a decision to discontinue coverage of the GMRA 1995 in the ICMA GMRA legal opinions from 2019 onwards. For further information contact legalhelpdesk@icmagroup.org**
+
+
+### icma_1992
+The 1992 version of the GMRA agreement.
+
+### icma_1995
+The 1995 version of the GMRA agreement.
+
+### icma_2000
+The 2000 version of the GMRA agreement.
+
+### icma_2011
+The 2011 version of the GMRA agreement.
+
+### other_gmra
+Any other repurchase agreement.
+
+### isda
+From [Investopedia][isda-investo]:
+> An ISDA Master Agreement is the standard document regularly used to govern over-the-counter derivatives transactions. The agreement, which is published by the International Swaps and Derivatives Association (ISDA), outlines the terms to be applied to a derivatives transaction between two parties, typically a derivatives dealer and a counterparty. The ISDA Master Agreement itself is standard, but it is accompanied by a customized schedule and sometimes a credit support annex, both of which are signed by the two parties in a given transaction.
+
+More info can be found from [ISDA][isda] itself.
+
+### isda_1985
+The 1985 version of the ISDA agreement.
+
+### isda_1986
+The 1986 version of the ISDA agreement.
+
+### isda_1987
+The 1987 version of the ISDA agreement.
+
+### isda_1992
+The 1992 version of the ISDA agreement.
+
+### isda_2002
+The 2002 version of the ISDA agreement.
+
+### other_isda
+Any other ISDA agreement.
+
+### other
+Any other agreement. If you use this a lot, get in touch, maybe we need more types!
+
+
+
+# curve
+
+### behavioral
+A curve describing the behavior of a product or customer segment under certain (stress) conditions
+
+### rate
+An interest rate curve
+
+### volatility
+A volatility curve (smile)
+
+
+---
 
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575
 
@@ -1003,3 +1113,7 @@ collateral that cannot be classified as residential or commercial property.
 [us-census-multifamily]: https://www.census.gov/construction/nrc/index.html
 
 
+[icma-web]: http://dev.icmagroup.org/Regulatory-Policy-and-Market-Practice/repo-and-collateral-markets/legal-documentation/global-master-repurchase-agreement-gmra/
+[isda-investo]: https://www.investopedia.com/terms/i/isda-master-agreement.asp
+[isda]: https://isda.org
+[ira]: https://www.law.cornell.edu/uscode/text/26/408

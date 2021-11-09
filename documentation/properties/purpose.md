@@ -160,6 +160,36 @@ Operational deposit from the [LCR][lcr] Article 27.6:
 > Only that part of the deposit which is necessary to make use of the service of which the deposit is a by-product shall be treated as an operational deposit. The excess shall be treated as non-operational.
 Where the depositor is the reporting entity, the loan schema should be used. Where the depositor is the other party, the account schema should be used.
 
+### cash_management
+*Needs definition*
+
+### critical_service
+*Needs definition*
+
+### div_from_cis
+*Needs definition*
+
+### div_from_money_mkt
+*Needs definition*
+
+### firm_operating_expenses
+*Needs definition*
+
+### firm_operations
+*Needs definition*
+
+### int_on_derivative
+*Needs definition*
+
+### loan_and_advance_fee
+*Needs definition*
+
+### retained_earnings
+*Needs definition*
+
+### system
+*Needs definition*
+
 ### operational_excess
 Excess operational deposits are defined as the part of the operational deposits (as defined in [LCR][lcr] Article 27.6) held in excess of those required for the provision of operational services. The distinction between operational deposits and excess operational deposits is required for the reporting of section 1.1.3 in the ouflows section of the [LCR][lcr]
 
@@ -441,7 +471,7 @@ In the context of [CRR][crr] Article 329, a reference derivative would be the un
 
 ### client_execution
 Derivatives given this purpose value represent execution of orders on behalf of clients.
-‘Execution of orders on behalf of clients’ means acting to conclude agreements to buy or sell one or more financial instruments 
+‘Execution of orders on behalf of clients’ means acting to conclude agreements to buy or sell one or more financial instruments
 on behalf of clients and includes the conclusion of agreements to sell financial instruments issued by an investment firm or a credit institution at the moment of their issuance. [Article 4(1)(5) of Directive 2014/65/EU (MiFID].
 
 ### client_transmission
@@ -527,7 +557,7 @@ From [CRR][crr] Article 113(7):
 ### lifetime_mortgage
 >A **lifetime_mortgage** is a very specific kind of British mortgage contract and is defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G1294.html). It is geared towards customers of a certain age in order to release equity and typically repayment occurs at the time of the customers death when the property is sold;
 
-### operational 
+### operational
 *(see operational under account)*
 
 ### promotional
