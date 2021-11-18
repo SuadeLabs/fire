@@ -36,6 +36,12 @@
         "description": "Is the security (valued at either amortised cost or fair value) an asset or a liability on the firm's balance sheet.",
         "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/asset_liability"
       },
+    "attachment_point": {
+      "description": "The threshold at which losses within the pool of underlying exposures would start to be allocated to the relevant securitisation position.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
     "balance": {
       "description": "Outstanding amount including accrued interest. Monetary integer number of cents/pence.",
       "type": "integer",
@@ -127,6 +133,12 @@
     "deal_id": {
       "description": "The unique identifier used by the financial institution to identify the deal for this product that links it to other products of the same or different type.",
       "type": "string"
+    },
+    "detachment_point": {
+      "description": "The threshold at which losses within the pool of underlying exposures would result in a complete loss of principal for the tranche containing the relevant securitisation position.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
     },
     "encumbrance_amount": {
       "description": "The amount of the security that is encumbered by potential future commitments or legal liabilities such as within a repo pool. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -359,6 +371,11 @@
       "type": "integer",
       "minimum": 1,
       "maximum": 10
+    },
+    "securitisation_type": {
+      "description": "The type of securitisation with regards to common regulatory classifications.",
+      "type": "string",
+      "enum": ["sts"]
     },
     "seniority": {
       "description": "The seniority of the security in the event of sale or bankruptcy of the issuer.",
