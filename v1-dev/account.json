@@ -206,6 +206,11 @@
       "type": "integer",
       "minimum": 0
     },
+    "mtd_interest_paid": {
+      "description": "Month to date interest added to account as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
     "mtd_withdrawals": {
       "description": "Month to date amount withdrawn from the account as a naturally positive integer number of cents/pence.",
       "type": "integer",
