@@ -2,9 +2,9 @@ import unittest
 
 from openpyxl.utils import get_column_letter
 
-from fireschematoexcel.schematoexcel import read_json, test_jsontoexcel
+from ..fireschematoexcel.schematoexcel import read_json, test_jsontoexcel
 
-from fireschematoexcel.schematoexcel import JSON_SCHEMAS, PRODUCT_SEED
+from ..fireschematoexcel.schematoexcel import JSON_SCHEMAS, PRODUCT_SEED
 
 from . import schema_enum_registry
 
