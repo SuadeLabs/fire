@@ -3,9 +3,9 @@ import json
 
 from openpyxl import Workbook
 from openpyxl.styles import PatternFill, Font, Border, Side, Alignment
-from openpyxl.styles.fonts import Font
 from openpyxl.worksheet.datavalidation import DataValidation
 from openpyxl.utils import get_column_letter
+
 
 # Error for unhandled exceptions
 class UnhandledException(Exception):
@@ -13,6 +13,7 @@ class UnhandledException(Exception):
     def __init__(self, message="An unhandled exception occured!"):
         self.message = message
         super().__init__(self.message)
+
 
 # Styles
 # Monospaced typeface required in order to
@@ -40,38 +41,56 @@ header_font = Font(
 )
 
 # header allignment
-header_alignment = Alignment(horizontal='center',
-                    vertical='center'
+header_alignment = Alignment(
+    horizontal='center',
+    vertical='center'
 )
 
 # colours
-enumFill = PatternFill(start_color='44ad70',
-                   end_color='44ad70',
-                   fill_type='solid')
-
-blankFill = PatternFill(start_color='757a82',
-                   end_color='757a82',
-                   fill_type='solid')
-
-# Cell borders
-content_border = Border(left=Side(border_style='medium',
-                                color='FF000000'),
-                    right=Side(border_style='medium',
-                                color='FF000000'),
-                    top=Side(border_style='thin',
-                                color='FF000000'),
-                    bottom=Side(border_style='thin',
-                                color='FF000000')
+enumFill = PatternFill(
+    start_color='44ad70',
+    end_color='44ad70',
+    fill_type='solid'
 )
 
-header_border = Border(left=Side(border_style='medium',
-                                color='FF000000'),
-                    right=Side(border_style='medium',
-                                color='FF000000'),
-                    top=Side(border_style='medium',
-                                color='FF000000'),
-                    bottom=Side(border_style='medium',
-                                color='FF000000')
+blankFill = PatternFill(
+    start_color='757a82',
+    end_color='757a82',
+    fill_type='solid'
+)
+
+# Cell borders
+content_border = Border(
+    left=Side(
+        border_style='medium',
+        color='FF000000'
+    ),
+    right=Side(
+        border_style='medium',
+        color='FF000000'),
+    top=Side(
+        border_style='thin',
+        color='FF000000'),
+    bottom=Side(
+        border_style='thin',
+        color='FF000000'
+    )
+)
+
+header_border = Border(
+    left=Side(
+        border_style='medium',
+        color='FF000000'),
+    right=Side(
+        border_style='medium',
+        color='FF000000'),
+    top=Side(
+        border_style='medium',
+        color='FF000000'),
+    bottom=Side(
+        border_style='medium',
+        color='FF000000'
+    )
 )
 
 # directory paths
@@ -85,28 +104,17 @@ SCHEMA_TAB_COLOR = "5ca0db"
 ENUM_TAB_COLOR = "5cdb9a"
 ITEM_TAB_COLOR = "dbc05c"
 
-SCHEMA_NAMES = [
-    "account",
-    "loan",
-    "derivative",
-    "security",
-    "customer",
-    "issuer"    
-]
+SCHEMAS_DIR = os.path.join(base_path, "v1-dev")
+_, _, filenames = next(os.walk(SCHEMAS_DIR), (None, None, []))
+SCHEMA_FILES = [f for f in filenames if f.endswith(".json") and "common" not in f and "entity" not in f] # noqa
+
+SCHEMA_NAMES = [n.replace(".json", "") for n in SCHEMA_FILES]
 
 PRODUCT_SEED = os.path.join(base_path, "v1-dev", "common.json")
-PRODUCT_SCHEMAS = {
-    "account": os.path.join(base_path, "v1-dev", "account.json"),
-    "derivative": os.path.join(base_path, "v1-dev", "derivative.json"),
-    "loan": os.path.join(base_path, "v1-dev", "loan.json"),
-    "security": os.path.join(base_path, "v1-dev", "security.json")
-}
-
 ENTITY_SEED = os.path.join(base_path, "v1-dev", "entity.json")
-ENTITY_SCHEMAS = {
-    "customer": os.path.join(base_path, "v1-dev", "customer.json"),
-    "issuer": os.path.join(base_path, "v1-dev", "issuer.json")
-}
+
+JSON_SCHEMAS = dict([(f.split(".json")[0], os.path.join(base_path, "v1-dev", f)) for f in SCHEMA_FILES]) # noqa
+
 
 def get_ws_headers(data):
     """
@@ -118,6 +126,7 @@ def get_ws_headers(data):
         if key[0] != "$" and key != "properties" and key != "allOf":
             headers[key] = data[key]
     return headers
+
 
 def get_prop_columns(data):
     """
@@ -132,17 +141,19 @@ def get_prop_columns(data):
     for col in columns:
         if col[0] == "$":
             columns.remove(col)
-        # move description to the end since it's plain text and sometimes quite large
+        # move description to the end since it's plain text
+        # and sometimes quite large
         if "description" in columns:
             columns.remove("description")
             columns.append("description")
     return columns
 
-def write_excel(wb, ws_name, schema_data, rootschema=False, ws_row=False, ws_col=False):
+
+def write_excel(wb, ws_name, schema_data, rootschema=False, ws_row=False, ws_col=False): # noqa
     """
     function used to write schema excel sheet
     """
-    if not ws_name in wb.sheetnames:
+    if ws_name not in wb.sheetnames:
         ws_headers = get_ws_headers(schema_data)
 
         # reset global enum column
@@ -155,6 +166,14 @@ def write_excel(wb, ws_name, schema_data, rootschema=False, ws_row=False, ws_col
         required_atrs = []
         if "required" in ws_headers:
             required_atrs = ws_headers["required"]
+
+        # extract requirements from adjustment schema
+        if "oneOf" in ws_headers:
+            for itm in ws_headers["oneOf"]:
+                key = [k for k in itm.keys()][0]
+                for rq in itm[key]:
+                    required_atrs.append(rq)
+            required_atrs = list(set(required_atrs))
 
         # write schema metadata
         row = write_ws_headers(ws, ws_headers)
@@ -175,14 +194,14 @@ def write_excel(wb, ws_name, schema_data, rootschema=False, ws_row=False, ws_col
                 col += 1
                 ws.cell(row=hdr_col_row, column=col).value = hdr
                 ws.cell(row=hdr_col_row, column=col).font = header_font
-                ws.cell(row=hdr_col_row, column=col).alignment = header_alignment
+                ws.cell(row=hdr_col_row, column=col).alignment = header_alignment # noqa
                 ws.cell(row=hdr_col_row, column=col).border = header_border
                 hdr_cols[hdr] = col
             row += 1
 
             # write property row for each property in the <schema>
             for prop in properties:
-                row, cur_enum_col = json_prop_to_excel_row(wb, ws_name, ws, prop, properties[prop], hdr_cols, row, cur_enum_col)
+                row, cur_enum_col = json_prop_to_excel_row(wb, ws_name, ws, prop, properties[prop], hdr_cols, row, cur_enum_col) # noqa
                 if prop in required_atrs:
                     ws.cell(row=row-1, column=2).font = header_font
 
@@ -192,9 +211,10 @@ def write_excel(wb, ws_name, schema_data, rootschema=False, ws_row=False, ws_col
         # since these items can be viewed as pseudoschemas
         # and are created as a separate worksheet for readability
         ws = wb[rootschema]
-        ws.cell(row=ws_row, column=ws_col).value = f'=HYPERLINK("#{ws_name}!B2", "{ws_name}")'
+        ws.cell(row=ws_row, column=ws_col).value = f'=HYPERLINK("#{ws_name}!B2", "{ws_name}")' # noqa
         ws.cell(row=ws_row, column=ws_col).font = content_font
         ws.cell(row=ws_row, column=ws_col).border = content_border
+
 
 def get_enum_ws(wb, enum_name):
     if f"{enum_name}_enums" not in wb.sheetnames:
@@ -202,6 +222,7 @@ def get_enum_ws(wb, enum_name):
     else:
         enum_ws = wb[f"{enum_name}_enums"]
     return enum_ws
+
 
 def create_enum(wb, ws_name, row, col, name, enum_vals, cur_enum_col):
     """
@@ -211,7 +232,7 @@ def create_enum(wb, ws_name, row, col, name, enum_vals, cur_enum_col):
     """
     ws = wb[ws_name]
     enum_ws = get_enum_ws(wb, ws_name)
-    
+
     # add header to enum column
     enum_ws[f"{get_column_letter(cur_enum_col)}2"].value = name
     enum_ws[f"{get_column_letter(cur_enum_col)}2"].font = header_font
@@ -222,14 +243,15 @@ def create_enum(wb, ws_name, row, col, name, enum_vals, cur_enum_col):
     for i in range(len(enum_vals)):
         enum_ws[f"{get_column_letter(cur_enum_col)}{i+3}"].value = enum_vals[i]
         enum_ws[f"{get_column_letter(cur_enum_col)}{i+3}"].font = content_font
-        enum_ws[f"{get_column_letter(cur_enum_col)}{i+3}"].border = content_border
+        enum_ws[f"{get_column_letter(cur_enum_col)}{i+3}"].border = content_border # noqa
 
     # create data validation formula based on:
     # sheet name, and collumn range of the enum data
     # and apply it to the appropriate cell inside
     # the <schema> sheet
-    data_val = DataValidation(type="list",formula1=\
-        f"={enum_ws._WorkbookChild__title}!${get_column_letter(cur_enum_col)}$3:${get_column_letter(cur_enum_col)}${len(enum_vals)+2}")
+    data_val = DataValidation(
+        type="list",
+        formula1=f"={enum_ws._WorkbookChild__title}!${get_column_letter(cur_enum_col)}$3:${get_column_letter(cur_enum_col)}${len(enum_vals)+2}") # noqa
     ws.add_data_validation(data_val)
     data_val.add(ws[f"{get_column_letter(col)}{row}"])
 
@@ -237,16 +259,20 @@ def create_enum(wb, ws_name, row, col, name, enum_vals, cur_enum_col):
     ws[f"{get_column_letter(col)}{row}"].fill = enumFill
     ws[f"{get_column_letter(col)}{row}"].font = content_font
     ws[f"{get_column_letter(col)}{row}"].border = content_border
-    
+
     # increment enum column
     return cur_enum_col + 1
 
-def json_prop_to_excel_row(wb, ws_name, ws, prop, properties, hdr_cols, row, cur_enum_col):
+
+def json_prop_to_excel_row(wb, ws_name, ws, prop, properties, hdr_cols, row, cur_enum_col): # noqa
     """
-    converts the property and associated attributes from the json dictionary to an excel row
-    enums are converted into a dropdown list
-    items are converted into separate pseudoschema worksheets linked to via hyperlink
-    this ensures human readability and an organised way of displaying property information
+    converts the property and associated attributes
+    from the json dictionary to an excel row:
+    - enums are converted into a dropdown list
+    - items are converted into separate pseudoschema worksheets
+    linked to via hyperlink
+    this ensures human readability and an organised way
+    of displaying property information
     """
     ws.cell(row=row, column=hdr_cols["property"]).value = prop
     ws.cell(row=row, column=hdr_cols["property"]).font = content_font
@@ -258,42 +284,95 @@ def json_prop_to_excel_row(wb, ws_name, ws, prop, properties, hdr_cols, row, cur
             ws.cell(row=row, column=hdr_cols[key]).border = content_border
         except ValueError:
             if key == "enum":
-                cur_enum_col = create_enum(wb, ws_name, row, hdr_cols[key], prop, properties[key], cur_enum_col)
+                cur_enum_col = create_enum(wb, ws_name, row, hdr_cols[key], prop, properties[key], cur_enum_col) # noqa
             elif key == "items":
-                write_excel(wb, prop, properties[key], ws_name, row, hdr_cols[key])
+                write_excel(wb, prop, properties[key], ws_name, row, hdr_cols[key]) # noqa
             else:
-                raise UnhandledException # stop execution in case of unhandled exception
+                raise UnhandledException  # stop execution in case of unhandled exception # noqa
 
     return row + 1, cur_enum_col
 
+
+def get_list_items(ref_list):
+    """
+    return a dict of allowed data items
+    used for the batch.json schema
+    """
+    schemas = "["
+    for itm in ref_list:
+        key = [k for k in itm.keys()][0]
+        schemas += f'{itm[key].split("/")[-1].replace(".json#", "")}|'
+    return schemas[:-1] + "]"
+
+
+def get_required_items(req_list):
+    """
+    convert required properties list
+    to string
+    """
+    reqs = "["
+    for rq in req_list:
+        reqs += f'{rq}|'
+    return reqs[:-1] + "]"
+
+
+def get_contribution_requirements(req_dict):
+    """
+    load the contribution.json schema requirements
+    as a string
+    """
+    reqs = "["
+    for itm in req_dict:
+        key = [k for k in itm.keys()][0]
+        for rq in itm[key]:
+            reqs += f'{rq}|'
+        reqs = reqs[:-1] + "] OR ["
+    return reqs[:-5]
+
+
 def write_ws_headers(ws, ws_headers):
-    row=1
-    col=2
+    row = 1
+    col = 2
     for key in ws_headers:
         row += 1
-        ws.cell(row=row, column=col).value = key
-        ws.cell(row=row, column=col).font = header_font
-        ws.cell(row=row, column=col).alignment = header_alignment
         try:
+            ws.cell(row=row, column=col).value = key
+            ws.cell(row=row, column=col).font = header_font
+            ws.cell(row=row, column=col).alignment = header_alignment
             ws.cell(row=row, column=col+1).value = ws_headers[key]
             ws.cell(row=row, column=col+1).font = content_font
         # triggered by the required attributes list
         # and the "allOf" dictionary
         except ValueError:
             if key == "required":
-                cl = col + 1
-                for req in ws_headers[key]:
-                    ws.cell(row=row, column=cl).value = req
-                    ws.cell(row=row, column=cl).font = content_font
-                    cl+=1
+                ws.cell(row=row, column=col).value = key
+                ws.cell(row=row, column=col).font = header_font
+                ws.cell(row=row, column=col).alignment = header_alignment
+                ws.cell(row=row, column=col+1).value = get_required_items(ws_headers[key]) # noqa
+                ws.cell(row=row, column=col+1).font = content_font
             # ignore "allOf" dictionary since it is imported
             # inside the "properties" dictionary earlier
             elif key == "allOf":
                 pass
+            # exception for batch.json schema
+            elif key == "anyOf":
+                ws.cell(row=row, column=col).value = key
+                ws.cell(row=row, column=col).font = header_font
+                ws.cell(row=row, column=col).alignment = header_alignment
+                ws.cell(row=row, column=col+1).value = get_list_items(ws_headers[key]) # noqa
+                ws.cell(row=row, column=col+1).font = content_font
+            # exception for adjustment.json schema
+            elif key == "oneOf":
+                ws.cell(row=row, column=col).value = "one of required"
+                ws.cell(row=row, column=col).font = header_font
+                ws.cell(row=row, column=col).alignment = header_alignment
+                ws.cell(row=row, column=col+1).value = get_contribution_requirements(ws_headers[key]) # noqa
+                ws.cell(row=row, column=col+1).font = content_font
             else:
                 raise UnhandledException
 
-    return row # returns the last row populated with header data
+    return row  # returns the last row populated with header data
+
 
 def reorder_sheets(wb):
     """
@@ -318,6 +397,7 @@ def reorder_sheets(wb):
         if ws.title in SCHEMA_NAMES:
             ws.sheet_properties.tabColor = SCHEMA_TAB_COLOR
 
+
 def format_excel(wb):
     """
     format excel for human readability
@@ -326,13 +406,14 @@ def format_excel(wb):
     dflt = [sh for sh in wb.sheetnames if sh.lower().find("sheet") != -1]
     for sh in dflt:
         wb.remove(wb[sh])
-    
+
     for ws_name in wb.sheetnames:
         ws = wb[ws_name]
 
-        # list comprehension that returns a list of all the cells in the worksheet which have data validations
+        # list comprehension that returns a list of all the cells
+        # in the worksheet which have data validations
         # this effectively returns the list of enum cells
-        enum_cells = [ws.cell(cell[0], cell[1]) for validation in ws.data_validations.dataValidation for cell in validation.ranges.ranges[0].cells]
+        enum_cells = [ws.cell(cell[0], cell[1]) for validation in ws.data_validations.dataValidation for cell in validation.ranges.ranges[0].cells] # noqa
 
         dims = {}
         if "enum" in ws_name:
@@ -351,23 +432,26 @@ def format_excel(wb):
             if not skip:
                 for cell in row:
                     if cell.value:
-                        # for links to items we only want the length of the displayed name, not the whole formula
-                        if type(cell.value) == str and "HYPERLINK" in cell.value:
+                        # for links to items we only want
+                        # the length of the displayed name,
+                        # not the whole formula
+                        if type(cell.value) == str and "HYPERLINK" in cell.value: # noqa
                             str_val = cell.value.split('"')[-2]
-                            dims[cell.column_letter] = max((dims.get(cell.column_letter, 0), len(str_val)))
+                            dims[cell.column_letter] = max((dims.get(cell.column_letter, 0), len(str_val))) # noqa
                         else:
-                            dims[cell.column_letter] = max((dims.get(cell.column_letter, 0), len(str(cell.value))))
+                            dims[cell.column_letter] = max((dims.get(cell.column_letter, 0), len(str(cell.value)))) # noqa
                     # beautify cells by greying out blanks
                     # and adding borders to these cells
-                    if cell.value is None and cell not in enum_cells and cell.column_letter != "A" and cell.row != 1:
+                    if cell.value is None and cell not in enum_cells and cell.column_letter != "A" and cell.row != 1: # noqa
                         cell.fill = blankFill
-                        if not "enum" in ws_name:
+                        if "enum" not in ws_name:
                             cell.border = content_border
         for col, value in dims.items():
             ws.column_dimensions[col].width = value
 
     # reorder sheets and colour tabs
     reorder_sheets(wb)
+
 
 def read_json(path, common_seed=None):
     """
@@ -391,9 +475,10 @@ def read_json(path, common_seed=None):
                         common_data = read_json(common_seed)
                         prprty = data["properties"][itm][key].split("/")[-1]
                         for atr in common_data[prprty]:
-                            data["properties"][itm][atr] = common_data[prprty][atr]
+                            data["properties"][itm][atr] = common_data[prprty][atr] # noqa
                         data["properties"][itm].pop("$ref")
         return data
+
 
 def jsontoexcel():
     """
@@ -404,16 +489,28 @@ def jsontoexcel():
     if os.path.exists(excel_file):
         os.remove(excel_file)
     wb = Workbook()
-    for key in PRODUCT_SCHEMAS:
-        json_data = read_json(PRODUCT_SCHEMAS[key], PRODUCT_SEED)
+    for key in JSON_SCHEMAS:
+        json_data = read_json(JSON_SCHEMAS[key], PRODUCT_SEED)
         write_excel(wb, key, json_data)
-    
-    for key in ENTITY_SCHEMAS:
-        json_data = read_json(ENTITY_SCHEMAS[key], PRODUCT_SEED)
-        write_excel(wb, key, json_data)
-    
+
     format_excel(wb)
     wb.save(excel_file)
+
+
+def test_jsontoexcel():
+    """
+    same as jsontoexcel
+    doesn't save the workbook
+    instead returns it for testing purposes
+    """
+    wb = Workbook()
+    for key in JSON_SCHEMAS:
+        json_data = read_json(JSON_SCHEMAS[key], PRODUCT_SEED)
+        write_excel(wb, key, json_data)
+
+    format_excel(wb)
+    return wb
+
 
 if __name__ == "__main__":
     jsontoexcel()
