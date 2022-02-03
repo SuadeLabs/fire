@@ -8,19 +8,5 @@
     "allOf": [{
         "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/entity.json"
       }],
-    "properties": {
-        "relationship": {
-            "description": "Relationship to parent.",
-            "type": "string",
-            "enum": [
-              "branch",
-              "head_office",
-              "jv",
-              "parent",
-              "parent_branch",
-              "parent_subsidiary",
-              "subsidiary"
-            ]
-        }
-    }
+    "properties": {}
 }
