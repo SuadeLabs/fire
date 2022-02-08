@@ -257,7 +257,7 @@
       "type": "string"
     },
     "main_index": {
-      "description": "Is this product a main index?"
+      "description": "Is the security part of a main index?",
       "type": "boolean"
     },
     "maturity_date": {
