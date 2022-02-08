@@ -499,6 +499,7 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │   ├── frn
 │   ├── commercial_paper
 │   ├── cd
+|   ├── clo
 │   ├── struct_note
 │   ├── spv_mortgages
 │   ├── spv_other
@@ -572,6 +573,9 @@ Commercial paper is an unsecured promissory note with a fixed maturity of, typic
 
 ### cd
 A certificate of deposit is also a promissory note, however can only be issued by a bank. It has a fixed maturity and specified fixed interest rate.
+
+### clo
+Collateralised Loan Obligation. A collateralized loan obligation (CLO) is a single security backed by a pool of debt.
 
 ### bill_of_exchange
 *Needs definition*
