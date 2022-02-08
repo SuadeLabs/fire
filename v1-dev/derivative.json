@@ -293,6 +293,7 @@
         "cap_floor",
         "ccds",
         "cds",
+	"clo",
         "forward",
         "fra",
         "future",
