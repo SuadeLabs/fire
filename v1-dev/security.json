@@ -256,6 +256,10 @@
       "description": "The internal ledger code or line item name.",
       "type": "string"
     },
+    "main_index": {
+      "description": "Is this product a main index?"
+      "type": "boolean"
+    },
     "maturity_date": {
       "description": "The date on which the principal repayment of the security is due. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
