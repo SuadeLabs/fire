@@ -4,7 +4,7 @@ title:		"single_income"
 schemas:	[loan]
 ---
 
-# secured
+# single_income
 
 ---
 
