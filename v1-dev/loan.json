@@ -182,6 +182,11 @@
       "type": "string",
       "enum": ["collective", "individual", "write_off"]
     },
+    "income_assessment": {
+      "description": "Was the loan assessed against a single or joint incomes?",
+      "type": "string",
+      "enum": ["joint", "single"]
+    },
     "interest_repayment_frequency": {
       "description": "Repayment frequency of the loan interest, if different from principal.",
       "type": "string",
