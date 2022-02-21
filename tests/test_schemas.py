@@ -11,23 +11,24 @@ from . import (
     SCHEMA_FILES,
     SCHEMA_NAMES,
     schema_enum_registry,
+    fire_stats
 )
 
 
 class TestSchemas(unittest.TestCase):
 
     def test_schemas_and_docs_found(self):
-        self.assertTrue(SCHEMA_NAMES)
-        self.assertTrue(DOC_NAMES)
+        assert SCHEMA_NAMES
+        assert DOC_NAMES
 
     def test_jsons_are_valid(self):
         for schema_name in SCHEMA_FILES:
             with open(os.path.join(SCHEMAS_DIR, schema_name)) as json_schema:
-                self.assertTrue(json.load(json_schema))
+                assert json.load(json_schema)
 
         for example_name in EXAMPLE_FILES:
             with open(os.path.join(EXAMPLES_DIR, example_name)) as json_schema:
-                self.assertTrue(json.load(json_schema))
+                assert json.load(json_schema)
 
     def test_enum_registry(self):
         for schema in SCHEMA_FILES:
@@ -38,9 +39,9 @@ class TestSchemas(unittest.TestCase):
                 "issuer.json",
                 "reporter.json"
             ]:
-                self.assertFalse(enums)
+                assert not enums
             else:
-                self.assertTrue(enums)
+                assert enums
 
     def test_enums(self):
         """
@@ -79,32 +80,23 @@ class TestSchemas(unittest.TestCase):
             enums = schema_enum_registry(schema)
             for enum, values in enums.items():
                 match = re.match(snake_pattern, enum)
-                self.assertIsNotNone(match, snake_error(schema, enum, ""))
-                self.assertEqual(
-                    0, match.start(), snake_error(schema, enum, ""))
-                self.assertEqual(
-                    len(enum), match.end(), snake_error(schema, enum, ""))
+                assert match is not None, snake_error(schema, enum, "")
+                assert 0 == match.start(), snake_error(schema, enum, "")
+                assert len(enum) == match.end(), snake_error(schema, enum, "")
 
                 if enum not in legacy_long_names:
-                    self.assertLessEqual(
-                        len(enum), 22,
-                        len_error(schema, enum, "", len(enum))
-                    )
+                    assert len(enum) <= 22, len_error(schema, enum, "", len(enum))  # noqa: E501
+
                 if enum in exceptions:
                     continue
                 for v in values:
                     match = re.match(snake_pattern, v)
-                    self.assertIsNotNone(match, snake_error(schema, enum, v))
-                    self.assertEqual(
-                        0, match.start(), snake_error(schema, enum, v))
-                    self.assertEqual(
-                        len(v), match.end(), snake_error(schema, enum, v))
+                    assert match is not None, snake_error(schema, enum, v)
+                    assert 0 == match.start(), snake_error(schema, enum, v)
+                    assert len(v) == match.end(), snake_error(schema, enum, v)
 
                     if v not in legacy_long_names:
-                        self.assertLessEqual(
-                            len(v), 22,
-                            len_error(schema, enum, v, len(v))
-                        )
+                        assert len(v) <= 22, len_error(schema, enum, v, len(v))
 
     def test_schema_properties_are_alphabetical(self):
         """
@@ -122,12 +114,12 @@ class TestSchemas(unittest.TestCase):
                 properties = list(properties)
 
                 if "id" in properties:
-                    self.assertEqual(properties[0], "id")
-                    self.assertEqual(properties[1], "date")
+                    assert properties[0] == "id"
+                    assert properties[1] == "date"
                     properties.pop(1)
                     properties.pop(0)
 
-                self.assertEqual(properties, sorted(properties))
+                assert properties == sorted(properties)
 
     def test_schema_enums_are_alphabetical(self):
         """
@@ -153,4 +145,9 @@ class TestSchemas(unittest.TestCase):
                 if enum in exceptions:
                     continue
                 # print(sorted([str(e) for e in enums[enum]]))
-                self.assertEqual(enums[enum], sorted(enums[enum]))
+                assert enums[enum] == sorted(enums[enum])
+
+    def test_property_count(self):
+        stats = fire_stats()
+        print(f"\n    ======== FIRE STATISTICS =======\n\n{stats}\n\n")
+        assert stats

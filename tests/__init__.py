@@ -76,3 +76,32 @@ def fire_load(schema_name):
     with open(os.path.join(SCHEMAS_DIR, schema_name)) as json_schema:
         schema = json.load(json_schema)
     return schema
+
+
+def fire_stats():
+    schemas = 0
+    properties = 0
+    combos = []
+    for schema_name in SCHEMA_FILES:
+        all_props = schema_properties(schema_name)
+        enums = schema_enum_registry(schema_name)
+
+        for prop in all_props:
+            if prop in enums:
+                combos.append(len(prop))
+            else:
+                combos.append(3)  # we assume ~3 variations for continuous vars
+
+            properties += 1
+
+        schemas += 1
+
+    N = 1
+    for p in combos:
+        N = N*p
+
+    return {
+        "schemas": schemas,
+        "properties": properties,
+        "data_combinations": "%e" % N
+    }
