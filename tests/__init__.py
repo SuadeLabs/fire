@@ -81,6 +81,7 @@ def fire_load(schema_name):
 def fire_stats():
     schemas = 0
     properties = 0
+    uniq_properties = set()
     combos = []
     for schema_name in SCHEMA_FILES:
         all_props = schema_properties(schema_name)
@@ -93,6 +94,7 @@ def fire_stats():
                 combos.append(3)  # we assume ~3 variations for continuous vars
 
             properties += 1
+            uniq_properties.add(prop)
 
         schemas += 1
 
@@ -103,5 +105,6 @@ def fire_stats():
     return {
         "schemas": schemas,
         "properties": properties,
+        "unique_properties": len(uniq_properties),
         "data_combinations": "%e" % N
     }
