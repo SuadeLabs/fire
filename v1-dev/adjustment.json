@@ -60,8 +60,12 @@
     }
   },
   "oneOf": [
-    {"required": ["id", "date", "report_type", "row", "col", "contribution_amount", "currency_code"]},
+    {"required": ["id", "date", "report_type", "row", "col", "contribution_amount"]},
     {"required": ["id", "date", "report_type", "row", "col", "contribution_text"]}
   ],
+  "dependencies": {
+    "contribution_amount": ["currency_code"],
+    "currency_code": ["contribution_amount"]
+  },
   "additionalProperties": true
 }
