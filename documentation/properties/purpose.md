@@ -99,7 +99,6 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── telecommunications_equipments
 │   └── vehicle
 ├── goodwill
-├── property
 ├── recovery
 ├── reference
 ├── release
@@ -398,6 +397,9 @@ IAS 16(6) defines **property plant and equipment** as:
 *Needs description*
 
 ### land
+*Needs description*
+
+### machinery
 *Needs description*
 
 ### property
