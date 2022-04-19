@@ -40,6 +40,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── derivative_fee
 │   ├── insurance_fee
 │   ├── investment_banking_fee
+│   │   └── underwriting_fee
 │   ├── loan_and_advance_fee
 │   │   ├── mortgage_fee
 │   │   └── unsecured_loan_fee
@@ -88,10 +89,17 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── other
 ├── prime_brokerage
 ├── ppe
+│   ├── computer_peripheral
+│   ├── furniture
+│   ├── land
+│   ├── machinery
+│   ├── property
+│   │   ├── investment_property
+│   │   └── own_property
+│   ├── telecommunications_equipments
+│   └── vehicle
 ├── goodwill
 ├── property
-│   ├── investment_property
-│   └── own_property
 ├── recovery
 ├── reference
 ├── release
@@ -265,6 +273,9 @@ Describes an account that holds the amount of fees receivables originating from 
 ### investment_banking_fee
 Describes an account that holds the amount of fees receivables/payables originating from **investment banking** activities. This includes advisory, brokerage and underwriting activities.
 
+### underwriting_fee
+*Needs description*
+
 ### other_fs_fee
 Describes an account that holds the amount of fees receivables/payables originating from **financial services** and that do not fall under any of the other categories of fees. These could include fees receivable for guarantees payable under break clauses, fees for administering loans on behalf of other lenders.
 
@@ -379,6 +390,24 @@ IAS 16(6) defines **property plant and equipment** as:
 > tangible items that:
 (a) are held for use in the production or supply of goods or services, for rental to others, or for administrative purposes; and
 (b) are expected to be used during more than one period.
+
+### computer_peripheral
+*Needs description*
+
+### furniture
+*Needs description*
+
+### land
+*Needs description*
+
+### property
+*Needs description*
+
+### telecommunications_equipment
+*Needs description*
+
+### vehicle
+*Needs description*
 
 ### other
 The **other** enum value can be used when it is known that none of the other enum values apply.
