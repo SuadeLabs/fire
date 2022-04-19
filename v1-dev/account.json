@@ -305,7 +305,6 @@
         "intra_group_fee",
         "inv_in_subsidiary",
         "investment_banking_fee",
-        "underwriting_fee",
         "investment_property",
         "ips",
         "land",
@@ -350,6 +349,7 @@
         "system",
         "tax",
         "telecommunications_equipment",
+        "underwriting_fee",
         "unsecured_loan_fee",
         "vehicle",
         "write_off"
