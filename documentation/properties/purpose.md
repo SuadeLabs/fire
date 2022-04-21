@@ -397,7 +397,7 @@ Additional hardware used whilst connected to a computer e.g. printer, keyboard e
 Fixed tangible assets used to furnish an office.
 
 ### land
-A solid surface of the earth or an area not covered by water which is designated for a specific purpose or otherwise.
+A solid surface of the earth, or an area, not covered by water which is designated for a specific purpose or otherwise.
 
 ### machinery
 Fixed long-term tangible assets used by companies in its business operations, in particular, the creation of the goods or services.
