@@ -273,7 +273,7 @@ Describes an account that holds the amount of fees receivables originating from 
 Describes an account that holds the amount of fees receivables/payables originating from **investment banking** activities. This includes advisory, brokerage and underwriting activities.
 
 ### underwriting_fee
-The fee owed to underwriters.
+The fee owed to underwriters for their services.
 
 ### other_fs_fee
 Describes an account that holds the amount of fees receivables/payables originating from **financial services** and that do not fall under any of the other categories of fees. These could include fees receivable for guarantees payable under break clauses, fees for administering loans on behalf of other lenders.
