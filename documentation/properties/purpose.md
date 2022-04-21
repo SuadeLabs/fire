@@ -391,25 +391,22 @@ IAS 16(6) defines **property plant and equipment** as:
 (b) are expected to be used during more than one period.
 
 ### computer_peripheral
-*Needs description*
+Additional hardware used whilst connected to a computer e.g. printer, keyboard etc.
 
 ### furniture
-*Needs description*
+Fixed tangible assets used to furnish an office.
 
 ### land
-*Needs description*
+A solid surface of the earth or an area water and designated for a specific purpose or otherwise.
 
 ### machinery
-*Needs description*
-
-### property
-*Needs description*
+Fixed long-term tangible assets used by companies in its business operations, in particular, the creation of the goods or services.
 
 ### telecom_equipment
-*Needs description*
+Hardware used for the purposes of telecommunications.
 
 ### vehicle
-*Needs description*
+Fixed long-term assets of the company derived from trucks, vans, motorcycles and cars.
 
 ### other
 The **other** enum value can be used when it is known that none of the other enum values apply.
