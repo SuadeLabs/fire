@@ -273,7 +273,7 @@ Describes an account that holds the amount of fees receivables originating from 
 Describes an account that holds the amount of fees receivables/payables originating from **investment banking** activities. This includes advisory, brokerage and underwriting activities.
 
 ### underwriting_fee
-*Needs description*
+The fee owed to underwriters.
 
 ### other_fs_fee
 Describes an account that holds the amount of fees receivables/payables originating from **financial services** and that do not fall under any of the other categories of fees. These could include fees receivable for guarantees payable under break clauses, fees for administering loans on behalf of other lenders.
@@ -397,7 +397,7 @@ Additional hardware used whilst connected to a computer e.g. printer, keyboard e
 Fixed tangible assets used to furnish an office.
 
 ### land
-A solid surface of the earth or an area water and designated for a specific purpose or otherwise.
+A solid surface of the earth or an area not covered by water which is designated for a specific purpose or otherwise.
 
 ### machinery
 Fixed long-term tangible assets used by companies in its business operations, in particular, the creation of the goods or services.
