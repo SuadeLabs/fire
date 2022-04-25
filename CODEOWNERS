@@ -1,0 +1,6 @@
+# These owners will be the default owners for everything
+*       @muratabur @olliemath
+
+# These owners will own changes in the examples directory
+/examples/  @samir-dahmani @albieduffy @seelan93
+
