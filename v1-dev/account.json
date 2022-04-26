@@ -254,6 +254,7 @@
         "capital_gain_tax",
         "cash_management",
         "cf_hedge",
+        "cf_hedge_reclass",
         "ci_service",
         "clearing",
         "collateral",

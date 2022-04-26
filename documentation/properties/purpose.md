@@ -14,6 +14,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ```bash
 ├── admin
 ├── cf_hedge
+│ └── cf_hedge_reclass
 ├── ci_service
 ├── collateral
 ├── commitments
@@ -244,6 +245,9 @@ IFRS 9.6.5.2 defines a **cash flow hedge** as follows:
 IFRS 9 refers to the **cash flow hedge reserve** as the separate equity component associated with the hedged item. In hedge accounting under IFRS, this account is a key component of the recognition of a hedging relationship.
 
 For example, in the EBA's FINREP F.1.3 report, the effective portion of the variation in fair value of hedging derivatives in a cash flow hedge, both for ongoing cash flow hedges and cash flow hedges that no longer apply, is reported as the **cash flow hedge reserve**.
+
+### cf_hedge_reclass
+**Cash flow hedge reclass** describes an account that is the same as the standard cash flow hedge account, but one in which the profit and loss arising from the cashflow hedge is to be reclassified. It can be taken to equity, transferred to carry amount of hedged items or other reclassifications of the profit and losses.
 
 ### fees
 Describes an account that holds the amount of fee/commission receivables/payables as reported in a Profit and Loss report.
