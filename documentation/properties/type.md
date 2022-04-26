@@ -739,7 +739,6 @@ Index securities are reference records recording the details of an index using t
 ├── retail_bonds
 ├── savings
 ├── time_deposit
-├── third_party_savings
 ├── vostro
 └── other
 ```
@@ -832,9 +831,6 @@ other similar instrument
 > - include club accounts (such as Christmas club or
 vacation club accounts)
 > - no eligibility requirements
-
-### third_party_savings
-Subset of savings accounts for which the interest is paid in a separate account held at a third party bank.
 
 ### deposit
 Deposit or depository account is defined in the [Directive regarding the mandatory exchange of tax information][exch-tax-info] section 8:

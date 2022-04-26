@@ -344,6 +344,7 @@
         "staff",
         "system",
         "tax",
+        "third_party_savings",
         "unsecured_loan_fee",
         "write_off"
       ]
@@ -424,7 +425,6 @@
         "savings",
         "suspense",
         "tangible",
-        "third_party_savings",
         "time_deposit",
         "vostro"
       ]

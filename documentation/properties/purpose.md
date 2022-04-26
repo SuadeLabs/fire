@@ -106,6 +106,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── tax
 │   ├── capital_gain_tax
 │   └── corporation_tax
+├── third_party_savings
 └── write_off
 ```
 
@@ -282,6 +283,9 @@ Describes an account that holds the amount of fees receivables/payables originat
 
 ### tax
 Describes an account representing the amount of tax paid, received or deferred for the reporting period by the reporting entity.
+
+### third_party_savings
+Subset of savings accounts for which the interest is paid in a separate account held at a third party bank.
 
 ### capital_gain_tax
 Describes an account representing the amount of **capital gain tax** paid, received or deferred for the reporting period by the reporting entity.
