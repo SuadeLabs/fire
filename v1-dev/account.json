@@ -350,7 +350,7 @@
         "system",
         "tax",
         "telecom_equipment",
-        "third_party_savings",
+        "third_party_interest",
         "underwriting_fee",
         "unsecured_loan_fee",
         "vehicle",
@@ -433,6 +433,7 @@
         "savings",
         "suspense",
         "tangible",
+        "third_party_savings",
         "time_deposit",
         "vostro"
       ]
