@@ -1,6 +1,6 @@
 {
     "title": "Overdraft Account",
-    "comments": "Overdrafts should have a negative balance, and asset_liability as asset",
+    "comment": "Overdrafts should have a negative balance, and asset_liability as asset",
     "data": {
         "account": [
             {
