@@ -27,6 +27,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   └── dealing_rev_deriv
 │       └── dealing_rev_deriv_nse
 ├── deposit
+│   └── third_party_interest
 ├── dgs_contribution
 ├── dividend
 │   └── div_from_cis
@@ -125,6 +126,9 @@ Describes an account representing the **contributions to resolution funds** paid
 
 ### deposit
 The **deposit** enum value refers to a retail deposit defined in accordance with Article 411 of the [CRR][crr]:
+
+### third_party_interest
+Subcategory of deposits for which the interest is paid in a separate account held at a third party bank.
 
 > A liability to a natural person or to an SME, where the natural person or the SME would qualify for the retail exposure class under the Standardised or IRB approaches for credit risk, or a liability to a company which is eligible for the treatment set out in Article 153(4) and where the aggregate deposits by all such enterprises on a group basis do not exceed EUR 1 million.
 
