@@ -27,7 +27,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   └── dealing_rev_deriv
 │       └── dealing_rev_deriv_nse
 ├── deposit
-├── third_party_interest
+│   └── third_party_interest
 ├── dgs_contribution
 ├── dividend
 │   └── div_from_cis
