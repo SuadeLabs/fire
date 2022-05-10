@@ -2,3 +2,5 @@
 **/**/*pycache*
 /*venv
 .vscode/
+.hypothesis/
+**/**/*.gz
