@@ -204,7 +204,7 @@
     "mtd_deposits": {
       "description": "Month to date amount deposited within the account as a naturally positive integer number of cents/pence.",
       "type": "integer",
-      "minimum": 0
+      "monetary": true
     },
     "mtd_interest_paid": {
       "description": "Month to date interest added to account as a naturally positive integer number of cents/pence.",
@@ -214,7 +214,7 @@
     "mtd_withdrawals": {
       "description": "Month to date amount withdrawn from the account as a naturally positive integer number of cents/pence.",
       "type": "integer",
-      "minimum": 0
+      "monetary": true
     },
     "next_payment_date": {
       "description": "The next date at which interest will be paid or accrued_interest balance returned to zero.",
