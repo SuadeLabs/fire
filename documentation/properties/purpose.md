@@ -114,7 +114,8 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── system
 ├── tax
 │   ├── capital_gain_tax
-│   └── corporation_tax
+│   ├── corporation_tax
+│   └── reclass_tax
 └── write_off
 ```
 
@@ -306,6 +307,9 @@ Describes an account representing the amount of **capital gain tax** paid, recei
 
 ### corporation_tax
 Describes an account representing the amount of **corporation tax** paid, received or deferred for the reporting period by the reporting entity.
+
+### reclass_tax
+Describes an account representing the amount of **reclassified pnl tax** paid, received or deferred for the reporting period by the reporting entity.
 
 ### dealing_revenue
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of tradable instruments.
