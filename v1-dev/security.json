@@ -151,6 +151,20 @@
       "type": "string",
       "format": "date-time"
     },
+    "env_sustainability": {
+      "description": "An indicator of the environmental sustainability of the financing/security.",
+      "type": "string",
+      "enum": [
+        "biodiversity",
+        "cc_adaptation",
+        "cc_mitigation",
+        "circular_trans",
+        "contributing",
+        "enabling",
+        "pollution_prev",
+        "water_protection"
+      ]
+    },
     "first_payment_date": {
       "description": "The first payment date for interest payments.",
       "type": "string",
