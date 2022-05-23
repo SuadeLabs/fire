@@ -1,10 +1,18 @@
 {
-    "id": "bank guarantee",
-    "date": "2019-01-01T00:00:00",
-    "balance": 100000,
-    "currency_code": "GBP",
-    "asset_liability": "liability",
-    "on_balance_sheet": false,
-    "security_type": "financial_guarantee",
-	"customer_id": "corp_123_id"
+    "title": "bank guarantee",
+    "comment": "bank guarantee",
+    "data": {
+        "security": [
+            {
+                "id": "bank guarantee",
+                "date": "2019-01-01T00:00:00",
+                "balance": 100000,
+                "currency_code": "GBP",
+                "asset_liability": "liability",
+                "on_balance_sheet": false,
+                "security_type": "financial_guarantee",
+                "customer_id": "corp_123_id"
+            }
+        ]
+    }
 }
