@@ -84,9 +84,7 @@ class TestDocs(unittest.TestCase):
             no_docs,
             "No documenation found for properties: {}".format(no_docs)
         )
-        print(DOC_NAMES)
         for doc in DOC_NAMES:
-
             self.assertTrue(
                 doc in properties,
                 "No property found for documenation: {}".format(doc)
