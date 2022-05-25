@@ -83,7 +83,7 @@
         "csa_id": "csa_daily_margined" ,
         "type": "cash" ,
         "purpose": "derivative_collateral" ,
-        "asset_liability": "laibility" ,
+        "asset_liability": "liability" ,
         "currency_code": "EUR" ,
         "notional_amount": 55 ,
         "balance": 55 ,

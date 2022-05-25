@@ -3,7 +3,7 @@
     "title": "Repo Cash Leg" ,
     "comment": "Repo Cash Leg" ,
     "data": {
-      "derivative": [
+      "security": [
         {
           "id": "repo_cash_leg" ,
           "date": "2021-06-15T00:00:00" ,
@@ -24,7 +24,7 @@
     "title": "Repo Asset Leg" ,
     "comment": "Repo Asset Leg" ,
     "data": {
-      "derivative": [
+      "security": [
         {
           "id": "repo_asset_leg" ,
           "date": "2021-06-15T00:00:00" ,

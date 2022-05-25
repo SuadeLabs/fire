@@ -1,7 +1,7 @@
 [
   {
-    "title": "AUD-USD Swap" ,
-    "comment": "AUD-USD Swap" ,
+    "title": "AUD-USD Swap - AUD" ,
+    "comment": "AUD-USD Swap - AUD" ,
     "data": {
       "derivative": [
         {
@@ -23,13 +23,13 @@
     }
   } ,
   {
-    "title": "AUD-USD Swap" ,
-    "comment": "AUD-USD Swap" ,
+    "title": "AUD-USD Swap - USD" ,
+    "comment": "AUD-USD Swap - USD" ,
     "data": {
       "derivative": [
         {
           "date": "2019-04-30T00:00:00" ,
-          "id": "audusd_swap:aud" ,
+          "id": "audusd_swap:usd" ,
           "deal_id": "audusd_swap" ,
           "asset_class": "fx" ,
           "type": "vanilla_swap" ,

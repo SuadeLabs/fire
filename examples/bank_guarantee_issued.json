@@ -11,7 +11,7 @@
         "asset_liability": "liability" ,
         "on_balance_sheet": false ,
         "type": "financial_guarantee" ,
-        "customer_id": "corp_123_id"
+        "customer_id": "corp_123_id",
       }
     ]
   }
