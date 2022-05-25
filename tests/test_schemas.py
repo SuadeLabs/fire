@@ -164,6 +164,5 @@ class TestSchemas(unittest.TestCase):
         for example_name in EXAMPLE_FILES:
             with open(os.path.join(EXAMPLES_DIR, example_name)) as ff:
                 json_schema = json.load(ff)
-            print(f"json_schema: {json_schema}")
-            validate(instance=json_schema, schema=example_schema)
 
+            validate(instance=json_schema, schema=example_schema)
