@@ -1,6 +1,6 @@
 {
-  "title": "Cash Payable" ,
-  "comment": "Cash Payable" ,
+  "title": "cash_payable" ,
+  "comment": "cash_payable" ,
   "data": {
     "security": [
       {

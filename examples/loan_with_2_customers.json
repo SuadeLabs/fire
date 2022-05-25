@@ -1,6 +1,6 @@
 {
-  "title": "Loan with 2 customers" ,
-  "comment": "Loan with 2 customers" ,
+  "title": "loan_with_2_customers" ,
+  "comment": "loan_with_2_customers" ,
   "data": {
     "loan": [
       {

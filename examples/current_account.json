@@ -1,6 +1,6 @@
 {
-  "title": "Current Account" ,
-  "comment": "Current Account" ,
+  "title": "current_account" ,
+  "comment": "current_account" ,
   "data": {
     "account": [
       {

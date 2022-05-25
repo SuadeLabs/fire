@@ -1,10 +1,10 @@
 {
-  "title": "bank guarantee" ,
-  "comment": "bank guarantee" ,
+  "title": "bank_guarantee" ,
+  "comment": "bank_guarantee" ,
   "data": {
     "security": [
       {
-        "id": "bank guarantee" ,
+        "id": "bank_guarantee" ,
         "date": "2019-01-01T00:00:00" ,
         "balance": 100000 ,
         "currency_code": "GBP" ,

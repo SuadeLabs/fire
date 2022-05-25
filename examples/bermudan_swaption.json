@@ -1,6 +1,6 @@
 {
-  "title": "USD Bermudan Swaption" ,
-  "comment": "USD Bermudan Swaption" ,
+  "title": "usd_bermudan_swaption" ,
+  "comment": "usd_bermudan_swaption" ,
   "data": {
     "derivative": [
       {

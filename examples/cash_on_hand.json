@@ -1,6 +1,6 @@
 {
-  "title": "Cash on hand" ,
-  "comment": "Cash on hand" ,
+  "title": "cash_on_hand" ,
+  "comment": "cash_on_hand" ,
   "data": {
     "security": [
       {

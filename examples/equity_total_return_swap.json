@@ -1,6 +1,6 @@
 {
-  "title": "Equity Total Return Swap" ,
-  "comment": "Equity Total Return Swap" ,
+  "title": "equity_total_return_swap" ,
+  "comment": "equity_total_return_swap" ,
   "data": {
     "derivative": [
       {

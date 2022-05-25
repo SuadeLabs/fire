@@ -1,46 +1,36 @@
-[
-  {
-    "title": "Repo Cash Leg" ,
-    "comment": "Repo Cash Leg" ,
-    "data": {
-      "security": [
-        {
-          "id": "repo_cash_leg" ,
-          "date": "2021-06-15T00:00:00" ,
-          "currency_code": "GBP" ,
-          "end_date": "2021-07-01T00:00:00Z" ,
-          "balance": 15000 ,
-          "movement": "cash" ,
-          "sft_type": "repo" ,
-          "start_date": "2021-06-01T00:00:00Z" ,
-          "type": "cash" ,
-          "trade_date": "2021-06-01T00:00:00Z" ,
-          "asset_liability": "liability"
-        }
-      ]
-    }
-  } ,
-  {
-    "title": "Repo Asset Leg" ,
-    "comment": "Repo Asset Leg" ,
-    "data": {
-      "security": [
-        {
-          "id": "repo_asset_leg" ,
-          "date": "2021-06-15T00:00:00" ,
-          "currency_code": "GBP" ,
-          "end_date": "2021-07-01T00:00:00Z" ,
-          "mtm_dirty": -14000 ,
-          "movement": "asset" ,
-          "sft_type": "repo" ,
-          "start_date": "2021-06-01T00:00:00Z" ,
-          "type": "bond" ,
-          "trade_date": "2021-06-01T00:00:00Z" ,
-          "asset_liability": "asset" ,
-          "issuer_id": "uk_central_government_id" ,
-          "maturity_date": "2030-01-01T00:00:00Z"
-        }
-      ]
-    }
+{
+  "title": "repo" ,
+  "comment": "repo" ,
+  "data": {
+    "security": [
+      {
+        "id": "repo_cash_leg" ,
+        "date": "2021-06-15T00:00:00" ,
+        "currency_code": "GBP" ,
+        "end_date": "2021-07-01T00:00:00Z" ,
+        "balance": 15000 ,
+        "movement": "cash" ,
+        "sft_type": "repo" ,
+        "start_date": "2021-06-01T00:00:00Z" ,
+        "type": "cash" ,
+        "trade_date": "2021-06-01T00:00:00Z" ,
+        "asset_liability": "liability"
+      } ,
+      {
+        "id": "repo_asset_leg" ,
+        "date": "2021-06-15T00:00:00" ,
+        "currency_code": "GBP" ,
+        "end_date": "2021-07-01T00:00:00Z" ,
+        "mtm_dirty": -14000 ,
+        "movement": "asset" ,
+        "sft_type": "repo" ,
+        "start_date": "2021-06-01T00:00:00Z" ,
+        "type": "bond" ,
+        "trade_date": "2021-06-01T00:00:00Z" ,
+        "asset_liability": "asset" ,
+        "issuer_id": "uk_central_government_id" ,
+        "maturity_date": "2030-01-01T00:00:00Z"
+      }
+    ]
   }
-]
+}
