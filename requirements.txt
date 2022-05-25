@@ -1,3 +1,3 @@
 fake-factory==0.5.7
 iso3166==0.8
-jsonschema==4.5.1
+jsonschema==2.5.1
