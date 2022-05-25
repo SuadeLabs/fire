@@ -8,7 +8,6 @@
         "id": "independent_amount" ,
         "customer_id": "corporate" ,
         "mna_id": "master_agreement" ,
-        "csa_id": null ,
         "type": "bond" ,
         "issuer_id": "Asian Development Bank" ,
         "isin_code": "NZADBDT007C4" ,
@@ -18,7 +17,7 @@
         "asset_liability": "liability" ,
         "currency_code": "NZD" ,
         "notional_amount": 100 ,
-        "mtm_dirty": 16.7 ,
+        "mtm_dirty": 17 ,
         "trade_date": "2020-03-31T00:00:00" ,
         "start_date": "2020-03-31T00:00:00" ,
         "cqs_standardised": 1

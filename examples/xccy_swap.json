@@ -4,7 +4,7 @@
   "data": {
     "derivative": [
       {
-        "date": "2020_03_31T00:00:00" ,
+        "date": "2020-03-31T00:00:00" ,
         "id": "AUDUSD_xccy:AUD" ,
         "deal_id": "AUDUSD_xccy" ,
         "asset_class": "fx" ,
@@ -20,7 +20,7 @@
         "mtm_dirty": 1140
       } ,
       {
-        "date": "2020_03_31T00:00:00" ,
+        "date": "2020-03-31T00:00:00" ,
         "id": "AUDUSD_xccy:USD" ,
         "deal_id": "AUDUSD_xccy" ,
         "asset_class": "fx" ,
@@ -38,8 +38,8 @@
     ] ,
     "derivative_cash_flow": [
       {
-        "date": "2020_03_31T00:00:00" ,
-        "bank_id": "AUDUSD_xccy:AUD_initial_exchange" ,
+        "id": "1",
+        "date": "2020-03-31T00:00:00" ,
         "derivative_id": "AUDUSD_xccy:AUD" ,
         "currency_code": "AUD" ,
         "notional_amount": 14000 ,
@@ -49,8 +49,8 @@
         "purpose": "principal"
       } ,
       {
-        "date": "2020_03_31T00:00:00" ,
-        "bank_id": "AUDUSD_xccy:AUD_final_exchange" ,
+        "id": "2",
+        "date": "2020-03-31T00:00:00" ,
         "derivative_id": "AUDUSD_xccy:AUD" ,
         "currency_code": "AUD" ,
         "notional_amount": 14000 ,
@@ -60,8 +60,8 @@
         "purpose": "principal"
       } ,
       {
-        "date": "2020_03_31T00:00:00" ,
-        "deal_id": "AUDUSD_xccy:USD_initial_exchange" ,
+        "id": "3",
+        "date": "2020-03-31T00:00:00" ,
         "derivative_id": "AUDUSD_xccy:USD" ,
         "currency_code": "USD" ,
         "notional_amount": 10000 ,
@@ -71,8 +71,8 @@
         "purpose": "principal"
       } ,
       {
-        "date": "2020_03_31T00:00:00" ,
-        "deal_id": "AUDUSD_xccy:USD_final_exchange" ,
+        "id": "4",
+        "date": "2020-03-31T00:00:00" ,
         "derivative_id": "AUDUSD_xccy:USD" ,
         "currency_code": "USD" ,
         "notional_amount": 10000 ,
@@ -82,8 +82,8 @@
         "purpose": "principal"
       } ,
       {
-        "date": "2020_03_31T00:00:00" ,
-        "bank_id": "AUDUSD_xccy:AUD_1" ,
+        "id": "5",
+        "date": "2020-03-31T00:00:00" ,
         "derivative_id": "AUDUSD_xccy:AUD" ,
         "currency_code": "USD" ,
         "reset_date": "2020-02-27T00:00:00" ,
@@ -93,8 +93,8 @@
         "purpose": "interest"
       } ,
       {
-        "date": "2020_03_31T00:00:00" ,
-        "bank_id": "AUDUSD_xccy:AUD_8" ,
+        "id": "6",
+        "date": "2020-03-31T00:00:00" ,
         "derivative_id": "AUDUSD_xccy:AUD" ,
         "currency_code": "USD" ,
         "reset_date": "2028-02-27T00:00:00" ,
@@ -104,27 +104,27 @@
         "purpose": "interest"
       } ,
       {
-        "date": "2020_03_31T00:00:00" ,
-        "bank_id": "AUDUSD_xccy:USD_1" ,
+        "id": "7",
+        "date": "2020-03-31T00:00:00" ,
         "derivative_id": "AUDUSD_xccy:USD" ,
         "currency_code": "USD" ,
         "reset_date": "2020-02-27T00:00:00" ,
         "payment_date": "2020-05-27T00:00:00" ,
         "notional_amount": 10000 ,
         "forward_rate": 0.01 ,
-        "balance": -24.66 ,
+        "balance": -2466 ,
         "purpose": "interest"
       } ,
       {
-        "date": "2020_03_31T00:00:00" ,
-        "bank_id": "AUDUSD_xccy:USD_32" ,
+        "id": "8",
+        "date": "2020-03-31T00:00:00" ,
         "derivative_id": "AUDUSD_xccy:USD" ,
         "currency_code": "USD" ,
         "reset_date": "2028-11-27T00:00:00" ,
         "payment_date": "2029-02-27T00:00:00" ,
         "notional_amount": 10000 ,
         "forward_rate": 0.02 ,
-        "balance": -50.42 ,
+        "balance": -5042 ,
         "purpose": "interest"
       }
     ]

@@ -4,7 +4,7 @@
   "data": {
     "derivative": [
       {
-        "date": "2020_03_31T00:00:00" ,
+        "date": "2020-03-31T00:00:00" ,
         "id": "1y digital floor:long floor" ,
         "deal_id": "1y digital floor" ,
         "asset_class": "ir" ,
@@ -23,7 +23,7 @@
         "mtm_dirty": -40
       } ,
       {
-        "date": "2020_03_31T00:00:00" ,
+        "date": "2020-03-31T00:00:00" ,
         "id": "1y digital floor:short floor" ,
         "deal_id": "1y digital floor" ,
         "asset_class": "ir" ,
@@ -41,11 +41,11 @@
         "strike": -0.0005
       }
     ] ,
-    "derivative_cash_flows": [
+    "derivative_cash_flow": [
       {
         "id": "1y digital floor:long floor_1" ,
         "derivative_id": "1y digital floor:long floor" ,
-        "date": "2020_03_31T00:00:00" ,
+        "date": "2020-03-31T00:00:00" ,
         "trade_date": "2019-02-25T00:00:00" ,
         "asset_class": "ir" ,
         "currency_code": "EUR" ,
@@ -57,7 +57,7 @@
       {
         "id": "1y digital floor:long floor_2" ,
         "derivative_id": "1y digital floor:long floor" ,
-        "date": "2020_03_31T00:00:00" ,
+        "date": "2020-03-31T00:00:00" ,
         "trade_date": "2019-02-25T00:00:00" ,
         "asset_class": "ir" ,
         "currency_code": "EUR" ,
@@ -69,7 +69,7 @@
       {
         "id": "1y digital floor:long floor_3" ,
         "derivative_id": "1y digital floor:long floor" ,
-        "date": "2020_03_31T00:00:00" ,
+        "date": "2020-03-31T00:00:00" ,
         "trade_date": "2019-02-25T00:00:00" ,
         "asset_class": "ir" ,
         "currency_code": "EUR" ,
@@ -81,7 +81,7 @@
       {
         "id": "1y digital floor:short floor_1" ,
         "derivative_id": "1y digital floor:short floor" ,
-        "date": "2020_03_31T00:00:00" ,
+        "date": "2020-03-31T00:00:00" ,
         "trade_date": "2019-02-25T00:00:00" ,
         "asset_class": "ir" ,
         "currency_code": "EUR" ,
@@ -93,7 +93,7 @@
       {
         "id": "1y digital floor:short floor_2" ,
         "derivative_id": "1y digital floor:short floor" ,
-        "date": "2020_03_31T00:00:00" ,
+        "date": "2020-03-31T00:00:00" ,
         "trade_date": "2019-02-25T00:00:00" ,
         "asset_class": "ir" ,
         "currency_code": "EUR" ,
@@ -105,7 +105,7 @@
       {
         "id": "1y digital floor:short floor_3" ,
         "derivative_id": "1y digital floor:short floor" ,
-        "date": "2020_03_31T00:00:00" ,
+        "date": "2020-03-31T00:00:00" ,
         "trade_date": "2019-02-25T00:00:00" ,
         "asset_class": "ir" ,
         "currency_code": "EUR" ,
