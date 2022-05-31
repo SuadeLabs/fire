@@ -3,7 +3,7 @@ import os
 import re
 import unittest
 from collections import OrderedDict
-from jsonschema import validate
+from jsonschema import Draft4Validator
 from . import (
     DOC_NAMES,
     EXAMPLES_DIR,
@@ -161,8 +161,9 @@ class TestSchemas(unittest.TestCase):
         with open(os.path.join(SCHEMAS_DIR, "example.json")) as ff:
             example_schema = json.load(ff)
 
+        validator = Draft4Validator(example_schema)
         for example_name in EXAMPLE_FILES:
             with open(os.path.join(EXAMPLES_DIR, example_name)) as ff:
                 json_schema = json.load(ff)
 
-            validate(instance=json_schema, schema=example_schema)
+            validator.validate(instance=json_schema)
