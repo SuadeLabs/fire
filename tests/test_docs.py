@@ -61,6 +61,7 @@ class TestDocs(unittest.TestCase):
             "row",
             "settlement_type",
             "theta",
+            "title",
             "underlying_derivative_id",
             "underlying_issuer_id",
             "underlying_price",

@@ -1,0 +1,47 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"title": "Example Schema",
+	"description": "FIRE schema for representing FIRE product examples",
+	"type": "object",
+	"properties": {
+		"comment": {
+			"description": "Additional comments describing the FIRE product example",
+			"type": "string"
+		},
+		"data": {
+			"description": "FIRE product data example",
+			"type": "object",
+			"minProperties": 1,
+			"propertyNames": {
+				"type": "string",
+				"enum": ["account", "agreement", "collateral", "curve", "customer", "derivative", "derivative_cash_flow", "exchange_rate", "guarantor", "issuer", "loan", "loan_transaction", "security"]
+			},
+			"additionalProperties": {
+				"type": "array",
+				"items": {
+					"anyOf": [
+						{ "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/account.json#" },
+						{ "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/agreement.json#" },
+						{ "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/collateral.json#" },
+						{ "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/customer.json#" },
+						{ "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/curve.json#" },
+						{ "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/derivative.json#" },
+						{ "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/derivative_cash_flow.json#" },
+						{ "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/exchange_rate.json#" },
+						{ "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/guarantor.json#" },
+						{ "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/issuer.json#" },
+						{ "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/loan.json#" },
+						{ "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/loan_transaction.json#" },
+						{ "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/security.json#" }
+					]
+				}
+			}
+		},
+		"title": {
+			"description": "Title of the FIRE product example",
+			"type": "string"
+		}
+	},
+	"additionalProperties": true,
+	"required": ["comment", "data", "title"]
+}

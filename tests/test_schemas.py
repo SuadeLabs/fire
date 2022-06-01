@@ -3,6 +3,7 @@ import os
 import re
 import unittest
 from collections import OrderedDict
+from jsonschema import Draft4Validator
 from . import (
     DOC_NAMES,
     EXAMPLES_DIR,
@@ -35,6 +36,7 @@ class TestSchemas(unittest.TestCase):
             enums = schema_enum_registry(schema)
             if schema in [
                 "batch.json",
+                "example.json",
                 "guarantor.json",
                 "issuer.json",
                 "reporter.json"
@@ -151,3 +153,17 @@ class TestSchemas(unittest.TestCase):
         stats = fire_stats()
         print(f"\n    ======== FIRE STATISTICS =======\n\n{stats}\n\n")
         assert stats
+
+    def test_examples(self):
+        """
+        Examples should match the example schema found in /v1-dev/example.json
+        """
+        with open(os.path.join(SCHEMAS_DIR, "example.json")) as ff:
+            example_schema = json.load(ff)
+
+        validator = Draft4Validator(example_schema)
+        for example_name in EXAMPLE_FILES:
+            with open(os.path.join(EXAMPLES_DIR, example_name)) as ff:
+                json_schema = json.load(ff)
+
+            validator.validate(instance=json_schema)
