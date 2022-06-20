@@ -1,11 +1,11 @@
 {
-	"title": "Subordinated debt cash",
-	"comment": "Movement should be mapped as cash",
+	"title": "Tier 2 subordinated debt",
+	"comment": "Movement should be mapped as issuance",
 	"data": {
 		"security": [
 			{
 				"date": "2022-04-20T00:00:00+00:00",
-				"id": "subordinated_debt_cash",
+				"id": "subordinated_debt",
 				"accounting_treatment": "fv_oci",
 				"asset_liability": "liability",
 				"balance": 1000000,
@@ -14,7 +14,7 @@
 				"end_date": "2027-04-20T00:00:00+00:00",
 				"interest_repayment_frequency": "quarterly",
 				"issuer_id": "subordinated_debt_issuer",
-				"movement": "cash",
+				"movement": "issuance",
 				"notional_amount": 1000000,
 				"rate": 10,
 				"seniority": "subordinated_unsecured",
