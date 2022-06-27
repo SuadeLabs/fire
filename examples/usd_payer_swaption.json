@@ -1,0 +1,28 @@
+{
+  "title": "usd_payer_swaption",
+  "comment": "usd_payer_swaption",
+  "data": {
+    "derivative": [
+      {
+        "date": "2019-01-01T00:00:00",
+        "id": "usd_payer_swaption",
+        "asset_class": "ir",
+        "type": "swaption",
+        "leg_type": "call",
+        "position": "short",
+        "currency_code": "USD",
+        "notional_amount": 10000,
+        "strike": 0.02,
+        "underlying_index": "USD_LIBOR",
+        "underlying_index_tenor": "6m",
+        "start_date": "2019-01-01T00:00:00",
+        "end_date": "2020-01-01T00:00:00",
+        "last_payment_date": "2030-01-01T00:00:00",
+        "last_exercise_date": "2020-01-01T00:00:00",
+        "underlying_price": 0.02,
+        "settlement_type": "physical",
+        "mtm_dirty": -5
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "title": "savings_account_with_30days_notice",
+  "comment": "savings_account_with_30days_notice",
+  "data": {
+    "account": [
+      {
+        "id": "savings_account_with_30days_notice",
+        "date": "2017-06-30T14:03:12Z",
+        "trade_date": "2012-02-06T09:30:00Z",
+        "start_date": "2012-02-07T00:00:00Z",
+        "next_withdrawal_date": "2017-07-30T00:00:00Z",
+        "currency_code": "GBP",
+        "balance": 30000,
+        "accrued_interest": 2500,
+        "type": "savings",
+        "status": "active",
+        "on_balance_sheet": true,
+        "asset_liability": "liability",
+        "customer_id": "C123456"
+      }
+    ]
+  }
+}
