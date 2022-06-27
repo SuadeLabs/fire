@@ -62,7 +62,7 @@ conditions laid down in Article 63 are met.
 
 ### cet1_grandfathered
 Instruments which are considered as grandfathered
-as CET1 Capital , in that they no longer meet the tighter restrictions
+as CET1 Capital, in that they no longer meet the tighter restrictions
 introduced  in the CRR\CRR2 regulation for CET1 capital, but are still included
 in transitional arrangements.
 
@@ -74,7 +74,7 @@ Article 28 or, where applicable, Article 29 of the CRR Regulation are not met.
 
 ### at1_grandfathered
 Instruments which are considered as grandfathered
-as additional tier 1 capital , in that they no longer meet the tighter
+as additional tier 1 capital, in that they no longer meet the tighter
 restrictions introduced  in the CRR\CRR2 regulation for additional tier 1
 capital, but are still included in transitional arrangements.
 
@@ -86,7 +86,7 @@ are not met.
 
 ### t2_grandfathered
 Instruments which are considered as grandfathered
-as tier 2 capital , in that they no longer meet the tighter
+as tier 2 capital, in that they no longer meet the tighter
 restrictions introduced  in the CRR\CRR2 regulation for tier 2
 capital, but are still included in transitional arrangements.
 

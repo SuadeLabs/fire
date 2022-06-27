@@ -2,8 +2,10 @@ import json
 import os
 import re
 import unittest
+import pytest
 from collections import OrderedDict
 from jsonschema import Draft4Validator
+from jsonschema.exceptions import ValidationError
 from . import (
     DOC_NAMES,
     EXAMPLES_DIR,
@@ -151,19 +153,120 @@ class TestSchemas(unittest.TestCase):
 
     def test_property_count(self):
         stats = fire_stats()
-        print(f"\n    ======== FIRE STATISTICS =======\n\n{stats}\n\n")
+        print(f"\n\n    ======== FIRE STATISTICS =======\n\n{stats}\n\n")
         assert stats
 
-    def test_examples(self):
+
+class TestExamples:
+
+    with open(os.path.join(SCHEMAS_DIR, "example.json")) as ff:
+        example_schema = json.load(ff)
+
+    validator = Draft4Validator(example_schema)
+
+    def test_validating_all_examples(self):
         """
         Examples should match the example schema found in /v1-dev/example.json
         """
-        with open(os.path.join(SCHEMAS_DIR, "example.json")) as ff:
-            example_schema = json.load(ff)
-
-        validator = Draft4Validator(example_schema)
         for example_name in EXAMPLE_FILES:
             with open(os.path.join(EXAMPLES_DIR, example_name)) as ff:
-                json_schema = json.load(ff)
+                ex = json.load(ff)
 
-            validator.validate(instance=json_schema)
+            self.validator.validate(instance=ex)
+
+    def test_bad_examples(self):
+        """
+        Examples can be bad in lots of ways, here we test the most
+        common cases...
+
+        Feel free to add more.
+        """
+        no_data = {
+            "title": "check",
+            "comment": "check"
+        }
+        with pytest.raises(ValidationError):
+            self.validator.validate(no_data)
+
+        empty_data = {
+            "title": "check",
+            "comment": "check",
+            "data": {}
+        }
+        with pytest.raises(ValidationError):
+            self.validator.validate(empty_data)
+
+        no_title = {
+            "description": "check",
+            "comment": "check",
+            "data": {
+                "account": [{"id": "123", "date": "2020-02-02"}]
+            }
+        }
+        with pytest.raises(ValidationError):
+            self.validator.validate(no_title)
+
+        bad_data_type = {
+            "title": "check",
+            "comment": "check",
+            "data": {
+                "blah": [{"id": "123", "date": "2020-02-02"}]
+            }
+        }
+        with pytest.raises(ValidationError):
+            self.validator.validate(bad_data_type)
+
+        bad_nested_data = {
+            "title": "check",
+            "comment": "check",
+            "data": {
+                "account": [{"id": 123, "date": "2020-02-02"}]
+            }
+        }
+        with pytest.raises(ValidationError):
+            self.validator.validate(bad_nested_data)
+
+        bad_nested_enum_value = {
+            "title": "check",
+            "comment": "check",
+            "data": {
+                "account": [
+                    {"id": "123", "date": "2020-02-02", "type": "coorent"}
+                ]
+            }
+        }
+        with pytest.raises(ValidationError):
+            self.validator.validate(bad_nested_enum_value)
+
+        nested_null_value = {
+            "title": "check",
+            "comment": "check",
+            "data": {
+                "account": [{"id": "123", "date": "2020-02-02", "type": None}]
+            }
+        }
+        with pytest.raises(ValidationError):
+            self.validator.validate(nested_null_value)
+
+        some_bad_data = {
+            "title": "check",
+            "comment": "check",
+            "data": {
+                "account": [
+                    {"id": "123", "date": "2020-02-02", "type": "current"},
+                    {"id": "123", "date": "2020-02-02", "type": None}
+                ]
+            }
+        }
+        with pytest.raises(ValidationError):
+            self.validator.validate(some_bad_data)
+
+        empty_data = {
+            "title": "check",
+            "comment": "check",
+            "data": {
+                "account": []
+            }
+        }
+        with pytest.raises(ValidationError):
+            self.validator.validate(empty_data)

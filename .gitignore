@@ -1,6 +1,7 @@
 **/**/*.pyc
 **/**/*pycache*
 /*venv
+.hypothesis/
 .vscode/
 .hypothesis/
 **/**/*.gz

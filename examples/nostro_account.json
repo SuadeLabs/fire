@@ -1,17 +1,16 @@
 {
-  "title": "nostro account at another credit institution" ,
-  "comment": "nostro account at another credit institution" ,
+  "title": "nostro account at another credit institution",
+  "comment": "nostro account at another credit institution",
   "data": {
     "account": [
       {
-        "id": "nostro account at another credit institution" ,
-        "date": "2017-06-30T14:03:12Z" ,
-        "currency_code": "GBP" ,
-        "balance": 100000 ,
-        "type": "nostro" ,
-        "asset_liability": "asset" ,
-        "customer_id": "bank_123_id" ,
-        "end_date": null ,
+        "id": "nostro account at another credit institution",
+        "date": "2017-06-30T14:03:12Z",
+        "currency_code": "GBP",
+        "balance": 100000,
+        "type": "vostro",
+        "asset_liability": "asset",
+        "customer_id": "bank_123_id",
         "on_balance_sheet": true
       }
     ]
