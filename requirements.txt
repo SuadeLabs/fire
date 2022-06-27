@@ -1,4 +1,4 @@
 fake-factory==0.5.7
 iso3166==0.8
 jsonschema==4.0.0
-pytest==7.1.2
+pytest>=7.0.0
