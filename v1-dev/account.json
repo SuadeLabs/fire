@@ -172,6 +172,9 @@
     "impairment_status": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/impairment_status"
     },
+    "impairment_type": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/impairment_type"
+    },
     "insolvency_rank": {
       "description": "The insolvency ranking as per the national legal framework of the reporting institution.",
       "type": "integer",

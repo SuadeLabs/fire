@@ -178,9 +178,7 @@
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/impairment_status"
     },
     "impairment_type": {
-      "description": "The loss event resulting in the impairment of the loan.",
-      "type": "string",
-      "enum": ["collective", "individual", "write_off"]
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/impairment_type"
     },
     "income_assessment": {
       "description": "Was the loan assessed against a single or joint incomes?",
