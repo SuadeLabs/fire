@@ -415,6 +415,11 @@
       "watch"
     ]
   },
+  "impairment_type": {
+    "description": "The loss event resulting in the impairment of the loan.",
+    "type": "string",
+    "enum": ["collective", "individual", "write_off"]
+  },
   "mic_code": {
    "description": "The market identifier code as defined by the International Standards Organisation.",
    "type": "string",
