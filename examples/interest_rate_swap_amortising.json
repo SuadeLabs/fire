@@ -1,5 +1,5 @@
 {
-  "title": "Interest Rate Swap Amortising",
+  "title": "interest_rate_swap_amortising",
   "comment": "Interest Rate Swap Amortising",
   "data": {
     "derivative": [
@@ -70,7 +70,7 @@
         "reset_date": "2021-01-31T00:00:00",
         "payment_date": "2021_07_31T00:00:00",
         "forward_rate": 0.0075,
-        "balance": -49.589
+        "balance": -49
       },
       {
         "id": "eur_10y_irs_floating_2",
@@ -82,7 +82,7 @@
         "reset_date": "2021-07-31T00:00:00",
         "payment_date": "2022-01-31T00:00:00",
         "forward_rate": 0.0125,
-        "balance": -75.6164
+        "balance": -75
       },
       {
         "id": "eur_10y_irs_floating_3",
@@ -94,7 +94,7 @@
         "reset_date": "2022-01-31T00:00:00",
         "payment_date": "2022-07-31T00:00:00",
         "forward_rate": 0.0175,
-        "balance": -49.589
+        "balance": -49
       },
       {
         "id": "eur_10y_irs_floating_4",
@@ -106,7 +106,7 @@
         "reset_date": "2022-07-31T00:00:00",
         "payment_date": "2023-01-31T00:00:00",
         "forward_rate": 0.0225,
-        "balance": -63.0137
+        "balance": -63
       }
     ]
   }

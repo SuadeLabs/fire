@@ -1,5 +1,5 @@
 {
-  "title": "Collateral Variation Margin Cash Received",
+  "title": "collateral_variation_margin_cash_received",
   "comment": "Collateral Variation Margin Cash Received",
   "data": {
     "security": [
@@ -42,7 +42,7 @@
         "id": "ccp_margin_agreement",
         "type": "isda",
         "base_currency_code": "GBP",
-        "credit_support_type": "other",
+        "credit_support_type": "csa_isda_1995",
         "margin_frequency": "daily_settled",
         "country_code": "GB"
       }

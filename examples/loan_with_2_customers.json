@@ -6,15 +6,15 @@
       {
         "id": "loan_with_2_customers",
         "date": "2021-09-30",
-        "balance": "10000",
+        "balance": 10000,
         "customers": [
           {
             "id": "CUST123",
-            "income_amount": "5000000"
+            "income_amount": 5000000
           },
           {
             "id": "CUST234",
-            "income_amount": "5000000"
+            "income_amount": 5000000
           }
         ],
         "repayment_frequency": "monthly"

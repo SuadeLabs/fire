@@ -1,5 +1,5 @@
 {
-	"title": "Tier 2 subordinated debt",
+	"title": "subordinated_debt",
 	"comment": "Movement should be mapped as issuance",
 	"data": {
 		"security": [

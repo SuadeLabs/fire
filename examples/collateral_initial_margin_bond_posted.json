@@ -1,5 +1,5 @@
 {
-  "title": "Collateral Initial Margin Bond Posted",
+  "title": "collateral_initial_margin_bond_posted",
   "comment": "Collateral Initial Margin Bond Posted",
   "data": {
     "security": [
@@ -39,7 +39,7 @@
       {
         "date": "2020-03-31T00:00:00",
         "id": "credit_insitution",
-        "type": "credit_insitution",
+        "type": "credit_institution",
         "currency_code": "GBP",
         "country_code": "GB"
       }

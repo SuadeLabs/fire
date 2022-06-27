@@ -174,6 +174,23 @@ class TestExamples:
 
             self.validator.validate(instance=ex)
 
+    def test_ex_titles_match_filenames(self):
+        for example_name in EXAMPLE_FILES:
+            with open(os.path.join(EXAMPLES_DIR, example_name)) as ff:
+                ex = json.load(ff)
+
+            assert ex["title"] + ".json" == example_name
+
+    def test_ex_titles_are_unique(self):
+        titles = []
+        for example_name in EXAMPLE_FILES:
+            with open(os.path.join(EXAMPLES_DIR, example_name)) as ff:
+                ex = json.load(ff)
+
+            assert ex["title"] not in titles
+
+            titles.append(ex["title"])
+
     def test_bad_examples(self):
         """
         Examples can be bad in lots of ways, here we test the most

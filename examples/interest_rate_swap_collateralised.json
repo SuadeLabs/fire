@@ -1,5 +1,5 @@
 {
-  "title": "Interest Rate Swap Collateralised",
+  "title": "interest_rate_swap_collateralised",
   "comment": "Interest Rate Swap Collateralised",
   "data": {
     "derivative": [
@@ -58,7 +58,6 @@
         "id": "isda_master_agreement",
         "type": "isda",
         "base_currency_code": "GBP",
-        "netting_restriction": null,
         "incurred_cva": 0,
         "country_code": "GB"
       },
