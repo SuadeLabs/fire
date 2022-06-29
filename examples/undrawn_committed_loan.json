@@ -6,7 +6,7 @@
 			{
 				"date": "2022-04-20T00:00:00+00:00",
 				"id": "undrawn_committed_loan",
-				"accrued_interest": 0,
+				"accrued_interest_balance": 0,
 				"asset_liability": "liability",
 				"balance": 100,
 				"currency_code": "GBP",
