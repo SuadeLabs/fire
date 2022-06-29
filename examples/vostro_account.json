@@ -1,0 +1,18 @@
+{
+  "title": "vostro_account",
+  "comment": "A bank's nostro account at your bank",
+  "data": {
+    "account": [
+      {
+        "id": "Vostro account at your bank",
+        "date": "2017-06-30T14:03:12Z",
+        "currency_code": "GBP",
+        "balance": 100000,
+        "type": "vostro",
+        "asset_liability": "asset",
+        "customer_id": "bank_123_id",
+        "on_balance_sheet": true
+      }
+    ]
+  }
+}

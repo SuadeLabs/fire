@@ -1,19 +1,18 @@
 {
-  "title": "time_deposit_1year_with_6_month_withdrawal_option",
-  "comment": "time_deposit_1year_with_6_month_withdrawal_option",
+  "title": "savings_account_with_30days_notice",
+  "comment": "savings_account_with_30days_notice",
   "data": {
     "account": [
       {
-        "id": "time_deposit_1year_with_6_month_withdrawal_option",
+        "id": "savings_account_with_30days_notice",
         "date": "2017-06-30T14:03:12Z",
         "trade_date": "2012-02-06T09:30:00Z",
         "start_date": "2012-02-07T00:00:00Z",
-        "next_withdrawal_date": "2017-12-31T00:00:00Z",
-        "end_date": "2018-06-30T00:00:00Z",
+        "next_withdrawal_date": "2017-07-30T00:00:00Z",
         "currency_code": "GBP",
         "balance": 30000,
         "accrued_interest": 2500,
-        "type": "time_deposit",
+        "type": "savings",
         "status": "active",
         "on_balance_sheet": true,
         "asset_liability": "liability",
