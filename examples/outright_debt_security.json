@@ -1,0 +1,32 @@
+{
+	"title": "outright_debt_security",
+	"comment": "Outright debt security held",
+	"data": {
+		"security": [
+			{
+				"id": "outright_debt_security",
+				"date": "2022-04-20T00:00:00Z",
+				"accounting_treatment": "amortised_cost",
+				"asset_liability": "asset",
+				"balance": 10000,
+				"currency_code": "GBP",
+				"end_date": "2022-05-20T00:00:00Z",
+				"issuer_id": "debt_security_issuer",
+				"mtm_dirty": 10000,
+				"on_balance_sheet": true,
+				"regulatory_book": "trading_book",
+				"start_date": "2021-04-20T00:00:00Z",
+				"trade_date": "2021-04-20T00:00:00Z",
+				"type": "bond"
+			}
+		],
+		"issuer": [
+			{
+				"id": "debt_security_issuer",
+				"date": "2022-04-20T00:00:00Z",
+				"country_code": "GB",
+				"type": "credit_institution"
+			}
+		]
+	}
+}
