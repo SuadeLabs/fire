@@ -13,11 +13,11 @@ title:		"Home"
 [![Contributor Guidelines](https://img.shields.io/badge/contributor-guidelines-lightgrey.svg)][contributing]
 
 ### What is the FIRE data standard?
-The Financial Regulatory data standard defines a common specification for the transmission of granular data between regulatory systems in finance. Regulatory data refers to the data that underlies regulatory submissions, requirements, calculations and is used for policy, monitoring and supervision purposes.
+The Financial Regulatory data standard defines a common specification for the transmission of granular data between regulatory systems in finance. Regulatory data refers to the data that underlies regulatory submissions, requirements, and calculations. It is also used for policy, monitoring and, supervision purposes.
 
 The FIRE data schemas and code samples are licensed under the [Apache 2.0 License][apache] which has been chosen for being open, permissive and already widely accepted within the financial sector (think Hadoop, Cassandra, ActiveMQ).
 
-The FIRE data standard is supported by the [European Commission][euc], the [Open Data Institute][odi] and the [Open Data Incubator for Europe][odine] via the Horizon 2020 funding programme.
+The FIRE data standard is supported by the [European Commission][euc], the [Open Data Institute][odi], and the [Open Data Incubator for Europe][odine] via the Horizon 2020 funding program.
 
 
 <div class="image-group" style="width:100%; height:auto; margin:25px; text-align:center; background-color: white">
