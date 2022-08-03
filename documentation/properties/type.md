@@ -51,6 +51,7 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   └── other_pse
 ├── sovereign
 ├── intl_org
+├── export_credit_agency
 ├── unincorporated_biz
 └── other
 ```
@@ -186,6 +187,9 @@ International Organisations are defined in [CRR][crr] Article 118:
 > (e) the European Stability Mechanism;
 >
 > (f) an international financial institution established by two or more Member States, which has the purpose to mobilise funding and provide financial assistance to the benefit of its members that are experiencing or threatened by severe financing problems.
+
+### export_credit_agency
+An official export credit agency facilitates international exports, and must be one of the entities listed in this document, maintained by the oecd: https://www.oecd.org/trade/topics/export-credits/documents/links-of-official-export-credit-agencies.pdf
 
 ### corporate
 An organisation with government approval to conduct business (or other activities).
