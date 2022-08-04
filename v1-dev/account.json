@@ -169,6 +169,11 @@
       "minimum": 0,
       "monetary": true
     },
+    "impairment_date": {
+      "description": "The date upon which the product became considered impaired. Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
+      "type": "string",
+      "format": "date-time"
+    },
     "impairment_status": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/impairment_status"
     },
