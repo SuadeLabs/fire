@@ -277,6 +277,10 @@
       "description": "Strike price of the option, which is compared to the underlying price on the option exercise date.",
       "type": "number"
     },
+    "supervisory_price": {
+      "description": "Current price/value of the underlying of an option when different from underlying_price, e.g. for Asian-style options.",
+      "type": "number"
+    },
     "theta": {
       "description": "Price sensitivity with respect to time.",
       "type": "number"
