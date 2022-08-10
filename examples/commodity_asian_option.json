@@ -1,0 +1,28 @@
+{
+  "title": "commodity_asian_option",
+  "comment": "Commodity Asian Option",
+  "data": {
+    "derivative": [
+      {
+        "date": "2020-03-31T00:00:00",
+        "id": "1",
+        "asset_class": "metals",
+        "type": "option",
+        "leg_type": "put",
+        "position": "long",
+        "currency_code": "USD",
+        "underlying_quantity": 100,
+        "strike": 9829,
+        "underlying_index": "copper average",
+        "underlying_price": 9829,
+        "supervisory_price": 9766,
+        "trade_date": "2020-02-25T00:00:00",
+        "start_date": "2020-02-27T00:00:00",
+        "end_date": "2021-06-02T00:00:00",
+        "last_exercise_date": "2020-12-05T00:00:00",
+        "settlement_type": "physical",
+        "mtm_dirty": 80
+      }
+    ]
+  }
+}
