@@ -241,6 +241,7 @@
         "credit_institution",
         "credit_union",
         "deposit_broker",
+	"export_credit_agency",
         "financial",
         "financial_holding",
         "individual",
