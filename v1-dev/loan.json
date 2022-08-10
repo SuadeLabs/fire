@@ -26,6 +26,11 @@
     "accounting_treatment":{
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/accounting_treatment"
     },
+    "accrued_interest_12m": {
+      "description": "The cumulative accrued interest over the past 12 months. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
     "accrued_interest_balance": {
       "description": "The accrued interest due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
@@ -122,6 +127,12 @@
       "description": "Identifier used for linking this product as part of a larger deal. e.g. Two components of a single loan or matching a securitisation with it's underlying loan.",
       "type": "string"
     },
+    "el_irb": {
+      "description": "The expected loss under the internal ratings-based method.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
+    },
     "encumbrance_amount": {
       "description": "The amount of the loan that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
@@ -205,6 +216,11 @@
       "type": "string",
       "maxLength": 20
     },
+    "last_arrears_date": {
+      "description": "The last date on which this loan was in arrears.",
+      "type": "string",
+      "format": "date-time"
+    },
     "last_payment_date": {
       "description": "The final payment date for interest payments, often coincides with end_date.",
       "type": "string",
@@ -213,6 +229,16 @@
     "ledger_code": {
       "description": "The internal ledger code or line item name.",
       "type": "string"
+    },
+    "lgd_downturn": {
+      "description": "The loss given default in the event of an economic downturn. Percentage between 0 an 1.",
+      "type": "integer",
+      "monetary": true
+    },
+    "lgd_irb": {
+      "description": "The loss given default as determined by internal rating-based methods.",
+      "type": "integer",
+      "monetary": true
     },
     "limit_amount": {
       "description": "The total credit limit on the loan. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -264,6 +290,12 @@
       "type": "string",
       "enum": ["mortgage_lender", "other", "spv"]
     },
+    "pd_irb": {
+      "description": "The probability of default as determined by internal rating-based methods. Percentage between 0 an 1.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
     "prev_payment_date": {
       "description": "The most recent previous date at which interest was paid or accrued_interest balance returned to zero.",
       "type": "string",
@@ -302,6 +334,7 @@
         "house_purchase",
         "ips",
         "lifetime_mortgage",
+        "non_b20",
         "operational",
         "other",
         "project_finance",
@@ -405,6 +438,7 @@
         "credit_card",
         "credit_facility",
         "financial_lease",
+        "heloc",
         "liquidity_facility",
         "mortgage",
         "multiccy_facility",
