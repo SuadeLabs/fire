@@ -128,10 +128,8 @@
       "type": "string"
     },
     "el_irb": {
-      "description": "The expected loss under the internal ratings-based method.",
-      "type": "integer",
-      "minimum": 0,
-      "monetary": true
+      "description": "The best estimate of expected loss when in default.",
+      "type": "number"
     },
     "encumbrance_amount": {
       "description": "The amount of the loan that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -237,8 +235,7 @@
     },
     "lgd_irb": {
       "description": "The loss given default as determined by internal rating-based methods.",
-      "type": "integer",
-      "monetary": true
+      "type": "number"
     },
     "limit_amount": {
       "description": "The total credit limit on the loan. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -292,9 +289,11 @@
     },
     "pd_irb": {
       "description": "The probability of default as determined by internal rating-based methods. Percentage between 0 an 1.",
-      "type": "number",
-      "minimum": 0,
-      "maximum": 1
+      "type": "number"
+    },
+    "pd_retail_irb": {
+      "description": "The retail probability of default as determined by internal rating-based methods. Percentage between 0 an 1.",
+      "type": "number"
     },
     "prev_payment_date": {
       "description": "The most recent previous date at which interest was paid or accrued_interest balance returned to zero.",

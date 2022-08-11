@@ -57,6 +57,7 @@ class TestDocs(unittest.TestCase):
             "page",
             "payment_date",
             "pd_irb",
+            "pd_retail_irb",
             "report_type",
             "reset_date",
             "rho",
