@@ -1,0 +1,171 @@
+{
+	"title": "encumbrance_set",
+	"comment": "A set of related transactions representing an encumbrance position, the initial bond purchase is encumbered in a repo transaction. The unencumbered position is £1000",
+	"data": {
+		"security": [
+			{
+				"id": "outright_debt_security",
+				"date": "2022-04-20T00:00:00Z",
+				"accounting_treatment": "amortised_cost",
+				"asset_liability": "asset",
+				"balance": 10000,
+				"currency_code": "GBP",
+				"end_date": "2022-05-20T00:00:00Z",
+				"isin_code": "123456789XYZ",
+				"issuer_id": "debt_security_issuer",
+				"mtm_dirty": 10000,
+				"on_balance_sheet": true,
+				"regulatory_book": "trading_book",
+				"start_date": "2021-04-20T00:00:00Z",
+				"trade_date": "2021-04-20T00:00:00Z",
+				"type": "bond"
+			},
+			{
+				"id": "repo_cash",
+				"date": "2022-04-20T00:00:00Z",
+				"accounting_treatment": "amortised_cost",
+				"asset_liability": "liability",
+				"balance": 8500,
+				"currency_code": "GBP",
+				"customer_id": "repo_customer",
+				"deal_id": "repo_deal",
+				"end_date": "2022-05-20T00:00:00Z",
+				"isin_code": "123456789XYZ",
+				"movement": "cash",
+				"on_balance_sheet": true,
+				"regulatory_book": "trading_book",
+				"sft_type": "repo",
+				"start_date": "2021-04-20T00:00:00Z",
+				"trade_date": "2021-04-20T00:00:00Z",
+				"type": "bond"
+			},
+			{
+				"id": "repo_collateral",
+				"date": "2022-04-20T00:00:00Z",
+				"accounting_treatment": "amortised_cost",
+				"asset_liability": "asset",
+				"currency_code": "GBP",
+				"customer_id": "repo_customer",
+				"deal_id": "repo_deal",
+				"end_date": "2022-05-20T00:00:00Z",
+				"isin_code": "123456789XYZ",
+				"issuer_id": "debt_security_issuer",
+				"movement": "asset",
+				"mtm_dirty": -9000,
+				"on_balance_sheet": true,
+				"regulatory_book": "trading_book",
+				"sft_type": "repo",
+				"start_date": "2021-04-20T00:00:00Z",
+				"trade_date": "2021-04-20T00:00:00Z",
+				"type": "bond"
+			},
+			{
+				"id": "reverse_repo_cash",
+				"date": "2022-04-20T00:00:00Z",
+				"accounting_treatment": "amortised_cost",
+				"asset_liability": "asset",
+				"balance": -9500,
+				"currency_code": "GBP",
+				"customer_id": "reverse_repo_customer",
+				"deal_id": "reverse_repo_deal",
+				"end_date": "2022-05-20T00:00:00Z",
+				"isin_code": "123456789XYZ",
+				"movement": "cash",
+				"on_balance_sheet": true,
+				"regulatory_book": "trading_book",
+				"sft_type": "rev_repo",
+				"start_date": "2021-04-20T00:00:00Z",
+				"trade_date": "2021-04-20T00:00:00Z",
+				"type": "bond"
+			},
+			{
+				"id": "reverse_repo_collateral",
+				"date": "2022-04-20T00:00:00Z",
+				"accounting_treatment": "amortised_cost",
+				"asset_liability": "liability",
+				"currency_code": "GBP",
+				"customer_id": "reverse_repo_customer",
+				"deal_id": "repo_deal",
+				"end_date": "2022-05-20T00:00:00Z",
+				"isin_code": "123456789XYZ",
+				"issuer_id": "debt_security_issuer",
+				"movement": "asset",
+				"mtm_dirty": 10000,
+				"on_balance_sheet": true,
+				"regulatory_book": "trading_book",
+				"sft_type": "rev_repo",
+				"start_date": "2021-04-20T00:00:00Z",
+				"trade_date": "2021-04-20T00:00:00Z",
+				"type": "bond"
+			},
+			{
+				"id": "initial_margin_posted",
+				"date": "2022-04-20T00:00:00Z",
+				"accounting_treatment": "amortised_cost",
+				"asset_liability": "asset",
+				"csa_id": "csa_agreement",
+				"currency_code": "GBP",
+				"customer_id": "derivative_customer",
+				"deal_id": "derivative_deal",
+				"end_date": "2022-05-20T00:00:00Z",
+				"isin_code": "123456789XYZ",
+				"issuer_id": "debt_security_issuer",
+				"mna_id": "isda_master_agreement",
+				"movement": "asset",
+				"mtm_dirty": -9000,
+				"purpose": "independent_collateral_amount",
+				"regulatory_book": "trading_book",
+				"start_date": "2021-04-20T00:00:00Z",
+				"trade_date": "2021-04-20T00:00:00Z",
+				"type": "bond"
+			}
+		],
+		"issuer": [
+			{
+				"id": "debt_security_issuer",
+				"date": "2022-04-20T00:00:00Z",
+				"country_code": "GB",
+				"type": "central_govt"
+			}	
+		],
+		"customer": [
+			{
+				"id": "repo_customer",
+				"date": "2022-04-20T00:00:00Z",
+				"country_code": "GB",
+				"type": "credit_institution"
+			},
+			{
+				"id": "reverse_repo_customer",
+				"date": "2022-04-20T00:00:00Z",
+				"country_code": "GB",
+				"type": "credit_institution"
+			},
+			{
+				"id": "derivative_customer",
+				"date": "2022-04-20T00:00:00Z",
+				"country_code": "GB",
+				"type": "investment_firm"
+			}
+		],
+		"agreement": [
+			{
+				"id": "isda_master_agreement",
+				"date": "2022-04-20T00:00:00Z",
+				"base_currency_code": "GBP",
+				"country_code": "GB",
+				"type": "isda"
+			},
+			{
+				"id": "csa_agreement",
+				"date": "2022-04-20T00:00:00Z",
+				"base_currency_code": "EUR",
+				"country_code": "GB",
+				"credit_support_type": "scsa_isda_2013",
+				"marging_frequency": "daily",
+				"minimum_transfer_amount": 50,
+				"threshold": 10
+			}
+		]
+	}
+}
