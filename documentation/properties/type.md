@@ -424,6 +424,7 @@ Charity serving communities and individuals. Includes non-profit institutions se
 ├── commercial
 ├── credit_card
 ├── financial_lease
+├── heloc
 ├── trade_finance
 ├── credit_facility
 ├── liquidity_facility
@@ -475,6 +476,13 @@ A **credit_card** is credit facility typically secured by a deposit account or e
 ### credit_facility, multiccy_facility
 From Annex I of the [CRR][crr], credit facilities are:
 > agreements to lend, purchase securities, provide guarantees or acceptance facilities
+
+### heloc
+From the CFPB's ["What you should know about home equity lines of credit"][cpfb-heloc-you-should-know]:
+
+> A home equity line of credit is a form of revolving credit in which your home serves as collateral. Because a home often is a consumer’s most valuable asset, many homeowners use home equity credit lines only for major items, such as education, home improvements, or medical bills, and choose not to use them for day-to-day expenses.
+
+See also: [HELOC on Investopedia][investopedia-heloc] for a more practical reference
 
 ### nostro
 Nostro loans are the firm's accounts at other financial institutions which are in effect loans to other firms. Nostros are used in the context of correspondent banking operations which are described by the [ECB](https://www.ecb.europa.eu/paym/t2/shared/pdf/target2_glossary.pdf):
@@ -1209,3 +1217,5 @@ A volatility curve (smile)
 [isda-investo]: https://www.investopedia.com/terms/i/isda-master-agreement.asp
 [isda]: https://isda.org
 [ira]: https://www.law.cornell.edu/uscode/text/26/408
+[cpfb-heloc-you-should-know]: https://files.consumerfinance.gov/f/201401_cfpb_booklet_heloc.pdf
+[investopedia-heloc]: https://www.investopedia.com/mortgage/heloc/

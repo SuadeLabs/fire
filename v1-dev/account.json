@@ -30,7 +30,7 @@
       "description": "The balance of the capital amount that is considered to be in arrears (for overdrafts/credit cards). Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
       "monetary": true
-    }, 
+    },
     "asset_liability": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/asset_liability"
     },
@@ -119,7 +119,7 @@
       "description": "The date on which the first forbearance measure was granted to this product.  Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
       "type": "string",
       "format": "date-time"
-    },  
+    },
     "fvh_level": {
       "description": "Fair value hierarchy category according to IFRS 13.93 (b)",
       "type": "integer",
@@ -194,6 +194,11 @@
       "description": "Repayment frequency of the interest.",
       "type": "string",
       "enum": ["daily", "weekly", "bi_weekly", "monthly", "bi_monthly", "quarterly", "semi_annually", "annually", "at_maturity", "biennially", "sesquiennially"]
+    },
+    "last_drawdown_date": {
+      "description": "The last date on which a drawdown was made on this account (overdraft).",
+      "type": "string",
+      "format": "date-time"
     },
     "last_payment_date": {
       "description": "The final payment date for interest payments, often coincides with end_date.",
