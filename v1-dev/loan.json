@@ -230,8 +230,7 @@
     },
     "lgd_downturn": {
       "description": "The loss given default in the event of an economic downturn. Percentage between 0 an 1.",
-      "type": "integer",
-      "monetary": true
+      "type": "number"
     },
     "lgd_irb": {
       "description": "The loss given default as determined by internal rating-based methods.",
