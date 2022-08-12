@@ -18,10 +18,6 @@
       "type": "string",
       "enum": ["above", "below"]
     },
-    "currency_code": {
-      "description": "Currency in accordance with ISO 4217. It should be consistent with annual_debit_turnover and incurred_cva.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
-    },
     "df_ccp": {
       "description": "The pre-funded financial resources of the CCP in accordance with Article 50c of Regulation (EU) No 648/2012",
       "type": "integer",
