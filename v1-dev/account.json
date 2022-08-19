@@ -95,9 +95,9 @@
       "type": "string"
     },
     "day_count_convention": {
-      "description": "The standardized methodology for calculating the number of days between two dates. It is used to calculate the amount of accrued interest or the present value.",
+      "description": "The standardised methodology for calculating the number of days between two dates. It is used to calculate the amount of accrued interest or the present value.",
       "type": "string",
-      "enum": ["30_360", "30_365", "actual_360", "actual_365", "actual_actual"]
+      "enum": ["standardised_30_360", "standardised_30_365", "actual_360", "actual_365", "actual_actual"]
     },
     "encumbrance_amount": {
       "description": "The amount of the account that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",

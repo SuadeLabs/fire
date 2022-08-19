@@ -124,9 +124,9 @@
       }
     },
     "day_count_convention": {
-      "description": "The standardized methodology for calculating the number of days between two dates. It is used to calculate the amount of accrued interest or the present value.",
+      "description": "The standardised methodology for calculating the number of days between two dates. It is used to calculate the amount of accrued interest or the present value.",
       "type": "string",
-      "enum": ["30_360", "30_365", "actual_360", "actual_365", "actual_actual"]
+      "enum": ["standardised_30_360", "standardised_30_365", "actual_360", "actual_365", "actual_actual"]
     },
     "deal_id": {
       "description": "Identifier used for linking this product as part of a larger deal. e.g. Two components of a single loan or matching a securitisation with it's underlying loan.",
