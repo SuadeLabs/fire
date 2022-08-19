@@ -130,6 +130,11 @@
       "description": "The unique identifier used by the financial institution to identify the customer for this product.",
       "type": "string"
     },
+    "day_count_convention": {
+      "description": "The standardized methodology for calculating the number of days between two dates. It is used to calculate the amount of accrued interest or the present value.",
+      "type": "string",
+      "enum": ["30_360", "30_365", "actual_360", "actual_365", "actual_actual"]
+    },
     "deal_id": {
       "description": "The unique identifier used by the financial institution to identify the deal for this product that links it to other products of the same or different type.",
       "type": "string"
