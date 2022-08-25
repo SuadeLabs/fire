@@ -56,6 +56,6 @@
       "type": "string"
     }
   },
-  "required": ["id", "date", "amount"],
+  "required": ["id", "date", "amount", "loan_id"],
   "additionalProperties": true
 }
