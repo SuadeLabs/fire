@@ -384,6 +384,11 @@
       "XPT", "XSU", "XTS", "XUA", "XXX", "YER", "ZAR", "ZMW"
     ]
    },
+   "day_count_convention": {
+    "description": "The methodology for calculating the number of days between two dates. It is used to calculate the amount of accrued interest or the present value.",
+    "type": "string",
+    "enum": ["act_360", "act_365", "act_act", "std_30_360", "std_30_365"]
+  },
   "impairment_status": {
     "description": "The recognition stage for the impairment/expected credit loss of the product.",
     "type": "string",
