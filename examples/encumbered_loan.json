@@ -1,0 +1,32 @@
+{
+	"title": "encumbered_loan",
+	"comment": "A loan that is partially encumbered",
+	"data": {
+		"loan": [
+			{
+				"id": "encumbered_loan",
+				"date": "2022-04-20T00:00:00Z",
+				"accounting_treatment": "amortised_cost",
+				"asset_liability": "asset",
+				"balance": 150000,
+				"currency_code": "GBP",
+				"customer_id": "encumbered_loan_customer",
+				"encumbrance_amount": 50000,
+				"encumbrance_end_date": "2022-10-20T00:00:00Z",
+				"end_date": "2023-04-20T00:00:00Z",
+				"on_balance_sheet": true,
+				"start_date": "2021-04-20T00:00:00Z",
+				"trade_date": "2021-04-20T00:00:00Z",
+				"type": "mortgage"
+			}
+		],
+		"customer": [
+			{
+				"id": "encumbered_loan_customer",
+				"date": "2022-04-20T00:00:00Z",
+				"country_code": "GB",
+				"type": "natural_person"
+			}
+		]
+	}
+}
