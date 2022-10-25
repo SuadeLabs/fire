@@ -11,6 +11,7 @@ schemas:	[account, collateral, customer, loan]
 The **country_code** represents location, registration, jurisdiction or country of domicile of the product, customer or collateral (booking location). This reflects where product or entity is from an operational standpoint rather than a legal point of view (although in many cases it is the same).
 
 Countries are represented as 2-letter codes in accordance with [ISO 3166-1][iso3166].
+Exceptionally, due to inconsistent regulatory treatment granularity, [ISO-3611-2][iso3166-2] codes have been added, for example to distinguish between the 7 different emirates.
 
 ### Member States
 EU Regulations often refer to *Member States* which refers to European Economic Area (EEA) countries as clarified by the EBA in [this Q&A][member-state-qa].
@@ -34,3 +35,4 @@ See also [**risk_country_code**][rcc].
 [iso3166]: https://en.wikipedia.org/wiki/ISO_3166-1
 [member-state-qa]: https://www.eba.europa.eu/single-rule-book-qa/-/qna/view/publicId/2013_233
 [rcc]: https://github.com/suadelabs/fire/blob/master/documentation/properties/risk_country_code.md
+[iso3166-2]: https://en.wikipedia.org/wiki/ISO_3166-2
