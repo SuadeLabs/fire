@@ -516,6 +516,7 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │   ├── spv_other
 │   ├── mtn
 │   │   └── emtn
+│   ├── pibs
 │   └── abs
 │       ├── abs_auto
 │       ├── abs_sme
@@ -618,6 +619,9 @@ An asset-backed security is a security whose income payments and hence value are
 
 ### mtn
 *Needs definition*
+
+### pibs
+[Building Societies Association](https://www.bsa.org.uk/information/consumer-factsheets/general/what-are-pibs) defines Permanent interest bearing shares (PIBS) as fixed-interest securities issued by building societies, and quoted on the stock market.  They are bond like instruments in that they pay interest, but they have no maturity date - PIBS typically exist as long as their issuer does.
 
 ### performance_bond
 *Needs definition*
