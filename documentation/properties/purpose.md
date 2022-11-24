@@ -691,7 +691,7 @@ The **other** enum value can be used when none of the other enum values apply or
 │    ├──  derivative_collateral
 │    ├──  independent_collateral_amount
 │    ├──  custody
-│    └──  default_fund
+│    ├──  default_fund 
 │    └──  single_collateral_pool
 ├── reference
 ├── share_capital
