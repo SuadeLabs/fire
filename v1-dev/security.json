@@ -354,7 +354,8 @@
         "portfolio_management",
         "reference",
         "share_capital",
-        "trade_finance"
+        "single_collateral_pool",
+	"trade_finance"
       ]
     },
     "rate": {

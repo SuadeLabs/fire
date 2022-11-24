@@ -692,6 +692,7 @@ The **other** enum value can be used when none of the other enum values apply or
 │    ├──  independent_collateral_amount
 │    ├──  custody
 │    └──  default_fund
+│    └──  single_collateral_pool
 ├── reference
 ├── share_capital
 │    └──  non_controlling
@@ -745,6 +746,10 @@ Use this enumeration value to highlight back to back trades defined as "exactly 
 ### aircraft_finance
 *Needs definition*
 
+### single_collateral_pool
+Use this enumeration value to identify to securities which are placed into a central bank single collateral pool. A list of eligible security types for the Bank of England SCP can be found [here][scp]
+
+[scp]: https://www.bankofengland.co.uk/markets/eligible-collateral
 
 ---
 
