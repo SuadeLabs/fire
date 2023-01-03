@@ -56,6 +56,7 @@ The reporting institution has determined that the counterparty is part of an est
 ```bash
 ├── actual
 ├── committed
+│   ├── unconditional_cancel
 ├── cancelled
 └── defaulted
 ```
@@ -64,6 +65,11 @@ This is a live loan.
 
 ### committed
 This is a loan offer or commitment to a customer that a customer could draw down (typically also denoted as off balance sheet).
+
+### unconditional_cancel
+Indicates when an institution has the right to unconditionally cancel the commitment without notice to the obligor.  This is either commitment to an undrawn portion of a loan or revolving credit, or commitment to enter into another contract (off-balance sheet).  
+
+See definition from OSFI Chapter 4, P124.
 
 ### cancelled
 This is a loan that was committed but then later cancelled due to refusal by customer or expiry of offer.
