@@ -39,6 +39,7 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   └── qccp
 ├── central_bank
 ├── mdb
+   └── qmdb
 ├── credit_union
 ├── deposit_broker
 ├── pse
@@ -173,6 +174,9 @@ Multilateral Development Banks are defined in the [CRR][crr] Article 117 as:
 > (m) the International Finance Facility for Immunisation;
 >
 > (n) the Islamic Development Bank.
+
+### qmdb
+Qualify MDB is subset of MDB that satisfies additional criteria set by OSFI to recieve favorable treatment (Chapter 4 P21, 22)
 
 ### intl_org
 International Organisations are defined in [CRR][crr] Article 118:
