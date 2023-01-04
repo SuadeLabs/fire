@@ -3,7 +3,7 @@ import os
 
 
 HOME = os.path.join(os.path.dirname(__file__), "..")
-SCHEMAS_DIR = os.path.join(HOME, 'v1-dev')
+SCHEMAS_DIR = os.path.join(HOME, "v1-dev")
 DOCS_DIR = os.path.join(HOME, "documentation", "properties")
 EXAMPLES_DIR = os.path.join(HOME, "examples")
 
@@ -100,11 +100,11 @@ def fire_stats():
 
     N = 1
     for p in combos:
-        N = N*p
+        N = N * p
 
     return {
         "schemas": schemas,
         "properties": properties,
         "unique_properties": len(uniq_properties),
-        "data_combinations": "%e" % N
+        "data_combinations": "%e" % N,
     }
