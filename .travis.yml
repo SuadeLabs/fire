@@ -5,9 +5,9 @@ python:
   - "3.8"
 
 install:
-  - pip install flake8
+  - pip install ruff
   - pip install -r requirements.txt
 
 script:
-  - flake8 . --exclude "*venv*"
+  - ruff .
   - pytest -v
