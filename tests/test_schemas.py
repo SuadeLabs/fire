@@ -14,12 +14,11 @@ from . import (
     SCHEMA_FILES,
     SCHEMA_NAMES,
     schema_enum_registry,
-    fire_stats
+    fire_stats,
 )
 
 
 class TestSchemas(unittest.TestCase):
-
     def test_schemas_and_docs_found(self):
         assert SCHEMA_NAMES
         assert DOC_NAMES
@@ -41,7 +40,7 @@ class TestSchemas(unittest.TestCase):
                 "example.json",
                 "guarantor.json",
                 "issuer.json",
-                "reporter.json"
+                "reporter.json",
             ]:
                 assert not enums
             else:
@@ -52,13 +51,14 @@ class TestSchemas(unittest.TestCase):
         Enums should be snake_case (mostly)
         Enums should be less than 24 characters
         """
+
         def snake_error(schema, enum, value):
-            return "{} > {} > {} isn't snake_case!".format(
-                schema, enum, value)
+            return "{} > {} > {} isn't snake_case!".format(schema, enum, value)
 
         def len_error(schema, enum, value, length):
             return "{} > {} > {} longer than 22 chars! ({})".format(
-                schema, enum, value, length)
+                schema, enum, value, length
+            )
 
         exceptions = [
             "country_code",  # ISO 3166
@@ -67,7 +67,7 @@ class TestSchemas(unittest.TestCase):
             "quote_currency_code",  # ISO 4217
             "underlying_index_tenor",  # day convention
             "base_rate",  # Bloomberg tickers,
-            "nace_code"  # Nace code format: A.01.10
+            "nace_code",  # Nace code format: A.01.10
         ]
         legacy_long_names = [
             "independent_collateral_amount",
@@ -89,7 +89,9 @@ class TestSchemas(unittest.TestCase):
                 assert len(enum) == match.end(), snake_error(schema, enum, "")
 
                 if enum not in legacy_long_names:
-                    assert len(enum) <= 22, len_error(schema, enum, "", len(enum))  # noqa: E501
+                    assert len(enum) <= 22, len_error(
+                        schema, enum, "", len(enum)
+                    )  # noqa: E501
 
                 if enum in exceptions:
                     continue
@@ -141,7 +143,7 @@ class TestSchemas(unittest.TestCase):
             "snp_lt",
             "snp_st",
             "fitch_st",
-            "fitch_lt"
+            "fitch_lt",
         ]
         for schema_name in SCHEMA_FILES:
             enums = schema_enum_registry(schema_name)
@@ -198,27 +200,18 @@ class TestExamples:
 
         Feel free to add more.
         """
-        no_data = {
-            "title": "check",
-            "comment": "check"
-        }
+        no_data = {"title": "check", "comment": "check"}
         with pytest.raises(ValidationError):
             self.validator.validate(no_data)
 
-        empty_data = {
-            "title": "check",
-            "comment": "check",
-            "data": {}
-        }
+        empty_data = {"title": "check", "comment": "check", "data": {}}
         with pytest.raises(ValidationError):
             self.validator.validate(empty_data)
 
         no_title = {
             "description": "check",
             "comment": "check",
-            "data": {
-                "account": [{"id": "123", "date": "2020-02-02"}]
-            }
+            "data": {"account": [{"id": "123", "date": "2020-02-02"}]},
         }
         with pytest.raises(ValidationError):
             self.validator.validate(no_title)
@@ -226,9 +219,7 @@ class TestExamples:
         bad_data_type = {
             "title": "check",
             "comment": "check",
-            "data": {
-                "blah": [{"id": "123", "date": "2020-02-02"}]
-            }
+            "data": {"blah": [{"id": "123", "date": "2020-02-02"}]},
         }
         with pytest.raises(ValidationError):
             self.validator.validate(bad_data_type)
@@ -236,9 +227,7 @@ class TestExamples:
         bad_nested_data = {
             "title": "check",
             "comment": "check",
-            "data": {
-                "account": [{"id": 123, "date": "2020-02-02"}]
-            }
+            "data": {"account": [{"id": 123, "date": "2020-02-02"}]},
         }
         with pytest.raises(ValidationError):
             self.validator.validate(bad_nested_data)
@@ -247,10 +236,8 @@ class TestExamples:
             "title": "check",
             "comment": "check",
             "data": {
-                "account": [
-                    {"id": "123", "date": "2020-02-02", "type": "coorent"}
-                ]
-            }
+                "account": [{"id": "123", "date": "2020-02-02", "type": "coorent"}]
+            },
         }
         with pytest.raises(ValidationError):
             self.validator.validate(bad_nested_enum_value)
@@ -258,9 +245,7 @@ class TestExamples:
         nested_null_value = {
             "title": "check",
             "comment": "check",
-            "data": {
-                "account": [{"id": "123", "date": "2020-02-02", "type": None}]
-            }
+            "data": {"account": [{"id": "123", "date": "2020-02-02", "type": None}]},
         }
         with pytest.raises(ValidationError):
             self.validator.validate(nested_null_value)
@@ -271,19 +256,13 @@ class TestExamples:
             "data": {
                 "account": [
                     {"id": "123", "date": "2020-02-02", "type": "current"},
-                    {"id": "123", "date": "2020-02-02", "type": None}
+                    {"id": "123", "date": "2020-02-02", "type": None},
                 ]
-            }
+            },
         }
         with pytest.raises(ValidationError):
             self.validator.validate(some_bad_data)
 
-        empty_data = {
-            "title": "check",
-            "comment": "check",
-            "data": {
-                "account": []
-            }
-        }
+        empty_data = {"title": "check", "comment": "check", "data": {"account": []}}
         with pytest.raises(ValidationError):
             self.validator.validate(empty_data)

@@ -18,7 +18,7 @@ fire_schemas = [
     "v1-dev/issuer.json",
     "v1-dev/loan.json",
     "v1-dev/loan_transaction.json",
-    "v1-dev/security.json"
+    "v1-dev/security.json",
 ]
 WRITE_PATH = ""
 fake = Faker()
@@ -43,7 +43,7 @@ def random_accounting_treatment():
         "loans_and_recs",
         "held_to_maturity",
         "amortised_cost",
-        "fv_oci"
+        "fv_oci",
     ]
     return random.choice(accounting_treatments)
 
@@ -66,7 +66,7 @@ def random_text(n):
 
 def random_date():
     d = fake.date_time_between(start_date="-10y", end_date="+30y")
-    return d.strftime('%Y-%m-%dT%H:%M:%SZ')
+    return d.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def insert(product, attr, attr_value):
@@ -117,8 +117,7 @@ def include_embedded_schema_properties(schema):
             f = open("v1-dev/" + inherited_schema, "r")
             inherited_schema = json.load(f)
             schema["properties"] = dict(
-                schema["properties"].items() +
-                inherited_schema["properties"].items()
+                schema["properties"].items() + inherited_schema["properties"].items()
             )
 
     except KeyError:
@@ -128,11 +127,11 @@ def include_embedded_schema_properties(schema):
 
 
 def generate_product_fire(schema, data_type, n):
-    now = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
+    now = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
     batch = {
         "name": "Random_FIRE_{}s".format(schema["title"][:-7]),
         "date": now,
-        "data": []
+        "data": [],
     }
 
     schema = include_embedded_schema_properties(schema)
@@ -240,14 +239,12 @@ def generate_product_fire(schema, data_type, n):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description="Generate random FIRE data points."
-    )
+    parser = argparse.ArgumentParser(description="Generate random FIRE data points.")
     parser.add_argument(
         "count",
         type=int,
         help="Integer number of FIRE data points to generate \
-              for each data type"
+              for each data type",
     )
     args = parser.parse_args()
 
