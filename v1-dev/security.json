@@ -355,7 +355,8 @@
         "reference",
         "share_capital",
         "single_collateral_pool",
-	"trade_finance"
+        "ocir",
+	      "trade_finance"
       ]
     },
     "rate": {
@@ -483,8 +484,7 @@
         "letter_of_credit",
         "mbs",
         "mtn",
-        "ocir",
-	"other",
+	      "other",
         "performance_bond",
         "performance_guarantee",
         "performance_sloc",
