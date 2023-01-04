@@ -541,7 +541,6 @@ Other refers to a type of security not covered by the above. If you find yoursel
 ├── cash_ratio_deposit
 ├── cash
 ├── index
-├── ocir
 └── other
 ```
 
@@ -704,12 +703,6 @@ Performance standby letter of credit
 ### warranty
 *Needs definition*
 
-### ocir
-Use this enum to refer to funds reserved for the purpose of implementing, from an operational point of view, the resolution strategy and, consequently, to stabilise and restructure the bank.
-
-[Bank of England OCIR][ocir]
-
-[ocir]: https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/supervisory-statement/2021/ss421-may-2021.pdf
 ### other
 Other refers to a type of security not covered by the above. If you find yourself using this often, please [contribute][contributing].
 

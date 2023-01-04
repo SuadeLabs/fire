@@ -691,7 +691,7 @@ The **other** enum value can be used when none of the other enum values apply or
 │    ├──  derivative_collateral
 │    ├──  independent_collateral_amount
 │    ├──  custody
-│    ├──  default_fund 
+│    ├──  default_fund
 │    └──  single_collateral_pool
 ├── reference
 ├── share_capital
@@ -703,6 +703,7 @@ The **other** enum value can be used when none of the other enum values apply or
 ├── aircraft_finance
 ├── insurance
 ├── back_to_back
+├── ocir
 └── other
 ```
 ### investment_advice
@@ -750,6 +751,13 @@ Use this enumeration value to highlight back to back trades defined as "exactly 
 Use this enumeration value to identify to securities which are placed into a central bank single collateral pool. A list of eligible security types for the Bank of England SCP can be found [here][scp]
 
 [scp]: https://www.bankofengland.co.uk/markets/eligible-collateral
+
+### ocir
+Use this enum to refer to funds reserved for the purpose of implementing, from an operational point of view, the resolution strategy and, consequently, to stabilise and restructure the bank.
+
+[Bank of England OCIR][ocir]
+
+[ocir]: https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/supervisory-statement/2021/ss421-may-2021.pdf
 
 ---
 
