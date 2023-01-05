@@ -7,7 +7,7 @@ on:
     branches: [master]
 
 jobs:
-  build:
+  test_on_python_version:
     # Python 3.6 isn't available on ubuntu-latest
     runs-on: ubuntu-20.04
     strategy:
