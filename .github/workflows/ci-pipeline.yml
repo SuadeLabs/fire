@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04 # Python 3.6 isn't available on ubuntu-latest
     strategy:
       matrix:
         python-version: ["3.6", "3.8"]
