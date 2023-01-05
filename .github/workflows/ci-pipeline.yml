@@ -19,16 +19,20 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install dependencies
+      - name: Install linters
+        if: ${{ matrix.python-version }} == "3.8"
         run: |
           pip install black
           pip install ruff
+      - name: Install requirements
+        run: |
           pip install -r requirements.txt
       - name: Lint with ruff
         if: ${{ matrix.python-version }} == "3.8"
         run: |
           ruff .
       - name: Lint with black
+        if: ${{ matrix.python-version }} == "3.8"
         run: |
           black . --check
       - name: Test with pytest
