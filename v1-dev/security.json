@@ -350,12 +350,12 @@
         "investment",
         "investment_advice",
         "non_controlling",
+        "ocir",
         "other",
         "portfolio_management",
         "reference",
         "share_capital",
         "single_collateral_pool",
-        "ocir",
         "trade_finance"
       ]
     },
