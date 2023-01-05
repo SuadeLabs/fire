@@ -25,6 +25,7 @@ jobs:
           pip install ruff
           pip install -r requirements.txt
       - name: Lint with ruff
+        if: ${{ matrix.python-version }} == "3.8"
         run: |
           ruff .
       - name: Lint with black
