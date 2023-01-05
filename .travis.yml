@@ -5,9 +5,11 @@ python:
   - "3.8"
 
 install:
+  - pip install black
   - pip install ruff
   - pip install -r requirements.txt
 
 script:
+  - black . --check
   - ruff .
   - pytest -v
