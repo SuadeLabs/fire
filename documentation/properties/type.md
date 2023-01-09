@@ -503,6 +503,9 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │   ├── share
 │   │   ├── treasury
 │   │   └── pref_share
+│   │   ├── federal_reserve_bank
+│   │   ├── federal_home_loan_bank
+│   │   ├── national_legislated
 │   └── share_agg
 ├── debt
 │   ├── bond
@@ -562,6 +565,15 @@ The [FCA](https://www.handbook.fca.org.uk/handbook/glossary/G1587.html) defines 
 ### treasury
 According to IAS 32.33, if an entity reacquires its own equity instruments, those instruments shall be considered **treasury shares**, and shall be deducted from equity.
 
+### federal_reserve_bank
+Equity issued related to sovereign federal reserve bank that obtain favour risk weight treatment.  Reference OSFI BCAR template schedule 40.120.
+
+### federal_home_loan
+Equity issued related to sovereign related to home loans that obtain favour risk weight treatment.  Reference OSFI BCAR template schedule 40.120.
+
+### national_legislated
+Equity issued related by any level of government related to programmes that provide significant subsidies for the investment to the institution and involve government oversight and restrictions on the equity investments.  Reference OSFI BCAR template schedule 40.120 and Chapter 4, P77.
+.
 ### debt
 This is a "catch all" term for debt of any kind, *bond*, *bond_amortising*, *covered_bond*, *abs*, *residential_mbs*, *non_residential_mbs*, *frn*, *govt_gteed_frn*, to be used when further granularity is not available or not needed.
 
