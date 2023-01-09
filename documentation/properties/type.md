@@ -526,6 +526,7 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │           ├── rmbs
 │           ├── rmbs_trans
 │           └── cmbs
+│           └── nha
 ├── guarantee
 │   ├── financial_guarantee
 │   │   └── financial_sloc
@@ -639,6 +640,9 @@ This type value is in order to indicate whether the security is subject to trans
 
 ### cmbs
 A commercial mortgage-backed security (a subclass of an abs).
+
+### nha
+National Housing Act (NHA) MBS that are guaranteed by the Canada Mortgage and Housing Corporation (CMHC), will receive a risk weight of 0% in recognition of the fact that obligations incurred by CMHC are legal obligations of the Government of Canada.  Reference OSFI, Chapter 4, P120
 
 ### frn
 A floating-rate note is defined in the [Money Market Statistics Regulation][mm-stat] in Annex II as:
