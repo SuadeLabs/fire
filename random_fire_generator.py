@@ -1,12 +1,12 @@
 import argparse
 import json
-import iso3166
 import logging
 import random
 import timeit
 from datetime import datetime
-from faker import Faker
 
+import iso3166
+from faker import Faker
 
 fire_schemas = [
     "v1-dev/account.json",
