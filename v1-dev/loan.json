@@ -340,6 +340,10 @@
         "operational",
         "other",
         "project_finance",
+        "pre_operational",
+        "high_quality_phase"
+        "operational_finance"
+        "commodities_finance"
         "promotional",
         "remortgage",
         "remortgage_other",
