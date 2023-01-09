@@ -176,7 +176,23 @@ Multilateral Development Banks are defined in the [CRR][crr] Article 117 as:
 > (n) the Islamic Development Bank.
 
 ### qmdb
-Qualify MDB is subset of MDB that satisfies additional criteria set by OSFI to recieve favorable treatment (Chapter 4 P21, 22)
+Qualify MDB is subset of MDBs that satisfy additional stricter criteria set by Basel (and implemented by other regulators e.g. OSFI) to recieve more favorable credit risk treatment. 
+
+[Basel CRE 20.14](
+https://www.bis.org/basel_framework/chapter/CRE/20.htm#paragraph_CRE_20_20230101_Exposures_to_multilateral_development_banks_MDBs_:~:text=20.14,loan%20loss%20reserve.):
+> A 0% risk weight will be applied to exposures to MDBs that fulfil to the Committee’s satisfaction the eligibility criteria provided below.8 The Committee will continue to evaluate eligibility on a case-by-case basis. The eligibility criteria for MDBs risk-weighted at 0% are:
+
+> (1) very high-quality long-term issuer ratings, ie a majority of an MDB’s external ratings must be AAA;
+
+> (2) either the shareholder structure comprises a significant proportion of sovereigns with long-term issuer external ratings of AA– or better, or the majority of the MDB’s fund-raising is in the form of paid-in equity/capital and there is little or no leverage;
+
+> (3) strong shareholder support demonstrated by the amount of paid-in capital contributed by the shareholders; the amount of further capital the MDBs have the right to call, if required, to repay their liabilities; and continued capital contributions and new pledges from sovereign shareholders;
+
+> (4) adequate level of capital and liquidity (a case-by-case approach is necessary in order to assess whether each MDB’s capital and liquidity are adequate); and,
+
+> (5) strict statutory lending requirements and conservative financial policies, which would include among other conditions a structured approval process, internal creditworthiness and risk concentration limits (per country, sector, and individual exposure and credit category), large exposures approval by the board or a committee of the board, fixed repayment schedules, effective monitoring of use of proceeds, status review process, and rigorous assessment of risk and provisioning to loan loss reserve.
+
+see also: [OSFI BCAR Chapter 4(21)](https://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/CAR22_chpt4.aspx#4.1.21:~:text=A%200%25%20risk%20weight%20will,provisioning%20to%20loan%20loss%20reserve.)
 
 ### intl_org
 International Organisations are defined in [CRR][crr] Article 118:
