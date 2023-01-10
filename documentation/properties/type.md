@@ -35,6 +35,7 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   ├── insurer
 │   ├── financial_holding
 │   └── other_financial
+│   └── unregulated_financial
 ├── ccp
 │   └── qccp
 ├── central_bank
@@ -141,6 +142,12 @@ Article 411 of the [CRR][crr]:
 > (l) a third-country undertaking with a main business comparable to any of the entities referred to in points (a) to (k);
 >
 > (m) a building society
+
+### unregulated_financial
+As defined by OSFI chapter 4, P56 and chapter 5, P68:
+> Unregulated financial institutions are institutions that are not supervised by a regulator, and therefore NOT subject to prudential standards or any level of supervision equivalent to those applied to banks under the Basel III framework (including, in particular, capital and liquidity requirements).  
+
+Unregulated financial institutions would be not be qualified for "bank" treatment under standardized and/or subject to 1.25 correlation factor under IRB.
 
 ### mdb
 Multilateral Development Banks are defined in the [CRR][crr] Article 117 as:

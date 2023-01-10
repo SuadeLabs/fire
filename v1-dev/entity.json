@@ -244,6 +244,7 @@
 	"export_credit_agency",
         "financial",
         "financial_holding",
+        "unregulated_financial",
         "individual",
         "insurer",
         "intl_org",
