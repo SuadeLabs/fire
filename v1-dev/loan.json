@@ -340,8 +340,8 @@
         "operational",
         "other",
         "project_finance",
-        "pre_operational",
-        "high_quality_phase"
+        "project_hq_phase",
+        "project_pre_op",
         "object_finance"
         "commodities_finance"
         "promotional",
