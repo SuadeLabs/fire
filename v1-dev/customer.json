@@ -28,6 +28,27 @@
       "type": "integer",
       "monetary": true
     },
+    "eu_paris_excluded": {
+      "description": "The company meets an exclusion criteria of the EU Paris-aligned Benchmarks.",
+      "type": "string",
+      "enum": [
+        "coal",
+        "electricity",
+        "gas",
+        "in_violation",
+        "oil",
+        "tobacco",
+        "weapons"
+      ]
+    },
+    "ghg_emissions": {
+      "description": "The amount of GHG emissions, measured in tonnes of CO2.",
+      "type": "integer"
+    },
+    "ghg_emissions_s3": {
+      "description": "The amount of Scope 3 (indirect) GHG emissions, measured in tonnes of CO2.",
+      "type": "integer"
+    },
     "incurred_cva": {
       "description": "The amount of credit valuation adjustements being recognised by the institution as an incurred write-down, calculated without taking into account any offsetting debit value adjustment attributed to the firm's own credit risk, that has been already excluded from own funds.",
       "type": "integer",

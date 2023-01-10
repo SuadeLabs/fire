@@ -52,6 +52,11 @@
       "type": "string",
       "format": "date-time"
     },
+    "energy_performance": {
+      "description": "Energy performance of a building expressed in kWh/m^2.",
+      "type": "number",
+      "minimum": 0
+    },
     "loan_ids": {
       "description": "The unique identifiers for the loans within the financial institution.",
       "type": "array",
