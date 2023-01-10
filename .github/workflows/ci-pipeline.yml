@@ -1,0 +1,45 @@
+name: Build
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches:
+      - master
+      - '*'
+
+jobs:
+  test_on_python_version:
+    # Python 3.6 isn't available on ubuntu-latest
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        python-version: [3.6, 3.8]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install linters
+        # only install linting libraries on python 3.8 since they don't suppot 3.6
+        if: matrix.python-version == 3.8
+        run: |
+          pip install black
+          pip install ruff
+      - name: Install requirements
+        run: |
+          pip install -r requirements.txt
+      - name: Lint with ruff
+        # only run ruff on python 3.8
+        if: matrix.python-version == 3.8
+        run: |
+          ruff .
+      - name: Lint with black
+        # only run black on python 3.8
+        if: matrix.python-version == 3.8
+        run: |
+          black . --check
+      - name: Test with pytest
+        run: |
+          pytest -v

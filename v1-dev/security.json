@@ -350,12 +350,13 @@
         "investment",
         "investment_advice",
         "non_controlling",
+        "ocir",
         "other",
         "portfolio_management",
         "reference",
         "share_capital",
         "single_collateral_pool",
-	"trade_finance"
+        "trade_finance"
       ]
     },
     "rate": {
@@ -485,7 +486,7 @@
         "mtn",
         "nha_mbs",
         "ocir",
-	"other",
+	      "other",
         "performance_bond",
         "performance_guarantee",
         "performance_sloc",
