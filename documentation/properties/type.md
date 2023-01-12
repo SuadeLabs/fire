@@ -26,6 +26,8 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   │   ├── building_society
 │   │   ├── state_owned_bank
 │   │   └── promotional_lender
+│   │       ├── promo_fed_reserve
+│   │       └── promo_fed_home_loan
 │   ├── investment_firm
 │   │   ├── ciu
 │   │   ├── pension_fund
@@ -34,6 +36,7 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   ├── pic
 │   ├── insurer
 │   ├── financial_holding
+│   ├── unregulated_financial
 │   └── other_financial
 ├── ccp
 │   └── qccp
@@ -141,6 +144,15 @@ Article 411 of the [CRR][crr]:
 > (l) a third-country undertaking with a main business comparable to any of the entities referred to in points (a) to (k);
 >
 > (m) a building society
+
+### unregulated_financial
+In the Basel guidelines for Credit Risk under exposures to securties firms and financial institutions, [CRE 20.40](https://www.bis.org/basel_framework/chapter/CRE/20.htm?tldate=20220101&inforce=20230101&published=20201126#:~:text=provided%20that%20these,their%20own%20jurisdictions.) it allows for these exposures to be treated like exposures to banks on the basis that they fall under the same regulated regime (and similar supervisory requirements) that banks in that jurisdiction are subject to. 
+So 'unregulated_financial' is to clearly define those firms *that do not* meet these regulatory requirements.
+
+As defined by OSFI chapter 4, P56 and chapter 5, P68:
+> Unregulated financial institutions are institutions that are not supervised by a regulator, and therefore NOT subject to prudential standards or any level of supervision equivalent to those applied to banks under the Basel III framework (including, in particular, capital and liquidity requirements).  
+
+Unregulated financial institutions would be not be qualified for "bank" treatment under standardized and/or subject to 1.25 correlation factor under IRB.
 
 ### mdb
 Multilateral Development Banks are defined in the [CRR][crr] Article 117 as:
@@ -261,6 +273,15 @@ Credit institution is defined in Article 4 of [CRR][crr]:
 ### promotional_lender
 A promotional lender is defined by the EU [here][lcr] Article 10.1(e):
 > (ii) any credit institution whose purpose is to advance the public policy objectives of the Union or of the central or regional government or local authority in a Member State predominantly through the provision of promotional loans on a non-competitive, not for profit basis, provided that at least 90 % of the loans that it grants are directly or indirectly guaranteed by the central or regional government or local authority and that any exposure to that regional government or local authority, as applicable, is treated as an exposure to the central government of the Member State in accordance with Article 115(2) of Regulation (EU) No 575/2013;
+
+This would also include any national legislated government programmes. For example, in OSFI BCAR template schedule 40.120 and Chapter 4, P77, equity issued related by any level of government related to programmes that provide significant subsidies for the investment to the institution and involve government oversight and restrictions on the equity investments.
+
+### promo_fed_reserve
+Equity issued, guaranteed or related to the US Federal Reserve Bank that obtain favour risk weight treatment.  Reference OSFI BCAR template schedule 40.120.
+
+### promo_fed_home_loan
+Equity issued, guaranteed or related to US Federal Home Loan Bank that obtain favour risk weight treatment.  Reference OSFI BCAR template schedule 40.120.
+
 
 ### merchant_bank
 **merchant bank** means:

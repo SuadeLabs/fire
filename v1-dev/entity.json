@@ -258,7 +258,9 @@
         "partnership",
         "pension_fund",
         "pic",
-        "promotional_lender",
+        "promo_fed_home_loan",
+	"promo_fed_reserve",
+	"promotional_lender",
         "pse",
         "public_corporation",
         "qccp",
@@ -270,7 +272,8 @@
         "state_owned_bank",
         "statutory_board",
         "supported_sme",
-        "unincorporated_biz"
+        "unincorporated_biz",
+	"unregulated_financial"
       ]
     },
     "version_id": {
