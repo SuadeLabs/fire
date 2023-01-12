@@ -423,7 +423,13 @@
     "status": {
       "description": "Describes if the loan is active or been cancelled.",
       "type": "string",
-      "enum": ["actual", "cancelled", "cancellable", "committed", "defaulted"]
+      "enum": [
+        "actual", 
+        "cancellable",
+        "cancelled",  
+        "committed", 
+        "defaulted"
+      ]
     },
     "trade_date": {
       "description": "The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
