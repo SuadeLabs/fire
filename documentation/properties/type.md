@@ -26,6 +26,8 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   │   ├── building_society
 │   │   ├── state_owned_bank
 │   │   └── promotional_lender
+│   │       ├── promo_fed_reserve
+│   │       └── promo_fed_home_loan
 │   ├── investment_firm
 │   │   ├── ciu
 │   │   ├── pension_fund
@@ -272,6 +274,15 @@ Credit institution is defined in Article 4 of [CRR][crr]:
 A promotional lender is defined by the EU [here][lcr] Article 10.1(e):
 > (ii) any credit institution whose purpose is to advance the public policy objectives of the Union or of the central or regional government or local authority in a Member State predominantly through the provision of promotional loans on a non-competitive, not for profit basis, provided that at least 90 % of the loans that it grants are directly or indirectly guaranteed by the central or regional government or local authority and that any exposure to that regional government or local authority, as applicable, is treated as an exposure to the central government of the Member State in accordance with Article 115(2) of Regulation (EU) No 575/2013;
 
+This would also include any national legislated government programmes. For example, in OSFI BCAR template schedule 40.120 and Chapter 4, P77, equity issued related by any level of government related to programmes that provide significant subsidies for the investment to the institution and involve government oversight and restrictions on the equity investments.
+
+### promo_fed_reserve
+Equity issued, guaranteed or related to the US Federal Reserve Bank that obtain favour risk weight treatment.  Reference OSFI BCAR template schedule 40.120.
+
+### promo_fed_home_loan
+Equity issued, guaranteed or related to US Federal Home Loan Bank that obtain favour risk weight treatment.  Reference OSFI BCAR template schedule 40.120.
+
+
 ### merchant_bank
 **merchant bank** means:
 > a merchant bank approved under section 28 of the Monetary Authority of Singapore Act (Cap. 186);
@@ -513,9 +524,6 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │   ├── share
 │   │   ├── treasury
 │   │   └── pref_share
-│   │   ├── federal_reserve_bank
-│   │   ├── federal_home_loan_bank
-│   │   ├── national_legislated
 │   └── share_agg
 ├── debt
 │   ├── bond
@@ -575,15 +583,6 @@ The [FCA](https://www.handbook.fca.org.uk/handbook/glossary/G1587.html) defines 
 ### treasury
 According to IAS 32.33, if an entity reacquires its own equity instruments, those instruments shall be considered **treasury shares**, and shall be deducted from equity.
 
-### federal_reserve_bank
-Equity issued related to sovereign federal reserve bank that obtain favour risk weight treatment.  Reference OSFI BCAR template schedule 40.120.
-
-### federal_home_loan
-Equity issued related to sovereign related to home loans that obtain favour risk weight treatment.  Reference OSFI BCAR template schedule 40.120.
-
-### national_legislated
-Equity issued related by any level of government related to programmes that provide significant subsidies for the investment to the institution and involve government oversight and restrictions on the equity investments.  Reference OSFI BCAR template schedule 40.120 and Chapter 4, P77.
-.
 ### debt
 This is a "catch all" term for debt of any kind, *bond*, *bond_amortising*, *covered_bond*, *abs*, *residential_mbs*, *non_residential_mbs*, *frn*, *govt_gteed_frn*, to be used when further granularity is not available or not needed.
 
