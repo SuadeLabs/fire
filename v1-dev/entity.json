@@ -244,7 +244,6 @@
 	"export_credit_agency",
         "financial",
         "financial_holding",
-        "unregulated_financial",
         "individual",
         "insurer",
         "intl_org",
@@ -260,6 +259,8 @@
         "pension_fund",
         "pic",
         "promotional_lender",
+	"promo_fed_reserve",
+        "promo_fed_home_loan",
         "pse",
         "public_corporation",
         "qccp",
@@ -271,7 +272,8 @@
         "state_owned_bank",
         "statutory_board",
         "supported_sme",
-        "unincorporated_biz"
+        "unincorporated_biz",
+	"unregulated_financial"
       ]
     },
     "version_id": {
