@@ -34,8 +34,8 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   ├── pic
 │   ├── insurer
 │   ├── financial_holding
+│   ├── unregulated_financial
 │   └── other_financial
-│   └── unregulated_financial
 ├── ccp
 │   └── qccp
 ├── central_bank
@@ -144,6 +144,9 @@ Article 411 of the [CRR][crr]:
 > (m) a building society
 
 ### unregulated_financial
+In the Basel guidelines for Credit Risk under exposures to securties firms and financial institutions, [CRE 20.40](https://www.bis.org/basel_framework/chapter/CRE/20.htm?tldate=20220101&inforce=20230101&published=20201126#:~:text=provided%20that%20these,their%20own%20jurisdictions.) it allows for these exposures to be treated like exposures to banks on the basis that they fall under the same regulated regime (and similar supervisory requirements) that banks in that jurisdiction are subject to. 
+So 'unregulated_financial' is to clearly define those firms *that do not* meet these regulatory requirements.
+
 As defined by OSFI chapter 4, P56 and chapter 5, P68:
 > Unregulated financial institutions are institutions that are not supervised by a regulator, and therefore NOT subject to prudential standards or any level of supervision equivalent to those applied to banks under the Basel III framework (including, in particular, capital and liquidity requirements).  
 
