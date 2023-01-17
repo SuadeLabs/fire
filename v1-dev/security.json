@@ -410,7 +410,8 @@
         "rev_repo",
         "sell_buy_back",
         "stock_borrow",
-        "stock_loan"
+        "stock_loan",
+        "term_funding_scheme"
       ]
     },
     "snp_lt": {
