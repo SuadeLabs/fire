@@ -72,6 +72,12 @@
       "description": "The unique identifier for the behavioral curve used by the financial institution.",
       "type": "string"
     },
+    "cb_haircut": {
+      "description": "The haircut as determined by the firm's central bank",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
     "ccf": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/ccf"
     },
@@ -428,10 +434,10 @@
       "description": "Describes if the loan is active or been cancelled.",
       "type": "string",
       "enum": [
-        "actual", 
+        "actual",
         "cancellable",
-        "cancelled",  
-        "committed", 
+        "cancelled",
+        "committed",
         "defaulted"
       ]
     },
