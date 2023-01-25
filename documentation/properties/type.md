@@ -439,6 +439,8 @@ Charity serving communities and individuals. Includes non-profit institutions se
 # Loan
 ```
 ├── mortgage
+│   ├── reverse_mortgage
+│   │   └── qualified_reverse_mortgage
 ├── commercial_property
 ├── personal
 ├── auto
@@ -453,6 +455,7 @@ Charity serving communities and individuals. Includes non-profit institutions se
 ├── nostro
 └── other
 ```
+
 ### trade_finance
 From [CRR][crr] definitions (80):
 > Trade finance means financing, including guarantees, connected to the exchange of goods and services through financial products of fixed short-term maturity, generally of less than one year, without automatic rollover
@@ -490,6 +493,14 @@ A **mortgage** is a residential loan to a individuals secured with a one-to-one 
 
 As outlined in [LCR][lcr] Article 13(2)(g)(i)
 > loans secured with a first-ranking mortgage granted to individuals for the acquisition of their main residence
+
+### qualified_reverse_mortgage
+A **qualified_reverse_mortgage** is a reverse mortgage which adheres to the stipulations defined in OSFI BCAR Chapter 4 P 116, and therefore qualifies for preferential risk weight treatment
+
+### reverse_mortgage
+A **reverse_mortgage** is a non-recourse loan secured by property that has no defined term and no monthly repayment of principal and interest.
+
+As outlined in OSFI BCAR Chapter 4, P 116
 
 ### credit_card
 A **credit_card** is credit facility typically secured by a deposit account or equity in the borrower's property.
