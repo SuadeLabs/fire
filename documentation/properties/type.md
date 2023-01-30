@@ -1068,7 +1068,6 @@ collateral that cannot be classified as residential or commercial property.
 ### farm
 *NEEDS Definition*
 
-
 ### guarantee
 *NEEDS Definition*
 
@@ -1082,7 +1081,7 @@ collateral that cannot be classified as residential or commercial property.
 *NEEDS Definition*
 
 ### security
-This identifies that the piece of collateral used is a security, as mapped via the security schema
+This identifies that the piece of collateral used is a security, as mapped via the security schema and linked to the collateral schema using the collateral's `security_id` property.
 
 ### other
 *NEEDS Definition*
