@@ -356,8 +356,8 @@
         "reference",
         "share_capital",
         "single_collateral_pool",
-        "variation_margin",
-        "trade_finance"
+        "trade_finance",
+        "variation_margin"
       ]
     },
     "rate": {
