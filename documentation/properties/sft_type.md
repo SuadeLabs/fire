@@ -53,9 +53,12 @@ The **sft_type** is used when describing securities financing transactions using
 > 'margin lending transaction' means a transaction in which a counterparty extends credit in connection with the purchase, sale, carrying or trading of securities, but not including other loans that are secured by collateral in the form of securities;
 
 ### term_funding_scheme
-Under the term funding scheme (TFS), participating banks and building societies were able to borrow funds from the Bank of England at a rate close to Bank Rate for up to four years. More information [here][tfs]
+Under the term funding scheme (TFS), participating banks and building societies were able to borrow funds from the Bank of England at a rate close to Bank Rate for up to four years. More information [here][tfs].
+
+Note that ECB equivalent of TFS is the Targeted longer-term refinancing operations ([TLTRO][tltro]).
 
 [tfs]: https://www.bankofengland.co.uk/markets/market-notices/2020/term-funding-scheme-market-notice-mar-2020
+[tltro]: https://www.ecb.europa.eu/mopo/implement/omo/tltro/html/index.en.html 
 
 ### bond_borrow
 ### bond_loan
