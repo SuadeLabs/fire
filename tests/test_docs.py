@@ -64,6 +64,7 @@ class TestDocs(unittest.TestCase):
             "risk_weight_std",
             "row",
             "settlement_type",
+            "security_id",
             "theta",
             "title",
             "underlying_derivative_id",
