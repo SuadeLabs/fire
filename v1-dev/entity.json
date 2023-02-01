@@ -270,7 +270,8 @@
         "state_owned_bank",
         "statutory_board",
         "supported_sme",
-        "unincorporated_biz"
+        "unincorporated_biz",
+        "pmi"
       ]
     },
     "version_id": {
