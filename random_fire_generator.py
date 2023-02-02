@@ -141,7 +141,6 @@ def generate_product_fire(schema, data_type, n):
         p = {}
         batch["data"].append(p)
         for attr in schema_attrs:
-
             attr_obj = schema["properties"][attr]
 
             if attr == "id":
