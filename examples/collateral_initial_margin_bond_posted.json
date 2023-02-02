@@ -24,54 +24,6 @@
         "cqs_standardised": 1
       }
     ],
-    "derivative": [
-      {
-        "date": "2020-03-31T00:00:00",
-        "id": "eur_10y_irs_fixed",
-        "asset_class": "ir",
-        "type": "vanilla_swap",
-        "customer_id": "credit_institution",
-        "mna_id": "isda_master_agreement",
-        "csa_id": "csa_agreement",
-        "leg_type": "fixed",
-        "position": "long",
-        "currency_code": "EUR",
-        "notional_amount": 100,
-        "mtm_dirty": 70,
-        "trade_date": "2020-03-31T00:00:00",
-        "start_date": "2020-03-31T00:00:00",
-        "end_date": "2023-07-03T00:00:00",
-        "rate": 0.01,
-        "regulatory_book": "banking_book",
-        "accounting_treatment": "fv_oci",
-        "asset_liability": "asset",
-        "on_balance_sheet": true
-      },
-      {
-        "date": "2020-03-31T00:00:00",
-        "id": "eur_10y_irs_floating",
-        "asset_class": "ir",
-        "type": "vanilla_swap",
-        "customer_id": "credit_institution",
-        "mna_id": "isda_master_agreement",
-        "csa_id": "csa_agreement",
-        "leg_type": "floating",
-        "position": "short",
-        "currency_code": "EUR",
-        "notional_amount": 100,
-        "mtm_dirty": -65,
-        "trade_date": "2020-03-31T00:00:00",
-        "start_date": "2020-03-31T00:00:00",
-        "end_date": "2023-07-03T00:00:00",
-        "rate": 0.0025,
-        "regulatory_book": "banking_book",
-        "accounting_treatment": "fv_oci",
-        "asset_liability": "liability",
-        "underlying_index": "EURIBOR",
-        "underlying_index_tenor": "3m",
-        "on_balance_sheet": true
-      }
-    ],
     "issuer": [
       {
         "date": "2020-03-31T00:00:00",
