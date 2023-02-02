@@ -282,7 +282,6 @@ security with isin 'DUMMYISIN123'.
 ```
 #### Collateral posted to ccp on non-derivatives
 Non-derivatives IM posted to a CCP (e.g. RepoClear)
-> Security has "purpose" = "collateral" which signals it is not linked to derivative transactions.
 ```json
 {{#include security_collateral_posted_ccp_non_deriv.json:5:}}
 ```
