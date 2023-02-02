@@ -1,6 +1,6 @@
 
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Security Schema",
   "description": "A security represents a tradable financial instrument held or financed by an institution for investment or collateral.",
   "type": "object",
