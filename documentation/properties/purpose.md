@@ -743,7 +743,6 @@ The **other** enum value can be used when none of the other enum values apply or
 ```bash
 ├── collateral
 │    ├──  variation_margin
-│    │    └──  derivative_collateral
 │    ├──  independent_collateral_amount
 │    ├──  custody
 │    ├──  default_fund
@@ -772,12 +771,13 @@ From [CRR][crr] definitions (80):
 > **Trade finance** means financing, including guarantees, connected to the exchange of goods and services through financial products of fixed short-term maturity, generally of less than one year, without automatic rollover;
 
 ### variation_margin
-Defined in accordance with Article 30(3) of the [LCR][lcr] regulation:
-> "collateral needs that would result from the impact of an adverse market scenario on the credit institution's derivatives transactions, financing transactions and other contracts"
+Defined in accordance with Article 30(1) and Article 30(3) of the [LCR][lcr] regulation:
+> 30(1) "collateral posted for contracts listed in [Annex II of Regulation (EU) No. 575/2013](http://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32013R0575) and credit derivatives".
+
+> 30(3) "collateral needs that would result from the impact of an adverse market scenario on the credit institution's derivatives transactions, financing transactions and other contracts"
 
 ### derivative_collateral
-Defined in accordance with Article 30(1) of the [LCR][lcr] regulation:
-> "collateral posted for contracts listed in [Annex II of Regulation (EU) No. 575/2013](http://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32013R0575) and credit derivatives".
+(do not use - see *variation_margin*)
 
 ### independent_collateral_amount (ICA)
 Defined in accordance with [SA-CCR][bis_sa_ccr].
