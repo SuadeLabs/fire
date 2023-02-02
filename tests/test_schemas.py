@@ -160,7 +160,6 @@ class TestSchemas(unittest.TestCase):
 
 
 class TestExamples:
-
     with open(os.path.join(SCHEMAS_DIR, "example.json")) as ff:
         example_schema = json.load(ff)
 
