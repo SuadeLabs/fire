@@ -1042,6 +1042,7 @@ The most common XCS, and that traded in interbank markets, is a mark-to-market (
 ├── debenture
 ├── life_policy
 ├── cash
+├── security 
 └── other
 ```
 The collateral type defines the form of the collateral, such as property or other assets used to secure an obligation.
@@ -1067,7 +1068,6 @@ collateral that cannot be classified as residential or commercial property.
 ### farm
 *NEEDS Definition*
 
-
 ### guarantee
 *NEEDS Definition*
 
@@ -1079,6 +1079,9 @@ collateral that cannot be classified as residential or commercial property.
 
 ### cash
 *NEEDS Definition*
+
+### security
+This identifies that the piece of collateral used is a security, as mapped via the security schema and linked to the collateral schema using the collateral's `security_id` property.
 
 ### other
 *NEEDS Definition*

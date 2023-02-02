@@ -25,7 +25,8 @@ jobs:
         # only install linting libraries on python 3.8 since they don't suppot 3.6
         if: matrix.python-version == 3.8
         run: |
-          pip install black
+          pip install click==8.0.1
+          pip install black==22.1.0
           pip install ruff
       - name: Install requirements
         run: |
