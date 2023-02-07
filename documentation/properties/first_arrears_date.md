@@ -14,7 +14,7 @@ Relevant for determing past due as per the following instructions:
 
 ![Liquidity](https://www.eba.europa.eu/single-rule-book-qa/qna/view/publicId/2022_6386)
 
-> Delegated Regulation (EU) 2015/61 (DR with regard to liquidity coverage requirement) does not provide for any grace periods meaning that all payments that are delayed, even if just for only one single day and even if only for technical reasons, have to be considered as beeing past due for the purposes of the LCR calculation of liquidity inflows.
+> Delegated Regulation (EU) 2015/61 (DR with regard to liquidity coverage requirement) does not provide for any grace periods meaning that all payments that are delayed, even if just for only one single day and even if only for technical reasons, have to be considered as being past due for the purposes of the LCR calculation of liquidity inflows.
 
 ![FINREP](https://www.eba.europa.eu/single-rule-book-qa/-/qna/view/publicId/2013_194)
 
