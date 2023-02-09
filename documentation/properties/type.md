@@ -385,7 +385,7 @@ A financial holding copmany is defined by the EU [here][lcr] Article 4(1)(20):
 ### pmi
 Private Mortgage Insurer is financial institution that provides insurance to residential mortgages that may get part of guaranteed amount backed by federal government.  Under OSFI rules, PMI guaranteed amounts may get split between a backstop and a deductiable portion.  
 
-Reference:  OSFI Chapter 4, P272-274;  Chapte 5, P146-148
+Reference:  OSFI Chapter 4, P272-274;  Chapter 5, P146-148
 
 ### other_financial
 Any other type to be classified as financial but not one of the other types witin financial.
