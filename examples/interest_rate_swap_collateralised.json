@@ -81,7 +81,7 @@
         "mna_id": "isda_master_agreement",
         "csa_id": "csa_daily_margined",
         "type": "cash",
-        "purpose": "derivative_collateral",
+        "purpose": "variation_margin",
         "asset_liability": "liability",
         "currency_code": "EUR",
         "notional_amount": 55,

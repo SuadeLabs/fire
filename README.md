@@ -6,7 +6,7 @@ title:		"Home"
 # Financial Regulatory (FIRE) Data Standard
 
 ---
-[![Build Status](https://travis-ci.org/SuadeLabs/fire.svg?branch=master)](https://travis-ci.org/SuadeLabs/fire)
+![Build Status](https://github.com/SuadeLabs/fire/actions/workflows/ci-pipeline.yml/badge.svg)
 [![Project Website](https://img.shields.io/badge/website-fire-red.svg)][fire]
 [![Apache 2.0 License](https://img.shields.io/badge/LICENSE-Apache_2.0-yellow.svg)][license]
 [![Join the chat at https://gitter.im/SuadeLabs/fire](https://badges.gitter.im/SuadeLabs/fire.svg)][gitter]

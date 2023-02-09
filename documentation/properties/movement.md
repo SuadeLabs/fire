@@ -53,7 +53,7 @@ The stock/asset leg of a securities financing transaction such as a repo or reve
 From Central Bank Open Market Operations
 
 ### debt_issue
-(so not use - see *issuance*)
+(do not use - see *issuance*)
 
 ### issuance
 A a securities issuance of stocks or bonds (determined by the security - *type*)
