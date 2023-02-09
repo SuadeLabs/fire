@@ -12,4 +12,6 @@ The **value** property gives the monetary value of the collateral *as determined
 
 While in some cases the market value will be equivalent to the **value**, for less liquid assets, such as property, the **value** will be the primary number used for calculation of risk ratios such as loan-to-value.
 
+For reverse mortgages, **value** is the appraised value, used to derive LTV.  Reference OSFI Chapter 4, P115.
+
 See also [**notional_amount**](https://github.com/suadelabs/fire/blob/master/documentation/properties/notional_amount.md)
