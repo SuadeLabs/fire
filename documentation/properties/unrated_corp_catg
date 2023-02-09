@@ -1,0 +1,20 @@
+---
+layout:     property
+title:      "unrated_corp_catg"
+schemas:    [entity, security]
+
+---
+
+# unrated_corp_catg
+
+---
+
+The **unrated_corp_catg** identifies the different categorizes that unrated corporate exposures (no external rating were provided) may be categorized to get different risk weight assignments. Different treatments are "investment grade", "non-investment grade" or non-category.  Reference OSFI, Chapter 4, P62-
+
+
+### investment
+
+### non_investment
+
+### non_catg
+

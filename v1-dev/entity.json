@@ -276,6 +276,11 @@
 	"unregulated_financial"
       ]
     },
+    "unrated_corp_catg": {
+      "description": "Categorization of unrated corporate exposure",
+      "type":"string",
+      "enum": ["investment", "non_investment", "non_catg"]
+    },
     "version_id": {
       "description": "The version identifier of the data such as the firm's internal batch identifier.",
       "type": "string"
