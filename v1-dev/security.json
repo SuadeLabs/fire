@@ -350,12 +350,14 @@
         "investment",
         "investment_advice",
         "non_controlling",
+        "ocir",
         "other",
         "portfolio_management",
         "reference",
         "share_capital",
         "single_collateral_pool",
-	"trade_finance"
+        "trade_finance",
+        "variation_margin"
       ]
     },
     "rate": {
@@ -409,7 +411,8 @@
         "rev_repo",
         "sell_buy_back",
         "stock_borrow",
-        "stock_loan"
+        "stock_loan",
+        "term_funding_scheme"
       ]
     },
     "snp_lt": {
@@ -474,9 +477,6 @@
         "debt",
         "emtn",
         "equity",
-        "federal_reserve_bank",
-        "federal_home_loan",
-        "national_legislated",
         "financial_guarantee",
         "financial_sloc",
         "frn",
@@ -486,7 +486,7 @@
         "letter_of_credit",
         "mbs",
         "mtn",
-        "ocir",
+        "nha_mbs",
 	"other",
         "performance_bond",
         "performance_guarantee",

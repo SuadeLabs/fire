@@ -241,7 +241,7 @@
         "credit_institution",
         "credit_union",
         "deposit_broker",
-	"export_credit_agency",
+	      "export_credit_agency",
         "financial",
         "financial_holding",
         "individual",
@@ -258,7 +258,10 @@
         "partnership",
         "pension_fund",
         "pic",
-        "promotional_lender",
+        "pmi",
+        "promo_fed_home_loan",
+	      "promo_fed_reserve",
+	      "promotional_lender",
         "pse",
         "public_corporation",
         "qccp",
@@ -271,7 +274,7 @@
         "statutory_board",
         "supported_sme",
         "unincorporated_biz",
-        "pmi"
+        "unregulated_financial"
       ]
     },
     "version_id": {

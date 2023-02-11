@@ -10,7 +10,7 @@
         "mna_id": "ccp_master_agreement",
         "csa_id": "ccp_margin_agreement",
         "type": "cash",
-        "purpose": "derivative_collateral",
+        "purpose": "variation_margin",
         "asset_liability": "liability",
         "currency_code": "EUR",
         "notional_amount": 100,
