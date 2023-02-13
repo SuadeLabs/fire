@@ -276,8 +276,8 @@
 	"unregulated_financial"
       ]
     },
-    "unrated_corp_catg": {
-      "description": "Categorization of unrated corporate exposure",
+    "internal_rating_catg": {
+      "description": "Categorization of unrated exposure",
       "type":"string",
       "enum": ["investment", "non_investment", "non_catg"]
     },
