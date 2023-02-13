@@ -47,3 +47,6 @@ A modification of the previous terms and conditions of a contract that the debto
 ### refinancing
 A total or partial refinancing of a troubled debt contract, that would not have been granted had the debtor not been experiencing financial difficulties (in relation to forbearance status).
 
+### interest_grace_period
+Where the lender has provided a period before payment is due for interest not to be inquired.  
+Credit cards and charge cards with interest free grace periods can be categorized as transactors, a sub type of qualifying revolvers for capital treatment (Reference OSFI BCAR Chapter 4, P84 and Chapter 5, 28)
