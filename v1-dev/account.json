@@ -209,6 +209,11 @@
       "type": "string",
       "format": "date-time"
     },
+    "last_rollover_date": {
+      "description": "The date of commencement of the new interest period applicable to this account.",
+      "type": "string",
+      "format": "date-time"
+    },
     "ledger_code": {
       "description": "The internal ledger code or line item name.",
       "type": "string"
@@ -250,11 +255,6 @@
     },
     "next_withdrawal_date": {
       "description": "The next date at which customer is allowed to withdraw money from this account.",
-      "type": "string",
-      "format": "date-time"
-    },
-    "last_rollover_date": {
-      "description": "The date of commencement of the new interest period applicable to this account.",
       "type": "string",
       "format": "date-time"
     },
