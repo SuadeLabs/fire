@@ -253,6 +253,11 @@
       "type": "string",
       "format": "date-time"
     },
+    "last_rollover_date": {
+      "description": "The date of commencement of the new Interest Period applicable to this account.",
+      "type": "string",
+      "format": "date-time"
+    },
     "on_balance_sheet": {
       "description": "Is the account or deposit reported on the balance sheet of the financial institution?",
       "type": "boolean"
