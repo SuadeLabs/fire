@@ -26,6 +26,8 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   │   ├── building_society
 │   │   ├── state_owned_bank
 │   │   └── promotional_lender
+│   │       ├── promo_fed_reserve
+│   │       └── promo_fed_home_loan
 │   ├── investment_firm
 │   │   ├── ciu
 │   │   ├── pension_fund
@@ -34,6 +36,8 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   ├── pic
 │   ├── insurer
 │   ├── financial_holding
+│   ├── pmi
+│   ├── unregulated_financial
 │   └── other_financial
 ├── ccp
 │   └── qccp
@@ -141,6 +145,15 @@ Article 411 of the [CRR][crr]:
 > (l) a third-country undertaking with a main business comparable to any of the entities referred to in points (a) to (k);
 >
 > (m) a building society
+
+### unregulated_financial
+In the Basel guidelines for Credit Risk under exposures to securties firms and financial institutions, [CRE 20.40](https://www.bis.org/basel_framework/chapter/CRE/20.htm?tldate=20220101&inforce=20230101&published=20201126#:~:text=provided%20that%20these,their%20own%20jurisdictions.) it allows for these exposures to be treated like exposures to banks on the basis that they fall under the same regulated regime (and similar supervisory requirements) that banks in that jurisdiction are subject to. 
+So 'unregulated_financial' is to clearly define those firms *that do not* meet these regulatory requirements.
+
+As defined by OSFI chapter 4, P56 and chapter 5, P68:
+> Unregulated financial institutions are institutions that are not supervised by a regulator, and therefore NOT subject to prudential standards or any level of supervision equivalent to those applied to banks under the Basel III framework (including, in particular, capital and liquidity requirements).  
+
+Unregulated financial institutions would be not be qualified for "bank" treatment under standardized and/or subject to 1.25 correlation factor under IRB.
 
 ### mdb
 Multilateral Development Banks are defined in the [CRR][crr] Article 117 as:
@@ -262,6 +275,15 @@ Credit institution is defined in Article 4 of [CRR][crr]:
 A promotional lender is defined by the EU [here][lcr] Article 10.1(e):
 > (ii) any credit institution whose purpose is to advance the public policy objectives of the Union or of the central or regional government or local authority in a Member State predominantly through the provision of promotional loans on a non-competitive, not for profit basis, provided that at least 90 % of the loans that it grants are directly or indirectly guaranteed by the central or regional government or local authority and that any exposure to that regional government or local authority, as applicable, is treated as an exposure to the central government of the Member State in accordance with Article 115(2) of Regulation (EU) No 575/2013;
 
+This would also include any national legislated government programmes. For example, in OSFI BCAR template schedule 40.120 and Chapter 4, P77, equity issued related by any level of government related to programmes that provide significant subsidies for the investment to the institution and involve government oversight and restrictions on the equity investments.
+
+### promo_fed_reserve
+Equity issued, guaranteed or related to the US Federal Reserve Bank that obtain favour risk weight treatment.  Reference OSFI BCAR template schedule 40.120.
+
+### promo_fed_home_loan
+Equity issued, guaranteed or related to US Federal Home Loan Bank that obtain favour risk weight treatment.  Reference OSFI BCAR template schedule 40.120.
+
+
 ### merchant_bank
 **merchant bank** means:
 > a merchant bank approved under section 28 of the Monetary Authority of Singapore Act (Cap. 186);
@@ -381,6 +403,11 @@ Where [insurance](https://www.handbook.fca.org.uk/handbook/glossary/G218.html?da
 A financial holding copmany is defined by the EU [here][lcr] Article 4(1)(20):
 > (20) 'financial holding company' means a financial institution, the subsidiaries of which are exclusively or mainly institutions or financial institutions, at least one of such subsidiaries being an institution, and which is not a mixed financial holding company;
 
+### pmi
+Private Mortgage Insurer is financial institution that provides insurance to residential mortgages that may get part of guaranteed amount backed by federal government.  Under OSFI rules, PMI guaranteed amounts may get split between a backstop and a deductiable portion.  
+
+Reference:  OSFI Chapter 4, P272-274;  Chapter 5, P146-148
+
 ### other_financial
 Any other type to be classified as financial but not one of the other types witin financial.
 
@@ -418,6 +445,8 @@ Charity serving communities and individuals. Includes non-profit institutions se
 # Loan
 ```
 ├── mortgage
+│   ├── reverse_mortgage
+│   │   └── q_reverse_mortgage
 ├── commercial_property
 ├── personal
 ├── auto
@@ -432,6 +461,7 @@ Charity serving communities and individuals. Includes non-profit institutions se
 ├── nostro
 └── other
 ```
+
 ### trade_finance
 From [CRR][crr] definitions (80):
 > Trade finance means financing, including guarantees, connected to the exchange of goods and services through financial products of fixed short-term maturity, generally of less than one year, without automatic rollover
@@ -469,6 +499,14 @@ A **mortgage** is a residential loan to a individuals secured with a one-to-one 
 
 As outlined in [LCR][lcr] Article 13(2)(g)(i)
 > loans secured with a first-ranking mortgage granted to individuals for the acquisition of their main residence
+
+### q_reverse_mortgage
+A **q_reverse_mortgage** is a qualified reverse mortgage which adheres to the stipulations defined in OSFI BCAR Chapter 4 P 116, and therefore qualifies for preferential risk weight treatment
+
+### reverse_mortgage
+A **reverse_mortgage** is a non-recourse loan secured by property that has no defined term and no monthly repayment of principal and interest.
+
+As outlined in OSFI BCAR Chapter 4, P 116
 
 ### credit_card
 A **credit_card** is credit facility typically secured by a deposit account or equity in the borrower's property.
@@ -525,7 +563,8 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │       └── mbs
 │           ├── rmbs
 │           ├── rmbs_trans
-│           └── cmbs
+│           ├── cmbs
+│           └── nha_mbs
 ├── guarantee
 │   ├── financial_guarantee
 │   │   └── financial_sloc
@@ -638,6 +677,11 @@ This type value is in order to indicate whether the security is subject to trans
 
 ### cmbs
 A commercial mortgage-backed security (a subclass of an abs).
+
+### nha_mbs
+National Housing Act (NHA) MBS that are guaranteed by the Canada Mortgage and Housing Corporation (CMHC), will receive a risk weight of 0% in recognition of the fact that obligations incurred by CMHC are legal obligations of the Government of Canada.  
+
+Reference: [OSFI BCAR Chapter 4, P120](https://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/CAR22_chpt4.aspx#:~:text=National%20Housing%20Act%20(NHA)%20MBS%20that%20are%20guaranteed%20by%20the%20Canada%20Mortgage%20and%20Housing%20Corporation%20(CMHC)%2C%20will%20receive%20a%20risk%20weight%20of%200%25%20in%20recognition%20of%20the%20fact%20that%20obligations%20incurred%20by%20CMHC%20are%20legal%20obligations%20of%20the%20Government%20of%20Canada.)
 
 ### frn
 A floating-rate note is defined in the [Money Market Statistics Regulation][mm-stat] in Annex II as:
@@ -1004,6 +1048,7 @@ The most common XCS, and that traded in interbank markets, is a mark-to-market (
 ├── debenture
 ├── life_policy
 ├── cash
+├── security 
 └── other
 ```
 The collateral type defines the form of the collateral, such as property or other assets used to secure an obligation.
@@ -1029,7 +1074,6 @@ collateral that cannot be classified as residential or commercial property.
 ### farm
 *NEEDS Definition*
 
-
 ### guarantee
 *NEEDS Definition*
 
@@ -1041,6 +1085,9 @@ collateral that cannot be classified as residential or commercial property.
 
 ### cash
 *NEEDS Definition*
+
+### security
+This identifies that the piece of collateral used is a security, as mapped via the security schema and linked to the collateral schema using the collateral's `security_id` property.
 
 ### other
 *NEEDS Definition*

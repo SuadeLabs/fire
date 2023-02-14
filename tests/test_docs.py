@@ -6,12 +6,11 @@ from . import (
     DOCS_DIR,
     DOC_NAMES,
     property_doc_name,
-    schema_enum_registry
+    schema_enum_registry,
 )
 
 
 class TestDocs(unittest.TestCase):
-
     def test_property_has_docs(self):
         """
         Ensure there are docs for every new attribute
@@ -65,6 +64,7 @@ class TestDocs(unittest.TestCase):
             "risk_weight_std",
             "row",
             "settlement_type",
+            "security_id",
             "theta",
             "title",
             "underlying_derivative_id",
@@ -74,7 +74,7 @@ class TestDocs(unittest.TestCase):
             "values",
             "vega",
             "vol_adj",
-            "vol_adj_fx"
+            "vol_adj_fx",
         ]
 
         properties = all_properties()
@@ -86,13 +86,11 @@ class TestDocs(unittest.TestCase):
                 no_docs.append(p)
 
         self.assertFalse(
-            no_docs,
-            "No documenation found for properties: {}".format(no_docs)
+            no_docs, "No documenation found for properties: {}".format(no_docs)
         )
         for doc in DOC_NAMES:
             self.assertTrue(
-                doc in properties,
-                "No property found for documenation: {}".format(doc)
+                doc in properties, "No property found for documenation: {}".format(doc)
             )
 
     def test_enums_documented(self):
@@ -102,6 +100,7 @@ class TestDocs(unittest.TestCase):
 
         eg. ### enum_value
         """
+
         def error_msg(schema_name, value, enum):
             return (
                 "Could not find a level-3 header (###) entry for "
@@ -123,10 +122,14 @@ class TestDocs(unittest.TestCase):
                 property_docs = property_doc_name(enum)
 
                 if not property_docs:
-                    raise FileNotFoundError(f"Could not find documentation for: {schema_name} :: {enum}")  # noqa
+                    raise FileNotFoundError(
+                        f"Could not find documentation for: {schema_name} :: {enum}"
+                    )  # noqa
 
                 _file = os.path.join(DOCS_DIR, property_docs)
 
                 for v in values:
                     with open(_file) as enum_doc:
-                        assert "### {}".format(v) in enum_doc.read(), error_msg(schema_name, v, enum)  # noqa
+                        assert "### {}".format(v) in enum_doc.read(), error_msg(
+                            schema_name, v, enum
+                        )  # noqa

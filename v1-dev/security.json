@@ -350,11 +350,14 @@
         "investment",
         "investment_advice",
         "non_controlling",
+        "ocir",
         "other",
         "portfolio_management",
         "reference",
         "share_capital",
-        "trade_finance"
+        "single_collateral_pool",
+        "trade_finance",
+        "variation_margin"
       ]
     },
     "rate": {
@@ -408,7 +411,8 @@
         "rev_repo",
         "sell_buy_back",
         "stock_borrow",
-        "stock_loan"
+        "stock_loan",
+        "term_funding_scheme"
       ]
     },
     "snp_lt": {
@@ -482,7 +486,8 @@
         "letter_of_credit",
         "mbs",
         "mtn",
-        "other",
+        "nha_mbs",
+	"other",
         "performance_bond",
         "performance_guarantee",
         "performance_sloc",

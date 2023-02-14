@@ -44,7 +44,15 @@
     "arrears_arrangement": {
       "description": "The arrangement the lender has made with the borrower regarding the amount referenced in the arrears_balance.",
       "type": "string",
-      "enum": ["formal", "modified_tnc", "none", "possessed", "refinancing", "temporary"]
+      "enum": [
+      	"formal", 
+	"interest_grace_period",
+	"modified_tnc", 
+	"none", 
+	"possessed", 
+	"refinancing", 
+	"temporary"
+     ]
     },
     "arrears_balance": {
       "description": "The balance of the loan or capital amount that is considered to be in arrears. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -71,6 +79,12 @@
     "behavioral_curve_id": {
       "description": "The unique identifier for the behavioral curve used by the financial institution.",
       "type": "string"
+    },
+    "cb_haircut": {
+      "description": "The haircut as determined by the firm's central bank",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
     },
     "ccf": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/ccf"
@@ -160,6 +174,11 @@
       "description": "The currency of the credit facility if not the same as loan currency_code.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
     },
+    "first_arrears_date": {
+      "description": "The first date on which this loan was in arrears.",
+      "type": "string",
+      "format": "date-time"
+    },
     "first_payment_date": {
       "description": "The first payment date for interest payments.",
       "type": "string",
@@ -220,6 +239,11 @@
     },
     "last_arrears_date": {
       "description": "The last date on which this loan was in arrears.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_drawdown_date": {
+      "description": "The last date on which a drawdown was made on this loan",
       "type": "string",
       "format": "date-time"
     },
@@ -329,6 +353,7 @@
         "buy_to_let_house_purchase",
         "buy_to_let_other",
         "buy_to_let_remortgage",
+        "commodities_finance",
         "construction",
         "consumer_buy_to_let",
         "first_time_buyer",
@@ -337,9 +362,12 @@
         "ips",
         "lifetime_mortgage",
         "non_b20",
+        "object_finance",
         "operational",
         "other",
         "project_finance",
+        "project_hq_phase",
+        "project_pre_op",
         "promotional",
         "remortgage",
         "remortgage_other",
@@ -423,7 +451,13 @@
     "status": {
       "description": "Describes if the loan is active or been cancelled.",
       "type": "string",
-      "enum": ["actual", "cancelled", "committed", "defaulted"]
+      "enum": [
+        "actual",
+        "cancellable",
+        "cancelled",
+        "committed",
+        "defaulted"
+      ]
     },
     "trade_date": {
       "description": "The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
@@ -447,7 +481,9 @@
         "nostro",
         "other",
         "personal",
-        "trade_finance"
+        "q_reverse_mortgage",
+	"reverse_mortgage",
+	"trade_finance"
       ]
     },
     "version_id": {
