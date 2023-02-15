@@ -277,6 +277,14 @@
         "unregulated_financial"
       ]
     },
+    "internal_rating": {
+      "description": "Categorization of unrated exposure",
+      "type":"string",
+      "enum": [
+        "investment", 
+	      "non_investment"       
+      ]
+    },
     "version_id": {
       "description": "The version identifier of the data such as the firm's internal batch identifier.",
       "type": "string"
