@@ -68,6 +68,14 @@
       "description": "The number of full time staff.",
       "type": "integer"
     },
+    "internal_rating": {
+      "description": "Categorization of unrated exposure",
+      "type":"string",
+      "enum": [
+        "investment", 
+	      "non_investment"       
+      ]
+    },
     "intra_group": {
       "description": "Flag to indicate that this should be considered an intra-group entity.",
       "type": "boolean"
@@ -275,14 +283,6 @@
         "supported_sme",
         "unincorporated_biz",
         "unregulated_financial"
-      ]
-    },
-    "internal_rating": {
-      "description": "Categorization of unrated exposure",
-      "type":"string",
-      "enum": [
-        "investment", 
-	      "non_investment"       
       ]
     },
     "version_id": {
