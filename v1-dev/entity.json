@@ -68,6 +68,14 @@
       "description": "The number of full time staff.",
       "type": "integer"
     },
+    "internal_rating": {
+      "description": "Categorization of unrated exposure",
+      "type":"string",
+      "enum": [
+	      "investment", 
+	      "non_investment"   
+      ]
+    },
     "intra_group": {
       "description": "Flag to indicate that this should be considered an intra-group entity.",
       "type": "boolean"
@@ -241,7 +249,7 @@
         "credit_institution",
         "credit_union",
         "deposit_broker",
-	      "export_credit_agency",
+	"export_credit_agency",
         "financial",
         "financial_holding",
         "individual",
@@ -260,8 +268,8 @@
         "pic",
         "pmi",
         "promo_fed_home_loan",
-	      "promo_fed_reserve",
-	      "promotional_lender",
+	"promo_fed_reserve",
+	"promotional_lender",
         "pse",
         "public_corporation",
         "qccp",
