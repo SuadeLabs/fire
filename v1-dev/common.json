@@ -12,7 +12,12 @@
          "held_for_hedge",
          "held_for_trading",
          "held_to_maturity",
-         "loans_and_recs"
+         "loans_and_recs",
+         "ntnd_cost_based",
+         "ntnd_fv_equity",
+         "ntnd_fv_pl",
+         "other_gaap",
+         "trading_gaap"
         ]
   },
   "asset_class": {
