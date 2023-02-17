@@ -209,8 +209,8 @@
       "type": "string",
       "format": "date-time"
     },
-    "last_rollover_date": {
-      "description": "The date of commencement of the new interest period applicable to this account.",
+    "rollover_date": {
+      "description": "A particular predetermined date at which an account is rolled-over.",
       "type": "string",
       "format": "date-time"
     },
