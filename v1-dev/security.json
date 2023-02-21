@@ -134,6 +134,16 @@
       "description": "The standardised methodology for calculating the number of days between two dates. It is used to calculate the amount of accrued interest or the present value.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/day_count_convention"
     },
+    "dbrs_lt": {
+      "description": "DBRS long term credit ratings",
+      "type":"string",
+      "enum": ["aaa", "aa_h", "aa", "aa_l", "a_h", "a", "a_l", "bbb_h", "bbb", "bbb_l", "bb_h", "bb", "bb_l", "b_h", "b", "b_l", "ccc_h", "ccc", "ccc_l", "cc", "c", "d"]
+    },
+    "dbrs_st": {
+      "description": "DBRS short term credit ratings",
+      "type":"string",
+      "enum": ["r1_h", "r1_m", "r1_l", "r2_h", "r2_m", "r2_l", "r3", "r4", "r5", "d"]
+    },
     "deal_id": {
       "description": "The unique identifier used by the financial institution to identify the deal for this product that links it to other products of the same or different type.",
       "type": "string"
@@ -260,6 +270,16 @@
     "issuer_id": {
       "description": "The unique identifier for the issuer within the financial institution.",
       "type": "string"
+    },
+    "kbra_lt": {
+      "description": "KBRA long term credit ratings",
+      "type":"string",
+      "enum": ["aaa", "aa_plus", "aa", "aa_minus", "a_plus", "a", "a_minus", "bbb_plus", "bbb", "bbb_minus", "bb_plus", "bb", "bb_minus", "b_plus", "b", "b_minus", "ccc_plus", "ccc", "ccc_minus", "cc", "c", "d"]
+    },
+    "kbra_st": {
+      "description": "KBRA short term credit ratings",
+      "type":"string",
+      "enum": ["k1_plus", "k1", "k2", "k3", "b", "c", "d"]
     },
     "last_payment_date": {
       "description": "The final payment date for interest payments, often coincides with end_date or the maturity date",
