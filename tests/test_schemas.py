@@ -144,6 +144,10 @@ class TestSchemas(unittest.TestCase):
             "snp_st",
             "fitch_st",
             "fitch_lt",
+            "dbrs_lt",
+            "dbrs_st",
+            "kbra_lt",
+            "kbra_st",
         ]
         for schema_name in SCHEMA_FILES:
             enums = schema_enum_registry(schema_name)
