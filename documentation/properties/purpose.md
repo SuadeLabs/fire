@@ -757,6 +757,7 @@ The **other** enum value can be used when none of the other enum values apply or
 ├── aircraft_finance
 ├── insurance
 ├── back_to_back
+├── equity_dividend
 ├── ocir
 └── other
 ```
@@ -802,6 +803,9 @@ This indicates shares that have been [issued][issued] for the purpose of raising
 
 ### back_to_back
 Use this enumeration value to highlight back to back trades defined as "exactly matching" in [Pruval Delegated Regulation][pruval] Article 4 (2)
+
+### equity_dividend
+A dividend is a share of profits and retained earnings that a company pays out to its shareholders and owners. Investors who purchased the stock before the ex-dividend date are entitled to the next dividend payment while those who purchased the stock on the ex-dividend date, or after, are not.
 
 ### aircraft_finance
 *Needs definition*

@@ -365,6 +365,7 @@
         "custody",
         "default_fund",
         "derivative_collateral",
+        "equity_dividend",
         "independent_collateral_amount",
         "insurance",
         "investment",
