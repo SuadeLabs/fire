@@ -476,6 +476,7 @@
         "convertible_bond",
         "covered_bond",
         "debt",
+        "dividend",
         "emtn",
         "equity",
         "financial_guarantee",

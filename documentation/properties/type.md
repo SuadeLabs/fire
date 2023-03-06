@@ -538,6 +538,7 @@ Other refers to a type of security not covered by the above. If you find yoursel
 
 ```
 ├── equity
+│   ├── dividend
 │   ├── share
 │   │   ├── treasury
 │   │   └── pref_share
@@ -589,6 +590,10 @@ A **cash** or cash-equivalent security such as a securitisation of cash deposits
 
 ### equity
 This is a "catch all" term for equity instruments such as *share*, *share_agg* to be used when further granularity is not available or not needed.
+
+### dividend
+A distribution of a company's post-tax profits made to its shareholders. Dividends are usually paid in cash but can also be satisfied by the transfer of non-cash assets or by shares in the company itself.
+[dividend]: https://uk.practicallaw.thomsonreuters.com/1-107-6135?transitionType=Default&contextData=(sc.Default)&firstPage=true
 
 ### share, share_agg
 Denotes if the security is a share (stock) or represents an aggregate for a portfolio or package of shares.
