@@ -80,6 +80,10 @@
       "description": "The unique identifier for the behavioral curve used by the financial institution.",
       "type": "string"
     },
+    "cashflow_beneficiary_id": {
+      "description": "The unique identifier for the beneficiary of the loan cashflows.",
+      "type": "string"
+    },
     "cb_haircut": {
       "description": "The haircut as determined by the firm's central bank",
       "type": "number",
