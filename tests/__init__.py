@@ -106,5 +106,5 @@ def fire_stats():
         "schemas": schemas,
         "properties": properties,
         "unique_properties": len(uniq_properties),
-        "data_combinations": "%e" % N,
+        "data_combinations": str(N),
     }
