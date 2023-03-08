@@ -312,6 +312,15 @@
         "xccy"
       ]
     },
+    "rwa_calc_approach": {
+      "description": "Specifies the approved rwa calcualtion approach to be applied to exposure record for rwa calculations for firms approved to have mixed solutions.",
+      "type": "string",
+      "enum": [
+        "std",
+        "firb",
+        "airb"
+      ]
+    },
     "underlying_currency_code": {
       "description": "Currency of the underlying which should be in line with ISO 4217 standards.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"

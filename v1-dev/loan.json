@@ -478,6 +478,15 @@
 	"trade_finance"
       ]
     },
+    "rwa_calc_approach": {
+      "description": "Specifies the approved rwa calcualtion approach to be applied to exposure record for rwa calculations for firms approved to have mixed solutions.",
+      "type": "string",
+      "enum": [
+        "std",
+        "firb",
+        "airb"
+      ]
+    },
     "version_id": {
       "description": "The version identifier of the data such as the firm's internal batch identifier.",
       "type": "string"

@@ -505,6 +505,15 @@
         "warranty"
       ]
     },
+    "rwa_calc_approach": {
+      "description": "Specifies the approved rwa calcualtion approach to be applied to exposure record for rwa calculations for firms approved to have mixed solutions.",
+      "type": "string",
+      "enum": [
+        "std",
+        "firb",
+        "airb"
+      ]
+    },
     "value_date": {
       "description": "The timestamp that the trade or financial product was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
