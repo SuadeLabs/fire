@@ -88,7 +88,7 @@
     },
     "cr_approach": {
       "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/cr_approach"
     },
     "currency_code": {
       "description": "Actual currency of the Account in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
