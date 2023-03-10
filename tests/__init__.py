@@ -107,5 +107,5 @@ def fire_stats():
         "schemas": schemas,
         "properties": properties,
         "unique_properties": len(uniq_properties),
-        "data_combinations": format(decimal.Decimal(N), '.6e'),
+        "data_combinations": format(decimal.Decimal(N), ".6e"),
     }
