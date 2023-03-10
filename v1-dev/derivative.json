@@ -67,6 +67,10 @@
       "description": "Two-letter country code for derivative location/jurisdiction. In accordance with ISO 3166-1.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
     },
+    "cr_approach": {
+      "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/cr_approach"
+    },
     "csa_id": {
       "description": "The unique identifier of the credit support annex for this derivative",
       "type": "string"
