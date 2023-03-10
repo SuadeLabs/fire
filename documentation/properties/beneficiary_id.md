@@ -8,4 +8,4 @@ schemas:    [loan]
 
 ---
 
-This is the unique id to identify the beneficiary of a loan cashlfows. This attribute is only used in the deferred payments solution (cashflows of securitised loans).
+This is the unique id to identify the beneficiary of a loan cashlfows. This attribute is relevant for modelling of deferred payments (cashflows of securitised loans).
