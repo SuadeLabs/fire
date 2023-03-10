@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Issuer Schema",
   "description": "Data schema to define an issuer for a security.",
   "type": "object",

@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Derivative Schema",
   "description": "A derivative is a contract which derives its value from an underlying reference index, security or asset.",
   "type": "object",
