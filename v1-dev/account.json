@@ -437,8 +437,8 @@
       "type": "string",
       "format": "date-time"
     },
-    "rwa_calc_approach": {
-      "description": "Specifies the approved rwa calcualtion approach to be applied to exposure record for rwa calculations for firms approved to have mixed solutions.",
+    "cr_approach": {
+      "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
       "type": "string",
       "enum": [
         "airb",
