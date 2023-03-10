@@ -306,6 +306,11 @@
       "type": "string",
       "enum": ["mortgage_lender", "other", "spv"]
     },
+    "other_fs_fees_amount": {
+      "description": "The other fees amount of the loan that need to be considered when calculating current ltv."  ,
+      "type": "integer",
+      "monetary": true
+    },
     "pd_irb": {
       "description": "The probability of default as determined by internal rating-based methods. Percentage between 0 an 1.",
       "type": "number"
