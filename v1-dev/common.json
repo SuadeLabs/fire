@@ -372,6 +372,15 @@
       "ZZ"
     ]
   },
+  "cr_approach": {
+    "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
+    "type": "string",
+    "enum": [
+      "airb",
+      "firb",
+      "std"
+    ]
+  },
   "currency_code": {
     "description": "Currency in accordance with ISO 4217 standards plus CNH for practical considerations.",
     "type": "string",

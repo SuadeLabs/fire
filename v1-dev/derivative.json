@@ -13,7 +13,7 @@
       "type": "string",
       "format": "date-time"
     },
-    "accounting_treatment":{
+    "accounting_treatment": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/accounting_treatment"
     },
     "accrued_interest": {
@@ -67,6 +67,10 @@
       "description": "Two-letter country code for derivative location/jurisdiction. In accordance with ISO 3166-1.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
     },
+    "cr_approach": {
+      "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/cr_approach"
+    },
     "csa_id": {
       "description": "The unique identifier of the credit support annex for this derivative",
       "type": "string"
@@ -81,8 +85,8 @@
     },
     "deal_id": {
       "description": "The unique identifier used by the financial institution for the deal to which this derivative belongs.",
-        "type": "string"
-      },
+      "type": "string"
+    },
     "delta": {
       "description": "Price sensitivity to the underlying.",
       "type": "number"
@@ -214,7 +218,10 @@
     "position": {
       "description": "Specifies the market position, i.e. long or short, of the derivative leg",
       "type": "string",
-      "enum": ["long", "short"]
+      "enum": [
+        "long",
+        "short"
+      ]
     },
     "prev_payment_date": {
       "description": "The most recent previous date at which interest was paid or accrued_interest balance returned to zero.",
@@ -259,10 +266,22 @@
       "description": "Two-letter country code describing where the risk for the derivative product resides. In accordance with ISO 3166-1",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
     },
+    "cr_approach": {
+      "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
+      "type": "string",
+      "enum": [
+        "airb",
+        "firb",
+        "std"
+      ]
+    },
     "settlement_type": {
       "description": "The type of settlement for the contract.",
       "type": "string",
-      "enum": ["cash", "physical"]
+      "enum": [
+        "cash",
+        "physical"
+      ]
     },
     "source": {
       "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
@@ -327,8 +346,24 @@
     "underlying_index_tenor": {
       "description": "The designated maturity of the underlying interest rate index used in the underlying_index property for interest rate derivatives",
       "type": "string",
-      "enum": ["1d", "7d", "28d", "91d", "182d", "1m", "2m", "3m", "4m", "5m", "6m", "7m", "8m", "9m", "12m"]
-   },
+      "enum": [
+        "1d",
+        "7d",
+        "28d",
+        "91d",
+        "182d",
+        "1m",
+        "2m",
+        "3m",
+        "4m",
+        "5m",
+        "6m",
+        "7m",
+        "8m",
+        "9m",
+        "12m"
+      ]
+    },
     "underlying_issuer_id": {
       "description": "The unique identifier used by the financial institution to identify the underlying reference issuer for this derivative.",
       "type": "string"
@@ -363,6 +398,9 @@
       "type": "string"
     }
   },
-  "required": ["id", "date"],
+  "required": [
+    "id",
+    "date"
+  ],
   "additionalProperties": true
 }
