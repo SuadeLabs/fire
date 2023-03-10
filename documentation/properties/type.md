@@ -536,6 +536,11 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │   │   ├── treasury
 │   │   └── pref_share
 │   └── share_agg
+├── equity_in_funds
+│   ├── public_traded_fund
+│   ├── private_equity_fund
+│   ├── hedge_fund
+│   ├── real_estate_fund
 ├── debt
 │   ├── bond
 │   ├── covered_bond
@@ -590,6 +595,21 @@ Denotes if the security is a share (stock) or represents an aggregate for a port
 ### pref_share
 The [FCA](https://www.handbook.fca.org.uk/handbook/glossary/G1587.html) defines a **preference share** as:
 > A share conferring preference as to income or return of capital which does not form part of the equity share capital of a company
+
+### equity_in_funds
+This is a "catch all" term for all equity in funds and for those EIF types that do not fall under further granularity types like public_traded_fund, private_equity_fund, hedge_fund, real_estate_fund.
+
+### public_traded_fund
+EIF subtype that is hold publicly traded securities in fund.
+
+### private_traded_fund
+EIF subtype that is hold private equities in funds.
+
+### hedge_fund
+EIF subtype that is designed as a hedge funds.
+
+### real_estate_fund
+EIF subtype that is hold real estate funds.  Also category for REIT.
 
 ### treasury
 According to IAS 32.33, if an entity reacquires its own equity instruments, those instruments shall be considered **treasury shares**, and shall be deducted from equity.
