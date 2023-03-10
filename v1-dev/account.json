@@ -86,6 +86,10 @@
       "description": "Two-letter country code for account location/jurisdiction. In accordance with ISO 3166-1.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
     },
+    "cr_approach": {
+      "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
+    },
     "currency_code": {
       "description": "Actual currency of the Account in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
@@ -436,15 +440,6 @@
       "description": "A particular predetermined date at which an account is rolled-over.",
       "type": "string",
       "format": "date-time"
-    },
-    "cr_approach": {
-      "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
-      "type": "string",
-      "enum": [
-        "airb",
-        "firb",
-        "std"
-      ]
     },
     "source": {
       "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
