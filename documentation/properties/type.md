@@ -535,8 +535,8 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │   ├── share
 │   │   ├── treasury
 │   │   └── pref_share
-│   └── share_agg
-│   ├── speculative_unlisted
+│   ├── share_agg
+│   └── speculative_unlisted
 ├── debt
 │   ├── bond
 │   ├── covered_bond
