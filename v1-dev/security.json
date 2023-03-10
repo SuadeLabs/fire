@@ -663,6 +663,7 @@
         "rmbs_trans",
         "share",
         "share_agg",
+        "speculative_unlisted",
         "spv_mortgages",
         "spv_other",
         "struct_note",

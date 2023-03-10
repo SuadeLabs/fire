@@ -542,7 +542,8 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │   ├── share
 │   │   ├── treasury
 │   │   └── pref_share
-│   └── share_agg
+│   ├── share_agg
+│   └── speculative_unlisted
 ├── debt
 │   ├── bond
 │   ├── covered_bond
@@ -601,6 +602,9 @@ Denotes if the security is a share (stock) or represents an aggregate for a port
 ### pref_share
 The [FCA](https://www.handbook.fca.org.uk/handbook/glossary/G1587.html) defines a **preference share** as:
 > A share conferring preference as to income or return of capital which does not form part of the equity share capital of a company
+
+### speculative_unlisted
+As per OSFI and BCBS, a Speculative unlisted equity is defined as "an equity investments in unlisted companies that are invested for short-term resale purposes, or are considered venture capital or similar investments which are subject to price volatility and are acquired in anticipation of significant future capital gains, or are held with trading intent. Investments in unlisted equities of corporate clients with which the institution has or intends to establish a long-term business relationship and debt-equity swaps for corporate restructuring purposes would be excluded."  OSFI Chapter 4 P76.
 
 ### treasury
 According to IAS 32.33, if an entity reacquires its own equity instruments, those instruments shall be considered **treasury shares**, and shall be deducted from equity.
