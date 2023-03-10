@@ -117,6 +117,10 @@
       "minimum": 1,
       "maximum": 6
     },
+    "cr_approach": {
+      "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/cr_approach"
+    },
     "csa_id": {
       "description": "The unique identifier of the credit support annex this security falls under. Typically where used as derivatives collateral.",
       "type": "string"
