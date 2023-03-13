@@ -32,7 +32,8 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   │   ├── ciu
 │   │   ├── fund
 │   │   ├── private_fund
-│   │   ├── hedge_fund
+│   │   │   ├── hedge_fund
+│   │   │   └── private_equity_fund
 │   │   ├── mmkt_fund
 │   │   ├── pension_fund
 │   │   └── real_estate_fund
@@ -300,12 +301,15 @@ A collective investment undertaking is defined by the EU [here][lcr] Article 4(1
 
 
 ### fund
-A general term for collective investment vehicles and management companies. For example, those defined under the [US Investment Company Act 1940][inv-co-act] but not qualifying as an EU CIU.
+A general term for collective investment vehicles and management companies. For example, those defined under the [US Investment Company Act 1940][inv-co-act] but not qualifying as an EU CIU. There does not appear to be a cross-jurisdictional, unified classification of types of funds 
 
 
 ### private_fund
 A private fund is a pooled investment vehicle excluded from the definition of an investment company in the [US Investment Company Act 1940][inv-co-act] 
 [Private Fund](https://www.sec.gov/education/glossary/jargon-z#PEF:~:text=Private%20Equity%20Funds-,Private%20Fund,applicable%20registration%20requirements%20(for%20example%2C%20as%20an%20exempt%20reporting%20adviser).,-Want%20to%20learn)
+
+### private_equity_fund
+A private equity fund is a type of private fund distinguished by its objective to take mainly controlling interests in business to actively increase their value. See SEC glossary: [Private Equity Fund glossary](https://www.sec.gov/education/glossary/jargon-z#PEF:~:text=is%20the%20SEC%3F-,Private%20Equity%20Fund,specialize%20in%20making%20minority%20investments%20in%20fast%2Dgrowing%20businesses%20or%20startups,-.%C2%A0%C2%A0%C2%A0)
 
 
 ### hedge_fund
