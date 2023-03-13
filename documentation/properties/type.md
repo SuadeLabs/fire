@@ -33,7 +33,7 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   │   ├── fund
 │   │   ├── hedge_fund
 │   │   ├── mmkt_fund
-│   │   ├── private_equity_fund
+│   │   ├── private_fund
 │   │   ├── pension_fund
 │   │   └── real_estate_fund
 │   ├── sspe
@@ -251,16 +251,6 @@ A public sector entity is defined in the [FCA handbook](https://www.handbook.fca
 
 ### other_pse
 
-### fund
-
-### private_equity_fund
-EIF subtype that is hold private equities in funds.
-
-### hedge_fund
-EIF subtype that is designed as a hedge funds.
-
-### real_estate_fund
-EIF subtype that is hold real estate funds.  Also category for REIT.
 
 ### statutory_board
 >A specific distinction for Singaporean public sector entities. The statutory boards of the Singapore Government are organisations that have been given autonomy to perform an operational function by legal statutes passed as Acts in parliament. The statutes define the purpose, rights and powers of the authority. They usually report to one specific ministry.
@@ -349,8 +339,28 @@ Investment firm is defined in the [FCA Handbook](https://www.handbook.fca.org.uk
 >
 >(6) (in SYSC 19D (Dual-regulated firms Remuneration Code)) a firm in (3) that is a UK designated investment firm.
 
+### ciu
+A collective investment undertaking is defined by the EU [here][lcr] Article 4(1)(7):
+> 'collective investment undertaking' or 'CIU' means a UCITS as defined in Article 1(2) of Directive 2009/65/EC of the European Parliament and of the Council of 13 July 2009 on the coordination of laws, regulations and administrative provisions relating to undertakings for collective investment in transferable securities (UCITS) (21), including, unless otherwise provided, third-country entities which carry out similar activities, which are subject to supervision pursuant to Union law or to the law of a third country which applies supervisory and regulatory requirements at least equivalent to those applied in the Union, an AIF as defined in Article 4(1)(a) of Directive 2011/61/EU of the European Parliament and of the Council of 8 June 2011 on Alternative Investment Fund Managers (22), or a non-EU AIF as defined in Article 4(1)(aa) of that Directive;
+
+
+### fund
+A general term for collective investment vehicles and management companies. For example, those defined under the [US Investment Company Act 1940][inv-co-act] but not qualifying as an EU CIU.
+
+### private_fund
+A private fund is a pooled investment vehicle excluded from the definition of an investment company in the [US Investment Company Act 1940][inv-co-act] 
+[Private Fund](https://www.sec.gov/education/glossary/jargon-z#PEF:~:text=Private%20Equity%20Funds-,Private%20Fund,applicable%20registration%20requirements%20(for%20example%2C%20as%20an%20exempt%20reporting%20adviser).,-Want%20to%20learn)
+
+### hedge_fund
+A hedge fund is a type of private fund that generally invests in a diverse range of securities and typically has more flexible investment strategies than mutual funds. Many hedge funds seek to profit by using leverage (borrowing to increase investment exposure as well as risk), short-selling, and other speculative investment practices. [SEC glossary](https://www.sec.gov/education/glossary/jargon-z#PEF:~:text=Hedge%20Fund,speculative%20investment%20practices.)
+
+See also: [SEC Hedge fund bulletin][hedge-fund2]
+
+### real_estate_fund
+Real estate funds or [REITS](https://www.investor.gov/introduction-investing/investing-basics/investment-products/real-estate-investment-trusts-reits). 
+
 ### pension_fund
-*needs definition*
+A pension fund is defined in the [EU Pension Fund Statistical Reporting Requirements Regulation][https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32018R0231#:~:text=%E2%80%98pension%20fund%20(PF,death%20and%20disability.]
 
 ### mmkt_fund
 Money Market Funds are well defined under the EU legislation for [Money Market Funds][mmfr] (MMFR):
@@ -377,10 +387,6 @@ A securitisation special purpose entity is defined in the [FCA Handbook](https:/
 > (a) it is organised for carrying on a securitisation or securitisations (within the meaning of paragraph (2) of the definition of securitisation);
 > (b) its activities are limited to those appropriate to accomplishing such securitisation or securitisations; and
 > (c) its structure is intended to isolate its obligations from those of the originator.
-
-### ciu
-A collective investment undertaking is defined by the EU [here][lcr] Article 4(1)(7):
-> 'collective investment undertaking' or 'CIU' means a UCITS as defined in Article 1(2) of Directive 2009/65/EC of the European Parliament and of the Council of 13 July 2009 on the coordination of laws, regulations and administrative provisions relating to undertakings for collective investment in transferable securities (UCITS) (21), including, unless otherwise provided, third-country entities which carry out similar activities, which are subject to supervision pursuant to Union law or to the law of a third country which applies supervisory and regulatory requirements at least equivalent to those applied in the Union, an AIF as defined in Article 4(1)(a) of Directive 2011/61/EU of the European Parliament and of the Council of 8 June 2011 on Alternative Investment Fund Managers (22), or a non-EU AIF as defined in Article 4(1)(aa) of that Directive;
 
 ### insurer
 The [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G569.html?date=2015-12-31) defines an **insurer** as:
@@ -559,11 +565,6 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │   │   └── pref_share
 │   ├── share_agg
 │   └── speculative_unlisted
-├── equity_in_funds
-│   ├── public_traded_fund
-│   ├── private_equity_fund
-│   ├── hedge_fund
-│   ├── real_estate_fund
 ├── debt
 │   ├── bond
 │   ├── covered_bond
@@ -1299,3 +1300,7 @@ A volatility curve (smile)
 [ira]: https://www.law.cornell.edu/uscode/text/26/408
 [cpfb-heloc-you-should-know]: https://files.consumerfinance.gov/f/201401_cfpb_booklet_heloc.pdf
 [investopedia-heloc]: https://www.investopedia.com/mortgage/heloc/
+[inv-co-act]: https://en.wikipedia.org/wiki/Investment_Company_Act_of_1940
+[reits]: https://www.sec.gov/files/reits.pdf
+[hedge-fund]: https://www.sec.gov/spotlight/hedgefunds/hedge-vaughn.htm
+[hedge-fund2]: https://www.google.com/url?esrc=s&q=&rct=j&sa=U&url=https://www.sec.gov/files/ib_hedgefunds.pdf&ved=2ahUKEwjSgp-x-dn9AhVhoFwKHYbQDrMQFnoECAgQAg&usg=AOvVaw3y7wSB8gmaTml65eMxKBpD
