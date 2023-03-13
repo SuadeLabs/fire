@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Entity Schema",
   "description": "Data schema to define a person or legal entity.",
   "type": "object",
@@ -54,6 +54,16 @@
       "description": "Currency in accordance with ISO 4217. It should be consistent with the figures for turnover and total assets.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
     },
+    "dbrs_lt": {
+      "description": "DBRS long term credit ratings",
+      "type":"string",
+      "enum": ["aaa", "aa_h", "aa", "aa_l", "a_h", "a", "a_l", "bbb_h", "bbb", "bbb_l", "bb_h", "bb", "bb_l", "b_h", "b", "b_l", "ccc_h", "ccc", "ccc_l", "cc", "c", "d"]
+    },
+    "dbrs_st": {
+      "description": "DBRS short term credit ratings",
+      "type":"string",
+      "enum": ["r1_h", "r1_m", "r1_l", "r2_h", "r2_m", "r2_l", "r3", "r4", "r5", "d"]
+    },
     "fitch_lt": {
       "description": "Fitch long term credit ratings",
       "type":"string",
@@ -68,9 +78,27 @@
       "description": "The number of full time staff.",
       "type": "integer"
     },
+    "internal_rating": {
+      "description": "Categorization of unrated exposure",
+      "type":"string",
+      "enum": [
+	      "investment", 
+	      "non_investment"   
+      ]
+    },
     "intra_group": {
       "description": "Flag to indicate that this should be considered an intra-group entity.",
       "type": "boolean"
+    },
+    "kbra_lt": {
+      "description": "KBRA long term credit ratings",
+      "type":"string",
+      "enum": ["aaa", "aa_plus", "aa", "aa_minus", "a_plus", "a", "a_minus", "bbb_plus", "bbb", "bbb_minus", "bb_plus", "bb", "bb_minus", "b_plus", "b", "b_minus", "ccc_plus", "ccc", "ccc_minus", "cc", "c", "d"]
+    },
+    "kbra_st": {
+      "description": "KBRA short term credit ratings",
+      "type":"string",
+      "enum": ["k1_plus", "k1", "k2", "k3", "b", "c", "d"]
     },
     "legal_entity_name": {
       "description": "The official legal name of the entity.",
@@ -241,7 +269,7 @@
         "credit_institution",
         "credit_union",
         "deposit_broker",
-	      "export_credit_agency",
+	"export_credit_agency",
         "financial",
         "financial_holding",
         "individual",
@@ -260,8 +288,8 @@
         "pic",
         "pmi",
         "promo_fed_home_loan",
-	      "promo_fed_reserve",
-	      "promotional_lender",
+	"promo_fed_reserve",
+	"promotional_lender",
         "pse",
         "public_corporation",
         "qccp",

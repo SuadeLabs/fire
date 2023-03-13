@@ -1,3 +1,4 @@
+import decimal
 import json
 import os
 
@@ -106,5 +107,5 @@ def fire_stats():
         "schemas": schemas,
         "properties": properties,
         "unique_properties": len(uniq_properties),
-        "data_combinations": "%e" % N,
+        "data_combinations": format(decimal.Decimal(N), ".6e"),
     }

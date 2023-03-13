@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Loan Schema",
   "description": "Data schema defining the characteristics of a loan product.",
   "type": "object",
@@ -23,7 +23,7 @@
       "type": "integer",
       "monetary": true
     },
-    "accounting_treatment":{
+    "accounting_treatment": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/accounting_treatment"
     },
     "accrued_interest_12m": {
@@ -39,20 +39,23 @@
     "administration": {
       "description": "How the loan was administered by the lender.",
       "type": "string",
-      "enum": ["other", "principal"]
+      "enum": [
+        "other",
+        "principal"
+      ]
     },
     "arrears_arrangement": {
       "description": "The arrangement the lender has made with the borrower regarding the amount referenced in the arrears_balance.",
       "type": "string",
       "enum": [
-      	"formal", 
-	"interest_grace_period",
-	"modified_tnc", 
-	"none", 
-	"possessed", 
-	"refinancing", 
-	"temporary"
-     ]
+        "formal",
+        "interest_grace_period",
+        "modified_tnc",
+        "none",
+        "possessed",
+        "refinancing",
+        "temporary"
+      ]
     },
     "arrears_balance": {
       "description": "The balance of the loan or capital amount that is considered to be in arrears. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -80,6 +83,10 @@
       "description": "The unique identifier for the behavioral curve used by the financial institution.",
       "type": "string"
     },
+    "beneficiary_id": {
+      "description": "The unique identifier for the beneficiary of the loan cashflows.",
+      "type": "string"
+    },
     "cb_haircut": {
       "description": "The haircut as determined by the firm's central bank",
       "type": "number",
@@ -101,6 +108,10 @@
     "country_code": {
       "description": "Two-letter country code for product location/jurisdiction. In accordance with ISO 3166-1.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
+    },
+    "cr_approach": {
+      "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/cr_approach"
     },
     "cum_recoveries": {
       "description": "The total amount recovered since the date of default of the instrument.",
@@ -134,7 +145,10 @@
             "monetary": true
           }
         },
-        "required": ["id", "income_amount"]
+        "required": [
+          "id",
+          "income_amount"
+        ]
       }
     },
     "day_count_convention": {
@@ -163,7 +177,11 @@
     "encumbrance_type": {
       "description": "The type of the encumbrance causing the encumbrance_amount.",
       "type": "string",
-      "enum": ["abs", "cb_funding", "covered_bond"]
+      "enum": [
+        "abs",
+        "cb_funding",
+        "covered_bond"
+      ]
     },
     "end_date": {
       "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
@@ -225,12 +243,27 @@
     "income_assessment": {
       "description": "Was the loan assessed against a single or joint incomes?",
       "type": "string",
-      "enum": ["joint", "single"]
+      "enum": [
+        "joint",
+        "single"
+      ]
     },
     "interest_repayment_frequency": {
       "description": "Repayment frequency of the loan interest, if different from principal.",
       "type": "string",
-      "enum": ["daily", "weekly", "bi_weekly", "monthly", "bi_monthly", "quarterly", "semi_annually", "annually", "at_maturity", "biennially", "sesquiennially"]
+      "enum": [
+        "daily",
+        "weekly",
+        "bi_weekly",
+        "monthly",
+        "bi_monthly",
+        "quarterly",
+        "semi_annually",
+        "annually",
+        "at_maturity",
+        "biennially",
+        "sesquiennially"
+      ]
     },
     "issuer_id": {
       "description": "The unique identifier for the issuer of the loan.",
@@ -284,7 +317,15 @@
     "movement": {
       "description": "The movement parameter describes how the loan arrived to the firm.",
       "type": "string",
-      "enum": ["acquired","acquired_impaired", "other", "securitised", "sold", "syndicated", "syndicated_lead"]
+      "enum": [
+        "acquired",
+        "acquired_impaired",
+        "other",
+        "securitised",
+        "sold",
+        "syndicated",
+        "syndicated_lead"
+      ]
     },
     "next_payment_date": {
       "description": "The next date at which interest will be paid or accrued_interest balance returned to zero.",
@@ -312,7 +353,11 @@
     "originator_type": {
       "description": "The type of financial institution that acted as the originator of the loan product.",
       "type": "string",
-      "enum": ["mortgage_lender", "other", "spv"]
+      "enum": [
+        "mortgage_lender",
+        "other",
+        "spv"
+      ]
     },
     "pd_irb": {
       "description": "The probability of default as determined by internal rating-based methods. Percentage between 0 an 1.",
@@ -340,7 +385,10 @@
     "provision_type": {
       "description": "The provision type parameter details the provisions the issuing firm has allocated to cover potential losses from issuing a loan.",
       "type": "string",
-      "enum": ["none", "other"]
+      "enum": [
+        "none",
+        "other"
+      ]
     },
     "purpose": {
       "description": "The underlying reason the borrower has requested the loan.",
@@ -381,7 +429,12 @@
     "rate_type": {
       "description": "Describes the type of interest rate applied to the loan.",
       "type": "string",
-      "enum": ["combined", "fixed", "tracker", "variable"]
+      "enum": [
+        "combined",
+        "fixed",
+        "tracker",
+        "variable"
+      ]
     },
     "ref_income_amount": {
       "description": "The reference income used for the customer(s) for this loan. Monetary type represented as an integer number of cents/pence.",
@@ -399,12 +452,29 @@
     "repayment_frequency": {
       "description": "Repayment frequency of the loan.",
       "type": "string",
-      "enum": ["daily", "weekly", "bi_weekly", "monthly", "bi_monthly", "quarterly", "semi_annually", "annually", "at_maturity", "biennially", "sesquiennially"]
+      "enum": [
+        "daily",
+        "weekly",
+        "bi_weekly",
+        "monthly",
+        "bi_monthly",
+        "quarterly",
+        "semi_annually",
+        "annually",
+        "at_maturity",
+        "biennially",
+        "sesquiennially"
+      ]
     },
     "repayment_type": {
       "description": "Repayment type of the loan refers to whether the customer will be repaying capital + interest, just interest or a combination of the two.",
       "type": "string",
-      "enum": ["combined", "interest_only", "other","repayment"]
+      "enum": [
+        "combined",
+        "interest_only",
+        "other",
+        "repayment"
+      ]
     },
     "reporting_entity_name": {
       "description": "The name of the reporting legal entity for display purposes.",
@@ -434,6 +504,15 @@
     "risk_weight_std": {
       "description": "The standardised approach risk weight represented as a decimal/float such that 1.5% is 0.015.",
       "type": "number"
+    },
+    "cr_approach": {
+      "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
+      "type": "string",
+      "enum": [
+        "airb",
+        "firb",
+        "std"
+      ]
     },
     "secured": {
       "description": "Is this loan secured or unsecured?",
@@ -482,8 +561,8 @@
         "other",
         "personal",
         "q_reverse_mortgage",
-	"reverse_mortgage",
-	"trade_finance"
+        "reverse_mortgage",
+        "trade_finance"
       ]
     },
     "version_id": {
@@ -495,6 +574,9 @@
       "type": "number"
     }
   },
-  "required": ["id", "date"],
+  "required": [
+    "id",
+    "date"
+  ],
   "additionalProperties": true
 }
