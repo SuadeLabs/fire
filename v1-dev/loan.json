@@ -309,6 +309,10 @@
       "minimum": 0,
       "monetary": true
     },
+    "long_run_lgd_irb": {
+      "description": "The banks estimate of long run loss given default.",
+      "type": "number"
+    },
     "minimum_balance_eur": {
       "description": "Indicates the minimum balance, in Euros, of each loan within the aggregate.",
       "type": "integer",
