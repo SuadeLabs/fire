@@ -125,11 +125,8 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── share_premium
 ├── system
 ├── tax
-│   └── adj_net_def_tax_anl
 │   ├── capital_gain_tax
 │   ├── corporation_tax
-│   ├── net_amount_cap_tax
-│   ├── offset_liab_cap_tax
 │   ├── oth_tax_excl_temp_diff
 │   └── reclass_tax
 └── write_off
@@ -324,9 +321,6 @@ Describes an account that holds the amount of fees receivables/payables originat
 ### tax
 Describes an account representing the amount of tax paid, received or deferred for the reporting period by the reporting entity.
 
-### adj_net_def_tax_anl
-Describes an account representing the amount of deferred taxes netted deferred tax assets and deferred tax liabilities recognized for accounting purposes (if not recognized already). For the reporting period by the reporting entity.
-
 ### capital_gain_tax
 Describes an account representing the amount of **capital gain tax** paid, received or deferred for the reporting period by the reporting entity.
 
@@ -335,12 +329,6 @@ Describes an account representing the amount of **corporation tax** paid, receiv
 
 ### reclass_tax
 Describes an account representing the amount of **reclassified pnl tax** paid, received or deferred for the reporting period by the reporting entity.
-
-### net_amount_cap_tax
- Defered Tax - Net amount for capital adequacy purposes.  Required for BCAR rwa calculations and BCAR reporting.
-
-### offset_liab_cap_tax
-Offsetting deferred tax liabilities recognized for capital purposes.  Required for BCAR rwa calculations and BCAR reporting.
 
 ### oth_tax_excl_temp_diff
 Deferred tax assets excluding those arising from temporary differences.  Required for BCAR rwa calculations and BCAR reporting.
