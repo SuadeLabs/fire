@@ -314,6 +314,10 @@
       "type": "integer",
       "monetary": true
     },
+    "minimum_price_correction_irb": {
+      "description": "Indicates whether a minimum price correction of 25% will be applied to the calculation of DLGD Floor",
+      "type": "boolean"
+    },
     "movement": {
       "description": "The movement parameter describes how the loan arrived to the firm.",
       "type": "string",
