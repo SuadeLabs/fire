@@ -31,9 +31,9 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   ├── investment_firm
 │   │   ├── ciu
 │   │   ├── fund
+│   │   ├── private_fund
 │   │   ├── hedge_fund
 │   │   ├── mmkt_fund
-│   │   ├── private_fund
 │   │   ├── pension_fund
 │   │   └── real_estate_fund
 │   ├── sspe
@@ -110,44 +110,25 @@ Article 4 (88) of the [CRR][crr]:
 Article 411 of the [CRR][crr]:
 > financial customer means a customer that performs one or more of the activities listed in Annex I to Directive 2013/36/EU as its main business, or is one of the following:
 > (a) a credit institution;
->
 > (b) an investment firm;
->
 > (c) an SSPE;
->
 > (d) a CIU;
->
 > (e) a non-open ended investment scheme;
->
 > (f) an insurance undertaking;
->
 > (g) a financial holding company or mixed-financial holding company.
->
 > 'financial sector entity' means any of the following:
 > (a) an institution;
->
 > (b) a financial institution;
->
 > (c) an ancillary services undertaking included in the consolidated financial situation of an institution;
->
 > (d) an insurance undertaking;
->
 > (e) a third-country insurance undertaking;
->
 > (f) a reinsurance undertaking;
->
 > (g) a third-country reinsurance undertaking;
->
 > (h) an insurance holding company;
->
 > (i) a mixed-activity holding company
->
 > (j) a mixed-activity insurance holding company as defined in point (g) of Article 212(1) of Directive 2009/138/EC;
->
 > (k) an undertaking excluded from the scope of Directive 2009/138/EC in accordance with Article 4 of that Directive;
->
 > (l) a third-country undertaking with a main business comparable to any of the entities referred to in points (a) to (k);
->
 > (m) a building society
 
 ### unregulated_financial
@@ -164,31 +145,18 @@ Multilateral Development Banks are defined in the [CRR][crr] Article 117 as:
 > The Inter-American Investment Corporation, the Black Sea Trade and Development Bank, the Central American Bank for Economic Integration and the CAF-Development Bank of Latin America shall be considered multilateral development banks.
 > ...
 > (a) the International Bank for Reconstruction and Development;
->
 > (b) the International Finance Corporation;
->
 > (c) the Inter-American Development Bank;
->
 > (d) the Asian Development Bank;
->
 > (e) the African Development Bank;
->
 > (f) the Council of Europe Development Bank;
->
 > (g) the Nordic Investment Bank;
->
 > (h) the Caribbean Development Bank;
->
 > (i) the European Bank for Reconstruction and Development;
->
 > (j) the European Investment Bank;
->
 > (k) the European Investment Fund;
->
 > (l) the Multilateral Investment Guarantee Agency;
->
 > (m) the International Finance Facility for Immunisation;
->
 > (n) the Islamic Development Bank.
 
 ### intl_org
@@ -215,15 +183,10 @@ An organisation with government approval to conduct business (or other activitie
 As defined in the [FCA handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2971.html), a sovereign is:
 
 >(a) the EU; or
->
 >(b) a Member State including a government department, an agency, or a special purpose vehicle of the Member State; or
->
 >(c) in the case of a federal Member State, a member of the federation; or
->
 >(d) a special purpose vehicle for several Member States; or
->
 >(e) an international financial institution established by two or more Member States which has the purpose of mobilising funding and provide financial assistance to the benefit of its members that are experiencing or threatened by severe financing problems; or
->
 >(f) the European Investment Bank.
 
 ### central_bank
@@ -242,11 +205,8 @@ A **central government** is the government of a nation-state. While some countri
 A public sector entity is defined in the [FCA handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2242.html) as any of the following:
 
 >(a) non-commercial administrative bodies responsible to central governments, regional governments or local authorities; or
->
 >(b) authorities that exercise the same responsibilities as regional and local authorities; or
->
 >(c) non commercial undertakings owned by central governments that have explicit guarantee arrangements; or
->
 >(d) self administered bodies governed by law that are under public supervision.
 
 ### other_pse
@@ -326,17 +286,12 @@ k) records shall include the recording of telephone conversations or electronic 
 Investment firm is defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G596.html) as:
 >(1) any person whose regular occupation or business is the provision of one or more investment services to third parties and/or the performance of one or more investment activities on a professional basis.
 [Note: article 4(1)(1) of MiFID]
->
 >(2) (in REC) a MiFID investment firm, or a person who would be a MiFID investment firm if it had its head office in the EEA.
->
 >(3) (in IFPRU and BIPRU 12) has the meaning in article 4(1)(2) of the EU CRR.
->
 >(4) (in GENPRU (except GENPRU 3) and BIPRU (except BIPRU 12) any of the following:
 >(a) a firm in (3); and
 >(b) a BIPRU firm.
->
 >(5) (in SYSC 19A(IFPRU Remuneration Code)) a firm in (3).
->
 >(6) (in SYSC 19D (Dual-regulated firms Remuneration Code)) a firm in (3) that is a UK designated investment firm.
 
 ### ciu
@@ -347,20 +302,25 @@ A collective investment undertaking is defined by the EU [here][lcr] Article 4(1
 ### fund
 A general term for collective investment vehicles and management companies. For example, those defined under the [US Investment Company Act 1940][inv-co-act] but not qualifying as an EU CIU.
 
+
 ### private_fund
 A private fund is a pooled investment vehicle excluded from the definition of an investment company in the [US Investment Company Act 1940][inv-co-act] 
 [Private Fund](https://www.sec.gov/education/glossary/jargon-z#PEF:~:text=Private%20Equity%20Funds-,Private%20Fund,applicable%20registration%20requirements%20(for%20example%2C%20as%20an%20exempt%20reporting%20adviser).,-Want%20to%20learn)
+
 
 ### hedge_fund
 A hedge fund is a type of private fund that generally invests in a diverse range of securities and typically has more flexible investment strategies than mutual funds. Many hedge funds seek to profit by using leverage (borrowing to increase investment exposure as well as risk), short-selling, and other speculative investment practices. [SEC glossary](https://www.sec.gov/education/glossary/jargon-z#PEF:~:text=Hedge%20Fund,speculative%20investment%20practices.)
 
 See also: [SEC Hedge fund bulletin][hedge-fund2]
 
+
 ### real_estate_fund
 Real estate funds or [REITS](https://www.investor.gov/introduction-investing/investing-basics/investment-products/real-estate-investment-trusts-reits). 
 
+
 ### pension_fund
 A pension fund is defined in the [EU Pension Fund Statistical Reporting Requirements Regulation][https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32018R0231#:~:text=%E2%80%98pension%20fund%20(PF,death%20and%20disability.]
+
 
 ### mmkt_fund
 Money Market Funds are well defined under the EU legislation for [Money Market Funds][mmfr] (MMFR):
@@ -378,9 +338,9 @@ From Directive 2009/65/EC:
 Local firm is defined by the EU [here][lcr] Article 4(1)(4):
 > 'local firm' means a firm dealing for its own account on markets in financial futures or options or other derivatives and on cash markets for the sole purpose of hedging positions on derivatives markets, or dealing for the accounts of other members of those markets and being guaranteed by clearing members of the same markets, where responsibility for ensuring the performance of contracts entered into by such a firm is assumed by clearing members of the same markets
 
+
 ### sspe
 A securitisation special purpose entity is defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2277.html) as:
-
 >(1) (in accordance with Article 4(44) of the Banking Consolidation Directive (Definitions) and for the purposes of BIPRU) a corporation, trust or other entity, other than a credit institution, organised for carrying on a securitisation or securitisations (within the meaning of paragraph (2) of the definition of securitisation), the activities of which are limited to those appropriate to accomplishing that objective, the structure of which is intended to isolate the obligations of the SSPE from those of the originator, and the holders of the beneficial interests in which have the right to pledge or exchange those interests without restriction.
 >
 >(2) (in MIPRU) a corporation, trust or other entity that has the following characteristics:
@@ -429,12 +389,15 @@ Private Mortgage Insurer is financial institution that provides insurance to res
 
 Reference:  OSFI Chapter 4, P272-274;  Chapter 5, P146-148
 
+
 ### other_financial
 Any other type to be classified as financial but not one of the other types witin financial.
+
 
 ### pic
 A financial holding copmany is defined by the EU [here](http://eur-lex.europa.eu/eli/reg_del/2015/61/oj) Article 3:
 > 'personal investment company' (‘PIC’) means an undertaking or a trust whose owner or beneficial owner, respectively, is a natural person or a group of closely related natural persons, which was set up with the sole purpose of managing the wealth of the owners and which does not carry out any other commercial, industrial or professional activity. The purpose of the PIC may include other ancillary activities such as segregating the owners' assets from corporate assets, facilitating the transmission of assets within a family or preventing a split of the assets after the death of a member of the family, provided these are connected to the main purpose of managing the owners' wealth;
+
 
 ### credit_union
 A **credit union** is defined by the [FCA](https://www.fca.org.uk/firms/credit-unions) as:
