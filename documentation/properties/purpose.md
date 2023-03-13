@@ -111,7 +111,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── telecom_equipment
 │   └── vehicle
 ├── goodwill
-├── pv_future_spread_income
+├── pv_future_spread_inc
 ├── recovery
 ├── rec_unidentified_cpty
 ├── reference
@@ -125,12 +125,12 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── share_premium
 ├── system
 ├── tax
-│   └── adj_net_def_tax_ass_liab
+│   └── adj_net_def_tax_anl
 │   ├── capital_gain_tax
 │   ├── corporation_tax
 │   ├── net_amount_cap_tax
-│   ├── offset_liability_cap_tax
-│   ├── other_tax_excl_temp_diff
+│   ├── offset_liab_cap_tax
+│   ├── oth_tax_excl_temp_diff
 │   └── reclass_tax
 └── write_off
 ```
@@ -243,7 +243,7 @@ For example, for the reporting of Notice MAS 610/1003, **owner occupied property
 ### property
 This refers to other **immovable property** not included in investment property or owner occupied property,
 
-### pv_future_spread_income
+### pv_future_spread_inc
 Present value of future spread income subject to prepayment risk, such as non-credit enhancing interest-only strips and deferred mortgage placement fees receivable.  Required for BCAR risk weight and reporting.
 
 ### rec_unidentified_cpty
@@ -324,7 +324,7 @@ Describes an account that holds the amount of fees receivables/payables originat
 ### tax
 Describes an account representing the amount of tax paid, received or deferred for the reporting period by the reporting entity.
 
-### adj_net_def_tax_ass_liab
+### adj_net_def_tax_anl
 Describes an account representing the amount of deferred taxes netted deferred tax assets and deferred tax liabilities recognized for accounting purposes (if not recognized already). For the reporting period by the reporting entity.
 
 ### capital_gain_tax
@@ -339,10 +339,10 @@ Describes an account representing the amount of **reclassified pnl tax** paid, r
 ### net_amount_cap_tax
  Defered Tax - Net amount for capital adequacy purposes.  Required for BCAR rwa calculations and BCAR reporting.
 
-### offset_liability_cap_tax
+### offset_liab_cap_tax
 Offsetting deferred tax liabilities recognized for capital purposes.  Required for BCAR rwa calculations and BCAR reporting.
 
-### other_tax_excl_temp_diff
+### oth_tax_excl_temp_diff
 Deferred tax assets excluding those arising from temporary differences.  Required for BCAR rwa calculations and BCAR reporting.
 
 ### dealing_revenue
