@@ -98,6 +98,11 @@
       "type": "integer",
       "monetary": true
     },
+    "value_12m_ago": {
+      "description": "The valuation of the collateral 12 months ago. Only applicable for residential properties",
+      "type": "integer",
+      "monetarty": true
+    },
     "value_date": {
       "description": "The timestamp that the collateral was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
