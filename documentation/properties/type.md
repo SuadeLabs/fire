@@ -30,8 +30,12 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   │       └── promo_fed_home_loan
 │   ├── investment_firm
 │   │   ├── ciu
+│   │   ├── fund
+│   │   ├── hedge_fund
+│   │   ├── mmkt_fund
+│   │   ├── private_equity_fund
 │   │   ├── pension_fund
-│   │   └── mmkt_fund
+│   │   └── real_estate_fund
 │   ├── sspe
 │   ├── pic
 │   ├── insurer
@@ -246,6 +250,17 @@ A public sector entity is defined in the [FCA handbook](https://www.handbook.fca
 >(d) self administered bodies governed by law that are under public supervision.
 
 ### other_pse
+
+### fund
+
+### private_equity_fund
+EIF subtype that is hold private equities in funds.
+
+### hedge_fund
+EIF subtype that is designed as a hedge funds.
+
+### real_estate_fund
+EIF subtype that is hold real estate funds.  Also category for REIT.
 
 ### statutory_board
 >A specific distinction for Singaporean public sector entities. The statutory boards of the Singapore Government are organisations that have been given autonomy to perform an operational function by legal statutes passed as Acts in parliament. The statutes define the purpose, rights and powers of the authority. They usually report to one specific ministry.
@@ -607,21 +622,6 @@ Denotes if the security is a share (stock) or represents an aggregate for a port
 ### pref_share
 The [FCA](https://www.handbook.fca.org.uk/handbook/glossary/G1587.html) defines a **preference share** as:
 > A share conferring preference as to income or return of capital which does not form part of the equity share capital of a company
-
-### equity_in_funds
-This is a "catch all" term for all equity in funds and for those EIF types that do not fall under further granularity types like public_traded_fund, private_equity_fund, hedge_fund, real_estate_fund.
-
-### public_traded_fund
-EIF subtype that is hold publicly traded securities in fund.
-
-### private_equity_fund
-EIF subtype that is hold private equities in funds.
-
-### hedge_fund
-EIF subtype that is designed as a hedge funds.
-
-### real_estate_fund
-EIF subtype that is hold real estate funds.  Also category for REIT.
 
 ### speculative_unlisted
 As per OSFI and BCBS, a Speculative unlisted equity is defined as "an equity investments in unlisted companies that are invested for short-term resale purposes, or are considered venture capital or similar investments which are subject to price volatility and are acquired in anticipation of significant future capital gains, or are held with trading intent. Investments in unlisted equities of corporate clients with which the institution has or intends to establish a long-term business relationship and debt-equity swaps for corporate restructuring purposes would be excluded."  OSFI Chapter 4 P76.
