@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Account Schema",
   "description": "An Account represents a financial account that describes the funds that a customer has entrusted to a financial institution in the form of deposits or credit balances.",
   "type": "object",
@@ -18,7 +18,7 @@
       "type": "integer",
       "monetary": true
     },
-    "accounting_treatment": {
+    "accounting_treatment":{
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/accounting_treatment"
     },
     "accrued_interest": {
@@ -86,10 +86,6 @@
       "description": "Two-letter country code for account location/jurisdiction. In accordance with ISO 3166-1.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
     },
-    "cr_approach": {
-      "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/cr_approach"
-    },
     "currency_code": {
       "description": "Actual currency of the Account in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
@@ -111,13 +107,7 @@
     "encumbrance_type": {
       "description": "The type of the encumbrance causing the encumbrance_amount.",
       "type": "string",
-      "enum": [
-        "covered_bond",
-        "derivative",
-        "none",
-        "other",
-        "repo"
-      ]
+      "enum": ["covered_bond", "derivative", "none", "other", "repo"]
     },
     "end_date": {
       "description": "The end or maturity date of the account. Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
@@ -207,19 +197,7 @@
     "interest_repayment_frequency": {
       "description": "Repayment frequency of the interest.",
       "type": "string",
-      "enum": [
-        "daily",
-        "weekly",
-        "bi_weekly",
-        "monthly",
-        "bi_monthly",
-        "quarterly",
-        "semi_annually",
-        "annually",
-        "at_maturity",
-        "biennially",
-        "sesquiennially"
-      ]
+      "enum": ["daily", "weekly", "bi_weekly", "monthly", "bi_monthly", "quarterly", "semi_annually", "annually", "at_maturity", "biennially", "sesquiennially"]
     },
     "last_drawdown_date": {
       "description": "The last date on which a drawdown was made on this account (overdraft).",
@@ -292,6 +270,12 @@
       "description": "The purpose for which the account was created or is being used.",
       "type": "string",
       "enum": [
+        "adj_net_def_tax_ass_liabs",
+        "adj_syn_inv_own_shares",
+        "adj_syn_inv_decon_subs",
+        "adj_syn_other_inv_fin",
+        "adj_syn_nonsig_inv_fin",
+        "adj_syn_mtg_def_ins",
         "admin",
         "annual_bonus_accruals",
         "benefit_in_kind",
@@ -305,6 +289,7 @@
         "commitments",
         "computer_and_it_cost",
         "computer_peripheral",
+        "computer_software",
         "corporation_tax",
         "credit_card_fee",
         "critical_service",
@@ -314,6 +299,7 @@
         "dealing_rev_deriv_nse",
         "dealing_rev_fx",
         "dealing_rev_fx_nse",
+        "dealing_rev_ir",
         "dealing_rev_sec",
         "dealing_rev_sec_nse",
         "dealing_revenue",
@@ -346,6 +332,7 @@
         "int_on_money_mkt",
         "int_on_mortgage",
         "int_on_sft",
+        "int_unallocated",
         "interest",
         "intra_group_fee",
         "inv_in_subsidiary",
@@ -357,9 +344,13 @@
         "machinery",
         "manufactured_dividend",
         "mortgage_fee",
+        "mtg_insurance",
+        "mtg_ins_nonconform",
+        "net_amount_cap_tax",
         "ni_contribution",
         "non_life_ins_premium",
         "occupancy_cost",
+        "offset_liability_cap_tax",
         "operational",
         "operational_escrow",
         "operational_excess",
@@ -370,14 +361,17 @@
         "other_social_contrib",
         "other_staff_cost",
         "other_staff_rem",
+        "other_tax_excl_temp_diff",
         "overdraft_fee",
         "own_property",
         "pension",
         "ppe",
         "prime_brokerage",
         "property",
+        "pv_future_spread_income",
         "reclass_tax",
         "recovery",
+        "rec_unidentified_cpty",
         "redundancy_pymt",
         "reference",
         "reg_loss",
@@ -409,13 +403,7 @@
     "rate_type": {
       "description": "Describes the type of interest rate applied to the account.",
       "type": "string",
-      "enum": [
-        "combined",
-        "fixed",
-        "preferential",
-        "tracker",
-        "variable"
-      ]
+      "enum": ["combined", "fixed", "preferential", "tracker", "variable"]
     },
     "regulatory_book": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/regulatory_book"
@@ -453,13 +441,7 @@
     "status": {
       "description": "Describes if the Account is active or been cancelled.",
       "type": "string",
-      "enum": [
-        "active",
-        "cancelled",
-        "cancelled_payout_agreed",
-        "other",
-        "transactional"
-      ]
+      "enum": ["active", "cancelled", "cancelled_payout_agreed", "other", "transactional"]
     },
     "trade_date": {
       "description": "The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
@@ -503,10 +485,7 @@
     "uk_funding_type": {
       "description": "Funding type calculated according to BIPRU 12.5/12.6",
       "type": "string",
-      "enum": [
-        "a",
-        "b"
-      ]
+      "enum": ["a", "b"]
     },
     "version_id": {
       "description": "The version identifier of the data such as the firm's internal batch identifier.",
@@ -518,9 +497,6 @@
       "monetary": true
     }
   },
-  "required": [
-    "id",
-    "date"
-  ],
+  "required": ["id", "date"],
   "additionalProperties": true
 }
