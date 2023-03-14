@@ -503,15 +503,6 @@
       "minimum": 1,
       "maximum": 10
     },
-    "cr_approach": {
-      "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
-      "type": "string",
-      "enum": [
-        "airb",
-        "firb",
-        "std"
-      ]
-    },
     "securitisation_type": {
       "description": "The type of securitisation with regards to common regulatory classifications.",
       "type": "string",
