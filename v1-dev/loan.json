@@ -505,15 +505,6 @@
       "description": "The standardised approach risk weight represented as a decimal/float such that 1.5% is 0.015.",
       "type": "number"
     },
-    "cr_approach": {
-      "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
-      "type": "string",
-      "enum": [
-        "airb",
-        "firb",
-        "std"
-      ]
-    },
     "secured": {
       "description": "Is this loan secured or unsecured?",
       "type": "boolean"
