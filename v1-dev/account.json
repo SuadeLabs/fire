@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Account Schema",
   "description": "An Account represents a financial account that describes the funds that a customer has entrusted to a financial institution in the form of deposits or credit balances.",
   "type": "object",
