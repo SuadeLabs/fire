@@ -192,6 +192,11 @@
       "description": "The currency of the credit facility if not the same as loan currency_code.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
     },
+    "fees": {
+      "description": "The fees associated with the loan.",
+      "type": "integer",
+      "monetary": true
+    },
     "first_arrears_date": {
       "description": "The first date on which this loan was in arrears.",
       "type": "string",
