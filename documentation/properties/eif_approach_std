@@ -1,16 +1,16 @@
 ---
 layout:		property
-title:		"eif_approach"
+title:		"eif_approach_std"
 schemas:	[security]
 ---
 
-# eif_approach
+# eif_approach_std
 
 ---
 
 Describes which calculation approach the EIF will be used to derive EAD and risk weight:  LTA, MBA, FBA
 
-REF:  OSFI BCAR Chapter 4, P146; Chapter 5, P49
+REF:  OSFI BCAR Chapter 4, P146; 
 
 ## Security
 
