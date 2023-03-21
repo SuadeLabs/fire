@@ -12,6 +12,11 @@ The **purpose** property describes the reason behind the creation or usage of th
 
 ## Account
 ```bash
+├── adj_syn_inv_own_shares
+├── adj_syn_inv_decon_subs
+├── adj_syn_other_inv_fin
+├── adj_syn_nonsig_inv_fin
+├── adj_syn_mtg_def_ins
 ├── admin
 ├── cf_hedge
 │ └── cf_hedge_reclass
@@ -24,6 +29,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   │   └── dealing_rev_fx_nse
 │   ├── dealing_rev_sec
 │   │   └── dealing_rev_sec_nse
+│   ├── dealing_rev_ir
 │   └── dealing_rev_deriv
 │       └── dealing_rev_deriv_nse
 ├── deposit
@@ -51,6 +57,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── fines
 ├── firm_operating_expenses
 │   ├── computer_and_it_cost
+│   ├── computer_software
 │   ├── non_life_ins_premium
 │   ├── occupancy_cost
 │   ├── other_expenditure
@@ -79,8 +86,11 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   │   └── int_on_ecgd_lending
 │   ├── int_on_money_mkt
 │   └── int_on_sft
+│   └── int_unallocated
 ├── intra_group_fee
 ├── inv_in_subsidiary
+├── mtg_insurance
+│   ├── mtg_ins_nonconform
 ├── operational
 │   ├── cash_management
 │   ├── clearing
@@ -101,7 +111,9 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── telecom_equipment
 │   └── vehicle
 ├── goodwill
+├── pv_future_spread_inc
 ├── recovery
+├── rec_unidentified_cpty
 ├── reference
 ├── release
 ├── reg_loss
@@ -115,6 +127,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── tax
 │   ├── capital_gain_tax
 │   ├── corporation_tax
+│   ├── oth_tax_excl_temp_diff
 │   └── reclass_tax
 └── write_off
 ```
@@ -227,6 +240,12 @@ For example, for the reporting of Notice MAS 610/1003, **owner occupied property
 ### property
 This refers to other **immovable property** not included in investment property or owner occupied property,
 
+### pv_future_spread_inc
+Present value of future spread income subject to prepayment risk, such as non-credit enhancing interest-only strips and deferred mortgage placement fees receivable.  Required for BCAR risk weight and reporting.
+
+### rec_unidentified_cpty
+Corporate and retail receivables with unidentified counterparties.  Required for BCAR risk weight and reporting.
+
 ### revenue_reserve
 A type of reserve account. This is created when an entity retains an amount of its distributable profit.
 
@@ -311,6 +330,9 @@ Describes an account representing the amount of **corporation tax** paid, receiv
 ### reclass_tax
 Describes an account representing the amount of **reclassified pnl tax** paid, received or deferred for the reporting period by the reporting entity.
 
+### oth_tax_excl_temp_diff
+Deferred tax assets excluding those arising from temporary differences.  Required for BCAR rwa calculations and BCAR reporting.
+
 ### dealing_revenue
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of tradable instruments.
 
@@ -319,6 +341,9 @@ Describes an account that holds the amount of profits or losses arising from the
 
 ### dealing_rev_sec
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **securities**.
+
+### dealing_rev_ir
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **interest-rated related balance sheet securities**.
 
 ### dealing_rev_deriv
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **derivative instruments**.
@@ -361,6 +386,9 @@ Describes an account that holds the amount of interests receivable/payable where
 
 ### int_on_deposit
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **deposits**.
+
+### int_unallocated
+Describes an account that holds accrued interest that is unallocated.  Required for BCAR RWA calculation and reporting.
 
 ### int_on_sft
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **Securities Financing Transactions**.
@@ -432,6 +460,9 @@ Describes an account representing the part of staff expenses corresponding to th
 ### computer_and_it_costs
 Describes an account representing the part of operating expenses corresponding to the **computer_and_it_costs** paid by the reporting entity.
 
+### computer_software
+Computer software intangibles. Required for BCAR RWA calculation and Reporting.  Ref: BCAR 40.290; Chapter 4, P164
+
 ### benefit_in_kind
 Describes an account representing the part of staff expenses corresponding to the **benefits_in_kind** paid by the reporting entity.
 Bank Of England defines **benefits_in_kind** as items where the cost is separately identifiable and would normally fall within expenditure, such as staff canteens, luncheon vouchers, sports club membership, nurseries, health care and staff savings schemes that do not form part of employee stock options
@@ -496,6 +527,27 @@ Describes an account representing the amount of a provision beeing released as a
 
 ### write_off
 Describes an account representing the amount of a provision beeing written-off as a risk materialised (e.g. the loan for which the provision was originally registered is deemed irrecoverable).
+
+### mtg_insurance
+Prepaid portfolio mortgage insurance conforming to OSFI's 5 year amortization requirements.  Ref: BCAR 40.290; Chapter 4, P164
+
+### mtg_ins_nonconform
+Prepaid portfolio mortgage insurance that does not conform to OSFI's 5 year amortization requirements.  Ref: BCAR 40.290; Chapter 4, P164
+
+### adj_syn_inv_own_shares
+Adjustments of Synthetic positions - investments in own shares.  Required for BCAR RWA calculation and Reporting.  Ref: BCAR 40.290; Chapter 4, P164
+
+### adj_syn_inv_decon_subs
+Adjustments of Synthetic positions - investments in deconsolidated subsidiaries.  Required for BCAR RWA calculation and Reporting.  Ref: BCAR 40.290; Chapter 4, P164
+
+### adj_syn_other_inv_fin
+Adjustments of Synthetic positions - other significant investments in financials and joint ventures.  Required for BCAR RWA calculation and Reporting.  Ref: BCAR 40.290; Chapter 4, P164
+
+### adj_syn_nonsig_inv_fin
+Adjustments of Synthetic positions - non-significant investments in financials.  Required for BCAR RWA calculation and Reporting.  Ref: BCAR 40.290; Chapter 4, P164
+
+### adj_syn_mtg_def_ins
+Adjustments of Synthetic positions - adj_syn_mtg_def_ins.  Required for BCAR RWA calculation and Reporting.  Ref: BCAR 40.290; Chapter 4, P164
 
 ## Derivative
 ```bash
@@ -832,3 +884,4 @@ Use this enum to refer to funds reserved for the purpose of implementing, from a
 [osfi-adc]: https://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/CAR22_chpt4.aspx#fnb49:~:text=Land%20acquisition%2C%20development%20and%20construction%20(ADC,of%20any%20residential%20or%20commercial%20property.
 [osfi-income-producing]: https://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/CAR22_chpt4.aspx#fnb49:~:text=CRE%2020.88%2D20.89%5D-,When%20the%20prospects%20for%20servicing%20the%20loan%20materially%20depend,capacity%20of%20the%20borrower%20to%20service%20the%20debt%20from%20other%20sources,-%2C%20and%20provided%20that
 [osfi-b20]: https://www.osfi-bsif.gc.ca/Eng/Docs/b20_dft.pdf
+

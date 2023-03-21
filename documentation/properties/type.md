@@ -30,12 +30,18 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   │       └── promo_fed_home_loan
 │   ├── investment_firm
 │   │   ├── ciu
+│   │   ├── fund
+│   │   ├── private_fund
+│   │   │   ├── hedge_fund
+│   │   │   └── private_equity_fund
+│   │   ├── mmkt_fund
 │   │   ├── pension_fund
-│   │   └── mmkt_fund
+│   │   └── real_estate_fund
 │   ├── sspe
 │   ├── pic
 │   ├── insurer
 │   ├── financial_holding
+│   ├── pmi
 │   ├── unregulated_financial
 │   └── other_financial
 ├── ccp
@@ -105,44 +111,25 @@ Article 4 (88) of the [CRR][crr]:
 Article 411 of the [CRR][crr]:
 > financial customer means a customer that performs one or more of the activities listed in Annex I to Directive 2013/36/EU as its main business, or is one of the following:
 > (a) a credit institution;
->
 > (b) an investment firm;
->
 > (c) an SSPE;
->
 > (d) a CIU;
->
 > (e) a non-open ended investment scheme;
->
 > (f) an insurance undertaking;
->
 > (g) a financial holding company or mixed-financial holding company.
->
 > 'financial sector entity' means any of the following:
 > (a) an institution;
->
 > (b) a financial institution;
->
 > (c) an ancillary services undertaking included in the consolidated financial situation of an institution;
->
 > (d) an insurance undertaking;
->
 > (e) a third-country insurance undertaking;
->
 > (f) a reinsurance undertaking;
->
 > (g) a third-country reinsurance undertaking;
->
 > (h) an insurance holding company;
->
 > (i) a mixed-activity holding company
->
 > (j) a mixed-activity insurance holding company as defined in point (g) of Article 212(1) of Directive 2009/138/EC;
->
 > (k) an undertaking excluded from the scope of Directive 2009/138/EC in accordance with Article 4 of that Directive;
->
 > (l) a third-country undertaking with a main business comparable to any of the entities referred to in points (a) to (k);
->
 > (m) a building society
 
 ### unregulated_financial
@@ -159,31 +146,18 @@ Multilateral Development Banks are defined in the [CRR][crr] Article 117 as:
 > The Inter-American Investment Corporation, the Black Sea Trade and Development Bank, the Central American Bank for Economic Integration and the CAF-Development Bank of Latin America shall be considered multilateral development banks.
 > ...
 > (a) the International Bank for Reconstruction and Development;
->
 > (b) the International Finance Corporation;
->
 > (c) the Inter-American Development Bank;
->
 > (d) the Asian Development Bank;
->
 > (e) the African Development Bank;
->
 > (f) the Council of Europe Development Bank;
->
 > (g) the Nordic Investment Bank;
->
 > (h) the Caribbean Development Bank;
->
 > (i) the European Bank for Reconstruction and Development;
->
 > (j) the European Investment Bank;
->
 > (k) the European Investment Fund;
->
 > (l) the Multilateral Investment Guarantee Agency;
->
 > (m) the International Finance Facility for Immunisation;
->
 > (n) the Islamic Development Bank.
 
 ### intl_org
@@ -210,15 +184,10 @@ An organisation with government approval to conduct business (or other activitie
 As defined in the [FCA handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2971.html), a sovereign is:
 
 >(a) the EU; or
->
 >(b) a Member State including a government department, an agency, or a special purpose vehicle of the Member State; or
->
 >(c) in the case of a federal Member State, a member of the federation; or
->
 >(d) a special purpose vehicle for several Member States; or
->
 >(e) an international financial institution established by two or more Member States which has the purpose of mobilising funding and provide financial assistance to the benefit of its members that are experiencing or threatened by severe financing problems; or
->
 >(f) the European Investment Bank.
 
 ### central_bank
@@ -237,14 +206,12 @@ A **central government** is the government of a nation-state. While some countri
 A public sector entity is defined in the [FCA handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2242.html) as any of the following:
 
 >(a) non-commercial administrative bodies responsible to central governments, regional governments or local authorities; or
->
 >(b) authorities that exercise the same responsibilities as regional and local authorities; or
->
 >(c) non commercial undertakings owned by central governments that have explicit guarantee arrangements; or
->
 >(d) self administered bodies governed by law that are under public supervision.
 
 ### other_pse
+
 
 ### statutory_board
 >A specific distinction for Singaporean public sector entities. The statutory boards of the Singapore Government are organisations that have been given autonomy to perform an operational function by legal statutes passed as Acts in parliament. The statutes define the purpose, rights and powers of the authority. They usually report to one specific ministry.
@@ -320,21 +287,44 @@ k) records shall include the recording of telephone conversations or electronic 
 Investment firm is defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G596.html) as:
 >(1) any person whose regular occupation or business is the provision of one or more investment services to third parties and/or the performance of one or more investment activities on a professional basis.
 [Note: article 4(1)(1) of MiFID]
->
 >(2) (in REC) a MiFID investment firm, or a person who would be a MiFID investment firm if it had its head office in the EEA.
->
 >(3) (in IFPRU and BIPRU 12) has the meaning in article 4(1)(2) of the EU CRR.
->
 >(4) (in GENPRU (except GENPRU 3) and BIPRU (except BIPRU 12) any of the following:
 >(a) a firm in (3); and
 >(b) a BIPRU firm.
->
 >(5) (in SYSC 19A(IFPRU Remuneration Code)) a firm in (3).
->
 >(6) (in SYSC 19D (Dual-regulated firms Remuneration Code)) a firm in (3) that is a UK designated investment firm.
 
+### ciu
+A collective investment undertaking is defined by the EU [here][lcr] Article 4(1)(7):
+> 'collective investment undertaking' or 'CIU' means a UCITS as defined in Article 1(2) of Directive 2009/65/EC of the European Parliament and of the Council of 13 July 2009 on the coordination of laws, regulations and administrative provisions relating to undertakings for collective investment in transferable securities (UCITS) (21), including, unless otherwise provided, third-country entities which carry out similar activities, which are subject to supervision pursuant to Union law or to the law of a third country which applies supervisory and regulatory requirements at least equivalent to those applied in the Union, an AIF as defined in Article 4(1)(a) of Directive 2011/61/EU of the European Parliament and of the Council of 8 June 2011 on Alternative Investment Fund Managers (22), or a non-EU AIF as defined in Article 4(1)(aa) of that Directive;
+
+
+### fund
+A general term for collective investment vehicles and management companies. For example, those defined under the [US Investment Company Act 1940][inv-co-act] but not qualifying as an EU CIU. There does not appear to be a cross-jurisdictional, unified classification of types of funds 
+
+
+### private_fund
+A private fund is a pooled investment vehicle excluded from the definition of an investment company in the [US Investment Company Act 1940][inv-co-act] 
+[Private Fund](https://www.sec.gov/education/glossary/jargon-z#PEF:~:text=Private%20Equity%20Funds-,Private%20Fund,applicable%20registration%20requirements%20(for%20example%2C%20as%20an%20exempt%20reporting%20adviser).,-Want%20to%20learn)
+
+### private_equity_fund
+A private equity fund is a type of private fund distinguished by its objective to take mainly controlling interests in business to actively increase their value. See SEC glossary: [Private Equity Fund glossary](https://www.sec.gov/education/glossary/jargon-z#PEF:~:text=is%20the%20SEC%3F-,Private%20Equity%20Fund,specialize%20in%20making%20minority%20investments%20in%20fast%2Dgrowing%20businesses%20or%20startups,-.%C2%A0%C2%A0%C2%A0)
+
+
+### hedge_fund
+A hedge fund is a type of private fund that generally invests in a diverse range of securities and typically has more flexible investment strategies than mutual funds. Many hedge funds seek to profit by using leverage (borrowing to increase investment exposure as well as risk), short-selling, and other speculative investment practices. [SEC glossary](https://www.sec.gov/education/glossary/jargon-z#PEF:~:text=Hedge%20Fund,speculative%20investment%20practices.)
+
+See also: [SEC Hedge fund bulletin][hedge-fund2]
+
+
+### real_estate_fund
+Real estate funds or [REITS](https://www.investor.gov/introduction-investing/investing-basics/investment-products/real-estate-investment-trusts-reits). 
+
+
 ### pension_fund
-*needs definition*
+A pension fund is defined in the [EU Pension Fund Statistical Reporting Requirements Regulation][https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32018R0231#:~:text=%E2%80%98pension%20fund%20(PF,death%20and%20disability.]
+
 
 ### mmkt_fund
 Money Market Funds are well defined under the EU legislation for [Money Market Funds][mmfr] (MMFR):
@@ -352,19 +342,15 @@ From Directive 2009/65/EC:
 Local firm is defined by the EU [here][lcr] Article 4(1)(4):
 > 'local firm' means a firm dealing for its own account on markets in financial futures or options or other derivatives and on cash markets for the sole purpose of hedging positions on derivatives markets, or dealing for the accounts of other members of those markets and being guaranteed by clearing members of the same markets, where responsibility for ensuring the performance of contracts entered into by such a firm is assumed by clearing members of the same markets
 
+
 ### sspe
 A securitisation special purpose entity is defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2277.html) as:
-
 >(1) (in accordance with Article 4(44) of the Banking Consolidation Directive (Definitions) and for the purposes of BIPRU) a corporation, trust or other entity, other than a credit institution, organised for carrying on a securitisation or securitisations (within the meaning of paragraph (2) of the definition of securitisation), the activities of which are limited to those appropriate to accomplishing that objective, the structure of which is intended to isolate the obligations of the SSPE from those of the originator, and the holders of the beneficial interests in which have the right to pledge or exchange those interests without restriction.
 >
 >(2) (in MIPRU) a corporation, trust or other entity that has the following characteristics:
 > (a) it is organised for carrying on a securitisation or securitisations (within the meaning of paragraph (2) of the definition of securitisation);
 > (b) its activities are limited to those appropriate to accomplishing such securitisation or securitisations; and
 > (c) its structure is intended to isolate its obligations from those of the originator.
-
-### ciu
-A collective investment undertaking is defined by the EU [here][lcr] Article 4(1)(7):
-> 'collective investment undertaking' or 'CIU' means a UCITS as defined in Article 1(2) of Directive 2009/65/EC of the European Parliament and of the Council of 13 July 2009 on the coordination of laws, regulations and administrative provisions relating to undertakings for collective investment in transferable securities (UCITS) (21), including, unless otherwise provided, third-country entities which carry out similar activities, which are subject to supervision pursuant to Union law or to the law of a third country which applies supervisory and regulatory requirements at least equivalent to those applied in the Union, an AIF as defined in Article 4(1)(a) of Directive 2011/61/EU of the European Parliament and of the Council of 8 June 2011 on Alternative Investment Fund Managers (22), or a non-EU AIF as defined in Article 4(1)(aa) of that Directive;
 
 ### insurer
 The [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G569.html?date=2015-12-31) defines an **insurer** as:
@@ -402,12 +388,20 @@ Where [insurance](https://www.handbook.fca.org.uk/handbook/glossary/G218.html?da
 A financial holding copmany is defined by the EU [here][lcr] Article 4(1)(20):
 > (20) 'financial holding company' means a financial institution, the subsidiaries of which are exclusively or mainly institutions or financial institutions, at least one of such subsidiaries being an institution, and which is not a mixed financial holding company;
 
+### pmi
+Private Mortgage Insurer is financial institution that provides insurance to residential mortgages that may get part of guaranteed amount backed by federal government.  Under OSFI rules, PMI guaranteed amounts may get split between a backstop and a deductiable portion.  
+
+Reference:  OSFI Chapter 4, P272-274;  Chapter 5, P146-148
+
+
 ### other_financial
 Any other type to be classified as financial but not one of the other types witin financial.
+
 
 ### pic
 A financial holding copmany is defined by the EU [here](http://eur-lex.europa.eu/eli/reg_del/2015/61/oj) Article 3:
 > 'personal investment company' (‘PIC’) means an undertaking or a trust whose owner or beneficial owner, respectively, is a natural person or a group of closely related natural persons, which was set up with the sole purpose of managing the wealth of the owners and which does not carry out any other commercial, industrial or professional activity. The purpose of the PIC may include other ancillary activities such as segregating the owners' assets from corporate assets, facilitating the transmission of assets within a family or preventing a split of the assets after the death of a member of the family, provided these are connected to the main purpose of managing the owners' wealth;
+
 
 ### credit_union
 A **credit union** is defined by the [FCA](https://www.fca.org.uk/firms/credit-unions) as:
@@ -532,10 +526,12 @@ Other refers to a type of security not covered by the above. If you find yoursel
 
 ```
 ├── equity
+│   ├── dividend
 │   ├── share
 │   │   ├── treasury
 │   │   └── pref_share
-│   └── share_agg
+│   ├── share_agg
+│   └── speculative_unlisted
 ├── debt
 │   ├── bond
 │   ├── covered_bond
@@ -584,12 +580,19 @@ A **cash** or cash-equivalent security such as a securitisation of cash deposits
 ### equity
 This is a "catch all" term for equity instruments such as *share*, *share_agg* to be used when further granularity is not available or not needed.
 
+### dividend
+A distribution of a company's post-tax profits made to its shareholders. Dividends are usually paid in cash but can also be satisfied by the transfer of non-cash assets or by shares in the company itself.
+[dividend]: https://uk.practicallaw.thomsonreuters.com/1-107-6135?transitionType=Default&contextData=(sc.Default)&firstPage=true
+
 ### share, share_agg
 Denotes if the security is a share (stock) or represents an aggregate for a portfolio or package of shares.
 
 ### pref_share
 The [FCA](https://www.handbook.fca.org.uk/handbook/glossary/G1587.html) defines a **preference share** as:
 > A share conferring preference as to income or return of capital which does not form part of the equity share capital of a company
+
+### speculative_unlisted
+As per OSFI and BCBS, a Speculative unlisted equity is defined as "an equity investments in unlisted companies that are invested for short-term resale purposes, or are considered venture capital or similar investments which are subject to price volatility and are acquired in anticipation of significant future capital gains, or are held with trading intent. Investments in unlisted equities of corporate clients with which the institution has or intends to establish a long-term business relationship and debt-equity swaps for corporate restructuring purposes would be excluded."  OSFI Chapter 4 P76.
 
 ### treasury
 According to IAS 32.33, if an entity reacquires its own equity instruments, those instruments shall be considered **treasury shares**, and shall be deducted from equity.
@@ -1264,3 +1267,7 @@ A volatility curve (smile)
 [ira]: https://www.law.cornell.edu/uscode/text/26/408
 [cpfb-heloc-you-should-know]: https://files.consumerfinance.gov/f/201401_cfpb_booklet_heloc.pdf
 [investopedia-heloc]: https://www.investopedia.com/mortgage/heloc/
+[inv-co-act]: https://en.wikipedia.org/wiki/Investment_Company_Act_of_1940
+[reits]: https://www.sec.gov/files/reits.pdf
+[hedge-fund]: https://www.sec.gov/spotlight/hedgefunds/hedge-vaughn.htm
+[hedge-fund2]: https://www.google.com/url?esrc=s&q=&rct=j&sa=U&url=https://www.sec.gov/files/ib_hedgefunds.pdf&ved=2ahUKEwjSgp-x-dn9AhVhoFwKHYbQDrMQFnoECAgQAg&usg=AOvVaw3y7wSB8gmaTml65eMxKBpD
