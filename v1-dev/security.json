@@ -144,6 +144,11 @@
       "minimum": 0.0,
       "maximum": 1.0
     },
+    "eif_approach": {
+      "description": "Identifies how EIF EAD and risk weight are to be derived.",
+      "type":"string",
+      "enum": ["lta", "mba", "fba"]
+  },
     "eif_thirdparty_rw_ind": {
       "description": "rely on third-party calculations for determining the risk weights associated with their equity investments in funds.",
       "type": "boolean"
