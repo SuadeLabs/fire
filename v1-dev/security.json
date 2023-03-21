@@ -144,7 +144,7 @@
       "minimum": 0.0,
       "maximum": 1.0
     },
-    "eif_approach": {
+    "eif_approach_std": {
       "description": "Identifies how EIF EAD and risk weight are to be derived.",
       "type":"string",
       "enum": ["lta", "mba", "fba"]
