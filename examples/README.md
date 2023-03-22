@@ -258,7 +258,7 @@ Long 10y EUR irs vs Euribor 3M, collateralised
 #### Margined netting agreement
 Margined netting agreement, collateralised with initial collateral amount and variation margin
 ```json
-{{#include interest_rate_swap_collateralised.json:5:}}
+{{#include margined_netting_agreement.json:5:}}
 ```
 #### Swaption
 Short USD 1y into 10y payer swaptionwith physical settlement
@@ -268,7 +268,7 @@ Short USD 1y into 10y payer swaptionwith physical settlement
 #### Unmargined netting agreement
 Unmargined netting agreement, collateralised with initial collateral amount
 ```json
-{{#include interest_rate_swap_collateralised.json:5:}}
+{{#include unmargined_netting_agreement.json:5:}}
 ```
 ### Security examples
 #### Bank guarantee issued
