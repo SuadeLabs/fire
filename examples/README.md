@@ -250,11 +250,6 @@ Long 2y EUR irs vs Euribor 6M, amortising annually
 ```json
 {{#include interest_rate_swap_amortising.json:5:}}
 ```
-#### Interest rate swap collateralised
-Long 10y EUR irs vs Euribor 3M, collateralised
-```json
-{{#include interest_rate_swap_collateralised.json:5:}}
-```
 #### Margined netting agreement
 Margined netting agreement, collateralised with initial collateral amount and variation margin
 ```json
