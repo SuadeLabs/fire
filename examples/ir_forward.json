@@ -1,5 +1,5 @@
 {
-    "title": "interest_rate_swap",
+    "title": "ir_forward",
     "comment": "interest rate forward - 'start_date' is after 'date'",
     "data": {
       "derivative": [
