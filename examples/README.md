@@ -29,6 +29,7 @@ The following are a few examples of common financial trades.
     - [Equity option](#equity-option)
     - [Equity total return swap](#equity-total-return-swap)
     - [Forward rate agreement](#forward-rate-agreement)
+    - [FX forward](#fx-forward)
     - [FX future](#fx-future)
     - [FX option](#fx-option)
     - [FX spot](#fx-spot)
@@ -38,8 +39,9 @@ The following are a few examples of common financial trades.
     - [Interest rate future](#interest-rate-future)
     - [Interest rate swap](#interest-rate-swap)
     - [Interest rate swap amortising](#interest-rate-swap-amortising)
-    - [Interest rate swap collateralised](#interest-rate-swap-collateralised)
+    - [Margined netting agreement](#margined-netting-agreement)
     - [Swaption](#swaption)
+    - [Unmargined netting agreement](#unmargined-netting-agreement)
   - [Security examples](#security-examples)
     - [Bank guarantee issued](#bank-guarantee-issued)
     - [Core equity tier-1 capital](#core-equity-tier-1-capital)
@@ -198,6 +200,11 @@ Short 6x12 USD FRA
 ```json
 {{#include fra_6x12.json:5:}}
 ```
+#### FX forward
+Short AUDUSD forward
+```json
+{{#include fx_forward.json:5:}}
+```
 #### FX future
 Long June EURCAD future
 ```json
@@ -248,10 +255,20 @@ Long 10y EUR irs vs Euribor 3M, collateralised
 ```json
 {{#include interest_rate_swap_collateralised.json:5:}}
 ```
+#### Margined netting agreement
+Margined netting agreement, collateralised with initial collateral amount and variation margin
+```json
+{{#include interest_rate_swap_collateralised.json:5:}}
+```
 #### Swaption
 Short USD 1y into 10y payer swaptionwith physical settlement
 ```json
 {{#include swaption.json:5:}}
+```
+#### Unmargined netting agreement
+Unmargined netting agreement, collateralised with initial collateral amount
+```json
+{{#include interest_rate_swap_collateralised.json:5:}}
 ```
 ### Security examples
 #### Bank guarantee issued
