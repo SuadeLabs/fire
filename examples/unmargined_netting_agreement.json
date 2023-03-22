@@ -1,6 +1,6 @@
 {
-    "title": "unmargined_netting_set",
-    "comment": "Unmargined Netting Set with collateral. Example trade is an IRS. Agreement schemas contain an MNA (representing the netting set). There is no CSA, therefore there is no margining. However, one can still post Independent Collateral (security schema)",
+    "title": "unmargined_netting_agreement",
+    "comment": "Unmargined netting set with collateral. Example trade is an IRS. Agreement schemas contain an MNA (representing the netting set). There is no CSA, therefore there is no margining. However, one can still post Independent Collateral (security schema)",
     "data": {
       "derivative": [
         {
