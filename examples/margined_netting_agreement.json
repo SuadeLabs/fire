@@ -1,6 +1,6 @@
 {
-  "title": "interest_rate_swap_collateralised",
-  "comment": "Interest Rate Swap Collateralised",
+  "title": "margined_netting_set",
+  "comment": "Margined Netting Set with collateral. Example trade is an IRS. Agreement schemas contain an MNA (representing the netting set) and a CSA (representing margined status - exchanges of collateral)",
   "data": {
     "derivative": [
       {
