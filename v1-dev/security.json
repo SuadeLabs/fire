@@ -157,6 +157,15 @@
       "minimum": 0.0,
       "maximum": 1.0
     },
+    "eif_approach_std": {
+      "description": "Identifies how EIF EAD and risk weight are to be derived.",
+      "type":"string",
+      "enum": ["lta", "mba", "fba"]
+    },
+    "eif_thirdparty_rw_ind": {
+      "description": "rely on third-party calculations for determining the risk weights associated with their equity investments in funds.",
+      "type": "boolean"
+    },
     "encumbrance_amount": {
       "description": "The amount of the security that is encumbered by potential future commitments or legal liabilities such as within a repo pool. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
