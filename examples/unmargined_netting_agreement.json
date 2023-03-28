@@ -68,7 +68,6 @@
           "id": "im_bond_posted",
           "customer_id": "ccp_1",
           "mna_id": "isda_master_agreement",
-          "csa_id": "csa_daily_margined",
           "type": "bond",
           "issuer_id": "French Republic",
           "isin_code": "XS1234567890",
