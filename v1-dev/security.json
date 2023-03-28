@@ -160,7 +160,7 @@
     "eif_approach_std": {
       "description": "Identifies how EIF EAD and risk weight are to be derived.",
       "type":"string",
-      "enum": ["lta", "mba", "fba"]
+      "enum": ["fba", "lta", "mba"]
     },
     "eif_thirdparty_rw_ind": {
       "description": "rely on third-party calculations for determining the risk weights associated with their equity investments in funds.",
