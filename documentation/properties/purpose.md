@@ -616,6 +616,7 @@ refer to interest cashflows only, and do not include any principal flows
 ├── lifetime_mortgage
 ├── operational
 ├── promotional
+├── reference
 ├── remortgage
 ├── remortgage_other
 ├── speculative_property
@@ -664,6 +665,9 @@ Buy-to-let *and* other. See: **other**
 
 ### consumer_buy_to_let
 *Needs description*
+
+### reference
+Use this enumeration to refer to a loan that is not in the books of the reporting entity and represents parts, or the entirety, of a pool of loans backing a security that is in the books of the reporting entity (e.g. securities representing the reporting entity investments in rmbs)
 
 ### further_advance
 *Needs description*
