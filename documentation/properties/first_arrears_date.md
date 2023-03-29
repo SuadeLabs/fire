@@ -1,14 +1,14 @@
 ---
 layout:	property
 title:	"first_arrears_date"
-schemas: [loan]
+schemas: [account, loan, security]
 ---
 
 # first_arrears_date
 
 ---
 
-The first date on which the loan was in arrears (customer failed to make a payment on time and in full).
+The first date on which the asset was in arrears (customer failed to make a payment on time and in full).
 
 Relevant for determing past due as per the following instructions:
 
