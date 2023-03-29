@@ -168,6 +168,11 @@
       "type": "string",
       "format": "date-time"
     },
+    "first_arrears_date": {
+      "description": "The first date on which this security was in arrears.",
+      "type": "string",
+      "format": "date-time"
+    },
     "first_payment_date": {
       "description": "The first payment date for interest payments.",
       "type": "string",
