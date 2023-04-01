@@ -350,8 +350,12 @@
       "type":"string",
       "enum": ["k1_plus", "k1", "k2", "k3", "b", "c", "d"]
     },
+    "ksa": {
+      "description": " ksa is the SA capital charge had the underlying exposures not been securitized.",
+      "type": "string"
+    },
     "last_payment_date": {
-      "description": "The final payment date for interest payments, often coincides with end_date or the maturity date",
+      "description": " The final payment date for interest payments, often coincides with end_date or the maturity date.",
       "type": "string",
       "format": "date-time"
     },
