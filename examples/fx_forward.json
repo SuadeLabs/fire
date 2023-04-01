@@ -1,0 +1,37 @@
+{
+    "title": "fx_forward",
+    "comment": "fx_forward",
+    "data": {
+      "derivative": [
+        {
+          "date": "2019-04-30T00:00:00",
+          "id": "audusd_swap:aud",
+          "deal_id": "audusd_fx_fwd",
+          "asset_class": "fx",
+          "type": "forward",
+          "leg_type": "fixed",
+          "position": "short",
+          "currency_code": "AUD",
+          "notional_amount": 10000,
+          "trade_date": "2019-02-25T00:00:00",
+          "start_date": "2019-02-27T00:00:00",
+          "end_date": "2020-02-27T00:00:00",
+          "mtm_dirty": -2
+        },
+        {
+          "date": "2019-04-30T00:00:00",
+          "id": "audusd_swap:usd",
+          "deal_id": "audusd_fx_fwd",
+          "asset_class": "fx",
+          "type": "forward",
+          "leg_type": "fixed",
+          "position": "long",
+          "currency_code": "USD",
+          "notional_amount": 10275,
+          "trade_date": "2019-02-25T00:00:00",
+          "start_date": "2019-02-27T00:00:00",
+          "end_date": "2020-02-27T00:00:00"
+        }
+      ]
+    }
+  }

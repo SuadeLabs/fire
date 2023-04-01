@@ -1,6 +1,6 @@
 {
   "title": "fx_swap",
-  "comment": "fx_swap",
+  "comment": "fx_swap: this is a legacy mapping. Please refer to fx_foward.",
   "data": {
     "derivative": [
       {

@@ -1,0 +1,98 @@
+{
+    "title": "unmargined_netting_agreement",
+    "comment": "Unmargined netting set with collateral. Example trade is an IRS. Agreement schemas contain an MNA (representing the netting set). There is no CSA, therefore there is no margining. However, one can still post Independent Collateral (security schema)",
+    "data": {
+      "derivative": [
+        {
+          "date": "2020-03-31T00:00:00",
+          "id": "eur_10y_irs_fixed",
+          "deal_id": "eur_10y_irs",
+          "customer_id": "ccp_1",
+          "mna_id": "isda_master_agreement",
+          "csa_id": "csa_daily_margined",
+          "asset_class": "ir",
+          "type": "vanilla_swap",
+          "leg_type": "fixed",
+          "position": "long",
+          "currency_code": "EUR",
+          "notional_amount": 10000,
+          "trade_date": "2019-02-25T00:00:00",
+          "start_date": "2020-02-27T00:00:00",
+          "end_date": "2029-02-27T00:00:00",
+          "rate": 0.01,
+          "mtm_dirty": 70
+        },
+        {
+          "date": "2020-03-31T00:00:00",
+          "id": "eur_10y_irs_floating",
+          "deal_id": "long_eur_10y_irs",
+          "customer_id": "counterparty_1",
+          "mna_id": "isda_master_agreement",
+          "csa_id": "csa_daily_margined",
+          "asset_class": "ir",
+          "type": "vanilla_swap",
+          "leg_type": "floating",
+          "position": "short",
+          "currency_code": "EUR",
+          "notional_amount": 10000,
+          "rate": 0.0025,
+          "underlying_index": "EURIBOR",
+          "underlying_index_tenor": "3m",
+          "trade_date": "2019-02-25T00:00:00",
+          "start_date": "2020-02-27T00:00:00",
+          "end_date": "2029-02-27T00:00:00"
+        }
+      ],
+      "customer": [
+        {
+          "date": "2020-03-31T00:00:00",
+          "id": "ccp_1",
+          "type": "ccp",
+          "currency_code": "GBP",
+          "country_code": "GB"
+        }
+      ],
+      "agreement": [
+        {
+          "date": "2020-03-31T00:00:00",
+          "id": "isda_master_agreement",
+          "type": "isda",
+          "base_currency_code": "GBP",
+          "incurred_cva": 0,
+          "country_code": "GB"
+        }
+      ],
+      "security": [
+        {
+          "date": "2020-03-31T00:00:00",
+          "id": "im_bond_posted",
+          "customer_id": "ccp_1",
+          "mna_id": "isda_master_agreement",
+          "type": "bond",
+          "issuer_id": "French Republic",
+          "isin_code": "XS1234567890",
+          "issue_date": "2018-07-01 00:00:00",
+          "maturity_date": "2028-07-01 00:00:00",
+          "purpose": "independent_collateral_amount",
+          "asset_liability": "asset",
+          "currency_code": "EUR",
+          "notional_amount": 8,
+          "mtm_dirty": -10,
+          "trade_date": "2020-03-31T00:00:00",
+          "start_date": "2020-03-31T00:00:00",
+          "cqs_standardised": 1
+        }
+      ],
+      "issuer": [
+        {
+          "date": "2020-03-31T00:00:00",
+          "id": "French Republic",
+          "lei_code": "9695006J0AWHMYNZAL19",
+          "type": "central_govt",
+          "country_code": "FR",
+          "snp_lt": "aa_plus",
+          "moodys_lt": "aa1"
+        }
+      ]
+    }
+  }
