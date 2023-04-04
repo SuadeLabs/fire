@@ -682,6 +682,16 @@
         "warranty"
       ]
     },
+    "underlying_deliquent_exp": {
+      "description": "Total underlying delinquent exposure in the pool, that is 90 days or more past due or in default",
+      "type": "integer",
+      "monetary": true
+    },
+    "underlying_total_exp_pool": {
+      "description": "Total exposure of the securitised pool.",
+      "type": "integer",
+      "monetary": true
+    },
     "value_date": {
       "description": "The timestamp that the trade or financial product was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",

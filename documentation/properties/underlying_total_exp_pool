@@ -1,0 +1,13 @@
+ ---
+layout:     property
+title:      "underlying_total_exp_pool"
+schemas:    [security]
+---
+
+# underlying_quantity
+
+---
+
+The **underlying_total_exp_pool**  is the total exposure of the securitised pool.  Provided when underlying exposures are not known or attached to pool for securitisation calculations of w_ratio and Ka under sec_sa calculation approach.  Not required if underlying pool exposures are attached to the asset securitisation instrument and in order to determine the total exposure of defaulted exposures.  
+
+Ref: OSFI Chapter 7 P126-128
