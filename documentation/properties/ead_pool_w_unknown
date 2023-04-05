@@ -1,0 +1,13 @@
+---
+layout:     property
+title:      "ead_pool_w_unknown"
+schemas:    [security]
+---
+
+# ead_pool_w_unknown
+
+---
+
+The **ead_pool_w_unknown** is the total exposure within the secritised pool where delinquency is unknown.  Provided when underlying exposures in securitised pool is not attached to securitised exposure or not known and cannot be calculated.  Used to calculate Ka under the SEC_SA approach for securitisation.
+
+Reference:  Chapter 7, P128

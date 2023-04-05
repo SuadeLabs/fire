@@ -151,15 +151,25 @@
       "description": "The unique identifier used by the financial institution to identify the deal for this product that links it to other products of the same or different type.",
       "type": "string"
     },
+    "delinquency_pct": {
+      "description": "is the percentage of exposures that are in default within the securitised pool.",
+      "type": "number"
+    },
     "detachment_point": {
       "description": "The threshold at which losses within the pool of underlying exposures would result in a complete loss of principal for the tranche containing the relevant securitisation position.",
       "type": "number",
       "minimum": 0.0,
       "maximum": 1.0
     },
-    "eif_thirdparty_rw_ind": {
-      "description": "rely on third-party calculations for determining the risk weights associated with their equity investments in funds.",
-      "type": "boolean"
+    "ead_subpool_w_known": {
+      "description": "The total exposure within the secritised pool where delinquency is known.",
+      "type": "integer",
+      "monetary": true
+    },
+    "ead_subpool_w_unknown": {
+      "description": "The total exposure within the secritised pool where delinquency is unknown.",
+      "type": "integer",
+      "monetary": true
     },
     "encumbrance_amount": {
       "description": "The amount of the security that is encumbered by potential future commitments or legal liabilities such as within a repo pool. Monetary type represented as a naturally positive integer number of cents/pence.",

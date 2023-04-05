@@ -1,0 +1,13 @@
+---
+layout:     property
+title:      "delinquency_pct"
+schemas:    [security]
+---
+
+# delinquency_pct
+
+---
+
+The **delinquency_pct** is the percentage of exposures that are in default within the securitised pool.  Provided when underlying exposures in securitised pool is not attached to securitised exposure or not known and cannot be calculated.  Used to calculate Ka under the SEC_SA approach for securitisation.
+
+Reference:  Chapter 7, P128
