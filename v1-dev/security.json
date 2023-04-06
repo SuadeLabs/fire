@@ -352,6 +352,12 @@
       "description": "The unique identifier for the issuer within the financial institution.",
       "type": "string"
     },
+    "k_sa": {
+      "description": "For securitisation standardised approach (sec-sa), ksa is the SA capital charge had the underlying exposures not been securitised",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
     "kbra_lt": {
       "description": "KBRA long term credit ratings",
       "type":"string",
@@ -361,12 +367,6 @@
       "description": "KBRA short term credit ratings",
       "type":"string",
       "enum": ["k1_plus", "k1", "k2", "k3", "b", "c", "d"]
-    },
-    "k_sa": {
-      "description": "For securitisation standardised approach (sec-sa), ksa is the SA capital charge had the underlying exposures not been securitised",
-      "type": "number",
-      "minimum": 0.0,
-      "maximum": 1.0
     },
     "last_payment_date": {
       "description": "The final payment date for interest payments, often coincides with end_date or the maturity date",
@@ -542,10 +542,10 @@
       "description": " Identify the securitisation methodology applied to the securitised pool to derive the ead and risk weight",
       "type": "string",
       "enum": [
-        "sec_sa",
         "sec_erba",
         "sec_iaa",
-        "sec_irba"
+        "sec_irba",
+        "sec_sa"
       ]
     },
     "securitisation_type": {
