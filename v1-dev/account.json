@@ -314,6 +314,7 @@
 	"deposit",
 	"derivative_fee",
 	"dgs_contribution",
+  "discontinued",
 	"div_from_cis",
 	"div_from_money_mkt",
 	"dividend",
