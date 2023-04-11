@@ -521,7 +521,7 @@
       "type": "string",
       "enum": [
         "sts",
-        "non-sts",
+        "non_sts",
         "passthrough"
       ]
     },
