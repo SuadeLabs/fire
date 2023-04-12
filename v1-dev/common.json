@@ -378,6 +378,8 @@
     "enum": [
       "airb",
       "firb",
+      "sec_erba",
+      "sec_sa",
       "std"
     ]
   },
