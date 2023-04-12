@@ -520,7 +520,6 @@
       "description": "The type of securitisation with regards to common regulatory classifications.",
       "type": "string",
       "enum": [
-        "non_sts",
         "passthrough",
         "sts"
       ]
