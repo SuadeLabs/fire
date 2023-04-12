@@ -20,4 +20,10 @@ See [Basel CRE31 Foundation and advanced approaches](https://www.bis.org/basel_f
 Advanced Internal Model Approach
 See [Basel CRE31 Foundation and advanced approaches](https://www.bis.org/basel_framework/chapter/CRE/30.htm?inforce=20230101&published=20200327#:~:text=and%20operational%20requirements.-,Foundation%20and%20advanced%20approaches,-30.32)
 
+### sec_sa
+Securitisation Standardised Approach
+See [Basel CRE41 Securitisation: Standardised Approach (SEC_SA)](https://www.bis.org/basel_framework/chapter/CRE/41.htm)
 
+### sec_erba
+Securitisation External-Ratings-Based Approach
+See [Basel CRE42 Securitisation: External-Ratings-Based Approach (SEC_ERBA)](https://www.bis.org/basel_framework/chapter/CRE/42.htm)
