@@ -355,6 +355,10 @@
       "description": "The internal ledger code or line item name.",
       "type": "string"
     },
+    "look_through_approach": {
+      "description": "Can the look-through approach be used for calculation of securitisation?",
+      "type": "boolean"
+    },
     "maturity_date": {
       "description": "The date on which the principal repayment of the security is due. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
