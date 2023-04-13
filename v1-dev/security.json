@@ -520,6 +520,14 @@
       "description": "The standardised approach risk weight represented as a decimal/float such that 1.5% is 0.015.",
       "type": "number"
     },
+    "securitisation_structure": {
+      "description": "Securitisation exposures are structured under the traditional, synthetic or structures of both.",
+      "type": "string",
+      "enum": [
+        "traditional",
+        "synthetic"
+      ]
+    },
     "securitisation_type": {
       "description": "The type of securitisation with regards to common regulatory classifications.",
       "type": "string",
