@@ -524,8 +524,8 @@
       "description": "Securitisation exposures are structured under the traditional, synthetic or structures of both.",
       "type": "string",
       "enum": [
-        "traditional",
-        "synthetic"
+        "synthetic",
+        "traditional"
       ]
     },
     "securitisation_type": {
