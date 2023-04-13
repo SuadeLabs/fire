@@ -1,10 +1,10 @@
 ---
 layout:     property
-title:      "securitisation_structure"
+title:      "sec_structure"
 schemas:    [security]
 ---
 
-# securitisation_structure
+# sec_structure
 
 ---
 
