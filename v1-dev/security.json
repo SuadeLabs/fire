@@ -521,12 +521,12 @@
       "type": "string",
       "enum": [
         "non_sts",
-        "non_sts_traditional",
         "non_sts_synthetic",
+        "non_sts_traditional",
         "pass_through",
         "sts",
-        "sts_traditional",
-        "sts_synthetic"
+        "sts_synthetic",
+        "sts_traditional"   
       ]
     },
     "seniority": {
