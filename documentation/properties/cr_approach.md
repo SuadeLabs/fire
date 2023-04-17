@@ -24,6 +24,11 @@ See [Basel CRE31 Foundation and advanced approaches](https://www.bis.org/basel_f
 Securitisation Standardised Approach
 See [Basel CRE41 Securitisation: Standardised Approach (SEC_SA)](https://www.bis.org/basel_framework/chapter/CRE/41.htm)
 
+### sec_sa_lt
+Securitisation Standardised Approach - Look-through Approach
+For securitisation calculations, when the financial institution has full knowledge of the composition of the underlying exposures of pool at all time, the institution can apply the "look-through" approach to senior securitization exposures.  
+See [OSFI Chapter 7, P134 or Basel Framework, CRE 40.50](https://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/CAR22_chpt6.aspx#ToC6.6.5)
+
 ### sec_erba
 Securitisation External-Ratings-Based Approach
 See [Basel CRE42 Securitisation: External-Ratings-Based Approach (SEC_ERBA)](https://www.bis.org/basel_framework/chapter/CRE/42.htm)
