@@ -539,6 +539,7 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │   ├── frn
 │   ├── commercial_paper
 │   ├── cd
+│   ├── hybrid_contracts
 │   ├── struct_note
 │   ├── spv_mortgages
 │   ├── spv_other
@@ -623,6 +624,9 @@ Commercial paper is an unsecured promissory note with a fixed maturity of, typic
 
 ### cd
 A certificate of deposit is also a promissory note, however can only be issued by a bank. It has a fixed maturity and specified fixed interest rate.
+
+### hybrid_contracts
+As per Annex V, Part II, Para 98(d): Hybrid contracts’ shall comprise contracts with embedded derivatives that are not covered bonds, asset backed securities, or classified as convertible compound financial instruments.
 
 ### bill_of_exchange
 *Needs definition*
