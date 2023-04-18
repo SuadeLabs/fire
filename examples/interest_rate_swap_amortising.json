@@ -44,10 +44,8 @@
         "date": "2020-03-31T00:00:00",
         "currency_code": "EUR",
         "notional_amount": 10000,
-        "trade_date": "2020-01-29T00:00:00",
         "reset_date": "2020-01-31T00:00:00",
-        "payment_date": "2021-01-31T00:00:00",
-        "balance": 100
+        "payment_date": "2021-01-31T00:00:00"
       },
       {
         "id": "eur_10y_irs_fixed_2",
@@ -55,10 +53,8 @@
         "date": "2020-03-31T00:00:00",
         "currency_code": "EUR",
         "notional_amount": 5000,
-        "trade_date": "2020-01-29T00:00:00",
         "reset_date": "2021-01-31T00:00:00",
-        "payment_date": "2022-01-31T00:00:00",
-        "balance": 50
+        "payment_date": "2022-01-31T00:00:00"
       },
       {
         "id": "eur_10y_irs_floating_1",
@@ -66,11 +62,9 @@
         "date": "2020-03-31T00:00:00",
         "currency_code": "EUR",
         "notional_amount": 10000,
-        "trade_date": "2020-01-29T00:00:00",
         "reset_date": "2021-01-31T00:00:00",
         "payment_date": "2021_07_31T00:00:00",
-        "forward_rate": 0.0075,
-        "balance": -49
+        "forward_rate": 0.0075
       },
       {
         "id": "eur_10y_irs_floating_2",
@@ -78,11 +72,9 @@
         "date": "2020-03-31T00:00:00",
         "currency_code": "EUR",
         "notional_amount": 10000,
-        "trade_date": "2020-01-29T00:00:00",
         "reset_date": "2021-07-31T00:00:00",
         "payment_date": "2022-01-31T00:00:00",
-        "forward_rate": 0.0125,
-        "balance": -75
+        "forward_rate": 0.0125
       },
       {
         "id": "eur_10y_irs_floating_3",
@@ -90,11 +82,9 @@
         "date": "2020-03-31T00:00:00",
         "currency_code": "EUR",
         "notional_amount": 5000,
-        "trade_date": "2020-01-29T00:00:00",
         "reset_date": "2022-01-31T00:00:00",
         "payment_date": "2022-07-31T00:00:00",
-        "forward_rate": 0.0175,
-        "balance": -49
+        "forward_rate": 0.0175
       },
       {
         "id": "eur_10y_irs_floating_4",
@@ -102,11 +92,9 @@
         "date": "2020-03-31T00:00:00",
         "currency_code": "EUR",
         "notional_amount": 5000,
-        "trade_date": "2020-01-29T00:00:00",
         "reset_date": "2022-07-31T00:00:00",
         "payment_date": "2023-01-31T00:00:00",
-        "forward_rate": 0.0225,
-        "balance": -63
+        "forward_rate": 0.0225
       }
     ]
   }
