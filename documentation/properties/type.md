@@ -539,7 +539,6 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │   ├── frn
 │   ├── commercial_paper
 │   ├── cd
-│   ├── hybrid_contracts
 │   ├── struct_note
 │   ├── spv_mortgages
 │   ├── spv_other
@@ -625,9 +624,6 @@ Commercial paper is an unsecured promissory note with a fixed maturity of, typic
 ### cd
 A certificate of deposit is also a promissory note, however can only be issued by a bank. It has a fixed maturity and specified fixed interest rate.
 
-### hybrid_contracts
-As per Annex V, Part II, Para 98(d): Hybrid contracts’ shall comprise contracts with embedded derivatives that are not covered bonds, asset backed securities, or classified as convertible compound financial instruments.
-
 ### bill_of_exchange
 *Needs definition*
 
@@ -635,8 +631,7 @@ As per Annex V, Part II, Para 98(d): Hybrid contracts’ shall comprise contract
 *Needs definition*
 
 ### struct_note
-The [FCA](https://www.fca.org.uk/consumers/structured-products) defines structured notes as:
-> a type of fixed-term investment where the amount you earn depends on the performance of a specific market (such as the FTSE 100) or specific assets (such as shares in individual companies)
+Structure notes shall comprise contracts with embedded derivatives that are not covered bonds, asset backed securities, or classified as convertible compound financial instruments. They are a type of fixed-term investment where the amount you earn depends on the performance of a specific market (such as the FTSE 100) or specific assets (such as shares in individual companies).(https://www.fca.org.uk/consumers/structured-products)
 
 ### spv_mortgages, spv_other
 A special purpose vehicle is a separate legal entity created to fulfil a certain purpose for the parent.
