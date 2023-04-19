@@ -266,6 +266,14 @@
       "description": "Two-letter country code describing where the risk for the derivative product resides. In accordance with ISO 3166-1",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
     },
+    "risk_weight_irb": {
+      "description": "The internal risk weight represented as a decimal/float such that 1.5% is 0.015.",
+      "type": "number"
+    },
+    "risk_weight_std": {
+      "description": "The standardised approach risk weight represented as a decimal/float such that 1.5% is 0.015.",
+      "type": "number"
+    },
     "settlement_type": {
       "description": "The type of settlement for the contract.",
       "type": "string",
