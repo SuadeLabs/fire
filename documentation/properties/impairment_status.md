@@ -9,12 +9,14 @@ schemas:	[account, loan, security, derivative]
 ---
 
 ```bash
+├── in_litigation
 ├── performing
 │   ├── stage_1
 │   │   ├── normal (aka pass)
 │   │   └── watch (aka special mention)
 │   └── stage_2
 │       └── substandard
+├── pre_litigation
 ├── non_performing
 │   └── stage_3
 │       ├── doubtful
@@ -226,7 +228,11 @@ MAS 612:
 ### stage_3_loss
 *Included for completeness, not recommended to use*
 
----
+### in_litigation
+From Annex 5, FINREP ITS: An exposure shall be ‘in litigation status’ where legal action against the debtor has formally been taken. This comprises cases where a court of law confirmed that formal judiciary proceedings have occurred or the judiciary system has been notified of the intention to commence legal proceedings.
+
+### pre_litigation
+From Annex 5, FINREP ITS: An exposure shall be ‘in pre-litigation status’ where the debtor has been formally notified that the institution will take legal action against the debtor within a defined time period, unless certain contractual or other payment obligations are met. That shall also include cases where the contract has been terminated by the reporting institution because the debtor is in formal breach of the terms and conditions of the contract and the debtor has been notified accordingly, but no legal action against the debtor has formally been taken by the institution yet.
 
 [ifrs9]: https://www.iasplus.com/en-gb/standards/ifrs-en-gb/ifrs9
 [orm]: https://www.openriskmanual.org/wiki/Significant_Increase_in_Credit_Risk
