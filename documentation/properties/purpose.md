@@ -32,6 +32,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── dealing_rev_ir
 │   └── dealing_rev_deriv
 │       └── dealing_rev_deriv_nse
+├── defined_benefit
 ├── deposit
 │   └── third_party_interest
 ├── dgs_contribution
@@ -221,6 +222,9 @@ Excess operational deposits are defined as the part of the operational deposits 
 
 ### custody
 As opposed to short-term definition within **operational**, **custody** here refers to the long-term custody of financial assets such as those held for safekeeping by a custodian bank.
+
+### defined_benifit
+A workplace pension based on your salary and how long you’ve worked for your employer. They’re sometimes called ‘final salary’ or ‘career average’ pension schemes. https://www.gov.uk/pension-types
 
 ### prime_brokerage
 Describes an account held for prime brokerage reasons but not including those contained above for operational reasons. These accounts are used for prime brokerage service transactions which are in essence investment activities including securities lending, leveraged trade executions and cash management, among other things.
