@@ -225,7 +225,7 @@ Excess operational deposits are defined as the part of the operational deposits 
 ### custody
 As opposed to short-term definition within **operational**, **custody** here refers to the long-term custody of financial assets such as those held for safekeeping by a custodian bank.
 
-### defined_benifit
+### defined_benefit
 A workplace pension based on your salary and how long you’ve worked for your employer. They’re sometimes called ‘final salary’ or ‘career average’ pension schemes. https://www.gov.uk/pension-types
 
 ### prime_brokerage
