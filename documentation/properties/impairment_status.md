@@ -229,10 +229,10 @@ MAS 612:
 *Included for completeness, not recommended to use*
 
 ### in_litigation
-From Annex 5, FINREP ITS: An exposure shall be ‘in litigation status’ where legal action against the debtor has formally been taken. This comprises cases where a court of law confirmed that formal judiciary proceedings have occurred or the judiciary system has been notified of the intention to commence legal proceedings.
+From Annex 5, FINREP ITS: An exposure shall be ‘in litigation status’ where legal action against the debtor has formally been taken. This comprises cases where a court of law confirmed that formal judiciary proceedings have occurred or the judiciary system has been notified of the intention to commence legal proceedings. [eba-680]
 
 ### pre_litigation
-From Annex 5, FINREP ITS: An exposure shall be ‘in pre-litigation status’ where the debtor has been formally notified that the institution will take legal action against the debtor within a defined time period, unless certain contractual or other payment obligations are met. That shall also include cases where the contract has been terminated by the reporting institution because the debtor is in formal breach of the terms and conditions of the contract and the debtor has been notified accordingly, but no legal action against the debtor has formally been taken by the institution yet.
+From Annex 5, FINREP ITS: An exposure shall be ‘in pre-litigation status’ where the debtor has been formally notified that the institution will take legal action against the debtor within a defined time period, unless certain contractual or other payment obligations are met. That shall also include cases where the contract has been terminated by the reporting institution because the debtor is in formal breach of the terms and conditions of the contract and the debtor has been notified accordingly, but no legal action against the debtor has formally been taken by the institution yet. [eba-680]
 
 [ifrs9]: https://www.iasplus.com/en-gb/standards/ifrs-en-gb/ifrs9
 [orm]: https://www.openriskmanual.org/wiki/Significant_Increase_in_Credit_Risk
@@ -240,3 +240,4 @@ From Annex 5, FINREP ITS: An exposure shall be ‘in pre-litigation status’ wh
 [sr13-17]: https://www.fdic.gov/regulations/resources/director/college/ny/materials/2012-loans.pdf
 [mas612]: https://www.mas.gov.sg/-/media/MAS/Notices/PDF/MAS-Notice-612-effective-1-Jan-2018.pdf
 [bcbs-i7]: https://www.bis.org/fsi/publ/insights7.pdf
+[eba-680]: https://www.eba.europa.eu/sites/default/documents/files/documents/10180/2321183/9498635b-c1c1-4f5a-91f2-d676472da3ad/Draft%20final%20report%20on%20ITS%20amending%20ITS%20Rep%20FINREP.pdf?retry=1
