@@ -1,0 +1,16 @@
+{
+  "title": "dividend_from_equity",
+  "comment": "dividend_from_equity",
+  "data": {
+    "security": [
+      {
+        "id": "dividend_from_equity",
+        "date": "2019-01-01T00:00:00",
+        "balance": 100000,
+        "currency_code": "GBP",
+        "type": "dividend",
+				"asset_liability": "asset"
+      }
+    ]
+  }
+}
