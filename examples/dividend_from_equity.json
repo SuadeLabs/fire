@@ -5,21 +5,21 @@
     "security": [
     {
         "date": "2022-12-31T00:00:00+00:00",
-        "id": "security_0002",
-        "suade_id": "2b92abd4-efff-11ed-a80c-e1e366c9fff2",
+        "id": "dividend_from_equity",
         "asset_liability": "asset",
         "balance": 100000,
         "currency_code": "GBP",
         "hqla_class": "ineligible",
-        "isin_code": "TD0000000272",
-        "issuer_id": "I000000000",
+        "isin_code": "equity_isin",
+        "issuer_id": "equity_issuer",
         "on_balance_sheet": true,
         "product_name": "dividend",
         "regulatory_book": "trading_book",
-        "reporting_id": "Abcdefghijkl",
-        "reporting_entity_name": "Abcdefghijkl",
+        "reporting_id": "equity_reporter",
+        "reporting_entity_name": "equity_entity",
         "start_date": "2022-12-31T00:00:00+00:00",
         "type": "dividend",
+        "next_payment_date": "2023-01-25T00:00:00+00:00",
         "trade_date": "2016-01-25T00:00:00+00:00"
       }
     ]
