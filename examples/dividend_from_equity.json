@@ -3,13 +3,24 @@
   "comment": "dividend_from_equity",
   "data": {
     "security": [
-      {
-        "id": "dividend_from_equity",
-        "date": "2019-01-01T00:00:00",
+    {
+        "date": "2022-12-31T00:00:00+00:00",
+        "id": "security_0002",
+        "suade_id": "2b92abd4-efff-11ed-a80c-e1e366c9fff2",
+        "asset_liability": "asset",
         "balance": 100000,
         "currency_code": "GBP",
+        "hqla_class": "ineligible",
+        "isin_code": "TD0000000272",
+        "issuer_id": "I000000000",
+        "on_balance_sheet": true,
+        "product_name": "dividend",
+        "regulatory_book": "trading_book",
+        "reporting_id": "Abcdefghijkl",
+        "reporting_entity_name": "Abcdefghijkl",
+        "start_date": "2022-12-31T00:00:00+00:00",
         "type": "dividend",
-				"asset_liability": "asset"
+        "trade_date": "2016-01-25T00:00:00+00:00"
       }
     ]
   }
