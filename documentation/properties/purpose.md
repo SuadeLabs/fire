@@ -18,6 +18,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── adj_syn_nonsig_inv_fin
 ├── adj_syn_mtg_def_ins
 ├── admin
+├── capital_reserves
 ├── cf_hedge
 │ └── cf_hedge_reclass
 ├── ci_service
@@ -548,6 +549,9 @@ Adjustments of Synthetic positions - non-significant investments in financials. 
 
 ### adj_syn_mtg_def_ins
 Adjustments of Synthetic positions - adj_syn_mtg_def_ins.  Required for BCAR RWA calculation and Reporting.  Ref: BCAR 40.290; Chapter 4, P164
+
+### capital_reserves
+An account in the equity section of a company's balance sheet that indicates the cash on hand that can be used for future expenses or to offset any capital losses.
 
 ## Derivative
 ```bash
