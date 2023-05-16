@@ -18,7 +18,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── adj_syn_nonsig_inv_fin
 ├── adj_syn_mtg_def_ins
 ├── admin
-├── capital_reserves
+├── capital_reserve
 ├── cf_hedge
 │ └── cf_hedge_reclass
 ├── ci_service
