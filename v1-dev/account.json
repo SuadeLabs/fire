@@ -288,7 +288,7 @@
 	"annual_bonus_accruals",
 	"benefit_in_kind",
 	"capital_gain_tax",
-  "capital_reserves",
+        "capital_reserve",
 	"cash_management",
 	"cf_hedge",
 	"cf_hedge_reclass",
