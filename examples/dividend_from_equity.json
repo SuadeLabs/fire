@@ -10,7 +10,7 @@
         "balance": 100000,
         "currency_code": "GBP",
         "hqla_class": "ineligible",
-        "isin_code": "equity_isin",
+        "isin_code": "0123456789012",
         "issuer_id": "equity_issuer",
         "on_balance_sheet": true,
         "product_name": "dividend",
