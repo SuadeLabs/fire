@@ -466,6 +466,7 @@
         "credit_card",
         "current",
         "deferred",
+        "deferred_tax",
         "depreciation",
         "expense",
         "income",
