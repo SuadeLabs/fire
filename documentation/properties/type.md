@@ -1202,37 +1202,76 @@ A volatility curve (smile)
 # loan_transaction
 
 ### advance
-*Needs description*
+A loan amount sent to the borrower from the lender
 
 ### capital_repayment
-*Needs description*
+A repayment that reduces the principal amount borrowed
 
 ### capitalisation
-*Needs description*
+From F3.1 of [MLAR](https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/crd-iv/mlar-notes-may-2022.pdf):
+>By 'capitalisation' we mean a formal arrangement agreed with the borrower to add all or part of a borrower's arrears to the amount of outstanding principal (i.e. advance of principal including further advances less capital repayments received during the period of the loan) and then treating that amount of overall debt as the enlarged principal. This enlarged principal is then used as the basis for calculating future monthly payments over the remaining term of the loan.
+
 
 ### due
-*Needs description*
+From F6.1i of [MLAR](https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/crd-iv/mlar-notes-may-2022.pdf):
+>'Payments due' means amounts due under normal commercial
+terms (and not the lesser amounts which may have been agreed
+as part of any temporary arrangement) fully to service the loans:
+that is the balances outstanding including insurance, fees and fines etc.
 
 ### further_advance
-*Needs description*
+From the Annex of the PS22/19 FCA policy [statement](https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/policy-statement/2019/ps2219.pdf):
+>A “further advance” means a further loan to an existing borrower of
+the firm and which is secured on the same property/collateral, whether under a new loan contract, or by variation to an existing loan
+contract.
 
 ### interest
-*Needs description*
+Interest due in line with loan conditions
 
 ### interest_repayment
-*Needs description*
+ A repayment that covers only the interest section of the loan, the principal borrowed amount in this case is left unchanged
 
 ### other
-*Needs description*
+Any other loan transaction type
 
 ### received
-*Needs description*
+From F6.1ii of [MLAR](https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/crd-iv/mlar-notes-may-2022.pdf):
+>Payments recieved should be limited to regular repayment of
+interest, capital and other sundry charges to the loan account,
+and should exclude abnormal repayments (e.g. sale proceeds
+of property in possession, and large lump sum repayment of
+part or all of the outstanding balance). The reasoning behind
+this is that excess payments on one or more arrears cases
+would otherwise have the effect of compensating for
+underpayment on other arrears cases and, as a result, give an
+overstated performance measure. Therefore, in compiling
+aggregate payment received figures (as part of the payment
+performance ratio) the contribution from an individual loan in
+arrears should be limited to no more than the 'payment due'
+amount.
 
 ### sale
-*Needs description*
+Sale of the loan
 
 ### write_off
-*Needs description*
+From D1 of [MLAR](https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/crd-iv/mlar-notes-may-2022.pdf):
+
+>This is the amount written off loan balances (and
+off provisions charged to the income and expenditure account) and is
+to be on a basis consistent with amounts shown in the firm's
+published accounts as 'written off' within the analysis of changes in
+loss provision.
+The amount written off may arise for example from:
+>- sale of a property/collateral in possession where there is a shortfall; or
+>- a decision to write down the debt on a loan still on
+the books. This may arise where the firm has taken the view
+that it is certain that a loss will arise and that it is prudent to
+write down
+>- the debt rather than carry the full debt and an
+offsetting provision. Examples might include certain fraud
+cases, or where
+>- arrangements have been reached with the borrower to reduce
+the debt repayable.
 
 
 ---
