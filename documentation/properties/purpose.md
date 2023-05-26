@@ -111,6 +111,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   │   └── own_property
 │   ├── telecom_equipment
 │   └── vehicle
+├── general_credit_risk
 ├── goodwill
 ├── pv_future_spread_inc
 ├── recovery
@@ -420,6 +421,9 @@ Describes an account that holds the amount of:
 
 ### staff
 *needs definition*
+
+### general_credit_risk
+Account which has an amount of general loan loss provision for credit risks that has been recognised in the financial statements of the institution in accordance with the applicable accounting framework.
 
 ### goodwill
 **Goodwill** is a type of intangible asset. IFRS3, Appendix A, defines **goodwill** as:
