@@ -418,10 +418,12 @@
     "type": "string",
     "enum": [
       "doubtful",
+      "in_litigation",
       "loss",
       "non_performing",
       "normal",
       "performing",
+      "pre_litigation",
       "stage_1",
       "stage_1_doubtful",
       "stage_1_loss",
