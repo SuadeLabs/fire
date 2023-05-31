@@ -9,19 +9,18 @@ schemas:	[account, loan, security, derivative]
 ---
 
 ```bash
-├── in_litigation
 ├── performing
 │   ├── stage_1
 │   │   ├── normal (aka pass)
 │   │   └── watch (aka special mention)
 │   └── stage_2
 │       └── substandard
-├── pre_litigation
 ├── non_performing
 │   └── stage_3
 │       ├── doubtful
-│       └── loss
-│
+│       ├── loss
+│       ├── in_litigation
+│       └── pre_litigation
 ├── stage_1_normal
 ├── stage_1_watch
 ├── stage_1_substandard
@@ -183,6 +182,12 @@ HKMA LCS:
 MAS 612:
 > this indicates that the outstanding credit facility is not collectable, and little or nothing can be done to recover the outstanding amount from any collateral or from the assets of the borrower generally. Consumer loans past due for 180 days or more fall under this classification.
 
+### in_litigation
+From Annex 5, FINREP ITS: An exposure shall be ‘in litigation status’ where legal action against the debtor has formally been taken. This comprises cases where a court of law confirmed that formal judiciary proceedings have occurred or the judiciary system has been notified of the intention to commence legal proceedings. [eba-680]
+
+### pre_litigation
+From Annex 5, FINREP ITS: An exposure shall be ‘in pre-litigation status’ where the debtor has been formally notified that the institution will take legal action against the debtor within a defined time period, unless certain contractual or other payment obligations are met. That shall also include cases where the contract has been terminated by the reporting institution because the debtor is in formal breach of the terms and conditions of the contract and the debtor has been notified accordingly, but no legal action against the debtor has formally been taken by the institution yet. [eba-680]
+
 ### stage_1_normal
 *Included for completeness, not recommended to use*
 
@@ -228,11 +233,6 @@ MAS 612:
 ### stage_3_loss
 *Included for completeness, not recommended to use*
 
-### in_litigation
-From Annex 5, FINREP ITS: An exposure shall be ‘in litigation status’ where legal action against the debtor has formally been taken. This comprises cases where a court of law confirmed that formal judiciary proceedings have occurred or the judiciary system has been notified of the intention to commence legal proceedings. [eba-680]
-
-### pre_litigation
-From Annex 5, FINREP ITS: An exposure shall be ‘in pre-litigation status’ where the debtor has been formally notified that the institution will take legal action against the debtor within a defined time period, unless certain contractual or other payment obligations are met. That shall also include cases where the contract has been terminated by the reporting institution because the debtor is in formal breach of the terms and conditions of the contract and the debtor has been notified accordingly, but no legal action against the debtor has formally been taken by the institution yet. [eba-680]
 
 [ifrs9]: https://www.iasplus.com/en-gb/standards/ifrs-en-gb/ifrs9
 [orm]: https://www.openriskmanual.org/wiki/Significant_Increase_in_Credit_Risk
