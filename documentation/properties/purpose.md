@@ -88,6 +88,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── int_on_money_mkt
 │   └── int_on_sft
 │   └── int_unallocated
+├── internet_only
 ├── intra_group_fee
 ├── inv_in_subsidiary
 ├── mtg_insurance
@@ -534,6 +535,9 @@ Prepaid portfolio mortgage insurance conforming to OSFI's 5 year amortization re
 
 ### mtg_ins_nonconform
 Prepaid portfolio mortgage insurance that does not conform to OSFI's 5 year amortization requirements.  Ref: BCAR 40.290; Chapter 4, P164
+
+### internet_only
+[see here](https://suade.org/fire/book/documentation/properties/type.html#internet_only)
 
 ### adj_syn_inv_own_shares
 Adjustments of Synthetic positions - investments in own shares.  Required for BCAR RWA calculation and Reporting.  Ref: BCAR 40.290; Chapter 4, P164
