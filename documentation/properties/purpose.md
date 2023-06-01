@@ -545,7 +545,10 @@ Prepaid portfolio mortgage insurance conforming to OSFI's 5 year amortization re
 Prepaid portfolio mortgage insurance that does not conform to OSFI's 5 year amortization requirements.  Ref: BCAR 40.290; Chapter 4, P164
 
 ### internet_only
-[see here](https://suade.org/fire/book/documentation/properties/type.html#internet_only)
+An internet-only account is one that is offered and only accessible via the internet. The [FCA][fca-internet] defines the internet in their handbook as:
+> a unique medium for communicating financial promotions as it provides easy access to a very wide audience. At the same time, it provides very little control over who is able to access the financial promotion.
+
+The distinction here linked to financial promotions suggests that internet-only accounts are sold and managed through a higher risk channel and therefore should be regulated spearately to other accounts.
 
 ### adj_syn_inv_own_shares
 Adjustments of Synthetic positions - investments in own shares.  Required for BCAR RWA calculation and Reporting.  Ref: BCAR 40.290; Chapter 4, P164
