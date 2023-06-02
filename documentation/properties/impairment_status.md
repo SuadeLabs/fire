@@ -233,12 +233,6 @@ From Annex 5, FINREP ITS: An exposure shall be ‘in pre-litigation status’ wh
 ### stage_3_loss
 *Included for completeness, not recommended to use*
 
-### stage_3_in_litigation
-*Included for completeness, not recommended to use*
-
-### stage_3_pre_litigation
-*Included for completeness, not recommended to use*
-
 
 
 [ifrs9]: https://www.iasplus.com/en-gb/standards/ifrs-en-gb/ifrs9
