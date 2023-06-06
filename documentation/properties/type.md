@@ -790,7 +790,7 @@ Index securities are reference records recording the details of an index using t
 ├── debit_card (pending)
 ├── internet_only
 │   ├── current_internet_only
-│   ├── saving_internet_only
+│   ├── savings_internet_only
 │   ├── time_deposit_internet_only
 │   └── isa_internet_only
 ├── ira
@@ -863,7 +863,7 @@ The distinction here linked to financial promotions suggests that internet-only 
 ### current_internet_only
 A current account that is offered and only accessible via the internet.
 
-### saving_internet_only
+### savings_internet_only
 A saving account that is offered and only accessible via the internet.
 
 ### time_deposit_internet_only
