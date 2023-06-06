@@ -789,10 +789,10 @@ Index securities are reference records recording the details of an index using t
 ├── current
 ├── debit_card (pending)
 ├── internet_only
-│   ├── current_internet_only
-│   ├── savings_internet_only
-│   ├── time_deposit_internet_only
-│   └── isa_internet_only
+│   ├── current_io
+│   ├── savings_io
+│   ├── time_deposit_io
+│   └── isa_io
 ├── ira
 ├── isa
 ├── money_market
@@ -860,16 +860,16 @@ An internet-only account is one that is offered and only accessible via the inte
 
 The distinction here linked to financial promotions suggests that internet-only accounts are sold and managed through a higher risk channel and therefore should be regulated spearately to other accounts.
 
-### current_internet_only
+### current_io
 A current account that is offered and only accessible via the internet.
 
-### savings_internet_only
+### savings_io
 A saving account that is offered and only accessible via the internet.
 
-### time_deposit_internet_only
+### time_deposit_io
 A time deposit account that is offered and only accessible via the internet.
 
-### isa_internet_only
+### isa_io
 An isa account that is offered and only accessible via the internet.
 
 ### isa
