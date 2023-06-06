@@ -788,6 +788,10 @@ Index securities are reference records recording the details of an index using t
 ├── current
 ├── debit_card (pending)
 ├── internet_only
+│   ├── current_io
+│   ├── savings_io
+│   ├── time_deposit_io
+│   └── isa_io
 ├── ira
 ├── isa
 ├── money_market
@@ -853,6 +857,18 @@ As referenced in the [LCR][lcr] Regulation Article 28 (6) as any account:
 ### internet_only
 [See here](https://suade.org/fire/book/documentation/properties/purpose.html#internet_only)
 "internet-only" as "type" will be deprecated in the future and users of the schemas should use "purpose" instead to describe this characteristic of an account.
+
+### current_io
+A current account that is offered and only accessible via the internet.
+
+### savings_io
+A saving account that is offered and only accessible via the internet.
+
+### time_deposit_io
+A time deposit account that is offered and only accessible via the internet.
+
+### isa_io
+An isa account that is offered and only accessible via the internet.
 
 ### isa
 An ISA is an individual savings account which is a scheme of investment satisfying the conditions prescribed in the UK's [ISA Regulations][uk-isa].

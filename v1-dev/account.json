@@ -468,6 +468,7 @@
         "cd",
         "credit_card",
         "current",
+        "current_io",
         "deferred",
         "deferred_tax",
         "depreciation",
@@ -477,6 +478,7 @@
         "internet_only",
         "ira",
         "isa",
+        "isa_io",
         "money_market",
         "non_deferred",
         "non_product",
@@ -486,10 +488,12 @@
         "reserve",
         "retail_bonds",
         "savings",
+        "savings_io",
         "suspense",
         "tangible",
         "third_party_savings",
         "time_deposit",
+        "time_deposit_io",
         "vostro"
       ]
     },
