@@ -789,6 +789,10 @@ Index securities are reference records recording the details of an index using t
 ├── current
 ├── debit_card (pending)
 ├── internet_only
+│   ├── current_internet_only
+│   ├── saving_internet_only
+│   ├── time_deposit_internet_only
+│   └── isa_internet_only
 ├── ira
 ├── isa
 ├── money_market
@@ -851,8 +855,22 @@ As referenced in the [LCR][lcr] Regulation Article 28 (6) as any account:
 
 
 ### internet_only
-[See here](https://suade.org/fire/book/documentation/properties/purpose.html#internet_only)
-"internet-only" as "type" will be deprecated in the future and users of the schemas should use "purpose" instead to describe this characteristic of an account.
+An internet-only account is one that is offered and only accessible via the internet. The [FCA][fca-internet] defines the internet in their handbook as:
+> a unique medium for communicating financial promotions as it provides easy access to a very wide audience. At the same time, it provides very little control over who is able to access the financial promotion.
+
+The distinction here linked to financial promotions suggests that internet-only accounts are sold and managed through a higher risk channel and therefore should be regulated spearately to other accounts.
+
+### current_internet_only
+A current account that is offered and only accessible via the internet.
+
+### saving_internet_only
+A saving account that is offered and only accessible via the internet.
+
+### time_deposit_internet_only
+A time deposit account that is offered and only accessible via the internet.
+
+### isa_internet_only
+An isa account that is offered and only accessible via the internet.
 
 ### isa
 An ISA is an individual savings account which is a scheme of investment satisfying the conditions prescribed in the UK's [ISA Regulations][uk-isa].
