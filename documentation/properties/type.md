@@ -855,8 +855,10 @@ As referenced in the [LCR][lcr] Regulation Article 28 (6) as any account:
 
 
 ### internet_only
-[See here](https://suade.org/fire/book/documentation/properties/purpose.html#internet_only)
-"internet-only" as "type" will be deprecated in the future and users of the schemas should use "purpose" instead to describe this characteristic of an account.
+An internet-only account is one that is offered and only accessible via the internet. The [FCA][fca-internet] defines the internet in their handbook as:
+> a unique medium for communicating financial promotions as it provides easy access to a very wide audience. At the same time, it provides very little control over who is able to access the financial promotion.
+
+The distinction here linked to financial promotions suggests that internet-only accounts are sold and managed through a higher risk channel and therefore should be regulated spearately to other accounts.
 
 ### current_io
 A current account that is offered and only accessible via the internet.
