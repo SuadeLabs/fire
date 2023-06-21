@@ -516,7 +516,7 @@ Nostro loans are the firm's accounts at other financial institutions which are i
 > A loro (vostro) account is the term used by a correspondent to describe an account held on behalf of a foreign credit institution; the foreign credit institution would in turn regard this account as its nostro account.
 
 ### financial_lease
-*Needs definition*
+A finanical lease is an arrangement where the lessor prvoides money to buy an asset which is used by the lessee in return for an interest charge. The lessor has security as they own the asset. A financial lease is a contract that the lessor (the legal owner of the asset), transfers the risks and benefits of the asset to the lessee. Often the lessee may be given the opportunity to take ownership of the asset after the payments have been made in full
 
 ### other
 Other refers to a type of security not covered by the above. If you find yourself using this often, please [contribute][contributing].
@@ -625,7 +625,7 @@ Commercial paper is an unsecured promissory note with a fixed maturity of, typic
 A certificate of deposit is also a promissory note, however can only be issued by a bank. It has a fixed maturity and specified fixed interest rate.
 
 ### bill_of_exchange
-*Needs definition*
+From [Investopedia](https://www.investopedia.com/terms/b/billofexchange.asp), a bill of exchange is written order that binds one party to pay a fixed sum of money to another party on demand or at a pre-determined date.
 
 ### cb_facility
 *Needs definition*
@@ -1133,7 +1133,7 @@ collateral that cannot be classified as residential or commercial property.
 *NEEDS Definition*
 
 ### life_policy
-*NEEDS Definition*
+From [Investopedia](https://www.investopedia.com/ask/answers/111714/what-collateral-assignment-life-insurance.asp), a collateral ssignment of life insurance is a conditional assignment appointing a lender as an assignee of a policy. Essentially, the lender has a claim to some or all of the death benefit until the loan is repaid. The death benefit is used as collateral for a loan.
 
 ### cash
 *NEEDS Definition*
