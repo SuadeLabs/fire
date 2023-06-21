@@ -3,6 +3,8 @@ layout:		readme
 title:		"Home"
 ---
 
+![logo-fire-red](https://github.com/SuadeLabs/fire/assets/12458414/9aa87ab9-6fbd-4f1f-8e2f-146dddf92229)
+
 # Financial Regulatory (FIRE) Data Standard
 
 ---
