@@ -786,14 +786,16 @@ Index securities are reference records recording the details of an index using t
 ├── cd
 ├── credit_card
 ├── current
+│   └── current_io
 ├── debit_card (pending)
 ├── internet_only
-│   ├── current_io
-│   ├── savings_io
-│   ├── time_deposit_io
-│   └── isa_io
 ├── ira
 ├── isa
+│   ├── isa_time_deposit
+│   │   └──isa_time_deposit_io
+│   ├── isa_current
+│   │   └──isa_current_io
+│   └── isa_io
 ├── money_market
 ├── non_product
 │   ├── amortisation
@@ -811,7 +813,9 @@ Index securities are reference records recording the details of an index using t
 ├── prepaid_card
 ├── retail_bonds
 ├── savings
+│   └── savings_io
 ├── time_deposit
+│   └── time_deposit_io
 ├── third_party_savings
 ├── vostro
 └── other
