@@ -792,15 +792,15 @@ Index securities are reference records recording the details of an index using t
 ├── ira
 ├── isa
 │   ├── isa_time_deposit
-│   │   └──isa_time_deposit_io
+│   │   └── isa_time_deposit_io
 │   ├── isa_current
-│   │   └──isa_current_io
+│   │   └── isa_current_io
 │   └── isa_io
 ├── money_market
 ├── non_product
 │   ├── amortisation
 │   ├── deferred
-│   │   └──deferred_tax
+│   │   └── deferred_tax
 │   ├── depreciation
 │   ├── expense
 │   ├── income
@@ -850,6 +850,9 @@ A credit card is then defined in Article 2 (34) and (5) as:
 ### current (checking, demand)
 Any transactional account.
 
+### current_io
+A current account that is offered and only accessible via the internet.
+
 ### bonds
 Any account containing notes, bonds or other securities instruments.
 
@@ -864,20 +867,23 @@ An internet-only account is one that is offered and only accessible via the inte
 
 The distinction here linked to financial promotions suggests that internet-only accounts are sold and managed through a higher risk channel and therefore should be regulated spearately to other accounts.
 
-### current_io
-A current account that is offered and only accessible via the internet.
-
-### savings_io
-A saving account that is offered and only accessible via the internet.
-
-### time_deposit_io
-A time deposit account that is offered and only accessible via the internet.
+### isa
+An ISA is an individual savings account which is a scheme of investment satisfying the conditions prescribed in the UK's [ISA Regulations][uk-isa].
 
 ### isa_io
 An isa account that is offered and only accessible via the internet.
 
-### isa
-An ISA is an individual savings account which is a scheme of investment satisfying the conditions prescribed in the UK's [ISA Regulations][uk-isa].
+### isa_time_deposit
+An [**isa**](#isa) [**time_deposit**](#time_deposit) account.
+
+### isa_time_deposit_io
+An isa time deposit account that is offered and only accessible via the internet.
+
+### isa_current
+An [**isa**](#isa) current account.
+
+### isa_current_io
+An isa current account that is offered and only accessible via the internet.
 
 ### ira
 A trust created or organized in the United States for the exclusive benefit of an individual or his beneficiaries. See [US Code Title 26, S.408][ira]
@@ -901,6 +907,9 @@ In the US, [Regulation D][reg-d] uses the characteristics of the 'reservation of
 > In order to classify an account as a 'savings deposit,' the institution must in its account agreement with the customer reserve the right at any time to require seven days’ advance written notice of an intended withdrawal. In practice, this right is never exercised, but the institution must nevertheless reserve that right in the account agreement. In addition, for an account to be
 classified as a 'savings deposit,' the depositor may make no more than six 'convenient' transfers or withdrawals per month from the account.
 
+### savings_io
+A saving account that is offered and only accessible via the internet.
+
 ### time_deposit
 A fixed-term deposit with a specific [**end_date**][end-date].
 The [US Regulation D][reg-d] describes time deposits as having the following characteristics:
@@ -921,6 +930,9 @@ other similar instrument
 > - include club accounts (such as Christmas club or
 vacation club accounts)
 > - no eligibility requirements
+
+### time_deposit_io
+A time deposit account that is offered and only accessible via the internet.
 
 ### third_party_savings
 Subset of savings accounts for which the interest is paid in a separate account held at a third party bank.
