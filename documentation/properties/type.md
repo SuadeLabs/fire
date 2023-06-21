@@ -516,7 +516,7 @@ Nostro loans are the firm's accounts at other financial institutions which are i
 > A loro (vostro) account is the term used by a correspondent to describe an account held on behalf of a foreign credit institution; the foreign credit institution would in turn regard this account as its nostro account.
 
 ### financial_lease
-- A finanical lease is an arrangement where the lessor prvoides money to buy an asset which is used by the lessee in return for an interest charge. The lessor has security as they own the asset. A financial lease is a contract that the lessor (the legal owner of the asset), transfers the risks and benefits of the asset to the lessee. Often the lessee may be given the opportunity to take ownership of the asset after the payments have been made in full
+From the [UK Gov](https://www.gov.uk/hmrc-internal-manuals/business-leasing-manual/blm00040), a finance lease is an arrangement under which one person (the lessor) provides the money to buy an asset which is used by another (the lessee) in return for an interest charge. The lessor has security because they own the asset. The terms of the leasing arrangements aim to give the lessor an interest like turn and no more or less – however good or bad the asset proves to be for the end user.
 
 ### other
 Other refers to a type of security not covered by the above. If you find yourself using this often, please [contribute][contributing].
@@ -625,7 +625,7 @@ Commercial paper is an unsecured promissory note with a fixed maturity of, typic
 A certificate of deposit is also a promissory note, however can only be issued by a bank. It has a fixed maturity and specified fixed interest rate.
 
 ### bill_of_exchange
-From [Investopedia](https://www.investopedia.com/terms/b/billofexchange.asp), a bill of exchange is written order that binds one party to pay a fixed sum of money to another party on demand or at a pre-determined date.
+From [UK Legislation](https://www.legislation.gov.uk/ukpga/Vict/45-46/61), a bill of exchange is an unconditional order in writing, addressed by one person to another, signed by the person giving it, requiring the person to whom it is addressed to pay on demand or at a fixed or determinable future time a sum certain in money to or to the order of a specified person, or to bearer.
 
 ### cb_facility
 *Needs definition*
@@ -1133,8 +1133,7 @@ collateral that cannot be classified as residential or commercial property.
 *NEEDS Definition*
 
 ### life_policy
-From [Investopedia](https://www.investopedia.com/ask/answers/111714/what-collateral-assignment-life-insurance.asp), a collateral ssignment of life insurance is a conditional assignment appointing a lender as an assignee of a policy. Essentially, the lender has a claim to some or all of the death benefit until the loan is repaid. The death benefit is used as collateral for a loan.
-
+From Article 212(2) [CRR](https://www.eba.europa.eu/regulation-and-policy/single-rulebook/interactive-single-rulebook/101022), life insurance policies pledged as collateral will be considered if it meets certain criteria outlined in the article. These conditions include ,**but not limited to**, the credit institutions openly being assigned as the beneficiary and the life insurance company being notified of the pledge to the lending institution. Providing the conditions outlined in the article are met, the life insurance is eligble for use as collateral and the lender has a claim to some or all of the death benefit until the loan is repaid.
 ### cash
 *NEEDS Definition*
 
