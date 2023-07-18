@@ -130,10 +130,10 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── tax
 │   ├── capital_gain_tax
 │   ├── corporation_tax
-│   ├── deductible_future_prof_tax
-│   ├── deductible_future_prof_and_temp_diff_tax
-│   ├── future_prof_tax
-│   ├── future_prof_and_temp_diff_tax
+│   ├── ded_fut_prof
+│   ├── ded_fut_prof_temp_diff
+│   ├── fut_prof
+│   ├── fut_prof_temp_diff
 │   ├── oth_tax_excl_temp_diff
 │   └── reclass_tax
 └── write_off
@@ -337,16 +337,16 @@ Describes an account representing the amount of **capital gain tax** paid, recei
 ### corporation_tax
 Describes an account representing the amount of **corporation tax** paid, received or deferred for the reporting period by the reporting entity.
 
-### deductible_future_prof_tax
+### ded_fut_prof
 Describes an account representing the amount of **deferred tax** deductible, reliant on future profitability.
 
-### deductible_future_prof_and_temp_diff_tax
+### ded_fut_prof_temp_diff
 Describes an account representing the amount of **deferred tax** deductible, reliant on future profitability, arising due to temporary differences.
 
-### future_prof_tax
+### fut_prof
 Describes an account representing the amount of **deferred tax** non-deductible, reliant on future profitability.
 
-### future_prof_tax_and_temp_diff
+### fut_prof_temp_diff
 Describes an account representing the amount of **deferred tax** non-deductible, reliant on future profitability, arising due to temporary differences.
 
 ### reclass_tax
