@@ -110,6 +110,10 @@
       "minLength": 20,
       "maxLength": 20
     },
+    "lgd_irb": {
+      "description": "The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.",
+      "type": "number"
+    },
     "moodys_lt": {
       "description": "Moody's long term credit ratings",
         "type":"string",
@@ -195,6 +199,12 @@
     "parent_id": {
       "description": "The unique identifier for the ultimate parent of the person or legal entity.",
       "type": "string"
+    },
+    "pd_irb": {
+      "description": "The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
     },
     "relationship":{
       "description": "Relationship to parent.",
