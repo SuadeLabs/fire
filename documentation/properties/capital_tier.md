@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "capital_tier"
-schemas:    [security]
+schemas:    [account, security]
 ---
 
 # capital_tier
