@@ -381,6 +381,7 @@
 	"mtg_insurance",
 	"ni_contribution",
 	"non_life_ins_premium",
+  "not_fut_prof",
 	"occupancy_cost",
 	"operational",
 	"operational_escrow",
