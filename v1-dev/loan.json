@@ -299,7 +299,7 @@
       "type": "number"
     },
     "lgd_floored": {
-      "description": "The final floored LGD value to be used in the IRB RWA calculations",
+      "description": "The final LGD value after the relevant floors have been applied. To be used in the IRB RWA calculations",
       "type": "number"
     },
     "lgd_irb": {
