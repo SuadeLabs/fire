@@ -298,6 +298,10 @@
       "description": "The loss given default in the event of an economic downturn. Percentage between 0 an 1.",
       "type": "number"
     },
+    "lgd_floored": {
+      "description": "The final floored LGD value to be used in the IRB RWA calculations",
+      "type": "number"
+    },
     "lgd_irb": {
       "description": "The loss given default as determined by internal rating-based methods.",
       "type": "number"
