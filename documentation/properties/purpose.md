@@ -644,7 +644,7 @@ refer to interest cashflows only, and do not include any principal flows
 │   ├── buy_to_let_remortgage
 │   ├── buy_to_let_further_advance
 │   ├── buy_to_let_other
-│   └── buy_to_let_construction
+│   └── buy_to_let_constrn
 ├── ips
 ├── lifetime_mortgage
 ├── operational
@@ -696,7 +696,7 @@ Buy-to-let *and* further_advance. See: **further_advance**
 ### buy_to_let_other
 Buy-to-let *and* other. See: **other**
 
-### buy_to_let_construction
+### buy_to_let_constrn
 Buy-to-let *and* construction. See: **construction**
 
 ### consumer_buy_to_let
