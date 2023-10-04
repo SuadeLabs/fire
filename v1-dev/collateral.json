@@ -82,15 +82,16 @@
       "enum": [
         "cash",
         "commercial_property",
+        "commercial_property_hr",
         "debenture",
-        "farm",
+        "farm", 
         "guarantee",
         "immovable_property",
         "life_policy",
         "multifamily",
         "other",
         "residential_property",
-	"security"
+	      "security"
       ]
     },
     "value": {
