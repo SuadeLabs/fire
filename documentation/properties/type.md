@@ -1095,7 +1095,7 @@ The most common XCS, and that traded in interbank markets, is a mark-to-market (
 │   └── multifamily
 ├── farm
 ├── commercial_property
-├── commercial_property_hr
+│   └── commercial_property_hr
 ├── immovable_property
 ├── guarantee
 ├── debenture
