@@ -29,7 +29,6 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   │       ├── promo_fed_reserve
 │   │       └── promo_fed_home_loan
 │   ├── investment_firm
-│   │   ├── ciu
 │   │   ├── fund
 │   │   ├── private_fund
 │   │   │   ├── hedge_fund
@@ -37,6 +36,7 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   │   ├── mmkt_fund
 │   │   ├── pension_fund
 │   │   └── real_estate_fund
+│   ├── ciu
 │   ├── sspe
 │   ├── pic
 │   ├── insurer
