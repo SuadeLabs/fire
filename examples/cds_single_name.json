@@ -11,7 +11,7 @@
         "underlying_security_id": "Corp_Jul28",
         "leg_type": "indexed",
         "position": "short",
-        "delta":1,
+        "delta":-1,
         "currency_code": "USD",
         "notional_amount": 100,
         "trade_date": "2018-07-01T00:00:00",
