@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "type"
-schemas:    [account, agreement, collateral, customer, derivative_cash_flow, derivative, entity, guarantor, issuer, loan_transaction, loan, security]
+schemas:    [account, agreement, collateral, customer, derivative_cash_flow, derivative, entity, guarantor, issuer, loan_cash_flow, loan_transaction, loan, security]
 ---
 
 # type
@@ -133,11 +133,11 @@ Article 411 of the [CRR][crr]:
 > (m) a building society
 
 ### unregulated_financial
-In the Basel guidelines for Credit Risk under exposures to securties firms and financial institutions, [CRE 20.40](https://www.bis.org/basel_framework/chapter/CRE/20.htm?tldate=20220101&inforce=20230101&published=20201126#:~:text=provided%20that%20these,their%20own%20jurisdictions.) it allows for these exposures to be treated like exposures to banks on the basis that they fall under the same regulated regime (and similar supervisory requirements) that banks in that jurisdiction are subject to. 
+In the Basel guidelines for Credit Risk under exposures to securties firms and financial institutions, [CRE 20.40](https://www.bis.org/basel_framework/chapter/CRE/20.htm?tldate=20220101&inforce=20230101&published=20201126#:~:text=provided%20that%20these,their%20own%20jurisdictions.) it allows for these exposures to be treated like exposures to banks on the basis that they fall under the same regulated regime (and similar supervisory requirements) that banks in that jurisdiction are subject to.
 So 'unregulated_financial' is to clearly define those firms *that do not* meet these regulatory requirements.
 
 As defined by OSFI chapter 4, P56 and chapter 5, P68:
-> Unregulated financial institutions are institutions that are not supervised by a regulator, and therefore NOT subject to prudential standards or any level of supervision equivalent to those applied to banks under the Basel III framework (including, in particular, capital and liquidity requirements).  
+> Unregulated financial institutions are institutions that are not supervised by a regulator, and therefore NOT subject to prudential standards or any level of supervision equivalent to those applied to banks under the Basel III framework (including, in particular, capital and liquidity requirements).
 
 Unregulated financial institutions would be not be qualified for "bank" treatment under standardized and/or subject to 1.25 correlation factor under IRB.
 
@@ -301,11 +301,11 @@ A collective investment undertaking is defined by the EU [here][lcr] Article 4(1
 
 
 ### fund
-A general term for collective investment vehicles and management companies. For example, those defined under the [US Investment Company Act 1940][inv-co-act] but not qualifying as an EU CIU. There does not appear to be a cross-jurisdictional, unified classification of types of funds 
+A general term for collective investment vehicles and management companies. For example, those defined under the [US Investment Company Act 1940][inv-co-act] but not qualifying as an EU CIU. There does not appear to be a cross-jurisdictional, unified classification of types of funds
 
 
 ### private_fund
-A private fund is a pooled investment vehicle excluded from the definition of an investment company in the [US Investment Company Act 1940][inv-co-act] 
+A private fund is a pooled investment vehicle excluded from the definition of an investment company in the [US Investment Company Act 1940][inv-co-act]
 [Private Fund](https://www.sec.gov/education/glossary/jargon-z#PEF:~:text=Private%20Equity%20Funds-,Private%20Fund,applicable%20registration%20requirements%20(for%20example%2C%20as%20an%20exempt%20reporting%20adviser).,-Want%20to%20learn)
 
 ### private_equity_fund
@@ -319,7 +319,7 @@ See also: [SEC Hedge fund bulletin][hedge-fund2]
 
 
 ### real_estate_fund
-Real estate funds or [REITS](https://www.investor.gov/introduction-investing/investing-basics/investment-products/real-estate-investment-trusts-reits). 
+Real estate funds or [REITS](https://www.investor.gov/introduction-investing/investing-basics/investment-products/real-estate-investment-trusts-reits).
 
 
 ### pension_fund
@@ -389,7 +389,7 @@ A financial holding copmany is defined by the EU [here][lcr] Article 4(1)(20):
 > (20) 'financial holding company' means a financial institution, the subsidiaries of which are exclusively or mainly institutions or financial institutions, at least one of such subsidiaries being an institution, and which is not a mixed financial holding company;
 
 ### pmi
-Private Mortgage Insurer is financial institution that provides insurance to residential mortgages that may get part of guaranteed amount backed by federal government.  Under OSFI rules, PMI guaranteed amounts may get split between a backstop and a deductiable portion.  
+Private Mortgage Insurer is financial institution that provides insurance to residential mortgages that may get part of guaranteed amount backed by federal government.  Under OSFI rules, PMI guaranteed amounts may get split between a backstop and a deductiable portion.
 
 Reference:  OSFI Chapter 4, P272-274;  Chapter 5, P146-148
 
@@ -687,7 +687,7 @@ A commercial mortgage-backed security secured by a pool of mortages that are dee
 Reference: [OSFI BCAR, section 4.1.12](https://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/CAR22_chpt4.aspx#:~:text=Income%20producing%20commercial%20real%20estate%3A%20exposures%20where%20the%20criteria%20in%20paragraph%20108%20are%20met%2C%20but%20those%20in%20paragraph%20110%20(land%20acquisition%2C%20development%20and%20construction)%20are%20not%20applicable.)
 
 ### nha_mbs
-National Housing Act (NHA) MBS that are guaranteed by the Canada Mortgage and Housing Corporation (CMHC), will receive a risk weight of 0% in recognition of the fact that obligations incurred by CMHC are legal obligations of the Government of Canada.  
+National Housing Act (NHA) MBS that are guaranteed by the Canada Mortgage and Housing Corporation (CMHC), will receive a risk weight of 0% in recognition of the fact that obligations incurred by CMHC are legal obligations of the Government of Canada.
 
 Reference: [OSFI BCAR Chapter 4, P120](https://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/CAR22_chpt4.aspx#:~:text=National%20Housing%20Act%20(NHA)%20MBS%20that%20are%20guaranteed%20by%20the%20Canada%20Mortgage%20and%20Housing%20Corporation%20(CMHC)%2C%20will%20receive%20a%20risk%20weight%20of%200%25%20in%20recognition%20of%20the%20fact%20that%20obligations%20incurred%20by%20CMHC%20are%20legal%20obligations%20of%20the%20Government%20of%20Canada.)
 
@@ -1101,7 +1101,7 @@ The most common XCS, and that traded in interbank markets, is a mark-to-market (
 ├── debenture
 ├── life_policy
 ├── cash
-├── security 
+├── security
 └── other
 ```
 The collateral type defines the form of the collateral, such as property or other assets used to secure an obligation.
@@ -1249,6 +1249,16 @@ An interest rate curve
 
 ### volatility
 A volatility curve (smile)
+
+
+# loan_cash_flow
+
+### interest
+A repayment that covers only the interest section of the loan, the principal borrowed amount in this case is left unchanged
+
+### principal
+A repayment that reduces the principal amount borrowed and does not include any interest component
+
 
 # loan_transaction
 

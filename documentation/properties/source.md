@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"source"
-schemas:	[account, collateral, customer, derivative_cash_flow, derivative, loan_transaction, loan, security]
+schemas:	[account, collateral, customer, derivative_cash_flow, derivative, loan_cash_flow, loan_transaction, loan, security]
 ---
 
 # source
