@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "amount"
-schemas:    [loan_transaction]
+schemas:    [loan_cash_flow, loan_transaction]
 ---
 
 # amount

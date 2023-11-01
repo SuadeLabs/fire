@@ -40,7 +40,6 @@ class TestSchemas(unittest.TestCase):
                 "example.json",
                 "guarantor.json",
                 "issuer.json",
-                "reporter.json",
             ]:
                 assert not enums
             else:
