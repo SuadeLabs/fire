@@ -34,8 +34,8 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   │   │   ├── hedge_fund
 │   │   │   └── private_equity_fund
 │   │   ├── mmkt_fund
-│   │   ├── pension_fund
 │   │   └── real_estate_fund
+│   ├── pension_fund
 │   ├── ciu
 │   ├── sspe
 │   ├── pic
