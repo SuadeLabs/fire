@@ -18,6 +18,10 @@
       "type": "integer",
       "monetary": true
     },
+    "loan_id": {
+      "description": "The unique identifier for the affected loan/s within the financial institution.",
+      "type": "string"
+    },
     "payment_date": {
       "description": "The timestamp that the cash flow will occur or was paid. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
