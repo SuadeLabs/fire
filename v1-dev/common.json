@@ -17,6 +17,7 @@
          "ntnd_fv_equity",
          "ntnd_fv_pl",
          "other_gaap",
+         "tax_adjusted",
          "trading_gaap"
         ]
   },
