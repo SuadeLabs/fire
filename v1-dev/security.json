@@ -105,6 +105,11 @@
       "description": "Two-letter country code for security location/jurisdiction. In accordance with ISO 3166-1.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
     },
+    "cover_pool_balance": {
+      "description": "The balance of the assets that are held in the cover pool",
+      "type": "integer",
+      "minimum": 0
+    },
     "cqs_irb": {
       "description": "The credit quality step for internal ratings based approach.",
       "type": "integer",
