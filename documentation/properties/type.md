@@ -435,6 +435,7 @@ Charity serving communities and individuals. Includes non-profit institutions se
 ├── mortgage
 │   ├── reverse_mortgage
 │   │   └── q_reverse_mortgage
+│   ├── mortgage_charter
 ├── commercial_property
 ├── personal
 ├── auto
@@ -495,6 +496,9 @@ A **q_reverse_mortgage** is a qualified reverse mortgage which adheres to the st
 A **reverse_mortgage** is a non-recourse loan secured by property that has no defined term and no monthly repayment of principal and interest.
 
 As outlined in OSFI BCAR Chapter 4, P 116
+
+### mortgage_charter
+From the [UK Gov](https://www.gov.uk/government/publications/mortgage-charter/mortgage-charter#:~:text=A%20new%20deal,contacting%20their%20lender), the **mortgage_charter** is an agreement between UK lenders and the UK Government to help regulated residential mortgage borrowers manage their mortgage during the period of heightened interest rates. This is done by restructuring their mortgages to interest only (for a short period) or extending the maturity of their loans.
 
 ### credit_card
 A **credit_card** is credit facility typically secured by a deposit account or equity in the borrower's property.

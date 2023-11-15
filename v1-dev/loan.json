@@ -558,6 +558,7 @@
         "heloc",
         "liquidity_facility",
         "mortgage",
+        "mortgage_charter",
         "multiccy_facility",
         "nostro",
         "other",
