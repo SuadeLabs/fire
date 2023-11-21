@@ -29,7 +29,7 @@ Securitisation Standardised Approach - Look-through Approach
 For securitisation calculations, when the financial institution has full knowledge of the composition of the underlying exposures of pool at all time, the institution can apply the "look-through" approach to senior securitization exposures.  
 See [OSFI Chapter 7, P134 or Basel Framework, CRE 40.50](https://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/CAR22_chpt6.aspx#ToC6.6.5)
 
-## eif_lt
+### eif_lt
 Equity Investments in Funds - Look-through Approach
 The LTA requires a bank to risk weight the underlying exposures of a fund as if the exposures were held directly by the bank. This is the most granular and risk-sensitive approach. It must be used when:
 (1) there is sufficient and frequent information provided to the bank regarding the underlying exposures of the fund; and
