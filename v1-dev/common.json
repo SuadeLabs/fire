@@ -390,11 +390,13 @@
     "type": "string",
     "enum": [
       "airb",
+      "eif_fb",
+      "eif_lt",
+      "eif_mba",
       "firb",
       "sec_erba",
       "sec_sa",
       "sec_sa_lt",
-      "sec_sa_fb",
       "std"
     ]
   },
