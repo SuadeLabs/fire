@@ -649,6 +649,8 @@
         "cb_facility",
         "cb_reserve",
         "cd",
+        "cdo",
+        "clo",
         "cmbs",
         "cmbs_income",
         "commercial_paper",
