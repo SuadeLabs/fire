@@ -657,6 +657,12 @@ An asset-backed security is a security whose income payments and hence value are
 ### abs_other
 *Needs definition*
 
+### cdo
+A Collateralized Debt Obligation (CDO) is an Asset Backed Security (ABS) product backed by a pool of loans and other assets that are then divided into different tranches, each with varying degrees of risk and return. Typically the tranches are categorised as senior, mezzanine, and junior.
+
+### clo
+A Collateralized Loan Obligation (CLO) is a type of CDO whose asset pool is comprised by leveraged loans.
+
 ### mbs
 *Needs definition*
 
