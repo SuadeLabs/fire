@@ -108,7 +108,8 @@
     "cover_pool_balance": {
       "description": "The balance of the assets that are held in the cover pool",
       "type": "integer",
-      "minimum": 0
+      "minimum": 0,
+      "monetary": true
     },
     "cqs_irb": {
       "description": "The credit quality step for internal ratings based approach.",
