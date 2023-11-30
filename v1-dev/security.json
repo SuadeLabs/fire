@@ -121,7 +121,7 @@
       "description": "The credit quality step for standardised approach.",
       "type": "integer",
       "minimum": 1,
-      "maximum": 6
+      "maximum": 17
     },
     "cr_approach": {
       "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
