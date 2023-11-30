@@ -44,7 +44,7 @@
       "description": "The credit quality step for standardised approach.",
       "type": "integer",
       "minimum": 1,
-      "maximum": 6
+      "maximum": 17
     },
     "credit_impaired": {
       "description": "Flag to determine if the entity credit quality is impaired.",
