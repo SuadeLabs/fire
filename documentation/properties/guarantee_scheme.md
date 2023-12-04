@@ -59,6 +59,9 @@ Greece: DGS
 ### hu_ndif
 Hungary: National Deposit Insurance Fund (NDIF)
 
+### hk_dps
+Hong Kong: Deposit Protection Scheme (DPS)
+
 ### ie_dgs
 Ireland: Deposit Guarantee Scheme (DGS)
 
