@@ -644,7 +644,8 @@ refer to interest cashflows only, and do not include any principal flows
 │   ├── buy_to_let_remortgage
 │   ├── buy_to_let_further_advance
 │   ├── buy_to_let_other
-│   └── buy_to_let_construct
+│   ├── buy_to_let_construct
+│   └── consumer_buy_to_let
 ├── ips
 ├── lifetime_mortgage
 ├── operational
@@ -653,7 +654,6 @@ refer to interest cashflows only, and do not include any principal flows
 ├── remortgage
 ├── remortgage_other
 ├── speculative_property
-├── consumer_buy_to_let
 ├── further_advance
 ├── non_b20
 ├── agriculture
