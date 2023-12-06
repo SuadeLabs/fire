@@ -97,6 +97,9 @@
       "minimum": 0.0,
       "maximum": 1.0
     },
+    "ccf": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/ccf"
+    },
     "cost_center_code": {
       "description": "The organizational unit or sub-unit to which costs/profits are booked.",
       "type": "string"
@@ -108,7 +111,8 @@
     "cover_pool_balance": {
       "description": "The balance of the assets that are held in the cover pool",
       "type": "integer",
-      "minimum": 0
+      "minimum": 0,
+      "monetary": true
     },
     "cqs_irb": {
       "description": "The credit quality step for internal ratings based approach.",
@@ -120,7 +124,7 @@
       "description": "The credit quality step for standardised approach.",
       "type": "integer",
       "minimum": 1,
-      "maximum": 6
+      "maximum": 17
     },
     "cr_approach": {
       "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",

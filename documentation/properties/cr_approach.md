@@ -29,6 +29,24 @@ Securitisation Standardised Approach - Look-through Approach
 For securitisation calculations, when the financial institution has full knowledge of the composition of the underlying exposures of pool at all time, the institution can apply the "look-through" approach to senior securitization exposures.  
 See [OSFI Chapter 7, P134 or Basel Framework, CRE 40.50](https://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/CAR22_chpt6.aspx#ToC6.6.5)
 
+### eif_lt
+Equity Investments in Funds - Look-through Approach
+The LTA requires a bank to risk weight the underlying exposures of a fund as if the exposures were held directly by the bank. This is the most granular and risk-sensitive approach. It must be used when:
+(1) there is sufficient and frequent information provided to the bank regarding the underlying exposures of the fund; and
+(2) such information is verified by an independent third party.
+See [Basel CRE60 Equity Investments in Funds, CRE 60.2](https://www.bis.org/basel_framework/chapter/CRE/60.htm)
+
+### eif_mba
+Equity Investments in Funds - Mandate-based Approach
+The second approach, the MBA, provides a method for calculating regulatory capital that can be used when the conditions for applying the LTA are not met.
+Under the MBA banks may use the information contained in a fund's mandate or in the national regulations governing such investment funds.
+See [Basel CRE60 Equity Investments in Funds, CRE 60.6](https://www.bis.org/basel_framework/chapter/CRE/60.htm)
+
+### eif_fb
+Equity Investmnets in Funds - Fall-back Approach
+Where neither the LTA nor the MBA is feasible, banks are required to apply the FBA. The FBA applies a 1250% risk weight to the bank’s equity investment in the fund.
+See [Basel CRE60 Equity investments in funds, CRE 60.8](https://www.bis.org/basel_framework/chapter/CRE/60.htm)
+
 ### sec_erba
 Securitisation External-Ratings-Based Approach
 See [Basel CRE42 Securitisation: External-Ratings-Based Approach (SEC_ERBA)](https://www.bis.org/basel_framework/chapter/CRE/42.htm)
