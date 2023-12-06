@@ -56,6 +56,9 @@ German Brokerage companies: Entschädigungseinrichtung der Wertpapierhandelsunte
 ### gr_dgs
 Greece: DGS
 
+### hk_dps
+Hong Kong: Deposit Protection Scheme (DPS)
+
 ### hu_ndif
 Hungary: National Deposit Insurance Fund (NDIF)
 
