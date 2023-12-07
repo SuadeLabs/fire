@@ -92,7 +92,11 @@
       "description": "The type of the master agreement.",
       "type": "string",
       "enum": [
+	"afb",
+	"ema",
+	"fbf",
         "gmra",
+	"gmsla",
         "icma_1992",
         "icma_1995",
         "icma_2000",
@@ -105,7 +109,8 @@
         "isda_2002",
         "other",
         "other_gmra",
-        "other_isda"
+        "other_isda",
+	"rahmenvertrag"
       ]
     },
     "version_id": {

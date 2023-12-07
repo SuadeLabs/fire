@@ -1017,6 +1017,7 @@ Any other account type that cannot be classified as one of the other types.
 ├── nds
 ├── option
 │   ├── swaption
+│   ├── variance_option
 │   └── cap_floor
 ├── forward
 │   ├── future
@@ -1033,6 +1034,10 @@ Options with multiple exercise and payment periods, generally used in relation t
 
 ### swaption
 Options which give the buyer the right to enter into an interest rate swap with the option seller, with either a physical settlement or a cash-settlement.
+
+
+### variance_option
+A variance option allows the buyer the right, but not the obligation, to trade future realized (or historical) volatility against current implied volatility.
 
 ### ois
 Overnight Index Swap
@@ -1172,12 +1177,16 @@ This identifies that the piece of collateral used is a security, as mapped via t
 # Agreement
 
 ```bash
+├── ema
+├── fbf
+│   └── afb
 ├── gmra
 │   ├── icma_1992
 │   ├── icma_1995
 │   ├── icma_2000
 │   ├── icma_2011
 │   └── other_gmra
+├── gmsla
 ├── isda
 │   ├── isda_1985
 │   ├── isda_1986
@@ -1185,6 +1194,7 @@ This identifies that the piece of collateral used is a security, as mapped via t
 │   ├── isda_1992
 │   ├── isda_2002
 │   └── other_isda
+├── rahmenvertrag
 └── other
 ```
 
@@ -1237,6 +1247,28 @@ The 2002 version of the ISDA agreement.
 
 ### other_isda
 Any other ISDA agreement.
+
+### gmsla
+Global Master for Securities Lending Agreements
+https://www.icmagroup.org/events/icma-workshop-repo-and-securities-lending-under-the-gmra-and-gmsla/
+
+### ema
+The Euro Master Agreement - a master agreement for both domestic and cross-border transactions. The EMA should initially cover repurchase agreements as well as securities lending transactions.
+https://www.ebf.eu/home/european-master-agreement-ema/
+
+
+### rahmenvertrag
+German variation of ISDA
+https://www.mayerbrown.com/en/perspectives-events/blogs/2020/11/documenting-benchmark-transition-under-the-german-master-agreement-for-financial-derivatives-transactions
+
+### fbf
+Federation Bancaire Francaise - French variation of ISDA
+https://www.fbf.fr/en/fbf-master-agreement-relating-to-transactions-on-forward-financial-instruments-published-on-february-5-2020-last-update-on-june-16-2020/
+
+### afb
+Association Francaise de Banques - ancestor of the FBF
+https://theotcspace.com/knowledge_item/afb-agreement-federation-bancaire-francais-afba-fbf/
+
 
 ### other
 Any other agreement. If you use this a lot, get in touch, maybe we need more types!

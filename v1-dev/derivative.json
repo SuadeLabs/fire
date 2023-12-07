@@ -326,6 +326,7 @@
         "spot",
         "swaption",
         "vanilla_swap",
+	"variance_option",
         "variance_swap",
         "xccy"
       ]
@@ -360,7 +361,11 @@
         "7m",
         "8m",
         "9m",
-        "12m"
+        "12m",
+	"2y",
+	"10y",
+	"20y",
+	"30y"
       ]
     },
     "underlying_issuer_id": {
