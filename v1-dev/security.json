@@ -100,6 +100,9 @@
     "ccf": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/ccf"
     },
+    "ccr_approach": {
+      "description": "Specifies the approved counterparty credit risk methodology for calculating exposures."
+    },
     "cost_center_code": {
       "description": "The organizational unit or sub-unit to which costs/profits are booked.",
       "type": "string"
