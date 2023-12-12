@@ -59,6 +59,9 @@
         "format": "date-time"
       }
     },
+    "ccr_approach": {
+      "description": "Specifies the approved counterparty credit risk methodology for calculating exposures."
+    },
     "cost_center_code": {
       "description": "The organizational unit or sub-unit to which costs/profits are booked.",
       "type": "string"
@@ -70,7 +73,7 @@
     "cr_approach": {
       "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/cr_approach"
-    },
+    }, 
     "csa_id": {
       "description": "The unique identifier of the credit support annex for this derivative",
       "type": "string"
