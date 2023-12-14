@@ -1172,22 +1172,31 @@ This identifies that the piece of collateral used is a security, as mapped via t
 # Agreement
 
 ```bash
+├── ema
 ├── gmra
 │   ├── icma_1992
 │   ├── icma_1995
 │   ├── icma_2000
 │   ├── icma_2011
 │   └── other_gmra
+├── gmsla
 ├── isda
 │   ├── isda_1985
 │   ├── isda_1986
 │   ├── isda_1987
 │   ├── isda_1992
 │   ├── isda_2002
+│   ├── ema
+│   ├── drv
+│   ├── fbf
+│   │   └── afb
 │   └── other_isda
 └── other
 ```
 
+### ema
+The Euro Master Agreement - a master agreement for both domestic and cross-border transactions. The EMA should initially cover repurchase agreements as well as securities lending transactions.
+https://www.ebf.eu/home/european-master-agreement-ema/
 
 ### gmra
 From the [ICMA website][icma-web]:
@@ -1197,7 +1206,6 @@ Since the early 1990s ICMA has devoted considerable resources to developing a st
 ICMA obtains and annually updates opinions from numerous jurisdictions worldwide on the GMRA 1995, 2000 and 2011 versions.
 
 **The ERCC recently took a decision to discontinue coverage of the GMRA 1995 in the ICMA GMRA legal opinions from 2019 onwards. For further information contact legalhelpdesk@icmagroup.org**
-
 
 ### icma_1992
 The 1992 version of the GMRA agreement.
@@ -1213,6 +1221,10 @@ The 2011 version of the GMRA agreement.
 
 ### other_gmra
 Any other repurchase agreement.
+
+### gmsla
+Global Master for Securities Lending Agreements
+https://www.icmagroup.org/events/icma-workshop-repo-and-securities-lending-under-the-gmra-and-gmsla/
 
 ### isda
 From [Investopedia][isda-investo]:
@@ -1234,6 +1246,18 @@ The 1992 version of the ISDA agreement.
 
 ### isda_2002
 The 2002 version of the ISDA agreement.
+
+### drv
+German variation of ISDA - rahmenvertrag
+https://www.mayerbrown.com/en/perspectives-events/blogs/2020/11/documenting-benchmark-transition-under-the-german-master-agreement-for-financial-derivatives-transactions
+
+### fbf
+Federation Bancaire Francaise - French variation of ISDA
+https://www.fbf.fr/en/fbf-master-agreement-relating-to-transactions-on-forward-financial-instruments-published-on-february-5-2020-last-update-on-june-16-2020/
+
+### afb
+Association Francaise de Banques - ancestor of the FBF
+https://theotcspace.com/knowledge_item/afb-agreement-federation-bancaire-francais-afba-fbf/
 
 ### other_isda
 Any other ISDA agreement.

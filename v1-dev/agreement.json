@@ -92,7 +92,12 @@
       "description": "The type of the master agreement.",
       "type": "string",
       "enum": [
+	"afb",
+	"drv",
+	"ema",
+	"fbf",
         "gmra",
+	"gmsla",
         "icma_1992",
         "icma_1995",
         "icma_2000",
