@@ -619,7 +619,8 @@
         "bankruptcy_remote",
         "called_up",
         "non_operational",
-        "paid_up"
+        "paid_up",
+        "unsettled"
       ]
     },
     "stress_change": {
