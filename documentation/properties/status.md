@@ -85,6 +85,7 @@ This is a loan where the customer has defaulted or is non-performing.
 ├── paid_up
 ├── called_up
 ├── bankruptcy_remote
+├── unsettled
 └── non_operational
 ```
 
@@ -110,6 +111,18 @@ not be available to the custodian's creditors in the event of the insolvency of 
 ### non_operational
 This indicates that the security does not meet the requirements set in Article 8 of the [Liquidity Regulations][lcr]
 
+### unsettled
+This indicates that the transaction is still unsettled after its due delivery date. Under the Basel framework, this transaction would be in scope for the requirements defined under [the capital treatment of unsettled transactions and failed trades][CRE70]"
+
+
+## Derivative
+```bash
+└── unsettled
+```
+
+### unsettled
+This indicates that the transaction is still unsettled after its due delivery date. Under the Basel framework, this transaction would be in scope for the requirements defined under [the capital treatment of unsettled transactions and failed trades][CRE70]"
 ---
 [lcr]:  http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
 [reg-d]: https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=fe8bd6e281e0788a9ba7efda92e96e2f&mc=true&n=pt12.2.204&r=PART&ty=HTML#se12.2.204_12
+[CRE70]: https://www.bis.org/basel_framework/chapter/CRE/70.htm

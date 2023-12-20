@@ -291,6 +291,13 @@
       "type": "string",
       "format": "date-time"
     },
+    "status": {
+      "description": "Provides additional information regarding the status of the derivative.",
+      "type": "string",
+      "enum": [
+        "unsettled"
+      ]
+    },
     "strike": {
       "description": "Strike price of the option, which is compared to the underlying price on the option exercise date.",
       "type": "number"
