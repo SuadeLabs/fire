@@ -26,6 +26,9 @@ Bulgaria: Deposit Insurance Fund (DIF)
 ### hr_di
 Croatia: State Agency for Deposit Insurance and Bank Resolution (SAD)
 
+### ca_cdic
+Canada: Canada Deposit Insurance Corporation (CDIC)
+
 ### cy_dps
 Cyprus: Deposit Protection Scheme (DPS)
 
