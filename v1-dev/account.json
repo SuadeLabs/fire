@@ -169,7 +169,8 @@
       "enum": [
         "be_pf",
         "bg_dif",
-        "cy_dps",
+        "ca_cdic",
+	"cy_dps",
         "cz_dif",
         "de_edb",
         "de_edo",
