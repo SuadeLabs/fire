@@ -172,13 +172,13 @@ class TestSchemas(unittest.TestCase):
 
             if schema_name != "common.json":
                 for prop, fields in schema['properties'].items():
-                    if "type" not in fields and not "$ref" in fields:
+                    if "type" not in fields and "$ref" not in fields:
                         errs.append((schema_name, prop))
             else:
                 if "type" not in fields:
                     errs.append((schema_name, prop))
         assert not errs, (
-                "The following schemata do not have types defined:\n"
+                "The following schemata do not have types defined:\n\t"
                 + "\n\t".join("- {} schema has property '{}' missing a 'type'".format(e[0], e[1]) for e in errs)
                 )
 
