@@ -61,7 +61,8 @@
     },
     "ccr_approach": {
       "description": "Specifies the approved counterparty credit risk methodology for calculating exposures.",
-    "enum": ["imm", "oem", "sa", "ssa"]
+      "type": "string",
+      "enum": ["imm", "oem", "sa", "ssa"]
     },
     "cost_center_code": {
       "description": "The organizational unit or sub-unit to which costs/profits are booked.",
