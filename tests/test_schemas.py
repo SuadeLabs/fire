@@ -161,6 +161,26 @@ class TestSchemas(unittest.TestCase):
         print(f"\n\n    ======== FIRE STATISTICS =======\n\n{stats}\n\n")
         assert stats
 
+    def test_types(self):
+        '''
+        Every property in a schema should have a type defined
+        '''
+        errs = []
+        for schema_name in SCHEMA_FILES:
+            with open(os.path.join(SCHEMAS_DIR, schema_name)) as json_schema:
+                schema = json.load(json_schema)
+
+            if schema_name != "common.json":
+                for prop, fields in schema['properties'].items():
+                    if "type" not in fields and not "$ref" in fields:
+                        errs.append((schema_name, prop))
+            else:
+                if "type" not in fields:
+                    errs.append((schema_name, prop))
+        assert not errs, (
+                "The following schemata do not have types defined:\n"
+                + "\n\t".join("- {} schema has property '{}' missing a 'type'".format(e[0], e[1]) for e in errs)
+                )
 
 class TestExamples:
     with open(os.path.join(SCHEMAS_DIR, "example.json")) as ff:
