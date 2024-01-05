@@ -183,7 +183,7 @@ class TestSchemas(unittest.TestCase):
 
         assert (
             not errs
-        ), "The following schemata do not have types defined:\n\t" + "\n\t".join(
+        ), "The following schemata are missing required fields:\n\t" + "\n\t".join(
             "- {} schema has property '{}' missing required field '{}'".format(
                 e[0], e[1], e[2]
             )
