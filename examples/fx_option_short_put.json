@@ -1,16 +1,16 @@
 {
-    "title": "fx_option",
+    "title": "fx_option_short_put",
     "comment": "Short put (+ve)",
     "data": {
       "derivative": [
         {
           "date": "2019-12-31T00:00:00",
-          "id": "USDJPY call 130",
+          "id": "shortput",
           "asset_class": "fx",
           "type": "option",
           "leg_type": "put",
           "position": "short",
-          "delta": "+ve",
+          "delta": 1,
           "currency_code": "USD",
           "notional_amount": 100,
           "underlying_currency_code": "JPY",
