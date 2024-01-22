@@ -19,6 +19,6 @@ Alternatively firms should use the MIC code XXXX for financial instruments that 
 ---
 
 [iso10383]: https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.pdf 
-[mic]: https://www.iso20022.org/sites/default/files/ISO10383_MIC/FAQ_ISO_10383.pdf
+[mic]: https://www.iso20022.org/market-identifier-codes
 [rts]: https://eur-lex.europa.eu/legal-content/EN/TXT/?toc=OJ:L:2017:087:TOC&uri=uriserv:OJ.L_.2017.087.01.0449.01.ENG
 [mifid]: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32014L0065
