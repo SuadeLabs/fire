@@ -122,7 +122,8 @@ class TestDocs(unittest.TestCase):
 
         def async_requests(urls):
             results = grequests.map(
-                (grequests.get(u) for u in urls), exception_handler=exception, size=100)
+                (grequests.get(u) for u in urls), exception_handler=exception, size=100
+            )
             return results
 
         urls = []
