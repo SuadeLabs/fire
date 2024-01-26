@@ -121,7 +121,8 @@ class TestDocs(unittest.TestCase):
             return f"{request} - {exception}"
 
         def async_requests(urls):
-            results = grequests.map((grequests.get(u) for u in urls), exception_handler=exception, size=100)
+            results = grequests.map(
+                (grequests.get(u) for u in urls), exception_handler=exception, size=100)
             return results
 
         urls = []
@@ -135,7 +136,7 @@ class TestDocs(unittest.TestCase):
                 for link in links:
                     url = link.get("href")
                     if not url.startswith("http"):
-                        raise ValueError(f"URL in {docname} must start with http: {url}")
+                        raise ValueError(f"Invalid URL in {docname}: {url}")
 
                     urls.append(url)
 
