@@ -132,7 +132,7 @@ class TestDocs(unittest.TestCase):
             filename = os.path.join(DOCS_DIR, f"{docname}.md")
             with open(filename) as f:
                 doc_html = markdown.markdown(f.read())
-                soup = BeautifulSoup(doc_html)
+                soup = BeautifulSoup(doc_html, features="html.parser")
                 links = soup.find_all("a")
                 for link in links:
                     url = link.get("href")
