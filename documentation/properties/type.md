@@ -97,7 +97,7 @@ An SME with special treatment under the capital adequacy rules, invoking a speci
 Other means it is known to **not** be one of the other types. If type is unknown it should just be left blank.
 
 ### ccp
-As defined in Article 2(1) of [EMIR]() and the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2979.html):
+As defined in Article 2(1) of [EMIR][emir] and the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2979.html):
 > "CCP" means a legal person that interposes itself between the counterparties to the contracts traded on one or more financial markets, becoming the buyer to every seller and the seller to every buyer
 
 From the [US FDIC Regulatory Capital Rules](https://www.fdic.gov/regulations/laws/federal/2013/2013-09-10_final-rule-interim.pdf):
@@ -662,7 +662,7 @@ An asset-backed security is a security whose income payments and hence value are
 *Needs definition*
 
 ### pibs
-[Building Societies Association](https://www.bsa.org.uk/information/consumer-factsheets/general/what-are-pibs) defines Permanent interest bearing shares (PIBS) as fixed-interest securities issued by building societies, and quoted on the stock market.  They are bond like instruments in that they pay interest, but they have no maturity date - PIBS typically exist as long as their issuer does.
+[Building Societies Association](https://www.bsa.org.uk/information/consumer-factsheets/general-information/what-are-pibs) defines Permanent interest bearing shares (PIBS) as fixed-interest securities issued by building societies, and quoted on the stock market.  They are bond like instruments in that they pay interest, but they have no maturity date - PIBS typically exist as long as their issuer does.
 
 ### performance_bond
 *Needs definition*
@@ -878,16 +878,16 @@ An ISA is an individual savings account which is a scheme of investment satisfyi
 An isa account that is offered and only accessible via the internet.
 
 ### isa_time_deposit
-An [**isa**](#isa) [**time_deposit**](#time_deposit) account.
+An [**isa**][uk-isa] which is also a **time_deposit** account.
 
 ### isa_time_deposit_io
 An isa time deposit account that is offered and only accessible via the internet.
 
 ### isa_current
-An [**isa**](#isa) current account.
+An [**isa**][uk-isa] current account.
 
 ### isa_current_io
-An isa current account that is offered and only accessible via the internet.
+An [**isa**][uk-isa] current account that is offered and only accessible via the internet.
 
 ### ira
 A trust created or organized in the United States for the exclusive benefit of an individual or his beneficiaries. See [US Code Title 26, S.408][ira]
@@ -1366,39 +1366,24 @@ the debt repayable.
 ---
 
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575
-
 [card-fees]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2015.123.01.0001.01.ENG
-
 [emir]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32012R0648
-
 [lcr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
-
 [mlar]: http://www.bankofengland.co.uk/pra/documents/regulatorydata/mlar/sup_chapter16_annex19bg_20120401.pdf
-
 [sftr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32015R2365
-
 [contributing]: https://github.com/suadelabs/fire/blob/master/CONTRIBUTING.md
-
 [dpd]: http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:31995L0046:en:HTML
-
 [fca-indiv]: https://www.handbook.fca.org.uk/handbook/glossary/G3173.html
 [fca-internet]: https://www.handbook.fca.org.uk/handbook/PERG/8/22.html
-
 [mm-stat]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R1333
 [mmf-prpposal]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A52013PC0615
-
 [ecb-eurosystem-procedures]: https://www.ecb.europa.eu/ecb/legal/pdf/l_06920040308en00010085.pdf
 [eur-savings-tax]: http://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1477869014542&uri=CELEX:32003L0048
-
 [exch-tax-info]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32014L0107
-
 [sme]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32003H0361
 [sme-what]: http://ec.europa.eu/growth/smes/business-friendly-environment/sme-definition/index_en.htm
-
 [deposit-broker-qa]: http://www.eba.europa.eu/single-rule-book-qa?p_p_id=questions_and_answers_WAR_questions_and_answersportlet&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&_questions_and_answers_WAR_questions_and_answersportlet_jspPage=%2Fhtml%2Fquestions%2Fviewquestion.jsp&_questions_and_answers_WAR_questions_and_answersportlet_viewTab=1&_questions_and_answers_WAR_questions_and_answersportlet_questionId=1382163&_questions_and_answers_WAR_questions_and_answersportlet_statusSearch=1
-
-[arrangement]: http://ec.europa.eu/internal_market/financial-markets/docs/collateral/directive-presentation_en.pdf
-
+[arrangement]: https://finance.ec.europa.eu/capital-markets-union-and-financial-markets/financial-markets/post-trade-services/financial-collateral-arrangements_en
 [uk-isa]: http://www.legislation.gov.uk/uksi/1998/1870/contents/made
 [end-date]: https://github.com/suadelabs/fire/blob/master/documentation/properties/end_date.md
 [reg-d]: http://www.federalreserve.gov/boarddocs/supmanual/cch/int_depos.pdf
@@ -1408,11 +1393,9 @@ the debt repayable.
 [eu-covered-bonds-info]: http://ec.europa.eu/finance/investment/legal_texts/index_en.htm
 [sup-rep]: http://publications.europa.eu/resource/cellar/37c79802-fe90-11e3-831f-01aa75ed71a1.0006.03/DOC_1
 [2013-549]: https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32013R0549
-[sg-stat-boards]: https://www.gov.sg/sgdi/statutory-boards
+[sg-stat-boards]: https://www.sgdi.gov.sg/statutory-boards
 [mmfr]: https://eur-lex.europa.eu/eli/reg/2017/1131/oj
 [us-census-multifamily]: https://www.census.gov/construction/nrc/index.html
-
-
 [icma-web]: http://dev.icmagroup.org/Regulatory-Policy-and-Market-Practice/repo-and-collateral-markets/legal-documentation/global-master-repurchase-agreement-gmra/
 [isda-investo]: https://www.investopedia.com/terms/i/isda-master-agreement.asp
 [isda]: https://isda.org

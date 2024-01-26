@@ -1,3 +1,6 @@
+from bs4 import BeautifulSoup
+import grequests
+import markdown
 import os
 import unittest
 from . import (
@@ -112,3 +115,43 @@ class TestDocs(unittest.TestCase):
                         assert "### {}".format(v) in enum_doc.read(), error_msg(
                             schema_name, v, enum
                         )  # noqa
+
+    def test_urls_in_docs(s):
+        def exception(request, exception):
+            return f"{request} - {exception}"
+
+        def async_requests(urls):
+            results = grequests.map((grequests.get(u) for u in urls), exception_handler=exception, size=100)
+            return results
+
+        urls = []
+
+        for docname in DOC_NAMES:
+            filename = os.path.join(DOCS_DIR, f"{docname}.md")
+            with open(filename) as f:
+                doc_html = markdown.markdown(f.read())
+                soup = BeautifulSoup(doc_html)
+                links = soup.find_all("a")
+                for link in links:
+                    url = link.get("href")
+                    if not url.startswith("http"):
+                        raise ValueError(f"URL in {docname} must start with http: {url}")
+
+                    urls.append(url)
+
+        results = async_requests(urls)
+
+        warns = []
+        not_founds = []
+        for resp in results:
+            if not resp.ok:
+                warns.append(f"failed {resp.status_code}: {resp.url}")
+            if resp.status_code in [404]:
+                not_founds.append(resp.url)
+
+        if not_founds:
+            raise ValueError(f"URLs not found: \n {not_founds}")
+
+        print("=== Minor URL link warnings ===")
+        for w in warns:
+            print(w)
