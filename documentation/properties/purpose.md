@@ -98,8 +98,8 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── clearing
 │   ├── custody
 │   ├── ips
-│   ├── operational_excess
 │   └── operational_escrow
+├── operational_excess
 ├── other
 ├── prime_brokerage
 ├── ppe
