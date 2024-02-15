@@ -1186,7 +1186,6 @@ This identifies that the piece of collateral used is a security, as mapped via t
 │   ├── isda_1987
 │   ├── isda_1992
 │   ├── isda_2002
-│   ├── ema
 │   ├── drv
 │   ├── fbf
 │   │   └── afb
