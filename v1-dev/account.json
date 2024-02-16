@@ -475,7 +475,7 @@
     "status": {
       "description": "Describes if the Account is active or been cancelled.",
       "type": "string",
-      "enum": ["active", "cancelled", "cancelled_payout_agreed", "other", "transactional"]
+      "enum": ["active","audited" , "cancelled", "cancelled_payout_agreed", "other", "transactional", "unaudited"]
     },
     "trade_date": {
       "description": "The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
