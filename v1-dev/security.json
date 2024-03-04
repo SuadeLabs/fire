@@ -73,6 +73,11 @@
         "format": "date-time"
       }
     },
+    "call_type": {
+      "description": "The call mechanism, if present, for the issuance. For securitisations and other callable securities.",
+      "type": "string",
+      "enum": ["clean_up", "clean_up_reg", "other"]
+    },
     "capital_tier": {
       "description": "The capital tiers based on own funds requirements.",
       "type": "string",
@@ -104,10 +109,6 @@
       "description": "Specifies the approved counterparty credit risk methodology for calculating exposures.",
       "type": "string",
       "enum": ["imm", "oem", "sa", "ssa"]
-    },
-    "clean_up_call": {
-      "description": "",
-      "type": "string"
     },
     "cost_center_code": {
       "description": "The organizational unit or sub-unit to which costs/profits are booked.",
@@ -527,12 +528,12 @@
       "description": "The repayment or amortisation mechanism of the security or securitisation.",
       "type": "string",
       "enum": [
-        "pro_rata",
-        "sequential",
+        "other",
         "pr2s",
         "pr2s_abcp",
         "pr2s_non_abcp",
-        "other"
+        "pro_rata",
+        "sequential"
       ]
     },
     "reporting_entity_name": {
@@ -551,12 +552,12 @@
       "description": "The repayment or amortisation mechanism of the security or securitisation.",
       "type": "string",
       "enum": [
-        "vertical_nominal",
-        "vertical_risk",
-        "revolving",
-        "on_bs",
+        "exempted",
         "first_loss",
-        "exempted"
+        "on_bs",
+        "revolving",
+        "vertical_nominal",
+        "vertical_risk"
       ]
     },
     "risk_country_code": {
