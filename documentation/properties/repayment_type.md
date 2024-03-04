@@ -34,10 +34,10 @@ Pro-rata amortisation
 ### pr2s
 Pro-rata amortisation changing to sequential amortisation. Not compliant
 
-### pr2s_sts
+### pr2s_abcp
 Pro-rata amortisation changing to sequential amortisation. Compliant with STS criteria for on-balance sheet securitisations  (Article 26c (5) of Regulation (EU) 2017/2402).
 
-### pr2s_abs
+### pr2s_non_abcp
 Pro-rata amortisation changing to sequential amortisation. Compliant with STS criteria for non-ABCP transactions  (Guidelines on STS criteria for non-ABCP transactions and Article 21 (5) of Regulation (EU) 2017/2402
 
 ### other
