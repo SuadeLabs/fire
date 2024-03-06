@@ -42,7 +42,7 @@ Please see the [contributing guidelines][contributing] and [guiding principles][
 Included is a [random data generator][random-fire] which will generate data in line with the FIRE schema, but not necessarily realistic. (eg. You might get a loan with a balance of 10 but accrued interest of 1 million)
 
 ### Testing
-You can run tests locally with via `./run_tests.sh` or view the [CI test results here][travis-ci]
+You can run tests locally via `./run_tests.sh` or view the [CI test results here][travis-ci]
 
 
 ---

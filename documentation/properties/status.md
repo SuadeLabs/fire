@@ -17,7 +17,9 @@ The **status** property indicates the current state of the financial product. A 
 ├── transactional
 ├── other
 ├── cancelled
-└── cancelled_payout_agreed
+├── cancelled_payout_agreed
+├── audited
+└── unaudited
 ```
 ### active
 The account is active and in use by the customer.
@@ -38,6 +40,12 @@ The account has been cancelled but funds will be rolled-over in to another accou
 
 ### cancelled_payout_agreed
 The account has been cancelled and the funds are known to be leaving the financial institution.
+
+### audited
+Indicates profits that have been verified by persons independent of the firm that are responsible for the auditing of the firm’s accounts, as specified in condition (a) of Article 26 (2) of the CRR.
+
+### unaudited
+Indicates profits that have not been verified by persons independent of the firm that are responsible for the auditing of the firm’s accounts, thereby not meeting condition (a) of Article 26 (2) of the CRR.
 
 ### other
 Any other status
