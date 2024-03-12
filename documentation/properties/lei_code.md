@@ -15,10 +15,10 @@ According to the [Legal Entity Identifier Regulatory Oversight Committee][web], 
 
 You will find below information on the structure of LEI codes, the components of the reference data associated to each LEI and the definition of entities eligible to obtain an LEI.
 
-Entities who wish to obtain an LEI should consult the page, [How to Obtain an LEI][lei2]. The GLEIF publishes a centralised data base of LEIs. 
+Entities who wish to obtain an LEI should consult the page, [How to Obtain an LEI][lei2]. The GLEIF publishes a centralised data base of LEIs.
 
 [web]: https://www.leiroc.org/lei.htm
-[lei2]: https://staging.leiroc.org/lei/how.htm
+[lei2]: https://www.leiroc.org/lei/how.htm
 
 ### Structure of the LEI code
 

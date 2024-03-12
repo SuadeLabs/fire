@@ -13,4 +13,4 @@ The amount of credit valuation adjustements being recognised by the institution 
 ---
 
 [encumbrance_amount]: https://github.com/suadelabs/fire/blob/master/documentation/properties/encumbrance_amount.md
-[eba-report]:  https://www.eba.europa.eu/documents/10180/974844/EBA+Report+on+Asset+Encumbrance-+September+2015.pdf/e6e2a6ee-6708-4430-a506-5f68ff70736d
+[eba-report]:  https://www.eba.europa.eu/sites/default/files/document_library/Risk%20Analysis%20and%20Data/Risk%20Assessment%20Reports/2022/1036110/Report%20on%20Asset%20Encumbrance%202022.pdf

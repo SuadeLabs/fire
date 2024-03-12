@@ -97,7 +97,7 @@ An SME with special treatment under the capital adequacy rules, invoking a speci
 Other means it is known to **not** be one of the other types. If type is unknown it should just be left blank.
 
 ### ccp
-As defined in Article 2(1) of [EMIR]() and the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2979.html):
+As defined in Article 2(1) of [EMIR][emir] and the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G2979.html):
 > "CCP" means a legal person that interposes itself between the counterparties to the contracts traded on one or more financial markets, becoming the buyer to every seller and the seller to every buyer
 
 From the [US FDIC Regulatory Capital Rules](https://www.fdic.gov/regulations/laws/federal/2013/2013-09-10_final-rule-interim.pdf):
@@ -587,7 +587,7 @@ Other refers to a type of security not covered by the above. If you find yoursel
 ```
 
 ### cash
-A **cash** or cash-equivalent security such as a securitisation of cash deposits. Within [Finrep Annex V part (2)(1)(1.1)(1)](https://www.eba.europa.eu/documents/10180/359626/Annex+V_Instructions_FINREP.docx/26727402-6339-4c33-bb5a-d8e659c27371):
+A **cash** or cash-equivalent security such as a securitisation of cash deposits. Within [Finrep Annex V part (2)(1)(1.1)(1)](https://www.eba.europa.eu/sites/default/files/document_library/Publications/Draft%20Technical%20Standards/2020/ITS/ITS%20on%20supervisory%20reporting%20changes%20related%20to%20CRR2%20and%20Backstop%20Regulation/Annexes/886555/Annex%205%20%28FINREP%29.pdf):
 > "Cash on hand" includes holdings of national and foreign banknotes and coins in circulation that are commonly used to make payments.
 
 ### equity
@@ -700,7 +700,7 @@ Asset-backed securities specifically backed by mortgages.
 Medium-term notes
 
 ### pibs
-[Building Societies Association](https://www.bsa.org.uk/information/consumer-factsheets/general/what-are-pibs) defines Permanent interest bearing shares (PIBS) as fixed-interest securities issued by building societies, and quoted on the stock market.  They are bond like instruments in that they pay interest, but they have no maturity date - PIBS typically exist as long as their issuer does.
+[Building Societies Association](https://www.bsa.org.uk/information/consumer-factsheets/general-information/what-are-pibs) defines Permanent interest bearing shares (PIBS) as fixed-interest securities issued by building societies, and quoted on the stock market.  They are bond like instruments in that they pay interest, but they have no maturity date - PIBS typically exist as long as their issuer does.
 
 ### performance_bond
 *Needs definition*
@@ -742,7 +742,9 @@ A floating-rate note is defined in the [Money Market Statistics Regulation][mm-s
 A government guaranteed floating-rate note.
 
 ### cb_reserve
-As defined in [Finrep Annex V part (2)(1)(1.1)(2)](https://www.eba.europa.eu/documents/10180/359626/Annex+V_Instructions_FINREP.docx/26727402-6339-4c33-bb5a-d8e659c27371)
+As defined in [LCR Regulations Article 10 on Liquid Assets][lcr]:
+> reserves held by the credit institution in a central bank referred to in points (i) and (ii) provided that the credit institution is permitted to withdraw such reserves at any time during stress periods and the conditions for such withdrawal have been specified in an agreement between the relevant competent authority and the ECB or the central bank;
+
 > include balances receivable on demand at central banks.
 
 ### cash_ratio_deposit
@@ -903,16 +905,16 @@ An ISA is an individual savings account which is a scheme of investment satisfyi
 An isa account that is offered and only accessible via the internet.
 
 ### isa_time_deposit
-An [**isa**](#isa) [**time_deposit**](#time_deposit) account.
+An [**isa**][uk-isa] which is also a **time_deposit** account.
 
 ### isa_time_deposit_io
 An isa time deposit account that is offered and only accessible via the internet.
 
 ### isa_current
-An [**isa**](#isa) current account.
+An [**isa**][uk-isa] current account.
 
 ### isa_current_io
-An isa current account that is offered and only accessible via the internet.
+An [**isa**][uk-isa] current account that is offered and only accessible via the internet.
 
 ### ira
 A trust created or organized in the United States for the exclusive benefit of an individual or his beneficiaries. See [US Code Title 26, S.408][ira]
@@ -1183,7 +1185,7 @@ collateral that cannot be classified as residential or commercial property.
 *NEEDS Definition*
 
 ### life_policy
-From Article 212(2) [CRR](https://www.eba.europa.eu/regulation-and-policy/single-rulebook/interactive-single-rulebook/101022), life insurance policies pledged as collateral will be considered if it meets certain criteria outlined in the article. These conditions include ,**but not limited to**, the credit institutions openly being assigned as the beneficiary and the life insurance company being notified of the pledge to the lending institution. Providing the conditions outlined in the article are met, the life insurance is eligble for use as collateral and the lender has a claim to some or all of the death benefit until the loan is repaid.
+From Article 212(2) [CRR](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32013R0575), life insurance policies pledged as collateral will be considered if it meets certain criteria outlined in the article. These conditions include ,**but not limited to**, the credit institutions openly being assigned as the beneficiary and the life insurance company being notified of the pledge to the lending institution. Providing the conditions outlined in the article are met, the life insurance is eligble for use as collateral and the lender has a claim to some or all of the death benefit until the loan is repaid.
 ### cash
 *NEEDS Definition*
 
@@ -1407,17 +1409,17 @@ the debt repayable.
 [sme]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32003H0361
 [sme-what]: http://ec.europa.eu/growth/smes/business-friendly-environment/sme-definition/index_en.htm
 [deposit-broker-qa]: http://www.eba.europa.eu/single-rule-book-qa?p_p_id=questions_and_answers_WAR_questions_and_answersportlet&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=2&_questions_and_answers_WAR_questions_and_answersportlet_jspPage=%2Fhtml%2Fquestions%2Fviewquestion.jsp&_questions_and_answers_WAR_questions_and_answersportlet_viewTab=1&_questions_and_answers_WAR_questions_and_answersportlet_questionId=1382163&_questions_and_answers_WAR_questions_and_answersportlet_statusSearch=1
-[arrangement]: http://ec.europa.eu/internal_market/financial-markets/docs/collateral/directive-presentation_en.pdf
+[arrangement]: https://finance.ec.europa.eu/capital-markets-union-and-financial-markets/financial-markets/post-trade-services/financial-collateral-arrangements_en
 [uk-isa]: http://www.legislation.gov.uk/uksi/1998/1870/contents/made
 [end-date]: https://github.com/suadelabs/fire/blob/master/documentation/properties/end_date.md
 [reg-d]: http://www.federalreserve.gov/boarddocs/supmanual/cch/int_depos.pdf
-[eba-nsfr-report]: https://www.eba.europa.eu/documents/10180/983359/EBA-Op-2015-22+NSFR+Report.pdf
+[eba-nsfr-report]: https://www.eba.europa.eu/publications-and-media/press-releases/eba-publishes-analysis-specific-aspects-net-stable-funding
 [fca-covered-bond]: https://www.handbook.fca.org.uk/handbook/glossary/G2083.html
 [ucits]: http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2009:302:0032:0096:en:PDF
 [eu-covered-bonds-info]: http://ec.europa.eu/finance/investment/legal_texts/index_en.htm
 [sup-rep]: http://publications.europa.eu/resource/cellar/37c79802-fe90-11e3-831f-01aa75ed71a1.0006.03/DOC_1
 [2013-549]: https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32013R0549
-[sg-stat-boards]: https://www.gov.sg/sgdi/statutory-boards
+[sg-stat-boards]: https://www.sgdi.gov.sg/statutory-boards
 [mmfr]: https://eur-lex.europa.eu/eli/reg/2017/1131/oj
 [us-census-multifamily]: https://www.census.gov/construction/nrc/index.html
 [icma-web]: http://dev.icmagroup.org/Regulatory-Policy-and-Market-Practice/repo-and-collateral-markets/legal-documentation/global-master-repurchase-agreement-gmra/

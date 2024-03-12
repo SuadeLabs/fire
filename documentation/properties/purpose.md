@@ -141,10 +141,10 @@ The **purpose** property describes the reason behind the creation or usage of th
 ```
 
 ### dgs_contribution
-Describes an account representing the **contributions to deposit guarantee schemes** paid by the reporting entity as defined by Annex 5 Part 2.48i of the [ITS on supervisory reporting][its]
+Describes an account representing the **contributions to deposit guarantee schemes** paid by the reporting entity as defined by Annex 5 Part 2.48i of the EBA ITS on supervisory reporting.
 
 ### res_fund_contribution
-Describes an account representing the **contributions to resolution funds** paid by the reporting entity as defined by Annex 5 Part 2.48i of the [ITS on supervisory reporting][its]
+Describes an account representing the **contributions to resolution funds** paid by the reporting entity as defined by Annex 5 Part 2.48i of the EBA ITS on supervisory reporting.
 
 ### deposit
 The **deposit** enum value refers to a retail deposit defined in accordance with Article 411 of the [CRR][crr]:
@@ -920,7 +920,6 @@ Use this enum to refer to funds reserved for the purpose of implementing, from a
 [mlardef]: http://www.bankofengland.co.uk/pra/documents/regulatorydata/mlar/sup_chapter16_annex19bg_20120401.pdf
 [pruval]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:JOL_2016_021_R_0005
 [bis_sa_ccr]: https://www.bis.org/publ/bcbs279.pdf
-[its]: https://www.eba.europa.eu/sites/default/documents/files/document_library/Risk%20Analysis%20and%20Data/Reporting%20Frameworks/Reporting%20framework%203.0/3.0%20phase%202/972659/ITS%20on%20supervisory%20reporting%20-%20corrigendum.zip
 [osfi-adc]: https://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/CAR22_chpt4.aspx#fnb49:~:text=Land%20acquisition%2C%20development%20and%20construction%20(ADC,of%20any%20residential%20or%20commercial%20property.
 [osfi-income-producing]: https://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/CAR22_chpt4.aspx#fnb49:~:text=CRE%2020.88%2D20.89%5D-,When%20the%20prospects%20for%20servicing%20the%20loan%20materially%20depend,capacity%20of%20the%20borrower%20to%20service%20the%20debt%20from%20other%20sources,-%2C%20and%20provided%20that
 [osfi-b20]: https://www.osfi-bsif.gc.ca/Eng/Docs/b20_dft.pdf

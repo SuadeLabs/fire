@@ -75,9 +75,10 @@ This is a live loan.
 This is a loan offer or commitment to a customer that a customer could draw down (typically also denoted as off balance sheet).
 
 ### cancellable
-Indicates when an institution has the right to *unconditionally* cancel the commitment without notice to the obligor.  This is either commitment to an undrawn portion of a loan or revolving credit, or commitment to enter into another contract (off-balance sheet).  
+Indicates when an institution has the right to *unconditionally* cancel the commitment without notice to the obligor.  This is either commitment to an undrawn portion of a loan or revolving credit, or commitment to enter into another contract (off-balance sheet).
 
-See definition from [OSFI Chapter 4, P124](Commitments are arrangements that obligate an institution, at a client's request, to extend credit, purchase assets or issue credit substitutes. It includes any such arrangement that can be unconditionally cancelled by the institution at any time without prior notice to the obligor. It also includes any such arrangement that can be cancelled by the institution if the obligor fails to meet conditions set out in the facility documentation, including conditions that must be met by the obligor prior to any initial or subsequent drawdown under the arrangement. Counterparty risk weightings for OTC derivative transactions will not be subject to any specific ceiling. [Basel Framework, CRE 20.94])
+See definition from OSFI Chapter 4, P124:
+> Commitments are arrangements that obligate an institution, at a client's request, to extend credit, purchase assets or issue credit substitutes. It includes any such arrangement that can be unconditionally cancelled by the institution at any time without prior notice to the obligor. It also includes any such arrangement that can be cancelled by the institution if the obligor fails to meet conditions set out in the facility documentation, including conditions that must be met by the obligor prior to any initial or subsequent drawdown under the arrangement. Counterparty risk weightings for OTC derivative transactions will not be subject to any specific ceiling. [Basel Framework, CRE 20.94]
 
 See also [Basel CRE 20.94](https://www.bis.org/basel_framework/chapter/CRE/20.htm?tldate=20220101&inforce=20230101&published=20201126#:~:text=Off%2Dbalance%20sheet,any%20specific%20ceiling.):
 > Off-balance sheet items will be converted into credit exposure equivalents through the use of credit conversion factors (CCF). In the case of commitments, the committed but undrawn amount of the exposure would be multiplied by the CCF. For these purposes, commitment means any contractual arrangement that has been offered by the bank and accepted by the client to extend credit, purchase assets or issue credit substitutes.43 It includes any such arrangement that can be unconditionally cancelled by the bank at any time without prior notice to the obligor. It also includes any such arrangement that can be cancelled by the bank if the obligor fails to meet conditions set out in the facility documentation, including conditions that must be met by the obligor prior to any initial or subsequent drawdown under the arrangement. Counterparty risk weightings for over-the-counter (OTC) derivative transactions will not be subject to any specific ceiling.
@@ -105,8 +106,8 @@ When used in combination with the purpose attribute, 'default_fund', equates to 
 This indicates that capital has been [called up][calledup] by the company issuing the shares but has not been paid yet by the shareholders.
 When used in combination with the purpose attribute, 'default_fund', equates to unfunded default fund contributions.
 
-[paidup]: https://www.investopedia.com/terms/p/paidupcapital.asp
-[calledup]: https://www.investopedia.com/ask/answers/073015/what-difference-between-calledup-share-capital-and-paidup-share-capital.asp
+[paidup]: https://www.acra.gov.sg/how-to-guides/setting-up-a-local-company/share-capital
+[calledup]: https://www.legislation.gov.uk/ukpga/2006/46/section/547?view=plain
 
 ### bankruptcy_remote
 This indicates that the reporting institution has determined that the security will not be available to an entity’s creditors

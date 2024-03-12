@@ -2,3 +2,6 @@ fake-factory==0.5.7
 iso3166==0.8
 jsonschema==4.17.3
 pytest>=7.0.0
+markdown==3.5.2
+grequests==0.7.0
+beautifulsoup4==4.12

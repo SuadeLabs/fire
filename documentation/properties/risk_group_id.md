@@ -12,5 +12,5 @@ The **risk_group_id** is an identifier for a group of economically connected ent
 
 See also [**risk_group_id_2**][cc].
 
-[crr]: https://www.eba.europa.eu/regulation-and-policy/single-rulebook/interactive-single-rulebook/2404
+[crr]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32013R0575
 [cc]: https://github.com/suadelabs/fire/blob/master/documentation/properties/risk_group_id_2.md

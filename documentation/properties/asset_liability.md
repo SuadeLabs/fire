@@ -67,8 +67,8 @@ A loan is an [**asset**][asset] on a firm's balance sheet when future economic b
 ### liability
 A loan is a [**liability**][liability] on a firm's balance sheet if future economic benefits are expected to flow out of the firm. For example, if a bank has a mortgage loan on its balance sheet, and repayments are made which are greater than the required repayments, then the bank expects to return the overpayments to the borrower leading to an outflow of future economic benefits.
 
-[asset]: http://www.ifrs.org/IFRS-for-SMEs/Documents/Module11_version2010_05.pdf
-[liability]: http://www.ifrs.org/IFRS-for-SMEs/Documents/Module11_version2010_05.pdf
+[asset]: https://cdn.ifrs.org/content/dam/ifrs/supporting-implementation/smes/module-11.pdf
+[liability]: https://cdn.ifrs.org/content/dam/ifrs/supporting-implementation/smes/module-11.pdf
 
 ---
 
@@ -80,7 +80,7 @@ A security is valued using either...
 2. [fair value][fair value]: the amount for which an asset could be exchanged, or a liability settled, between knowledgeable, willing parties in an arm's length transaction.
 
 [amortisation]: https://www.iasplus.com/en-gb/standards/ias/ias39
-[impairment test]: http://ec.europa.eu/internal_market/accounting/docs/consolidated/ias36_en.pdf
+[impairment test]: https://www.iasplus.com/en-gb/standards/ias/ias36
 [fair value]: http://www.iasplus.com/en-gb/standards/ias/ias39
 
 If the valuation leads to expected outflows of economic benefits, then the security is a **liability** on the firm's balance sheet. For example if an [equity security][equity security] was purchased by a firm expecting to receieve future inflows of economic benefits through dividend payments, but a market downturn caused a negative fluctuation in dividend payments, the security may have cost more than its expected future value in terms of economic benefit flows and becomes a **liability** on the firm's balance sheet.
