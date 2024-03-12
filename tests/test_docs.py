@@ -57,6 +57,7 @@ class TestDocs(unittest.TestCase):
             "values",
             "vega",
             "vol_adj_fx",
+            # DO NOT ADD TO THIS LIST, ADD DOCUMENTATION!
         ]
 
         properties = all_properties()

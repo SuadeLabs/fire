@@ -73,6 +73,11 @@
         "format": "date-time"
       }
     },
+    "call_type": {
+      "description": "The call mechanism, if present, for the issuance. For securitisations and other callable securities.",
+      "type": "string",
+      "enum": ["clean_up", "clean_up_reg", "other"]
+    },
     "capital_tier": {
       "description": "The capital tiers based on own funds requirements.",
       "type": "string",
@@ -181,6 +186,17 @@
       "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
       "type": "string",
       "format": "date-time"
+    },
+    "excess_spread_type": {
+      "description": "Excess spread",
+      "type":"string",
+      "enum": [
+        "fixed",
+        "fixed_trapped",
+        "none",
+        "variable",
+        "variable_trapped"
+      ]
     },
     "first_arrears_date": {
       "description": "The first date on which this security was in arrears.",
@@ -459,6 +475,10 @@
       "description": "Is the security reported on the balance sheet of the financial institution?",
       "type": "boolean"
     },
+    "originator_id": {
+      "description": "The unique identifier used by the financial institution to identify the originator of the security or securitisation.",
+      "type": "string"
+    },
     "prev_payment_date": {
       "description": "The most recent previous date at which interest was paid or accrued_interest balance returned to zero.",
       "type": "string",
@@ -504,6 +524,18 @@
       "description": "Can the security be rehypothecated by the borrower?",
       "type": "boolean"
     },
+    "repayment_type": {
+      "description": "The repayment or amortisation mechanism of the security or securitisation.",
+      "type": "string",
+      "enum": [
+        "other",
+        "pr2s",
+        "pr2s_abcp",
+        "pr2s_non_abcp",
+        "pro_rata",
+        "sequential"
+      ]
+    },
     "reporting_entity_name": {
       "description": "The name of the reporting legal entity for display purposes.",
       "type": "string"
@@ -511,6 +543,31 @@
     "reporting_id": {
       "description": "The internal ID for the legal entity under which the account is being reported.",
       "type": "string"
+    },
+    "retention_pct": {
+      "description": "The percentage of the issuance retained by the issuer. e.g. 0.05 is 5%.",
+      "type": "number"
+    },
+    "retention_type": {
+      "description": "The repayment or amortisation mechanism of the security or securitisation.",
+      "type": "string",
+      "enum": [
+        "exempted",
+        "first_loss",
+        "on_bs",
+        "revolving",
+        "vertical_nominal",
+        "vertical_risk"
+      ]
+    },
+    "reversion_date": {
+      "description": "The timestamp that indicates the end of an initial period where the 'rate' is applied to a security. After this the interest is calculated using the 'reversion_rate'. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "reversion_rate": {
+      "description": "The rate to which the security will revert after the reversion date. Percentages represented as a decimal/float, so 1.5 implies 1.5%.",
+      "type": "number"
     },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1",
@@ -546,6 +603,7 @@
       "description": "The seniority of the security in the event of sale or bankruptcy of the issuer.",
       "type": "string",
       "enum": [
+        "first_loss_secured",
         "senior_secured",
         "senior_unsecured",
         "subordinated_secured",
@@ -648,9 +706,16 @@
       "enum": [
         "abs",
         "abs_auto",
+        "abs_cc",
         "abs_consumer",
+        "abs_corp",
+        "abs_lease",
         "abs_other",
         "abs_sme",
+        "abs_sme_corp",
+        "abs_sme_retail",
+        "abs_trade_rec",
+        "abs_wholesale",
         "acceptance",
         "bill_of_exchange",
         "bond",

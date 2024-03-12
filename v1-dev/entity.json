@@ -188,6 +188,12 @@
         "S.96.03", "S.96.04", "S.96.09", "T.97.00", "T.98.10", "T.98.20", "U.99.00"
       ]
     },
+    "naics_code": {
+      "description": "North American Industry Classification System - NAICS Code",
+      "type": "integer",
+      "minimum": 10,
+      "maximum": 999999
+    },
     "name": {
       "description": "The name of the person or legal entity to be used for display and reference purposes.",
       "type": "string"
