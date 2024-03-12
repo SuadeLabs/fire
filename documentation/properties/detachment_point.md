@@ -8,7 +8,7 @@ schemas:    [security]
 
 ---
 
-The **detachment point** is the threshold at which losses within the pool of underlying exposures would result in a complete loss of principal for the tranche containing the relevant securitisation position. See [determination of detachment point](https://www.eba.europa.eu/regulation-and-policy/single-rulebook/interactive-single-rulebook/101087).
+The **detachment point** is the threshold at which losses within the pool of underlying exposures would result in a complete loss of principal for the tranche containing the relevant securitisation position. See [determination of detachment point](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32013R0575).
 
 See also [**attachment_point**][attachment_point].
 

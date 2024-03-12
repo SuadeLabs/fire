@@ -10,12 +10,12 @@ schemas:	[loan]
 
 The **arrears_arrangement** is the property of a loan (debt) that describes how the borrower and lender are dealing with the unpaid capital or interest payments indicated in the **arrears_balance**. An arrears_arrangement does not necessarily require a positive arrears_balance as an arrangement may be reached between lender and borrower in anticipation of a future arrears situation eg. *Forbearance*. Forbearance is not an extremely well-defined concept within accounting standards. As such we have adopted the [forbearance definitions and categorisation adopted by the EBA][eba-forbearance-its] and used in the [Finrep ITS][finrep-its]. See also: [BBVA research paper on the topic][bbva-forbearance].
 
-[eba-forbearance-its]: https://eba.europa.eu/documents/10180/449824/EBA-ITS-2013-03+Final+draft+ITS+on+Forbearance+and+Non-performing+exposures.pdf/a55b9933-be43-4cae-b872-9184c90135b9
+[eba-forbearance-its]: https://www.eba.europa.eu/implementing-technical-standard-supervisory-reporting-forbearance-and-non-performing-exposures
 [bbva-forbearance]: https://www.bbvaresearch.com/wp-content/uploads/2017/12/2017-12-IFRS-9-Impact-on-forbearance-practices.pdf
 [finrep-its]: https://eba.europa.eu/sites/default/documents/files/documents/10180/2321183/b67323ac-27fa-482d-926e-ae7ba3e90cb8/Annex%20III%20%28Annex%205%20%28FINREP%29%29.pdf
 
 ### temporary
-This indicates cases where the lender has made a temporary concession to the borrower to assist them with their payments of the **arrears_balance**. 
+This indicates cases where the lender has made a temporary concession to the borrower to assist them with their payments of the **arrears_balance**.
 From [MLAR][mlar]:
 > agreement with the borrower whereby monthly payments are either suspended or less than they would be on a fully commercial basis
 
@@ -36,7 +36,7 @@ included where the appointment of a receiver and/or a manager has been
 made, or where the security is being enforced in other ways (which may
 or may not also involve the existence of arrears e.g. building finance case
 with interest roll up, no arrears, but a current valuation is less than the
-outstanding debt). 
+outstanding debt).
 
 
 [mlar]: http://www.bankofengland.co.uk/pra/documents/regulatorydata/mlar/sup_chapter16_annex19bg_20120401.pdf

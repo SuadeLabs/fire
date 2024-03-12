@@ -580,7 +580,7 @@ Other refers to a type of security not covered by the above. If you find yoursel
 ```
 
 ### cash
-A **cash** or cash-equivalent security such as a securitisation of cash deposits. Within [Finrep Annex V part (2)(1)(1.1)(1)](https://www.eba.europa.eu/documents/10180/359626/Annex+V_Instructions_FINREP.docx/26727402-6339-4c33-bb5a-d8e659c27371):
+A **cash** or cash-equivalent security such as a securitisation of cash deposits. Within [Finrep Annex V part (2)(1)(1.1)(1)](https://www.eba.europa.eu/sites/default/files/document_library/Publications/Draft%20Technical%20Standards/2020/ITS/ITS%20on%20supervisory%20reporting%20changes%20related%20to%20CRR2%20and%20Backstop%20Regulation/Annexes/886555/Annex%205%20%28FINREP%29.pdf):
 > "Cash on hand" includes holdings of national and foreign banknotes and coins in circulation that are commonly used to make payments.
 
 ### equity
@@ -704,7 +704,9 @@ A floating-rate note is defined in the [Money Market Statistics Regulation][mm-s
 A government guaranteed floating-rate note.
 
 ### cb_reserve
-As defined in [Finrep Annex V part (2)(1)(1.1)(2)](https://www.eba.europa.eu/documents/10180/359626/Annex+V_Instructions_FINREP.docx/26727402-6339-4c33-bb5a-d8e659c27371)
+As defined in [LCR Regulations Article 10 on Liquid Assets][lcr]:
+> reserves held by the credit institution in a central bank referred to in points (i) and (ii) provided that the credit institution is permitted to withdraw such reserves at any time during stress periods and the conditions for such withdrawal have been specified in an agreement between the relevant competent authority and the ECB or the central bank;
+
 > include balances receivable on demand at central banks.
 
 ### cash_ratio_deposit
@@ -1158,7 +1160,7 @@ collateral that cannot be classified as residential or commercial property.
 *NEEDS Definition*
 
 ### life_policy
-From Article 212(2) [CRR](https://www.eba.europa.eu/regulation-and-policy/single-rulebook/interactive-single-rulebook/101022), life insurance policies pledged as collateral will be considered if it meets certain criteria outlined in the article. These conditions include ,**but not limited to**, the credit institutions openly being assigned as the beneficiary and the life insurance company being notified of the pledge to the lending institution. Providing the conditions outlined in the article are met, the life insurance is eligble for use as collateral and the lender has a claim to some or all of the death benefit until the loan is repaid.
+From Article 212(2) [CRR](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32013R0575), life insurance policies pledged as collateral will be considered if it meets certain criteria outlined in the article. These conditions include ,**but not limited to**, the credit institutions openly being assigned as the beneficiary and the life insurance company being notified of the pledge to the lending institution. Providing the conditions outlined in the article are met, the life insurance is eligble for use as collateral and the lender has a claim to some or all of the death benefit until the loan is repaid.
 ### cash
 *NEEDS Definition*
 
@@ -1386,7 +1388,7 @@ the debt repayable.
 [uk-isa]: http://www.legislation.gov.uk/uksi/1998/1870/contents/made
 [end-date]: https://github.com/suadelabs/fire/blob/master/documentation/properties/end_date.md
 [reg-d]: http://www.federalreserve.gov/boarddocs/supmanual/cch/int_depos.pdf
-[eba-nsfr-report]: https://www.eba.europa.eu/documents/10180/983359/EBA-Op-2015-22+NSFR+Report.pdf
+[eba-nsfr-report]: https://www.eba.europa.eu/publications-and-media/press-releases/eba-publishes-analysis-specific-aspects-net-stable-funding
 [fca-covered-bond]: https://www.handbook.fca.org.uk/handbook/glossary/G2083.html
 [ucits]: http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2009:302:0032:0096:en:PDF
 [eu-covered-bonds-info]: http://ec.europa.eu/finance/investment/legal_texts/index_en.htm

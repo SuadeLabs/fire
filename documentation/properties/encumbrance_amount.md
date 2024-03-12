@@ -39,8 +39,8 @@ Further reading:
 
 ---
 
-[eba-pres]: http://www.eba.europa.eu/documents/10180/109116/Public+Hearing+Asset+Encumbrance.pdf
-[eba-report]:  https://www.eba.europa.eu/documents/10180/974844/EBA+Report+on+Asset+Encumbrance-+September+2015.pdf/e6e2a6ee-6708-4430-a506-5f68ff70736d
+[eba-pres]: https://www.eba.europa.eu/implementing-technical-standard-supervisory-reporting-asset-encumbrance
+[eba-report]:  https://www.eba.europa.eu/sites/default/files/document_library/Risk%20Analysis%20and%20Data/Risk%20Assessment%20Reports/2022/1036110/Report%20on%20Asset%20Encumbrance%202022.pdf
 [gmra]: https://www.icmagroup.org/market-practice-and-regulatory-policy/repo-and-collateral-markets/icma-ercc-publications/frequently-asked-questions-on-repo/19-what-is-the-gmra/#:~:text=GMRA%20is%20the%20acronym%20for,and%20repo%20markets%20in%20Europe.global-master-repurchase-agreement-gmra/
 [lcr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
 [encumbrance_type]: https://github.com/suadelabs/fire/blob/master/documentation/properties/encumbrance_type.md

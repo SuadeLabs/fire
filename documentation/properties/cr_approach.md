@@ -26,8 +26,8 @@ See [Basel CRE41 Securitisation: Standardised Approach (SEC_SA)](https://www.bis
 
 ### sec_sa_lt
 Securitisation Standardised Approach - Look-through Approach
-For securitisation calculations, when the financial institution has full knowledge of the composition of the underlying exposures of pool at all time, the institution can apply the "look-through" approach to senior securitization exposures.  
-See [OSFI Chapter 7, P134 or Basel Framework, CRE 40.50](https://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/CAR22_chpt6.aspx#ToC6.6.5)
+For securitisation calculations, when the financial institution has full knowledge of the composition of the underlying exposures of pool at all time, the institution can apply the "look-through" approach to senior securitization exposures.
+See [OSFI Chapter 7, P134 or Basel Framework, CRE 40.50][osfi-chapter-7]
 
 ### eif_lt
 Equity Investments in Funds - Look-through Approach
@@ -50,3 +50,6 @@ See [Basel CRE60 Equity investments in funds, CRE 60.8](https://www.bis.org/base
 ### sec_erba
 Securitisation External-Ratings-Based Approach
 See [Basel CRE42 Securitisation: External-Ratings-Based Approach (SEC_ERBA)](https://www.bis.org/basel_framework/chapter/CRE/42.htm)
+
+---
+[osfi-chapter-7]: https://www.osfi-bsif.gc.ca/en/guidance/guidance-library/capital-adequacy-requirements-car-2024-chapter-7-settlement-counterparty-risk

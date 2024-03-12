@@ -154,6 +154,6 @@ class TestDocs(unittest.TestCase):
         if not_founds:
             raise ValueError(f"URLs not found: \n {not_founds}")
 
-        print("=== Minor URL link warnings ===")
+        print("\n=== Minor URL link warnings ===\n")
         for w in warns:
             print(w)
