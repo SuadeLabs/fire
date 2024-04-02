@@ -637,7 +637,9 @@ refer to interest cashflows only, and do not include any principal flows
 ## Loan
 ```bash
 ├── house_purchase
+│   └── house_purchase_cstr
 ├── first_time_buyer
+│   └── first_time_buyer_cstr
 ├── bridging_loan
 ├── buy_to_let
 │   ├── buy_to_let_house_purchase
@@ -652,9 +654,12 @@ refer to interest cashflows only, and do not include any principal flows
 ├── promotional
 ├── reference
 ├── remortgage
+│   └── remortgage_construct
 ├── remortgage_other
+│   └── remortgage_othr_cstr
 ├── speculative_property
 ├── further_advance
+│   └── further_advance_cstr
 ├── non_b20
 ├── agriculture
 ├── construction
@@ -669,8 +674,14 @@ refer to interest cashflows only, and do not include any principal flows
 ### house_purchase
 >The **house_purchase** value indicates that the purpose of the loan is for the purchase of residential property for occupation by the borrower.
 
+### house_purchase_cstr
+House-purchase *and* construction. See: **construction**
+
 ### first_time_buyer
 >The **first_time_buyer** value is a term used in the British and Irish property markets and defined in the Bank of England's [Mortgage Lending & Administration (MLAR) Definitions][mlardef] section E6.1/2 It is a sub-category of a **house_purchase** where "the tenure of the main borrower immediately before this advance was not owner-occupier."
+
+### first_time_buyer_cstr
+First-time-buyer *and* construction. See: **construction**
 
 ### bridging_loan
 >A **bridging_loan** is a short-term financing option used typically used for property owners to finance the period between buying a new property and selling an old one when the timing of the two does not match. It can also be used by property developers or investors who value speed over cost.
@@ -708,6 +719,9 @@ Use this enumeration to refer to a loan that is not in the books of the reportin
 ### further_advance
 *Needs description*
 
+### further_advance_cstr
+Further-advance *and* construction. See: **construction**
+
 ### non_b20
 Those Loans not complying with the guidelines and expectations set out in OSFI's [Guideline B-20: Residential Mortgage Insurance Underwriting Practices and Procedures][osfi-b20].
 
@@ -732,6 +746,9 @@ As outlined in [LCR][lcr] Article 31(9), a **promotional loan**
 ### remortgage
 >The **remortgage** value indicates a re-mortgage or refinancing of an existing property by an existing customer of the firm who had a loan with a **house_purchase** purpose. Note that this does not include re-mortgages of **first_time_buyer** and **buy_to_let** loans which should retain their respective purposes in the event of a re-mortgage. See [MLAR Definitions][mlardef] section E6.4/5.
 
+### remortgage_construct
+Remortgage *and* construction. See: **construction**
+
 ### speculative_property
 From [CRR][crr] definitions (79):
 > speculative immovable property financing‧ means loans for the purposes of the acquisition of or development or construction on land in relation to immovable property, or of and in relation to such property, with the intention of reselling for profit;
@@ -740,6 +757,9 @@ Also used to categorize Specialised Lending exposures for High-volatility Commer
 
 ### remortgage_other
 >The **remortgage_other** value indicates a re-mortgage by a new customer who is refinancing a loan from another lender.
+
+### remortgage_othr_cstr
+Remortgage-other *and* construction. See: **construction**
 
 ### agriculture
 Loans given for the purpose of financing agriculture development or production.

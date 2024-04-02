@@ -415,8 +415,11 @@
         "construction",
         "consumer_buy_to_let",
         "first_time_buyer",
+        "first_time_buyer_cstr",
         "further_advance",
+        "further_advance_cstr",
         "house_purchase",
+        "house_purchase_cstr",
         "ips",
         "lifetime_mortgage",
         "non_b20",
@@ -429,7 +432,9 @@
         "promotional",
         "reference",
         "remortgage",
+        "remortgage_construct",
         "remortgage_other",
+        "remortgage_othr_cstr",
         "speculative_property"
       ]
     },
