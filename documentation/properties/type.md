@@ -1141,10 +1141,29 @@ The [EC Collateral Directive][arrangement] states:
 > The assets can be provided: either by transfer of full ownership from a collateral provider to a collateral taker; or by the transfer of possession from a collateral provider to a collateral taker under a security right (e.g. pledge, charge or lien), where the full ownership of the assets remains with the collateral provider.
 
 ### residential_property
-Property composed of one or more dwellings.
+Immovable property whose occupation is primarily for residential use. Specific regulatory definitions can be found below:
+
+From EBA [Closing Real Estate Data Gaps](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017Y0131%2801%29) Section 2 (1)(1)(38):
+
+‘Residential real estate’ (RRE) means any immovable property located in the domestic territory, available for dwelling purposes, acquired, built or renovated by a private household and that is not qualified as a CRE property. If a property has a mixed use, it should be considered as different properties (based for example on the surface areas dedicated to each use) whenever it is feasible to make such breakdown; otherwise, the property can be classified according to its dominant use.
 
 ### commercial_property
-Immovable property whose occupation is for non-residential use (e.g. used for business activities and profit generation).
+
+Immovable property whose occupation is primarily for non-residential use (e.g. used for business activities and profit generation). Specific regulatory definitions can be found below:
+
+From EBA [Closing Real Estate Data Gaps](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017Y0131%2801%29) Section 2 (1)(1)(4):
+
+‘Commercial real estate’ (CRE) means any income-producing real estate, either existing or under development, and excludes:
+
+    (a) social housing;
+    (b) property owned by end-users;
+    (c) buy-to-let housing.
+
+If a property has a mixed CRE and RRE use, it should be considered as different properties (based for example on the surface areas dedicated to each use) whenever it is feasible to make such breakdown; otherwise, the property can be classified according to its dominant use;
+
+From [OSFI Financial Reporting Instructions: Data Definitions for BH](https://www.osfi-bsif.gc.ca/en/data-forms/reporting-returns/filing-financial-returns/financial-reporting-instructions?title=BH&field_industry_target_id=All&field_publication_type_target_id=All&field_return_target_id=All):
+
+Completed retail, office/commercial, industrial, mixed use (with less than 50%  residential), warehouse and special purpose properties with > 50% of the space leased/rented to tenants not related to the owner or affiliates.  Includes long term care facilities.
 
 ### commercial_property_hr
 Commercial property collateral that does not provide the lender with an adequate level of security and may attract a higher risk weight, i.e. one or more of the conditions laid out in Article 126 (2) of CRR 275/2013 is not met.
@@ -1170,6 +1189,10 @@ For the purposes of this definition of commercial_property_hr, if the collateral
 Property composed of five or more residential dwellings.
 [US Census Bureau definition][us-census-multifamily]:
 > buildings with five units or more
+
+[OSFI Financial Reporting Instructions: Data Definitions for BH](https://www.osfi-bsif.gc.ca/en/data-forms/reporting-returns/filing-financial-returns/financial-reporting-instructions?title=BH&field_industry_target_id=All&field_publication_type_target_id=All&field_return_target_id=All):
+
+> Completed rental apartment buildings (> 4 units). Includes mixed use properties where residential space represents more than 50% of total space.
 
 ### immovable_property
 As per Artcile 124(1) [CRR][crr], this identifies **immovable property**
