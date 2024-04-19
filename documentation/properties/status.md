@@ -130,7 +130,10 @@ This indicates that the transaction is still unsettled after its due delivery da
 ```
 
 ### unsettled
+
 This indicates that the transaction is still unsettled after its due delivery date. Under the Basel framework, this transaction would be in scope for the requirements defined under [the capital treatment of unsettled transactions and failed trades][CRE70]"
+
+
 ---
 [lcr]:  http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
 [reg-d]: https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=fe8bd6e281e0788a9ba7efda92e96e2f&mc=true&n=pt12.2.204&r=PART&ty=HTML#se12.2.204_12

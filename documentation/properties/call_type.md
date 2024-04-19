@@ -12,8 +12,7 @@ A clean-up call is a call option provision in a securitisation whereby the origi
 
 As defined in CRR Article 242:
 
-[clean-up call](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02013R0575-20240101#:~:text=%E2%80%98clean%2Dup%20call,pre%2Dspecified%20level%3B)
-
+[clean-up call](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575#:~:text=%E2%80%A7clean%2Dup%20call%20option%E2%80%A7%20means%20a%20contractual%20option%20for%20the%20originator%20to%20repurchase%20or%20extinguish%20the%20securitisation%20positions%20before%20all%20of%20the%20underlying%20exposures%20have%20been%20repaid%2C%20when%20the%20amount%20of%20outstanding%20exposures%20falls%20below%20a%20specified%20level)
 
 ### clean_up
 A clean-up call provision exists, but does not meet the regulatory criteria
