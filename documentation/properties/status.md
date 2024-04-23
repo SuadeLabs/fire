@@ -95,6 +95,7 @@ This is a loan where the customer has defaulted or is non-performing.
 ├── called_up
 ├── bankruptcy_remote
 ├── unsettled
+    └── free_deliveries
 └── non_operational
 ```
 
@@ -123,16 +124,24 @@ This indicates that the security does not meet the requirements set in Article 8
 ### unsettled
 This indicates that the transaction is still unsettled after its due delivery date. Under the Basel framework, this transaction would be in scope for the requirements defined under [the capital treatment of unsettled transactions and failed trades][CRE70]"
 
+### free_deliveries
+
+From [CRE70.10](https://www.bis.org/basel_framework/chapter/CRE/70.htm#:~:text=Capital%20requirements%20for%20non%2DDvP%20transactions%20(free%20deliveries)), free deliveries are a specific type of unsettled transaction. Indicates that cash is paid without receipt of the corresponding receivable  (securities, foreign currencies, gold, or commodities) or, conversely, deliverables were delivered without receipt of the corresponding cash payment (non-DvP, or free deliveries) expose firms to a risk of loss on the full amount of cash paid or deliverables delivered.
+
 
 ## Derivative
 ```bash
 └── unsettled
+    └── free_deliveries
 ```
 
 ### unsettled
 
 This indicates that the transaction is still unsettled after its due delivery date. Under the Basel framework, this transaction would be in scope for the requirements defined under [the capital treatment of unsettled transactions and failed trades][CRE70]"
 
+### free_deliveries
+
+From [CRE70.10](https://www.bis.org/basel_framework/chapter/CRE/70.htm#:~:text=Capital%20requirements%20for%20non%2DDvP%20transactions%20(free%20deliveries)), free deliveries are a specific type of unsettled transaction. Indicates that cash is paid without receipt of the corresponding receivable  (securities, foreign currencies, gold, or commodities) or, conversely, deliverables were delivered without receipt of the corresponding cash payment (non-DvP, or free deliveries) expose firms to a risk of loss on the full amount of cash paid or deliverables delivered.
 
 ---
 [lcr]:  http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061

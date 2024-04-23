@@ -681,6 +681,7 @@
       "enum": [
         "bankruptcy_remote",
         "called_up",
+        "free_deliveries",
         "non_operational",
         "paid_up",
         "unsettled"
