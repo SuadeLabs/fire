@@ -1,13 +1,16 @@
-from bs4 import BeautifulSoup
-import grequests
-import markdown
+import asyncio
 import os
 import unittest
+
+import httpx
+import markdown
+from bs4 import BeautifulSoup
+
 from . import (
+    DOC_NAMES,
+    DOCS_DIR,
     SCHEMA_NAMES,
     all_properties,
-    DOCS_DIR,
-    DOC_NAMES,
     property_doc_name,
     schema_enum_registry,
 )
@@ -117,14 +120,12 @@ class TestDocs(unittest.TestCase):
                             schema_name, v, enum
                         )  # noqa
 
-    def test_urls_in_docs(s):
-        def exception(request, exception):
-            return f"{request} - {exception}"
+    def test_urls_in_docs(self):
+        async def async_requests(urls):
+            async with httpx.AsyncClient(timeout=60) as client:
+                responses = (client.get(url) for url in urls)
+                results = await asyncio.gather(*responses, return_exceptions=True)
 
-        def async_requests(urls):
-            results = grequests.map(
-                (grequests.get(u) for u in urls), exception_handler=exception, size=100
-            )
             return results
 
         urls = []
@@ -142,19 +143,22 @@ class TestDocs(unittest.TestCase):
 
                     urls.append(url)
 
-        results = async_requests(urls)
+        results = asyncio.run(async_requests(urls))
 
         warns = []
         not_founds = []
-        for resp in results:
-            if not resp.ok:
-                warns.append(f"failed {resp.status_code}: {resp.url}")
-            if resp.status_code in [404]:
-                not_founds.append(resp.url)
+        for response in results:
+            if isinstance(response, httpx.HTTPError):
+                warns.append(f"failed {response!s}: {response.request.url!s}")
+            else:
+                if not response.is_success:
+                    warns.append(f"failed {response.status_code}: {response.url!s}")
 
-        if not_founds:
-            raise ValueError(f"URLs not found: \n {not_founds}")
+                if response.status_code in (404,):
+                    not_founds.append(str(response.url))
 
         print("\n=== Minor URL link warnings ===\n")
         for w in warns:
             print(w)
+
+        assert not not_founds, f"URLs not found: \n {not_founds}"
