@@ -536,6 +536,7 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │   │   └── pref_share
 │   ├── share_agg
 │   └── speculative_unlisted
+│   └── main_index_equity
 ├── debt
 │   ├── bond
 │   ├── covered_bond
@@ -609,6 +610,9 @@ As per OSFI and BCBS, a Speculative unlisted equity is defined as "an equity inv
 
 ### treasury
 According to IAS 32.33, if an entity reacquires its own equity instruments, those instruments shall be considered **treasury shares**, and shall be deducted from equity.
+
+### main_index_equity
+The main_index_equity identifies equities that are constituents of a main index for the purposes of applying a volatility adjustment in line with [Article 224](https://www.eba.europa.eu/regulation-and-policy/single-rulebook/interactive-single-rulebook/16006).
 
 ### debt
 This is a "catch all" term for debt of any kind, *bond*, *bond_amortising*, *covered_bond*, *abs*, *residential_mbs*, *non_residential_mbs*, *frn*, *govt_gteed_frn*, to be used when further granularity is not available or not needed.
