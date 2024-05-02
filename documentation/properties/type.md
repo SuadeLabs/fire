@@ -802,6 +802,7 @@ Index securities are reference records recording the details of an index using t
 │   └── isa_io
 ├── money_market
 ├── non_product
+│   ├── accruals
 │   ├── amortisation
 │   ├── deferred
 │   │   └── deferred_tax
@@ -810,6 +811,7 @@ Index securities are reference records recording the details of an index using t
 │   ├── income
 │   ├── intangible
 │   ├── non_deferred
+│   ├── prepayments
 │   ├── provision
 │   ├── reserve
 │   ├── suspense
@@ -949,6 +951,9 @@ Deposit or depository account is defined in the [Directive regarding the mandato
 This is an overarching term used to define any non-product accounts that may exist on the balance sheet, ledger or other income/P&L accounts.
 
 ### amortisation
+accruals are liabilities to pay for goods or services that have been received or supplied but have not been paid, invoiced or formally agreed with the supplier, including amounts due to employees (for example, amounts relating to accrued vacation pay). https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2022/issued/part-a/ias-37-provisions-contingent-liabilities-and-contingent-assets.pdf
+
+### amortisation
 An account which holds the **amortisation amount** of intangible assets measured at cost model. IAS 38.74 defines cost model measurement of intangible assets as follow:
 > After initial recognition intangible assets should be carried at cost less accumulated **amortisation** and impairment losses
 
@@ -987,6 +992,10 @@ Transactions will be considered to be in [**suspense**][suspense] if there is so
 MAS Notice 610 and Notice 1003 refers to **suspense** accounts as all outstanding unreconciled amounts that are kept in suspense.
 
 [suspense]: https://www.investopedia.com/terms/s/suspenseaccount.asp
+
+
+### prepayments
+A prepaid expense is an expenditure paid for in one accounting period, but for which the underlying asset will not be consumed until a future period. https://www.accountingtools.com/articles/prepaid-expenses-accounting
 
 ### provision
 IAS 37.10 defines a **provision** as:
