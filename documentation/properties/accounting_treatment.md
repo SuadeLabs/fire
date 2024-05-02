@@ -35,6 +35,10 @@ Financial assets measured at amortised cost in accordance with IFRS.
 
 ### held_for_hedge
 
+### held_for_sale
+a non-current asset or disposal group to be classified as held for sale if its carrying amount will be recovered principally through a sale transaction instead of through continuing use. https://www.ifrs.org/issued-standards/list-of-standards/ifrs-5-non-current-assets-held-for-sale-and-discontinued-operations/
+
+
 ### held_to_maturity
 
 ### loans_and_recs
