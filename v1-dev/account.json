@@ -247,6 +247,11 @@
       "type": "integer",
       "monetary": true
     },
+    "minimum_balance": {
+      "description": "Indicates the minimum balance of each account within the aggregate. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
     "minimum_balance_eur": {
       "description": "Indicates the minimum balance, in Euros, of each account within the aggregate. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
