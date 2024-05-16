@@ -318,6 +318,11 @@
       "minimum": 0,
       "monetary": true
     },
+    "minimum_balance": {
+      "description": "Indicates the minimum balance of each loan within the aggregate.",
+      "type": "integer",
+      "monetary": true
+    },
     "minimum_balance_eur": {
       "description": "Indicates the minimum balance, in Euros, of each loan within the aggregate.",
       "type": "integer",
