@@ -120,7 +120,7 @@
       "monetary": true
     },
     "cum_write_offs": {
-      "description": "Contains monetary value where one loan was partially written off and retains an impairment type individual or collective.",
+      "description": "The portion of the loan which has been written off.",
       "type": "integer",
       "minimum": 0,
       "monetary": true
