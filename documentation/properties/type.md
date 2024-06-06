@@ -752,7 +752,7 @@ As defined in [LCR Regulations Article 10 on Liquid Assets][lcr]:
 > include balances receivable on demand at central banks.
 
 ### cash_ratio_deposit
-The [BofE](http://www.bankofengland.co.uk/statistics/Documents/faq/crds.pdf) defines this as:
+The [BofE](https://www.bankofengland.co.uk/statistics/notice/2024/statistical-notice-2024-08) defines this as:
 > The Levy will be applied on a proportional basis, which means that the Bank will allocate the policy costs to be recovered by the Levy in proportion to an eligible institution’s liability base. Eligible liabilities are defined in the Glossary. This will be a continuation of how the CRD scheme operated. The policy rationale for using the eligible liability base is the link between the size of a financial institution’s liabilities and its potential impact on the Bank’s financial stability and monetary policy functions.
 
 ### guarantee
