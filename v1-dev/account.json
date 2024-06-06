@@ -491,6 +491,7 @@
       "description": "This is the type of the account with regards to common regulatory classifications.",
       "type": "string",
       "enum": [
+        "accruals",
         "amortisation",
         "bonds",
         "call",
@@ -517,6 +518,7 @@
         "non_product",
         "other",
         "prepaid_card",
+        "prepayments",
         "provision",
         "reserve",
         "retail_bonds",
