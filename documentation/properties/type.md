@@ -981,7 +981,7 @@ Deposit or depository account is defined in the [Directive regarding the mandato
 ### non_product
 This is an overarching term used to define any non-product accounts that may exist on the balance sheet, ledger or other income/P&L accounts.
 
-### amortisation
+### accruals
 accruals are liabilities to pay for goods or services that have been received or supplied but have not been paid, invoiced or formally agreed with the supplier, including amounts due to employees (for example, amounts relating to accrued vacation pay). https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2022/issued/part-a/ias-37-provisions-contingent-liabilities-and-contingent-assets.pdf
 
 ### amortisation

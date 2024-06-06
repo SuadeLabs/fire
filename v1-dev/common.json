@@ -11,6 +11,7 @@
          "fv_thru_pnl",
          "held_for_hedge",
          "held_for_trading",
+         "held_for_sale",
          "held_to_maturity",
          "loans_and_recs",
          "ntnd_cost_based",
