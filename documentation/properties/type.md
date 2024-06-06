@@ -801,7 +801,7 @@ As defined in [LCR Regulations Article 10 on Liquid Assets][lcr]:
 
 ### cash_ratio_deposit
 The [BofE](http://www.bankofengland.co.uk/statistics/Documents/faq/crds.pdf) defines this as:
-> non-interest bearing deposits lodged with the Bank of England by eligible institutions (ie. banks and building societies), who have reported average eligible liabilities (ELs) of over £600 million over a calculation period. The level of each institution's CRD is currently calculated twice-yearly (currently in May and November) at 0.18% of average ELs, over the previous six end-calendar months, in excess of £600mn. The value bands and ratios were specified by HM Treasury in the Cash Ratio Deposits (Value Bands and Ratios) Order (2013 No 1189).
+> The Levy will be applied on a proportional basis, which means that the Bank will allocate the policy costs to be recovered by the Levy in proportion to an eligible institution’s liability base. Eligible liabilities are defined in the Glossary. This will be a continuation of how the CRD scheme operated. The policy rationale for using the eligible liability base is the link between the size of a financial institution’s liabilities and its potential impact on the Bank’s financial stability and monetary policy functions.
 
 ### guarantee
 From EU [Supervisory Reporting][sup-rep] part 2(9):
