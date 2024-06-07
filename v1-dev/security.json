@@ -282,7 +282,8 @@
         "iia_non_op",
         "iib",
         "iib_non_op",
-        "ineligible"
+        "ineligible",
+        "ineligible_non_op"
       ]
     },
     "impairment_amount": {
