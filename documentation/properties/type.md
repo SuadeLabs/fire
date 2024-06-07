@@ -629,7 +629,7 @@ The main_index_equity identifies equities that are constituents of a main index 
 ### ciu_lvl_1_cash_cb
 CIU where the underlying is Level 1 coins/banknotes and/or central bank exposures
 
-### ciu_lvl_1_excl_cov_bond
+### ciu_lvl_1_excl_cov
 CIU where the underlying is Level 1 assets excluding extremely high quality covered bonds
 
 ### ciu_lvl_1_cov_bond

@@ -727,7 +727,7 @@
         "cd",
         "ciu_lvl_1_cash_cb",
         "ciu_lvl_1_cov_bond",
-        "ciu_lvl_1_excl_cov_bond",
+        "ciu_lvl_1_excl_cov",
         "ciu_lvl_2a_corp_bond",
         "ciu_lvl_2a_cov_bond",
         "ciu_lvl_2a_public_sec",
