@@ -22,6 +22,7 @@ The **hqla_class** of a security product is the classification of the security w
 ├── iib
 │   └── iib_non_op
 ├── ineligible
+│   └── ineligible_non_op
 └── exclude
 ```
 
@@ -55,6 +56,9 @@ Level 2B Assets that do not meet all operational requirements for a liquid asset
 
 ### ineligible
 Assets that do not qualify for any of the HQLA classes set out in Chapter 2 of the LCR Regulation (or otherwise deemed ineligible by the firm or it's national supervisor) should be classified as **ineligible**.
+
+### ineligible_non_op
+Ineligible Assets that do not meet all operational requirements for a liquid asset, as defined in [LCR][lcr] Article 8.
 
 ### exclude
 The exclude identifier is used to provide a manual override to exclude certain securities from an HQLA report for *credit enhancement or for operational reasons* according to [LCR][lcr] Article 8 and in particular:
