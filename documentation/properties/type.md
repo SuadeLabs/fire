@@ -625,7 +625,7 @@ The main_index_equity identifies equities that are constituents of a main index 
 ### ciu_cash_cb
 CIU where the underlying is coins/banknotes and/or central bank exposures
 
-### ciu_sec_excl_cov
+### ciu_secs_excl_cov
 CIU where the underlying is debt securities excluding covered bonds
 
 ### ciu_cov_bond
