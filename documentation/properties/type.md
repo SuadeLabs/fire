@@ -789,14 +789,22 @@ Mortgages insured by the Department of Veterans Affairs.
 │   ├── reit_pref
 │   ├── share
 │   │   ├── common
+│   │   ├── ciu_cash_cb
+│   │   ├── ciu_secs_excl_cov
+│   │   ├── ciu_cov_bond
+│   │   ├── ciu_corp_bond
+│   │   ├── ciu_public_sec
+│   │   ├── ciu_rmbs_auto
+│   │   ├── ciu_abs_oth
+│   │   ├── ciu_shares
 │   │   ├── cpp
+│   │   ├── cpp_tarp_pref
 │   │   ├── cs_usg
 │   │   ├── cs_warrant
 │   │   ├── mcp
 │   │   ├── mcp_usg
-│   │   ├── treasury
 │   │   ├── pref_share
-│   │   └── cpp_tarp_pref
+│   │   └── treasury
 │   ├── share_agg
 │   ├── speculative_unlisted
 │   ├── trups
@@ -949,41 +957,29 @@ This is cumulative dated preferred (TRUPS) - trust Preferred Securities (trups) 
 
 The main_index_equity identifies equities that are constituents of a main index for the purposes of applying a volatility adjustment in line with [Article 224](https://www.eba.europa.eu/regulation-and-policy/single-rulebook/interactive-single-rulebook/16006).
 
-### ciu_lvl_1_cash_cb
-CIU where the underlying is Level 1 coins/banknotes and/or central bank exposures
+### ciu_cash_cb
+CIU where the underlying is coins/banknotes and/or central bank exposures
 
-### ciu_lvl_1_excl_cov
-CIU where the underlying is Level 1 assets excluding extremely high quality covered bonds
+### ciu_sec_excl_cov
+CIU where the underlying is debt securities excluding covered bonds
 
-### ciu_lvl_1_cov_bond
-CIU where the underlying is Level 1 extremely high quality covered bonds
+### ciu_cov_bond
+CIU where the underlying is covered bonds
 
-### ciu_lvl_2a_corp_bond
-CIU where the underlying is Level 2A corporate debt securities (CQS1)
+### ciu_corp_bond
+CIU where the underlying is corporate debt securities
 
-### ciu_lvl_2a_cov_bond
-CIU where the underlying is Level 2A high quality covered bonds (CQS1/2)
+### ciu_public_sec
+CIU where the underlying is claims on or guaranteed by central governments, central banks, regional governments, local authorities or public sector entities
 
-### ciu_lvl_2a_public_sec
-CIU where the underlying is Level 2A claims on or guaranteed by central governments, central banks, regional governments, local authorities or public sector entities
+### ciu_rmbs_auto
+CIU where the underlying is asset-backed securities (residential or auto)
 
-### ciu_lvl_2b_rmbs_auto
-CIU where the underlying is Level 2B asset-backed securities (residential or auto)
+### ciu_abs_oth
+CIU where the underlying is asset-backed securities (commercial or individuals)
 
-### ciu_lvl_2b_cov_bond
-CIU where the underlying is Level 2B High quality covered bonds
-
-### ciu_lvl_2b_corp_bond
-CIU where the underlying is Level 2B asset-backed securities (commercial or individuals)
-
-### ciu_lvl_2b_abs_oth
-CIU where the underlying is Level 2B corporate debt securities (CQS2/3)
-
-### ciu_lvl_2b_shares
-CIU where the underlying is Level 2B shares (major stock index)
-
-### ciu_lvl_2b_public_sec
-CIU where the underlying is Level 2B claims on or guaranteed by central governments, central banks, regional governments, local authorities or public sector entities
+### ciu_shares
+CIU where the underlying is shares (major stock index)
 
 ### debt
 This is a "catch all" term for debt of any kind, _bond_, _bond_amortising_, _covered_bond_, _abs_, _residential_mbs_, _non_residential_mbs_, _frn_, _govt_gteed_frn_, to be used when further granularity is not available or not needed.
