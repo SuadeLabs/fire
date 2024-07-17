@@ -78,6 +78,13 @@
       "description": "The number of full time staff.",
       "type": "integer"
     },
+    "internal_credit_assessment": {
+      "description": "Grade calculated using credit risk assessment",
+      "type":"string",
+      "enum": [
+	      "A+", "A", "B", "C"  
+      ]
+    },
     "internal_rating": {
       "description": "Categorization of unrated exposure",
       "type":"string",
