@@ -78,13 +78,6 @@
       "description": "The number of full time staff.",
       "type": "integer"
     },
-    "internal_credit_assessment": {
-      "description": "Grade calculated using credit risk assessment",
-      "type":"string",
-      "enum": [
-	      "A+", "A", "B", "C"  
-      ]
-    },
     "internal_rating": {
       "description": "Categorization of unrated exposure",
       "type":"string",
@@ -240,6 +233,13 @@
     "risk_group_id_2":{
       "description": "The secondary identifier for the secondary group representing a single risk entity where no relationship of control exists",
       "type": "string"
+    },
+    "scra": {
+      "description": "Grade calculated using credit risk assessment",
+      "type":"string",
+      "enum": [
+	      "A+", "A", "B", "C"  
+      ]
     },
     "sic_code": {
       "description": "The UK SIC 2007 standard industry and sector classification.",
