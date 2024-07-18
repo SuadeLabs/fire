@@ -12,14 +12,14 @@ schemas:    [entity]
 The **scra** represents the grade given to an entity based on the Standardised Credit Risk Assessment (SCRA) as per Article 121 CRR. [Internal credit assessment grades as per SCRA under Basel 3.1](https://www.bis.org/basel_framework/chapter/CRE/20.htm)
 
 
-### A+
+### a_plus
 Grade given to entity that satisfies criteria under CRR Article 121(2)(b). 
 
-### A
+### a
 Grade given to entity that satisfies criteria under CRR Article 121(1)(a)
 
-### B
+### b
 Grade given to entity that satisfies criteria under CRR Article 121(1)(b)
 
-### C
+### c
 Grade given to entity that satisfies criteria under CRR Article 121(1)(c)

@@ -238,7 +238,7 @@
       "description": "Grade calculated using credit risk assessment",
       "type":"string",
       "enum": [
-	      "A+", "A", "B", "C"  
+	      "a", "a_plus", "b", "c"  
       ]
     },
     "sic_code": {
