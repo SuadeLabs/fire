@@ -1,15 +1,15 @@
 ---
 layout:     property
-title:      "internal_credit_assessment"
+title:      "scra"
 schemas:    [entity]
 
 ---
 
-# internal_credit_assessment
+# scra
 
 ---
 
-The **internal_credit_assessment** represents the grade given to an entity based on the Standardised Credit Risk Assessment (SCRA) as per Article 121 CRR. [Internal credit assessment grades as per SCRA under Basel 3.1](https://www.bis.org/basel_framework/chapter/CRE/20.htm)
+The **scra** represents the grade given to an entity based on the Standardised Credit Risk Assessment (SCRA) as per Article 121 CRR. [Internal credit assessment grades as per SCRA under Basel 3.1](https://www.bis.org/basel_framework/chapter/CRE/20.htm)
 
 
 ### A+
