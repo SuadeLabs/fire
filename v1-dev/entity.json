@@ -235,7 +235,7 @@
       "type": "string"
     },
     "scra": {
-      "description": "Grade calculated using credit risk assessment",
+      "description": "Grade calculated using the Basel Standardised Credit Risk Assessment",
       "type":"string",
       "enum": [
 	      "a", "a_plus", "b", "c"  
