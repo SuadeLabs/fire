@@ -662,7 +662,7 @@ refer to interest cashflows only, and do not include any principal flows
 │   ├── project_pre_op
 │   └── project_hq_phase
 ├── object_finance
-├── object_finance_hq
+│   └── object_finance_hq
 ├── commodities_finance
 └── other
 ```
