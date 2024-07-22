@@ -855,8 +855,6 @@ According to [Basel 3.1](https://www.europarl.europa.eu/doceo/document/A-9-2023-
 
 >   where the asset is under construction, the lenders have a legally enforceable first-ranking right over the assets and the underlying construction contracts;
 
-
-
 > (3) the assets being financed meet all of the following standards to operate in a sound and effective manner:
 
 >   the technology and design of the asset are tested;
