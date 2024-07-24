@@ -562,8 +562,10 @@
       "type": "string",
       "enum": [
         "auto",
+        "charge_card",
         "commercial",
         "commercial_property",
+        "corporate_card",
         "credit_card",
         "credit_facility",
         "financial_lease",
