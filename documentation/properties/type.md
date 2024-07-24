@@ -441,8 +441,8 @@ Charity serving communities and individuals. Includes non-profit institutions se
 ├── auto
 ├── commercial
 ├── credit_card
-│   └── corporate_card    
-├── charge_card
+│   ├── charge_card
+│   └── corporate_card
 ├── financial_lease
 ├── heloc
 ├── trade_finance
@@ -506,7 +506,7 @@ From the [UK Gov](https://www.gov.uk/government/publications/mortgage-charter/mo
 A **credit_card** is credit facility typically secured by a deposit account or equity in the borrower's property.
 
 ### charge_card
-A **charge_card** is a type of electronic payment card that charges no interest but requires the owner to pay the statement balance in full, usually monthly.
+A **charge_card** is a type of credit card that requires the owner to pay the statement balance in full, usually monthly. See common differences with a standard credit card [here](https://www.capitalone.com/learn-grow/money-management/charge-cards-credit-cards/)
 
 ### corporate_card
 **corporate_card** is an employer-sponsored credit card for use by a company’s employee. The employee is liable to repay the balance in full and the employer is not ultimately responsible for the repayment of credit losses. 
