@@ -536,10 +536,10 @@
       "description": "The method by which the loan shall be repaid",
       "type": "string",
       "enum": [
-        "salary",
+        "business",
+	"pension",
 	"rent",
-	"business",
-	"pension"
+	"salary"
       ]
     },
     "source": {
