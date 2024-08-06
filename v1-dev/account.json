@@ -27,7 +27,7 @@
       "monetary": true
     },
     "arrears_balance": {
-      "description": "The balance of the capital amount that is considered to be in arrears (for overdrafts/credit cards). Monetary type represented as a naturally positive integer number of cents/pence.",
+      "description": "The balance of the capital amount that is considered to be in arrears (for overdrafts/credit cards). Monetary type represented as an integer of cents/pence.",
       "type": "integer",
       "monetary": true
     },
