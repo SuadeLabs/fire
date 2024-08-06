@@ -165,6 +165,10 @@
       "description": "Identifier used for linking this product as part of a larger deal. e.g. Two components of a single loan or matching a securitisation with it's underlying loan.",
       "type": "string"
     },
+    "deferred_fees": {
+      "description": "Deferred fees are treated as other assets and get 250% Risk Weight on BCAR.",
+      "type": "number"
+    },
     "el_irb": {
       "description": "The best estimate of expected loss when in default.",
       "type": "number"
