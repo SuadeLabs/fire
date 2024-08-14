@@ -611,6 +611,10 @@
         "subordinated_unsecured"
       ]
     },
+    "settlement_days": {
+      "description": "The market standard settlement period of the security.",
+      "type": "number"
+    },
     "sft_type": {
       "description": "The sft_type parameter defines the transaction mechanism conducted for the SFT for this security product.",
       "type": "string",
