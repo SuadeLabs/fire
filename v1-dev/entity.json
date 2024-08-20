@@ -74,6 +74,10 @@
       "type":"string",
       "enum": ["f1_plus", "f1", "f2", "f3", "b", "c", "rd", "d"]
     },
+    "gsii_gsib_status": {
+      "description": "Flag to determine G-SII/G-SIB status",
+      "type":"boolean"
+    },
     "headcount": {
       "description": "The number of full time staff.",
       "type": "integer"
