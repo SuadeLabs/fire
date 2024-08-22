@@ -33,6 +33,7 @@
       "description": "The type of impact on the balance of the loan.",
       "type": "string",
       "enum": [
+        "acquisition",
         "advance",
         "capital_repayment",
         "capitalisation",
@@ -42,6 +43,7 @@
         "interest_repayment",
         "other",
         "received",
+        "securitisation",
         "sale",
         "write_off"
       ]

@@ -1360,6 +1360,25 @@ A repayment that reduces the principal amount borrowed and does not include any 
 
 # loan_transaction
 
+```bash
+├── acquisition
+├── advance
+├── capital_repayment
+├── capitalisation
+├── due
+├── further_advance
+├── interest
+├── interest_repayment
+├── other
+├── received
+├── sale
+│   ├── securitisation
+└── write_off
+```
+
+### acquisition
+The purchase of a loan from another lender
+
 ### advance
 A loan amount sent to the borrower from the lender
 
@@ -1411,6 +1430,9 @@ amount.
 
 ### sale
 Sale of the loan
+
+### securitisation
+(Child of Sale) - The transfer of a loan to a SPV as part of a securitisation transaction
 
 ### write_off
 From D1 of [MLAR](https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/crd-iv/mlar-notes-may-2022.pdf):
