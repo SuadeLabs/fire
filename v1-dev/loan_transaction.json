@@ -43,8 +43,8 @@
         "interest_repayment",
         "other",
         "received",
-        "securitisation",
         "sale",
+        "securitisation",
         "write_off"
       ]
     },
