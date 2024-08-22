@@ -438,7 +438,7 @@ Charity serving communities and individuals. Includes non-profit institutions se
 │   └── mortgage_charter
 ├── commercial_property
 │   └── commercial_property_hr
-├── residential_property_hr
+├── res_property_hr
 ├── personal
 ├── auto
 ├── commercial
@@ -513,7 +513,7 @@ As outlined in [LCR][lcr] Article 13(2)(g)(i)
 ### q_reverse_mortgage
 A **q_reverse_mortgage** is a qualified reverse mortgage which adheres to the stipulations defined in OSFI BCAR Chapter 4 P 116, and therefore qualifies for preferential risk weight treatment
 
-### residential_property_hr
+### res_property_hr
 Exposure secured by residential property collateral that does not provide the lender with an adequate level of security and may attract a higher risk weight, i.e. exposures which do not meet the necessary conditions on Article 124 (3) of CRR 575/2013.
 As per Article 124 (3) of CRR 575/2013: In order to be eligible for the treatment laid down in Article 125(1), point (a), or Article 126(1), point (a), an exposure secured by an immovable property shall fulfil all of the following conditions:
 (a) the immovable property securing the exposure meets any of the following conditions:
@@ -1179,7 +1179,7 @@ The most common XCS, and that traded in interbank markets, is a mark-to-market (
 ```bash
 ├── residential_property
 │   ├── multifamily
-│   └── residential_property_hr
+│   └── res_property_hr
 ├── farm
 ├── commercial_property
 │   └── commercial_property_hr
@@ -1203,7 +1203,7 @@ From EBA [Closing Real Estate Data Gaps](https://eur-lex.europa.eu/legal-content
 
 ‘Residential real estate’ (RRE) means any immovable property located in the domestic territory, available for dwelling purposes, acquired, built or renovated by a private household and that is not qualified as a CRE property. If a property has a mixed use, it should be considered as different properties (based for example on the surface areas dedicated to each use) whenever it is feasible to make such breakdown; otherwise, the property can be classified according to its dominant use.
 
-### residential_property_hr
+### res_property_hr
 Residential property collateral that does not provide the lender with an adequate level of security and may attract a higher risk weight, i.e. collateral that does not meet the necessary conditions on Article 124 (3) of CRR 575/2013.
 As per Article 124 (3) of CRR 575/2013: In order to be eligible for the treatment laid down in Article 125(1), point (a), or Article 126(1), point (a), an exposure secured by an immovable property shall fulfil all of the following conditions:
 (a) the immovable property securing the exposure meets any of the following conditions:
