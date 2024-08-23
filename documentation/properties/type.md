@@ -1426,7 +1426,7 @@ A repayment that reduces the principal amount borrowed and does not include any 
 ├── other
 ├── received
 ├── sale
-│   └── securitised
+│   └── securitisation
 └── write_off
 ```
 
@@ -1485,7 +1485,7 @@ amount.
 ### sale
 Sale of the loan
 
-### securitised
+### securitisation
 (Child of Sale) - The transfer of a loan to a SPV as part of a securitisation transaction
 
 ### write_off
