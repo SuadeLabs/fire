@@ -8,7 +8,7 @@ schemas:	[loan]
 
 ---
 
-The **servicing_currency_code** identifies the currency in which a loan shall be repaid.
+The **servicing_currency_code** identifies the currency of the source of income that will be used to service the loan. It can be left blank if the currency is the same as that of the loan.
 
 Currencies are represented as 3-letter codes in accordance with [ISO 4217][iso4217] standards.
 
