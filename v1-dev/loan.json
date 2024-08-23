@@ -166,7 +166,7 @@
       "type": "string"
     },
     "deferred_fees": {
-      "description": "Deferred fees are treated as other assets and get 250% Risk Weight on BCAR.",
+      "description": "Deferred fees are deferred payments subject to prepayment risk and not included in the balance.",
       "type": "number"
     },
     "el_irb": {
