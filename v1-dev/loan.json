@@ -167,7 +167,9 @@
     },
     "deferred_fees": {
       "description": "Deferred fees are deferred payments subject to prepayment risk and not included in the balance.",
-      "type": "number"
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
     },
     "el_irb": {
       "description": "The best estimate of expected loss when in default.",

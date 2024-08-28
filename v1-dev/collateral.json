@@ -91,6 +91,7 @@
         "multifamily",
         "other",
         "residential_property",
+        "res_property_hr",
 	      "security"
       ]
     },
