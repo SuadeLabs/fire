@@ -90,8 +90,8 @@
         "life_policy",
         "multifamily",
         "other",
-        "residential_property",
         "res_property_hr",
+        "residential_property",
 	      "security"
       ]
     },
