@@ -1420,6 +1420,7 @@ A repayment that reduces the principal amount borrowed and does not include any 
 ├── capital_repayment
 ├── capitalisation
 ├── due
+├── extra_drawing_facility
 ├── further_advance
 ├── interest
 ├── interest_repayment
@@ -1443,13 +1444,15 @@ A repayment that reduces the principal amount borrowed
 From F3.1 of [MLAR](https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/crd-iv/mlar-notes-may-2022.pdf):
 >By 'capitalisation' we mean a formal arrangement agreed with the borrower to add all or part of a borrower's arrears to the amount of outstanding principal (i.e. advance of principal including further advances less capital repayments received during the period of the loan) and then treating that amount of overall debt as the enlarged principal. This enlarged principal is then used as the basis for calculating future monthly payments over the remaining term of the loan.
 
-
 ### due
 From F6.1i of [MLAR](https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/crd-iv/mlar-notes-may-2022.pdf):
 >'Payments due' means amounts due under normal commercial
 terms (and not the lesser amounts which may have been agreed
 as part of any temporary arrangement) fully to service the loans:
 that is the balances outstanding including insurance, fees and fines etc.
+
+### extra_drawing_facility
+A loan transaction for a loan which includes an option to draw down further amounts as and when required e.g. a loan facility of £80k could have £65k advanced and an extra £15k facility available for drawing down further.
 
 ### further_advance
 From the Annex of the PS22/19 FCA policy [statement](https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/policy-statement/2019/ps2219.pdf):
