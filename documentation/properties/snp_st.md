@@ -8,7 +8,7 @@ schemas:    [entity, security]
 
 ---
 
-The **snp_st** represents [S&P's short term credit ratings](https://www.standardandpoors.com/en_US/web/guest/article/-/view/sourceId/504352#:~:text=2.%20Short-Term%20Issue%20Credit%20Ratings).
+The **snp_st** represents [S&P's short term credit ratings](https://uk.practicallaw.thomsonreuters.com/5-382-3832?transitionType=Default&contextData=(sc.Default)&firstPage=true).
 
 
 ### a1
