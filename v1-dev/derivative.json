@@ -164,6 +164,18 @@
         "put"
       ]
     },
+    "lgd_floored": {
+      "description": "The final LGD value after the relevant floors have been applied. To be used in the IRB RWA calculations.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "lgd_irb": {
+      "description": "The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
     "mic_code": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/mic_code"
     },
@@ -219,6 +231,12 @@
     "on_balance_sheet": {
       "description": "Is the derivative reported on the balance sheet of the financial institution?",
       "type": "boolean"
+    },
+    "pd_irb": {
+      "description": "The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
     },
     "position": {
       "description": "Specifies the market position, i.e. long or short, of the derivative leg",
