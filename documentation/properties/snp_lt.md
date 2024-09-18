@@ -8,7 +8,7 @@ schemas:    [entity, security]
 
 ---
 
-The **snp_lt** represents [S&P's long term credit ratings](https://uk.practicallaw.thomsonreuters.com/5-382-3832?transitionType=Default&contextData=(sc.Default)&firstPage=true).
+The **snp_lt** represents [S&P's long term credit ratings](https://en.wikipedia.org/wiki/S%26P_Global_Ratings#Long-term_credit_ratings).
 
 
 ### aaa
@@ -53,7 +53,7 @@ The **snp_lt** represents [S&P's long term credit ratings](https://uk.practicall
 
 ### c
 
-### d"
+### d
 
 
 ---
