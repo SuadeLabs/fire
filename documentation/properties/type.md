@@ -1452,7 +1452,7 @@ as part of any temporary arrangement) fully to service the loans:
 that is the balances outstanding including insurance, fees and fines etc.
 
 ### extra_drawing_facility
-A loan transaction for a loan which includes an option to draw down further amounts as and when required e.g. a loan facility of £80k could have £65k advanced and an extra £15k facility available for drawing down further.
+This can be linked with advances on flexible loans, which include an option to draw down further amounts. For example, a loan facility of £80k could have £65k advanced and an extra £15k facility available for drawing down further. This is separate to loan transaction type further_advance which is linked to map advances for further_advance loans.
 
 ### further_advance
 From the Annex of the PS22/19 FCA policy [statement](https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/policy-statement/2019/ps2219.pdf):
