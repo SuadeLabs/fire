@@ -168,7 +168,6 @@
     "deferred_fees": {
       "description": "Deferred fees are deferred payments subject to prepayment risk and not included in the balance.",
       "type": "integer",
-      "minimum": 0,
       "monetary": true
     },
     "el_irb": {
