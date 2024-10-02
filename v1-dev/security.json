@@ -743,6 +743,7 @@
         "cash_ratio_deposit",
         "cb_facility",
         "cb_reserve",
+        "cb_restricted_reserve",
         "cd",
         "cmbs",
         "cmbs_income",
