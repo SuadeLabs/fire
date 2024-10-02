@@ -622,6 +622,7 @@ Other refers to a type of security not covered by the above. If you find yoursel
 ├── bill_of_exchange
 │   └── acceptance
 ├── cb_reserve
+│   └── cb_restricted_reserve
 ├── cb_facility
 ├── cash_ratio_deposit
 ├── cash
@@ -792,6 +793,9 @@ As defined in [LCR Regulations Article 10 on Liquid Assets][lcr]:
 > reserves held by the credit institution in a central bank referred to in points (i) and (ii) provided that the credit institution is permitted to withdraw such reserves at any time during stress periods and the conditions for such withdrawal have been specified in an agreement between the relevant competent authority and the ECB or the central bank;
 
 > include balances receivable on demand at central banks.
+
+### cb_restricted_reserve
+> Central Bank reserves that are not liquid and not withdrawable.
 
 ### cash_ratio_deposit
 The [BofE](https://www.bankofengland.co.uk/statistics/notice/2024/statistical-notice-2024-08) defines this as:
