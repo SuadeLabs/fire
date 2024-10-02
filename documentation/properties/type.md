@@ -795,7 +795,7 @@ As defined in [LCR Regulations Article 10 on Liquid Assets][lcr]:
 > include balances receivable on demand at central banks.
 
 ### cb_restricted_reserve
-> Central Bank reserves that are not liquid and not withdrawable.
+> Central Bank reserves that are not liquid and not withdrawable. See Article 7 (2) and Article 10 (1)(b)(iii) of the LCR. (Commission Delegated Regulation (EU) 2015/61 to supplement Regulation (EU) No 575/2013)
 
 ### cash_ratio_deposit
 The [BofE](https://www.bankofengland.co.uk/statistics/notice/2024/statistical-notice-2024-08) defines this as:
