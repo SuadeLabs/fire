@@ -376,7 +376,7 @@
       "type": "integer"
     },
     "orig_limit_amount": {
-      "description": "The original line of credit anount that was granted at the origination of the facility",
+      "description": "The original line of credit amount that was granted at the origination of the facility",
       "type": "integer",
       "monetary": true
     },
