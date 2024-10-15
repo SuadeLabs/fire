@@ -371,6 +371,20 @@
       "description": "Is the loan reported on the balance sheet of the financial institution?",
       "type": "boolean"
     },
+    "orig_credit_score": {
+      "description": "The credit score of the customer at origination of the product using a commercially available credit bureau score.",
+      "type": "integer"
+    },
+    "orig_limit_amount": {
+      "description": "The original line of credit anount that was granted at the origination of the facility",
+      "type": "integer",
+      "monetary": true
+    },
+    "orig_notional": {
+      "description": "The notional of the loan at origination.",
+      "type": "integer",
+      "monetary": true
+    },
     "originator_id": {
       "description": "The unique identifier used by the financial institution to identify the originator of the loan product.",
       "type": "string"
@@ -573,7 +587,8 @@
         "cancellable",
         "cancelled",
         "committed",
-        "defaulted"
+        "defaulted",
+        "revolving"
       ]
     },
     "trade_date": {
