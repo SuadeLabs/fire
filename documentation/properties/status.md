@@ -151,4 +151,4 @@ From [CRE70.10](https://www.bis.org/basel_framework/chapter/CRE/70.htm#:~:text=C
 [lcr]:  http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
 [reg-d]: https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=fe8bd6e281e0788a9ba7efda92e96e2f&mc=true&n=pt12.2.204&r=PART&ty=HTML#se12.2.204_12
 [CRE70]: https://www.bis.org/basel_framework/chapter/CRE/70.htm
-[investopedia-revolving-credit]:[https://www.investopedia.com/terms/r/revolvingcredit.asp]
+[investopedia-revolving-credit]:https://www.investopedia.com/terms/r/revolvingcredit.asp
