@@ -19,4 +19,4 @@ Don't forget to divide by 100 (or the relevant minor unit denomination) when pre
 
 [floats]: https://en.wikipedia.org/wiki/Floating_point#Accuracy_problems
 [E]: https://en.wikipedia.org/wiki/ISO_4217#Active_codes
-[FRY14Q]:[https://www.federalreserve.gov/apps/reportingforms/Download/DownloadAttachment?guid=83c6e71a-86c2-40b6-a9a5-16e15ca7d2d8]
+[FRY14Q]:https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q
