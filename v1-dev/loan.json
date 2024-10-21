@@ -608,6 +608,7 @@
         "corporate_card",
         "credit_card",
         "credit_facility",
+        "education",
         "financial_lease",
         "heloc",
         "liquidity_facility",
