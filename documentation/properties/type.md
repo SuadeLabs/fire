@@ -566,7 +566,8 @@ Nostro loans are the firm's accounts at other financial institutions which are i
 From the [UK Gov](https://www.gov.uk/hmrc-internal-manuals/business-leasing-manual/blm00040), a finance lease is an arrangement under which one person (the lessor) provides the money to buy an asset which is used by another (the lessee) in return for an interest charge. The lessor has security because they own the asset. The terms of the leasing arrangements aim to give the lessor an interest like turn and no more or less – however good or bad the asset proves to be for the end user.
 
 ### education
-An **education** loan is a sum of money borrowed to finance post-secondary education or higher education-related expenses. Education loans are intended to cover the cost of tuition, books and supplies, and living expenses while the borrower is in the process of pursuing a degree. Payments are often deferred while students are in college and, depending on the lender, for an additional six-month period after earning a degree.
+From [Investopedia][investopedia-education-loan]:
+> An education loan is a sum of money borrowed to finance post-secondary education or higher education-related expenses. Education loans are intended to cover the cost of tuition, books and supplies, and living expenses while the borrower is in the process of pursuing a degree. Payments are often deferred while students are in college and, depending on the lender, for an additional six-month period after earning a degree.
 
 ### other
 Other refers to a type of security not covered by the above. If you find yourself using this often, please [contribute][contributing].
@@ -1561,3 +1562,4 @@ the debt repayable.
 [hedge-fund]: https://www.sec.gov/spotlight/hedgefunds/hedge-vaughn.htm
 [hedge-fund2]: https://www.google.com/url?esrc=s&q=&rct=j&sa=U&url=https://www.sec.gov/files/ib_hedgefunds.pdf&ved=2ahUKEwjSgp-x-dn9AhVhoFwKHYbQDrMQFnoECAgQAg&usg=AOvVaw3y7wSB8gmaTml65eMxKBpD
 [ecbexamples]: https://www.ecb.europa.eu/pub/pdf/other/ecb-boe_case_better_functioning_securitisation_marketen.pdf
+[investopedia-education-loan]: https://www.investopedia.com/terms/e/education-loan.asp
