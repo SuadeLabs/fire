@@ -604,7 +604,6 @@
         "charge_card",
         "commercial",
         "commercial_property",
-        "commercial_property_hr",
         "corporate_card",
         "credit_card",
         "credit_facility",
@@ -619,7 +618,6 @@
         "other",
         "personal",
         "q_reverse_mortgage",
-        "res_property_hr",
         "reverse_mortgage",
         "trade_finance"
       ]
