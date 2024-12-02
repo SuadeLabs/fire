@@ -35,7 +35,7 @@ jobs:
         # only run ruff on python 3.8
         if: matrix.python-version == 3.8
         run: |
-          ruff .
+          ruff check .
       - name: Lint with black
         # only run black on python 3.8
         if: matrix.python-version == 3.8

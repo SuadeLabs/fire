@@ -10,6 +10,7 @@
          "fv_oci",
          "fv_thru_pnl",
          "held_for_hedge",
+         "held_for_sale",
          "held_for_trading",
          "held_for_sale",
          "held_to_maturity",

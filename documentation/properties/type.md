@@ -441,6 +441,8 @@ Charity serving communities and individuals. Includes non-profit institutions se
 ├── auto
 ├── commercial
 ├── credit_card
+│   ├── charge_card
+│   └── corporate_card
 ├── financial_lease
 ├── heloc
 ├── trade_finance
@@ -448,6 +450,7 @@ Charity serving communities and individuals. Includes non-profit institutions se
 ├── liquidity_facility
 ├── multiccy_facility
 ├── nostro
+├── education
 └── other
 ```
 
@@ -503,6 +506,12 @@ From the [UK Gov](https://www.gov.uk/government/publications/mortgage-charter/mo
 ### credit_card
 A **credit_card** is credit facility typically secured by a deposit account or equity in the borrower's property.
 
+### charge_card
+A **charge_card** is a type of credit card that requires the owner to pay the statement balance in full, usually monthly. See common differences with a standard credit card [here](https://www.capitalone.com/learn-grow/money-management/charge-cards-credit-cards/)
+
+### corporate_card
+**corporate_card** is an employer-sponsored credit card for use by a company’s employee. The employee is liable to repay the balance in full and the employer is not ultimately responsible for the repayment of credit losses. 
+
 ### credit_facility, multiccy_facility
 From Annex I of the [CRR][crr], credit facilities are:
 > agreements to lend, purchase securities, provide guarantees or acceptance facilities
@@ -521,6 +530,10 @@ Nostro loans are the firm's accounts at other financial institutions which are i
 
 ### financial_lease
 From the [UK Gov](https://www.gov.uk/hmrc-internal-manuals/business-leasing-manual/blm00040), a finance lease is an arrangement under which one person (the lessor) provides the money to buy an asset which is used by another (the lessee) in return for an interest charge. The lessor has security because they own the asset. The terms of the leasing arrangements aim to give the lessor an interest like turn and no more or less – however good or bad the asset proves to be for the end user.
+
+### education
+From [Investopedia][investopedia-education-loan]:
+> An education loan is a sum of money borrowed to finance post-secondary education or higher education-related expenses. Education loans are intended to cover the cost of tuition, books and supplies, and living expenses while the borrower is in the process of pursuing a degree. Payments are often deferred while students are in college and, depending on the lender, for an additional six-month period after earning a degree.
 
 ### other
 Other refers to a type of security not covered by the above. If you find yourself using this often, please [contribute][contributing].
@@ -580,6 +593,7 @@ Other refers to a type of security not covered by the above. If you find yoursel
 ├── bill_of_exchange
 │   └── acceptance
 ├── cb_reserve
+│   └── cb_restricted_reserve
 ├── cb_facility
 ├── cash_ratio_deposit
 ├── cash
@@ -751,9 +765,12 @@ As defined in [LCR Regulations Article 10 on Liquid Assets][lcr]:
 
 > include balances receivable on demand at central banks.
 
+### cb_restricted_reserve
+> Central Bank reserves that are not liquid and not withdrawable. See Article 7 (2) and Article 10 (1)(b)(iii) of the LCR. (Commission Delegated Regulation (EU) 2015/61 to supplement Regulation (EU) No 575/2013)
+
 ### cash_ratio_deposit
-The [BofE](http://www.bankofengland.co.uk/statistics/Documents/faq/crds.pdf) defines this as:
-> non-interest bearing deposits lodged with the Bank of England by eligible institutions (ie. banks and building societies), who have reported average eligible liabilities (ELs) of over £600 million over a calculation period. The level of each institution's CRD is currently calculated twice-yearly (currently in May and November) at 0.18% of average ELs, over the previous six end-calendar months, in excess of £600mn. The value bands and ratios were specified by HM Treasury in the Cash Ratio Deposits (Value Bands and Ratios) Order (2013 No 1189).
+The [BofE](https://www.bankofengland.co.uk/statistics/notice/2024/statistical-notice-2024-08) defines this as:
+> The Levy will be applied on a proportional basis, which means that the Bank will allocate the policy costs to be recovered by the Levy in proportion to an eligible institution’s liability base. Eligible liabilities are defined in the Glossary. This will be a continuation of how the CRD scheme operated. The policy rationale for using the eligible liability base is the link between the size of a financial institution’s liabilities and its potential impact on the Bank’s financial stability and monetary policy functions.
 
 ### guarantee
 From EU [Supervisory Reporting][sup-rep] part 2(9):
@@ -1024,7 +1041,6 @@ MAS Notice 610 and Notice 1003 refers to **suspense** accounts as all outstandin
 
 [suspense]: https://www.investopedia.com/terms/s/suspenseaccount.asp
 
-
 ### prepayments
 A prepaid expense is an expenditure paid for in one accounting period, but for which the underlying asset will not be consumed until a future period. https://www.accountingtools.com/articles/prepaid-expenses-accounting
 
@@ -1046,7 +1062,9 @@ An account holding reserves. [Reserves][reserve] are created from profit or from
 ### other
 Any other account type that cannot be classified as one of the other types.
 
-# derivative_type
+
+# derivative
+
 ```bash
 ├── vanilla_swap
 ├── mtm_swap
@@ -1136,7 +1154,8 @@ The most common XCS, and that traded in interbank markets, is a mark-to-market (
 # collateral
 ```bash
 ├── residential_property
-│   └── multifamily
+│   ├── multifamily
+│   └── res_property_hr
 ├── farm
 ├── commercial_property
 │   └── commercial_property_hr
@@ -1160,6 +1179,21 @@ From EBA [Closing Real Estate Data Gaps](https://eur-lex.europa.eu/legal-content
 
 ‘Residential real estate’ (RRE) means any immovable property located in the domestic territory, available for dwelling purposes, acquired, built or renovated by a private household and that is not qualified as a CRE property. If a property has a mixed use, it should be considered as different properties (based for example on the surface areas dedicated to each use) whenever it is feasible to make such breakdown; otherwise, the property can be classified according to its dominant use.
 
+### res_property_hr
+Residential property collateral that does not provide the lender with an adequate level of security and may attract a higher risk weight, i.e. collateral that does not meet the necessary conditions on Article 124 (3) of CRR 575/2013.
+As per Article 124 (3) of CRR 575/2013: In order to be eligible for the treatment laid down in Article 125(1), point (a), or Article 126(1), point (a), an exposure secured by an immovable property shall fulfil all of the following conditions:
+(a) the immovable property securing the exposure meets any of the following conditions:
+    (i) the immovable property has been fully completed;
+    (ii) the immovable property is forest or agricultural land;
+    (iii) the lending is to a natural person and the immovable property is either a residential property under construction or it is land upon which a residential property is planned to be constructed where that plan has been legally approved by all relevant authorities, as applicable, concerned and where any of the following conditions is met:
+        – the property does not have more than four residential housing units and will be the primary residence of the obligor and the lending to the natural person is not indirectly financing ADC exposures;
+        – a central government, regional government or local authority or a public sector entity, exposures to which are treated in accordance with Articles 115(2) and 116(4), respectively, has the legal powers and ability to ensure that the property under construction will be finished within a reasonable time frame and is required to or has committed in a legally binding manner to do so where the construction would otherwise not be finished within a reasonable time frame. Alternatively, there is an equivalent legal mechanism to ensure that the property under construction is completed within a resonable timeframe;
+(b) the exposure is secured by a first lien held by the institution on the immovable property, or the institution holds the first lien and any sequentially lower ranking lien on that property;
+(c) the property value is not materially dependent upon the credit quality of the obligor;
+(d) all the information required at origination of the exposure and for monitoring purposes is properly documented, including information on the ability of the obligor to repay and on the valuation of the property;
+(e) the requirements set out in Article 208 are met and the valuation rules set out in Article 229(1) are complied with.
+For the purposes of point (c), institutions may exclude situations where purely macro-economic factors affect both the value of the property and the performance of the obligor.
+
 ### commercial_property
 
 Immovable property whose occupation is primarily for non-residential use (e.g. used for business activities and profit generation). Specific regulatory definitions can be found below:
@@ -1179,23 +1213,27 @@ From [OSFI Financial Reporting Instructions: Data Definitions for BH](https://ww
 Completed retail, office/commercial, industrial, mixed use (with less than 50%  residential), warehouse and special purpose properties with > 50% of the space leased/rented to tenants not related to the owner or affiliates.  Includes long term care facilities.
 
 ### commercial_property_hr
-Commercial property collateral that does not provide the lender with an adequate level of security and may attract a higher risk weight, i.e. one or more of the conditions laid out in Article 126 (2) of CRR 275/2013 is not met.
-
-As per Article 126 (2) of CRR 275/2013:
->Institutions shall consider an exposure or any part of an exposure as fully and completely secured only if all the following conditions are met:
->
->(a) the value of the property shall not materially depend upon the credit quality of the borrower. Institutions may exclude situations where purely macro-economic factors affect both the value of the property and the performance of the borrower from their determination of the materiality of such dependence;
->
->
->(b) the risk of the borrower shall not materially depend upon the performance of the underlying property or project, but on the underlying capacity of the borrower to repay the debt from other sources, and as a consequence, the repayment of the facility shall not materially depend on any cash flow generated by the underlying property serving as collateral;
->
->
->(c) the requirements set out in Article 208 and the valuation rules set out in Article 229(1) are met; and
->
->
->(d) the 50 % risk weight unless otherwise provided under Article 124(2) shall be assigned to the part of the loan that does not exceed 50 % of the market value of the property or 60 % of the mortgage lending value unless otherwise provided under Article 124(2) of the property in question in those Member States that have laid down rigorous criteria for the assessment of the mortgage lending value in statutory or regulatory provisions.
+Commercial property collateral that does not provide the lender with an adequate level of security and may attract a higher risk weight, i.e. one or more of the conditions laid out in Article 126 (2) of CRR 275/2013 is not met. Also applies to collateral that does not meet the necessary conditions on Article 124 (3) of CRR 575/2013.
+As per Article 126 (2) of CRR 275/2013: 
+>Institutions shall consider an exposure or any part of an exposure as fully and completely secured only if all the following conditions are met: 
+> >(a) the value of the property shall not materially depend upon the credit quality of the borrower. Institutions may exclude situations where purely macro-economic factors affect both the value of the property and the performance of the borrower from their determination of the materiality of such dependence; 
+> > >(b) the risk of the borrower shall not materially depend upon the performance of the underlying property or project, but on the underlying capacity of the borrower to repay the debt from other sources, and as a consequence, the repayment of the facility shall not materially depend on any cash flow generated by the underlying property serving as collateral; 
+> > >(c) the requirements set out in Article 208 and the valuation rules set out in Article 229(1) are met; and 
+> > >(d) the 50 % risk weight unless otherwise provided under Article 124(2) shall be assigned to the part of the loan that does not exceed 50 % of the market value of the property or 60 % of the mortgage lending value unless otherwise provided under Article 124(2) of the property in question in those Member States that have laid down rigorous criteria for the assessment of the mortgage lending value in statutory or regulatory provisions.
 
 For the purposes of this definition of commercial_property_hr, if the collateral does not meet condition (d) (e.g. has a loan-to-value ratio higher than 60%) but meets conditions (a) to (c), the collateral is not considered to be commercial_property_hr (which is allocated for those exposures with a RW of 100%) but is still classified as ordinary commercial_property collateral.
+As per Article 124 (3) of CRR 575/2013: In order to be eligible for the treatment laid down in Article 125(1), point (a), or Article 126(1), point (a), an exposure secured by an immovable property shall fulfil all of the following conditions:
+    (a) the immovable property securing the exposure meets any of the following conditions:
+    (i) the immovable property has been fully completed;
+    (ii) the immovable property is forest or agricultural land;
+    (iii) the lending is to a natural person and the immovable property is either a residential property under construction or it is land upon which a residential property is planned to be constructed where that plan has been legally approved by all relevant authorities, as applicable, concerned and where any of the following conditions is met:
+        – the property does not have more than four residential housing units and will be the primary residence of the obligor and the lending to the natural person is not indirectly financing ADC exposures;
+        – a central government, regional government or local authority or a public sector entity, exposures to which are treated in accordance with Articles 115(2) and 116(4), respectively, has the legal powers and ability to ensure that the property under construction will be finished within a reasonable time frame and is required to or has committed in a legally binding manner to do so where the construction would otherwise not be finished within a reasonable time frame. Alternatively, there is an equivalent legal mechanism to ensure that the property under construction is completed within a resonable timeframe;
+(b) the exposure is secured by a first lien held by the institution on the immovable property, or the institution holds the first lien and any sequentially lower ranking lien on that property;
+(c) the property value is not materially dependent upon the credit quality of the obligor;
+(d) all the information required at origination of the exposure and for monitoring purposes is properly documented, including information on the ability of the obligor to repay and on the valuation of the property;
+(e) the requirements set out in Article 208 are met and the valuation rules set out in Article 229(1) are complied with.
+For the purposes of point (c), institutions may exclude situations where purely macro-economic factors affect both the value of the property and the performance of the obligor.
 
 
 ### multifamily
@@ -1352,6 +1390,25 @@ A repayment that reduces the principal amount borrowed and does not include any 
 
 # loan_transaction
 
+```bash
+├── acquisition
+├── advance
+├── capital_repayment
+├── capitalisation
+├── due
+├── further_advance
+├── interest
+├── interest_repayment
+├── other
+├── received
+├── sale
+│   └── securitisation
+└── write_off
+```
+
+### acquisition
+The purchase of a loan from another lender
+
 ### advance
 A loan amount sent to the borrower from the lender
 
@@ -1403,6 +1460,9 @@ amount.
 
 ### sale
 Sale of the loan
+
+### securitisation
+(Child of Sale) - The transfer of a loan to a SPV as part of a securitisation transaction
 
 ### write_off
 From D1 of [MLAR](https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/crd-iv/mlar-notes-may-2022.pdf):
@@ -1469,3 +1529,4 @@ the debt repayable.
 [hedge-fund]: https://www.sec.gov/spotlight/hedgefunds/hedge-vaughn.htm
 [hedge-fund2]: https://www.google.com/url?esrc=s&q=&rct=j&sa=U&url=https://www.sec.gov/files/ib_hedgefunds.pdf&ved=2ahUKEwjSgp-x-dn9AhVhoFwKHYbQDrMQFnoECAgQAg&usg=AOvVaw3y7wSB8gmaTml65eMxKBpD
 [ecbexamples]: https://www.ecb.europa.eu/pub/pdf/other/ecb-boe_case_better_functioning_securitisation_marketen.pdf
+[investopedia-education-loan]: https://www.investopedia.com/terms/e/education-loan.asp
