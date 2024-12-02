@@ -637,7 +637,6 @@ distinct batches, one for principal and one for interest cashflows.
 For rows uploaded as "interest", the values populated in the "balance" column
 refer to interest cashflows only, and do not include any principal flows
 
-
 ## Loan
 ```bash
 ├── agriculture
@@ -907,8 +906,6 @@ Defined in [IRB Credit Data Retail Portfolio Part-1](https://www.osfi-bsif.gc.ca
 It is the definition of loss used in estimating Loss Given Default.  When measuring economic loss, as opposed to accounting loss, all relevant factors should be taken into account, including material discount effects and material direct and indirect costs associated with collecting on the exposure.  Reported on Post-CRM basis.
 
 Defined in [IRB Credit Data Wholesale Portfolio Part-1](https://www.osfi-bsif.gc.ca/en/data-forms/reporting-returns/filing-financial-returns/financial-reporting-instructions/irb-credit-data-wholesale-portfolio-part-1-bb)
-
-
 
 
 ### fraud_loss_retail
