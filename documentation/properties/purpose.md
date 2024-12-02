@@ -899,7 +899,7 @@ The **other** enum value can be used when none of the other enum values apply or
 ### economic_loss_retail 
 The definition of loss used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss, all relevant factors should be taken into account, including material discount effects and material direct and indirect costs associated with collecting on the exposure.  Reported on Post-CRM basis. Reported after securitization.
 
-Defined in [IRB Credit Data Retail Portfolio Part-1](https://www.osfi-bsif.gc.ca/en/data-formsreporting-returnsfiling-financial-returnsfinancial-reporting-instructionsirb-credit-data-retail-portfolio-part-1-bd)
+Defined in [IRB Credit Data Retail Portfolio Part-1](https://www.osfi-bsif.gc.ca/en/data-forms/reporting-returns/filing-financial-returns/financial-reporting-instructions/irb-credit-data-retail-portfolio-part-1-bd)
 
 
 ### economic_loss_wholesale 
@@ -911,7 +911,7 @@ Defined in [IRB Credit Data Wholesale Portfolio Part-1](https://www.osfi-bsif.gc
 ### fraud_loss_retail
 The total value of accounting losses incurred by the Financial Institution due to fraudulent activities within the reporting segment.
 
-Defined in [IRB Credit Data Retail Portfolio Part-1](https://www.osfi-bsif.gc.ca/en/data-formsreporting-returnsfiling-financial-returnsfinancial-reporting-instructionsirb-credit-data-retail-portfolio-part-1-bd)
+Defined in [IRB Credit Data Retail Portfolio Part-1](https://www.osfi-bsif.gc.ca/en/data-forms/reporting-returns/filing-financial-returns/financial-reporting-instructions/irb-credit-data-retail-portfolio-part-1-bd)
 
 
 ## Security
@@ -1005,7 +1005,6 @@ Use this enum to refer to funds reserved for the purpose of implementing, from a
 [bis_sa_ccr]: https://www.bis.org/publ/bcbs279.pdf
 [osfi-adc]: https://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/CAR22_chpt4.aspx#fnb49:~:text=Land%20acquisition%2C%20development%20and%20construction%20(ADC,of%20any%20residential%20or%20commercial%20property.
 [osfi-bb]: https://www.osfi-bsif.gc.ca/en/data-forms/reporting-returns/filing-financial-returns/financial-reporting-instructions/irb-credit-data-wholesale-portfolio-part-1-bb
-[osfi-bd]: https://www.osfi-bsif.gc.ca/en/data-formsreporting-returnsfiling-financial-returnsfinancial-reporting-instructionsirb-credit-data-retail-portfolio-part-1-bd
-[osfi-income-producing]: https://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/CAR22_chpt4.aspx#fnb49:~:text=CRE%2020.88%2D20.89%5D-,When%20the%20prospects%20for%20servicing%20the%20loan%20materially%20depend,capacity%20of%20the%20borrower%20to%20service%20the%20debt%20from%20other%20sources,-%2C%20and%20provided%20that
+[osfi-bd]: https://www.osfi-bsif.gc.ca/en/data-forms/reporting-returns/filing-financial-returns/financial-reporting-instructions/irb-credit-data-retail-portfolio-part-1-bd
 [osfi-b20]: https://www.osfi-bsif.gc.ca/Eng/Docs/b20_dft.pdf
 
