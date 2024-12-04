@@ -261,7 +261,9 @@
       "type": "string",
       "enum": [
         "joint",
-        "single"
+        "single",
+        "single_not_evidenced",
+        "joint_not_evidenced"
       ]
     },
     "interest_repayment_frequency": {
