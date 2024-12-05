@@ -36,6 +36,7 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   │   ├── mmkt_fund
 │   │   └── real_estate_fund
 │   ├── pension_fund
+│   ├── credit_union
 │   ├── ciu
 │   ├── sspe
 │   ├── pic
@@ -48,7 +49,6 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   └── qccp
 ├── central_bank
 ├── mdb
-├── credit_union
 ├── deposit_broker
 ├── pse
 │   ├── local_authority
