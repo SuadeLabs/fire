@@ -12,5 +12,8 @@ When netting recognition does not aplly to the agreement, **netting_restriction*
 ### national_supervision
 The national supervisor is not satisfied that the netting is enforceable under the laws of each of the relevant jurisdictions (after consultation with other relevant supervisors, when necessary). Thus,if any of these supervisors is dissatisfied about enforceability under its laws, the netting contract or agreement will not meet this condition and neither counterparty could obtain supervisory benefit.
 
+### no_set_off_right
+The netting contract does not include the legally enforceable right to offset or where there is no intent to settle on a net basis or simultaneously.
+
 ### restrictive_covenant
 The netting contract contains clauses which, in the event of default of a counterparty, permits a non-defaulting counterparty to make limited payments only, or no payments at all, to the estate of the defaulting party, even if the defaulting party is a net creditor.
