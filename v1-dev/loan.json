@@ -603,6 +603,7 @@
       "type": "string",
       "enum": [
         "auto",
+        "cd",
         "charge_card",
         "commercial",
         "commercial_property",

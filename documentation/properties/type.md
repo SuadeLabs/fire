@@ -469,6 +469,10 @@ As outlined in [LCR][lcr] Article 13(2)(g)(iv):
 As outlined in [LCR][lcr] Article 13(2)(g)(v):
 > loans and credit facilities to individuals resident in a Member State for personal, family or household consumption purposes.
 
+### cd
+From [Investopedia](https://www.investopedia.com/what-is-a-cd-secured-loan-5225109):
+A **cd**, or certificate of deposit, loan allows you to borrow money using a cd as collateral.
+
 ### commercial
 As outlined in [LCR][lcr] Article 13(2)(g)(iii):
 > commercial loans, leases and credit facilities to undertakings established in a Member State to finance capital expenditures or business operations other than the acquisition or development of commercial real estate
