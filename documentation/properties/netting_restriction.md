@@ -18,4 +18,4 @@ SFTs will not meet the condition allowable to net the cash payable and receivabl
 ### restrictive_covenant
 The netting contract contains clauses which, in the event of default of a counterparty, permits a non-defaulting counterparty to make limited payments only, or no payments at all, to the estate of the defaulting party, even if the defaulting party is a net creditor.
 
-[settlement-rights]: (https://www.prarulebook.co.uk/pra-rules/leverage-ratio-crr/3-leverage-ratio-part-seven-crr/article-429b-calculation-of-the-exposure-value-of-assets/05-12-2024?p=1)
+[settlement-rights]: https://www.prarulebook.co.uk/pra-rules/leverage-ratio-crr/3-leverage-ratio-part-seven-crr/article-429b-calculation-of-the-exposure-value-of-assets/05-12-2024?p=1
