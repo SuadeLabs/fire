@@ -470,8 +470,7 @@ As outlined in [LCR][lcr] Article 13(2)(g)(v):
 > loans and credit facilities to individuals resident in a Member State for personal, family or household consumption purposes.
 
 ### cd
-From [Investopedia](https://www.investopedia.com/what-is-a-cd-secured-loan-5225109):
-A **cd**, or certificate of deposit, loan allows you to borrow money using a cd as collateral.
+A **cd** is a non-negotiable, or not transferable, certificate of deposit.
 
 ### commercial
 As outlined in [LCR][lcr] Article 13(2)(g)(iii):
