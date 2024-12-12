@@ -468,10 +468,10 @@ As outlined in [LCR][lcr] Article 13(2)(g)(iv):
 > Such loans or leases may include ancillary insurance and service products or additional vehicle parts, and in the case of leases, the residual value of leased vehicles.
 
 ### new_auto
-*Needs definition*
+A **new_auto** loan is a type of auto loan provided for the purchase of a brand new vehicle, typically purchased directly from a manufacturer or authorized dealer. The loan is based on the vehicle's full market value at the time of purchase, and the vehicle has no previous owners.
 
 ### used_auto
-*Needs definition*
+A **used_auto** loan is a type of auto loan provided specifically for the purchase of a pre-owned vehicle. It involves financing for vehicles that are not considered new (i.e. have had prior owners). The loan is subject to terms and conditions based on the vehicle’s age, condition, and market value.
 
 ### personal
 As outlined in [LCR][lcr] Article 13(2)(g)(v):
@@ -1276,7 +1276,7 @@ From Article 212(2) [CRR](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CE
 This identifies that the piece of collateral used is a security, as mapped via the security schema and linked to the collateral schema using the collateral's `security_id` property.
 
 ### auto
-*NEEDS Definition*
+This identifies a motor vehicle (such as an automobile, truck, or other types of vehicles) that is pledged by a borrower as collateral to secure a loan. If the borrower defaults on the loan, the lender has the legal right to seize the vehicle and sell it to recover the outstanding debt.
 
 ### other
 *NEEDS Definition*
