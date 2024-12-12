@@ -85,6 +85,7 @@
       "description": "The collateral type defines the form of the collateral provided",
       "type": "string",
       "enum": [
+        "auto",
         "cash",
         "commercial_property",
         "commercial_property_hr",
