@@ -614,12 +614,14 @@
         "mortgage",
         "mortgage_charter",
         "multiccy_facility",
+        "new_auto",
         "nostro",
         "other",
         "personal",
         "q_reverse_mortgage",
         "reverse_mortgage",
-        "trade_finance"
+        "trade_finance",
+        "used_auto"
       ]
     },
     "version_id": {

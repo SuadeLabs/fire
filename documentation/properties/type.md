@@ -439,6 +439,8 @@ Charity serving communities and individuals. Includes non-profit institutions se
 ├── commercial_property
 ├── personal
 ├── auto
+│   ├── new_auto
+│   └── used_auto
 ├── commercial
 ├── credit_card
 │   ├── charge_card
@@ -464,6 +466,12 @@ As outlined in [LCR][lcr] Article 13(2)(g)(iv):
 > agricultural or forestry tractors (see Directive 2003/37/EC)
 > tracked vehicles (see Directive 2007/46/EC)
 > Such loans or leases may include ancillary insurance and service products or additional vehicle parts, and in the case of leases, the residual value of leased vehicles.
+
+### new_auto
+*Needs definition*
+
+### used_auto
+*Needs definition*
 
 ### personal
 As outlined in [LCR][lcr] Article 13(2)(g)(v):
@@ -1165,6 +1173,7 @@ The most common XCS, and that traded in interbank markets, is a mark-to-market (
 ├── life_policy
 ├── cash
 ├── security
+├── auto
 └── other
 ```
 The collateral type defines the form of the collateral, such as property or other assets used to secure an obligation.
@@ -1265,6 +1274,9 @@ From Article 212(2) [CRR](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CE
 
 ### security
 This identifies that the piece of collateral used is a security, as mapped via the security schema and linked to the collateral schema using the collateral's `security_id` property.
+
+### auto
+*NEEDS Definition*
 
 ### other
 *NEEDS Definition*
