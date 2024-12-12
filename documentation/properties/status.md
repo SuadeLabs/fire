@@ -24,6 +24,9 @@ The **status** property indicates the current state of the financial product. A 
 ### active
 The account is active and in use by the customer.
 
+### pending
+Representing items in the course of collection or transmission to/from financial institutions but not yet received or paid
+
 ### transactional
 The account is active in a transactional way, *transactional* being defined in accordance with the [Liquidity Regulations][lcr]:
 > LCR Article 24(3):
@@ -49,7 +52,6 @@ Indicates profits that have not been verified by persons independent of the firm
 
 ### other
 Any other status
-
 
 ## Customer
 
