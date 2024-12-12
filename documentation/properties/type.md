@@ -470,7 +470,8 @@ As outlined in [LCR][lcr] Article 13(2)(g)(v):
 > loans and credit facilities to individuals resident in a Member State for personal, family or household consumption purposes.
 
 ### cd
-A **cd** is a non-negotiable, or not transferable, certificate of deposit.
+A **cd** is a non-negotiable, or not transferable, certificate of deposit. E.g. FDIC guaranteed CDs. See also [FINRA definition][https://www.finra.org/sites/default/files/InterpretationsFOR/p522384_0.pdf]. 
+For negotiable CDs, in particular in the context of trade finance, see the Security schema, which may be more applicable for your use case.
 
 ### commercial
 As outlined in [LCR][lcr] Article 13(2)(g)(iii):
