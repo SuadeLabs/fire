@@ -42,8 +42,8 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   │   └── div_from_money_mkt
 │   └── manufactured_dividend
 ├── donation
-├── economic_loss_retail
-├── economic_loss_wholesale
+├── econ_loss_retail
+├── econ_loss_wholesale
 ├── employee
 ├── fees
 │   ├── credit_card_fee
@@ -650,8 +650,8 @@ refer to interest cashflows only, and do not include any principal flows
 │   └── consumer_buy_to_let
 ├── commodities_finance
 ├── construction
-├── economic_loss_retail
-├── economic_loss_wholesale
+├── econ_loss_retail
+├── econ_loss_wholesale
 ├── first_time_buyer
 │   └── first_time_buyer_cstr
 ├── fraud_loss_retail
@@ -896,13 +896,13 @@ As defined by OSFI Chapter 4, P66 and Chapter 5, P15:
 ### other
 The **other** enum value can be used when none of the other enum values apply or the value is *unknown*.
 
-### economic_loss_retail 
+### econ_loss_retail 
 The definition of loss used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss, all relevant factors should be taken into account, including material discount effects and material direct and indirect costs associated with collecting on the exposure.  Reported on Post-CRM basis. Reported after securitization.
 
 Defined in [IRB Credit Data Retail Portfolio Part-1](https://www.osfi-bsif.gc.ca/en/data-forms/reporting-returns/filing-financial-returns/financial-reporting-instructions/irb-credit-data-retail-portfolio-part-1-bd)
 
 
-### economic_loss_wholesale 
+### econ_loss_wholesale 
 It is the definition of loss used in estimating Loss Given Default.  When measuring economic loss, as opposed to accounting loss, all relevant factors should be taken into account, including material discount effects and material direct and indirect costs associated with collecting on the exposure.  Reported on Post-CRM basis.
 
 Defined in [IRB Credit Data Wholesale Portfolio Part-1](https://www.osfi-bsif.gc.ca/en/data-forms/reporting-returns/filing-financial-returns/financial-reporting-instructions/irb-credit-data-wholesale-portfolio-part-1-bb)

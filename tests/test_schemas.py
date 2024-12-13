@@ -74,7 +74,6 @@ class TestSchemas(unittest.TestCase):
             "buy_to_let_house_purchase",
             "buy_to_let_further_advance",
             "cancelled_payout_agreed",
-            "economic_loss_wholesale",
             "firm_operating_expenses",
             # DO NOT ADD TO THIS LIST, FIX YOUR ENUM INSTEAD
         ]
