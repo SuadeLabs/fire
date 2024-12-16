@@ -36,6 +36,7 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   │   ├── mmkt_fund
 │   │   └── real_estate_fund
 │   ├── pension_fund
+│   ├── credit_union
 │   ├── ciu
 │   ├── sspe
 │   ├── pic
@@ -48,7 +49,6 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   └── qccp
 ├── central_bank
 ├── mdb
-├── credit_union
 ├── deposit_broker
 ├── pse
 │   ├── local_authority
@@ -116,7 +116,8 @@ Article 411 of the [CRR][crr]:
 > (d) a CIU;
 > (e) a non-open ended investment scheme;
 > (f) an insurance undertaking;
-> (g) a financial holding company or mixed-financial holding company.
+> (g) a financial holding company or mixed-financial holding company;
+> (h) a credit union.
 > 'financial sector entity' means any of the following:
 > (a) an institution;
 > (b) a financial institution;
@@ -413,6 +414,7 @@ A **credit union** is defined by the [FCA](https://www.fca.org.uk/firms/credit-u
 > - lending
 >
 > These services are regulated activities.
+> However, it should be noted that **credit_union** is regarded as non-financial for NSFR reporting, as per Article 428am [CRR][crr].
 
 ### deposit_broker
 A **deposit broker** can be an individual or a firm that facilitates the placement of deposits with insured depository institutions. Deposit brokers offer investors an assortment of fixed-term investment products, which earn low-risk returns.
