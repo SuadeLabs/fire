@@ -57,7 +57,8 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   ├── public_corporation
 │   ├── social_security_fund
 │   ├── statutory_board
-│   └── other_pse
+│   ├── other_pse
+│   └── pse_mortgage_insurer
 ├── sovereign
 ├── intl_org
 ├── export_credit_agency
@@ -211,6 +212,9 @@ A public sector entity is defined in the [FCA handbook](https://www.handbook.fca
 >(d) self administered bodies governed by law that are under public supervision.
 
 ### other_pse
+
+
+### pse_mortgage_insurer
 
 
 ### statutory_board
