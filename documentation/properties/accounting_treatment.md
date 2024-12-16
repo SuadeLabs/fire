@@ -60,6 +60,8 @@ Under national GAAP based on BAD, ‘Non-trading non-derivative financial assets
 ### other_gaap
 As defined in Part 1, Section 4 of Annex V in [Commission Implementing Regulation (EU) 2021/451]: Under national GAAP based on BAD, ‘Other non-trading non-derivative financial assets’ shall include financial assets that do not qualify for inclusion in other accounting portfolios. That accounting portfolio includes, among others, financial assets that are measured at LOCOM on a continuous basis (‘strict LOCOM’). Assets measured at strict LOCOM are assets for which the applicable accounting framework either provides for the initial and subsequent measurement at LOCOM, or the initial measurement at cost and the subsequent measurement at LOCOM.
 
+### tax_adjusted
+
 ---
 
 [ifrs9]: https://www.iasplus.com/en-gb/standards/ifrs-en-gb/ifrs9
