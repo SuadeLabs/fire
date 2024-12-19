@@ -109,6 +109,10 @@
       "description": "Two-letter country code for product location/jurisdiction. In accordance with ISO 3166-1.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
     },
+    "cr_approach": {
+      "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/cr_approach"
+    },
     "credit_process": {
       "description": "Identifier for how a loan is credit assessed during the underwriting process",
       "type": "string",
@@ -118,10 +122,6 @@
         "rated",
         "scored"
       ]
-    },
-    "cr_approach": {
-      "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/cr_approach"
     },
     "cum_recoveries": {
       "description": "The total amount recovered since the date of default of the instrument.",
