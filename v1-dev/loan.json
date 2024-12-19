@@ -113,6 +113,16 @@
       "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/cr_approach"
     },
+    "credit_process": {
+      "description": "Identifier for how a loan is credit assessed during the underwriting process",
+      "type": "string",
+      "enum": [
+        "delinquency_managed",
+        "graded",
+        "rated",
+        "scored"
+      ]
+    },
     "cum_recoveries": {
       "description": "The total amount recovered since the date of default of the instrument.",
       "type": "integer",
