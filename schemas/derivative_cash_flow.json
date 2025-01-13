@@ -1,0 +1,141 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Derivative Cash Flow Schema",
+  "description": "A derivative cash flow where two parties exchange cash flows (or assets) derived from an underlying reference index, security or financial instrument.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The unique identifier for the record within the firm.",
+      "type": "string"
+    },
+    "date": {
+      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "accrued_interest": {
+      "description": "The accrued interest/premium due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "asset_class": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/asset_class"
+    },
+    "asset_liability": {
+      "description": "A derivative cash flow exchange that results in a net positive value after the transaction is an asset on the firm's balance sheet. A derivative cash flow exchange that results in a net negative value after the transaction is a liability on the firm's balance sheet.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/asset_liability"
+    },
+    "balance": {
+      "description": "The contractual balance due on the payment date in the currency given. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "csa_id": {
+      "description": "The unique identifier of the credit support annex for this derivative cash flow",
+      "type": "string"
+    },
+    "currency_code": {
+      "description": "Actual currency of the security in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+    },
+    "customer_id": {
+      "description": "Counterparty to the cash flow",
+      "type": "string"
+    },
+    "derivative_id": {
+      "description": "Unique identifier to the derivative to which this cash flow relates",
+      "type": "string"
+    },
+    "forward_rate": {
+      "description": "Rate used to set a variable cash flow on the reset_date",
+      "type": "number"
+    },
+    "leg": {
+      "description": "The type of the payment leg.",
+      "type": "string",
+      "enum": ["pay", "receive"]
+    },
+    "mna_id": {
+      "description": "The unique identifier of the Master Netting Agreement for this derivative cash flow.",
+      "type": "string"
+    },
+    "mtm_clean": {
+      "description": "The mark-to-market value of the derivative cash flow excluding interest/premium/coupons. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "mtm_dirty": {
+      "description": "The mark-to-market value of the derivative cash flow including interest/premium/coupons. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "notional_amount": {
+      "description": "The notional value is the total value with regard to a derivative's underlying index, security or asset at its spot price in accordance with the specifications (i.e. leverage) of the derivative product. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "on_balance_sheet": {
+      "description": "Is the financial product reported on the balance sheet of the financial institution?",
+      "type": "boolean"
+    },
+    "payment_date": {
+      "description": "The timestamp that the cash flow will occur or was paid. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "product_name": {
+      "description": "The name of the product as given by the financial institution to be used for display and reference purposes.",
+      "type": "string"
+    },
+    "purpose": {
+      "description": "The purpose for which the derivative cash flow is calculated",
+      "type": "string",
+      "enum": [
+        "interest",
+        "principal",
+        "reference"
+      ]
+    },
+    "regulatory_book": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/regulatory_book"
+    },
+    "reporting_entity_name": {
+      "description": "The name of the reporting legal entity for display purposes.",
+      "type": "string"
+    },
+    "reporting_id": {
+      "description": "The internal ID for the legal entity under which the account is being reported.",
+      "type": "string"
+    },
+    "reset_date": {
+      "description": "Date on which a variable cash flow amount is set. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "settlement_type": {
+      "description": "The type of settlement for the contract.",
+      "type": "string",
+      "enum": ["cash", "physical"]
+    },
+    "source": {
+      "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
+      "type": "string"
+    },
+    "trade_date": {
+      "description": "The date that the derivative cash flow terms were agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "value_date": {
+      "description": "The timestamp that the cash flow was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "version_id": {
+      "description": "The version identifier of the data such as the firm's internal batch identifier.",
+      "type": "string"
+    }
+  },
+  "required": ["id", "date"],
+  "additionalProperties": true
+}

@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Batch Schema",
+  "description": "FIRE schema for representing bulk collections of bank objects.",
+  "type": "object",
+  "properties": {
+    "count": {
+      "description": "Number of records in this batch",
+      "type": "integer",
+      "min": 0
+    },
+    "data": {
+      "description": "An array of data items of a single type",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "anyOf": [
+          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/account.json#" },
+          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/collateral.json#" },
+          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/customer.json#" },
+          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/derivative.json#" },
+          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/derivative_cash_flow.json#" },
+          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/exchange_rate.json#" },
+          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/guarantor.json#" },
+          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/issuer.json#" },
+          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/loan.json#" },
+          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/loan_transaction.json#" },
+          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/security.json#" }
+        ]
+      }
+    },
+    "links": {
+      "description": "An array describing the page structure of the full data batch",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "rel": {
+            "type": "string",
+            "enum": ["self", "prev", "next", "first", "last"]
+          },
+          "href" : {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": ["rel", "href"]
+      }
+    },
+    "name": {
+      "description": "A unique identifier for the data batch",
+      "type": "string"
+    }
+  },
+  "required": ["data", "name"]
+}

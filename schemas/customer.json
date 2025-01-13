@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Customer Schema",
+  "description": "Data schema to define a customer or legal entity related to a financial product or transaction.",
+  "type": "object",
+  "allOf": [{
+    "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/entity.json"
+  }],
+  "properties": {
+    "annual_debit_turnover": {
+      "description": "The annual debit turnover in the business account of the entity. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
+    },
+    "clearing_threshold": {
+      "description": "Status of the clearing threshold as defined in EMIR",
+      "type": "string",
+      "enum": ["above", "below"]
+    },
+    "df_ccp": {
+      "description": "The pre-funded financial resources of the CCP in accordance with Article 50c of Regulation (EU) No 648/2012",
+      "type": "integer",
+      "monetary": true
+    },
+    "df_cm": {
+      "description": "The sum of pre-funded contributions of all clearing members of the QCCP in accordance with Article 50c of Regulation (EU) No 648/2012.",
+      "type": "integer",
+      "monetary": true
+    },
+    "incurred_cva": {
+      "description": "The amount of credit valuation adjustements being recognised by the institution as an incurred write-down, calculated without taking into account any offsetting debit value adjustment attributed to the firm's own credit risk, that has been already excluded from own funds.",
+      "type": "integer",
+      "monetary": true
+    },
+    "k_ccp": {
+      "description": "Hypothetical capital of the QCCP in accordance with Article 50c of Regulation (EU) No 648/2012",
+      "type": "integer",
+      "monetary": true
+    },
+    "product_count": {
+      "description": "The number of active products/trades this customer has with the firm.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "risk_profile": {
+      "description": "The evaluation of the customer's willingness and/or capacity to take on financial risk.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "start_date": {
+      "description": "The date that the customer first became a customer. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "description": "The status of the relationship with the customer from the firm's point of view.",
+      "type": "string",
+      "enum": ["established"]
+    }
+  },
+  "required": ["id", "date"],
+  "additionalProperties": true
+}

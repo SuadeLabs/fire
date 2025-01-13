@@ -1,0 +1,657 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Loan Schema",
+  "description": "Data schema defining the characteristics of a loan product.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The unique identifier for the record within the firm.",
+      "type": "string"
+    },
+    "date": {
+      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "acc_fv_change_before_taxes": {
+      "description": "Accumulated change in fair value before taxes.",
+      "type": "integer",
+      "monetary": true
+    },
+    "acc_fv_change_credit_risk": {
+      "description": "Accumulated changes in fair value due to credit risk.",
+      "type": "integer",
+      "monetary": true
+    },
+    "accounting_treatment": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/accounting_treatment"
+    },
+    "accrued_interest_12m": {
+      "description": "The cumulative accrued interest over the past 12 months. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "accrued_interest_balance": {
+      "description": "The accrued interest due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "administration": {
+      "description": "How the loan was administered by the lender.",
+      "type": "string",
+      "enum": [
+        "other",
+        "principal"
+      ]
+    },
+    "arrears_arrangement": {
+      "description": "The arrangement the lender has made with the borrower regarding the amount referenced in the arrears_balance.",
+      "type": "string",
+      "enum": [
+        "formal",
+        "interest_grace_period",
+        "modified_tnc",
+        "none",
+        "possessed",
+        "refinancing",
+        "temporary"
+      ]
+    },
+    "arrears_balance": {
+      "description": "The balance of the loan or capital amount that is considered to be in arrears. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "asset_liability": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/asset_liability"
+    },
+    "balance": {
+      "description": "The balance of the loan or capital still to be repaid. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "base_rate": {
+      "description": "The base rate represents the basis of the repayment rate on the borrowed funds at the given date as agreed in the terms of the loan.",
+      "type": "string",
+      "enum": [
+        "FDTR",
+        "UKBRBASE",
+        "ZERO"
+      ]
+    },
+    "behavioral_curve_id": {
+      "description": "The unique identifier for the behavioral curve used by the financial institution.",
+      "type": "string"
+    },
+    "beneficiary_id": {
+      "description": "The unique identifier for the beneficiary of the loan cashflows.",
+      "type": "string"
+    },
+    "cb_haircut": {
+      "description": "The haircut as determined by the firm's central bank",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "ccf": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/ccf"
+    },
+    "cost_center_code": {
+      "description": "The organizational unit or sub-unit to which costs/profits are booked.",
+      "type": "string"
+    },
+    "count": {
+      "description": "Describes the number of loans aggregated into a single row.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "country_code": {
+      "description": "Two-letter country code for product location/jurisdiction. In accordance with ISO 3166-1.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
+    },
+    "cr_approach": {
+      "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/cr_approach"
+    },
+    "credit_process": {
+      "description": "Identifier for how a loan is credit assessed during the underwriting process",
+      "type": "string",
+      "enum": [
+        "delinquency_managed",
+        "graded",
+        "rated",
+        "scored"
+      ]
+    },
+    "cum_recoveries": {
+      "description": "The total amount recovered since the date of default of the instrument.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
+    },
+    "cum_write_offs": {
+      "description": "The portion of the loan which has been written off.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
+    },
+    "currency_code": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+    },
+    "customer_id": {
+      "description": "The unique identifier used by the financial institution to identify the customer.",
+      "type": "string"
+    },
+    "customers": {
+      "description": "The list of customers for this loan",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "The unique identifier for the customer/s within the financial institution.",
+            "type": "string"
+          },
+          "income_amount": {
+            "description": "The reference income used for the customer(s) for this loan. Monetary type represented as an integer number of cents/pence.",
+            "type": "integer",
+            "minimum": 0,
+            "monetary": true
+          }
+        },
+        "required": [
+          "id",
+          "income_amount"
+        ]
+      }
+    },
+    "day_count_convention": {
+      "description": "The standardised methodology for calculating the number of days between two dates. It is used to calculate the amount of accrued interest or the present value.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/day_count_convention"
+    },
+    "deal_id": {
+      "description": "Identifier used for linking this product as part of a larger deal. e.g. Two components of a single loan or matching a securitisation with it's underlying loan.",
+      "type": "string"
+    },
+    "deferred_fees": {
+      "description": "Deferred fees are deferred payments subject to prepayment risk and not included in the balance.",
+      "type": "integer",
+      "monetary": true
+    },
+    "el_irb": {
+      "description": "The best estimate of expected loss when in default.",
+      "type": "number"
+    },
+    "encumbrance_amount": {
+      "description": "The amount of the loan that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
+    },
+    "encumbrance_end_date": {
+      "description": "Date encumbrance amount goes to zero. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
+      "type": "string",
+      "format": "date-time"
+    },
+    "encumbrance_type": {
+      "description": "The type of the encumbrance causing the encumbrance_amount.",
+      "type": "string",
+      "enum": [
+        "abs",
+        "cb_funding",
+        "covered_bond"
+      ]
+    },
+    "end_date": {
+      "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
+      "type": "string",
+      "format": "date-time"
+    },
+    "facility_currency_code": {
+      "description": "The currency of the credit facility if not the same as loan currency_code.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+    },
+    "fees": {
+      "description": "The fees associated with the loan.",
+      "type": "integer",
+      "monetary": true
+    },
+    "first_arrears_date": {
+      "description": "The first date on which this loan was in arrears.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "first_payment_date": {
+      "description": "The first payment date for interest payments.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "forbearance_date": {
+      "description": "The date on which the first forbearance measure was granted to this product.  Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
+      "type": "string",
+      "format": "date-time"
+    },
+    "fvh_level": {
+      "description": "Fair value hierarchy category according to IFRS 13.93 (b)",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
+    "guarantee_amount": {
+      "description": "The amount of the loan that is guaranteed by the guarantor. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
+    },
+    "guarantor_id": {
+      "description": "The unique identifier for the guarantor of the loan.",
+      "type": "string"
+    },
+    "impairment_amount": {
+      "description": "The impairment amount for a loan is the allowance for loan impairments set aside by the firm that accounts for the event that the loan becomes impaired in the future.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
+    },
+    "impairment_date": {
+      "description": "The date upon which the product became considered impaired. Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
+      "type": "string",
+      "format": "date-time"
+    },
+    "impairment_status": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/impairment_status"
+    },
+    "impairment_type": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/impairment_type"
+    },
+    "income_assessment": {
+      "description": "Was the loan assessed against a single or joint incomes?",
+      "type": "string",
+      "enum": [
+        "joint",
+        "joint_not_evidenced",
+        "single",
+        "single_not_evidenced"
+      ]
+    },
+    "interest_repayment_frequency": {
+      "description": "Repayment frequency of the loan interest, if different from principal.",
+      "type": "string",
+      "enum": [
+        "daily",
+        "weekly",
+        "bi_weekly",
+        "monthly",
+        "bi_monthly",
+        "quarterly",
+        "semi_annually",
+        "annually",
+        "at_maturity",
+        "biennially",
+        "sesquiennially"
+      ]
+    },
+    "issuer_id": {
+      "description": "The unique identifier for the issuer of the loan.",
+      "type": "string",
+      "maxLength": 20
+    },
+    "last_arrears_date": {
+      "description": "The last date on which this loan was in arrears.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_drawdown_date": {
+      "description": "The last date on which a drawdown was made on this loan",
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_payment_date": {
+      "description": "The final payment date for interest payments, often coincides with end_date.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "ledger_code": {
+      "description": "The internal ledger code or line item name.",
+      "type": "string"
+    },
+    "lgd_downturn": {
+      "description": "The loss given default in the event of an economic downturn. Percentage between 0 an 1.",
+      "type": "number"
+    },
+    "lgd_floored": {
+      "description": "The final LGD value after the relevant floors have been applied. To be used in the IRB RWA calculations",
+      "type": "number"
+    },
+    "lgd_irb": {
+      "description": "The loss given default as determined by internal rating-based methods.",
+      "type": "number"
+    },
+    "limit_amount": {
+      "description": "The total credit limit on the loan. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
+    },
+    "lnrf_amount": {
+      "description": "The total amount of non-recourse funding linked to the loan. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
+    },
+    "minimum_balance": {
+      "description": "Indicates the minimum balance of each loan within the aggregate.",
+      "type": "integer",
+      "monetary": true
+    },
+    "minimum_balance_eur": {
+      "description": "Indicates the minimum balance, in Euros, of each loan within the aggregate.",
+      "type": "integer",
+      "monetary": true
+    },
+    "movement": {
+      "description": "The movement parameter describes how the loan arrived to the firm.",
+      "type": "string",
+      "enum": [
+        "acquired",
+        "acquired_impaired",
+        "other",
+        "securitised",
+        "sold",
+        "syndicated",
+        "syndicated_lead"
+      ]
+    },
+    "next_payment_date": {
+      "description": "The next date at which interest will be paid or accrued_interest balance returned to zero.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "next_repricing_date": {
+      "description": "The date on which the interest rate of the loan will be re-calculated. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "notional_amount": {
+      "description": "The original notional amount of the loan. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "on_balance_sheet": {
+      "description": "Is the loan reported on the balance sheet of the financial institution?",
+      "type": "boolean"
+    },
+    "orig_credit_score": {
+      "description": "The credit score of the customer at origination of the product using a commercially available credit bureau score.",
+      "type": "integer"
+    },
+    "orig_limit_amount": {
+      "description": "The original line of credit amount that was granted at the origination of the facility",
+      "type": "integer",
+      "monetary": true
+    },
+    "orig_notional": {
+      "description": "The notional of the loan at origination.",
+      "type": "integer",
+      "monetary": true
+    },
+    "originator_id": {
+      "description": "The unique identifier used by the financial institution to identify the originator of the loan product.",
+      "type": "string"
+    },
+    "originator_type": {
+      "description": "The type of financial institution that acted as the originator of the loan product.",
+      "type": "string",
+      "enum": [
+        "mortgage_lender",
+        "other",
+        "spv"
+      ]
+    },
+    "pd_irb": {
+      "description": "The probability of default as determined by internal rating-based methods. Percentage between 0 an 1.",
+      "type": "number"
+    },
+    "pd_retail_irb": {
+      "description": "The retail probability of default as determined by internal rating-based methods. Percentage between 0 an 1.",
+      "type": "number"
+    },
+    "prev_payment_date": {
+      "description": "The most recent previous date at which interest was paid or accrued_interest balance returned to zero.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "product_name": {
+      "description": "The name of the product as given by the financial institution to be used for display and reference purposes.",
+      "type": "string"
+    },
+    "provision_amount": {
+      "description": "The amount of reserves that is provisioned by the financial institution to cover the potential loss on the loan. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
+    },
+    "provision_type": {
+      "description": "The provision type parameter details the provisions the issuing firm has allocated to cover potential losses from issuing a loan.",
+      "type": "string",
+      "enum": [
+        "none",
+        "other"
+      ]
+    },
+    "purpose": {
+      "description": "The underlying reason the borrower has requested the loan.",
+      "type": "string",
+      "enum": [
+        "agriculture",
+        "bridging_loan",
+        "buy_to_let",
+        "buy_to_let_construct",
+        "buy_to_let_further_advance",
+        "buy_to_let_house_purchase",
+        "buy_to_let_other",
+        "buy_to_let_remortgage",
+        "commodities_finance",
+        "construction",
+        "consumer_buy_to_let",
+        "econ_loss_retail",
+        "econ_loss_wholesale",
+        "first_time_buyer",
+        "first_time_buyer_cstr",
+        "fraud_loss_retail",
+        "further_advance",
+        "further_advance_cstr",
+        "house_purchase",
+        "house_purchase_cstr",
+        "ips",
+        "lifetime_mortgage",
+        "non_b20",
+        "object_finance",
+        "object_finance_hq",
+        "operational",
+        "other",
+        "project_finance",
+        "project_hq_phase",
+        "project_pre_op",
+        "promotional",
+        "reference",
+        "remortgage",
+        "remortgage_construct",
+        "remortgage_other",
+        "remortgage_othr_cstr",
+        "speculative_property"
+      ]
+    },
+    "rate": {
+      "description": "The full interest rate applied to the loan balance. Note that for tracker rates this includes the benchmark (ie. not the credit spread). Percentages represented as a decimal/float, so 1.5 implies 1.5%.",
+      "type": "number"
+    },
+    "rate_type": {
+      "description": "Describes the type of interest rate applied to the loan.",
+      "type": "string",
+      "enum": [
+        "combined",
+        "fixed",
+        "tracker",
+        "variable"
+      ]
+    },
+    "ref_income_amount": {
+      "description": "The reference income used for the customer(s) for this loan. Monetary type represented as an integer number of cents/pence.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
+    },
+    "regulated": {
+      "description": "Is this loan regulated or unregulated?",
+      "type": "boolean"
+    },
+    "regulatory_book": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/regulatory_book"
+    },
+    "repayment_frequency": {
+      "description": "Repayment frequency of the loan.",
+      "type": "string",
+      "enum": [
+        "daily",
+        "weekly",
+        "bi_weekly",
+        "monthly",
+        "bi_monthly",
+        "quarterly",
+        "semi_annually",
+        "annually",
+        "at_maturity",
+        "biennially",
+        "sesquiennially"
+      ]
+    },
+    "repayment_type": {
+      "description": "Repayment type of the loan refers to whether the customer will be repaying capital + interest, just interest or a combination of the two.",
+      "type": "string",
+      "enum": [
+        "combined",
+        "interest_only",
+        "other",
+        "repayment"
+      ]
+    },
+    "reporting_entity_name": {
+      "description": "The name of the reporting legal entity for display purposes.",
+      "type": "string"
+    },
+    "reporting_id": {
+      "description": "The internal ID for the legal entity under which the account is being reported.",
+      "type": "string"
+    },
+    "reversion_date": {
+      "description": "The timestamp that indicates the end of an initial period where the 'rate' is applied to a loan. After this the interest is calculated using the 'reversion_rate'. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "reversion_rate": {
+      "description": "The rate to which the loan will revert after the reversion date. Percentages represented as a decimal/float, so 1.5 implies 1.5%.",
+      "type": "number"
+    },
+    "risk_country_code": {
+      "description": "Two-letter country code describing where the risk for the product resides. In accordance with ISO 3166-1",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
+    },
+    "risk_weight_irb": {
+      "description": "The internal risk weight represented as a decimal/float such that 1.5% is 0.015.",
+      "type": "number"
+    },
+    "risk_weight_std": {
+      "description": "The standardised approach risk weight represented as a decimal/float such that 1.5% is 0.015.",
+      "type": "number"
+    },
+    "secured": {
+      "description": "Is this loan secured or unsecured?",
+      "type": "boolean"
+    },
+    "servicing": {
+      "description": "The method by which the loan shall be repaid",
+      "type": "string",
+      "enum": [
+        "business",
+	"pension",
+	"rent",
+	"salary"
+      ]
+    },
+    "servicing_currency_code": {
+      "description": "Identify the currency in which a loan shall be repaid.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+    },
+    "source": {
+      "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
+      "type": "string"
+    },
+    "start_date": {
+      "description": "The timestamp that the trade or financial product commences. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "description": "Describes if the loan is active or been cancelled.",
+      "type": "string",
+      "enum": [
+        "actual",
+        "cancellable",
+        "cancelled",
+        "committed",
+        "defaulted",
+        "revolving"
+      ]
+    },
+    "trade_date": {
+      "description": "The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "type": {
+      "description": "The form of the loan product administered by the financial institution, with regards to common regulatory classifications.",
+      "type": "string",
+      "enum": [
+        "auto",
+        "cd",
+        "charge_card",
+        "commercial",
+        "commercial_property",
+        "corporate_card",
+        "credit_card",
+        "credit_facility",
+        "education",
+        "financial_lease",
+        "heloc",
+        "liquidity_facility",
+        "mortgage",
+        "mortgage_charter",
+        "multiccy_facility",
+        "new_auto",
+        "nostro",
+        "other",
+        "personal",
+        "q_reverse_mortgage",
+        "reverse_mortgage",
+        "trade_finance",
+        "used_auto"
+      ]
+    },
+    "version_id": {
+      "description": "The version identifier of the data such as the firm's internal batch identifier.",
+      "type": "string"
+    },
+    "vol_adj": {
+      "description": "The volatility adjustment appropriate to the exposure.",
+      "type": "number"
+    }
+  },
+  "required": [
+    "id",
+    "date"
+  ],
+  "additionalProperties": true
+}

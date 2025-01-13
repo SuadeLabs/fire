@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Curve Schema",
+  "description": "A Curve represents a series of points on a plot. Typically, interest rates, volatility or forward prices.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The unique identifier for the record within the firm.",
+      "type": "string"
+    },
+    "date": {
+      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "currency_code": {
+      "description": "The currency reference code in accordance with ISO 4217 standards.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+    },
+    "name": {
+      "description": "The internal name of the curve.",
+      "type": "string"
+    },
+    "source": {
+      "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
+      "type": "string"
+    },
+    "type": {
+      "description": "The curve type.",
+      "type": "string",
+      "enum": [
+        "behavioral",
+        "rate",
+        "volatility"
+      ]
+    },
+    "values": {
+      "description": "The list of values for this curve.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "description": "The reference item for the value. (x-axis)",
+            "type": "string",
+            "enum": [
+              "o_n", "1w", "1m", "3m", "6m", "12m", "24m", "60m", "120m"
+            ]
+          },
+          "value": {
+            "description": "The reference value for this rate. (y-axis)",
+            "type": "number"
+          }
+        },
+        "required": ["reference", "value"]
+      }
+    },
+    "version_id": {
+      "description": "The version identifier of the data such as the firm's internal batch identifier.",
+      "type": "string"
+    }
+  },
+  "required": ["id", "date", "values"],
+  "additionalProperties": true
+}

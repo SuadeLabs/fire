@@ -1,0 +1,153 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"title": "Example Schema",
+	"description": "FIRE schema for representing and validating FIRE examples",
+	"type": "object",
+	"properties": {
+		"comment": {
+			"description": "Additional comments describing the FIRE example",
+			"type": "string"
+		},
+		"data": {
+			"description": "An object of FIRE data lists, with data types as keys",
+			"type": "object",
+			"properties": {
+				"account": {
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/account.json#"
+					}
+				},
+				"agreement": {
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/agreement.json#"
+					}
+				},
+				"adjustment": {
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/adjustment.json#"
+					}
+				},
+				"collateral": {
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/collateral.json#"
+					}
+				},
+				"curve": {
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/curve.json#"
+					}
+				},
+				"customer": {
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/customer.json#"
+					}
+				},
+				"derivative_cash_flow": {
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/derivative_cash_flow.json#"
+					}
+				},
+				"derivative": {
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/derivative.json#"
+					}
+				},
+				"exchange_rate": {
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/exchange_rate.json#"
+					}
+				},
+				"guarantor": {
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/guarantor.json#"
+					}
+				},
+				"issuer": {
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/issuer.json#"
+					}
+				},
+				"loan_transaction": {
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/loan_transaction.json#"
+					}
+				},
+				"loan": {
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/loan.json#"
+					}
+				},
+				"security": {
+					"type": "array",
+					"minItems": 1,
+					"uniqueItems": true,
+					"items": {
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/security.json#"
+					}
+				}
+			},
+			"additionalProperties": false,
+			"anyOf": [
+				{"required": ["account"]},
+				{"required": ["adjustment"]},
+				{"required": ["agreement"]},
+				{"required": ["collateral"]},
+				{"required": ["curve"]},
+				{"required": ["customer"]},
+				{"required": ["derivative"]},
+				{"required": ["derivative_cash_flow"]},
+				{"required": ["exchange_rate"]},
+				{"required": ["guarantot"]},
+				{"required": ["issuer"]},
+				{"required": ["loan"]},
+				{"required": ["loan_transaction"]},
+				{"required": ["security"]}
+			]
+		},
+		"title": {
+			"description": "Title of the FIRE product example",
+			"type": "string"
+		}
+	},
+	"additionalProperties": false,
+	"required": ["comment", "data", "title"]
+}

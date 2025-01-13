@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Guarantor Schema",
+  "description": "Data schema to define a guarantor for a security.",
+  "type": "object",
+  "allOf": [{
+    "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/entity.json"
+  }],
+  "properties": {},
+  "required": ["id", "date"],
+  "additionalProperties": true
+}

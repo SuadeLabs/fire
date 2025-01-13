@@ -1,0 +1,345 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Entity Schema",
+  "description": "Data schema to define a person or legal entity.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The unique identifier for the record within the firm.",
+      "type": "string"
+    },
+    "date": {
+      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "address_city": {
+      "description": "City, town or village.",
+      "type": "string"
+    },
+    "boe_industry_code": {
+      "description": "Bank of England industry code.",
+      "type": "string"
+    },
+    "boe_sector_code": {
+      "description": "Bank of England sector code.",
+      "type": "string"
+    },
+    "count": {
+      "description": "Describes the number of entities represented by this record. eg. joint customers should have a count > 1.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "country_code": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code",
+      "description": "The person or entity country of residence. Two-letter country code as defined according to ISO 3166-1."
+    },
+    "cqs_irb": {
+      "description": "The credit quality step for internal ratings based approach.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12
+    },
+    "cqs_standardised": {
+      "description": "The credit quality step for standardised approach.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 17
+    },
+    "credit_impaired": {
+      "description": "Flag to determine if the entity credit quality is impaired.",
+      "type": "boolean"
+    },
+    "currency_code": {
+      "description": "Currency in accordance with ISO 4217. It should be consistent with the figures for turnover and total assets.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+    },
+    "dbrs_lt": {
+      "description": "DBRS long term credit ratings",
+      "type":"string",
+      "enum": ["aaa", "aa_h", "aa", "aa_l", "a_h", "a", "a_l", "bbb_h", "bbb", "bbb_l", "bb_h", "bb", "bb_l", "b_h", "b", "b_l", "ccc_h", "ccc", "ccc_l", "cc", "c", "d"]
+    },
+    "dbrs_st": {
+      "description": "DBRS short term credit ratings",
+      "type":"string",
+      "enum": ["r1_h", "r1_m", "r1_l", "r2_h", "r2_m", "r2_l", "r3", "r4", "r5", "d"]
+    },
+    "fitch_lt": {
+      "description": "Fitch long term credit ratings",
+      "type":"string",
+      "enum": ["aaa", "aa_plus", "aa", "aa_minus", "a_plus", "a", "a_minus", "bbb_plus", "bbb", "bbb_minus", "bb_plus", "bb", "bb_minus", "b_plus", "b", "b_minus", "ccc_plus", "ccc", "ccc_minus", "cc", "c", "rd", "d"]
+    },
+    "fitch_st": {
+      "description": "Fitch short term credit ratings",
+      "type":"string",
+      "enum": ["f1_plus", "f1", "f2", "f3", "b", "c", "rd", "d"]
+    },
+    "headcount": {
+      "description": "The number of full time staff.",
+      "type": "integer"
+    },
+    "internal_rating": {
+      "description": "Categorization of unrated exposure",
+      "type":"string",
+      "enum": [
+	      "investment", 
+	      "non_investment"   
+      ]
+    },
+    "intra_group": {
+      "description": "Flag to indicate that this should be considered an intra-group entity.",
+      "type": "boolean"
+    },
+    "kbra_lt": {
+      "description": "KBRA long term credit ratings",
+      "type":"string",
+      "enum": ["aaa", "aa_plus", "aa", "aa_minus", "a_plus", "a", "a_minus", "bbb_plus", "bbb", "bbb_minus", "bb_plus", "bb", "bb_minus", "b_plus", "b", "b_minus", "ccc_plus", "ccc", "ccc_minus", "cc", "c", "d"]
+    },
+    "kbra_st": {
+      "description": "KBRA short term credit ratings",
+      "type":"string",
+      "enum": ["k1_plus", "k1", "k2", "k3", "b", "c", "d"]
+    },
+    "legal_entity_name": {
+      "description": "The official legal name of the entity.",
+      "type": "string"
+    },
+    "lei_code": {
+      "description": "The LEI code for the legal entity (for corporates).",
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 20
+    },
+    "lgd_irb": {
+      "description": "The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "moodys_lt": {
+      "description": "Moody's long term credit ratings",
+        "type":"string",
+        "enum": ["aaa", "aa1", "aa2", "aa3", "a1", "a2", "a3", "baa1", "baa2", "baa3", "ba1", "ba2", "ba3", "b1", "b2", "b3", "caa1", "caa2", "caa3", "ca", "c"]
+      },
+      "moodys_st": {
+        "description": "Moodys short term credit ratings",
+        "type":"string",
+        "enum": ["p1", "p2", "p3", "np"]
+      },
+      "nace_code": {
+        "description": "The EU NACE economic activity classification.",
+        "type": "string",
+        "enum": [
+          "A.01.10", "A.01.11", "A.01.12", "A.01.13", "A.01.14", "A.01.15", "A.01.16", "A.01.19", "A.01.20", "A.01.21", "A.01.22", "A.01.23", "A.01.24",
+          "A.01.25", "A.01.26", "A.01.27", "A.01.28", "A.01.29", "A.01.30", "A.01.40", "A.01.41", "A.01.42", "A.01.43", "A.01.44", "A.01.45", "A.01.46",
+          "A.01.47", "A.01.49", "A.01.50", "A.01.60", "A.01.61", "A.01.62", "A.01.63", "A.01.64", "A.01.70", "A.02.10", "A.02.20", "A.02.30", "A.02.40",
+          "A.03.10", "A.03.11", "A.03.12", "A.03.20", "A.03.21", "A.03.22", "B.05.10", "B.05.20", "B.06.10", "B.06.20", "B.07.10", "B.07.20", "B.07.21",
+          "B.07.29", "B.08.10", "B.08.11", "B.08.12", "B.08.90", "B.08.91", "B.08.92", "B.08.93", "B.08.99", "B.09.10", "B.09.90", "C.10.10", "C.10.11",
+          "C.10.12", "C.10.13", "C.10.20", "C.10.30", "C.10.31", "C.10.32", "C.10.39", "C.10.40", "C.10.41", "C.10.42", "C.10.50", "C.10.51", "C.10.52",
+          "C.10.60", "C.10.61", "C.10.62", "C.10.70", "C.10.71", "C.10.72", "C.10.73", "C.10.80", "C.10.81", "C.10.82", "C.10.83", "C.10.84", "C.10.85",
+          "C.10.86", "C.10.89", "C.10.90", "C.10.91", "C.10.92", "C.11.00", "C.11.01", "C.11.02", "C.11.03", "C.11.04", "C.11.05", "C.11.06", "C.11.07",
+          "C.12.00", "C.13.10", "C.13.20", "C.13.30", "C.13.90", "C.13.91", "C.13.92", "C.13.93", "C.13.94", "C.13.95", "C.13.96", "C.13.99", "C.14.10",
+          "C.14.11", "C.14.12", "C.14.13", "C.14.14", "C.14.19", "C.14.20", "C.14.30", "C.14.31", "C.14.39", "C.15.10", "C.15.11", "C.15.12", "C.15.20",
+          "C.16.10", "C.16.20", "C.16.21", "C.16.22", "C.16.23", "C.16.24", "C.16.29", "C.17.10", "C.17.11", "C.17.12", "C.17.20", "C.17.21", "C.17.22",
+          "C.17.24", "C.17.29", "C.17.30", "C.18.10", "C.18.11", "C.18.12", "C.18.13", "C.18.14", "C.18.20", "C.19.10", "C.19.20", "C.20.10", "C.20.11",
+          "C.20.12", "C.20.13", "C.20.14", "C.20.15", "C.20.16", "C.20.17", "C.20.20", "C.20.30", "C.20.40", "C.20.41", "C.20.42", "C.20.50", "C.20.51",
+          "C.20.52", "C.20.53", "C.20.59", "C.20.60", "C.21.10", "C.21.20", "C.22.10", "C.22.11", "C.22.19", "C.22.20", "C.22.21", "C.22.22", "C.22.23",
+          "C.22.29", "C.23.10", "C.23.11", "C.23.12", "C.23.13", "C.23.14", "C.23.19", "C.23.20", "C.23.30", "C.23.31", "C.23.32", "C.23.40", "C.23.41",
+          "C.23.42", "C.23.43", "C.23.44", "C.23.49", "C.23.50", "C.23.51", "C.23.52", "C.23.60", "C.23.61", "C.23.62", "C.23.63", "C.23.64", "C.23.65",
+          "C.23.69", "C.23.70", "C.23.90", "C.23.91", "C.23.99", "C.24.10", "C.24.20", "C.24.30", "C.24.31", "C.24.32", "C.24.33", "C.24.34", "C.24.40",
+          "C.24.41", "C.24.42", "C.24.43", "C.24.44", "C.24.45", "C.24.46", "C.24.50", "C.24.51", "C.24.52", "C.24.53", "C.24.54", "C.25.10", "C.25.11",
+          "C.25.12", "C.25.20", "C.25.21", "C.25.29", "C.25.30", "C.25.40", "C.25.50", "C.25.60", "C.25.61", "C.25.62", "C.25.70", "C.25.71", "C.25.72",
+          "C.25.73", "C.25.90", "C.25.91", "C.25.92", "C.25.93", "C.25.94", "C.25.99", "C.26.10", "C.26.11", "C.26.12", "C.26.20", "C.26.30", "C.26.40",
+          "C.26.50", "C.26.51", "C.26.52", "C.26.60", "C.26.70", "C.26.80", "C.27.10", "C.27.11", "C.27.12", "C.27.20", "C.27.30", "C.27.31", "C.27.32",
+          "C.27.33", "C.27.40", "C.27.50", "C.27.51", "C.27.52", "C.27.90", "C.28.10", "C.28.11", "C.28.12", "C.28.13", "C.28.14", "C.28.15", "C.28.20",
+          "C.28.21", "C.28.22", "C.28.23", "C.28.24", "C.28.25", "C.28.29", "C.28.30", "C.28.40", "C.28.41", "C.28.49", "C.28.90", "C.28.91", "C.28.92",
+          "C.28.93", "C.28.94", "C.28.95", "C.28.96", "C.28.99", "C.29.10", "C.29.20", "C.29.30", "C.29.31", "C.29.32", "C.30.10", "C.30.11", "C.30.12",
+          "C.30.20", "C.30.30", "C.30.40", "C.30.90", "C.30.91", "C.30.92", "C.30.99", "C.31.00", "C.31.01", "C.31.02", "C.31.03", "C.31.09", "C.32.10",
+          "C.32.11", "C.32.12", "C.32.13", "C.32.20", "C.32.30", "C.32.40", "C.32.50", "C.32.90", "C.32.91", "C.32.99", "C.33.10", "C.33.11", "C.33.12",
+        "C.33.13", "C.33.14", "C.33.15", "C.33.16", "C.33.17", "C.33.19", "C.33.20", "D.35.10", "D.35.11", "D.35.12", "D.35.13", "D.35.14", "D.35.20",
+        "D.35.21", "D.35.22", "D.35.23", "D.35.30", "E.36.00", "E.37.00", "E.38.10", "E.38.11", "E.38.12", "E.38.20", "E.38.21", "E.38.22", "E.38.30",
+        "E.38.31", "E.38.32", "E.39.00", "F.41.10", "F.41.20", "F.42.10", "F.42.11", "F.42.12", "F.42.13", "F.42.20", "F.42.21", "F.42.22", "F.42.90",
+        "F.42.91", "F.42.99", "F.43.10", "F.43.11", "F.43.12", "F.43.13", "F.43.20", "F.43.21", "F.43.22", "F.43.29", "F.43.30", "F.43.31", "F.43.32",
+        "F.43.33", "F.43.34", "F.43.39", "F.43.90", "F.43.91", "F.43.99", "G.45.10", "G.45.11", "G.45.19", "G.45.20", "G.45.30", "G.45.31", "G.45.32",
+        "G.45.40", "G.46.10", "G.46.11", "G.46.12", "G.46.13", "G.46.14", "G.46.15", "G.46.16", "G.46.17", "G.46.18", "G.46.19", "G.46.20", "G.46.21",
+        "G.46.22", "G.46.23", "G.46.24", "G.46.30", "G.46.31", "G.46.32", "G.46.33", "G.46.34", "G.46.35", "G.46.36", "G.46.37", "G.46.38", "G.46.39",
+        "G.46.40", "G.46.41", "G.46.42", "G.46.43", "G.46.44", "G.46.45", "G.46.46", "G.46.47", "G.46.48", "G.46.49", "G.46.50", "G.46.51", "G.46.52",
+        "G.46.60", "G.46.61", "G.46.62", "G.46.63", "G.46.64", "G.46.65", "G.46.66", "G.46.69", "G.46.70", "G.46.71", "G.46.72", "G.46.73", "G.46.74",
+        "G.46.75", "G.46.76", "G.46.77", "G.46.90", "G.47.10", "G.47.11", "G.47.19", "G.47.20", "G.47.21", "G.47.22", "G.47.23", "G.47.24", "G.47.25",
+        "G.47.26", "G.47.29", "G.47.30", "G.47.40", "G.47.41", "G.47.42", "G.47.43", "G.47.50", "G.47.51", "G.47.52", "G.47.53", "G.47.54", "G.47.59",
+        "G.47.60", "G.47.61", "G.47.62", "G.47.63", "G.47.64", "G.47.65", "G.47.70", "G.47.71", "G.47.72", "G.47.73", "G.47.74", "G.47.75", "G.47.76",
+        "G.47.77", "G.47.78", "G.47.79", "G.47.80", "G.47.81", "G.47.82", "G.47.89", "G.47.90", "G.47.91", "G.47.99", "H.49.10", "H.49.20", "H.49.30",
+        "H.49.31", "H.49.32", "H.49.39", "H.49.40", "H.49.41", "H.49.42", "H.49.50", "H.50.10", "H.50.20", "H.50.30", "H.50.40", "H.51.10", "H.51.20",
+        "H.51.21", "H.51.22", "H.52.10", "H.52.20", "H.52.21", "H.52.22", "H.52.23", "H.52.24", "H.52.29", "H.53.10", "H.53.20", "I.55.10", "I.55.20",
+        "I.55.30", "I.55.90", "I.56.10", "I.56.20", "I.56.21", "I.56.29", "I.56.30", "J.58.10", "J.58.11", "J.58.12", "J.58.13", "J.58.14", "J.58.19",
+        "J.58.20", "J.58.21", "J.58.29", "J.59.10", "J.59.11", "J.59.12", "J.59.13", "J.59.14", "J.59.20", "J.60.10", "J.60.20", "J.61.10", "J.61.20",
+        "J.61.30", "J.61.90", "J.62.00", "J.62.01", "J.62.02", "J.62.03", "J.62.09", "J.63.10", "J.63.11", "J.63.12", "J.63.90", "J.63.91", "J.63.99",
+        "K.64.10", "K.64.11", "K.64.19", "K.64.20", "K.64.30", "K.64.90", "K.64.91", "K.64.92", "K.64.99", "K.65.10", "K.65.11", "K.65.12", "K.65.20",
+        "K.65.30", "K.66.10", "K.66.11", "K.66.12", "K.66.19", "K.66.20", "K.66.21", "K.66.22", "K.66.29", "K.66.30", "L.68.10", "L.68.20", "L.68.30",
+        "L.68.31", "L.68.32", "M.69.10", "M.69.20", "M.70.10", "M.70.20", "M.70.21", "M.70.22", "M.71.10", "M.71.11", "M.71.12", "M.71.20", "M.72.10",
+        "M.72.11", "M.72.19", "M.72.20", "M.73.10", "M.73.11", "M.73.12", "M.73.20", "M.74.10", "M.74.20", "M.74.30", "M.74.90", "M.75.00", "N.77.10",
+        "N.77.11", "N.77.12", "N.77.20", "N.77.21", "N.77.22", "N.77.29", "N.77.30", "N.77.31", "N.77.32", "N.77.33", "N.77.34", "N.77.35", "N.77.39",
+        "N.77.40", "N.78.10", "N.78.20", "N.78.30", "N.79.10", "N.79.11", "N.79.12", "N.79.90", "N.80.10", "N.80.20", "N.80.30", "N.81.10", "N.81.20",
+        "N.81.21", "N.81.22", "N.81.29", "N.81.30", "N.82.10", "N.82.11", "N.82.19", "N.82.20", "N.82.30", "N.82.90", "N.82.91", "N.82.92", "N.82.99",
+        "O.84.10", "O.84.11", "O.84.12", "O.84.13", "O.84.20", "O.84.21", "O.84.22", "O.84.23", "O.84.24", "O.84.25", "O.84.30", "P.85.10", "P.85.20",
+        "P.85.30", "P.85.31", "P.85.32", "P.85.40", "P.85.41", "P.85.42", "P.85.50", "P.85.51", "P.85.52", "P.85.53", "P.85.59", "P.85.60", "Q.86.10",
+        "Q.86.20", "Q.86.21", "Q.86.22", "Q.86.23", "Q.86.90", "Q.87.10", "Q.87.20", "Q.87.30", "Q.87.90", "Q.88.10", "Q.88.90", "Q.88.91", "Q.88.99",
+        "R.90.00", "R.90.01", "R.90.02", "R.90.03", "R.90.04", "R.91.01", "R.91.02", "R.91.03", "R.91.04", "R.92.00", "R.93.10", "R.93.11", "R.93.12",
+        "R.93.13", "R.93.19", "R.93.20", "R.93.21", "R.93.29", "S.94.10", "S.94.11", "S.94.12", "S.94.20", "S.94.90", "S.94.91", "S.94.92", "S.94.99",
+        "S.95.10", "S.95.11", "S.95.12", "S.95.20", "S.95.21", "S.95.22", "S.95.23", "S.95.24", "S.95.25", "S.95.29", "S.96.00", "S.96.01", "S.96.02",
+        "S.96.03", "S.96.04", "S.96.09", "T.97.00", "T.98.10", "T.98.20", "U.99.00"
+      ]
+    },
+    "naics_code": {
+      "description": "North American Industry Classification System - NAICS Code",
+      "type": "integer",
+      "minimum": 10,
+      "maximum": 999999
+    },
+    "name": {
+      "description": "The name of the person or legal entity to be used for display and reference purposes.",
+      "type": "string"
+    },
+    "national_reporting_code":{
+      "description": "Unique identifier established by the national reporting system",
+      "type": "string"
+    },
+    "parent_id": {
+      "description": "The unique identifier for the ultimate parent of the person or legal entity.",
+      "type": "string"
+    },
+    "pd_irb": {
+      "description": "The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "relationship":{
+      "description": "Relationship to parent.",
+      "type": "string",
+      "enum": ["branch", "head_office", "jv", "parent", "parent_branch", "parent_subsidiary", "participation", "subsidiary"]
+    },
+    "reporting_relationship":{
+      "description": "Relationship to reporting entity. See: relationship.",
+      "type": "string",
+      "enum": ["branch", "head_office", "jv", "parent", "parent_branch", "parent_subsidiary", "participation", "subsidiary"]
+    },
+    "risk_country_code": {
+      "description": "Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
+    },
+    "risk_group_id":{
+      "description": "The unique identifier for the group representing a single risk entity where no relationship of control exists",
+      "type": "string"
+    },
+    "risk_group_id_2":{
+      "description": "The secondary identifier for the secondary group representing a single risk entity where no relationship of control exists",
+      "type": "string"
+    },
+    "scra": {
+      "description": "Grade calculated using the Basel Standardised Credit Risk Assessment",
+      "type":"string",
+      "enum": [
+	      "a", "a_plus", "b", "c"  
+      ]
+    },
+    "sic_code": {
+      "description": "The UK SIC 2007 standard industry and sector classification.",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "snp_lt": {
+      "description": "S&P long term credit ratings",
+      "type":"string",
+      "enum": ["aaa", "aa_plus", "aa", "aa_minus", "a_plus", "a", "a_minus", "bbb_plus", "bbb", "bbb_minus", "bb_plus", "bb", "bb_minus", "b_plus", "b", "b_minus", "ccc_plus", "ccc", "ccc_minus", "cc", "c", "d"]
+    },
+    "snp_st": {
+      "description": "S&P short term credit ratings",
+      "type":"string",
+      "enum": ["a1", "a2", "a3", "b", "c", "d"]
+    },
+    "source": {
+      "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
+      "type": "string"
+    },
+    "ssic_code": {
+      "description": "The Singaporean standard industry and sector classification.",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "total_assets": {
+      "description": "The annual balance sheet total of the entity as at the last accounting reference date.",
+      "type": "integer",
+      "monetary": true
+    },
+    "turnover": {
+      "description": "The annual turnover of the entity as at the last accounting reference date.",
+      "type": "integer",
+      "monetary": true
+    },
+    "type": {
+      "description": "The designated financial or legal entity category this person or legal entity falls under",
+      "type": "string",
+      "enum": [
+        "building_society",
+        "ccp",
+        "central_bank",
+        "central_govt",
+        "charity",
+        "ciu",
+        "community_charity",
+        "corporate",
+        "credit_institution",
+        "credit_union",
+        "deposit_broker",
+	      "export_credit_agency",
+        "financial",
+        "financial_holding",
+        "fund",
+        "hedge_fund",
+        "individual",
+        "insurer",
+        "intl_org",
+        "investment_firm",
+        "local_authority",
+        "mdb",
+        "mmkt_fund",
+        "natural_person",
+        "other",
+        "other_financial",
+        "other_pse",
+        "partnership",
+        "pension_fund",
+        "pic",
+        "pmi",
+	"private_equity_fund",
+        "private_fund",
+        "promo_fed_home_loan",
+	"promo_fed_reserve",
+	"promotional_lender",
+        "pse",
+        "public_corporation",
+        "qccp",
+        "real_estate_fund",
+        "regional_govt",
+        "sme",
+        "social_security_fund",
+        "sovereign",
+        "sspe",
+        "state_owned_bank",
+        "statutory_board",
+        "supported_sme",
+        "unincorporated_biz",
+        "unregulated_financial"
+      ]
+    },
+    "version_id": {
+      "description": "The version identifier of the data such as the firm's internal batch identifier.",
+      "type": "string"
+    }
+  },
+  "required": ["id", "date"],
+  "additionalProperties": true
+}

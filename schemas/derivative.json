@@ -1,0 +1,440 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Derivative Schema",
+  "description": "A derivative is a contract which derives its value from an underlying reference index, security or asset.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The unique identifier for the record within the firm.",
+      "type": "string"
+    },
+    "date": {
+      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "accounting_treatment": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/accounting_treatment"
+    },
+    "accrued_interest": {
+      "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "asset_class": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/asset_class"
+    },
+    "asset_liability": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/asset_liability"
+    },
+    "balance": {
+      "description": "Outstanding amount including accrued interest. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "base_rate": {
+      "description": "The base rate represents the basis of the rate on the balance at the given date as agreed in the terms of the financial product.",
+      "type": "string",
+      "enum": [
+        "FDTR",
+        "UKBRBASE",
+        "ZERO"
+      ]
+    },
+    "break_dates": {
+      "description": "Dates where this contract can be broken (by either party). Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "format": "date-time"
+      }
+    },
+    "call_dates": {
+      "description": "Dates where this contract can be called (by the customer). Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "format": "date-time"
+      }
+    },
+    "ccr_approach": {
+      "description": "Specifies the approved counterparty credit risk methodology for calculating exposures.",
+      "type": "string",
+      "enum": ["imm", "oem", "sa", "ssa"]
+    },
+    "cost_center_code": {
+      "description": "The organizational unit or sub-unit to which costs/profits are booked.",
+      "type": "string"
+    },
+    "country_code": {
+      "description": "Two-letter country code for derivative location/jurisdiction. In accordance with ISO 3166-1.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
+    },
+    "cr_approach": {
+      "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/cr_approach"
+    }, 
+    "csa_id": {
+      "description": "The unique identifier of the credit support annex for this derivative",
+      "type": "string"
+    },
+    "currency_code": {
+      "description": "Actual currency of the underlying reference index, security or asset for the derivative in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+    },
+    "customer_id": {
+      "description": "The unique identifier used by the financial institution to identify the customer for this product.",
+      "type": "string"
+    },
+    "deal_id": {
+      "description": "The unique identifier used by the financial institution for the deal to which this derivative belongs.",
+      "type": "string"
+    },
+    "delta": {
+      "description": "Price sensitivity to the underlying.",
+      "type": "number"
+    },
+    "end_date": {
+      "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
+      "type": "string",
+      "format": "date-time"
+    },
+    "first_payment_date": {
+      "description": "The first payment date for interest payments.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "fvh_level": {
+      "description": "Fair value hierarchy category according to IFRS 13.93 (b)",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
+    "gamma": {
+      "description": "Second-order price sensitivity to the underlying or rate of change of the delta.",
+      "type": "number"
+    },
+    "impairment_amount": {
+      "description": "The impairment amount for a security is the allowance set aside by the firm for losses.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
+    },
+    "impairment_status": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/impairment_status"
+    },
+    "implied_vol": {
+      "description": "Options: implied volatility used to compute mtm and greeks.",
+      "type": "number"
+    },
+    "initial_margin": {
+      "description": "Upfront margin posted/received for the trade. Monetary type as integer number of cents.",
+      "type": "integer",
+      "monetary": true
+    },
+    "insolvency_rank": {
+      "description": "The insolvency ranking as per the national legal framework of the reporting institution.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "last_exercise_date": {
+      "description": "The last date on which an option can be exercised. For European options, it is the option exercise date",
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_payment_date": {
+      "description": "The final payment date for interest payments, often coincides with end_date.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "ledger_code": {
+      "description": "The internal ledger code or line item name.",
+      "type": "string"
+    },
+    "leg_type": {
+      "description": "Describe the payoff type of the derivative leg.",
+      "type": "string",
+      "enum": [
+        "call",
+        "fixed",
+        "floating",
+        "indexed",
+        "put"
+      ]
+    },
+    "lgd_floored": {
+      "description": "The final LGD value after the relevant floors have been applied. To be used in the IRB RWA calculations.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "lgd_irb": {
+      "description": "The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "mic_code": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/mic_code"
+    },
+    "mna_id": {
+      "description": "The unique identifier of the Master Netting Agreement for this derivative",
+      "type": "string"
+    },
+    "mtm_clean": {
+      "description": "The mark-to-market value of the derivative excluding interest. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "mtm_dirty": {
+      "description": "The mark-to-market value of the derivative including interest. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "next_exercise_date": {
+      "description": "The next date at which the option can be exercised.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "next_payment_amount": {
+      "description": "The amount that will need to be paid at the next_payment_date. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "next_payment_date": {
+      "description": "The next date at which interest will be paid or accrued_interest balance returned to zero.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "next_receive_amount": {
+      "description": "The amount that is expected to be received at the next_receive_date. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "next_receive_date": {
+      "description": "The next date at which interest will be received or accrued_interest balance returned to zero.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "next_reset_date": {
+      "description": "The date on which the periodic payment term and conditions of a contract agreement are reset/re-established.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "notional_amount": {
+      "description": "The notional value is the total value with regard to a derivative's underlying index, security or asset at its spot price in accordance with the specifications (i.e. leverage) of the derivative product. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "on_balance_sheet": {
+      "description": "Is the derivative reported on the balance sheet of the financial institution?",
+      "type": "boolean"
+    },
+    "pd_irb": {
+      "description": "The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "position": {
+      "description": "Specifies the market position, i.e. long or short, of the derivative leg",
+      "type": "string",
+      "enum": [
+        "long",
+        "short"
+      ]
+    },
+    "prev_payment_date": {
+      "description": "The most recent previous date at which interest was paid or accrued_interest balance returned to zero.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "product_name": {
+      "description": "The name of the product as given by the financial institution to be used for display and reference purposes.",
+      "type": "string"
+    },
+    "purpose": {
+      "description": "The purpose for which the derivative is being held.",
+      "type": "string",
+      "enum": [
+        "back_to_back",
+        "client_execution",
+        "client_transmission",
+        "cva_hedge",
+        "reference"
+      ]
+    },
+    "rate": {
+      "description": "The full interest rate applied to the derivative notional in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).",
+      "type": "number"
+    },
+    "regulatory_book": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/regulatory_book"
+    },
+    "reporting_entity_name": {
+      "description": "The name of the reporting legal entity for display purposes.",
+      "type": "string"
+    },
+    "reporting_id": {
+      "description": "The internal ID for the legal entity under which the account is being reported.",
+      "type": "string"
+    },
+    "rho": {
+      "description": "Price sensitivity to interest rates.",
+      "type": "number"
+    },
+    "risk_country_code": {
+      "description": "Two-letter country code describing where the risk for the derivative product resides. In accordance with ISO 3166-1",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
+    },
+    "risk_weight_irb": {
+      "description": "The internal risk weight represented as a decimal/float such that 1.5% is 0.015.",
+      "type": "number"
+    },
+    "risk_weight_std": {
+      "description": "The standardised approach risk weight represented as a decimal/float such that 1.5% is 0.015.",
+      "type": "number"
+    },
+    "settlement_type": {
+      "description": "The type of settlement for the contract.",
+      "type": "string",
+      "enum": [
+        "cash",
+        "physical"
+      ]
+    },
+    "source": {
+      "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
+      "type": "string"
+    },
+    "start_date": {
+      "description": "Contract effective or commencement date; security issue date. Format YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "description": "Provides additional information regarding the status of the derivative.",
+      "type": "string",
+      "enum": [
+        "free_deliveries",
+        "unsettled"
+      ]
+    },
+    "strike": {
+      "description": "Strike price of the option, which is compared to the underlying price on the option exercise date.",
+      "type": "number"
+    },
+    "supervisory_price": {
+      "description": "Current price/value of the underlying of an option when different from underlying_price, e.g. for Asian-style options.",
+      "type": "number"
+    },
+    "theta": {
+      "description": "Price sensitivity with respect to time.",
+      "type": "number"
+    },
+    "trade_date": {
+      "description": "The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "type": {
+      "description": "This is the type of the derivative with regards to common regulatory classifications.",
+      "type": "string",
+      "enum": [
+        "cap_floor",
+        "ccds",
+        "cds",
+        "forward",
+        "fra",
+        "future",
+        "mtm_swap",
+        "ndf",
+        "nds",
+        "ois",
+        "option",
+        "spot",
+        "swaption",
+        "vanilla_swap",
+        "variance_swap",
+        "xccy"
+      ]
+    },
+    "underlying_currency_code": {
+      "description": "Currency of the underlying which should be in line with ISO 4217 standards.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+    },
+    "underlying_derivative_id": {
+      "description": "The unique identifier used by the financial institution to identify the underlying reference derivative for this derivative.",
+      "type": "string"
+    },
+    "underlying_index": {
+      "description": "The name of a derivative contract underlying which can be used for all derivative asset classes (e.g. interest rate index, credit index, equity index",
+      "type": "string"
+    },
+    "underlying_index_tenor": {
+      "description": "The designated maturity of the underlying interest rate index used in the underlying_index property for interest rate derivatives",
+      "type": "string",
+      "enum": [
+        "1d",
+        "7d",
+        "28d",
+        "91d",
+        "182d",
+        "1m",
+        "2m",
+        "3m",
+        "4m",
+        "5m",
+        "6m",
+        "7m",
+        "8m",
+        "9m",
+        "12m",
+	"24m",
+	"60m",
+	"120m",
+	"360m"
+      ]
+    },
+    "underlying_issuer_id": {
+      "description": "The unique identifier used by the financial institution to identify the underlying reference issuer for this derivative.",
+      "type": "string"
+    },
+    "underlying_price": {
+      "description": "Current price/value of the underlying.",
+      "type": "number"
+    },
+    "underlying_quantity": {
+      "description": "Number of underlying units related to the underlying_price",
+      "type": "number"
+    },
+    "underlying_security_id": {
+      "description": "The unique identifier used by the financial institution to identify the underlying reference security for this derivative.",
+      "type": "string"
+    },
+    "underlying_strike": {
+      "description": "Strike price of the option, which is compared to the underlying price on the option exercise date.",
+      "type": "number"
+    },
+    "value_date": {
+      "description": "The timestamp that the derivative was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "vega": {
+      "description": "Price sensitivity to volatility.",
+      "type": "number"
+    },
+    "version_id": {
+      "description": "The version identifier of the data such as the firm's internal batch identifier.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "date"
+  ],
+  "additionalProperties": true
+}

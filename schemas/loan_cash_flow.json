@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Loan Cash Flow Schema",
+  "description": "A loan cash flow represents the future movement of cash as part of contractually agreed payments for an existing loan.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The unique identifier for the record within the firm.",
+      "type": "string"
+    },
+    "date": {
+      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "amount": {
+      "description": "The size of the cash flow. Monetary type represented as a naturally positive integer number of cents/pence denominated in the currency code.",
+      "type": "integer",
+      "monetary": true
+    },
+    "currency_code": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+    },
+    "loan_id": {
+      "description": "The unique identifier for the affected loan/s within the financial institution.",
+      "type": "string"
+    },
+    "payment_date": {
+      "description": "The timestamp that the cash flow will occur or was paid. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "source": {
+      "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
+      "type": "string"
+    },
+    "type": {
+      "description": "The type of the payment, signifying whether interest or principal is being paid.",
+      "type": "string",
+      "enum": [
+        "interest",
+        "principal"
+      ]
+    },
+    "version_id": {
+      "description": "The version identifier of the data such as the firm's internal batch identifier.",
+      "type": "string"
+    }
+  },
+  "required": ["id", "date", "amount", "currency_code", "loan_id", "type", "payment_date"],
+  "additionalProperties": true
+}

@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Adjustment Schema",
+  "description": "An adjustment represents a modification to a report.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The unique identifier for the record within the firm.",
+      "type": "string"
+    },
+    "date": {
+      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "col": {
+      "description": "The column of the report that this adjustment relates to.",
+      "type": "string"
+    },
+    "comment": {
+      "description": "The description or commentary around the adjustment.",
+      "type": "string"
+    },
+    "contribution_amount": {
+      "description": "The contribution amount this adjustment should make to the specified report cell. A positive/negative number in minor units (cents/pence).",
+      "type": "integer",
+      "monetary": true
+    },
+    "contribution_text": {
+      "description": "The text to use for the adjustment where the reported cell is not a monetary value.",
+      "type": "string"
+    },
+    "currency_code": {
+      "description": "The currency of the contribution_amount in accordance with ISO 4217 standards.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+    },
+    "page": {
+      "description": "The page of the report that this adjustment relates to.",
+      "type": "string"
+    },
+    "report_type": {
+      "description": "The report that this adjustment relates to.",
+      "type": "string"
+    },
+    "reporting_entity_name": {
+      "description": "The name of the reporting legal entity for display purposes.",
+      "type": "string"
+    },
+    "row": {
+      "description": "The row of the report that this adjustment relates to.",
+      "type": "string"
+    },
+    "source": {
+      "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
+      "type": "string"
+    },
+    "version_id": {
+      "description": "The version identifier of the data such as the firm's internal batch identifier.",
+      "type": "string"
+    }
+  },
+  "oneOf": [
+    {"required": ["id", "date", "report_type", "row", "col", "contribution_amount"]},
+    {"required": ["id", "date", "report_type", "row", "col", "contribution_text"]}
+  ],
+  "dependencies": {
+    "contribution_amount": ["currency_code"]
+  },
+  "additionalProperties": true
+}
