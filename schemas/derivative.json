@@ -14,7 +14,7 @@
       "format": "date-time"
     },
     "accounting_treatment": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/accounting_treatment"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/accounting_treatment"
     },
     "accrued_interest": {
       "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -22,10 +22,10 @@
       "monetary": true
     },
     "asset_class": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/asset_class"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/asset_class"
     },
     "asset_liability": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/asset_liability"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/asset_liability"
     },
     "balance": {
       "description": "Outstanding amount including accrued interest. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -70,11 +70,11 @@
     },
     "country_code": {
       "description": "Two-letter country code for derivative location/jurisdiction. In accordance with ISO 3166-1.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/country_code"
     },
     "cr_approach": {
       "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/cr_approach"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/cr_approach"
     }, 
     "csa_id": {
       "description": "The unique identifier of the credit support annex for this derivative",
@@ -82,7 +82,7 @@
     },
     "currency_code": {
       "description": "Actual currency of the underlying reference index, security or asset for the derivative in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
     },
     "customer_id": {
       "description": "The unique identifier used by the financial institution to identify the customer for this product.",
@@ -123,7 +123,7 @@
       "monetary": true
     },
     "impairment_status": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/impairment_status"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/impairment_status"
     },
     "implied_vol": {
       "description": "Options: implied volatility used to compute mtm and greeks.",
@@ -177,7 +177,7 @@
       "maximum": 1.0
     },
     "mic_code": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/mic_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/mic_code"
     },
     "mna_id": {
       "description": "The unique identifier of the Master Netting Agreement for this derivative",
@@ -271,7 +271,7 @@
       "type": "number"
     },
     "regulatory_book": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/regulatory_book"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/regulatory_book"
     },
     "reporting_entity_name": {
       "description": "The name of the reporting legal entity for display purposes.",
@@ -287,7 +287,7 @@
     },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the derivative product resides. In accordance with ISO 3166-1",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/country_code"
     },
     "risk_weight_irb": {
       "description": "The internal risk weight represented as a decimal/float such that 1.5% is 0.015.",
@@ -363,7 +363,7 @@
     },
     "underlying_currency_code": {
       "description": "Currency of the underlying which should be in line with ISO 4217 standards.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
     },
     "underlying_derivative_id": {
       "description": "The unique identifier used by the financial institution to identify the underlying reference derivative for this derivative.",

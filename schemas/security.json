@@ -24,7 +24,7 @@
       "monetary": true
     },
     "accounting_treatment": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/accounting_treatment"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/accounting_treatment"
     },
     "accrued_interest": {
       "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as an integer number of cents/pence.",
@@ -33,7 +33,7 @@
     },
     "asset_liability": {
       "description": "Is the security (valued at either amortised cost or fair value) an asset or a liability on the firm's balance sheet.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/asset_liability"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/asset_liability"
     },
     "attachment_point": {
       "description": "The threshold at which losses within the pool of underlying exposures would start to be allocated to the relevant securitisation position.",
@@ -103,7 +103,7 @@
       "maximum": 1.0
     },
     "ccf": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/ccf"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/ccf"
     },
     "ccr_approach": {
       "description": "Specifies the approved counterparty credit risk methodology for calculating exposures.",
@@ -116,7 +116,7 @@
     },
     "country_code": {
       "description": "Two-letter country code for security location/jurisdiction. In accordance with ISO 3166-1.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/country_code"
     },
     "cover_pool_balance": {
       "description": "The balance of the assets that are held in the cover pool",
@@ -138,7 +138,7 @@
     },
     "cr_approach": {
       "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/cr_approach"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/cr_approach"
     },
     "csa_id": {
       "description": "The unique identifier of the credit support annex this security falls under. Typically where used as derivatives collateral.",
@@ -146,7 +146,7 @@
     },
     "currency_code": {
       "description": "Actual currency of the security in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
     },
     "customer_id": {
       "description": "The unique identifier used by the financial institution to identify the customer for this product.",
@@ -154,7 +154,7 @@
     },
     "day_count_convention": {
       "description": "The standardised methodology for calculating the number of days between two dates. It is used to calculate the amount of accrued interest or the present value.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/day_count_convention"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/day_count_convention"
     },
     "dbrs_lt": {
       "description": "DBRS long term credit ratings",
@@ -298,7 +298,7 @@
       "format": "date-time"
     },
     "impairment_status": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/impairment_status"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/impairment_status"
     },
     "index_composition": {
       "description": "Constituents and their proportion in an index.",
@@ -404,7 +404,7 @@
       "format": "date-time"
     },
     "mic_code": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/mic_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/mic_code"
     },
     "mna_id": {
       "description": "The unique identifier of the Master Netting Agreement this security falls under. Typically where used as derivatives collateral.",
@@ -537,7 +537,7 @@
       "type": "number"
     },
     "regulatory_book": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/regulatory_book"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/regulatory_book"
     },
     "rehypothecation": {
       "description": "Can the security be rehypothecated by the borrower?",
@@ -590,7 +590,7 @@
     },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/country_code"
     },
     "risk_profile": {
       "description": "The evaluation of the financial risk associated to the portfolio",

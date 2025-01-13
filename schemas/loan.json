@@ -24,7 +24,7 @@
       "monetary": true
     },
     "accounting_treatment": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/accounting_treatment"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/accounting_treatment"
     },
     "accrued_interest_12m": {
       "description": "The cumulative accrued interest over the past 12 months. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -63,7 +63,7 @@
       "monetary": true
     },
     "asset_liability": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/asset_liability"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/asset_liability"
     },
     "balance": {
       "description": "The balance of the loan or capital still to be repaid. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -94,7 +94,7 @@
       "maximum": 1.0
     },
     "ccf": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/ccf"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/ccf"
     },
     "cost_center_code": {
       "description": "The organizational unit or sub-unit to which costs/profits are booked.",
@@ -107,11 +107,11 @@
     },
     "country_code": {
       "description": "Two-letter country code for product location/jurisdiction. In accordance with ISO 3166-1.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/country_code"
     },
     "cr_approach": {
       "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/cr_approach"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/cr_approach"
     },
     "credit_process": {
       "description": "Identifier for how a loan is credit assessed during the underwriting process",
@@ -136,7 +136,7 @@
       "monetary": true
     },
     "currency_code": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
     },
     "customer_id": {
       "description": "The unique identifier used by the financial institution to identify the customer.",
@@ -169,7 +169,7 @@
     },
     "day_count_convention": {
       "description": "The standardised methodology for calculating the number of days between two dates. It is used to calculate the amount of accrued interest or the present value.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/day_count_convention"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/day_count_convention"
     },
     "deal_id": {
       "description": "Identifier used for linking this product as part of a larger deal. e.g. Two components of a single loan or matching a securitisation with it's underlying loan.",
@@ -211,7 +211,7 @@
     },
     "facility_currency_code": {
       "description": "The currency of the credit facility if not the same as loan currency_code.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
     },
     "fees": {
       "description": "The fees associated with the loan.",
@@ -261,10 +261,10 @@
       "format": "date-time"
     },
     "impairment_status": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/impairment_status"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/impairment_status"
     },
     "impairment_type": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/impairment_type"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/impairment_type"
     },
     "income_assessment": {
       "description": "Was the loan assessed against a single or joint incomes?",
@@ -509,7 +509,7 @@
       "type": "boolean"
     },
     "regulatory_book": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/regulatory_book"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/regulatory_book"
     },
     "repayment_frequency": {
       "description": "Repayment frequency of the loan.",
@@ -557,7 +557,7 @@
     },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the product resides. In accordance with ISO 3166-1",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/country_code"
     },
     "risk_weight_irb": {
       "description": "The internal risk weight represented as a decimal/float such that 1.5% is 0.015.",
@@ -583,7 +583,7 @@
     },
     "servicing_currency_code": {
       "description": "Identify the currency in which a loan shall be repaid.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
     },
     "source": {
       "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",

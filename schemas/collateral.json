@@ -27,7 +27,7 @@
       "minimum": 0
     },
     "currency_code": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
     },
     "encumbrance_amount": {
       "description": "The amount of the collateral that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -66,7 +66,7 @@
       "monetary": true
     },
     "regulatory_book": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/regulatory_book"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/regulatory_book"
     },
     "security_id": {
       "description": "The unique identifier used by the financial institution to identify the security representing collateral.",

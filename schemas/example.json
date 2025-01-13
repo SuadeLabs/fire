@@ -17,7 +17,7 @@
 					"minItems": 1,
 					"uniqueItems": true,
 					"items": {
-						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/account.json#"
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/account.json#"
 					}
 				},
 				"agreement": {
@@ -25,7 +25,7 @@
 					"minItems": 1,
 					"uniqueItems": true,
 					"items": {
-						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/agreement.json#"
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/agreement.json#"
 					}
 				},
 				"adjustment": {
@@ -33,7 +33,7 @@
 					"minItems": 1,
 					"uniqueItems": true,
 					"items": {
-						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/adjustment.json#"
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/adjustment.json#"
 					}
 				},
 				"collateral": {
@@ -41,7 +41,7 @@
 					"minItems": 1,
 					"uniqueItems": true,
 					"items": {
-						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/collateral.json#"
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/collateral.json#"
 					}
 				},
 				"curve": {
@@ -49,7 +49,7 @@
 					"minItems": 1,
 					"uniqueItems": true,
 					"items": {
-						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/curve.json#"
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/curve.json#"
 					}
 				},
 				"customer": {
@@ -57,7 +57,7 @@
 					"minItems": 1,
 					"uniqueItems": true,
 					"items": {
-						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/customer.json#"
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/customer.json#"
 					}
 				},
 				"derivative_cash_flow": {
@@ -65,7 +65,7 @@
 					"minItems": 1,
 					"uniqueItems": true,
 					"items": {
-						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/derivative_cash_flow.json#"
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/derivative_cash_flow.json#"
 					}
 				},
 				"derivative": {
@@ -73,7 +73,7 @@
 					"minItems": 1,
 					"uniqueItems": true,
 					"items": {
-						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/derivative.json#"
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/derivative.json#"
 					}
 				},
 				"exchange_rate": {
@@ -81,7 +81,7 @@
 					"minItems": 1,
 					"uniqueItems": true,
 					"items": {
-						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/exchange_rate.json#"
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/exchange_rate.json#"
 					}
 				},
 				"guarantor": {
@@ -89,7 +89,7 @@
 					"minItems": 1,
 					"uniqueItems": true,
 					"items": {
-						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/guarantor.json#"
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/guarantor.json#"
 					}
 				},
 				"issuer": {
@@ -97,7 +97,7 @@
 					"minItems": 1,
 					"uniqueItems": true,
 					"items": {
-						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/issuer.json#"
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/issuer.json#"
 					}
 				},
 				"loan_transaction": {
@@ -105,7 +105,7 @@
 					"minItems": 1,
 					"uniqueItems": true,
 					"items": {
-						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/loan_transaction.json#"
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/loan_transaction.json#"
 					}
 				},
 				"loan": {
@@ -113,7 +113,7 @@
 					"minItems": 1,
 					"uniqueItems": true,
 					"items": {
-						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/loan.json#"
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/loan.json#"
 					}
 				},
 				"security": {
@@ -121,7 +121,7 @@
 					"minItems": 1,
 					"uniqueItems": true,
 					"items": {
-						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/security.json#"
+						"$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/security.json#"
 					}
 				}
 			},

@@ -31,7 +31,7 @@
       "minimum": 1
     },
     "country_code": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/country_code",
       "description": "The person or entity country of residence. Two-letter country code as defined according to ISO 3166-1."
     },
     "cqs_irb": {
@@ -52,7 +52,7 @@
     },
     "currency_code": {
       "description": "Currency in accordance with ISO 4217. It should be consistent with the figures for turnover and total assets.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
     },
     "dbrs_lt": {
       "description": "DBRS long term credit ratings",
@@ -226,7 +226,7 @@
     },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/country_code"
     },
     "risk_group_id":{
       "description": "The unique identifier for the group representing a single risk entity where no relationship of control exists",

@@ -15,10 +15,10 @@
     },
     "base_currency_code": {
       "description": "Currency in accordance with ISO 4217. It should be consistent with minimum transfer amount and threshold.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
     },
     "country_code": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/country_code",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/country_code",
       "description": "The country code for the governing law of the agreement. Two-letter country code as defined according to ISO 3166-1."
     },
     "credit_support_type": {

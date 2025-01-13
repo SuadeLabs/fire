@@ -27,7 +27,7 @@ class TestDocs(unittest.TestCase):
             "col",
             "comment",
             "contribution_amount",
-            "contribution_text",
+            "contributi`on_text",
             "data",
             "delta",
             "derivative_id",

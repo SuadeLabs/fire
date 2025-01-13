@@ -15,17 +15,17 @@
       "minItems": 1,
       "items": {
         "anyOf": [
-          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/account.json#" },
-          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/collateral.json#" },
-          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/customer.json#" },
-          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/derivative.json#" },
-          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/derivative_cash_flow.json#" },
-          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/exchange_rate.json#" },
-          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/guarantor.json#" },
-          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/issuer.json#" },
-          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/loan.json#" },
-          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/loan_transaction.json#" },
-          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/security.json#" }
+          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/account.json#" },
+          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/collateral.json#" },
+          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/customer.json#" },
+          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/derivative.json#" },
+          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/derivative_cash_flow.json#" },
+          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/exchange_rate.json#" },
+          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/guarantor.json#" },
+          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/issuer.json#" },
+          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/loan.json#" },
+          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/loan_transaction.json#" },
+          { "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/security.json#" }
         ]
       }
     },

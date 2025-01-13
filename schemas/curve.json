@@ -15,7 +15,7 @@
     },
     "currency_code": {
       "description": "The currency reference code in accordance with ISO 4217 standards.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
     },
     "name": {
       "description": "The internal name of the curve.",
