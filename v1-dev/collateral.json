@@ -1,0 +1,129 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Collateral Schema",
+  "description": "Data schema to define collateral (currently can reference loans or accounts).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The unique identifier for the record within the firm.",
+      "type": "string"
+    },
+    "date": {
+      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "account_ids": {
+      "description": "The unique identifier/s for the account/s within the financial institution.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "charge": {
+      "description": "Lender charge on collateral, 1 indicates first charge, 2 second and so on. 0 indicates a combination of charge levels.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "currency_code": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
+    },
+    "encumbrance_amount": {
+      "description": "The amount of the collateral that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "min": 0,
+      "monetary": true
+    },
+    "encumbrance_type": {
+      "description": "The type of the encumbrance causing the encumbrance_amount.",
+      "type": "string",
+      "enum": [
+        "covered_bond",
+        "derivative",
+        "none",
+        "other",
+        "real_estate",
+        "repo"
+      ]
+    },
+    "end_date": {
+      "description": "The end date for recognition of the collateral",
+      "type": "string",
+      "format": "date-time"
+    },
+    "loan_ids": {
+      "description": "The unique identifiers for the loans within the financial institution.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "orig_value": {
+      "description": "The valuation as used by the bank for the collateral at the origination of the related loan or line of credit. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "regulatory_book": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/regulatory_book"
+    },
+    "security_id": {
+      "description": "The unique identifier used by the financial institution to identify the security representing collateral.",
+      "type": "string"
+    },
+    "source": {
+      "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
+      "type": "string"
+    },
+    "start_date": {
+      "description": "The start date for recognition of the collateral",
+      "type": "string",
+      "format": "date-time"
+    },
+    "type": {
+      "description": "The collateral type defines the form of the collateral provided",
+      "type": "string",
+      "enum": [
+        "auto",
+        "cash",
+        "commercial_property",
+        "commercial_property_hr",
+        "debenture",
+        "farm", 
+        "guarantee",
+        "immovable_property",
+        "life_policy",
+        "multifamily",
+        "other",
+        "res_property_hr",
+        "residential_property",
+	      "security"
+      ]
+    },
+    "value": {
+      "description": "The valuation as used by the bank for the collateral on the value_date. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "value_date": {
+      "description": "The timestamp that the collateral was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "version_id": {
+      "description": "The version identifier of the data such as the firm's internal batch identifier.",
+      "type": "string"
+    },
+    "vol_adj": {
+      "description": "The volatility adjustment appropriate to the collateral.",
+      "type": "number"
+    },
+    "vol_adj_fx": {
+      "description": "The volatility adjustment appropriate to currency mismatch.",
+      "type": "number"
+    }
+  },
+  "required": ["id", "date", "value"],
+  "additionalProperties": true
+}

@@ -1,0 +1,577 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Account Schema",
+  "description": "An Account represents a financial account that describes the funds that a customer has entrusted to a financial institution in the form of deposits or credit balances.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The unique identifier for the record within the firm.",
+      "type": "string"
+    },
+    "date": {
+      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "acc_fv_change_before_taxes": {
+      "description": "Accumulated change in fair value before taxes.",
+      "type": "integer",
+      "monetary": true
+    },
+    "accounting_treatment":{
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/accounting_treatment"
+    },
+    "accrued_interest": {
+      "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "arrears_balance": {
+      "description": "The balance of the capital amount that is considered to be in arrears (for overdrafts/credit cards). Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "asset_liability": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/asset_liability"
+    },
+    "balance": {
+      "description": "The contractual balance on the date and in the currency given. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "base_rate": {
+      "description": "The base rate represents the basis of the rate on the balance at the given date as agreed in the terms of the account.",
+      "type": "string",
+      "enum": [
+        "FDTR",
+        "UKBRBASE",
+        "ZERO"
+      ]
+    },
+    "behavioral_curve_id": {
+      "description": "The unique identifier for the behavioral curve used by the financial institution.",
+      "type": "string"
+    },
+    "break_dates": {
+      "description": "Dates where this contract can be broken (by either party). Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "format": "date-time"
+      }
+    },
+    "call_dates": {
+      "description": "Dates where this contract can be called (by the customer). Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "format": "date-time"
+      }
+    },
+    "capital_tier": {
+      "description": "The capital tiers based on own funds requirements.",
+      "type": "string",
+      "enum": [
+        "add_tier_1",
+        "anc_tier_2",
+        "anc_tier_3",
+        "at1_grandfathered",
+        "bas_tier_2",
+        "bas_tier_3",
+        "ce_tier_1",
+        "cet1_grandfathered",
+        "t2_grandfathered",
+        "tier_1",
+        "tier_2",
+        "tier_3"
+      ]
+    },
+    "ccf": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/ccf"
+    },
+    "cost_center_code": {
+      "description": "The organizational unit or sub-unit to which costs/profits are booked.",
+      "type": "string"
+    },
+    "count": {
+      "description": "Describes the number of accounts aggregated into a single row.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "country_code": {
+      "description": "Two-letter country code for account location/jurisdiction. In accordance with ISO 3166-1.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/country_code"
+    },
+    "cr_approach": {
+      "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/cr_approach"
+    },
+    "currency_code": {
+      "description": "Actual currency of the Account in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
+    },
+    "customer_id": {
+      "description": "The unique identifier used by the financial institution to identify the customer that owns the account.",
+      "type": "string"
+    },
+    "day_count_convention": {
+      "description": "The standardised methodology for calculating the number of days between two dates. It is used to calculate the amount of accrued interest or the present value.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/day_count_convention"
+    },
+    "encumbrance_amount": {
+      "description": "The amount of the account that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
+    },
+    "encumbrance_type": {
+      "description": "The type of the encumbrance causing the encumbrance_amount.",
+      "type": "string",
+      "enum": ["covered_bond", "derivative", "none", "other", "repo"]
+    },
+    "end_date": {
+      "description": "The end or maturity date of the account. Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
+      "type": "string",
+      "format": "date-time"
+    },
+    "first_arrears_date": {
+      "description": "The first date on which this account was in arrears.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "first_payment_date": {
+      "description": "The first payment date for interest payments.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "forbearance_date": {
+      "description": "The date on which the first forbearance measure was granted to this product.  Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
+      "type": "string",
+      "format": "date-time"
+    },
+    "fvh_level": {
+      "description": "Fair value hierarchy category according to IFRS 13.93 (b)",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
+    "guarantee_amount": {
+      "description": "The amount of the account that is guaranteed under a Government Deposit Guarantee Scheme. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
+    },
+    "guarantee_scheme": {
+      "description": "The Government Deposit Scheme scheme under which the guarantee_amount is guaranteed.",
+      "type": "string",
+      "enum": [
+        "be_pf",
+        "bg_dif",
+        "ca_cdic",
+	      "cy_dps",
+        "cz_dif",
+        "de_edb",
+        "de_edo",
+        "de_edw",
+        "dk_gdfi",
+        "ee_dgs",
+        "es_fgd",
+        "fi_dgf",
+        "fr_fdg",
+        "gb_fscs",
+        "gr_dgs",
+        "hk_dps",
+        "hr_di",
+        "hu_ndif",
+        "ie_dgs",
+        "it_fitd",
+        "lt_vi",
+        "lu_fgdl",
+        "lv_dgf",
+        "mt_dcs",
+        "nl_dgs",
+        "pl_bfg",
+        "pt_fgd",
+        "ro_fgdb",
+        "se_ndo",
+        "si_dgs",
+        "sk_dpf",
+        "us_fdic"
+      ]
+    },
+    "impairment_amount": {
+      "description": "The impairment amount is the allowance set aside by the firm that accounts for the event that the asset becomes impaired in the future.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
+    },
+    "impairment_date": {
+      "description": "The date upon which the product became considered impaired. Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
+      "type": "string",
+      "format": "date-time"
+    },
+    "impairment_status": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/impairment_status"
+    },
+    "impairment_type": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/impairment_type"
+    },
+    "insolvency_rank": {
+      "description": "The insolvency ranking as per the national legal framework of the reporting institution.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "interest_repayment_frequency": {
+      "description": "Repayment frequency of the interest.",
+      "type": "string",
+      "enum": ["daily", "weekly", "bi_weekly", "monthly", "bi_monthly", "quarterly", "semi_annually", "annually", "at_maturity", "biennially", "sesquiennially"]
+    },
+    "last_drawdown_date": {
+      "description": "The last date on which a drawdown was made on this account (overdraft).",
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_payment_date": {
+      "description": "The final payment date for interest payments, often coincides with end_date.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "ledger_code": {
+      "description": "The internal ledger code or line item name.",
+      "type": "string"
+    },
+    "lgd_floored": {
+      "description": "The final LGD value after the relevant floors have been applied. To be used in the IRB RWA calculations.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "lgd_irb": {
+      "description": "The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "limit_amount": {
+      "description": "The minimum balance the customer can go overdrawn in their account.",
+      "type": "integer",
+      "monetary": true
+    },
+    "minimum_balance": {
+      "description": "Indicates the minimum balance of each account within the aggregate. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "minimum_balance_eur": {
+      "description": "Indicates the minimum balance, in Euros, of each account within the aggregate. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "mtd_deposits": {
+      "description": "Month to date amount deposited within the account as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "mtd_interest_paid": {
+      "description": "Month to date interest added to account as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "mtd_withdrawals": {
+      "description": "Month to date amount withdrawn from the account as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "next_payment_date": {
+      "description": "The next date at which interest will be paid or accrued_interest balance returned to zero.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "next_repricing_date": {
+      "description": "The date on which the interest rate of the account will be re-calculated. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "next_withdrawal_date": {
+      "description": "The next date at which customer is allowed to withdraw money from this account.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "on_balance_sheet": {
+      "description": "Is the account or deposit reported on the balance sheet of the financial institution?",
+      "type": "boolean"
+    },
+    "orig_credit_score": {
+      "description": "The credit score of the customer at origination of the product using a commercially available credit bureau score.",
+      "type": "integer"
+    },
+    "pd_irb": {
+      "description": "The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "prev_payment_date": {
+      "description": "The most recent previous date at which interest was paid or accrued_interest balance returned to zero.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "product_name": {
+      "description": "The name of the product as given by the financial institution to be used for display and reference purposes.",
+      "type": "string"
+    },
+    "purpose": {
+      "description": "The purpose for which the account was created or is being used.",
+      "type": "string",
+      "enum": [
+	"adj_syn_inv_decon_subs",
+	"adj_syn_inv_own_shares",
+	"adj_syn_mtg_def_ins",
+	"adj_syn_nonsig_inv_fin",
+	"adj_syn_other_inv_fin",
+	"admin",
+	"annual_bonus_accruals",
+	"benefit_in_kind",
+	"capital_gain_tax",
+        "capital_reserve",
+	"cash_management",
+	"cf_hedge",
+	"cf_hedge_reclass",
+	"ci_service",
+	"clearing",
+	"collateral",
+	"commitments",
+	"computer_and_it_cost",
+	"computer_peripheral",
+	"computer_software",
+	"corporation_tax",
+	"credit_card_fee",
+	"critical_service",
+	"current_account_fee",
+	"custody",
+	"dealing_rev_deriv",
+	"dealing_rev_deriv_nse",
+	"dealing_rev_fx",
+	"dealing_rev_fx_nse",
+	"dealing_rev_ir",
+	"dealing_rev_sec",
+	"dealing_rev_sec_nse",
+	"dealing_revenue",
+	"ded_fut_prof",
+	"ded_fut_prof_temp_diff",
+        "defined_benefit",
+	"deposit",
+	"derivative_fee",
+	"dgs_contribution",
+	"div_from_cis",
+	"div_from_money_mkt",
+	"dividend",
+	"donation",
+  "econ_loss_retail",
+  "econ_loss_wholesale",
+	"employee",
+	"employee_stock_option",
+	"escrow",
+	"fees",
+	"fine",
+	"firm_operating_expenses",
+	"firm_operations",
+  "fraud_loss_retail",
+	"furniture",
+	"fut_prof",
+	"fut_prof_temp_diff",
+	"fx",
+        "general_credit_risk",
+	"goodwill",
+	"insurance_fee",
+	"int_on_bond_and_frn",
+	"int_on_bridging_loan",
+	"int_on_credit_card",
+	"int_on_deposit",
+	"int_on_deriv_hedge",
+	"int_on_derivative",
+	"int_on_ecgd_lending",
+	"int_on_loan_and_adv",
+	"int_on_money_mkt",
+	"int_on_mortgage",
+	"int_on_sft",
+	"int_unallocated",
+	"interest",
+	"intra_group_fee",
+	"inv_in_subsidiary",
+	"investment_banking_fee",
+	"investment_property",
+	"ips",
+	"land",
+	"loan_and_advance_fee",
+	"machinery",
+	"manufactured_dividend",
+	"mortgage_fee",
+	"mtg_ins_nonconform",
+	"mtg_insurance",
+	"ni_contribution",
+	"non_life_ins_premium",
+  "not_fut_prof",
+	"occupancy_cost",
+	"operational",
+	"operational_escrow",
+	"operational_excess",
+	"oth_tax_excl_temp_diff",
+	"other",
+	"other_expenditure",
+	"other_fs_fee",
+	"other_non_fs_fee",
+	"other_social_contrib",
+	"other_staff_cost",
+	"other_staff_rem",
+	"overdraft_fee",
+	"own_property",
+	"pension",
+	"ppe",
+	"prime_brokerage",
+	"property",
+	"pv_future_spread_inc",
+	"rec_unidentified_cpty",
+	"reclass_tax",
+	"recovery",
+	"redundancy_pymt",
+	"reference",
+	"reg_loss",
+	"regular_wages",
+	"release",
+	"rent",
+	"res_fund_contribution",
+	"restructuring",
+	"retained_earnings",
+	"revaluation",
+	"revenue_reserve",
+	"share_plan",
+	"share_premium",
+	"staff",
+	"system",
+	"tax",
+	"telecom_equipment",
+	"third_party_interest",
+	"underwriting_fee",
+	"unsecured_loan_fee",
+	"vehicle",
+	"write_off"
+      ]
+    },
+    "rate": {
+      "description": "The full interest rate applied to the account balance in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).",
+      "type": "number"
+    },
+    "rate_type": {
+      "description": "Describes the type of interest rate applied to the account.",
+      "type": "string",
+      "enum": ["combined", "fixed", "preferential", "tracker", "variable"]
+    },
+    "regulatory_book": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/regulatory_book"
+    },
+    "reporting_entity_name": {
+      "description": "The name of the reporting legal entity for display purposes.",
+      "type": "string"
+    },
+    "reporting_id": {
+      "description": "The internal ID for the legal entity under which the account is being reported.",
+      "type": "string"
+    },
+    "risk_country_code": {
+      "description": "Two-letter country code describing where the risk for the account resides. In accordance with ISO 3166-1",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/country_code"
+    },
+    "risk_weight_std": {
+      "description": "The standardised approach risk weight represented as a decimal/float such that 1.5% is 0.015.",
+      "type": "number"
+    },
+    "rollover_date": {
+      "description": "A particular predetermined date at which an account is rolled-over.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "source": {
+      "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
+      "type": "string"
+    },
+    "start_date": {
+      "description": "The timestamp that the trade or financial product commences. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "description": "Describes if the Account is active or been cancelled.",
+      "type": "string",
+      "enum": ["active","audited" , "cancelled", "cancelled_payout_agreed", "other", "pending", "transactional", "unaudited"]
+    },
+    "trade_date": {
+      "description": "The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "type": {
+      "description": "This is the type of the account with regards to common regulatory classifications.",
+      "type": "string",
+      "enum": [
+        "accruals",
+        "amortisation",
+        "bonds",
+        "call",
+        "cd",
+        "credit_card",
+        "current",
+        "current_io",
+        "deferred",
+        "deferred_tax",
+        "depreciation",
+        "expense",
+        "income",
+        "intangible",
+        "internet_only",
+        "ira",
+        "isa",
+        "isa_current",
+        "isa_current_io",
+        "isa_io",
+        "isa_time_deposit",
+        "isa_time_deposit_io",
+        "money_market",
+        "non_deferred",
+        "non_product",
+        "other",
+        "prepaid_card",
+        "prepayments",
+        "provision",
+        "reserve",
+        "retail_bonds",
+        "savings",
+        "savings_io",
+        "suspense",
+        "tangible",
+        "third_party_savings",
+        "time_deposit",
+        "time_deposit_io",
+        "vostro"
+      ]
+    },
+    "uk_funding_type": {
+      "description": "Funding type calculated according to BIPRU 12.5/12.6",
+      "type": "string",
+      "enum": ["a", "b"]
+    },
+    "version_id": {
+      "description": "The version identifier of the data such as the firm's internal batch identifier.",
+      "type": "string"
+    },
+    "withdrawal_penalty": {
+      "description": "This is the penalty incurred by the customer for an early withdrawal on this account. An early withdrawal is defined as a withdrawal prior to the next_withdrawal_date. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    }
+  },
+  "required": ["id", "date"],
+  "additionalProperties": true
+}

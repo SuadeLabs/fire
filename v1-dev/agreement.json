@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Agreement Schema",
+  "description": "An agreement represents the standard terms agreed between two parties.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "The unique identifier for the record within the firm.",
+      "type": "string"
+    },
+    "date": {
+      "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "base_currency_code": {
+      "description": "Currency in accordance with ISO 4217. It should be consistent with minimum transfer amount and threshold.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
+    },
+    "country_code": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/country_code",
+      "description": "The country code for the governing law of the agreement. Two-letter country code as defined according to ISO 3166-1."
+    },
+    "credit_support_type": {
+      "description": "The type of credit support document",
+      "type": "string",
+      "enum": [
+        "csa_isda_1994", "csa_isda_1995", "csd_isda_1995", "scsa_isda_2013"
+      ]
+    },
+    "customer_id": {
+      "description": "The unique identifier used by the financial institution to identify the counterparty to this agreement.",
+      "type": "string"
+    },
+    "guarantor_id": {
+      "description": "The unique identifier used by the financial institution to identify the guarantor of the transactions covered by this agreement.",
+      "type": "string"
+    },
+    "margin_frequency": {
+      "description": "Indicates the periodic timescale at which variation margin is exchanged. Cleared derivatives which are daily settled can be flagged as daily_settled.",
+      "type": "string",
+      "enum": [
+        "daily",
+        "daily_settled",
+        "weekly",
+        "bi_weekly",
+        "monthly"
+      ]
+    },
+    "margin_period_of_risk": {
+      "description": "Margin period of risk estimated for the transactions covered by the [CSA] agreement",
+      "type": "integer"
+    },
+    "minimum_transfer_amount": {
+      "description": "Smallest amount of collateral that can be transferred. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "netting_restriction": {
+      "description": "populated only if any netting restriction applies, in relation to the nature of the agreement or the enforceability of netting in the jurisdiction of the counterparty, preventing the recognition of the agreement as risk-reducing, pursuant to CRR Articles 295 to 298",
+      "type": "string",
+      "enum": ["national_supervision", "no_right_to_offset", "restrictive_covenant"]
+    },
+    "number_of_disputes": {
+      "description": "Indicates the number of disputes threshold to be used in the margin period of risk",
+      "type": "integer"
+    },
+    "source": {
+      "description": "The source where this data originated.",
+      "type": "string"
+    },
+    "start_date": {
+      "description": "The timestamp that the agreement commences. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "stay_protocol": {
+      "description": "Indicates whether a stay protocol has been signed by one or both parties to the agreement.",
+      "type": "string",
+      "enum": [
+        "both",
+        "customer",
+        "self_signed"
+      ]
+    },
+    "threshold": {
+      "description": "Amount below which collateral is not required. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "type": {
+      "description": "The type of the master agreement.",
+      "type": "string",
+      "enum": [
+	"afb",
+	"drv",
+	"ema",
+	"fbf",
+        "gmra",
+	"gmsla",
+        "icma_1992",
+        "icma_1995",
+        "icma_2000",
+        "icma_2011",
+        "isda",
+        "isda_1985",
+        "isda_1986",
+        "isda_1987",
+        "isda_1992",
+        "isda_2002",
+        "other",
+        "other_gmra",
+        "other_isda"
+      ]
+    },
+    "version_id": {
+      "description": "The version identifier of the data such as the firm's internal batch identifier.",
+      "type": "string"
+    }
+  },
+  "required": ["id", "date"],
+  "additionalProperties": true
+}
