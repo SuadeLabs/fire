@@ -9,16 +9,16 @@ from faker import Faker
 
 
 fire_schemas = [
-    "schemas/account.json",
-    "schemas/curve.json",
-    "schemas/customer.json",
-    "schemas/derivative.json",
-    "schemas/derivative_cash_flow.json",
-    "schemas/guarantor.json",
-    "schemas/issuer.json",
-    "schemas/loan.json",
-    "schemas/loan_transaction.json",
-    "schemas/security.json",
+    "v1-dev/account.json",
+    "v1-dev/curve.json",
+    "v1-dev/customer.json",
+    "v1-dev/derivative.json",
+    "v1-dev/derivative_cash_flow.json",
+    "v1-dev/guarantor.json",
+    "v1-dev/issuer.json",
+    "v1-dev/loan.json",
+    "v1-dev/loan_transaction.json",
+    "v1-dev/security.json",
 ]
 WRITE_PATH = ""
 fake = Faker()
@@ -114,7 +114,7 @@ def include_embedded_schema_properties(schema):
     try:
         for i in range(len(schema["allOf"])):
             inherited_schema = schema["allOf"][i]["$ref"].split("/")[-1]
-            f = open("schemas/" + inherited_schema, "r")
+            f = open("v1-dev/" + inherited_schema, "r")
             inherited_schema = json.load(f)
             schema["properties"] = dict(
                 schema["properties"].items() + inherited_schema["properties"].items()

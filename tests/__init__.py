@@ -4,7 +4,7 @@ import os
 
 
 HOME = os.path.join(os.path.dirname(__file__), "..")
-SCHEMAS_DIR = os.path.join(HOME, "schemas")
+SCHEMAS_DIR = os.path.join(HOME, "v1-dev")
 DOCS_DIR = os.path.join(HOME, "documentation", "properties")
 EXAMPLES_DIR = os.path.join(HOME, "examples")
 

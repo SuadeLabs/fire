@@ -199,7 +199,7 @@ class TestExamples:
 
     def test_validating_all_examples(self):
         """
-        Examples should match the example schema found in /schemas/example.json
+        Examples should match the example schema found in /v1-dev/example.json
         """
         for example_name in EXAMPLE_FILES:
             with open(os.path.join(EXAMPLES_DIR, example_name)) as ff:
