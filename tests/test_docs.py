@@ -26,8 +26,6 @@ class TestDocs(unittest.TestCase):
             "cb_haircut",
             "col",
             "comment",
-            "contribution_amount",
-            "contributi`on_text",
             "data",
             "delta",
             "derivative_id",
