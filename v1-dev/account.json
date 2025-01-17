@@ -121,14 +121,14 @@
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/day_count_convention"
     },
     "econ_loss_retail": {
-      "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
-      "type": "integer",
-      "monetary": true
+      "description": "The definition of loss in retail, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss",
+      "monetary": true,
+      "type": "integer"
     },
     "econ_loss_wholesale": {
-      "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
-      "type": "integer",
-      "monetary": true
+      "description": "The definition of loss in wholesale, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss.",
+      "monetary": true,
+      "type": "integer"
     },
     "encumbrance_amount": {
       "description": "The amount of the account that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -162,7 +162,7 @@
       "format": "date-time"
     },
     "fraud_loss_retail": {
-      "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "description": "The total value of accounting losses incurred by the Financial Institution due to fraudulent activities within the reporting segment.",
       "type": "integer",
       "monetary": true
     },
@@ -384,8 +384,6 @@
 	"div_from_money_mkt",
 	"dividend",
 	"donation",
-  "econ_loss_retail",
-  "econ_loss_wholesale",
 	"employee",
 	"employee_stock_option",
 	"escrow",
@@ -393,7 +391,6 @@
 	"fine",
 	"firm_operating_expenses",
 	"firm_operations",
-  "fraud_loss_retail",
 	"furniture",
 	"fut_prof",
 	"fut_prof_temp_diff",

@@ -181,14 +181,14 @@
       "monetary": true
     },
     "econ_loss_retail": {
-      "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
-      "type": "integer",
-      "monetary": true
+      "description": "The definition of loss in retail, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss",
+      "monetary": true,
+      "type": "integer"
     },
     "econ_loss_wholesale": {
-      "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
-      "type": "integer",
-      "monetary": true
+      "description": "The definition of loss in wholesale, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss.",
+      "monetary": true,
+      "type": "integer"
     },
     "el_irb": {
       "description": "The best estimate of expected loss when in default.",
@@ -244,7 +244,7 @@
       "format": "date-time"
     },
     "fraud_loss_retail": {
-      "description": "The accrsssssssued interest since the last payment date and due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "description": "The total value of accounting losses incurred by the Financial Institution due to fraudulent activities within the reporting segment.",
       "type": "integer",
       "monetary": true
     },
@@ -471,11 +471,8 @@
         "commodities_finance",
         "construction",
         "consumer_buy_to_let",
-        "econ_loss_retail",
-        "econ_loss_wholesale",
         "first_time_buyer",
         "first_time_buyer_cstr",
-        "fraud_loss_retail",
         "further_advance",
         "further_advance_cstr",
         "house_purchase",
