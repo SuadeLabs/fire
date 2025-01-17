@@ -75,7 +75,6 @@ The **purpose** property describes the reason behind the creation or usage of th
 │       ├── pension
 │       ├── redundancy_pymt
 │       └── regular_wages
-├── fraud_loss_retail
 ├── fx
 ├── interest
 │   ├── int_on_bond_and_frn
@@ -650,7 +649,6 @@ refer to interest cashflows only, and do not include any principal flows
 ├── construction
 ├── first_time_buyer
 │   └── first_time_buyer_cstr
-├── fraud_loss_retail
 ├── further_advance
 │   └── further_advance_cstr
 ├── house_purchase
