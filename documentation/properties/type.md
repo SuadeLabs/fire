@@ -1413,15 +1413,18 @@ A repayment that reduces the principal amount borrowed and does not include any 
 ├── advance
 ├── capital_repayment
 ├── capitalisation
+├── commitment
 ├── due
 ├── further_advance
 ├── interest
 ├── interest_repayment
 ├── other
 ├── received
+├── recovery
 ├── sale
 │   └── securitisation
 └── write_off
+    └── bankruptcy_write_off
 ```
 
 ### acquisition
@@ -1430,12 +1433,18 @@ The purchase of a loan from another lender
 ### advance
 A loan amount sent to the borrower from the lender
 
+### bankruptcy_write_off
+Loans in the segment that were charged-off due to bankruptcy during the reporting month (based on the [FED Reporting Instructions for Capital Assesments][fed-capital-assesments]).
+
 ### capital_repayment
 A repayment that reduces the principal amount borrowed
 
 ### capitalisation
 From F3.1 of [MLAR](https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/crd-iv/mlar-notes-may-2022.pdf):
 >By 'capitalisation' we mean a formal arrangement agreed with the borrower to add all or part of a borrower's arrears to the amount of outstanding principal (i.e. advance of principal including further advances less capital repayments received during the period of the loan) and then treating that amount of overall debt as the enlarged principal. This enlarged principal is then used as the basis for calculating future monthly payments over the remaining term of the loan.
+
+### commitment
+New commitments on accounts originated (or purchased) in the given month for the segment as of month-end. (based on the [FED Reporting Instructions for Capital Assesments][fed-capital-assesments]).
 
 
 ### due
@@ -1475,6 +1484,9 @@ aggregate payment received figures (as part of the payment
 performance ratio) the contribution from an individual loan in
 arrears should be limited to no more than the 'payment due'
 amount.
+
+### recovery
+Loans in the segment that were previously charged-off, including recoveries on acquired loans/portfolios (based on the [FED Reporting Instructions for Capital Assesments][fed-capital-assesments]).
 
 ### sale
 Sale of the loan
@@ -1548,3 +1560,4 @@ the debt repayable.
 [hedge-fund2]: https://www.google.com/url?esrc=s&q=&rct=j&sa=U&url=https://www.sec.gov/files/ib_hedgefunds.pdf&ved=2ahUKEwjSgp-x-dn9AhVhoFwKHYbQDrMQFnoECAgQAg&usg=AOvVaw3y7wSB8gmaTml65eMxKBpD
 [ecbexamples]: https://www.ecb.europa.eu/pub/pdf/other/ecb-boe_case_better_functioning_securitisation_marketen.pdf
 [investopedia-education-loan]: https://www.investopedia.com/terms/e/education-loan.asp
+[fed-capital-assesments]: https://www.federalreserve.gov/reportforms/forms/FR_Y-14Q20150331_i.pdf#page=22

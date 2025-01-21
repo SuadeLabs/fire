@@ -35,14 +35,17 @@
       "enum": [
         "acquisition",
         "advance",
+        "bankruptcy_write_off",
         "capital_repayment",
         "capitalisation",
+        "commitment",
         "due",
         "further_advance",
         "interest",
         "interest_repayment",
         "other",
         "received",
+        "recovery",
         "sale",
         "securitisation",
         "write_off"
