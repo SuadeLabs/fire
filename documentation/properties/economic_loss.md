@@ -1,10 +1,10 @@
 ---
 layout:     property
-title:      "econ_loss_retail"
+title:      "economic_loss"
 schemas:    [loan, account]
 ---
 
-# econ_loss_retail
+# economic_loss
 
 ---
 
@@ -16,3 +16,4 @@ Institutions are to apply the definition and calculation of Economic Loss consis
 
 ---
 [osfi bd]: https://www.osfi-bsif.gc.ca/en/data-forms/reporting-returns/filing-financial-returns/financial-reporting-instructions/irb-credit-data-retail-portfolio-part-1-bd
+[osfi bb]: https://www.osfi-bsif.gc.ca/en/data-forms/reporting-returns/filing-financial-returns/financial-reporting-instructions/irb-credit-data-wholesale-portfolio-part-1-bb

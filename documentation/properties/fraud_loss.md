@@ -1,10 +1,10 @@
 ---
 layout:     property
-title:      "fraud_loss_retail"
+title:      "fraud_loss"
 schemas:    [loan, account]
 ---
 
-# fraud_loss_retail
+# fraud_loss
 
 ---
 
