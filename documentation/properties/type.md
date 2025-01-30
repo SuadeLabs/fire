@@ -36,6 +36,7 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   │   ├── mmkt_fund
 │   │   └── real_estate_fund
 │   ├── pension_fund
+│   ├── credit_union
 │   ├── ciu
 │   ├── sspe
 │   ├── pic
@@ -48,7 +49,6 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   └── qccp
 ├── central_bank
 ├── mdb
-├── credit_union
 ├── deposit_broker
 ├── pse
 │   ├── local_authority
@@ -116,7 +116,8 @@ Article 411 of the [CRR][crr]:
 > (d) a CIU;
 > (e) a non-open ended investment scheme;
 > (f) an insurance undertaking;
-> (g) a financial holding company or mixed-financial holding company.
+> (g) a financial holding company or mixed-financial holding company;
+> (h) a credit union.
 > 'financial sector entity' means any of the following:
 > (a) an institution;
 > (b) a financial institution;
@@ -413,6 +414,7 @@ A **credit union** is defined by the [FCA](https://www.fca.org.uk/firms/credit-u
 > - lending
 >
 > These services are regulated activities.
+> However, it should be noted that **credit_union** is regarded as non-financial for NSFR reporting, as per Article 428am [CRR][crr].
 
 ### deposit_broker
 A **deposit broker** can be an individual or a firm that facilitates the placement of deposits with insured depository institutions. Deposit brokers offer investors an assortment of fixed-term investment products, which earn low-risk returns.
@@ -439,6 +441,8 @@ Charity serving communities and individuals. Includes non-profit institutions se
 ├── commercial_property
 ├── personal
 ├── auto
+│   ├── new_auto
+│   └── used_auto
 ├── commercial
 ├── credit_card
 │   ├── charge_card
@@ -465,9 +469,19 @@ As outlined in [LCR][lcr] Article 13(2)(g)(iv):
 > tracked vehicles (see Directive 2007/46/EC)
 > Such loans or leases may include ancillary insurance and service products or additional vehicle parts, and in the case of leases, the residual value of leased vehicles.
 
+### new_auto
+A **new_auto** loan is a type of auto loan provided for the purchase of a brand new vehicle, typically purchased directly from a manufacturer or authorized dealer. The loan is based on the vehicle's full market value at the time of purchase, and the vehicle has no previous owners.
+
+### used_auto
+A **used_auto** loan is a type of auto loan provided specifically for the purchase of a pre-owned vehicle. It involves financing for vehicles that are not considered new (i.e. have had prior owners). The loan is subject to terms and conditions based on the vehicle’s age, condition, and market value.
+
 ### personal
 As outlined in [LCR][lcr] Article 13(2)(g)(v):
 > loans and credit facilities to individuals resident in a Member State for personal, family or household consumption purposes.
+
+### cd
+A **cd** is a non-negotiable, or not transferable, certificate of deposit. E.g. FDIC guaranteed CDs. See also [FINRA definition][https://www.finra.org/sites/default/files/InterpretationsFOR/p522384_0.pdf]. 
+For negotiable CDs, in particular in the context of trade finance, see the Security schema, which may be more applicable for your use case.
 
 ### commercial
 As outlined in [LCR][lcr] Article 13(2)(g)(iii):
@@ -1165,6 +1179,7 @@ The most common XCS, and that traded in interbank markets, is a mark-to-market (
 ├── life_policy
 ├── cash
 ├── security
+├── auto
 └── other
 ```
 The collateral type defines the form of the collateral, such as property or other assets used to secure an obligation.
@@ -1265,6 +1280,9 @@ From Article 212(2) [CRR](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CE
 
 ### security
 This identifies that the piece of collateral used is a security, as mapped via the security schema and linked to the collateral schema using the collateral's `security_id` property.
+
+### auto
+This identifies a motor vehicle (such as an automobile, truck, or other types of vehicles) that is pledged by a borrower as collateral to secure a loan. If the borrower defaults on the loan, the lender has the legal right to seize the vehicle and sell it to recover the outstanding debt.
 
 ### other
 *NEEDS Definition*
