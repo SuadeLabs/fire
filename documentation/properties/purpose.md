@@ -636,10 +636,7 @@ refer to interest cashflows only, and do not include any principal flows
 
 ## Loan
 ```bash
-├── house_purchase
-│   └── house_purchase_cstr
-├── first_time_buyer
-│   └── first_time_buyer_cstr
+├── agriculture
 ├── bridging_loan
 ├── buy_to_let
 │   ├── buy_to_let_house_purchase
@@ -648,28 +645,31 @@ refer to interest cashflows only, and do not include any principal flows
 │   ├── buy_to_let_other
 │   ├── buy_to_let_construct
 │   └── consumer_buy_to_let
+├── commodities_finance
+├── construction
+├── first_time_buyer
+│   └── first_time_buyer_cstr
+├── further_advance
+│   └── further_advance_cstr
+├── house_purchase
+│   └── house_purchase_cstr
 ├── ips
 ├── lifetime_mortgage
+├── non_b20
+├── object_finance
+│   └── object_finance_hq
 ├── operational
+├── other
+├── project_finance
+│   ├── project_pre_op
+│   └── project_hq_phase
 ├── promotional
 ├── reference
 ├── remortgage
 │   └── remortgage_construct
 ├── remortgage_other
 │   └── remortgage_othr_cstr
-├── speculative_property
-├── further_advance
-│   └── further_advance_cstr
-├── non_b20
-├── agriculture
-├── construction
-├── project_finance
-│   ├── project_pre_op
-│   └── project_hq_phase
-├── object_finance
-│   └── object_finance_hq
-├── commodities_finance
-└── other
+└── speculative_property
 ```
 
 ### house_purchase
@@ -890,6 +890,7 @@ As defined by OSFI Chapter 4, P66 and Chapter 5, P15:
 ### other
 The **other** enum value can be used when none of the other enum values apply or the value is *unknown*.
 
+
 ## Security
 ```bash
 ├── collateral
@@ -980,6 +981,7 @@ Use this enum to refer to funds reserved for the purpose of implementing, from a
 [pruval]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:JOL_2016_021_R_0005
 [bis_sa_ccr]: https://www.bis.org/publ/bcbs279.pdf
 [osfi-adc]: https://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/CAR22_chpt4.aspx#fnb49:~:text=Land%20acquisition%2C%20development%20and%20construction%20(ADC,of%20any%20residential%20or%20commercial%20property.
-[osfi-income-producing]: https://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/CAR22_chpt4.aspx#fnb49:~:text=CRE%2020.88%2D20.89%5D-,When%20the%20prospects%20for%20servicing%20the%20loan%20materially%20depend,capacity%20of%20the%20borrower%20to%20service%20the%20debt%20from%20other%20sources,-%2C%20and%20provided%20that
+[osfi-bb]: https://www.osfi-bsif.gc.ca/en/data-forms/reporting-returns/filing-financial-returns/financial-reporting-instructions/irb-credit-data-wholesale-portfolio-part-1-bb
+[osfi-bd]: https://www.osfi-bsif.gc.ca/en/data-forms/reporting-returns/filing-financial-returns/financial-reporting-instructions/irb-credit-data-retail-portfolio-part-1-bd
 [osfi-b20]: https://www.osfi-bsif.gc.ca/Eng/Docs/b20_dft.pdf
 

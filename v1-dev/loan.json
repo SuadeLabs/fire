@@ -113,6 +113,16 @@
       "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/cr_approach"
     },
+    "credit_process": {
+      "description": "Identifier for how a loan is credit assessed during the underwriting process",
+      "type": "string",
+      "enum": [
+        "delinquency_managed",
+        "graded",
+        "rated",
+        "scored"
+      ]
+    },
     "cum_recoveries": {
       "description": "The total amount recovered since the date of default of the instrument.",
       "type": "integer",
@@ -170,6 +180,11 @@
       "type": "integer",
       "monetary": true
     },
+    "economic_loss": {
+      "description": "The definition of loss, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss",
+      "monetary": true,
+      "type": "integer"
+    },
     "el_irb": {
       "description": "The best estimate of expected loss when in default.",
       "type": "number"
@@ -223,6 +238,11 @@
       "type": "string",
       "format": "date-time"
     },
+    "fraud_loss": {
+      "description": "The total value of accounting losses incurred by the Financial Institution due to fraudulent activities within the reporting segment.",
+      "type": "integer",
+      "monetary": true
+    },
     "fvh_level": {
       "description": "Fair value hierarchy category according to IFRS 13.93 (b)",
       "type": "integer",
@@ -261,7 +281,9 @@
       "type": "string",
       "enum": [
         "joint",
-        "single"
+        "joint_not_evidenced",
+        "single",
+        "single_not_evidenced"
       ]
     },
     "interest_repayment_frequency": {
@@ -601,6 +623,7 @@
       "type": "string",
       "enum": [
         "auto",
+        "cd",
         "charge_card",
         "commercial",
         "commercial_property",
@@ -614,12 +637,14 @@
         "mortgage",
         "mortgage_charter",
         "multiccy_facility",
+        "new_auto",
         "nostro",
         "other",
         "personal",
         "q_reverse_mortgage",
         "reverse_mortgage",
-        "trade_finance"
+        "trade_finance",
+        "used_auto"
       ]
     },
     "version_id": {

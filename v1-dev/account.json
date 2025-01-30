@@ -120,6 +120,11 @@
       "description": "The standardised methodology for calculating the number of days between two dates. It is used to calculate the amount of accrued interest or the present value.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/day_count_convention"
     },
+    "economic_loss": {
+      "description": "The definition of loss, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss",
+      "monetary": true,
+      "type": "integer"
+    },
     "encumbrance_amount": {
       "description": "The amount of the account that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
@@ -150,6 +155,11 @@
       "description": "The date on which the first forbearance measure was granted to this product.  Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
       "type": "string",
       "format": "date-time"
+    },
+    "fraud_loss": {
+      "description": "The total value of accounting losses incurred by the Financial Institution due to fraudulent activities within the reporting segment.",
+      "type": "integer",
+      "monetary": true
     },
     "fvh_level": {
       "description": "Fair value hierarchy category according to IFRS 13.93 (b)",
@@ -502,7 +512,7 @@
     "status": {
       "description": "Describes if the Account is active or been cancelled.",
       "type": "string",
-      "enum": ["active","audited" , "cancelled", "cancelled_payout_agreed", "other", "transactional", "unaudited"]
+      "enum": ["active","audited" , "cancelled", "cancelled_payout_agreed", "other", "pending", "transactional", "unaudited"]
     },
     "trade_date": {
       "description": "The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
