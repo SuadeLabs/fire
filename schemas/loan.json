@@ -180,8 +180,13 @@
       "type": "integer",
       "monetary": true
     },
-    "economic_loss": {
-      "description": "The definition of loss, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss",
+    "econ_loss_retail": {
+      "description": "The definition of loss in retail, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss",
+      "monetary": true,
+      "type": "integer"
+    },
+    "econ_loss_wholesale": {
+      "description": "The definition of loss in wholesale, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss.",
       "monetary": true,
       "type": "integer"
     },
@@ -238,7 +243,7 @@
       "type": "string",
       "format": "date-time"
     },
-    "fraud_loss": {
+    "fraud_loss_retail": {
       "description": "The total value of accounting losses incurred by the Financial Institution due to fraudulent activities within the reporting segment.",
       "type": "integer",
       "monetary": true
