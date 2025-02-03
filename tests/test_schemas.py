@@ -10,11 +10,13 @@ from . import (
     DOC_NAMES,
     EXAMPLES_DIR,
     EXAMPLE_FILES,
+    OLD_SCHEMAS_DIR,
     SCHEMAS_DIR,
     SCHEMA_FILES,
     SCHEMA_NAMES,
-    schema_enum_registry,
     fire_stats,
+    load_jsons,
+    schema_enum_registry,
 )
 
 
@@ -24,13 +26,8 @@ class TestSchemas(unittest.TestCase):
         assert DOC_NAMES
 
     def test_jsons_are_valid(self):
-        for schema_name in SCHEMA_FILES:
-            with open(os.path.join(SCHEMAS_DIR, schema_name)) as json_schema:
-                assert json.load(json_schema)
-
-        for example_name in EXAMPLE_FILES:
-            with open(os.path.join(EXAMPLES_DIR, example_name)) as json_schema:
-                assert json.load(json_schema)
+        load_jsons(SCHEMA_FILES, SCHEMAS_DIR)
+        load_jsons(EXAMPLE_FILES, EXAMPLES_DIR)
 
     def test_enum_registry(self):
         for schema in SCHEMA_FILES:
@@ -297,3 +294,13 @@ class TestExamples:
         empty_data = {"title": "check", "comment": "check", "data": {"account": []}}
         with pytest.raises(ValidationError):
             self.validator.validate(empty_data)
+
+
+class TestBackwardsCompatibility:
+
+    def test_v1_dev_in_sync_with_schemas(self):
+        new = load_jsons(SCHEMA_FILES, SCHEMAS_DIR)
+        old = load_jsons(SCHEMA_FILES, OLD_SCHEMAS_DIR)
+
+        for o, n in zip(old, new):
+            assert o == n
