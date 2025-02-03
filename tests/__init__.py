@@ -22,6 +22,7 @@ EXAMPLE_FILES = [f for f in filenames if f.endswith(".json")]
 # For transition only...
 OLD_SCHEMAS_DIR = os.path.join(HOME, "v1-dev")
 
+
 def schema_properties(schema_name):
     """
     Returns the properties for a schema
@@ -112,9 +113,10 @@ def fire_stats():
         "data_combinations": format(decimal.Decimal(N), ".6e"),
     }
 
+
 def load_jsons(filenames, location):
-        jsons = []
-        for filename in sorted(filenames):
-            with open(os.path.join(location, filename)) as jsonfile:
-                jsons.append(json.load(jsonfile))
-        return jsons
+    jsons = []
+    for filename in sorted(filenames):
+        with open(os.path.join(location, filename)) as jsonfile:
+            jsons.append(json.load(jsonfile))
+    return jsons
