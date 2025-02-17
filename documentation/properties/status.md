@@ -18,11 +18,15 @@ The **status** property indicates the current state of the financial product. A 
 ├── other
 ├── cancelled
 ├── cancelled_payout_agreed
+├── pending
 ├── audited
 └── unaudited
 ```
 ### active
 The account is active and in use by the customer.
+
+### pending
+Representing items in the course of collection or transmission to/from financial institutions but not yet received or paid
 
 ### transactional
 The account is active in a transactional way, *transactional* being defined in accordance with the [Liquidity Regulations][lcr]:
@@ -50,7 +54,6 @@ Indicates profits that have not been verified by persons independent of the firm
 ### other
 Any other status
 
-
 ## Customer
 
 ```bash
@@ -64,7 +67,8 @@ The reporting institution has determined that the counterparty is part of an est
 ```bash
 ├── actual
 ├── committed
-    └── cancellable
+    ├── cancellable
+    └── revolving
 ├── cancelled
 └── defaulted
 ```
@@ -88,6 +92,9 @@ This is a loan that was committed but then later cancelled due to refusal by cus
 
 ### defaulted
 This is a loan where the customer has defaulted or is non-performing.
+
+### revolving
+Indicates that the product is a revolving credit. Revolving credit is a type of credit that allows a borrower to repeatedly borrow up to a certain limit without needing to reapply each time. As the borrower repays the balance, the credit becomes available again. See also [Revolving Credit on Investopedia][investopedia-revolving-credit]
 
 ## Security
 ```bash
@@ -147,3 +154,4 @@ From [CRE70.10](https://www.bis.org/basel_framework/chapter/CRE/70.htm#:~:text=C
 [lcr]:  http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
 [reg-d]: https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=fe8bd6e281e0788a9ba7efda92e96e2f&mc=true&n=pt12.2.204&r=PART&ty=HTML#se12.2.204_12
 [CRE70]: https://www.bis.org/basel_framework/chapter/CRE/70.htm
+[investopedia-revolving-credit]:https://www.investopedia.com/terms/r/revolvingcredit.asp

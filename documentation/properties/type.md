@@ -36,6 +36,7 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   │   ├── mmkt_fund
 │   │   └── real_estate_fund
 │   ├── pension_fund
+│   ├── credit_union
 │   ├── ciu
 │   ├── sspe
 │   ├── pic
@@ -48,7 +49,6 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   └── qccp
 ├── central_bank
 ├── mdb
-├── credit_union
 ├── deposit_broker
 ├── pse
 │   ├── local_authority
@@ -116,7 +116,8 @@ Article 411 of the [CRR][crr]:
 > (d) a CIU;
 > (e) a non-open ended investment scheme;
 > (f) an insurance undertaking;
-> (g) a financial holding company or mixed-financial holding company.
+> (g) a financial holding company or mixed-financial holding company;
+> (h) a credit union.
 > 'financial sector entity' means any of the following:
 > (a) an institution;
 > (b) a financial institution;
@@ -413,6 +414,7 @@ A **credit union** is defined by the [FCA](https://www.fca.org.uk/firms/credit-u
 > - lending
 >
 > These services are regulated activities.
+> However, it should be noted that **credit_union** is regarded as non-financial for NSFR reporting, as per Article 428am [CRR][crr].
 
 ### deposit_broker
 A **deposit broker** can be an individual or a firm that facilitates the placement of deposits with insured depository institutions. Deposit brokers offer investors an assortment of fixed-term investment products, which earn low-risk returns.
@@ -437,10 +439,10 @@ Charity serving communities and individuals. Includes non-profit institutions se
 │   │   └── q_reverse_mortgage
 │   └── mortgage_charter
 ├── commercial_property
-│   └── commercial_property_hr
-├── res_property_hr
 ├── personal
 ├── auto
+│   ├── new_auto
+│   └── used_auto
 ├── commercial
 ├── credit_card
 │   ├── charge_card
@@ -452,6 +454,7 @@ Charity serving communities and individuals. Includes non-profit institutions se
 ├── liquidity_facility
 ├── multiccy_facility
 ├── nostro
+├── education
 └── other
 ```
 
@@ -466,9 +469,19 @@ As outlined in [LCR][lcr] Article 13(2)(g)(iv):
 > tracked vehicles (see Directive 2007/46/EC)
 > Such loans or leases may include ancillary insurance and service products or additional vehicle parts, and in the case of leases, the residual value of leased vehicles.
 
+### new_auto
+A **new_auto** loan is a type of auto loan provided for the purchase of a brand new vehicle, typically purchased directly from a manufacturer or authorized dealer. The loan is based on the vehicle's full market value at the time of purchase, and the vehicle has no previous owners.
+
+### used_auto
+A **used_auto** loan is a type of auto loan provided specifically for the purchase of a pre-owned vehicle. It involves financing for vehicles that are not considered new (i.e. have had prior owners). The loan is subject to terms and conditions based on the vehicle’s age, condition, and market value.
+
 ### personal
 As outlined in [LCR][lcr] Article 13(2)(g)(v):
 > loans and credit facilities to individuals resident in a Member State for personal, family or household consumption purposes.
+
+### cd
+A **cd** is a non-negotiable, or not transferable, certificate of deposit. E.g. FDIC guaranteed CDs. See also [FINRA definition][https://www.finra.org/sites/default/files/InterpretationsFOR/p522384_0.pdf]. 
+For negotiable CDs, in particular in the context of trade finance, see the Security schema, which may be more applicable for your use case.
 
 ### commercial
 As outlined in [LCR][lcr] Article 13(2)(g)(iii):
@@ -476,23 +489,6 @@ As outlined in [LCR][lcr] Article 13(2)(g)(iii):
 
 ### commercial_property
 This includes commercial loans or mortgages that do not fall under **commercial** due to their real estate connection and do not classify as **mortgage** either due to the customer not being an individual or the occupation of the property not being residential.
-
-### commercial_property_hr
-Exposure secured by Commercial property collateral that does not provide the lender with an adequate level of security and may attract a higher risk weight, i.e. one or more of the conditions laid out in Article 126 (2) of CRR 275/2013 is not met. Also applies to exposures which do not meet the necessary conditions on Article 124 (3) of CRR 575/2013.
-As per Article 126 (2) of CRR 275/2013: >Institutions shall consider an exposure or any part of an exposure as fully and completely secured only if all the following conditions are met: > >(a) the value of the property shall not materially depend upon the credit quality of the borrower. Institutions may exclude situations where purely macro-economic factors affect both the value of the property and the performance of the borrower from their determination of the materiality of such dependence; > > >(b) the risk of the borrower shall not materially depend upon the performance of the underlying property or project, but on the underlying capacity of the borrower to repay the debt from other sources, and as a consequence, the repayment of the facility shall not materially depend on any cash flow generated by the underlying property serving as collateral; > > >(c) the requirements set out in Article 208 and the valuation rules set out in Article 229(1) are met; and > > >(d) the 50 % risk weight unless otherwise provided under Article 124(2) shall be assigned to the part of the loan that does not exceed 50 % of the market value of the property or 60 % of the mortgage lending value unless otherwise provided under Article 124(2) of the property in question in those Member States that have laid down rigorous criteria for the assessment of the mortgage lending value in statutory or regulatory provisions.
-For the purposes of this definition of commercial_property_hr, if the collateral does not meet condition (d) (e.g. has a loan-to-value ratio higher than 60%) but meets conditions (a) to (c), the collateral is not considered to be commercial_property_hr (which is allocated for those exposures with a RW of 100%) but is still classified as ordinary commercial_property collateral.
-As per Article 124 (3) of CRR 575/2013: In order to be eligible for the treatment laid down in Article 125(1), point (a), or Article 126(1), point (a), an exposure secured by an immovable property shall fulfil all of the following conditions:
-(a) the immovable property securing the exposure meets any of the following conditions:
-    (i) the immovable property has been fully completed;
-    (ii) the immovable property is forest or agricultural land;
-    (iii) the lending is to a natural person and the immovable property is either a residential property under construction or it is land upon which a residential property is planned to be constructed where that plan has been legally approved by all relevant authorities, as applicable, concerned and where any of the following conditions is met:
-        – the property does not have more than four residential housing units and will be the primary residence of the obligor and the lending to the natural person is not indirectly financing ADC exposures;
-        – a central government, regional government or local authority or a public sector entity, exposures to which are treated in accordance with Articles 115(2) and 116(4), respectively, has the legal powers and ability to ensure that the property under construction will be finished within a reasonable time frame and is required to or has committed in a legally binding manner to do so where the construction would otherwise not be finished within a reasonable time frame. Alternatively, there is an equivalent legal mechanism to ensure that the property under construction is completed within a resonable timeframe;
-(b) the exposure is secured by a first lien held by the institution on the immovable property, or the institution holds the first lien and any sequentially lower ranking lien on that property;
-(c) the property value is not materially dependent upon the credit quality of the obligor;
-(d) all the information required at origination of the exposure and for monitoring purposes is properly documented, including information on the ability of the obligor to repay and on the valuation of the property;
-(e) the requirements set out in Article 208 are met and the valuation rules set out in Article 229(1) are complied with.
-For the purposes of point (c), institutions may exclude situations where purely macro-economic factors affect both the value of the property and the performance of the obligor.
 
 ### liquidity_facility
 A **liquidity_facility** means the securitisation position arising from a contractual agreement to provide funding to ensure timeliness of cash flows to investors, as outlined in Article 242(3) in [CRR][crr].
@@ -512,21 +508,6 @@ As outlined in [LCR][lcr] Article 13(2)(g)(i)
 
 ### q_reverse_mortgage
 A **q_reverse_mortgage** is a qualified reverse mortgage which adheres to the stipulations defined in OSFI BCAR Chapter 4 P 116, and therefore qualifies for preferential risk weight treatment
-
-### res_property_hr
-Exposure secured by residential property collateral that does not provide the lender with an adequate level of security and may attract a higher risk weight, i.e. exposures which do not meet the necessary conditions on Article 124 (3) of CRR 575/2013.
-As per Article 124 (3) of CRR 575/2013: In order to be eligible for the treatment laid down in Article 125(1), point (a), or Article 126(1), point (a), an exposure secured by an immovable property shall fulfil all of the following conditions:
-(a) the immovable property securing the exposure meets any of the following conditions:
-    (i) the immovable property has been fully completed;
-    (ii) the immovable property is forest or agricultural land;
-    (iii) the lending is to a natural person and the immovable property is either a residential property under construction or it is land upon which a residential property is planned to be constructed where that plan has been legally approved by all relevant authorities, as applicable, concerned and where any of the following conditions is met:
-        – the property does not have more than four residential housing units and will be the primary residence of the obligor and the lending to the natural person is not indirectly financing ADC exposures;
-        – a central government, regional government or local authority or a public sector entity, exposures to which are treated in accordance with Articles 115(2) and 116(4), respectively, has the legal powers and ability to ensure that the property under construction will be finished within a reasonable time frame and is required to or has committed in a legally binding manner to do so where the construction would otherwise not be finished within a reasonable time frame. Alternatively, there is an equivalent legal mechanism to ensure that the property under construction is completed within a resonable timeframe;
-(b) the exposure is secured by a first lien held by the institution on the immovable property, or the institution holds the first lien and any sequentially lower ranking lien on that property;
-(c) the property value is not materially dependent upon the credit quality of the obligor;
-(d) all the information required at origination of the exposure and for monitoring purposes is properly documented, including information on the ability of the obligor to repay and on the valuation of the property;
-(e) the requirements set out in Article 208 are met and the valuation rules set out in Article 229(1) are complied with.
-For the purposes of point (c), institutions may exclude situations where purely macro-economic factors affect both the value of the property and the performance of the obligor.
 
 ### reverse_mortgage
 A **reverse_mortgage** is a non-recourse loan secured by property that has no defined term and no monthly repayment of principal and interest.
@@ -563,6 +544,10 @@ Nostro loans are the firm's accounts at other financial institutions which are i
 
 ### financial_lease
 From the [UK Gov](https://www.gov.uk/hmrc-internal-manuals/business-leasing-manual/blm00040), a finance lease is an arrangement under which one person (the lessor) provides the money to buy an asset which is used by another (the lessee) in return for an interest charge. The lessor has security because they own the asset. The terms of the leasing arrangements aim to give the lessor an interest like turn and no more or less – however good or bad the asset proves to be for the end user.
+
+### education
+From [Investopedia][investopedia-education-loan]:
+> An education loan is a sum of money borrowed to finance post-secondary education or higher education-related expenses. Education loans are intended to cover the cost of tuition, books and supplies, and living expenses while the borrower is in the process of pursuing a degree. Payments are often deferred while students are in college and, depending on the lender, for an additional six-month period after earning a degree.
 
 ### other
 Other refers to a type of security not covered by the above. If you find yourself using this often, please [contribute][contributing].
@@ -622,6 +607,7 @@ Other refers to a type of security not covered by the above. If you find yoursel
 ├── bill_of_exchange
 │   └── acceptance
 ├── cb_reserve
+│   └── cb_restricted_reserve
 ├── cb_facility
 ├── cash_ratio_deposit
 ├── cash
@@ -792,6 +778,9 @@ As defined in [LCR Regulations Article 10 on Liquid Assets][lcr]:
 > reserves held by the credit institution in a central bank referred to in points (i) and (ii) provided that the credit institution is permitted to withdraw such reserves at any time during stress periods and the conditions for such withdrawal have been specified in an agreement between the relevant competent authority and the ECB or the central bank;
 
 > include balances receivable on demand at central banks.
+
+### cb_restricted_reserve
+> Central Bank reserves that are not liquid and not withdrawable. See Article 7 (2) and Article 10 (1)(b)(iii) of the LCR. (Commission Delegated Regulation (EU) 2015/61 to supplement Regulation (EU) No 575/2013)
 
 ### cash_ratio_deposit
 The [BofE](https://www.bankofengland.co.uk/statistics/notice/2024/statistical-notice-2024-08) defines this as:
@@ -1066,7 +1055,6 @@ MAS Notice 610 and Notice 1003 refers to **suspense** accounts as all outstandin
 
 [suspense]: https://www.investopedia.com/terms/s/suspenseaccount.asp
 
-
 ### prepayments
 A prepaid expense is an expenditure paid for in one accounting period, but for which the underlying asset will not be consumed until a future period. https://www.accountingtools.com/articles/prepaid-expenses-accounting
 
@@ -1088,7 +1076,9 @@ An account holding reserves. [Reserves][reserve] are created from profit or from
 ### other
 Any other account type that cannot be classified as one of the other types.
 
-# derivative_type
+
+# derivative
+
 ```bash
 ├── vanilla_swap
 ├── mtm_swap
@@ -1189,6 +1179,7 @@ The most common XCS, and that traded in interbank markets, is a mark-to-market (
 ├── life_policy
 ├── cash
 ├── security
+├── auto
 └── other
 ```
 The collateral type defines the form of the collateral, such as property or other assets used to secure an obligation.
@@ -1289,6 +1280,9 @@ From Article 212(2) [CRR](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CE
 
 ### security
 This identifies that the piece of collateral used is a security, as mapped via the security schema and linked to the collateral schema using the collateral's `security_id` property.
+
+### auto
+This identifies a motor vehicle (such as an automobile, truck, or other types of vehicles) that is pledged by a borrower as collateral to secure a loan. If the borrower defaults on the loan, the lender has the legal right to seize the vehicle and sell it to recover the outstanding debt.
 
 ### other
 *NEEDS Definition*
@@ -1556,3 +1550,4 @@ the debt repayable.
 [hedge-fund]: https://www.sec.gov/spotlight/hedgefunds/hedge-vaughn.htm
 [hedge-fund2]: https://www.google.com/url?esrc=s&q=&rct=j&sa=U&url=https://www.sec.gov/files/ib_hedgefunds.pdf&ved=2ahUKEwjSgp-x-dn9AhVhoFwKHYbQDrMQFnoECAgQAg&usg=AOvVaw3y7wSB8gmaTml65eMxKBpD
 [ecbexamples]: https://www.ecb.europa.eu/pub/pdf/other/ecb-boe_case_better_functioning_securitisation_marketen.pdf
+[investopedia-education-loan]: https://www.investopedia.com/terms/e/education-loan.asp

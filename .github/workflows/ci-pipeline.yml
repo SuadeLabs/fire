@@ -10,11 +10,10 @@ on:
 
 jobs:
   test_on_python_version:
-    # Python 3.6 isn't available on ubuntu-latest
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
-        python-version: [3.8, 3.9]
+        python-version: ["3.8", "3.10", "3.12", "3.13"]
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python ${{ matrix.python-version }}
@@ -22,25 +21,22 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install linters
-        # only install linting libraries on python 3.8 since they don't suppot 3.6
-        if: matrix.python-version == 3.8
         run: |
-          pip install click==8.0.1
-          pip install black==22.1.0
+          pip install black==24.2.0
           pip install ruff
+
       - name: Install requirements
         run: |
           pip install -r requirements.txt
+
       - name: Lint with ruff
-        # only run ruff on python 3.8
-        if: matrix.python-version == 3.8
         run: |
           ruff check .
+
       - name: Lint with black
-        # only run black on python 3.8
-        if: matrix.python-version == 3.8
         run: |
           black . --check
+
       - name: Test with pytest
         run: |
           pytest -v

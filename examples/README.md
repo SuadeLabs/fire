@@ -40,7 +40,7 @@ The following are a few examples of common financial trades.
     - [Interest rate swap](#interest-rate-swap)
     - [Interest rate swap amortising](#interest-rate-swap-amortising)
     - [Margined netting agreement](#margined-netting-agreement)
-    - [Swaption](#swaption)
+    - [USD Payer Swaption](#usd_payer_swaption)
     - [Unmargined netting agreement](#unmargined-netting-agreement)
   - [Security examples](#security-examples)
     - [Bank guarantee issued](#bank-guarantee-issued)
@@ -258,7 +258,7 @@ Margined netting agreement, collateralised with initial collateral amount and va
 #### Swaption
 Short USD 1y into 10y payer swaptionwith physical settlement
 ```json
-{{#include swaption.json:5:}}
+{{#include usd_payer_swaption.json:5:}}
 ```
 #### Unmargined netting agreement
 Unmargined netting agreement, collateralised with initial collateral amount
