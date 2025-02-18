@@ -1413,6 +1413,7 @@ A repayment that reduces the principal amount borrowed and does not include any 
 ├── advance
 ├── capital_repayment
 ├── capitalisation
+├── commitment
 ├── due
 ├── further_advance
 ├── interest
@@ -1437,6 +1438,8 @@ A repayment that reduces the principal amount borrowed
 From F3.1 of [MLAR](https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/crd-iv/mlar-notes-may-2022.pdf):
 >By 'capitalisation' we mean a formal arrangement agreed with the borrower to add all or part of a borrower's arrears to the amount of outstanding principal (i.e. advance of principal including further advances less capital repayments received during the period of the loan) and then treating that amount of overall debt as the enlarged principal. This enlarged principal is then used as the basis for calculating future monthly payments over the remaining term of the loan.
 
+### commitment
+This can be linked with advances on flexible loans, which include an option to draw down further amounts. For example, a loan facility of £80k could have £65k advanced and an extra £15k facility available for drawing down further. This is separate to loan transaction type further_advance which is linked to map advances for further_advance loans.
 
 ### due
 From F6.1i of [MLAR](https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/crd-iv/mlar-notes-may-2022.pdf):
