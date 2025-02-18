@@ -18,6 +18,7 @@ The **status** property indicates the current state of the financial product. A 
 ├── other
 ├── cancelled
 ├── cancelled_payout_agreed
+├── pending
 ├── audited
 └── unaudited
 ```
