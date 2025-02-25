@@ -4,7 +4,7 @@ import os
 
 
 HOME = os.path.join(os.path.dirname(__file__), "..")
-SCHEMAS_DIR = os.path.join(HOME, "v1-dev")
+SCHEMAS_DIR = os.path.join(HOME, "schemas")
 DOCS_DIR = os.path.join(HOME, "documentation", "properties")
 EXAMPLES_DIR = os.path.join(HOME, "examples")
 
@@ -18,6 +18,9 @@ DOC_NAMES = [f.split(".md")[0] for f in DOC_FILES]
 
 _, _, filenames = next(os.walk(EXAMPLES_DIR), (None, None, []))
 EXAMPLE_FILES = [f for f in filenames if f.endswith(".json")]
+
+# For transition only...
+OLD_SCHEMAS_DIR = os.path.join(HOME, "v1-dev")
 
 
 def schema_properties(schema_name):
@@ -109,3 +112,11 @@ def fire_stats():
         "unique_properties": len(uniq_properties),
         "data_combinations": format(decimal.Decimal(N), ".6e"),
     }
+
+
+def load_jsons(filenames, location):
+    jsons = []
+    for filename in sorted(filenames):
+        with open(os.path.join(location, filename)) as jsonfile:
+            jsons.append(json.load(jsonfile))
+    return jsons

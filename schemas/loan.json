@@ -83,11 +83,6 @@
       "description": "The unique identifier for the behavioral curve used by the financial institution.",
       "type": "string"
     },
-    "behavioral_mat_date": {
-      "description": "The maturity date for the bahavioral assumptions. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
-      "type": "string",
-      "format": "date-time"
-    },
     "beneficiary_id": {
       "description": "The unique identifier for the beneficiary of the loan cashflows.",
       "type": "string"

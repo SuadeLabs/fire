@@ -19,7 +19,7 @@
       "monetary": true
     },
     "currency_code": {
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/v1-dev/common.json#/currency_code"
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
     },
     "loan_id": {
       "description": "The unique identifier for the affected loan/s within the financial institution.",
