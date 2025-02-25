@@ -1424,7 +1424,7 @@ A repayment that reduces the principal amount borrowed and does not include any 
 ├── sale
 │   └── securitisation
 └── write_off
-    └── bankruptcy_write_off
+    └── write_off_bankruptcy
 ```
 
 ### acquisition
@@ -1432,9 +1432,6 @@ The purchase of a loan from another lender
 
 ### advance
 A loan amount sent to the borrower from the lender
-
-### bankruptcy_write_off
-Loans in the segment that were charged-off due to bankruptcy during the reporting month (based on the [FED Reporting Instructions for Capital Assesments][fed-capital-assesments]).
 
 ### capital_repayment
 A repayment that reduces the principal amount borrowed
@@ -1497,22 +1494,20 @@ Sale of the loan
 ### write_off
 From D1 of [MLAR](https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/crd-iv/mlar-notes-may-2022.pdf):
 
->This is the amount written off loan balances (and
-off provisions charged to the income and expenditure account) and is
-to be on a basis consistent with amounts shown in the firm's
-published accounts as 'written off' within the analysis of changes in
-loss provision.
+This is the amount written off loan balances (and off provisions charged to the income and expenditure account) and is to be on a basis consistent with amounts shown in the firm's published accounts as 'written off' within the analysis of changes in loss provision.
+
 The amount written off may arise for example from:
->- sale of a property/collateral in possession where there is a shortfall; or
->- a decision to write down the debt on a loan still on
-the books. This may arise where the firm has taken the view
-that it is certain that a loss will arise and that it is prudent to
-write down
->- the debt rather than carry the full debt and an
-offsetting provision. Examples might include certain fraud
-cases, or where
->- arrangements have been reached with the borrower to reduce
-the debt repayable.
+> sale of a property/collateral in possession where there is a shortfall; or
+> a decision to write down the debt on a loan still on
+> the books. This may arise where the firm has taken the view
+> that it is certain that a loss will arise and that it is prudent to write down
+> the debt rather than carry the full debt and an
+> offsetting provision. Examples might include certain fraud cases, or where
+>- arrangements have been reached with the borrower to reduce the debt repayable.
+
+
+### write_off_bankruptcy
+Loans in the segment that were charged-off due to bankruptcy during the reporting month (based on the [FED Reporting Instructions for Capital Assesments][fed-capital-assesments]).
 
 
 ---
