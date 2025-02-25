@@ -46,7 +46,8 @@
         "received",
         "sale",
         "securitisation",
-        "write_off"
+        "write_off",
+        "write_off_bankruptcy"
       ]
     },
     "value_date": {
