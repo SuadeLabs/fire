@@ -52,14 +52,14 @@
       "description": "The unique identifier for the behavioral curve used by the financial institution.",
       "type": "string"
     },
-    "birr_rating": {
-      "description": "The internal risk rating assigned to a borrower based on their creditworthiness and financial stability",
-      "type": "string"
-    },
     "behavioral_end_date": {
       "description": "Behavioral end date (as opposed to contractual). YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
       "type": "string",
       "format": "date-time"
+    },
+    "birr_rating": {
+      "description": "The internal risk rating assigned to a borrower based on their creditworthiness and financial stability",
+      "type": "string"
     },
     "break_dates": {
       "description": "Dates where this contract can be broken (by either party). Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
