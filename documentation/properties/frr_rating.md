@@ -12,7 +12,7 @@ Risk metric used to assess the risk associated with a particular financial facil
 
 It evaluates the inherent risk based on factors like market conditions, counterparty risk, the structure of the facility, and the collateral or guarantees involved.
 
-The BIRR rating provides an internal measure of risk and is typically used for assessing borrowers in lending or investment decisions.
+The FRR helps in determining the potential for financial loss related to the facility and supports risk management and decision-making processes.
 
 ---
 [osfi bd]: https://www.osfi-bsif.gc.ca/en/data-forms/reporting-returns/filing-financial-returns/financial-reporting-instructions/irb-credit-data-retail-portfolio-part-1-bd
