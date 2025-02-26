@@ -561,6 +561,14 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │   ├── share
 │   │   ├── treasury
 │   │   └── pref_share
+│   │   └── ciu_cash_cb
+│   │   └── ciu_secs_excl_cov
+│   │   └── ciu_cov_bond
+│   │   └── ciu_corp_bond
+│   │   └── ciu_public_sec
+│   │   └── ciu_rmbs_auto
+│   │   └── ciu_abs_oth
+│   │   └── ciu_shares
 │   ├── share_agg
 │   └── speculative_unlisted
 │   └── main_index_equity
@@ -641,6 +649,30 @@ According to IAS 32.33, if an entity reacquires its own equity instruments, thos
 
 ### main_index_equity
 The main_index_equity identifies equities that are constituents of a main index for the purposes of applying a volatility adjustment in line with [Article 224](https://www.eba.europa.eu/regulation-and-policy/single-rulebook/interactive-single-rulebook/16006).
+
+### ciu_cash_cb
+CIU where the underlying is coins/banknotes and/or central bank exposures
+
+### ciu_secs_excl_cov
+CIU where the underlying is debt securities excluding covered bonds
+
+### ciu_cov_bond
+CIU where the underlying is covered bonds
+
+### ciu_corp_bond
+CIU where the underlying is corporate debt securities
+
+### ciu_public_sec
+CIU where the underlying is claims on or guaranteed by central governments, central banks, regional governments, local authorities or public sector entities
+
+### ciu_rmbs_auto
+CIU where the underlying is asset-backed securities (residential or auto)
+
+### ciu_abs_oth
+CIU where the underlying is asset-backed securities (commercial or individuals)
+
+### ciu_shares
+CIU where the underlying is shares (major stock index)
 
 ### debt
 This is a "catch all" term for debt of any kind, *bond*, *bond_amortising*, *covered_bond*, *abs*, *residential_mbs*, *non_residential_mbs*, *frn*, *govt_gteed_frn*, to be used when further granularity is not available or not needed.
