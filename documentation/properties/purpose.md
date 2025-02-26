@@ -37,6 +37,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── deposit
 │   └── third_party_interest
 ├── dgs_contribution
+├── discontinued
 ├── dividend
 │   └── div_from_cis
 │   │   └── div_from_money_mkt
@@ -142,6 +143,13 @@ The **purpose** property describes the reason behind the creation or usage of th
 
 ### dgs_contribution
 Describes an account representing the **contributions to deposit guarantee schemes** paid by the reporting entity as defined by Annex 5 Part 2.48i of the EBA ITS on supervisory reporting.
+
+### discontinued
+A discontinued operation is a component of an entity that either has been disposed of or is classified as held for sale, and: ![IFRS 5.32]!(https://www.iasplus.com/en/standards/ifrs/ifrs5)
+
+    represents either a separate major line of business or a geographical area of operations is part of a single co-ordinated plan to dispose of a separate major line of business or geographical area of operations, or is a subsidiary acquired exclusively with a view to resale and the disposal involves loss of control. 
+
+IFRS 5 prohibits the retroactive classification as a discontinued operation, when the discontinued criteria are met after the end of the reporting period. [IFRS 5.12]
 
 ### res_fund_contribution
 Describes an account representing the **contributions to resolution funds** paid by the reporting entity as defined by Annex 5 Part 2.48i of the EBA ITS on supervisory reporting.
