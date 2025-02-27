@@ -55,6 +55,10 @@
         "ZERO"
       ]
     },
+    "birr": {
+      "description": "The internal risk rating assigned to a borrower based on their creditworthiness and financial stability",
+      "type": "string"
+    },
     "break_dates": {
       "description": "Dates where this contract can be broken (by either party). Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "array",
@@ -302,6 +306,10 @@
       "description": "The date on which the first forbearance measure was granted to this product.  Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
       "type": "string",
       "format": "date-time"
+    },
+    "frr": {
+      "description": "The risk rating assigned to a financial facility, reflecting its associated risk based on structure and external factors.",
+      "type": "string"
     },
     "fvh_level": {
       "description": "Fair value hierarchy category according to IFRS 13.93 (b)",
