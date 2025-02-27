@@ -66,7 +66,12 @@
     "ccr_approach": {
       "description": "Specifies the approved counterparty credit risk methodology for calculating exposures.",
       "type": "string",
-      "enum": ["imm", "oem", "sa", "ssa"]
+      "enum": [
+        "imm",
+        "oem",
+        "sa",
+        "ssa"
+      ]
     },
     "cost_center_code": {
       "description": "The organizational unit or sub-unit to which costs/profits are booked.",
@@ -79,7 +84,7 @@
     "cr_approach": {
       "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/cr_approach"
-    }, 
+    },
     "csa_id": {
       "description": "The unique identifier of the credit support annex for this derivative",
       "type": "string"
@@ -146,6 +151,10 @@
       "description": "The insolvency ranking as per the national legal framework of the reporting institution.",
       "type": "integer",
       "minimum": 1
+    },
+    "internal_risk_rating_id": {
+      "description": "The internal risk rating assigned to a borrower based on their creditworthiness and financial stability",
+      "type": "string"
     },
     "last_exercise_date": {
       "description": "The last date on which an option can be exercised. For European options, it is the option exercise date",
@@ -400,10 +409,10 @@
         "8m",
         "9m",
         "12m",
-	"24m",
-	"60m",
-	"120m",
-	"360m"
+        "24m",
+        "60m",
+        "120m",
+        "360m"
       ]
     },
     "underlying_issuer_id": {

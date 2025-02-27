@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Risk Rating System",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Unique identifier for the risk rating system"
+        },
+        "date": {
+            "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "name": {
+            "type": "string",
+            "description": "Name of the risk rating system"
+        }
+    },
+    "required": [
+        "id",
+        "name"
+    ]
+}

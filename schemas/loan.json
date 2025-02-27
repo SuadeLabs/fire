@@ -311,6 +311,10 @@
         "sesquiennially"
       ]
     },
+    "internal_risk_rating_id": {
+      "description": "The internal risk rating assigned to a borrower based on their creditworthiness and financial stability",
+      "type": "string"
+    },
     "issuer_id": {
       "description": "The unique identifier for the issuer of the loan.",
       "type": "string",
@@ -591,9 +595,9 @@
       "type": "string",
       "enum": [
         "business",
-	"pension",
-	"rent",
-	"salary"
+        "pension",
+        "rent",
+        "salary"
       ]
     },
     "servicing_currency_code": {
