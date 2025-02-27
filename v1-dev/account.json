@@ -52,7 +52,7 @@
       "description": "The unique identifier for the behavioral curve used by the financial institution.",
       "type": "string"
     },
-    "birr_rating": {
+    "birr": {
       "description": "The internal risk rating assigned to a borrower based on their creditworthiness and financial stability",
       "type": "string"
     },
@@ -170,7 +170,7 @@
       "type": "integer",
       "monetary": true
     },
-    "frr_rating": {
+    "frr": {
       "description": "The risk rating assigned to a financial facility, reflecting its associated risk based on structure and external factors.",
       "type": "string"
     },

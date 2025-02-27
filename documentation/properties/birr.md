@@ -1,10 +1,10 @@
 ---
 layout:     property
-title:      "birr_rating"
+title:      "birr"
 schemas:    [loan, account, security, derivative]
 ---
 
-# birr_rating
+# birr
 
 ---
 The Borrower Internal Risk Rating has traditionally been the main risk assessment tool used to evaluate the financial stability and creditworthiness of a borrower. It assesses the likelihood of a borrower defaulting on a loan or financial product by considering factors like credit history, financial health, repayment capacity, and broader economic conditions.

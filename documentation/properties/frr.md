@@ -1,10 +1,10 @@
 ---
 layout:     property
-title:      "frr_rating"
+title:      "frr"
 schemas:    [loan, account, security, derivative]
 ---
 
-# frr_rating
+# frr
 
 ---
 
