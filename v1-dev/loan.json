@@ -218,6 +218,10 @@
       "description": "The currency of the credit facility if not the same as loan currency_code.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
     },
+    "facility_risk_rating_id": {
+      "description": "The internal risk rating assigned to a facility based on its specific risk characteristics, including collateral and seniority.",
+      "type": "string"
+    },
     "fees": {
       "description": "The fees associated with the loan.",
       "type": "integer",
@@ -583,9 +587,9 @@
       "type": "string",
       "enum": [
         "business",
-	"pension",
-	"rent",
-	"salary"
+        "pension",
+        "rent",
+        "salary"
       ]
     },
     "servicing_currency_code": {
