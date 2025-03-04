@@ -1863,20 +1863,3 @@ Loans in the segment that were charged-off due to bankruptcy during the reportin
 [ecbexamples]: https://www.ecb.europa.eu/pub/pdf/other/ecb-boe_case_better_functioning_securitisation_marketen.pdf
 [investopedia-education-loan]: https://www.investopedia.com/terms/e/education-loan.asp
 [fed-capital-assesments]: https://www.federalreserve.gov/reportforms/forms/FR_Y-14Q20150331_i.pdf#page=22
-
-# internal_risk_rating
-
-```bash
-├── birr
-└── frr
-```
-
-The Internal Risk Rating type enum defines the types of internal risk ratings used within the risk rating system. It distinguishes between two categories of ratings:
-
-### birr
-
-This rating is used to evaluate the creditworthiness of a borrower based on various factors, including credit history, financial health, and repayment capacity. The BIRR assesses the likelihood of a borrower defaulting on a loan or financial product.
-
-### frr
-
-This rating focuses on specific loans or credit facilities provided to borrowers. It evaluates the risk associated with individual loans, considering factors such as the probability of default (PD) and loss given default (LGD) for each facility.
