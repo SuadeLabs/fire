@@ -1,12 +1,12 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "Internal Risk Rating",
-    "description": "An Internal Risk Rating",
+    "title": "Risk Rating",
+    "description": "A risk rating entry for a risk rating system",
     "type": "object",
     "properties": {
         "id": {
             "type": "integer",
-            "description": "Unique identifier for the Internal Risk Rating"
+            "description": "Unique identifier for the risk rating"
         },
         "date": {
             "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
@@ -48,8 +48,6 @@
     },
     "required": [
         "id",
-        "date",
-        "name",
-        "risk_rating_system_id"
+        "date"
     ]
 }

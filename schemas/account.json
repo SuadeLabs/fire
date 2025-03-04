@@ -156,8 +156,8 @@
       "type": "string",
       "format": "date-time"
     },
-    "facility_risk_rating_id": {
-      "description": "The internal risk rating assigned to a facility based on its specific risk characteristics, including collateral and seniority.",
+    "frr_id": {
+      "description": "The internal facility risk rating assigned to a facility based on its specific risk characteristics, including collateral and seniority.",
       "type": "string"
     },
     "first_arrears_date": {
