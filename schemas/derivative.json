@@ -41,10 +41,6 @@
         "ZERO"
       ]
     },
-    "birr": {
-      "description": "The internal risk rating assigned to a borrower based on their creditworthiness and financial stability",
-      "type": "string"
-    },
     "break_dates": {
       "description": "Dates where this contract can be broken (by either party). Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "array",
@@ -110,17 +106,13 @@
       "type": "string",
       "format": "date-time"
     },
-    "frr_id": {
-      "description": "The internal facility risk rating assigned to a facility based on its specific risk characteristics, including collateral and seniority.",
-      "type": "string"
-    },
     "first_payment_date": {
       "description": "The first payment date for interest payments.",
       "type": "string",
       "format": "date-time"
     },
-    "frr": {
-      "description": "The risk rating assigned to a financial facility, reflecting its associated risk based on structure and external factors.",
+    "frr_id": {
+      "description": "The internal risk rating assigned to a facility based on its specific risk characteristics, including collateral and seniority.",
       "type": "string"
     },
     "fvh_level": {

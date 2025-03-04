@@ -1,7 +1,7 @@
 ---
 layout: property
 title: "pd_min"
-schemas: [internal_risk_rating]
+schemas: [risk_rating]
 ---
 
 # pd_min

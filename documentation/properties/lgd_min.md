@@ -1,7 +1,7 @@
 ---
 layout: property
 title: "lgd_min"
-schemas: [account, derivative, loan, security]
+schemas: [risk_rating]
 ---
 
 # lgd_min

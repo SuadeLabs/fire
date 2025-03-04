@@ -92,10 +92,6 @@
       "description": "The unique identifier for the beneficiary of the loan cashflows.",
       "type": "string"
     },
-    "birr": {
-      "description": "The internal risk rating assigned to a borrower based on their creditworthiness and financial stability",
-      "type": "string"
-    },
     "cb_haircut": {
       "description": "The haircut as determined by the firm's central bank",
       "type": "number",
@@ -227,10 +223,6 @@
       "description": "The currency of the credit facility if not the same as loan currency_code.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
     },
-    "frr_id": {
-      "description": "The internal facility risk rating assigned to a facility based on its specific risk characteristics, including collateral and seniority.",
-      "type": "string"
-    },
     "fees": {
       "description": "The fees associated with the loan.",
       "type": "integer",
@@ -256,8 +248,8 @@
       "type": "integer",
       "monetary": true
     },
-    "frr": {
-      "description": "The risk rating assigned to a financial facility, reflecting its associated risk based on structure and external factors.",
+    "frr_id": {
+      "description": "The internal facility risk rating assigned to a facility based on its specific risk characteristics, including collateral and seniority.",
       "type": "string"
     },
     "fvh_level": {

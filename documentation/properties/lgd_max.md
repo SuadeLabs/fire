@@ -1,7 +1,7 @@
 ---
 layout: property
 title: "lgd_max"
-schemas: [account, derivative, loan, security]
+schemas: [risk_rating]
 ---
 
 # lgd_max
