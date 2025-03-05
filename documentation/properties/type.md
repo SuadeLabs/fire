@@ -589,6 +589,8 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │       ├── abs_trade_rec
 │       ├── abs_wholesale
 │       ├── abs_other
+|       ├── cdo
+|       ├── clo
 │       └── mbs
 │           ├── rmbs
 │           │   └── rmbs_income
@@ -724,6 +726,12 @@ Asset-backed securities backed by wholesale credit.
 
 ### abs_other
 Any other asset-backed securitisation not encompassed by one of the other classifications.
+
+### cdo
+A Collateralized Debt Obligation (CDO) is an Asset Backed Security (ABS) product backed by a pool of loans and other assets that are then divided into different tranches, each with varying degrees of risk and return. Typically the tranches are categorised as senior, mezzanine, and junior.
+
+### clo
+A Collateralized Loan Obligation (CLO) is a type of CDO whose asset pool is comprised by leveraged loans.
 
 ### mbs
 Asset-backed securities specifically backed by mortgages.
