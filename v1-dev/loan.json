@@ -92,6 +92,10 @@
       "description": "The unique identifier for the beneficiary of the loan cashflows.",
       "type": "string"
     },
+    "birr": {
+      "description": "The internal risk rating assigned to a borrower based on their creditworthiness and financial stability",
+      "type": "string"
+    },
     "cb_haircut": {
       "description": "The haircut as determined by the firm's central bank",
       "type": "number",
