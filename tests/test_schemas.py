@@ -17,6 +17,7 @@ from . import (
     fire_stats,
     load_jsons,
     schema_enum_registry,
+    schema_properties
 )
 
 
@@ -106,22 +107,15 @@ class TestSchemas(unittest.TestCase):
         human readable, it helps when properties are in alphabetical order.
         """
         for schema_name in SCHEMA_FILES:
-            with open(os.path.join(SCHEMAS_DIR, schema_name)) as json_schema:
-                schema = json.load(json_schema, object_pairs_hook=OrderedDict)  # noqa
-                if "properties" in schema:
-                    properties = schema["properties"].keys()
-                else:
-                    properties = schema.keys()
+            properties = list(schema_properties(schema_name))
 
-                properties = list(properties)
+            if "id" in properties:
+                assert properties[0] == "id"
+                assert properties[1] == "date"
+                properties.pop(1)
+                properties.pop(0)
 
-                if "id" in properties:
-                    assert properties[0] == "id"
-                    assert properties[1] == "date"
-                    properties.pop(1)
-                    properties.pop(0)
-
-                assert properties == sorted(properties)
+            assert properties == sorted(properties)
 
     def test_schema_enums_are_alphabetical(self):
         """

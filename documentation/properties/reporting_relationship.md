@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"reporting_relationship"
-schemas:	[entity]
+schemas:	[customer, issuer, guarantor]
 ---
 
 # reporting_relationship

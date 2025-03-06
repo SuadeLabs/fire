@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"ssic_code"
-schemas:	[entity]
+schemas:	[customer, issuer, guarantor]
 ---
 
 # ssic_code

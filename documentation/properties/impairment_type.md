@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"impairment_type"
-schemas:	[loan]
+schemas:	[account, loan]
 ---
 
 # impairment_type

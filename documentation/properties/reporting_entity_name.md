@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"reporting_entity_name"
-schemas:	[account, derivative_cash_flow, derivative, loan, security]
+schemas:	[account, derivative_cash_flow, derivative, loan, security, adjustment]
 ---
 
 # reporting_entity_name

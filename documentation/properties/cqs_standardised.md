@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "cqs_standardised"
-schemas:    [entity, security]
+schemas:    [customer, issuer, guarantor, security]
 ---
 
 # cqs_standardised

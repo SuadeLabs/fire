@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "asset_liability"
-schemas:    [account, derivative, derivative cash flow, loan, security]
+schemas:    [account, derivative, derivative_cash_flow, loan, security]
 ---
 
 # asset_liability
