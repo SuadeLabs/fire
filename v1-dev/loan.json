@@ -252,8 +252,8 @@
       "type": "integer",
       "monetary": true
     },
-    "frr": {
-      "description": "The risk rating assigned to a financial facility, reflecting its associated risk based on structure and external factors.",
+    "frr_id": {
+      "description": "The internal facility risk rating assigned to a facility based on its specific risk characteristics, including collateral and seniority.",
       "type": "string"
     },
     "fvh_level": {
@@ -596,9 +596,9 @@
       "type": "string",
       "enum": [
         "business",
-	"pension",
-	"rent",
-	"salary"
+        "pension",
+        "rent",
+        "salary"
       ]
     },
     "servicing_currency_code": {
