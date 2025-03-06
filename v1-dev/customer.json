@@ -3,9 +3,11 @@
   "title": "Customer Schema",
   "description": "Data schema to define a customer or legal entity related to a financial product or transaction.",
   "type": "object",
-  "allOf": [{
-    "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/entity.json"
-  }],
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/entity.json"
+    }
+  ],
   "properties": {
     "annual_debit_turnover": {
       "description": "The annual debit turnover in the business account of the entity. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -13,10 +15,17 @@
       "minimum": 0,
       "monetary": true
     },
+    "birr_id": {
+      "type": "string",
+      "description": "The unique identifier of the Borrower Internal Risk Rating (BIRR), representing an internally assigned risk assessment for a customer based on their creditworthiness and financial stability."
+    },
     "clearing_threshold": {
       "description": "Status of the clearing threshold as defined in EMIR",
       "type": "string",
-      "enum": ["above", "below"]
+      "enum": [
+        "above",
+        "below"
+      ]
     },
     "df_ccp": {
       "description": "The pre-funded financial resources of the CCP in accordance with Article 50c of Regulation (EU) No 648/2012",
@@ -57,9 +66,14 @@
     "status": {
       "description": "The status of the relationship with the customer from the firm's point of view.",
       "type": "string",
-      "enum": ["established"]
+      "enum": [
+        "established"
+      ]
     }
   },
-  "required": ["id", "date"],
+  "required": [
+    "id",
+    "date"
+  ],
   "additionalProperties": true
 }

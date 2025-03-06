@@ -80,7 +80,11 @@
     "call_type": {
       "description": "The call mechanism, if present, for the issuance. For securitisations and other callable securities.",
       "type": "string",
-      "enum": ["clean_up", "clean_up_reg", "other"]
+      "enum": [
+        "clean_up",
+        "clean_up_reg",
+        "other"
+      ]
     },
     "capital_tier": {
       "description": "The capital tiers based on own funds requirements.",
@@ -112,7 +116,12 @@
     "ccr_approach": {
       "description": "Specifies the approved counterparty credit risk methodology for calculating exposures.",
       "type": "string",
-      "enum": ["imm", "oem", "sa", "ssa"]
+      "enum": [
+        "imm",
+        "oem",
+        "sa",
+        "ssa"
+      ]
     },
     "cost_center_code": {
       "description": "The organizational unit or sub-unit to which costs/profits are booked.",
@@ -162,13 +171,47 @@
     },
     "dbrs_lt": {
       "description": "DBRS long term credit ratings",
-      "type":"string",
-      "enum": ["aaa", "aa_h", "aa", "aa_l", "a_h", "a", "a_l", "bbb_h", "bbb", "bbb_l", "bb_h", "bb", "bb_l", "b_h", "b", "b_l", "ccc_h", "ccc", "ccc_l", "cc", "c", "d"]
+      "type": "string",
+      "enum": [
+        "aaa",
+        "aa_h",
+        "aa",
+        "aa_l",
+        "a_h",
+        "a",
+        "a_l",
+        "bbb_h",
+        "bbb",
+        "bbb_l",
+        "bb_h",
+        "bb",
+        "bb_l",
+        "b_h",
+        "b",
+        "b_l",
+        "ccc_h",
+        "ccc",
+        "ccc_l",
+        "cc",
+        "c",
+        "d"
+      ]
     },
     "dbrs_st": {
       "description": "DBRS short term credit ratings",
-      "type":"string",
-      "enum": ["r1_h", "r1_m", "r1_l", "r2_h", "r2_m", "r2_l", "r3", "r4", "r5", "d"]
+      "type": "string",
+      "enum": [
+        "r1_h",
+        "r1_m",
+        "r1_l",
+        "r2_h",
+        "r2_m",
+        "r2_l",
+        "r3",
+        "r4",
+        "r5",
+        "d"
+      ]
     },
     "deal_id": {
       "description": "The unique identifier used by the financial institution to identify the deal for this product that links it to other products of the same or different type.",
@@ -193,7 +236,7 @@
     },
     "excess_spread_type": {
       "description": "Excess spread",
-      "type":"string",
+      "type": "string",
       "enum": [
         "fixed",
         "fixed_trapped",
@@ -260,8 +303,8 @@
       "type": "string",
       "format": "date-time"
     },
-    "frr": {
-      "description": "The risk rating assigned to a financial facility, reflecting its associated risk based on structure and external factors.",
+    "frr_id": {
+      "description": "The internal facility risk rating assigned to a facility based on its specific risk characteristics, including collateral and seniority.",
       "type": "string"
     },
     "fvh_level": {
@@ -377,13 +420,44 @@
     },
     "kbra_lt": {
       "description": "KBRA long term credit ratings",
-      "type":"string",
-      "enum": ["aaa", "aa_plus", "aa", "aa_minus", "a_plus", "a", "a_minus", "bbb_plus", "bbb", "bbb_minus", "bb_plus", "bb", "bb_minus", "b_plus", "b", "b_minus", "ccc_plus", "ccc", "ccc_minus", "cc", "c", "d"]
+      "type": "string",
+      "enum": [
+        "aaa",
+        "aa_plus",
+        "aa",
+        "aa_minus",
+        "a_plus",
+        "a",
+        "a_minus",
+        "bbb_plus",
+        "bbb",
+        "bbb_minus",
+        "bb_plus",
+        "bb",
+        "bb_minus",
+        "b_plus",
+        "b",
+        "b_minus",
+        "ccc_plus",
+        "ccc",
+        "ccc_minus",
+        "cc",
+        "c",
+        "d"
+      ]
     },
     "kbra_st": {
       "description": "KBRA short term credit ratings",
-      "type":"string",
-      "enum": ["k1_plus", "k1", "k2", "k3", "b", "c", "d"]
+      "type": "string",
+      "enum": [
+        "k1_plus",
+        "k1",
+        "k2",
+        "k3",
+        "b",
+        "c",
+        "d"
+      ]
     },
     "last_payment_date": {
       "description": "The final payment date for interest payments, often coincides with end_date or the maturity date",
@@ -400,7 +474,7 @@
       "minimum": 0.0,
       "maximum": 1.0
     },
-   "lgd_irb": {
+    "lgd_irb": {
       "description": "The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.",
       "type": "number",
       "minimum": 0.0,
