@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"end_date"
-schemas:	[account, collateral, derivative_cash_flow, derivative, loan, security]
+schemas:	[account, collateral, derivative, loan, security]
 ---
 
 # end_date

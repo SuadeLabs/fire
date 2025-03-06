@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "dbrs_st"
-schemas:    [entity, security]
+schemas:    [customer, issuer, guarantor, security]
 ---
 
 # dbrs_st

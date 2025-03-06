@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "leg"
-schemas:    ["derivative_cash_flow"]
+schemas:    [derivative_cash_flow]
 ---
 
 # leg

@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "scra"
-schemas:    [entity]
+schemas:    [customer, issuer, guarantor]
 
 ---
 
@@ -13,7 +13,7 @@ The **scra** represents the grade given to an entity based on the Standardised C
 
 
 ### a_plus
-Grade given to entity that satisfies criteria under CRR Article 121(2)(b). 
+Grade given to entity that satisfies criteria under CRR Article 121(2)(b).
 
 ### a
 Grade given to entity that satisfies criteria under CRR Article 121(1)(a)

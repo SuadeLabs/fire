@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "moodys_lt"
-schemas:    [entity, security]
+schemas:    [customer, issuer, guarantor, security]
 ---
 
 # moodys_lt

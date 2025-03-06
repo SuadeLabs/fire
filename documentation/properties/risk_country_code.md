@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"risk_country_code"
-schemas:	[account, derivative, entity, loan, security]
+schemas:	[account, derivative, customer, issuer, guarantor, loan, security]
 ---
 
 # risk_country_code

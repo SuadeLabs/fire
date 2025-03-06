@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"uk_funding_type"
-schemas:	["account"]
+schemas:	[account]
 ---
 
 # uk_funding_type

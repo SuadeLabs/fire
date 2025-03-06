@@ -33,6 +33,11 @@ def schema_properties(schema_name):
     else:
         properties = schema["properties"].keys()
 
+    if "allOf" in schema:
+        inherited_schemas = schema["allOf"]
+        for i in inherited_schemas:
+            properties = properties | schema_properties(i["$ref"].split("/")[-1])
+
     return properties
 
 

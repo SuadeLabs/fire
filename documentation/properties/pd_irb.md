@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "pd_irb"
-schemas:    [loan, entity, security, account, derivative]
+schemas:    [loan, customer, issuer, guarantor, security, account, derivative]
 ---
 
 # pd_irb

@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"mtm_clean"
-schemas:	[security, derivative]
+schemas:	[security, derivative, derivative_cash_flow]
 ---
 
 # mtm_clean

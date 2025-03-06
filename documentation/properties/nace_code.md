@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"nace_code"
-schemas:	[entity]
+schemas:	[customer, issuer, guarantor]
 ---
 
 # nace_code

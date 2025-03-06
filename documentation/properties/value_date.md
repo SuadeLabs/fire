@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"value_date"
-schemas:	[collateral, derivative, security]
+schemas:	[collateral, derivative, security, loan_transaction, derivative_cash_flow]
 ---
 
 # value_date

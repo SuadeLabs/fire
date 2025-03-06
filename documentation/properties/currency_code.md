@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"currency_code"
-schemas:	[account, collateral, derivative_cash_flow, derivative, exchange_rate, loan, security]
+schemas:	[account, collateral, derivative_cash_flow, derivative, loan, loan_transaction, security, adjustment, loan_cash_flow, curve, customer, issuer, guarantor]
 ---
 
 # currency_code

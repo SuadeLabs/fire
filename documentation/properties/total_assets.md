@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "total_assets"
-schemas:    [entity]
+schemas:    [customer, issuer, guarantor]
 ---
 
 # total_assets

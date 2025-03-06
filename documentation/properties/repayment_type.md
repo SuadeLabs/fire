@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"repayment_type"
-schemas:	[loan]
+schemas:	[loan, security]
 ---
 
 # repayment_type

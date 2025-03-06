@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "risk_weight_std"
-schemas:    [derivative, loan, security]
+schemas:    [account, derivative, loan, security]
 ---
 
 # risk_weight_std

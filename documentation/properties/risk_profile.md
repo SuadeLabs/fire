@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"risk_profile"
-schemas:	[customer]
+schemas:	[customer, security]
 ---
 
 # risk_profile

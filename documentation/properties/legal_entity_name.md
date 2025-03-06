@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "legal_entity_name"
-schemas:    [entity]
+schemas:    [customer, issuer, guarantor]
 ---
 
 # legal_entity_name

@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"interest_repayment_frequency"
-schemas:	[loan]
+schemas:	[account, loan, security]
 ---
 
 # interest_repayment_frequency

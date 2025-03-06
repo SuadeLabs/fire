@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"status"
-schemas:	[account, customer, loan, security]
+schemas:	[account, customer, loan, security, derivative]
 ---
 
 # status

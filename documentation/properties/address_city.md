@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "address_city"
-schemas:    [entity]
+schemas:    [customer, issuer, guarantor]
 ---
 
 # address_city

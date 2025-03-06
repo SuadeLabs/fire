@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"country_code"
-schemas:	[account, collateral, customer, loan]
+schemas:	[account, agreement, customer, issuer, guarantor, loan, derivative, security]
 ---
 
 # country_code

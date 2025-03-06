@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "issuer_id"
-schemas:    [loan, derivative, security]
+schemas:    [loan, security]
 ---
 
 # issuer_id

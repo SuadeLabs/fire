@@ -1,7 +1,7 @@
 ---
-layout:		property  
-title:		"impairment_amount"  
-schemas:	[loan]  
+layout:		property
+title:		"impairment_amount"
+schemas:	[account, loan, derivative, security]
 ---
 
 # impairment_amount
@@ -25,7 +25,7 @@ From IAS 39 — [Impairment][impairdef]:
 > Assets that are individually assessed and for which no impairment exists are grouped with financial assets with similar credit risk statistics and collectively assessed for impairment.
 > If, in a subsequent period, the amount of the impairment loss relating to a financial asset carried at amortised cost or a debt instrument carried as available-for-sale decreases due to an event occurring after the impairment was originally recognised, the previously recognised impairment loss is reversed through profit or loss. Impairments relating to investments in available-for-sale equity instruments are not reversed through profit or loss.
 
-[impairdef]: http://www.iasplus.com/en/standards/ias/ias39 
+[impairdef]: http://www.iasplus.com/en/standards/ias/ias39
 
 For example, a loan is considered to be impaired when it is probable that not all of the related principal and interest payments will be collected. The **impairment_amount** for a loan is the allowance for loan impairments set aside by the firm that accounts for the event that the loan becomes impaired in the future.
 

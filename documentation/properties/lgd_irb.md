@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "lgd_irb"
-schemas:    [loan, entity, account, derivative, security]
+schemas:    [loan, customer, issuer, guarantor, account, derivative, security]
 ---
 
 # lgd_irb

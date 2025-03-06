@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "boe_industry_code"
-schemas:    [entity]
+schemas:    [customer, issuer, guarantor]
 ---
 
 # boe_industry_code

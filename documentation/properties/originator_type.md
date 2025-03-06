@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"originator_type"
-schemas:	[loan, entity]
+schemas:	[loan]
 ---
 
 # originator_type
