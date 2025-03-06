@@ -106,15 +106,15 @@ class TestSchemas(unittest.TestCase):
         """
         JSON may not care about order, but we do. For the schemas to be
         human readable, it helps when properties are in alphabetical order.
+
+        We ignore inheritance, because we just care about how each individual schema "looks"
         """
         for schema_name in SCHEMA_FILES:
-            properties = list(schema_properties(schema_name))
+            properties = list(schema_properties(schema_name, with_inheritance=False))
 
             if "id" in properties:
-                assert properties[0] == "id"
-                assert properties[1] == "date"
-                properties.pop(1)
-                properties.pop(0)
+                assert properties.pop(0) == "id"
+                assert properties.pop(0) == "date"
 
             assert properties == sorted(properties)
 
