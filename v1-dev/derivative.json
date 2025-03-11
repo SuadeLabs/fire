@@ -41,10 +41,6 @@
         "ZERO"
       ]
     },
-    "birr": {
-      "description": "The internal risk rating assigned to a borrower based on their creditworthiness and financial stability",
-      "type": "string"
-    },
     "break_dates": {
       "description": "Dates where this contract can be broken (by either party). Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "array",
