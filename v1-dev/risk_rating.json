@@ -41,13 +41,13 @@
             "maximum": 1,
             "description": "Minimum Probability of Default"
         },
-        "source": {
-            "description": "The source where this data originated.",
-            "type": "string"
-            },
         "risk_rating_system_id": {
             "type": "string",
             "description": "Reference to the risk rating system that this Internal Risk Rating belongs to"
+        },
+        "source": {
+            "description": "The source where this data originated.",
+            "type": "string"
         },
         "version_id": {
             "description": "The version identifier of the data such as the firm's internal batch identifier.",
