@@ -1052,6 +1052,7 @@ Index securities are reference records recording the details of an index using t
 │   ├── deferred
 │   │   └── deferred_tax
 │   ├── depreciation
+|   ├── impairment
 │   ├── expense
 │   ├── income
 │   ├── intangible
@@ -1522,6 +1523,10 @@ Property composed of five or more residential dwellings.
 
 As per Artcile 124(1) [CRR][crr], this identifies **immovable property**
 collateral that cannot be classified as residential or commercial property.
+
+### impairement
+
+Impairment relates to an asset with a carrying balance in excess of its recoverable value
 
 ### farm
 

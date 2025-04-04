@@ -76,6 +76,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │       ├── redundancy_pymt
 │       └── regular_wages
 ├── fx
+├── intangible
 ├── interest
 │   ├── int_on_bond_and_frn
 │   ├── int_on_deposit
@@ -391,6 +392,9 @@ Describes an account that holds the amount of dividends received from **collecti
 
 ### dividend_from_money_mkt
 Describes an account that holds the amount of dividends received from **money market funds**.
+
+### intangible
+This is an asset that lacks physical substance such as a patent, brand, trademark, or copyright
 
 ### interest
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report
