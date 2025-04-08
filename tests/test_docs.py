@@ -15,49 +15,49 @@ from . import (
     all_properties,
     property_doc_name,
     schema_enum_registry,
-    schema_properties
+    schema_properties,
 )
 
 
 MISSING_DOCS = [
-            "account_ids",
-            "cb_haircut",
-            "col",
-            "comment",
-            "data",
-            "delta",
-            "derivative_id",
-            "forward_rate",
-            "gamma",
-            "insolvency_rank",
-            "leg",
-            "links",
-            "loan_id",
-            "loan_ids",
-            "next_exercise_date",
-            "next_payment_amount",
-            "next_receive_amount",
-            "next_receive_date",
-            "next_reset_date",
-            "page",
-            "payment_date",
-            "report_type",
-            "reset_date",
-            "rho",
-            "row",
-            "settlement_type",
-            "security_id",
-            "theta",
-            "title",
-            "underlying_derivative_id",
-            "underlying_issuer_id",
-            "underlying_security_id",
-            "underlying_strike",
-            "values",
-            "vega",
-            "vol_adj_fx",
-            # DO NOT ADD TO THIS LIST, ADD DOCUMENTATION!
-        ]
+    "account_ids",
+    "cb_haircut",
+    "col",
+    "comment",
+    "data",
+    "delta",
+    "derivative_id",
+    "forward_rate",
+    "gamma",
+    "insolvency_rank",
+    "leg",
+    "links",
+    "loan_id",
+    "loan_ids",
+    "next_exercise_date",
+    "next_payment_amount",
+    "next_receive_amount",
+    "next_receive_date",
+    "next_reset_date",
+    "page",
+    "payment_date",
+    "report_type",
+    "reset_date",
+    "rho",
+    "row",
+    "settlement_type",
+    "security_id",
+    "theta",
+    "title",
+    "underlying_derivative_id",
+    "underlying_issuer_id",
+    "underlying_security_id",
+    "underlying_strike",
+    "values",
+    "vega",
+    "vol_adj_fx",
+    # DO NOT ADD TO THIS LIST, ADD DOCUMENTATION!
+]
 
 
 def get_schema_refs_in_doc(docname):
@@ -70,12 +70,12 @@ def get_schema_refs_in_doc(docname):
             if schema_refs:
                 return schema_refs[0].split(", ")
 
+
 class TestDocs(unittest.TestCase):
     def test_property_has_docs(self):
         """
         Ensure there are docs for every new attribute
         """
-
 
         properties = all_properties()
         self.assertTrue(properties)
@@ -189,7 +189,9 @@ class TestDocs(unittest.TestCase):
             schema_refs = get_schema_refs_in_doc(docname)
             if schema_refs:
                 # check no dupes
-                assert len(schema_refs) == len(set(schema_refs)), f"Duplicate schema refs found for {docname}"
+                assert len(schema_refs) == len(
+                    set(schema_refs)
+                ), f"Duplicate schema refs found for {docname}"
 
                 for schema_name in schema_refs:
                     # Here we check the schemas found are real schemas
@@ -226,7 +228,9 @@ class TestDocs(unittest.TestCase):
                     continue
 
                 schema_refs = get_schema_refs_in_doc(prop)
-                assert schema_name in schema_refs, f"{schema_name} not found for doc: {prop}"
+                assert (
+                    schema_name in schema_refs
+                ), f"{schema_name} not found for doc: {prop}"
 
     @pytest.mark.skip("This syntax rule has 501 transgressions, will take some fixing")
     def test_referenced_schemas_have_a_section_in_docs(self):
@@ -240,4 +244,6 @@ class TestDocs(unittest.TestCase):
                 filename = os.path.join(DOCS_DIR, f"{docname}.md")
                 with open(filename) as doc:
                     for schema_ref in schema_refs:
-                        assert re.match(f"# {schema_ref}", doc.read()), f"No level-1 header (section) found in {docname} for {schema_ref}"
+                        assert re.match(
+                            f"# {schema_ref}", doc.read()
+                        ), f"No level-1 header (section) found in {docname} for {schema_ref}"

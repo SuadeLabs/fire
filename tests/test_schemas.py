@@ -16,7 +16,7 @@ from . import (
     fire_stats,
     load_jsons,
     schema_enum_registry,
-    schema_properties
+    schema_properties,
 )
 
 
@@ -293,6 +293,7 @@ class TestBackwardsCompatibility:
 
         for o, n in zip(old, new):
             assert o == n
+
 
 class TestRunStats:
 
