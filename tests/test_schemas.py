@@ -3,7 +3,6 @@ import os
 import re
 import unittest
 import pytest
-from collections import OrderedDict
 from jsonschema import Draft4Validator
 from jsonschema.exceptions import ValidationError
 from . import (
@@ -147,11 +146,6 @@ class TestSchemas(unittest.TestCase):
                     continue
                 # print(sorted([str(e) for e in enums[enum]]))
                 assert enums[enum] == sorted(enums[enum])
-
-    def test_property_count(self):
-        stats = fire_stats()
-        print(f"\n\n    ======== FIRE STATISTICS =======\n\n{stats}\n\n")
-        assert stats
 
     def test_required_fields(self):
         """
@@ -299,3 +293,10 @@ class TestBackwardsCompatibility:
 
         for o, n in zip(old, new):
             assert o == n
+
+class TestRunStats:
+
+    def test_property_count(self):
+        stats = fire_stats()
+        print(f"\n\n    ======== FIRE STATISTICS =======\n\n{stats}\n\n")
+        assert stats

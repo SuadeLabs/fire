@@ -3,17 +3,14 @@ import os
 import unittest
 
 import httpx
-import json
 import markdown
 import re
 import pytest
 from bs4 import BeautifulSoup
-from collections import OrderedDict
 
 from . import (
     DOC_NAMES,
     DOCS_DIR,
-    SCHEMAS_DIR,
     SCHEMA_NAMES,
     all_properties,
     property_doc_name,
