@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"version_id"
-schemas:	[account, agreement, collateral, customer, issuer, guarantor, derivative_cash_flow, derivative, exchange_rate, loan_cash_flow, loan_transaction, loan, security, adjustment, curve]
+schemas:	[account, agreement, collateral, customer, issuer, guarantor, derivative_cash_flow, derivative, exchange_rate, loan_cash_flow, loan_transaction, loan, security, adjustment, curve, risk_rating]
 ---
 
 # version_id
