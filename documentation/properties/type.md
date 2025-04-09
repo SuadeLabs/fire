@@ -512,6 +512,7 @@ Charity serving communities and individuals. Includes non-profit institutions se
 ├── heloc
 ├── trade_finance
 ├── credit_facility
+|   └── demand
 ├── liquidity_facility
 ├── multiccy_facility
 ├── nostro
@@ -641,6 +642,11 @@ From the [UK Gov](https://www.gov.uk/hmrc-internal-manuals/business-leasing-manu
 From [Investopedia][investopedia-education-loan]:
 
 > An education loan is a sum of money borrowed to finance post-secondary education or higher education-related expenses. Education loans are intended to cover the cost of tuition, books and supplies, and living expenses while the borrower is in the process of pursuing a degree. Payments are often deferred while students are in college and, depending on the lender, for an additional six-month period after earning a degree.
+
+### demand
+
+A loan with no fixed term or repayment schedule. It can be recalled upon the lender's request, assuming the notice required by the provisions of the loan are met.
+
 
 ### other
 
