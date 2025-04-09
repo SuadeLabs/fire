@@ -152,6 +152,10 @@
       "type": "string",
       "format": "date-time"
     },
+    "facility_id": {
+      "description": "The code assigned by the financial institution to identify a facility.",
+      "type": "string"
+    },
     "first_arrears_date": {
       "description": "The first date on which this account was in arrears.",
       "type": "string",
@@ -343,6 +347,10 @@
     "orig_credit_score": {
       "description": "The credit score of the customer at origination of the product using a commercially available credit bureau score.",
       "type": "integer"
+    },
+    "parent_facility_id": {
+      "description": "The parent code assigned by the financial institution to identify a facility.",
+      "type": "string"
     },
     "pd_irb": {
       "description": "The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.",

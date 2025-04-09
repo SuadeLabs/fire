@@ -223,6 +223,10 @@
       "description": "The currency of the credit facility if not the same as loan currency_code.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
     },
+    "facility_id": {
+      "description": "The code assigned by the financial institution to identify a facility.",
+      "type": "string"
+    },
     "fees": {
       "description": "The fees associated with the loan.",
       "type": "integer",
@@ -428,6 +432,10 @@
         "other",
         "spv"
       ]
+    },
+    "parent_facility_id": {
+      "description": "The parent code assigned by the financial institution to identify a facility.",
+      "type": "string"
     },
     "pd_irb": {
       "description": "The probability of default as determined by internal rating-based methods. Percentage between 0 an 1.",
