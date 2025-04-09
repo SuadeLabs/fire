@@ -176,14 +176,14 @@
       "description": "The standardised methodology for calculating the number of days between two dates. It is used to calculate the amount of accrued interest or the present value.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/day_count_convention"
     },
+    "deal_id": {
+      "description": "Identifier used for linking this product as part of a larger deal. e.g. Two components of a single loan or matching a securitisation with it's underlying loan.",
+      "type": "string"
+    },
     "default_date": {
       "description": "Date of default.",
       "type": "string",
       "format": "date-time"
-    },
-    "deal_id": {
-      "description": "Identifier used for linking this product as part of a larger deal. e.g. Two components of a single loan or matching a securitisation with it's underlying loan.",
-      "type": "string"
     },
     "deferred_fees": {
       "description": "Deferred fees are deferred payments subject to prepayment risk and not included in the balance.",
