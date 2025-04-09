@@ -587,6 +587,18 @@
       "description": "Is this loan secured or unsecured?",
       "type": "boolean"
     },
+    "seniority": {
+      "description": "The seniority of the security in the event of sale or bankruptcy of the issuer.",
+      "type": "string",
+      "enum": [
+        "mezzanine",
+        "pari_passu",
+        "senior_secured",
+        "senior_unsecured",
+        "subordinated_secured",
+        "subordinated_unsecured"
+      ]
+    },
     "servicing": {
       "description": "The method by which the loan shall be repaid",
       "type": "string",
@@ -639,6 +651,7 @@
         "corporate_card",
         "credit_card",
         "credit_facility",
+        "demand",
         "education",
         "financial_lease",
         "heloc",
