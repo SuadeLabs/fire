@@ -125,6 +125,15 @@
       "description": "The standardised methodology for calculating the number of days between two dates. It is used to calculate the amount of accrued interest or the present value.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/day_count_convention"
     },
+    "default_date": {
+      "description": "Date of default.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "ead": {
+      "description": "The EAD field allows users to input exposure-at-default values throughout the loan's lifecycle. Upon loan default, this field should be updated with the final EAD value, reflecting the realized exposure at default.",
+      "type": "number"
+    },
     "economic_loss": {
       "description": "The definition of loss, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss",
       "monetary": true,
@@ -272,6 +281,16 @@
     },
     "last_payment_date": {
       "description": "The final payment date for interest payments, often coincides with end_date.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_recovery_date": {
+      "description": "Date of most recent recovery in the reporting quarter.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_write_off_date": {
+      "description": "Date of Financial Institution's most recent Write Off in the reporting quarter.",
       "type": "string",
       "format": "date-time"
     },
@@ -519,6 +538,11 @@
     "reporting_id": {
       "description": "The internal ID for the legal entity under which the account is being reported.",
       "type": "string"
+    },
+    "resolution_date": {
+      "description": "Date of resolution of the defaulted facility.",
+      "type": "string",
+      "format": "date-time"
     },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the account resides. In accordance with ISO 3166-1",
