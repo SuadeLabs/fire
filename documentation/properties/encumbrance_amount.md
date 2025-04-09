@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"encumbrance_amount"
-schemas:	[account, loan, collateral]
+schemas:	[account, loan, collateral, security]
 ---
 
 # encumbrance_amount

@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "intra_group"
-schemas:    [entity]
+schemas:    [customer, issuer, guarantor]
 ---
 
 # intra_group

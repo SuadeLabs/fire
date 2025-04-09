@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "guarantee_amount"
-schemas:    [account]
+schemas:    [account, loan]
 ---
 
 # guarantee_amount

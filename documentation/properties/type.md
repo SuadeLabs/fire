@@ -1,23 +1,7 @@
 ---
 layout: property
 title: "type"
-schemas:
-  [
-    account,
-    agreement,
-    collateral,
-    customer,
-    derivative_cash_flow,
-    derivative,
-    entity,
-    guarantor,
-    internal_risk_rating,
-    issuer,
-    loan_cash_flow,
-    loan_transaction,
-    loan,
-    security,
-  ]
+schemas:  [account, agreement, collateral, customer, derivative, entity, guarantor, issuer, loan_cash_flow, loan_transaction, loan, security, curve]
 ---
 
 # type

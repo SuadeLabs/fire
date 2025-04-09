@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "national_reporting_code"
-schemas:    [entity]
+schemas:    [customer, issuer, guarantor]
 ---
 
 # national_reporting_code
