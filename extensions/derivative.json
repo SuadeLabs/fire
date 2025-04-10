@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Derivative Extended Schema",
+  "description": "Extended derivative schema containing all jurisdiction-specific extensions.",
+  "type": "object",
+  "properties": {},
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/derivative.json"
+    }
+  ]
+}

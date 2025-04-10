@@ -3,7 +3,7 @@ import os
 import re
 import unittest
 import pytest
-from jsonschema import Draft4Validator
+from jsonschema import Draft7Validator
 from jsonschema.exceptions import ValidationError
 from . import (
     DOC_NAMES,
@@ -181,7 +181,7 @@ class TestExamples:
     with open(os.path.join(SCHEMAS_DIR, "example.json")) as ff:
         example_schema = json.load(ff)
 
-    validator = Draft4Validator(example_schema)
+    validator = Draft7Validator(example_schema)
 
     def test_validating_all_examples(self):
         """
