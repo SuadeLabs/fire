@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Example Extended Schema",
+  "description": "Extended example schema containing all jurisdiction-specific extensions.",
+  "type": "object",
+  "properties": {},
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/example.json"
+    }
+  ]
+}

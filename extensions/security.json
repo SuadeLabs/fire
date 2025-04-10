@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Security Extended Schema",
+  "description": "Extended security schema containing all jurisdiction-specific extensions.",
+  "type": "object",
+  "properties": {},
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/security.json"
+    }
+  ]
+}
