@@ -1,6 +1,7 @@
 import decimal
 import json
 import os
+from string import ascii_lowercase, digits
 
 
 HOME = os.path.join(os.path.dirname(__file__), "..")
@@ -23,6 +24,7 @@ EXTENSION_FILES = [f for f in os.listdir(EXTENSIONS_DIR) if f.endswith(".json")]
 EXTENSION_DOC_FILES = [f for f in os.listdir(EXTENSION_DOCS_DIR) if f.endswith(".md")]
 EXTENSION_DOC_NAMES = [f.split(".md")[0] for f in EXTENSION_DOC_FILES]
 
+ALLOWED_PROPERTY_CHARS = frozenset(ascii_lowercase + "_" + digits)
 
 # For transition only...
 OLD_SCHEMAS_DIR = os.path.join(HOME, "v1-dev")

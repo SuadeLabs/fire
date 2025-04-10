@@ -1,10 +1,11 @@
-from string import ascii_lowercase
+from string import digits
 
 import iso3166
 import pytest
 from jsonschema import Draft7Validator
 from jsonschema.exceptions import ValidationError
 from . import (
+    ALLOWED_PROPERTY_CHARS,
     SCHEMA_FILES,
     EXTENSIONS_DIR,
     EXTENSION_DOC_NAMES,
@@ -15,7 +16,6 @@ from . import (
 )
 
 _ABSTRACT_SCHEMAS = frozenset(("common.json", "entity.json"))
-_ALLOWED_PROPERTY_CHARS = frozenset(ascii_lowercase + "_")
 _VALID_COUNTRY_CODES = frozenset((c[1] for c in iso3166.countries))
 
 
@@ -101,9 +101,10 @@ def test_schema_property_names(schema_name):
     assert properties == sorted(properties)
 
     for property in properties:
-        assert _ALLOWED_PROPERTY_CHARS.issuperset(property)
-        assert not property.endswith("_")
-        assert not property.startswith("_")
+        assert ALLOWED_PROPERTY_CHARS.issuperset(property)
+        assert property
+        assert property[0] not in digits + "_"
+        assert property[-1] != "_"
         assert "__" not in property
 
 
