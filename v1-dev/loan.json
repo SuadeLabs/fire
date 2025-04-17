@@ -223,6 +223,10 @@
       "description": "The currency of the credit facility if not the same as loan currency_code.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
     },
+    "facility_id": {
+      "description": "The code assigned by the financial institution to identify a facility.",
+      "type": "string"
+    },
     "fees": {
       "description": "The fees associated with the loan.",
       "type": "integer",
@@ -429,6 +433,10 @@
         "spv"
       ]
     },
+    "parent_facility_id": {
+      "description": "The parent code assigned by the financial institution to identify a facility.",
+      "type": "string"
+    },
     "pd_irb": {
       "description": "The probability of default as determined by internal rating-based methods. Percentage between 0 an 1.",
       "type": "number"
@@ -586,6 +594,18 @@
     "secured": {
       "description": "Is this loan secured or unsecured?",
       "type": "boolean"
+    },
+    "seniority": {
+      "description": "The seniority of the security in the event of sale or bankruptcy of the issuer.",
+      "type": "string",
+      "enum": [
+        "mezzanine",
+        "pari_passu",
+        "senior_secured",
+        "senior_unsecured",
+        "subordinated_secured",
+        "subordinated_unsecured"
+      ]
     },
     "servicing": {
       "description": "The method by which the loan shall be repaid",

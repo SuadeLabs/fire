@@ -642,6 +642,7 @@ From [Investopedia][investopedia-education-loan]:
 
 > An education loan is a sum of money borrowed to finance post-secondary education or higher education-related expenses. Education loans are intended to cover the cost of tuition, books and supplies, and living expenses while the borrower is in the process of pursuing a degree. Payments are often deferred while students are in college and, depending on the lender, for an additional six-month period after earning a degree.
 
+
 ### other
 
 Other refers to a type of security not covered by the above. If you find yourself using this often, please [contribute][contributing].

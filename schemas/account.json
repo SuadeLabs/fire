@@ -152,6 +152,10 @@
       "type": "string",
       "format": "date-time"
     },
+    "facility_id": {
+      "description": "The code assigned by the financial institution to identify a facility.",
+      "type": "string"
+    },
     "first_arrears_date": {
       "description": "The first date on which this account was in arrears.",
       "type": "string",
@@ -344,6 +348,10 @@
       "description": "The credit score of the customer at origination of the product using a commercially available credit bureau score.",
       "type": "integer"
     },
+    "parent_facility_id": {
+      "description": "The parent code assigned by the financial institution to identify a facility.",
+      "type": "string"
+    },
     "pd_irb": {
       "description": "The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.",
       "type": "number",
@@ -532,6 +540,18 @@
       "description": "A particular predetermined date at which an account is rolled-over.",
       "type": "string",
       "format": "date-time"
+    },
+    "seniority": {
+      "description": "The seniority of the security in the event of sale or bankruptcy of the issuer.",
+      "type": "string",
+      "enum": [
+        "mezzanine",
+        "pari_passu",
+        "senior_secured",
+        "senior_unsecured",
+        "subordinated_secured",
+        "subordinated_unsecured"
+      ]
     },
     "source": {
       "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
