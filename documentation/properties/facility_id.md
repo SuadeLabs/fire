@@ -8,4 +8,4 @@ schemas:    [loan, account]
 
 ---
 
-The **facility id** is the code assigned by the financial institution to identify a facility.
+The **facility id** is the code assigned by the financial institution to identify a group of loans that relate to the same facility.
