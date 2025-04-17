@@ -8,4 +8,4 @@ schemas:    [loan, account]
 
 ---
 
-The **parent facility id** is the parent code assigned by the financial institution to identify a facility.
+The **parent facility id** is the parent facility for a **facility_id** where multiple facilities feed into a single parent facility.
