@@ -131,7 +131,7 @@
       "format": "date-time"
     },
     "ead": {
-      "description": "The EAD field allows users to input exposure-at-default values throughout the loan's lifecycle. Upon loan default, this field should be updated with the final EAD value, reflecting the realized exposure at default.",
+      "description": "The EAD field allows users to input monetary exposure-at-default values across the loan's lifecycle. Upon default, this field must be updated to reflect the final realised EAD value — that is, the actual exposure outstanding at the moment of default.",
       "type": "number"
     },
     "economic_loss": {
