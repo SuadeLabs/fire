@@ -15,12 +15,13 @@ A *senior* security ranks highest in a companies liquidation schedule and hence 
 A *secured* security is one whose cash flows or credit worthiness is backed by another asset.
 
 ```bash
+├── senior_secured
+├── senior_unsecured
 ├── subordinated_unsecured
 │   └── mezzanine
 ├── subordinated_secured
-├── senior_unsecured
 ├── first_loss_secured
-└── senior_secured
+└── pari_passu
 
 ```
 
