@@ -15,10 +15,6 @@
       "minimum": 0,
       "monetary": true
     },
-    "birr_id": {
-      "type": "string",
-      "description": "The unique identifier of the Borrower Internal Risk Rating (BIRR), representing an internally assigned risk assessment for a customer based on their creditworthiness and financial stability."
-    },
     "clearing_threshold": {
       "description": "Status of the clearing threshold as defined in EMIR",
       "type": "string",
