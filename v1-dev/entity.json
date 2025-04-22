@@ -17,6 +17,10 @@
       "description": "City, town or village.",
       "type": "string"
     },
+    "birr_id": {
+      "type": "string",
+      "description": "The unique identifier of the Borrower Internal Risk Rating (BIRR), representing an internally assigned risk assessment for a customer based on their creditworthiness and financial stability."
+    },
     "boe_industry_code": {
       "description": "Bank of England industry code.",
       "type": "string"
