@@ -1,7 +1,7 @@
 ---
 layout: property
 title: "birr_id"
-schemas: [customer]
+schemas: [customer, issuer, guarantor]
 ---
 
 # birr_id
