@@ -6,7 +6,12 @@
   "allOf": [{
     "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/entity.json"
   }],
-  "properties": {},
+  "properties": {
+    "birr_id": {
+      "type": "string",
+      "description": "The unique identifier of the Borrower Internal Risk Rating (BIRR), representing an internally assigned risk assessment for a customer based on their creditworthiness and financial stability."
+    }
+  },
   "required": ["id", "date"],
   "additionalProperties": true
 }
