@@ -213,11 +213,27 @@
       "description": "The unique identifier used by the financial institution to identify the deal for this product that links it to other products of the same or different type.",
       "type": "string"
     },
+    "delinquency_ratio": {
+      "description": "For securitisation Standardised Approach, the percentage of exposures that are in default within the securitised pool.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
     "detachment_point": {
       "description": "The threshold at which losses within the pool of underlying exposures would result in a complete loss of principal for the tranche containing the relevant securitisation position.",
       "type": "number",
       "minimum": 0.0,
       "maximum": 1.0
+    },
+    "ead_subpool_w_known": {
+      "description": "For securitisation Standardised Approach, the total exposure within the securitised pool where delinquency is known.",
+      "type": "integer",
+      "monetary": true
+    },
+    "ead_subpool_w_unknown": {
+      "description": "For securitisation Standardised Approach, the total exposure within the securitised pool where delinquency is unknown.",
+      "type": "integer",
+      "monetary": true
     },
     "encumbrance_amount": {
       "description": "The amount of the security that is encumbered by potential future commitments or legal liabilities such as within a repo pool. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -413,6 +429,12 @@
     "issuer_id": {
       "description": "The unique identifier for the issuer within the financial institution.",
       "type": "string"
+    },
+    "k_sa": {
+      "description": "For securitisation standardised approach (sec-sa), ksa is the SA capital charge had the underlying exposures not been securitised",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
     },
     "kbra_lt": {
       "description": "KBRA long term credit ratings",
@@ -684,6 +706,16 @@
       "description": "The standardised approach risk weight represented as a decimal/float such that 1.5% is 0.015.",
       "type": "number"
     },
+    "securitisation_method": {
+      "description": " Identify the securitisation methodology applied to the securitised pool to derive the ead and risk weight",
+      "type": "string",
+      "enum": [
+        "sec_erba",
+        "sec_iaa",
+        "sec_irba",
+        "sec_sa"
+      ]
+    },
     "securitisation_type": {
       "description": "The type of securitisation with regards to common regulatory classifications.",
       "type": "string",
@@ -863,6 +895,17 @@
         "warranty"
       ]
     },
+    "underlying_delinquent_exp": {
+      "description": "For securitisation Standardised Approach, the total exposure amount from the underlying pool that belongs to exposures in default status.",
+      "type": "integer",
+      "monetary": true
+    },
+    "underlying_total_exp_pool": {
+      "description": "For securitisation Standardised Approach, tthe total exposure of the securitised pool.",
+      "type": "integer",
+      "monetary": true
+    },
+
     "value_date": {
       "description": "The timestamp that the trade or financial product was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
