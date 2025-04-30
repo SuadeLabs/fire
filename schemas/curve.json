@@ -31,6 +31,7 @@
       "enum": [
         "behavioral",
         "rate",
+        "risk_rating",
         "volatility"
       ]
     },
@@ -46,15 +47,44 @@
             "description": "The reference item for the value. (x-axis)",
             "type": "string",
             "enum": [
-              "o_n", "1w", "1m", "3m", "6m", "12m", "24m", "60m", "120m"
+              "o_n", "1w", "1m", "3m", "6m", "9m", "12m", "15m", "18m",
+               "21m", "24m", "27m", "30m", "33m", "36m", "60m", "120m"
             ]
           },
           "value": {
             "description": "The reference value for this rate. (y-axis)",
-            "type": "number"
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              }
+            ]
           }
         },
-        "required": ["reference", "value"]
+        "required": ["reference", "value"],
+        "if": {
+          "properties": {
+            "type": {
+              "const": "risk_rating"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "value": {
+              "type": "string"
+            }
+          }
+        },
+        "else": {
+          "properties": {
+            "value": {
+              "type": "number"
+            }
+          }
+        }
       }
     },
     "version_id": {
