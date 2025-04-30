@@ -11,7 +11,7 @@ schemas:    [customer, issuer, guarantor]
 
 The **birr_curve_id** represents the unique identifier of a curve containing historical Borrower Internal Risk Ratings (BIRR) for an entity. The referenced curve must be of type 'risk_rating'.
 
-This property allows for tracking the historical evolution of an entity's internal risk assessment over time, providing a complete view of how the entity's creditworthiness has changed.
+This property allows for tracking the historical evolution of an entity's internal risk assessment over time, providing a complete view of how the entity's creditworthiness has changed. Each value in the curve represents a specific BIRR identifier that was assigned to the entity at that point in time.
 
 ### Example
 ```json
@@ -23,7 +23,7 @@ This property allows for tracking the historical evolution of an entity's intern
 }
 ```
 
-In this example, the entity is linked to a curve with ID "curve456" that contains its historical BIRR values. The curve would contain entries like:
+In this example, the entity is linked to a curve with ID "curve456" that contains its historical BIRR identifiers. The curve would contain entries like:
 
 ```json
 {
@@ -32,19 +32,21 @@ In this example, the entity is linked to a curve with ID "curve456" that contain
     "values": [
         {
             "reference": "1m",
-            "value": "A"
+            "value": "BIRR-2024-02-A1"
         },
         {
             "reference": "2m",
-            "value": "A-"
+            "value": "BIRR-2024-01-A2"
         },
         {
             "reference": "3m",
-            "value": "B+"
+            "value": "BIRR-2023-12-B1"
         }
     ]
 }
 ```
+
+Each value in the curve is a BIRR identifier that corresponds to the entity's risk rating at that specific point in time. These identifiers should match the format used in the [birr_id](https://raw.githubusercontent.com/SuadeLabs/fire/master/documentation/properties/birr_id.md) property.
 
 ### Related Properties
 - [birr_id](https://raw.githubusercontent.com/SuadeLabs/fire/master/documentation/properties/birr_id.md) - The current BIRR identifier
