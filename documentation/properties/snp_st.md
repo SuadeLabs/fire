@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "snp_st"
-schemas:    [entity, security]
+schemas:    [customer, issuer, guarantor, security]
 ---
 
 # snp_st

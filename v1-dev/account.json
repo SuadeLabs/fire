@@ -18,7 +18,7 @@
       "type": "integer",
       "monetary": true
     },
-    "accounting_treatment":{
+    "accounting_treatment": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/accounting_treatment"
     },
     "accrued_interest": {
@@ -51,6 +51,11 @@
     "behavioral_curve_id": {
       "description": "The unique identifier for the behavioral curve used by the financial institution.",
       "type": "string"
+    },
+    "behavioral_end_date": {
+      "description": "Behavioral end date (as opposed to contractual). YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
+      "type": "string",
+      "format": "date-time"
     },
     "break_dates": {
       "description": "Dates where this contract can be broken (by either party). Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
@@ -120,6 +125,16 @@
       "description": "The standardised methodology for calculating the number of days between two dates. It is used to calculate the amount of accrued interest or the present value.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/day_count_convention"
     },
+    "default_date": {
+      "description": "Date of default.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "ead": {
+      "description": "The EAD field allows users to input monetary exposure-at-default values across the loan's lifecycle. Upon default, this field must be updated to reflect the final realised EAD value — that is, the actual exposure outstanding at the moment of default.",
+      "type": "integer",
+      "monetary": true
+    },
     "economic_loss": {
       "description": "The definition of loss, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss",
       "monetary": true,
@@ -134,12 +149,22 @@
     "encumbrance_type": {
       "description": "The type of the encumbrance causing the encumbrance_amount.",
       "type": "string",
-      "enum": ["covered_bond", "derivative", "none", "other", "repo"]
+      "enum": [
+        "covered_bond",
+        "derivative",
+        "none",
+        "other",
+        "repo"
+      ]
     },
     "end_date": {
       "description": "The end or maturity date of the account. Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
       "type": "string",
       "format": "date-time"
+    },
+    "facility_id": {
+      "description": "The code assigned by the financial institution to identify a facility.",
+      "type": "string"
     },
     "first_arrears_date": {
       "description": "The first date on which this account was in arrears.",
@@ -161,6 +186,10 @@
       "type": "integer",
       "monetary": true
     },
+    "frr_id": {
+      "description": "The internal facility risk rating assigned to a facility based on its specific risk characteristics, including collateral and seniority.",
+      "type": "string"
+    },
     "fvh_level": {
       "description": "Fair value hierarchy category according to IFRS 13.93 (b)",
       "type": "integer",
@@ -180,7 +209,7 @@
         "be_pf",
         "bg_dif",
         "ca_cdic",
-	      "cy_dps",
+        "cy_dps",
         "cz_dif",
         "de_edb",
         "de_edo",
@@ -236,7 +265,19 @@
     "interest_repayment_frequency": {
       "description": "Repayment frequency of the interest.",
       "type": "string",
-      "enum": ["daily", "weekly", "bi_weekly", "monthly", "bi_monthly", "quarterly", "semi_annually", "annually", "at_maturity", "biennially", "sesquiennially"]
+      "enum": [
+        "daily",
+        "weekly",
+        "bi_weekly",
+        "monthly",
+        "bi_monthly",
+        "quarterly",
+        "semi_annually",
+        "annually",
+        "at_maturity",
+        "biennially",
+        "sesquiennially"
+      ]
     },
     "last_drawdown_date": {
       "description": "The last date on which a drawdown was made on this account (overdraft).",
@@ -245,6 +286,16 @@
     },
     "last_payment_date": {
       "description": "The final payment date for interest payments, often coincides with end_date.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_recovery_date": {
+      "description": "Date of most recent recovery in the reporting quarter.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_write_off_date": {
+      "description": "Date of Financial Institution's most recent Write Off in the reporting quarter.",
       "type": "string",
       "format": "date-time"
     },
@@ -317,6 +368,10 @@
       "description": "The credit score of the customer at origination of the product using a commercially available credit bureau score.",
       "type": "integer"
     },
+    "parent_facility_id": {
+      "description": "The parent code assigned by the financial institution to identify a facility.",
+      "type": "string"
+    },
     "pd_irb": {
       "description": "The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.",
       "type": "number",
@@ -336,135 +391,135 @@
       "description": "The purpose for which the account was created or is being used.",
       "type": "string",
       "enum": [
-	"adj_syn_inv_decon_subs",
-	"adj_syn_inv_own_shares",
-	"adj_syn_mtg_def_ins",
-	"adj_syn_nonsig_inv_fin",
-	"adj_syn_other_inv_fin",
-	"admin",
-	"annual_bonus_accruals",
-	"benefit_in_kind",
-	"capital_gain_tax",
+        "adj_syn_inv_decon_subs",
+        "adj_syn_inv_own_shares",
+        "adj_syn_mtg_def_ins",
+        "adj_syn_nonsig_inv_fin",
+        "adj_syn_other_inv_fin",
+        "admin",
+        "annual_bonus_accruals",
+        "benefit_in_kind",
+        "capital_gain_tax",
         "capital_reserve",
-	"cash_management",
-	"cf_hedge",
-	"cf_hedge_reclass",
-	"ci_service",
-	"clearing",
-	"collateral",
-	"commitments",
-	"computer_and_it_cost",
-	"computer_peripheral",
-	"computer_software",
-	"corporation_tax",
-	"credit_card_fee",
-	"critical_service",
-	"current_account_fee",
-	"custody",
-	"dealing_rev_deriv",
-	"dealing_rev_deriv_nse",
-	"dealing_rev_fx",
-	"dealing_rev_fx_nse",
-	"dealing_rev_ir",
-	"dealing_rev_sec",
-	"dealing_rev_sec_nse",
-	"dealing_revenue",
-	"ded_fut_prof",
-	"ded_fut_prof_temp_diff",
+        "cash_management",
+        "cf_hedge",
+        "cf_hedge_reclass",
+        "ci_service",
+        "clearing",
+        "collateral",
+        "commitments",
+        "computer_and_it_cost",
+        "computer_peripheral",
+        "computer_software",
+        "corporation_tax",
+        "credit_card_fee",
+        "critical_service",
+        "current_account_fee",
+        "custody",
+        "dealing_rev_deriv",
+        "dealing_rev_deriv_nse",
+        "dealing_rev_fx",
+        "dealing_rev_fx_nse",
+        "dealing_rev_ir",
+        "dealing_rev_sec",
+        "dealing_rev_sec_nse",
+        "dealing_revenue",
+        "ded_fut_prof",
+        "ded_fut_prof_temp_diff",
         "defined_benefit",
-	"deposit",
-	"derivative_fee",
-	"dgs_contribution",
-	"div_from_cis",
-	"div_from_money_mkt",
-	"dividend",
-	"donation",
-	"employee",
-	"employee_stock_option",
-	"escrow",
-	"fees",
-	"fine",
-	"firm_operating_expenses",
-	"firm_operations",
-	"furniture",
-	"fut_prof",
-	"fut_prof_temp_diff",
-	"fx",
+        "deposit",
+        "derivative_fee",
+        "dgs_contribution",
+        "div_from_cis",
+        "div_from_money_mkt",
+        "dividend",
+        "donation",
+        "employee",
+        "employee_stock_option",
+        "escrow",
+        "fees",
+        "fine",
+        "firm_operating_expenses",
+        "firm_operations",
+        "furniture",
+        "fut_prof",
+        "fut_prof_temp_diff",
+        "fx",
         "general_credit_risk",
-	"goodwill",
-	"insurance_fee",
-	"int_on_bond_and_frn",
-	"int_on_bridging_loan",
-	"int_on_credit_card",
-	"int_on_deposit",
-	"int_on_deriv_hedge",
-	"int_on_derivative",
-	"int_on_ecgd_lending",
-	"int_on_loan_and_adv",
-	"int_on_money_mkt",
-	"int_on_mortgage",
-	"int_on_sft",
-	"int_unallocated",
-	"interest",
-	"intra_group_fee",
-	"inv_in_subsidiary",
-	"investment_banking_fee",
-	"investment_property",
-	"ips",
-	"land",
-	"loan_and_advance_fee",
-	"machinery",
-	"manufactured_dividend",
-	"mortgage_fee",
-	"mtg_ins_nonconform",
-	"mtg_insurance",
-	"ni_contribution",
-	"non_life_ins_premium",
-  "not_fut_prof",
-	"occupancy_cost",
-	"operational",
-	"operational_escrow",
-	"operational_excess",
-	"oth_tax_excl_temp_diff",
-	"other",
-	"other_expenditure",
-	"other_fs_fee",
-	"other_non_fs_fee",
-	"other_social_contrib",
-	"other_staff_cost",
-	"other_staff_rem",
-	"overdraft_fee",
-	"own_property",
-	"pension",
-	"ppe",
-	"prime_brokerage",
-	"property",
-	"pv_future_spread_inc",
-	"rec_unidentified_cpty",
-	"reclass_tax",
-	"recovery",
-	"redundancy_pymt",
-	"reference",
-	"reg_loss",
-	"regular_wages",
-	"release",
-	"rent",
-	"res_fund_contribution",
-	"restructuring",
-	"retained_earnings",
-	"revaluation",
-	"revenue_reserve",
-	"share_plan",
-	"share_premium",
-	"staff",
-	"system",
-	"tax",
-	"telecom_equipment",
-	"third_party_interest",
-	"underwriting_fee",
-	"unsecured_loan_fee",
-	"vehicle",
-	"write_off"
+        "goodwill",
+        "insurance_fee",
+        "int_on_bond_and_frn",
+        "int_on_bridging_loan",
+        "int_on_credit_card",
+        "int_on_deposit",
+        "int_on_deriv_hedge",
+        "int_on_derivative",
+        "int_on_ecgd_lending",
+        "int_on_loan_and_adv",
+        "int_on_money_mkt",
+        "int_on_mortgage",
+        "int_on_sft",
+        "int_unallocated",
+        "interest",
+        "intra_group_fee",
+        "inv_in_subsidiary",
+        "investment_banking_fee",
+        "investment_property",
+        "ips",
+        "land",
+        "loan_and_advance_fee",
+        "machinery",
+        "manufactured_dividend",
+        "mortgage_fee",
+        "mtg_ins_nonconform",
+        "mtg_insurance",
+        "ni_contribution",
+        "non_life_ins_premium",
+        "not_fut_prof",
+        "occupancy_cost",
+        "operational",
+        "operational_escrow",
+        "operational_excess",
+        "oth_tax_excl_temp_diff",
+        "other",
+        "other_expenditure",
+        "other_fs_fee",
+        "other_non_fs_fee",
+        "other_social_contrib",
+        "other_staff_cost",
+        "other_staff_rem",
+        "overdraft_fee",
+        "own_property",
+        "pension",
+        "ppe",
+        "prime_brokerage",
+        "property",
+        "pv_future_spread_inc",
+        "rec_unidentified_cpty",
+        "reclass_tax",
+        "recovery",
+        "redundancy_pymt",
+        "reference",
+        "reg_loss",
+        "regular_wages",
+        "release",
+        "rent",
+        "res_fund_contribution",
+        "restructuring",
+        "retained_earnings",
+        "revaluation",
+        "revenue_reserve",
+        "share_plan",
+        "share_premium",
+        "staff",
+        "system",
+        "tax",
+        "telecom_equipment",
+        "third_party_interest",
+        "underwriting_fee",
+        "unsecured_loan_fee",
+        "vehicle",
+        "write_off"
       ]
     },
     "rate": {
@@ -474,7 +529,13 @@
     "rate_type": {
       "description": "Describes the type of interest rate applied to the account.",
       "type": "string",
-      "enum": ["combined", "fixed", "preferential", "tracker", "variable"]
+      "enum": [
+        "combined",
+        "fixed",
+        "preferential",
+        "tracker",
+        "variable"
+      ]
     },
     "regulatory_book": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/regulatory_book"
@@ -486,6 +547,11 @@
     "reporting_id": {
       "description": "The internal ID for the legal entity under which the account is being reported.",
       "type": "string"
+    },
+    "resolution_date": {
+      "description": "Date of resolution of the defaulted facility.",
+      "type": "string",
+      "format": "date-time"
     },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the account resides. In accordance with ISO 3166-1",
@@ -500,6 +566,18 @@
       "type": "string",
       "format": "date-time"
     },
+    "seniority": {
+      "description": "The seniority of the security in the event of sale or bankruptcy of the issuer.",
+      "type": "string",
+      "enum": [
+        "mezzanine",
+        "pari_passu",
+        "senior_secured",
+        "senior_unsecured",
+        "subordinated_secured",
+        "subordinated_unsecured"
+      ]
+    },
     "source": {
       "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
       "type": "string"
@@ -512,7 +590,16 @@
     "status": {
       "description": "Describes if the Account is active or been cancelled.",
       "type": "string",
-      "enum": ["active","audited" , "cancelled", "cancelled_payout_agreed", "other", "pending", "transactional", "unaudited"]
+      "enum": [
+        "active",
+        "audited",
+        "cancelled",
+        "cancelled_payout_agreed",
+        "other",
+        "pending",
+        "transactional",
+        "unaudited"
+      ]
     },
     "trade_date": {
       "description": "The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
@@ -567,7 +654,10 @@
     "uk_funding_type": {
       "description": "Funding type calculated according to BIPRU 12.5/12.6",
       "type": "string",
-      "enum": ["a", "b"]
+      "enum": [
+        "a",
+        "b"
+      ]
     },
     "version_id": {
       "description": "The version identifier of the data such as the firm's internal batch identifier.",
@@ -579,6 +669,9 @@
       "monetary": true
     }
   },
-  "required": ["id", "date"],
+  "required": [
+    "id",
+    "date"
+  ],
   "additionalProperties": true
 }

@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "turnover"
-schemas:    [entity]
+schemas:    [customer, issuer, guarantor]
 ---
 
 # turnover

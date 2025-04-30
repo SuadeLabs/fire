@@ -1,0 +1,63 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Risk Rating",
+    "description": "A risk rating entry for a risk rating system",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "Unique identifier for the risk rating"
+        },
+        "date": {
+            "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "lgd_max": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "Maximum Loss Given Default, representing the highest expected loss as a percentage of exposure at default."
+        },
+        "lgd_min": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "Minimum Loss Given Default, representing the lowest expected loss as a percentage of exposure at default."
+        },
+        "name": {
+            "type": "string",
+            "description": "The name or classification of the risk rating, used for reporting and segmentation."
+        },
+        "pd_max": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "Maximum Probability of Default"
+        },
+        "pd_min": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "Minimum Probability of Default"
+        },
+        "risk_rating_system_id": {
+            "type": "string",
+            "description": "Reference to the risk rating system that this Internal Risk Rating belongs to"
+        },
+        "source": {
+            "description": "The source where this data originated.",
+            "type": "string"
+        },
+        "version_id": {
+            "description": "The version identifier of the data such as the firm's internal batch identifier.",
+            "type": "string"
+        }
+    },
+    "required": [
+        "id",
+        "date",
+        "name",
+        "risk_rating_system_id"
+    ]
+}

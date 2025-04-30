@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"naics_code"
-schemas:	[entity]
+schemas:	[customer, issuer, guarantor]
 ---
 
 # naics_code

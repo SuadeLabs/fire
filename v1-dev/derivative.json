@@ -62,7 +62,12 @@
     "ccr_approach": {
       "description": "Specifies the approved counterparty credit risk methodology for calculating exposures.",
       "type": "string",
-      "enum": ["imm", "oem", "sa", "ssa"]
+      "enum": [
+        "imm",
+        "oem",
+        "sa",
+        "ssa"
+      ]
     },
     "cost_center_code": {
       "description": "The organizational unit or sub-unit to which costs/profits are booked.",
@@ -75,7 +80,7 @@
     "cr_approach": {
       "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/cr_approach"
-    }, 
+    },
     "csa_id": {
       "description": "The unique identifier of the credit support annex for this derivative",
       "type": "string"
@@ -105,6 +110,10 @@
       "description": "The first payment date for interest payments.",
       "type": "string",
       "format": "date-time"
+    },
+    "frr_id": {
+      "description": "The internal risk rating assigned to a facility based on its specific risk characteristics, including collateral and seniority.",
+      "type": "string"
     },
     "fvh_level": {
       "description": "Fair value hierarchy category according to IFRS 13.93 (b)",
@@ -392,10 +401,10 @@
         "8m",
         "9m",
         "12m",
-	"24m",
-	"60m",
-	"120m",
-	"360m"
+        "24m",
+        "60m",
+        "120m",
+        "360m"
       ]
     },
     "underlying_issuer_id": {

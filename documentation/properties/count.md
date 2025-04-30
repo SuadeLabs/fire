@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"count"
-schemas:	[account, loan]
+schemas:	[account, loan, customer, issuer, guarantor]
 ---
 
 # count

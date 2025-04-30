@@ -2,7 +2,7 @@
 ---
 layout:     property
 title:      "kbra_st"
-schemas:    [entity, security]
+schemas:    [customer, issuer, guarantor, security]
 ---
 
 # kbra_st

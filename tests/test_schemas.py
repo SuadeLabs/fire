@@ -3,7 +3,6 @@ import os
 import re
 import unittest
 import pytest
-from collections import OrderedDict
 from jsonschema import Draft4Validator
 from jsonschema.exceptions import ValidationError
 from . import (
@@ -17,6 +16,7 @@ from . import (
     fire_stats,
     load_jsons,
     schema_enum_registry,
+    schema_properties,
 )
 
 
@@ -37,6 +37,7 @@ class TestSchemas(unittest.TestCase):
                 "example.json",
                 "guarantor.json",
                 "issuer.json",
+                "risk_rating.json",
             ]:
                 assert not enums
             else:
@@ -104,24 +105,17 @@ class TestSchemas(unittest.TestCase):
         """
         JSON may not care about order, but we do. For the schemas to be
         human readable, it helps when properties are in alphabetical order.
+
+        We ignore inheritance, because we just care about how each individual schema "looks"
         """
         for schema_name in SCHEMA_FILES:
-            with open(os.path.join(SCHEMAS_DIR, schema_name)) as json_schema:
-                schema = json.load(json_schema, object_pairs_hook=OrderedDict)  # noqa
-                if "properties" in schema:
-                    properties = schema["properties"].keys()
-                else:
-                    properties = schema.keys()
+            properties = list(schema_properties(schema_name, with_inheritance=False))
 
-                properties = list(properties)
+            if "id" in properties:
+                assert properties.pop(0) == "id"
+                assert properties.pop(0) == "date"
 
-                if "id" in properties:
-                    assert properties[0] == "id"
-                    assert properties[1] == "date"
-                    properties.pop(1)
-                    properties.pop(0)
-
-                assert properties == sorted(properties)
+            assert properties == sorted(properties)
 
     def test_schema_enums_are_alphabetical(self):
         """
@@ -152,11 +146,6 @@ class TestSchemas(unittest.TestCase):
                     continue
                 # print(sorted([str(e) for e in enums[enum]]))
                 assert enums[enum] == sorted(enums[enum])
-
-    def test_property_count(self):
-        stats = fire_stats()
-        print(f"\n\n    ======== FIRE STATISTICS =======\n\n{stats}\n\n")
-        assert stats
 
     def test_required_fields(self):
         """
@@ -304,3 +293,11 @@ class TestBackwardsCompatibility:
 
         for o, n in zip(old, new):
             assert o == n
+
+
+class TestRunStats:
+
+    def test_property_count(self):
+        stats = fire_stats()
+        print(f"\n\n    ======== FIRE STATISTICS =======\n\n{stats}\n\n")
+        assert stats

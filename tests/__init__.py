@@ -23,7 +23,7 @@ EXAMPLE_FILES = [f for f in filenames if f.endswith(".json")]
 OLD_SCHEMAS_DIR = os.path.join(HOME, "v1-dev")
 
 
-def schema_properties(schema_name):
+def schema_properties(schema_name, with_inheritance=True):
     """
     Returns the properties for a schema
     """
@@ -32,6 +32,11 @@ def schema_properties(schema_name):
         properties = schema.keys()
     else:
         properties = schema["properties"].keys()
+
+    if with_inheritance and "allOf" in schema:
+        inherited_schemas = schema["allOf"]
+        for i in inherited_schemas:
+            properties = properties | schema_properties(i["$ref"].split("/")[-1])
 
     return properties
 

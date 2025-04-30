@@ -83,6 +83,11 @@
       "description": "The unique identifier for the behavioral curve used by the financial institution.",
       "type": "string"
     },
+    "behavioral_end_date": {
+      "description": "Behavioral end date (as opposed to contractual). YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
+      "type": "string",
+      "format": "date-time"
+    },
     "beneficiary_id": {
       "description": "The unique identifier for the beneficiary of the loan cashflows.",
       "type": "string"
@@ -175,8 +180,18 @@
       "description": "Identifier used for linking this product as part of a larger deal. e.g. Two components of a single loan or matching a securitisation with it's underlying loan.",
       "type": "string"
     },
+    "default_date": {
+      "description": "Date of default.",
+      "type": "string",
+      "format": "date-time"
+    },
     "deferred_fees": {
       "description": "Deferred fees are deferred payments subject to prepayment risk and not included in the balance.",
+      "type": "integer",
+      "monetary": true
+    },
+    "ead": {
+      "description": "The EAD field allows users to input monetary exposure-at-default values across the loan's lifecycle. Upon default, this field must be updated to reflect the final realised EAD value — that is, the actual exposure outstanding at the moment of default.",
       "type": "integer",
       "monetary": true
     },
@@ -218,6 +233,10 @@
       "description": "The currency of the credit facility if not the same as loan currency_code.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
     },
+    "facility_id": {
+      "description": "The code assigned by the financial institution to identify a facility.",
+      "type": "string"
+    },
     "fees": {
       "description": "The fees associated with the loan.",
       "type": "integer",
@@ -242,6 +261,10 @@
       "description": "The total value of accounting losses incurred by the Financial Institution due to fraudulent activities within the reporting segment.",
       "type": "integer",
       "monetary": true
+    },
+    "frr_id": {
+      "description": "The internal facility risk rating assigned to a facility based on its specific risk characteristics, including collateral and seniority.",
+      "type": "string"
     },
     "fvh_level": {
       "description": "Fair value hierarchy category according to IFRS 13.93 (b)",
@@ -320,6 +343,16 @@
     },
     "last_payment_date": {
       "description": "The final payment date for interest payments, often coincides with end_date.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_recovery_date": {
+      "description": "Date of most recent recovery in the reporting quarter.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_write_off_date": {
+      "description": "Date of Financial Institution's most recent Write Off in the reporting quarter.",
       "type": "string",
       "format": "date-time"
     },
@@ -419,6 +452,10 @@
         "other",
         "spv"
       ]
+    },
+    "parent_facility_id": {
+      "description": "The parent code assigned by the financial institution to identify a facility.",
+      "type": "string"
     },
     "pd_irb": {
       "description": "The probability of default as determined by internal rating-based methods. Percentage between 0 an 1.",
@@ -553,6 +590,11 @@
       "description": "The internal ID for the legal entity under which the account is being reported.",
       "type": "string"
     },
+    "resolution_date": {
+      "description": "Date of resolution of the defaulted facility.",
+      "type": "string",
+      "format": "date-time"
+    },
     "reversion_date": {
       "description": "The timestamp that indicates the end of an initial period where the 'rate' is applied to a loan. After this the interest is calculated using the 'reversion_rate'. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
@@ -578,14 +620,26 @@
       "description": "Is this loan secured or unsecured?",
       "type": "boolean"
     },
+    "seniority": {
+      "description": "The seniority of the security in the event of sale or bankruptcy of the issuer.",
+      "type": "string",
+      "enum": [
+        "mezzanine",
+        "pari_passu",
+        "senior_secured",
+        "senior_unsecured",
+        "subordinated_secured",
+        "subordinated_unsecured"
+      ]
+    },
     "servicing": {
       "description": "The method by which the loan shall be repaid",
       "type": "string",
       "enum": [
         "business",
-	"pension",
-	"rent",
-	"salary"
+        "pension",
+        "rent",
+        "salary"
       ]
     },
     "servicing_currency_code": {
