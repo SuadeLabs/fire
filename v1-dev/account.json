@@ -455,6 +455,7 @@
         "int_on_deriv_hedge",
         "int_on_derivative",
         "int_on_ecgd_lending",
+        "int_on_finance_leasing",
         "int_on_loan_and_adv",
         "int_on_money_mkt",
         "int_on_mortgage",

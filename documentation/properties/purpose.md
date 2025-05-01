@@ -89,6 +89,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── int_on_money_mkt
 │   └── int_on_sft
 │   └── int_unallocated
+│   └── int_on_finance_leasing
 ├── intra_group_fee
 ├── inv_in_subsidiary
 ├── mtg_insurance
@@ -415,6 +416,9 @@ Describes an account that holds the amount of interests receivable/payable as re
 
 ### int_unallocated
 Describes an account that holds accrued interest that is unallocated.  Required for BCAR RWA calculation and reporting.
+
+### int_on_finance_leasing
+Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from interest from finance leasing.
 
 ### int_on_sft
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **Securities Financing Transactions**.
