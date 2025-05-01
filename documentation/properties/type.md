@@ -253,7 +253,7 @@ A public sector entity is defined in the [FCA handbook](https://www.handbook.fca
 In the UK, public corporations are corporate bodies, sometimes with plc or Ltd in their title. Ownership by government
 may be total, as in the case of those corporations established by Act of Parliament, or through majority share-holdings.
 Public control is over broad aspects of policy; public corporations are free to manage their day to day operations independently.
-Trust ports in Northern Ireland and ports belonging to public corporations continue to be classed as ‘public corporations’, as do certain airport companies, which were set up by local authorities under the terms of the 1986 Airports Act.
+Trust ports in Northern Ireland and ports belonging to public corporations continue to be classed as 'public corporations', as do certain airport companies, which were set up by local authorities under the terms of the 1986 Airports Act.
 A list of these entities can be found at www.ons.gov.uk/economy/nationalaccounts/uksectoraccounts/datasets/publicsectorclassificationguide.
 
 ### social_security_fund
@@ -383,7 +383,7 @@ In other jurisdictions, money market funds are identifiable based on their inves
 
 From Directive 2009/65/EC:
 
-> Money market instruments comprise transferable instru­ments which are normally dealt in on the money market rather than on the regulated markets, for example treasury and local authority bills, certificates of deposit, commer­cial papers, medium-term notes and bankers’ acceptances.
+> Money market instruments comprise transferable instru­ments which are normally dealt in on the money market rather than on the regulated markets, for example treasury and local authority bills, certificates of deposit, commer­cial papers, medium-term notes and bankers' acceptances.
 
 ### local_firm (inactive)
 
@@ -456,7 +456,7 @@ Any other type to be classified as financial but not one of the other types witi
 
 A financial holding copmany is defined by the EU [here](http://eur-lex.europa.eu/eli/reg_del/2015/61/oj) Article 3:
 
-> 'personal investment company' (‘PIC’) means an undertaking or a trust whose owner or beneficial owner, respectively, is a natural person or a group of closely related natural persons, which was set up with the sole purpose of managing the wealth of the owners and which does not carry out any other commercial, industrial or professional activity. The purpose of the PIC may include other ancillary activities such as segregating the owners' assets from corporate assets, facilitating the transmission of assets within a family or preventing a split of the assets after the death of a member of the family, provided these are connected to the main purpose of managing the owners' wealth;
+> 'personal investment company' ('PIC') means an undertaking or a trust whose owner or beneficial owner, respectively, is a natural person or a group of closely related natural persons, which was set up with the sole purpose of managing the wealth of the owners and which does not carry out any other commercial, industrial or professional activity. The purpose of the PIC may include other ancillary activities such as segregating the owners' assets from corporate assets, facilitating the transmission of assets within a family or preventing a split of the assets after the death of a member of the family, provided these are connected to the main purpose of managing the owners' wealth;
 
 ### credit_union
 
@@ -540,7 +540,7 @@ A **new_auto** loan is a type of auto loan provided for the purchase of a brand 
 
 ### used_auto
 
-A **used_auto** loan is a type of auto loan provided specifically for the purchase of a pre-owned vehicle. It involves financing for vehicles that are not considered new (i.e. have had prior owners). The loan is subject to terms and conditions based on the vehicle’s age, condition, and market value.
+A **used_auto** loan is a type of auto loan provided specifically for the purchase of a pre-owned vehicle. It involves financing for vehicles that are not considered new (i.e. have had prior owners). The loan is subject to terms and conditions based on the vehicle's age, condition, and market value.
 
 ### personal
 
@@ -609,7 +609,7 @@ A **charge_card** is a type of credit card that requires the owner to pay the st
 
 ### corporate_card
 
-**corporate_card** is an employer-sponsored credit card for use by a company’s employee. The employee is liable to repay the balance in full and the employer is not ultimately responsible for the repayment of credit losses.
+**corporate_card** is an employer-sponsored credit card for use by a company's employee. The employee is liable to repay the balance in full and the employer is not ultimately responsible for the repayment of credit losses.
 
 ### credit_facility, multiccy_facility
 
@@ -621,7 +621,7 @@ From Annex I of the [CRR][crr], credit facilities are:
 
 From the CFPB's ["What you should know about home equity lines of credit"][cpfb-heloc-you-should-know]:
 
-> A home equity line of credit is a form of revolving credit in which your home serves as collateral. Because a home often is a consumer’s most valuable asset, many homeowners use home equity credit lines only for major items, such as education, home improvements, or medical bills, and choose not to use them for day-to-day expenses.
+> A home equity line of credit is a form of revolving credit in which your home serves as collateral. Because a home often is a consumer's most valuable asset, many homeowners use home equity credit lines only for major items, such as education, home improvements, or medical bills, and choose not to use them for day-to-day expenses.
 
 See also: [HELOC on Investopedia][investopedia-heloc] for a more practical reference
 
@@ -758,7 +758,7 @@ A **bond** is a type of loan whereby an investor lends money to an entity for a 
 
 From the [LCR][lcr] Introduction (8):
 
-> Covered bonds are debt instruments issued by credit institutions and secured by a cover pool of assets which typically consist of mortgage loans or public sector debt to which investors have a preferential claim in the event of default. Their secured nature and certain additional safety features, such as the requirement on the issuer to replace non-performing assets in the cover pool and maintain the cover pool at a value exceeding the par value of the bonds (‘asset coverage requirement’), have contributed to make covered bonds relatively low-risk, yield-bearing instruments with a key funding role in mortgage markets of most Member States. In certain Member States outstanding covered bond issuance exceeds the pool of outstanding government bonds. Certain covered bonds of credit quality step 1, in particular, exhibited an excellent liquidity performance during the period from 1 January 2008 to 30 June 2012 analysed by the EBA in its report. Nevertheless the EBA recommended treating these covered bonds as level 2A assets to align with BCBS standards. However, in the light of the considerations made above about their credit quality, liquidity performance and role in the funding markets of the Union, it is appropriate for these credit quality step 1 covered bonds to be treated as level 1 assets. In order to avoid excessive concentration risks and unlike other level 1 assets, the holdings of credit quality step 1 covered bonds in the liquidity buffer should be subject to a 70 % cap of the overall buffer, a minimum 7 % haircut and to the diversification requirement.
+> Covered bonds are debt instruments issued by credit institutions and secured by a cover pool of assets which typically consist of mortgage loans or public sector debt to which investors have a preferential claim in the event of default. Their secured nature and certain additional safety features, such as the requirement on the issuer to replace non-performing assets in the cover pool and maintain the cover pool at a value exceeding the par value of the bonds ('asset coverage requirement'), have contributed to make covered bonds relatively low-risk, yield-bearing instruments with a key funding role in mortgage markets of most Member States. In certain Member States outstanding covered bond issuance exceeds the pool of outstanding government bonds. Certain covered bonds of credit quality step 1, in particular, exhibited an excellent liquidity performance during the period from 1 January 2008 to 30 June 2012 analysed by the EBA in its report. Nevertheless the EBA recommended treating these covered bonds as level 2A assets to align with BCBS standards. However, in the light of the considerations made above about their credit quality, liquidity performance and role in the funding markets of the Union, it is appropriate for these credit quality step 1 covered bonds to be treated as level 1 assets. In order to avoid excessive concentration risks and unlike other level 1 assets, the holdings of credit quality step 1 covered bonds in the liquidity buffer should be subject to a 70 % cap of the overall buffer, a minimum 7 % haircut and to the diversification requirement.
 
 ### convertible_bond
 
@@ -933,7 +933,7 @@ As defined in [LCR Regulations Article 10 on Liquid Assets][lcr]:
 
 The [BofE](https://www.bankofengland.co.uk/statistics/notice/2024/statistical-notice-2024-08) defines this as:
 
-> The Levy will be applied on a proportional basis, which means that the Bank will allocate the policy costs to be recovered by the Levy in proportion to an eligible institution’s liability base. Eligible liabilities are defined in the Glossary. This will be a continuation of how the CRD scheme operated. The policy rationale for using the eligible liability base is the link between the size of a financial institution’s liabilities and its potential impact on the Bank’s financial stability and monetary policy functions.
+> The Levy will be applied on a proportional basis, which means that the Bank will allocate the policy costs to be recovered by the Levy in proportion to an eligible institution's liability base. Eligible liabilities are defined in the Glossary. This will be a continuation of how the CRD scheme operated. The policy rationale for using the eligible liability base is the link between the size of a financial institution's liabilities and its potential impact on the Bank's financial stability and monetary policy functions.
 
 ### guarantee
 
@@ -955,13 +955,13 @@ From the [EBA's][eba-nsfr-report] report on the NSFR, section 6.2.1 outlines wha
 From the [EBA's][eba-nsfr-report] report on the NSFR, section 6.2.2, a **letter of credit** is:
 
 > When goods are traded, the seller and the buyer need to agree on the process of how to pay for the goods. While the buyer may be reluctant to prepay for the traded goods, the seller may also be unwilling to ship the goods before payment is made. In this situation, a bank can intermediate between the trading partners by providing an import letter of credit (L/C) to the buyer of the goods, which guarantees payment to the seller.
-> A L/C is a contingent liability and payment is only made by the bank to the seller from funds in the buyer’s account when the documentation of shipping is presented.
+> A L/C is a contingent liability and payment is only made by the bank to the seller from funds in the buyer's account when the documentation of shipping is presented.
 
 ### acceptance
 
 From EU [Supervisory Reporting][sup-rep] part 2(5)(60)(b):
 
-> “Acceptances” are obligations by an institution to pay on maturity the face value of a bill of exchange, normally covering the sale of goods. Consequently, they are classified as “trade receivables” on the balance sheet
+> "Acceptances" are obligations by an institution to pay on maturity the face value of a bill of exchange, normally covering the sale of goods. Consequently, they are classified as "trade receivables" on the balance sheet
 
 ### financial_guarantee
 
@@ -1169,7 +1169,7 @@ Nostro and vostro (loro) accounts are used in the context of correspondent banki
 An account subject to the European Council [Directive on taxation of savings][eur-savings-tax]. A savings account essentially does not allow the customer to use funds in the account as a "medium of exchange" such as writing checks or for making ATM withdrawals. Hence, funds are typically not callable immediately and/or incur a withdrawal penalty such as loss of interest.
 In the US, [Regulation D][reg-d] uses the characteristics of the 'reservation of right' and 'convenient' withdrawals to describe savings accounts:
 
-> In order to classify an account as a 'savings deposit,' the institution must in its account agreement with the customer reserve the right at any time to require seven days’ advance written notice of an intended withdrawal. In practice, this right is never exercised, but the institution must nevertheless reserve that right in the account agreement. In addition, for an account to be
+> In order to classify an account as a 'savings deposit,' the institution must in its account agreement with the customer reserve the right at any time to require seven days' advance written notice of an intended withdrawal. In practice, this right is never exercised, but the institution must nevertheless reserve that right in the account agreement. In addition, for an account to be
 > classified as a 'savings deposit,' the depositor may make no more than six 'convenient' transfers or withdrawals per month from the account.
 
 ### savings_io
@@ -1185,7 +1185,7 @@ The [US Regulation D][reg-d] describes time deposits as having the following cha
 >
 > - must have a maturity of at least seven days from
 >   the date of deposit
-> - may require at least seven days’ prior written
+> - may require at least seven days' prior written
 >   notice of intent to withdraw funds
 > - must be subject to early withdrawal penalties if
 >   funds are withdrawn within six days of the date of
@@ -1212,7 +1212,7 @@ Subset of savings accounts for which the interest is paid in a separate account 
 
 Deposit or depository account is defined in the [Directive regarding the mandatory exchange of tax information][exch-tax-info] section 8:
 
-> The term “Depository Account” includes any commercial, checking, savings, time, or thrift account, or an account that is evidenced by a certificgitcheckoutate of deposit, thrift certificate, investment certificate, certificate of indebtedness, or other similar instrument maintained by a Financial Institution in the ordinary course of a banking or similar business. A Depository Account also includes an amount held by an insurance company pursuant to a guaranteed investment contract or similar agreement to pay or credit interest thereon.
+> The term "Depository Account" includes any commercial, checking, savings, time, or thrift account, or an account that is evidenced by a certificgitcheckoutate of deposit, thrift certificate, investment certificate, certificate of indebtedness, or other similar instrument maintained by a Financial Institution in the ordinary course of a banking or similar business. A Depository Account also includes an amount held by an insurance company pursuant to a guaranteed investment contract or similar agreement to pay or credit interest thereon.
 
 ### non_product
 
@@ -1429,7 +1429,7 @@ Immovable property whose occupation is primarily for residential use. Specific r
 
 From EBA [Closing Real Estate Data Gaps](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017Y0131%2801%29) Section 2 (1)(1)(38):
 
-‘Residential real estate’ (RRE) means any immovable property located in the domestic territory, available for dwelling purposes, acquired, built or renovated by a private household and that is not qualified as a CRE property. If a property has a mixed use, it should be considered as different properties (based for example on the surface areas dedicated to each use) whenever it is feasible to make such breakdown; otherwise, the property can be classified according to its dominant use.
+'Residential real estate' (RRE) means any immovable property located in the domestic territory, available for dwelling purposes, acquired, built or renovated by a private household and that is not qualified as a CRE property. If a property has a mixed use, it should be considered as different properties (based for example on the surface areas dedicated to each use) whenever it is feasible to make such breakdown; otherwise, the property can be classified according to its dominant use.
 
 ### res_property_hr
 
@@ -1453,7 +1453,7 @@ Immovable property whose occupation is primarily for non-residential use (e.g. u
 
 From EBA [Closing Real Estate Data Gaps](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017Y0131%2801%29) Section 2 (1)(1)(4):
 
-‘Commercial real estate’ (CRE) means any income-producing real estate, either existing or under development, and excludes:
+'Commercial real estate' (CRE) means any income-producing real estate, either existing or under development, and excludes:
 
     (a) social housing;
     (b) property owned by end-users;
@@ -1463,7 +1463,7 @@ If a property has a mixed CRE and RRE use, it should be considered as different 
 
 From [OSFI Financial Reporting Instructions: Data Definitions for BH](https://www.osfi-bsif.gc.ca/en/data-forms/reporting-returns/filing-financial-returns/financial-reporting-instructions?title=BH&field_industry_target_id=All&field_publication_type_target_id=All&field_return_target_id=All):
 
-Completed retail, office/commercial, industrial, mixed use (with less than 50%  residential), warehouse and special purpose properties with > 50% of the space leased/rented to tenants not related to the owner or affiliates.  Includes long term care facilities.
+Completed retail, office/commercial, industrial, mixed use (with less than 50% residential), warehouse and special purpose properties with > 50% of the space leased/rented to tenants not related to the owner or affiliates.  Includes long term care facilities.
 
 ### commercial_property_hr
 
@@ -1655,19 +1655,33 @@ Any other ISDA agreement.
 
 Any other agreement. If you use this a lot, get in touch, maybe we need more types!
 
+---
+
 # curve
 
-### behavioral
+The curve type represents different types of curves used for various financial calculations and risk assessments.
 
-A curve describing the behavior of a product or customer segment under certain (stress) conditions
+```bash
+├── behavioural
+├── rate
+├── risk_rating
+└── volatility
+```
+
+### behavioral
+A curve representing behavioral patterns or characteristics, typically used for modeling customer behavior or other non-financial metrics.
 
 ### rate
+A curve representing interest rates or other financial rates over time, commonly used for yield curves or forward rate curves.
 
-An interest rate curve
+### risk_rating
+A curve representing credit risk ratings or scores over time, used for tracking changes in creditworthiness or risk assessment metrics. This type of curve is particularly useful for monitoring credit risk evolution and can include both numerical scores and categorical ratings.
 
 ### volatility
+A curve representing volatility measures over time, typically used for options pricing and risk management.
 
-A volatility curve (smile)
+---
+
 
 # loan_cash_flow
 
@@ -1735,7 +1749,7 @@ From F6.1i of [MLAR](https://www.bankofengland.co.uk/-/media/boe/files/prudentia
 
 From the Annex of the PS22/19 FCA policy [statement](https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/policy-statement/2019/ps2219.pdf):
 
-> A “further advance” means a further loan to an existing borrower of
+> A "further advance" means a further loan to an existing borrower of
 > the firm and which is secured on the same property/collateral, whether under a new loan contract, or by variation to an existing loan
 > contract.
 
