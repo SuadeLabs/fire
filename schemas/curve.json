@@ -63,28 +63,7 @@
             ]
           }
         },
-        "required": ["reference", "value"],
-        "if": {
-          "properties": {
-            "type": {
-              "const": "risk_rating"
-            }
-          }
-        },
-        "then": {
-          "properties": {
-            "value": {
-              "type": "string"
-            }
-          }
-        },
-        "else": {
-          "properties": {
-            "value": {
-              "type": "number"
-            }
-          }
-        }
+        "required": ["reference", "value"]
       }
     },
     "version_id": {
@@ -93,5 +72,30 @@
     }
   },
   "required": ["id", "date", "values"],
-  "additionalProperties": true
+  "additionalProperties": true,
+  "if": {
+    "properties": { "type": { "const": "risk_rating" } }
+  },
+  "then": {
+    "properties": {
+      "values": {
+        "items": {
+          "properties": {
+            "value": { "type": "string" }
+          }
+        }
+      }
+    }
+  },
+  "else": {
+    "properties": {
+      "values": {
+        "items": {
+          "properties": {
+            "value": { "type": "number" }
+          }
+        }
+      }
+    }
+  }
 }

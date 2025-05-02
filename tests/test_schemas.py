@@ -3,7 +3,7 @@ import os
 import re
 import unittest
 import pytest
-from jsonschema import Draft4Validator
+from jsonschema import Draft7Validator
 from jsonschema.exceptions import ValidationError
 from . import (
     DOC_NAMES,
@@ -181,7 +181,7 @@ class TestExamples:
     with open(os.path.join(SCHEMAS_DIR, "example.json")) as ff:
         example_schema = json.load(ff)
 
-    validator = Draft4Validator(example_schema)
+    validator = Draft7Validator(example_schema)
 
     def test_validating_all_examples(self):
         """
@@ -283,6 +283,57 @@ class TestExamples:
         empty_data = {"title": "check", "comment": "check", "data": {"account": []}}
         with pytest.raises(ValidationError):
             self.validator.validate(empty_data)
+
+
+class TestCurveSchema(unittest.TestCase):
+    def setUp(self):
+        with open(os.path.join(SCHEMAS_DIR, "curve.json")) as ff:
+            self.curve_schema = json.load(ff)
+        self.validator = Draft7Validator(self.curve_schema)
+
+    def test_valid_risk_rating_curve(self):
+        """Test a valid risk rating curve with string values"""
+        valid_risk_rating_curve = {
+            "id": "risk_curve_1",
+            "date": "2024-03-20T00:00:00Z",
+            "type": "risk_rating",
+            "values": [
+                {"reference": "1m", "value": "AAA"},
+                {"reference": "3m", "value": "AA"},
+                {"reference": "6m", "value": "A"},
+            ],
+        }
+        self.validator.validate(instance=valid_risk_rating_curve)
+
+    def test_valid_rate_curve(self):
+        """Test a valid rate curve with number values"""
+        valid_rate_curve = {
+            "id": "rate_curve_1",
+            "date": "2024-03-20T00:00:00Z",
+            "type": "rate",
+            "values": [
+                {"reference": "1m", "value": 0.01},
+                {"reference": "3m", "value": 0.015},
+                {"reference": "6m", "value": 0.02},
+            ],
+        }
+        self.validator.validate(instance=valid_rate_curve)
+
+    def test_invalid_mixed_value_types(self):
+        """Test an invalid curve with mixed string and number values"""
+        invalid_mixed_curve = {
+            "id": "mixed_curve_1",
+            "date": "2024-03-20T00:00:00Z",
+            "type": "rate",
+            "values": [
+                {"reference": "1m", "value": 0.01},
+                {"reference": "3m", "value": "AAA"},
+                {"reference": "6m", "value": 0.02},
+            ],
+        }
+        with pytest.raises(ValidationError) as exc_info:
+            self.validator.validate(instance=invalid_mixed_curve)
+        assert "is not of type 'number'" in str(exc_info.value)
 
 
 class TestBackwardsCompatibility:
