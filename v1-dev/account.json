@@ -461,6 +461,7 @@
         "int_on_mortgage",
         "int_on_sft",
         "int_unallocated",
+        "intangible",
         "interest",
         "intra_group_fee",
         "inv_in_subsidiary",
