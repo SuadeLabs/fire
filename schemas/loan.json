@@ -515,6 +515,8 @@
         "object_finance",
         "object_finance_hq",
         "operational",
+        "operational_non_sym",
+        "operational_sym",
         "other",
         "project_finance",
         "project_hq_phase",

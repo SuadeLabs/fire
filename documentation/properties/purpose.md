@@ -185,16 +185,7 @@ Clearing and comparable services from the [CRR][crr] Article 422.4:
 > Clearing, custody or cash management or other comparable services referred to in points (a) and (d) of paragraph 3 only covers such services to the extent that they are rendered in the context of an established relationship on which the depositor has substantial dependency. They shall not merely consist in correspondent banking or prime brokerage services and the institution shall have evidence that the client is unable to withdraw amounts legally due over a 30 day horizon without compromising its operational functioning.
 
 ### operational
-Operational deposit from the [LCR][lcr] Article 27.6:
-> 6. In order to identify the deposits referred to in point (c) of paragraph 1, a credit institution shall consider that there is an established operational relationship with a non-financial customer, excluding term deposits, savings deposits and brokered deposits, where all of the following criteria are met:
-> (a) the remuneration of the account is priced at least 5 basis points below the prevailing rate for wholesale deposits with comparable characteristics, but need not be negative;
-> (b) the deposit is held in specifically designated accounts and priced without creating economic incentives for the depositor to maintain funds in the deposit in excess of what is needed for the operational relationship;
-> (c) material transactions are credited and debited on a frequent basis on the account considered;
-> (d) one of the following criteria is met:
-> (i) the relationship with the depositor has existed for at least 24 months;
-> (ii) the deposit is used for a minimum of 2 active services. These services may include direct or indirect access to national or international payment services, security trading or depository services.
-> Only that part of the deposit which is necessary to make use of the service of which the deposit is a by-product shall be treated as an operational deposit. The excess shall be treated as non-operational.
-Where the depositor is the reporting entity, the loan schema should be used. Where the depositor is the other party, the account schema should be used.
+*(see operational under account)*
 
 ### cash_management
 *Needs definition*
@@ -233,7 +224,7 @@ Excess operational deposits are defined as the part of the operational deposits 
 As opposed to short-term definition within **operational**, **custody** here refers to the long-term custody of financial assets such as those held for safekeeping by a custodian bank.
 
 ### defined_benefit
-A workplace pension based on your salary and how long you’ve worked for your employer. They’re sometimes called ‘final salary’ or ‘career average’ pension schemes. https://www.gov.uk/pension-types
+A workplace pension based on your salary and how long you've worked for your employer. They're sometimes called 'final salary' or 'career average' pension schemes. https://www.gov.uk/pension-types
 
 ### prime_brokerage
 Describes an account held for prime brokerage reasons but not including those contained above for operational reasons. These accounts are used for prime brokerage service transactions which are in essence investment activities including securities lending, leveraged trade executions and cash management, among other things.
@@ -550,7 +541,7 @@ Describes an account representing the profit or loss made on investments in subs
 
 ### manufactured_dividend
 Describes an account representing the manufactured dividends paid or received by the reporting entity.
-The Bank of England defines manufactured dividends as payments that can arise when an institution borrows a security from a security lender or client and that security pays a dividend while on loan. As the security lender customarily maintains the right to payments which accrue on the security, the borrower will ‘manufacture’ a dividend payment back to the lender.
+The Bank of England defines manufactured dividends as payments that can arise when an institution borrows a security from a security lender or client and that security pays a dividend while on loan. As the security lender customarily maintains the right to payments which accrue on the security, the borrower will 'manufacture' a dividend payment back to the lender.
 BoE Form PL definitions: https://www.bankofengland.co.uk/statistics/data-collection/osca/forms-definitions-validations
 
 ### revaluation
@@ -603,8 +594,8 @@ In the context of [CRR][crr] Article 329, a reference derivative would be the un
 
 ### client_execution
 Derivatives given this purpose value represent execution of orders on behalf of clients.
-‘Execution of orders on behalf of clients’ means acting to conclude agreements to buy or sell one or more financial instruments
-on behalf of clients and includes the conclusion of agreements to sell financial instruments issued by an investment firm or a credit institution at the moment of their issuance. [Article 4(1)(5) of Directive 2014/65/EU (MiFID].
+'Execution of orders on behalf of clients' means acting to conclude agreements to buy or sell one or more financial instruments
+on behalf of clients and includes the conclusion of agreements to sell financial instruments issued by an investment firm or a credit institution at the moment of their issuance. [Article 4(1)(5) of Directive 2014/65/EU (MiFID)].
 
 ### client_transmission
 [FCA Handbook: PERG 13.3 Investment Services and Activities](https://www.handbook.fca.org.uk/handbook/PERG/13/3.html)
@@ -667,6 +658,8 @@ refer to interest cashflows only, and do not include any principal flows
 ├── object_finance
 │   └── object_finance_hq
 ├── operational
+│   ├── operational_non_sym
+│   └── operational_sym
 ├── other
 ├── project_finance
 │   ├── project_pre_op
@@ -748,6 +741,12 @@ From [CRR][crr] Article 113(7):
 ### operational
 *(see operational under account)*
 
+### operational_sym
+Used to classify operational deposits where the credit institution is able to establish a corresponding symmetrical inflow rate.
+
+### operational_non_sym
+Used to classify operational deposits where the credit institution is not able to establish a corresponding symmetrical inflow rate.
+
 ### promotional
 As outlined in [LCR][lcr] Article 31(9), a **promotional loan**
 > shall be available only to persons who are not financial customers on a non-competitive, not for profit basis in order to promote public policy objectives of the Union or that Member State's central or regional government. It shall only be possible to draw on such facilities following the reasonably expected demand for a promotional loan and up to the amount of such demand provided there is a subsequent reporting on the use of the funds distributed;
@@ -783,12 +782,12 @@ loans to commercial fishermen.
 purchased from, merchants and dealers, either with or without recourse to the seller.
 (4) Loans to farmers that are guaranteed by the Farmers Home Administration (FmHA) or by
 the Small Business Administration (SBA) and that are extended, serviced, and collected
-by a party other than the FmHA or SBA. Include SBA “Guaranteed Interest Certificates,”
+by a party other than the FmHA or SBA. Include SBA "Guaranteed Interest Certificates,"
 which represent a beneficial interest in the entire SBA-guaranteed portion of an individual
 loan, provided the loan is for the financing of agricultural production or other lending to
-farmers. (Exclude SBA “Guaranteed Loan Pool Certificates,” which represent an
-undivided interest in a pool of SBA-guaranteed portions of loans. SBA “Guaranteed Loan
-Pool Certificates” should be reported as securities in Schedule RC-B, item 2, or, if held
+farmers. (Exclude SBA "Guaranteed Loan Pool Certificates," which represent an
+undivided interest in a pool of SBA-guaranteed portions of loans. SBA "Guaranteed Loan
+Pool Certificates" should be reported as securities in Schedule RC-B, item 2, or, if held
 for trading, in Schedule RC, item 5.)
 (5) Loans and advances to farmers for purchases of farm machinery, equipment, and
 implements.
@@ -835,7 +834,7 @@ Project Finance that are deemed high-quality will get preferential risk weight t
 
 > (3)	The revenues are availability-based19 or subject to a rate-of-return regulation or take-or-pay contract;
 
-> (4)	The project finance entity’s revenue depends on one main counterparty and this main counterparty shall be a central government, PSE or a corporate entity with a risk weight of 80% or lower;
+> (4)	The project finance entity's revenue depends on one main counterparty and this main counterparty shall be a central government, PSE or a corporate entity with a risk weight of 80% or lower;
 
 > (5)	The contractual provisions governing the exposure to the project finance entity provide for a high degree of protection for creditors in case of a default of the project finance entity;
 
