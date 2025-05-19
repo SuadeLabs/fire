@@ -1,7 +1,7 @@
 ---
 layout: property
 title: "type"
-schemas:  [account, agreement, collateral, customer, derivative, entity, guarantor, issuer, loan_cash_flow, loan_transaction, loan, security, curve]
+schemas:  [account, agreement, collateral, customer, derivative, entity, exchange_rate, guarantor, issuer, loan_cash_flow, loan_transaction, loan, security, curve]
 ---
 
 # type
@@ -1682,6 +1682,22 @@ A curve representing volatility measures over time, typically used for options p
 
 ---
 
+# exchange_rate
+
+The exchange rate type represents different types of exchange rates used for various financial calculations and reporting purposes.
+
+```bash
+├── pnl
+└── standard
+```
+
+### pnl
+An exchange rate specifically used for profit and loss (PnL) calculations. These rates are typically used when calculating unrealized gains/losses on positions denominated in different currencies.
+
+### standard
+A standard exchange rate used for general purposes such as transaction conversion, balance sheet translation, or other regular business operations. This is the default type when no specific type is specified.
+
+---
 
 # loan_cash_flow
 

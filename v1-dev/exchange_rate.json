@@ -29,6 +29,11 @@
       "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
       "type": "string"
     },
+    "type": {
+      "description": "The type of exchange rate. 'pnl' for PnL specific rates, 'standard' for regular exchange rates.",
+      "type": "string",
+      "enum": ["pnl", "standard"]
+    },
     "version_id": {
       "description": "The version identifier of the data such as the firm's internal batch identifier.",
       "type": "string"
