@@ -433,6 +433,7 @@
         "div_from_cis",
         "div_from_money_mkt",
         "dividend",
+        "def_tax",
         "donation",
         "employee",
         "employee_stock_option",

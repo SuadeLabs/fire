@@ -42,6 +42,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   │   └── div_from_money_mkt
 │   └── manufactured_dividend
 ├── donation
+├── def_tax
 ├── employee
 ├── fees
 │   ├── credit_card_fee
@@ -201,6 +202,9 @@ Where the depositor is the reporting entity, the loan schema should be used. Whe
 
 ### critical_service
 *Needs definition*
+
+### def_tax
+Definition
 
 ### div_from_cis
 *Needs definition*
