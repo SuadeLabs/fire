@@ -1,5 +1,5 @@
 {
-  "title": "risk_rating_mapping",
+  "title": "risk_rating",
   "comment": "Example showing a customer with associated risk rating system and curve",
   "data": {
     "customer": [
