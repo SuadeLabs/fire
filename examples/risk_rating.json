@@ -1,0 +1,75 @@
+{
+  "title": "risk_rating_mapping",
+  "comment": "Example showing a customer with associated risk rating system and curve",
+  "data": {
+    "customer": [
+      {
+        "id": "CUST_001",
+        "date": "2025-01-01T00:00:00Z",
+        "name": "Example Person",
+        "birr_id": "RR_001",
+        "birr_curve_id": "CURVE_001"
+      }
+    ],
+    "risk_rating": [
+      {
+        "id": "RR_001",
+        "date": "2023-01-01T00:00:00Z",
+        "name": "AAA",
+        "risk_rating_system_id": "RRS_001",
+        "pd_min": 0.0,
+        "pd_max": 0.001
+      },
+      {
+        "id": "RR_002",
+        "date": "2025-01-01T00:00:00Z",
+        "name": "AA",
+        "risk_rating_system_id": "RRS_001",
+        "pd_min": 0.001,
+        "pd_max": 0.005
+      },
+      {
+        "id": "RR_003",
+        "date": "2025-01-01T00:00:00Z",
+        "name": "A",
+        "risk_rating_system_id": "RRS_001",
+        "pd_min": 0.005,
+        "pd_max": 0.01
+      },
+      {
+        "id": "RR_004",
+        "date": "2025-01-01T00:00:00Z",
+        "name": "BBB",
+        "risk_rating_system_id": "RRS_001",
+        "pd_min": 0.01,
+        "pd_max": 0.02
+      }
+    ],
+    "curve": [
+      {
+        "id": "CURVE_001",
+        "date": "2025-01-01T00:00:00Z",
+        "name": "Example Person Risk Rating History",
+        "type": "risk_rating",
+        "values": [
+          {
+            "reference": "1m",
+            "value": "RR_001"
+          },
+          {
+            "reference": "3m",
+            "value": "RR_002"
+          },
+          {
+            "reference": "6m",
+            "value": "RR_002"
+          },
+          {
+            "reference": "12m",
+            "value": "RR_001"
+          }
+        ]
+      }
+    ]
+  }
+} 
