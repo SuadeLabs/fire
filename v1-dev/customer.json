@@ -18,13 +18,12 @@
     "bankruptcy_type": {
       "description": "The bankruptcy chapter of the borrower.",
       "type": "string",
-      "$ref": "https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M",
       "enum": [
-        "chapter_7",
-        "chapter_9",
         "chapter_11",
         "chapter_12",
         "chapter_13",
+        "chapter_7",
+        "chapter_9",
         "other"
       ]
     },
@@ -59,7 +58,6 @@
     "pd_irb_ec": {
       "description": "The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in economic capital calculations.",
       "type": "number",
-      "$ref": "https://www.osfi-bsif.gc.ca/en/data-forms/reporting-returns/filing-financial-returns/financial-reporting-instructions/irb-credit-data-wholesale-transaction-bf#:~:text=BF%C2%A0%2D%20Data%20definitions%20(XLSX%2C%20423.97%C2%A0KB)",
       "minimum": 0.0,
       "maximum": 1.0
     },

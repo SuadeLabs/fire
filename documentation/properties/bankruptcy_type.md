@@ -32,7 +32,7 @@ Use this when the customer is understood to be bankrupt but where the exact bank
 
 ---
 
-[chapter_7]: https://www.uscourts.gov/court-program.s/bankruptcy/bankruptcy-basics/chapter-7-bankruptcy-basics
+[chapter_7]: https://www.uscourts.gov/court-programs/bankruptcy/bankruptcy-basics/chapter-7-bankruptcy-basics
 [chapter_9]: https://www.uscourts.gov/court-programs/bankruptcy/bankruptcy-basics/chapter-9-bankruptcy-basics
 [chapter_11]: https://www.uscourts.gov/court-programs/bankruptcy/bankruptcy-basics/chapter-11-bankruptcy-basics
 [chapter_12]: https://www.uscourts.gov/court-programs/bankruptcy/bankruptcy-basics/chapter-12-bankruptcy-basics
