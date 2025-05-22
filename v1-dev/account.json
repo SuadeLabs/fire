@@ -135,6 +135,11 @@
       "type": "integer",
       "monetary": true
     },
+    "ead_irb_ec": {
+      "description": "The expected gross dollar exposure for each facility upon a borrower's default as determined by internal ratings-based approach. This value is used in economic capital calculations.",
+      "type": "integer",
+      "monetary": true
+    },
     "economic_loss": {
       "description": "The definition of loss, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss",
       "monetary": true,
@@ -310,7 +315,13 @@
       "maximum": 1.0
     },
     "lgd_irb": {
-      "description": "The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.",
+      "description": "The loss given default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "lgd_irb_ec": {
+      "description": "The loss given default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in economic capital calculations.",
       "type": "number",
       "minimum": 0.0,
       "maximum": 1.0
@@ -373,7 +384,13 @@
       "type": "string"
     },
     "pd_irb": {
-      "description": "The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.",
+      "description": "The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "pd_irb_ec": {
+      "description": "The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in economic capital calculations.",
       "type": "number",
       "minimum": 0.0,
       "maximum": 1.0
@@ -552,6 +569,11 @@
     },
     "resolution_date": {
       "description": "Date of resolution of the defaulted facility.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "review_date": {
+      "description": "The currently scheduled review date for Counterparty exposure. This date should be set in the future. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
       "format": "date-time"
     },
