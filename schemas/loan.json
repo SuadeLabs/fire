@@ -459,7 +459,9 @@
     },
     "pd_irb": {
       "description": "The probability of default as determined by internal rating-based methods. Percentage between 0 an 1.",
-      "type": "number"
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
     },
     "pd_retail_irb": {
       "description": "The retail probability of default as determined by internal rating-based methods. Percentage between 0 an 1.",
