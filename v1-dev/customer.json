@@ -15,18 +15,6 @@
       "minimum": 0,
       "monetary": true
     },
-    "bankruptcy_type": {
-      "description": "The bankruptcy chapter of the borrower.",
-      "type": "string",
-      "enum": [
-        "chapter_11",
-        "chapter_12",
-        "chapter_13",
-        "chapter_7",
-        "chapter_9",
-        "other"
-      ]
-    },
     "clearing_threshold": {
       "description": "Status of the clearing threshold as defined in EMIR",
       "type": "string",
