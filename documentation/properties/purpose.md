@@ -981,7 +981,7 @@ Use this enum to refer to funds reserved for the purpose of implementing, from a
 
 # exchange_rate
 
-The exchange rate type represents different types of exchange rates used for various financial calculations and reporting purposes.
+The exchange rate purpose represents different types of exchange rates used for various financial calculations and reporting purposes.
 
 ```bash
 ├── average_rate
@@ -989,10 +989,10 @@ The exchange rate type represents different types of exchange rates used for var
 ```
 
 ### average_rate
-An exchange rate that represents the user-defined average over a specific period, used for P&L reporting.
+An exchange rate that represents the user-defined average over a specific period, used for profit and loss (P&L) reporting.
 
 ### closing_rate
-The point-in-time exchange rate based on the reporting date, used for balance sheet items.
+The point-in-time exchange rate based on the reporting date is used for balance sheet items.
 
 ---
 
