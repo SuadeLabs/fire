@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "pd_irb_ec"
-schemas:    [account, customer, loan]
+schemas:    [account, customer, guarantor, loan]
 ---
 
 # pd_irb_ec
