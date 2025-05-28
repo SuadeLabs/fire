@@ -43,6 +43,12 @@
       "type": "integer",
       "monetary": true
     },
+    "pd_irb_ec": {
+      "description": "The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in economic capital calculations.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
     "product_count": {
       "description": "The number of active products/trades this customer has with the firm.",
       "type": "integer",
