@@ -17,6 +17,14 @@
       "description": "The base currency in accordance with ISO 4217 standards.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
     },
+    "purpose": {
+      "description": "Defines whether the exchange rate represents a user-defined average over a specific period (for P&L) or a point-in-time rate (for balance sheet).",
+      "type": "string",
+      "enum": [
+        "average_rate",
+        "closing_rate"
+      ]
+    },
     "quote": {
       "description": "The amount of the quote currency received in exchange for 1 unit of the base currency.",
       "type": "number"
@@ -34,6 +42,12 @@
       "type": "string"
     }
   },
-  "required": ["id", "date", "base_currency_code", "quote", "quote_currency_code"],
+  "required": [
+    "id",
+    "date",
+    "base_currency_code",
+    "quote",
+    "quote_currency_code"
+  ],
   "additionalProperties": true
 }

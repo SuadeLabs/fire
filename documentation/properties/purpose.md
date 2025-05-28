@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"purpose"
-schemas:	[account, loan, security, derivative, derivative_cash_flow]
+schemas:	[account, loan, security, derivative, derivative_cash_flow, exchange_rate]
 ---
 
 # purpose
@@ -976,6 +976,23 @@ Use this enum to refer to funds reserved for the purpose of implementing, from a
 [Bank of England OCIR][ocir]
 
 [ocir]: https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/supervisory-statement/2021/ss421-may-2021.pdf
+
+---
+
+# exchange_rate
+
+The exchange rate type represents different types of exchange rates used for various financial calculations and reporting purposes.
+
+```bash
+├── average_rate
+└── closing_rate
+```
+
+### average_rate
+An exchange rate that represents the user-defined average over a specific period, used for P&L reporting.
+
+### closing_rate
+The point-in-time exchange rate based on the reporting date, used for balance sheet items.
 
 ---
 
