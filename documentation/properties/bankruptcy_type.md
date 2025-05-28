@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"bankruptcy_type"
-schemas:	[customer]
+schemas:	[customer, issuer, guarantor]
 ---
 
 # bankruptcy_type

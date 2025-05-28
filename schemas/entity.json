@@ -17,6 +17,18 @@
       "description": "City, town or village.",
       "type": "string"
     },
+    "bankruptcy_type": {
+      "description": "The bankruptcy chapter of the borrower.",
+      "type": "string",
+      "enum": [
+        "chapter_11",
+        "chapter_12",
+        "chapter_13",
+        "chapter_7",
+        "chapter_9",
+        "other"
+      ]
+    },
     "birr_curve_id": {
       "description": "The ID of the curve containing historical Borrower Internal Risk Ratings (BIRR) for this entity. The curve must be of type 'risk_rating'.",
       "type": "string"
