@@ -1,9 +1,7 @@
 from string import digits
 
 import iso3166
-import json
 import pytest
-from collections import Counter
 from jsonschema import Draft7Validator
 from jsonschema.exceptions import ValidationError
 from . import (
@@ -18,7 +16,9 @@ from . import (
 )
 import os
 
-_ABSTRACT_SCHEMAS = frozenset(("batch.json", "common.json", "entity.json", "example.json"))
+_ABSTRACT_SCHEMAS = frozenset(
+    ("batch.json", "common.json", "entity.json", "example.json")
+)
 _VALID_COUNTRY_CODES = frozenset((c[1] for c in iso3166.countries))
 
 
@@ -174,6 +174,7 @@ def test_extension_enums_documented(schema_name):
 
     eg. ### enum_value
     """
+
     def error_msg(schema_name, value, enum):
         return (
             f"Could not find a level-3 header (###) entry for "
@@ -188,7 +189,9 @@ def test_extension_enums_documented(schema_name):
     for prop_name, prop_spec in properties.items():
         if "enum" in prop_spec:
             # Get the documentation file for this property
-            doc_file = os.path.join(EXTENSIONS_DIR, "documentation", "properties", f"{prop_name}.md")
+            doc_file = os.path.join(
+                EXTENSIONS_DIR, "documentation", "properties", f"{prop_name}.md"
+            )
 
             if not os.path.exists(doc_file):
                 raise FileNotFoundError(
