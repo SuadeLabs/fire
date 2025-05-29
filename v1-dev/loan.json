@@ -26,6 +26,17 @@
     "accounting_treatment": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/accounting_treatment"
     },
+    "accrual_status": {
+      "description": "The accrual status of the loan or line of credit.",
+      "type": "string",
+      "enum": [
+        "accrual",
+        "non_accrual",
+        "securitised",
+        "serviced_for_others"
+        
+      ]
+    },
     "accrued_interest_12m": {
       "description": "The cumulative accrued interest over the past 12 months. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
@@ -468,6 +479,21 @@
       "description": "The parent code assigned by the financial institution to identify a facility.",
       "type": "string"
     },
+    "participation_int": {
+      "description": "For participated or syndicated credit facilities that have closed and settled, the percentage of the total loan commitment held by the reporting entity. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "number"
+    },
+    "participation_type": {
+      "description": "For participated or syndicated credit facilities that have closed and settled, indicates the type of participation in the loan. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "string",
+      "enum": [
+        "agent_non_snc",
+        "agent_snc",
+        "none",
+        "participant_non_snc",
+        "participant_snc"
+      ]
+    },
     "pd_irb": {
       "description": "The probability of default as determined by internal rating-based methods. Percentage between 0 an 1.",
       "type": "number",
@@ -611,6 +637,15 @@
       "description": "The internal ID for the legal entity under which the account is being reported.",
       "type": "string"
     },
+    "repurchase_status": {
+      "description": "The current status of the repurchase of the loan.",
+      "type": "string",
+      "enum": [
+        "complete_no_repurchase",
+        "complete_repurchased",
+        "in_process"
+      ]
+    },
     "resolution_date": {
       "description": "Date of resolution of the defaulted facility.",
       "type": "string",
@@ -657,6 +692,10 @@
         "subordinated_secured",
         "subordinated_unsecured"
       ]
+    },
+    "servicer_id": {
+      "description": "This is the unique id to identify the servicer of a loan.",
+      "type": "string"
     },
     "servicing": {
       "description": "The method by which the loan shall be repaid",

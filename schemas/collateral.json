@@ -26,6 +26,14 @@
       "type": "integer",
       "minimum": 0
     },
+    "city": {
+      "description": "The city in which the property is located. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "type": "string"
+    },
+    "country_code": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/country_code",
+      "description": "The country of collateral. Two-letter country code as defined according to ISO 3166-1."
+    },
     "currency_code": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
     },
@@ -65,6 +73,10 @@
       "type": "integer",
       "monetary": true
     },
+    "postal_code": {
+      "description": "The zip code in which the property is located. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "type": "string"
+    },
     "regulatory_book": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/regulatory_book"
     },
@@ -80,6 +92,10 @@
       "description": "The start date for recognition of the collateral",
       "type": "string",
       "format": "date-time"
+    },
+    "street_address": {
+      "description": "The street address associated with the property. Must include street direction prefixes, direction suffixes, and unit number for condos and co-ops. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "type": "string"
     },
     "type": {
       "description": "The collateral type defines the form of the collateral provided",

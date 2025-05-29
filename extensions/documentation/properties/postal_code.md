@@ -8,6 +8,8 @@ schemas:    [customer, issuer, guarantor]
 
 ---
 
-This is the postal code for the address of the entity. This should be the postal code of the place where the entity is registered within the relevant jurisdiction .
+The zip code in which the obligor is domiciled.
+
+For additional details refer to: https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q
 
 ---

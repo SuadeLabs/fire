@@ -10,6 +10,11 @@
       "jurisdictions": [
         "US"
       ]
+    },
+    "tin": {
+      "type": "string",
+      "description": "The Taxpayer Identification Number (TIN) assigned to the guarantor by the U.S. Internal Revenue Service (IRS) in the administration of tax laws. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": ["US"]
     }
   },
   "allOf": [

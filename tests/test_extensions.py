@@ -1,7 +1,9 @@
 from string import digits
 
 import iso3166
+import json
 import pytest
+from collections import Counter
 from jsonschema import Draft7Validator
 from jsonschema.exceptions import ValidationError
 from . import (
@@ -14,8 +16,9 @@ from . import (
     load_jsons,
     schema_properties,
 )
+import os
 
-_ABSTRACT_SCHEMAS = frozenset(("common.json", "entity.json"))
+_ABSTRACT_SCHEMAS = frozenset(("batch.json", "common.json", "entity.json", "example.json"))
 _VALID_COUNTRY_CODES = frozenset((c[1] for c in iso3166.countries))
 
 
@@ -161,3 +164,43 @@ def test_properties_and_documentation_align():
         assert (
             name in EXTENSION_DOC_NAMES
         ), "every extension property should have documentation"
+
+
+@pytest.mark.parametrize("schema_name", EXTENSION_FILES)
+def test_extension_enums_documented(schema_name):
+    """
+    Each enum value in extension schemas should have a corresponding level 3 header (###) in the
+    documentation markdown file.
+
+    eg. ### enum_value
+    """
+    def error_msg(schema_name, value, enum):
+        return (
+            f"Could not find a level-3 header (###) entry for "
+            f"{schema_name}:{value} in {enum}.md"
+        )
+
+    # Load the schema and get its properties
+    schema = fire_load(schema_name, schemas_dir=EXTENSIONS_DIR)
+    properties = schema.get("properties", {})
+
+    # Check each property for enums
+    for prop_name, prop_spec in properties.items():
+        if "enum" in prop_spec:
+            # Get the documentation file for this property
+            doc_file = os.path.join(EXTENSIONS_DIR, "documentation", "properties", f"{prop_name}.md")
+
+            if not os.path.exists(doc_file):
+                raise FileNotFoundError(
+                    f"Could not find documentation for: {schema_name} :: {prop_name}"
+                )
+
+            # Read the documentation file
+            with open(doc_file) as f:
+                doc_content = f.read()
+
+            # Check each enum value has a level 3 header
+            for enum_value in prop_spec["enum"]:
+                assert f"### {enum_value}" in doc_content, error_msg(
+                    schema_name, enum_value, prop_name
+                )

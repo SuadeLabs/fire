@@ -290,11 +290,11 @@ class TestExamples:
             self.validator.validate(empty_data)
 
 
-class TestCurveSchema(unittest.TestCase):
-    def setUp(self):
-        with open(os.path.join(SCHEMAS_DIR, "curve.json")) as ff:
-            self.curve_schema = json.load(ff)
-        self.validator = Draft7Validator(self.curve_schema)
+class TestCurveSchema:
+    with open(os.path.join(SCHEMAS_DIR, "curve.json")) as ff:
+        curve_schema = json.load(ff)
+
+    validator = Draft7Validator(curve_schema)
 
     def test_valid_risk_rating_curve(self):
         """Test a valid risk rating curve with string values"""

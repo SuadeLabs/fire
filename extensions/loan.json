@@ -3,7 +3,735 @@
   "title": "Loan Extended Schema",
   "description": "Extended loan schema containing all jurisdiction-specific extensions.",
   "type": "object",
-  "properties": {},
+  "properties": {
+    "accrued_interest_after_mod": {
+      "type": "integer",
+      "description": "The accrued_interest after the loan has been modified. A loan arrears arrangement or modification refers to a situation where a lender and borrower agree to adjust the terms of an existing loan due to the borrower's difficulty in making scheduled repayments. This typically occurs after the borrower falls behind, enters arrears, or anticipates they soon will.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "anchor_tenant": {
+      "type": "string",
+      "description": "The name of anchor tenant(s). Anchor tenant is defined as any tenant named in a co-tenancy clause or whose rental income accounts for the majority of the gross rental income at the property level. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "arrears_arrange_comp": {
+      "type": "string",
+      "description": "The arrears_arrangement that has been completed for any loan. Successful completion is defined as the closing of loss mitigation activities where the borrower has no remaining delinquent obligations to the servicer.",
+      "enum": [
+        "formal",
+        "interest_grace_period",
+        "modified_tnc",
+        "none",
+        "possessed",
+        "refinancing",
+        "temporary"
+      ],
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "arrears_arrange_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date on which the loan terms were most recently modified. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "balance_after_mod": {
+      "type": "integer",
+      "description": "The remaining balance after the loan has been modified. A loan arrears arrangement or modification refers to a situation where a lender and borrower agree to adjust the terms of an existing loan due to the borrower's difficulty in making scheduled repayments. This typically occurs after the borrower falls behind, enters arrears, or anticipates they soon will.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "business_line_desc": {
+      "type": "string",
+      "description": "Free text describing the internal line of business. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "business_line_name": {
+      "type": "string",
+      "description": "Free text indicating the internal line of business. For example: Private Banking, Corporate Banking, Asset- Based Lending, etc. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "credit_class": {
+      "type": "string",
+      "description": "The credit class designation as defined by the servicer. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "enum": [
+        "alt_a",
+        "goverment_owned",
+        "non_prime",
+        "prime"
+      ],
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "credit_enhance_amt": {
+      "type": "integer",
+      "monetary": true,
+      "description": "The total amount of credit enhancement received that offset the loss. This could come from mortgage insurance proceeds, pool arrangements in deals, or other features of securities structures. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "delinquent_amount_cap": {
+      "type": "integer",
+      "monetary": true,
+      "description": "The total amount in dollars of the delinquent amount that was capitalized and added to the principal balance through loss mitigation. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "disposition_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The disposition date for any credit facility that was disposed during the period. Also see [disposition_type]. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "disposition_schedule_shift": {
+      "type": "string",
+      "description": "The Y?14 report, schedule, and subschedule to which the credit facility shifted. The reported format should follow these examples: If the credit facility transferred to FR Y?14Q Schedule H.2 Commercial Real Estate, reportQ.H.2. If the credit facility transferred to FR Y?14M Schedule D.1 Domestic Credit Card Data Collection Data Dictionary, reportM.D.1. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "disposition_type": {
+      "type": "string",
+      "description": "The disposition method for any credit facility that was disposed during the period. Also see [disposition_date]. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ],
+      "enum": [
+        "payoff",
+        "involuntary_payoff",
+        "liquidation",
+        "sold",
+        "fully_participated",
+        "fully_syndicated"
+      ]
+    },
+    "escrow_amount": {
+      "type": "integer",
+      "monetary": true,
+      "description": "The scheduled escrow amount (including taxes and insurance) due from the borrower scheduled for the reporting month. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "final_draw_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date until which the borrower has the ability to make withdrawals against the credit line. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "first_principal_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date on which the first principal payment was/will be made based on the original loan terms. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "first_write_off_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date of the first write off or charge-off event for the account. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "foreclosure_ref_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date that the mortgage was referred to an attorney for the purpose of initiating foreclosure proceedings. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "foreclosure_sale_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date that the foreclosure sale occurs on the subject property. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "foreclosure_status": {
+      "type": "string",
+      "description": "Indication of the status of a foreclosure. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "enum": [
+        "none",
+        "in_foreclosure_presale",
+        "post_sale_redemption",
+        "reo"
+      ],
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "income_docs": {
+      "type": "string",
+      "description": "How the borrower's income levels were documented at the time of origination. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "int_reset_freq": {
+      "type": "string",
+      "description": "The adjustable rate periodic interest reset period. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "int_tax_status": {
+      "type": "string",
+      "description": "The tax status of interest income for Federal or State Income Tax purposes. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "enum": [
+        "taxable",
+        "tax_exempt"
+      ],
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "interest_reserve": {
+      "type": "integer",
+      "monetary": true,
+      "description": "The amount of remaining Interest rate reserves. Interest reserves would represent only those funds remaining from the original construction commitment to be used to pay interest during the construction and lease-up phases. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "inv_term_amount": {
+      "type": "integer",
+      "description": "The total debt at the time of any involuntary termination. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "leveraged_loan": {
+      "type": "boolean",
+      "description": "The credit facility is defined as a leveraged loan per criteria in the reporting entity's internal risk management framework developed pursuant to SR 13-3 (Interagency Guidance on Leveraged Lending).",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "lifetime_rate_cap": {
+      "type": "number",
+      "description": "The lifetime interest rate cap for adjustable rate loans. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "lifetime_rate_floor": {
+      "type": "number",
+      "description": "The lifetime interest rate floor for adjustable rate loans. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "liq_method": {
+      "type": "string",
+      "description": "The liquidation method for any loan. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "enum": [
+        "involuntary_liquidation",
+        "not_paid_in_full",
+        "servicing_transfer",
+        "voluntary_payoff"
+      ],
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "locked_amt_amort": {
+      "type": "integer",
+      "monetary": true,
+      "description": "The amount of credit line that has been locked and is now amortising.The amount of the outstanding principal balance that has been 'locked' and is now amortising under independent loan terms. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "locked_amt_io": {
+      "type": "integer",
+      "monetary": true,
+      "description": "The amount of the outstanding principal balance that has been locked as an interest only loan operating under independent terms. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "loss_mitig_amt": {
+      "type": "integer",
+      "description": "The total amount that was deferred through loss mitigation. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "loss_mitig_status": {
+      "type": "string",
+      "description": "Identifies whether a loan is being actively handled by the servicer's loss mitigation department. Refers to all loans where the servicer has initiated loss mitigation procedures whether or not a particular course of action or workout type has been executed. Active loss mitigation refers to instances where the loan is currently in loss mitigation, and the servicer is actively pursuing loss mitigation. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "enum": [
+        "active_non_performing",
+        "active_performing",
+        "broken",
+        "none"
+      ],
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "mod_contribution": {
+      "type": "integer",
+      "monetary": true,
+      "description": "The amount of money a borrower will contribute toward housing expenses (mortgage payment, real estate taxes, homeowner's insurance, association dues, etc.) after modification. A loan arrears arrangement or modification refers to a situation where a lender and borrower agree to adjust the terms of an existing loan due to the borrower's difficulty in making scheduled repayments. This typically occurs after the borrower falls behind, enters arrears, or anticipates they soon will. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "mod_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date on which any modifications were made to renew or change contract terms of the loan and the borrower meets BHC or IHC or SLHC current credit standards (not under an arrears arrangment). Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "mod_monthly_payments": {
+      "type": "integer",
+      "monetary": true,
+      "description": "A borrower's total monthly debt payments (including proposed housing expenses) after modification. A loan arrears arrangement or modification refers to a situation where a lender and borrower agree to adjust the terms of an existing loan due to the borrower's difficulty in making scheduled repayments. This typically occurs after the borrower falls behind, enters arrears, or anticipates they soon will. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "mod_ref_income_amt": {
+      "type": "integer",
+      "monetary": true,
+      "description": "The borrower's monthly income after modification. A loan arrears arrangement or modification refers to a situation where a lender and borrower agree to adjust the terms of an existing loan due to the borrower's difficulty in making scheduled repayments. This typically occurs after the borrower falls behind, enters arrears, or anticipates they soon will. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "month_payment": {
+      "type": "integer",
+      "monetary": true,
+      "description": "The scheduled principal and interest due from the borrower in the reporting month. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "neg_amort_limit": {
+      "type": "integer",
+      "monetary": true,
+      "description": "Identifies loans that as part of their contract, have or potentially can have a feature that allows the borrower to pay an amount that is less than the interest accruing on the mortgage, resulting in negative amortisation. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "net_loss": {
+      "type": "integer",
+      "monetary": true,
+      "description": "Total loss net of all recoveries. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "non_accrual_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date the credit facility was placed on non-accrual. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "noncredit_amt": {
+      "type": "integer",
+      "monetary": true,
+      "description": "For facilities that were purchased as a credit-deteriorated (PCD) asset, the noncredit discount (or premium) resulting from its acquisition (ASC 326-20-30-13).",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "occupancy": {
+      "type": "string",
+      "description": "Information related to the occupancy of the property that is available on the mortgage at the time of origination. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "enum": [
+        "primary",
+        "second_home",
+        "investment"
+      ],
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "occupancy_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date on which the most recent occupancy was determined by the borrower. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_base_rate": {
+      "description": "The base rate at origination.",
+      "type": "string",
+      "enum": [
+        "FDTR",
+        "UKBRBASE",
+        "ZERO"
+      ],
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_charge": {
+      "type": "integer",
+      "description": "The charge at origination.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_credit_score_vendor": {
+      "type": "string",
+      "description": "The vendor of the commercially available credit bureau score at origination. Also see [orig_credit_score] and [orig_credit_score_version]. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_credit_score_version": {
+      "type": "string",
+      "description": "The version of the commercially available credit bureau score at origination. Also see [orig_credit_score] and [orig_credit_score_vendor]. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_customer_id": {
+      "type": "string",
+      "description": "The customer_id at origination.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_end_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The end_date at origination.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_facility_id": {
+      "type": "string",
+      "description": "The facility_id at origination.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_id": {
+      "type": "string",
+      "description": "The id at origination.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_imp_status": {
+      "type": "string",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/impairment_status",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_income": {
+      "type": "integer",
+      "monetary": true,
+      "description": "The borrower's monthly income at origination. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_int_reset_freq": {
+      "type": "string",
+      "description": "The adjustable rate periodic interest reset period at origination. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_monthly_payments": {
+      "type": "integer",
+      "monetary": true,
+      "description": "A borrower's total monthly debt payments (including proposed housing expenses) at origination. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_notional_amount": {
+      "type": "integer",
+      "monetary": true,
+      "description": "The notional_amount at origination.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_payment": {
+      "type": "integer",
+      "monetary": true,
+      "description": "The scheduled principal and interest amount at the origination of the loan. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_penalty_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The penalty_date at origination.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_rate": {
+      "type": "number",
+      "description": "The rate at origination.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_rate_type": {
+      "type": "string",
+      "description": "The rate_type at origination.",
+      "enum": [
+        "combined",
+        "fixed",
+        "tracker",
+        "variable"
+      ],
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_ref_income": {
+      "type": "integer",
+      "monetary": true,
+      "description": "The amount of money a borrower will contribute toward housing expenses (mortgage payment, real estate taxes, homeowner's insurance, association dues, etc.) at origination. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_repayment_type": {
+      "type": "string",
+      "description": "The repayment_type at origination.",
+      "enum": [
+        "combined",
+        "interest_only",
+        "other",
+        "repayment"
+      ],
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_reversion_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The reversion_date at origination.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_source": {
+      "type": "string",
+      "description": "The source by which the servicer originated or otherwise acquired the loan. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_spread": {
+      "type": "number",
+      "description": "The spread at origination. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_type": {
+      "description": "The type at origination.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/loan.json#type",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_valuation_type": {
+      "description": "The value type at origination.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/extensions/collateral.json#/valuation_type",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "pay_type_end_draw": {
+      "type": "string",
+      "description": "How borrowers are required to repay any principal outstanding at the end of the allowable draw period. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "enum": [
+        "amortising",
+        "balloon",
+        "interest_only",
+        "other"
+      ],
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "penalty_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date until which a prepayment penalty applies. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "periodic_pay_cap": {
+      "type": "number",
+      "description": "The cap on monthly payments for adjustable rate loans. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "periodic_pay_floor": {
+      "type": "number",
+      "description": "The floor on monthly payments for adjustable rate loans. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "periodic_rate_cap": {
+      "type": "number",
+      "description": "The periodic interest rate cap for adjustable rate loans. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "periodic_rate_floor": {
+      "type": "number",
+      "description": "The periodic interest rate floor for adjustable rate loans. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "prev_arr_date": {
+      "description": "The arrears_arangement_date at origination.",
+      "type": "string",
+      "format": "date-time",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "rate_after_mod": {
+      "type": "number",
+      "description": "The rate after the loan has been modified. A loan arrears arrangement or modification refers to a situation where a lender and borrower agree to adjust the terms of an existing loan due to the borrower's difficulty in making scheduled repayments. This typically occurs after the borrower falls behind, enters arrears, or anticipates they soon will.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "rate_before_mod": {
+      "type": "number",
+      "description": "The rate before modification. A loan arrears arrangement or modification refers to a situation where a lender and borrower agree to adjust the terms of an existing loan due to the borrower's difficulty in making scheduled repayments. This typically occurs after the borrower falls behind, enters arrears, or anticipates they soon will.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "rate_mod_end_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date when the interest type modification under an arrears arrangement ended. A loan arrears arrangement or modification refers to a situation where a lender and borrower agree to adjust the terms of an existing loan due to the borrower's difficulty in making scheduled repayments. This typically occurs after the borrower falls behind, enters arrears, or anticipates they soon will. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "rate_mod_start_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date when the interest type was modified under an arrears arrangement. A loan arrears arrangement or modification refers to a situation where a lender and borrower agree to adjust the terms of an existing loan due to the borrower's difficulty in making scheduled repayments. This typically occurs after the borrower falls behind, enters arrears, or anticipates they soon will. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "rate_mod_step": {
+      "type": "boolean",
+      "description": "Identifies whether a rate modification or arrears arrangement has a 'stepped' or gradual return to non-modified rate. If the rate drop is gradual (stepped), even to a rate that is different from the contract rate, this field should be populated with TRUE. If the rate drop is immediate, even to a rate that is different from the contract rate, this field should be populated with FALSE. Similarly, FALSE will be reported if the loan immediately returns to the contract rate at expiration of the modification. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "recourse": {
+      "description": "Whether there is recourse on a loan. Recourse on a loan refers to terms in the mortgage contract that give the owner of the note the right to pursue additional claims against the borrower beyond possession of the property. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "type": "boolean",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "renewal_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date on which the most recent renewal notification became effective. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "rep_arrears_arrangement": {
+      "type": "boolean",
+      "description": "Identifies when a loan has been modified or undergone arrears arrangements more than once in the past 24 months. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "repurchase_req_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date of loan repurchase requested by the counterparty. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "settlement_amount": {
+      "type": "integer",
+      "description": "The settlement amount (portion of the outstanding unpaid principal balance) agreed to be paid by the customer. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "snc_id": {
+      "type": "string",
+      "description": "Where the credit facility is reported in the Shared National Credit collection and the reporting entity is the lead bank/agent, this field indicates the entities Internal Credit ID as reported in the Shared National Credit collection for this credit facility as of the most recent filing date. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "spread": {
+      "type": "integer",
+      "description": "The rate that is added to the relevant index to determine the monthly interest rate of the loan. This is represented in basis points (bps). Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "tdr_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date designating when the loan was classified as a Troubled Debt Restructuring (TDR). Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    }
+  },
   "allOf": [
     {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/loan.json"

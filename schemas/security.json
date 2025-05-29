@@ -153,6 +153,12 @@
       "description": "The unique identifier of the credit support annex this security falls under. Typically where used as derivatives collateral.",
       "type": "string"
     },
+    "cum_write_offs": {
+      "description": "The portion of the security which has been written off.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
+    },
     "currency_code": {
       "description": "Actual currency of the security in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
@@ -219,6 +225,14 @@
       "minimum": 0.0,
       "maximum": 1.0
     },
+    "distribution_type": {
+      "description": "The instrument's coupon/dividend distribution type, such as cumulative or noncumulative. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "string",
+      "enum": [
+        "cumulative",
+        "non_cumulative"
+      ]
+    },
     "encumbrance_amount": {
       "description": "The amount of the security that is encumbered by potential future commitments or legal liabilities such as within a repo pool. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
@@ -240,6 +254,11 @@
         "variable",
         "variable_trapped"
       ]
+    },
+    "fees": {
+      "description": "The fees associated with the security.",
+      "type": "integer",
+      "monetary": true
     },
     "first_arrears_date": {
       "description": "The first date on which this security was in arrears.",
@@ -317,6 +336,12 @@
     "guarantor_id": {
       "description": "The unique identifier for the guarantor within the financial institution.",
       "type": "string"
+    },
+    "hedged_percentage": {
+      "description": "In the case of a designated fair value hedge, the portion of the asset being hedged, as determined according to ASC 815-20-25-12 (b) and ASC 815-20-25-12A.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1.0
     },
     "hqla_class": {
       "description": "What is the HQLA classification of this security?",
@@ -399,6 +424,16 @@
       "type": "string",
       "minLength": 12,
       "maxLength": 12
+    },
+    "issuance_type": {
+      "description": "Indicates the type of placement for issuances. For example, private placements, other non-publicly offered securites, publicly offered securities or direct purchase municipal securities. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "string",
+      "enum": [
+        "direct_purch_municipal",
+        "non_public",
+        "private_placement",
+        "public_offering"
+      ]
     },
     "issue_date": {
       "description": "The date on which the security is issued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
@@ -695,6 +730,10 @@
         "synthetic",
         "traditional"
       ]
+    },
+    "sedol": {
+      "description": "The stock exchange daily official list (SEDOL) is a seven-character identification code assigned to securities that trade on the London Stock Exchange and various smaller exchanges in the United Kingdom. SEDOL codes are used for unit trusts, investment trusts, insurance-linked securities, and domestic and foreign stocks.",
+      "type" :"string"
     },
     "seniority": {
       "description": "The seniority of the security in the event of sale or bankruptcy of the issuer.",

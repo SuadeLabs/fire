@@ -557,10 +557,10 @@ Describes an account representing the amount of a provision beeing released as a
 Describes an account representing the amount of a provision beeing written-off as a risk materialised (e.g. the loan for which the provision was originally registered is deemed irrecoverable).
 
 ### mtg_insurance
-Prepaid portfolio mortgage insurance conforming to OSFI's 5 year amortization requirements.  Ref: BCAR 40.290; Chapter 4, P164
+Prepaid portfolio mortgage insurance conforming to OSFI's 5 year amortisation requirements.  Ref: BCAR 40.290; Chapter 4, P164
 
 ### mtg_ins_nonconform
-Prepaid portfolio mortgage insurance that does not conform to OSFI's 5 year amortization requirements.  Ref: BCAR 40.290; Chapter 4, P164
+Prepaid portfolio mortgage insurance that does not conform to OSFI's 5 year amortisation requirements.  Ref: BCAR 40.290; Chapter 4, P164
 
 ### adj_syn_inv_own_shares
 Adjustments of Synthetic positions - investments in own shares.  Required for BCAR RWA calculation and Reporting.  Ref: BCAR 40.290; Chapter 4, P164

@@ -4,6 +4,11 @@
   "description": "Extended issuer schema containing all jurisdiction-specific extensions.",
   "type": "object",
   "properties": {
+    "cusip": {
+      "type": "string",
+      "description": "CUSIPs are identifiers created and delivered by the CSB (CUSIP Service Bureau). The CSB is managed on behalf of the American Bankers Association by Standard & Poor's. Issuer codes are assigned alphabetically from a series that includes deliberate built-in 'gaps' for future expansion. The first six characters which are known as the base (or CUSIP-6) uniquely identify the issuer. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": ["US"]
+    },
     "postal_code": {
       "description": "The postal or zip code of the customer.",
       "type": "string",

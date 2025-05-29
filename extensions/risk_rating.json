@@ -3,7 +3,23 @@
   "title": "Risk Extended Rating",
   "description": "Extended risk schema containing all jurisdiction-specific extensions.",
   "type": "object",
-  "properties": {},
+  "properties": {
+    "pd_calc_method": {
+      "type": "string",
+      "description": "The calculation method used to determine the associated probabilities of default. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "enum": [
+        "hybrid",
+        "point_in_time",
+        "through_cycle"
+      ],
+      "jurisdictions": ["US"]
+    },
+    "rating": {
+      "type": "string",
+      "description": "The internal obligor rating that addresses the probability of default of the loan. Suppose the credit is entirely rated AAA. The bank would supply this value:\nAAA:1\nSuppose a different case where half the credit's dollar value has a rating A and the other has C. The bank would supply:\nA:0.5;C:0.5\nAll the decimal amounts must sum to 1. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": ["US"]
+    }
+  },
   "allOf": [
     {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/risk_rating.json"
