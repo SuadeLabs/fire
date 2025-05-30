@@ -23,12 +23,15 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │       └── supported_sme
 ├── financial
 │   ├── credit_institution
+│   │   ├── national_bank
+│   │   ├── non_member_bank
+│   │   ├── state_member_bank
 │   │   ├── merchant_bank
 │   │   ├── building_society
 │   │   ├── state_owned_bank
-│   │   └── promotional_lender
-│   │       ├── promo_fed_reserve
-│   │       └── promo_fed_home_loan
+│   │   ├── promotional_lender
+│   │   │   ├── promo_fed_reserve
+│   │   │   └── promo_fed_home_loan
 │   ├── investment_firm
 │   │   ├── fund
 │   │   ├── private_fund
@@ -38,6 +41,8 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   │   └── real_estate_fund
 │   ├── pension_fund
 │   ├── credit_union
+│   │   ├── federal_credit_union
+│   │   └── state_credit_union
 │   ├── ciu
 │   ├── sspe
 │   ├── pic
@@ -270,6 +275,17 @@ Credit institution is defined in Article 4 of [CRR][crr]:
 
 > (1) 'credit institution' means an undertaking the business of which is to take deposits or other repayable funds from the public and to grant credits for its own account
 
+### national_bank
+
+A commercial bank whose charter is approved by the Office of the Comptroller of the Currency (OCC) rather than by a state banking agency. National banks are required to be members of the Federal Reserve System and belong to the Federal Deposit Insurance Corporation. Refer to [FFIEC Institution Types](https://www.ffiec.gov/npw/Help/InstitutionTypes).
+### non_member_bank
+
+Commercial banks that are state-chartered and not members of the Federal Reserve System. Include all insured commercial banks and industrial banks. Refer to [FFIEC Institution Types](https://www.ffiec.gov/npw/Help/InstitutionTypes). 
+
+### state_member_bank
+
+All commercial banks that are state-chartered and members of the Federal Reserve System. Refer to [FFIEC Institution Types](https://www.ffiec.gov/npw/Help/InstitutionTypes).
+
 ### promotional_lender
 
 A promotional lender is defined by the EU [here][lcr] Article 10.1(e):
@@ -350,7 +366,7 @@ A general term for collective investment vehicles and management companies. For 
 ### private_fund
 
 A private fund is a pooled investment vehicle excluded from the definition of an investment company in the [US Investment Company Act 1940][inv-co-act]
-[Private Fund](<https://www.sec.gov/education/glossary/jargon-z#PEF:~:text=Private%20Equity%20Funds-,Private%20Fund,applicable%20registration%20requirements%20(for%20example%2C%20as%20an%20exempt%20reporting%20adviser).,-Want%20to%20learn>)
+[Private Fund](<https://www.sec.gov/education/glossary/jargon-z#PEF:~:text=Private%20Equity%20Funds-,Private%20Fund,applicable%20registration%20requirements%20(for%20example,%20as%20an%20exempt%20reporting%20adviser).,-Want%20to%20learn>)
 
 ### private_equity_fund
 
@@ -472,6 +488,14 @@ A **credit union** is defined by the [FCA](https://www.fca.org.uk/firms/credit-u
 > These services are regulated activities.
 > However, it should be noted that **credit_union** is regarded as non-financial for NSFR reporting, as per Article 428am [CRR][crr].
 
+### federal_credit_union
+
+A federally affiliated financial cooperative association organized for the purpose of promoting thrift among its members and creating a source of credit for provident or productive purposes. Refer to [FFIEC Institution Types](https://www.ffiec.gov/npw/Help/InstitutionTypes).
+
+### state_credit_union
+
+A state affiliated financial cooperative association organized for the purpose of promoting thrift among its members and creating a source of credit for provident or productive purposes. Refer to [FFIEC Institution Types](https://www.ffiec.gov/npw/Help/InstitutionTypes).
+
 ### deposit_broker
 
 A **deposit broker** can be an individual or a firm that facilitates the placement of deposits with insured depository institutions. Deposit brokers offer investors an assortment of fixed-term investment products, which earn low-risk returns.
@@ -494,11 +518,18 @@ Charity serving communities and individuals. Includes non-profit institutions se
 
 # Loan
 
-```
+```bash
 ├── mortgage
 │   ├── reverse_mortgage
 │   │   └── q_reverse_mortgage
-│   └── mortgage_charter
+│   ├── mortgage_charter
+│   ├── mortgage_cra
+│   ├── mortgage_fha_project
+│   ├── mortgage_fha_res
+│   ├── mortgage_hud235
+│   ├── mortgage_no_pmi
+│   ├── mortgage_pmi
+│   └── mortgage_va
 ├── commercial_property
 ├── personal
 ├── auto
@@ -510,6 +541,8 @@ Charity serving communities and individuals. Includes non-profit institutions se
 │   └── corporate_card
 ├── financial_lease
 ├── heloc
+│   └── heloc_lockout
+├── heloan
 ├── trade_finance
 ├── credit_facility
 ├── liquidity_facility
@@ -647,9 +680,45 @@ From [Investopedia][investopedia-education-loan]:
 
 Other refers to a type of security not covered by the above. If you find yourself using this often, please [contribute][contributing].
 
+### heloan
+
+A home equity loan allows you to borrow money using the equity in your home as collateral. Equity is the amount your property is currently worth, minus the amount of any existing mortgage on your property. You receive the money from a home equity loan as a lump sum. Refer to [CFPB's explanation of home equity loans](https://www.consumerfinance.gov/ask-cfpb/what-is-a-home-equity-loan-en-106/).
+
+### heloc_lockout
+
+Any line of credit that contains a "lock-out" feature whereby a portion of the outstanding principal balance on a line may be locked into an amortizing or interest only loan with separate terms.
+
+### mortgage_cra
+
+Community reinvestment act mortgages. Refer to [Federal Reserve's CRA information](https://www.federalreserve.gov/consumerscommunities/cra_about.htm).
+
+### mortgage_fha_project
+
+_Needs definition_
+
+### mortgage_fha_res
+
+Mortgages insured by the Federal Housing Administration.
+
+### mortgage_hud235
+
+_Needs definition_
+
+### mortgage_no_pmi
+
+Conventional mortgage without Private Mortgage Insurance.
+
+### mortgage_pmi
+
+Conventional mortgage with Private Mortgage Insurance.
+
+### mortgage_va
+
+Mortgages insured by the Department of Veterans Affairs.
+
 # Security
 
-```
+```bash
 ├── equity
 │   ├── dividend
 │   ├── share
@@ -698,6 +767,10 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │       ├── performance_bond
 │       └── performance_sloc
 ├── letter_of_credit
+│   ├── documentary
+│   └── standby
+│       ├── financial
+│       └── performance
 ├── bill_of_exchange
 │   └── acceptance
 ├── cb_reserve
@@ -706,6 +779,7 @@ Other refers to a type of security not covered by the above. If you find yoursel
 ├── cash_ratio_deposit
 ├── cash
 ├── index
+├── loan_pool
 └── other
 ```
 
@@ -956,6 +1030,30 @@ From the [EBA's][eba-nsfr-report] report on the NSFR, section 6.2.2, a **letter 
 
 > When goods are traded, the seller and the buyer need to agree on the process of how to pay for the goods. While the buyer may be reluctant to prepay for the traded goods, the seller may also be unwilling to ship the goods before payment is made. In this situation, a bank can intermediate between the trading partners by providing an import letter of credit (L/C) to the buyer of the goods, which guarantees payment to the seller.
 > A L/C is a contingent liability and payment is only made by the bank to the seller from funds in the buyer's account when the documentation of shipping is presented.
+
+### documentary
+
+_Needs definition_
+
+### standby
+
+_Needs definition_
+
+### financial
+
+_Needs definition_
+
+### performance
+
+_Needs definition_
+
+### loan_pool
+
+From Title 13, Chapter I, Part 120, Subpart J, Section 120.1708 https://www.ecfr.gov/current/title-13/chapter-I/part-120/subpart-J/section-120.1708
+
+SBA guarantees to a Pool Investor the timely payment of principal and interest installments and any prepayment or other recovery of principal to which the Pool Investor is entitled. If an Obligor misses a scheduled payment pursuant to the terms of the Pool Note underlying a Loan Interest backing a Pool Certificate, SBA, through the CSA, will make advances to maintain the schedule of interest and principal payments to the Pool Investor. If SBA makes such payments, it is subrogated fully to the rights satisfied by such payment.
+
+Also see: https://catran.sba.gov/ftadistapps/ftawiki/pdf/p.cfm?a=SBA%20Guaranteed%20Loan%20Pool%20Cert%2E%20Program%20Guidelines%2Epdf
 
 ### acceptance
 
@@ -1402,7 +1500,18 @@ The most common XCS, and that traded in interbank markets, is a mark-to-market (
 
 ```bash
 ├── residential_property
+│   ├── co_op
+│   ├── condo
+│   ├── manufactured_house
 │   ├── multifamily
+│   │   ├── one_unit
+│   │   ├── two_units
+│   │   ├── three_units
+│   │   └── four_units
+│   ├── planned_unit_dev
+│   ├── resi_mixed_use
+│   ├── single_family
+│   ├── townhouse
 │   └── res_property_hr
 ├── farm
 ├── commercial_property
@@ -1430,6 +1539,54 @@ Immovable property whose occupation is primarily for residential use. Specific r
 From EBA [Closing Real Estate Data Gaps](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017Y0131%2801%29) Section 2 (1)(1)(38):
 
 'Residential real estate' (RRE) means any immovable property located in the domestic territory, available for dwelling purposes, acquired, built or renovated by a private household and that is not qualified as a CRE property. If a property has a mixed use, it should be considered as different properties (based for example on the surface areas dedicated to each use) whenever it is feasible to make such breakdown; otherwise, the property can be classified according to its dominant use.
+
+### co_op
+
+A cooperative housing unit where residents own shares in a corporation that owns the building, rather than owning the actual unit. The corporation owns the building and each shareholder has the right to occupy a specific unit through a proprietary lease or occupancy agreement.
+
+### condo
+
+A condominium unit where the owner has exclusive ownership of the individual unit and shared ownership of common areas and facilities with other unit owners. The owner has a deed to their specific unit and pays fees for maintenance of common areas.
+
+### manufactured_house
+
+A factory-built home that is constructed to the federal Manufactured Home Construction and Safety Standards (HUD Code) and is permanently affixed to a foundation. These homes are built in a controlled factory environment and transported to the site in one or more sections.
+
+### multifamily
+
+Property composed of multiple residential dwellings.
+
+### one_unit
+
+A residential property containing exactly one dwelling unit. This includes single-family homes and other properties with one residential unit.
+
+### two_units
+
+A residential property containing exactly two dwelling units. This includes duplexes where each unit is typically occupied by a separate household.
+
+### three_units
+
+A residential property containing exactly three dwelling units. This includes triplexes where each unit is typically occupied by a separate household.
+
+### four_units
+
+A residential property containing exactly four dwelling units. This includes fourplexes where each unit is typically occupied by a separate household.
+
+### planned_unit_dev
+
+A planned unit development (PUD) is a type of residential development that combines different types of housing units and land uses within a single development. PUDs typically include a mix of single-family homes, townhouses, and condominiums, along with common areas and amenities.
+
+### resi_mixed_use
+
+A property that combines residential and non-residential uses, where the residential portion represents more than 50% of the total space. This includes properties with ground-floor commercial spaces and residential units above.
+
+### single_family
+
+A residential property designed for and occupied by a single family. This includes detached houses and other single-family dwellings.
+
+### townhouse
+
+A type of residential property that shares one or more walls with adjacent properties but has its own entrance and typically spans multiple floors. Townhouses are usually arranged in rows and may be part of a larger development.
 
 ### res_property_hr
 

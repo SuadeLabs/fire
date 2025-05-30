@@ -125,6 +125,57 @@
       "description": "Second-order price sensitivity to the underlying or rate of change of the delta.",
       "type": "number"
     },
+    "hedge_designation": {
+      "type": "string",
+      "description": "ASU 2017-12 hedge designations allowed in conjunction with partial-term hedging election in ASC 815-20-25-12b(2)(ii). These designations are described in ASC 815-20-25-12A and 815-25-35-13B.\n\nhttps://asc.fasb.org/1943274/2147480682/815-20-25-12A\nhttps://asc.fasb.org/1943274/2147480295/815-25-35-13B",
+      "enum": [
+        "cash_flows",
+        "last_of_layer"
+      ]
+    },
+    "hedge_sidedness": {
+      "type": "string",
+      "description": "Whether the hedging instrument provides a one-sided effective offset of the hedged risk, as permitted under ASC 815-20-25-76.\n\nhttps://asc.fasb.org/1943274/2147480682/815-20-25-76",
+      "enum": [
+        "one_sided",
+        "two_sided"
+      ]
+    },
+    "hedge_type": {
+      "type": "string",
+      "description": "The type of hedge (fair value or cash flow hedge) associated with the holding. Whether it is hedging individually or is hedging as part of a portfolio of assets with similar risk that are hedged as a group in line with ASC 815-20-25-12 (b), ASC 815-20-2512A, or ASC 815-10-25-15.\n\nhttps://asc.fasb.org/1943274/2147480682/815-20-25-12\nhttps://asc.fasb.org/1943274/2147480682/815-20-25-12A\nhttps://asc.fasb.org/1943274/2147480682/815-10-25-15",
+      "enum": [
+        "cf_hedge",
+        "fv_hedge"
+      ]
+    },
+    "hedged_cf_type": {
+      "type": "string",
+      "description": "The type of cash flow associated with the hedge if it is a cash flow hedge. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "enum": [
+        "interest_only",
+        "other",
+        "partial",
+        "principal_interest",
+        "principal_only"
+      ]
+    },
+    "hedged_risk": {
+      "type": "string",
+      "description": "The risk being hedged, among the potential hedged risks described under ASC 815-20-25-12 and ASC 815-20-25-15.\n\nhttps://asc.fasb.org/1943274/2147480682/815-20-25-12\nhttps://asc.fasb.org/1943274/2147480682/815-20-25-15",
+      "enum": [
+        "cr",
+        "fv_option",
+        "fx",
+        "fx_cr",
+        "ir",
+        "ir_cr",
+        "ir_fx",
+        "ir_fx_cr",
+        "other",
+        "overall_fv_cf"
+      ]
+    },
     "impairment_amount": {
       "description": "The impairment amount for a security is the allowance set aside by the firm for losses.",
       "type": "integer",

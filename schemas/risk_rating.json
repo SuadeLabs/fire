@@ -9,9 +9,13 @@
             "description": "Unique identifier for the risk rating"
         },
         "date": {
-            "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
             "type": "string",
+            "description": "The observation or value date for the data in this object. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
             "format": "date-time"
+        },
+        "description": {
+            "type": "string",
+            "description": "A description of the internal risk rating."
         },
         "lgd_max": {
             "type": "number",

@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"fees"
-schemas:	[loan]
+schemas:	[loan, security]
 ---
 
 # fees
