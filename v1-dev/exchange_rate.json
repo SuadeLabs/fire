@@ -17,12 +17,15 @@
       "description": "The base currency in accordance with ISO 4217 standards.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
     },
-    "purpose": {
-      "description": "Defines whether the exchange rate represents a user-defined average over a specific period (for P&L) or a point-in-time rate (for balance sheet).",
+    "period": {
+      "description": "Describes the reference methodology and period for the exchange rate.",
       "type": "string",
       "enum": [
-        "average_rate",
-        "closing_rate"
+        "avg_12m",
+        "avg_1m",
+        "avg_3m",
+        "avg_6m",
+        "avg_ytd"
       ]
     },
     "quote": {
