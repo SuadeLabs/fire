@@ -28,7 +28,4 @@ Active Performing - The loan is currently in loss mitigation but is still perfor
 ### broken
 Broken - The loss mitigation process has been terminated or failed. This could occur if the borrower did not complete required actions, failed to meet modification terms, or if the servicer determined that loss mitigation was no longer viable.
 
-### none
-None - No loss mitigation activities are currently in progress. The loan is either not in need of loss mitigation or has not yet been referred to the loss mitigation department.
-
 --- 

@@ -12,4 +12,19 @@ The vendor of the commercially available credit bureau score at origination. Als
 
 For additional details refer to: https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M
 
+```bash
+├── fico
+├── other
+└── vantage
+```
+
+### fico
+A credit score produced by FICO. Refer to https://www.fico.com/en/products/fico-score.
+
+### other
+A credit score produced by another vendor.
+
+### vantage
+A credit score produced by Vantage Score. Refer to https://www.vantagescore.com/.
+
 --- 

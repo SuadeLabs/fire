@@ -103,18 +103,29 @@
       "enum": [
         "auto",
         "cash",
+        "co_op",
         "commercial_property",
         "commercial_property_hr",
+        "condo",
         "debenture",
-        "farm", 
+        "farm",
+        "four_units",
         "guarantee",
         "immovable_property",
         "life_policy",
+        "manufactured_house",
         "multifamily",
+        "one_unit",
         "other",
+        "planned_unit_dev",
         "res_property_hr",
+        "resi_mixed_use",
         "residential_property",
-	      "security"
+        "security",
+        "single_family",
+        "three_units",
+        "townhouse",
+        "two_units"
       ]
     },
     "value": {

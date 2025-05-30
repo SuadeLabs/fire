@@ -24,11 +24,27 @@
       "enum": [
         "formal",
         "interest_grace_period",
+        "mi_claim_adv",
         "modified_tnc",
         "none",
         "possessed",
+        "prin_def_rate",
+        "prin_def_rate_term",
+        "prin_def_term",
+        "principal_defer",
+        "principal_forgive",
+        "rate_prin_forgive",
+        "rate_red_frozen",
+        "rate_term",
+        "rate_term_prin_forgive",
+        "recap",
         "refinancing",
-        "temporary"
+        "renewal",
+        "reo",
+        "temporary",
+        "term_ext",
+        "term_prin_forgive",
+        "term_recap"
       ],
       "jurisdictions": [
         "US"
@@ -114,12 +130,12 @@
         "US"
       ],
       "enum": [
-        "payoff",
+        "fully_participated",
+        "fully_syndicated",
         "involuntary_payoff",
         "liquidation",
-        "sold",
-        "fully_participated",
-        "fully_syndicated"
+        "payoff",
+        "sold"
       ]
     },
     "escrow_amount": {
@@ -174,10 +190,12 @@
       "type": "string",
       "description": "Indication of the status of a foreclosure. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
       "enum": [
-        "none",
-        "in_foreclosure_presale",
-        "post_sale_redemption",
-        "reo"
+        "post_sale",
+        "post_sale_susp",
+        "pre_sale",
+        "pre_sale_susp",
+        "reo",
+        "reo_susp"
       ],
       "jurisdictions": [
         "US"
@@ -186,6 +204,15 @@
     "income_docs": {
       "type": "string",
       "description": "How the borrower's income levels were documented at the time of origination. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "enum": [
+        "alt_low_borrower",
+        "alt_low_lender",
+        "alt_low_unknown",
+        "full",
+        "stated_borrower",
+        "stated_lender",
+        "stated_unknown"
+      ],
       "jurisdictions": [
         "US"
       ]
@@ -201,8 +228,8 @@
       "type": "string",
       "description": "The tax status of interest income for Federal or State Income Tax purposes. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
       "enum": [
-        "taxable",
-        "tax_exempt"
+        "tax_exempt",
+        "taxable"
       ],
       "jurisdictions": [
         "US"
@@ -286,8 +313,7 @@
       "enum": [
         "active_non_performing",
         "active_performing",
-        "broken",
-        "none"
+        "broken"
       ],
       "jurisdictions": [
         "US"
@@ -369,9 +395,10 @@
       "type": "string",
       "description": "Information related to the occupancy of the property that is available on the mortgage at the time of origination. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
       "enum": [
+        "investment",
+        "non_owner_occupied",
         "primary",
-        "second_home",
-        "investment"
+        "second_home"
       ],
       "jurisdictions": [
         "US"
@@ -391,7 +418,29 @@
       "enum": [
         "FDTR",
         "UKBRBASE",
-        "ZERO"
+        "ZERO",
+        "cert_dep",
+        "cofi",
+        "cofi_11th",
+        "cofi_nm",
+        "cofi_other",
+        "cosi",
+        "mta",
+        "other",
+        "prime",
+        "sofr",
+        "sofr_1m",
+        "sofr_1y",
+        "sofr_3m",
+        "sofr_6m",
+        "sofr_other",
+        "tbill",
+        "tbill_1y",
+        "tbill_3m",
+        "tbill_3y",
+        "tbill_5y",
+        "tbill_6m",
+        "tbill_other"
       ],
       "jurisdictions": [
         "US"
@@ -407,6 +456,11 @@
     "orig_credit_score_vendor": {
       "type": "string",
       "description": "The vendor of the commercially available credit bureau score at origination. Also see [orig_credit_score] and [orig_credit_score_version]. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "enum": [
+        "fico",
+        "other",
+        "vantage"
+      ],
       "jurisdictions": [
         "US"
       ]
@@ -553,6 +607,14 @@
     "orig_source": {
       "type": "string",
       "description": "The source by which the servicer originated or otherwise acquired the loan. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "enum": [
+        "bulk_purchase",
+        "correspondent",
+        "retail",
+        "servicing_rights_purchased",
+        "wealth_management",
+        "wholesale"
+      ],
       "jurisdictions": [
         "US"
       ]

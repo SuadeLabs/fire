@@ -207,3 +207,24 @@ def test_extension_enums_documented(schema_name):
                 assert f"### {enum_value}" in doc_content, error_msg(
                     schema_name, enum_value, prop_name
                 )
+
+
+@pytest.mark.parametrize("schema_name", EXTENSION_FILES)
+def test_schema_enums_are_alphabetical(schema_name):
+    """
+    Test that all enum values in the extension schema are in alphabetical order.
+    This ensures consistency and makes it easier to find values in the documentation.
+    Only checks enums defined in the extension schema, not inherited from parent schemas.
+    """
+    schema = fire_load(schema_name, schemas_dir=EXTENSIONS_DIR)
+    properties = schema.get("properties", {})
+
+    for property_name, property_spec in properties.items():
+        if "enum" in property_spec:
+            enum_values = property_spec["enum"]
+            sorted_values = sorted(enum_values)
+            assert enum_values == sorted_values, (
+                f"Enum values for {schema_name}:{property_name} are not in alphabetical order.\n"
+                f"Current order: {enum_values}\n"
+                f"Expected order: {sorted_values}"
+            )

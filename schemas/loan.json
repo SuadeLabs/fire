@@ -60,11 +60,27 @@
       "enum": [
         "formal",
         "interest_grace_period",
+        "mi_claim_adv",
         "modified_tnc",
         "none",
         "possessed",
+        "prin_def_rate",
+        "prin_def_rate_term",
+        "prin_def_term",
+        "principal_defer",
+        "principal_forgive",
+        "rate_prin_forgive",
+        "rate_red_frozen",
+        "rate_term",
+        "rate_term_prin_forgive",
+        "recap",
         "refinancing",
-        "temporary"
+        "renewal",
+        "reo",
+        "temporary",
+        "term_ext",
+        "term_prin_forgive",
+        "term_recap"
       ]
     },
     "arrears_balance": {
@@ -86,7 +102,29 @@
       "enum": [
         "FDTR",
         "UKBRBASE",
-        "ZERO"
+        "ZERO",
+        "cert_dep",
+        "cofi",
+        "cofi_11th",
+        "cofi_nm",
+        "cofi_other",
+        "cosi",
+        "mta",
+        "other",
+        "prime",
+        "sofr",
+        "sofr_1m",
+        "sofr_1y",
+        "sofr_3m",
+        "sofr_6m",
+        "sofr_other",
+        "tbill",
+        "tbill_1y",
+        "tbill_3m",
+        "tbill_3y",
+        "tbill_5y",
+        "tbill_6m",
+        "tbill_other"
       ]
     },
     "behavioral_curve_id": {
@@ -544,9 +582,14 @@
         "buy_to_let_house_purchase",
         "buy_to_let_other",
         "buy_to_let_remortgage",
+        "cash_out",
+        "commercial",
+        "commercial_property",
         "commodities_finance",
         "construction",
         "consumer_buy_to_let",
+        "debt_consolidation",
+        "education",
         "first_time_buyer",
         "first_time_buyer_cstr",
         "further_advance",
@@ -555,6 +598,7 @@
         "house_purchase_cstr",
         "ips",
         "lifetime_mortgage",
+        "medical",
         "non_b20",
         "object_finance",
         "object_finance_hq",
@@ -566,12 +610,16 @@
         "project_hq_phase",
         "project_pre_op",
         "promotional",
+        "rate",
         "reference",
+        "refinance",
         "remortgage",
         "remortgage_construct",
         "remortgage_other",
         "remortgage_othr_cstr",
-        "speculative_property"
+        "renovation",
+        "speculative_property",
+        "term"
       ]
     },
     "rate": {
@@ -642,7 +690,8 @@
       "enum": [
         "complete_no_repurchase",
         "complete_repurchased",
-        "in_process"
+        "in_process",
+        "initiated"
       ]
     },
     "resolution_date": {
@@ -726,8 +775,10 @@
         "actual",
         "cancellable",
         "cancelled",
+        "closed",
         "committed",
         "defaulted",
+        "frozen",
         "revolving"
       ]
     },
@@ -750,10 +801,19 @@
         "credit_facility",
         "education",
         "financial_lease",
+        "heloan",
         "heloc",
+        "heloc_lockout",
         "liquidity_facility",
         "mortgage",
         "mortgage_charter",
+        "mortgage_cra",
+        "mortgage_fha_project",
+        "mortgage_fha_res",
+        "mortgage_hud235",
+        "mortgage_no_pmi",
+        "mortgage_pmi",
+        "mortgage_va",
         "multiccy_facility",
         "new_auto",
         "nostro",

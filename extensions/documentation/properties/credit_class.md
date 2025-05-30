@@ -20,15 +20,15 @@ For additional details refer to: https://www.federalreserve.gov/apps/reportingfo
 ```
 
 ### alt_a
-Alternative-A Mortgage - A mortgage loan that falls between prime and subprime in terms of credit quality. These loans typically have higher interest rates than prime loans but lower rates than subprime loans, and may have less documentation requirements than prime loans.
+Alt-A is a classification of mortgages with a risk profile falling between prime and subprime. They can be considered high risk due to provision factors customized by the lender. This type of loan tends to be more expensive for the borrower, as they may carry higher interest rates and/or fees. Refer to https://www.investopedia.com/terms/a/alt-a.asp.
 
 ### goverment_owned
-Government-Owned Loan - A mortgage loan that is owned or guaranteed by a government entity such as Fannie Mae, Freddie Mac, or Ginnie Mae, or other government-sponsored enterprises.
+A mortgage loan that is owned or guaranteed by a government entity such as Fannie Mae, Freddie Mac, or Ginnie Mae, or other government-sponsored enterprises.
 
 ### non_prime
-Non-Prime Mortgage - A mortgage loan that does not meet the criteria for prime loans, typically due to the borrower's credit history, income documentation, or other risk factors. These loans generally have higher interest rates to compensate for the increased risk.
+Non-Prime loans are not A-Paper as defined as Qualified Mortgages and have sub standard credit and income leniency guidelines. Non-Prime loans typically are made to borrowers who have recent negative credit which impacted financial events such as Foreclosure, Bankruptcy, Short Sale, Collections, and Charge-Offs.
 
 ### prime
-Prime Mortgage - A mortgage loan that meets the highest credit quality standards, typically offered to borrowers with excellent credit scores, stable income, and substantial down payments. These loans usually have the most favorable interest rates and terms.
+Prime is a classification of borrowers, rates, or holdings in the lending market that are considered to be of high quality. This classification often refers to loans made to high-quality prime borrowers that are offered prime or relatively low interest rates. Refer to https://www.investopedia.com/terms/p/prime.asp.
 
 --- 

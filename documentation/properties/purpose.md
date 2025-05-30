@@ -644,8 +644,13 @@ refer to interest cashflows only, and do not include any principal flows
 │   ├── buy_to_let_other
 │   ├── buy_to_let_construct
 │   └── consumer_buy_to_let
+├── commercial
+├── commercial_property
 ├── commodities_finance
 ├── construction
+│   └── renovation
+├── debt_consolidation
+├── education
 ├── first_time_buyer
 │   └── first_time_buyer_cstr
 ├── further_advance
@@ -654,6 +659,7 @@ refer to interest cashflows only, and do not include any principal flows
 │   └── house_purchase_cstr
 ├── ips
 ├── lifetime_mortgage
+├── medical
 ├── non_b20
 ├── object_finance
 │   └── object_finance_hq
@@ -666,6 +672,10 @@ refer to interest cashflows only, and do not include any principal flows
 │   └── project_hq_phase
 ├── promotional
 ├── reference
+├── refinance
+│   ├── cash_out
+│   ├── rate
+│   └── term
 ├── remortgage
 │   └── remortgage_construct
 ├── remortgage_other
@@ -898,6 +908,43 @@ As defined by OSFI Chapter 4, P66 and Chapter 5, P15:
 The **other** enum value can be used when none of the other enum values apply or the value is *unknown*.
 
 
+### commercial
+
+Commercial business.
+
+### commercial_property
+
+Commercial real estate.
+
+### renovation
+
+Loans given for the purpose of renovations. This may also be known as a home improvement loan. 
+### debt_consolidation
+
+A loan that merges other debts into one loan.
+### education
+
+A loan used to cover educational expenses
+### medical
+
+A loan used to cover medical or dental expenses.
+
+### cash_out
+
+A cash-out refinance is a form of mortgage refinancing where the initial mortgage is paid off, and a new mortgage is established. The new mortgage loan is larger than the pre-existing loan amount, so the home equity is converted into a cash payout. Refer to https://corporatefinanceinstitute.com/resources/commercial-lending/cash-out-refinance.
+
+### rate		
+
+A rate refinance refers to refinancing a loan to take advantage of lower interest rates. 
+
+### term		
+
+A term refinance refers to refinancing a loan to either increase or decrease the term of the loan. 
+
+### refinance			
+
+A refinance, refers to revising and replacing the terms of an existing credit agreement, usually as it relates to a loan or mortgage. Refinancing a loan or mortgage is typically done to take advantage of lower interest rates or improve the loan terms, such as the monthly payment or length of the loan. Refer to https://www.investopedia.com/terms/r/refinance.asp.
+
 ## Security
 ```bash
 ├── collateral
@@ -979,7 +1026,7 @@ Use this enum to refer to funds reserved for the purpose of implementing, from a
 
 ---
 
-[reg]: https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32009R0494&from=EN
+[reg]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009R0494&from=EN
 [midifdir]: https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX:32014L0065
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575
 [lcr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061

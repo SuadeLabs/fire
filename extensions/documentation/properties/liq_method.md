@@ -8,7 +8,7 @@ schemas:    [loan]
 
 ---
 
-The liquidation method for any loan.
+The liquidation method for the loan.
 
 For additional details refer to: https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M
 

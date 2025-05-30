@@ -85,6 +85,11 @@
     "credit_score_vendor": {
       "description": "The vendor of the commercially available credit bureau score. Also see [credit_score_date], [credit_score_version] and [credit_score]. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
       "type": "string",
+      "enum": [
+        "fico",
+        "other",
+        "vantage"
+      ],
       "jurisdictions": [
         "US"
       ]
