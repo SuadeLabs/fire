@@ -219,6 +219,10 @@
       "description": "The unique identifier used by the financial institution to identify the deal for this product that links it to other products of the same or different type.",
       "type": "string"
     },
+    "description": {
+      "description": "A more user-friendly description of the security.",
+      "type": "string"
+    },
     "detachment_point": {
       "description": "The threshold at which losses within the pool of underlying exposures would result in a complete loss of principal for the tranche containing the relevant securitisation position.",
       "type": "number",
@@ -648,6 +652,16 @@
     "rate": {
       "description": "The full interest rate applied to the security notional in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).",
       "type": "number"
+    },
+    "rate_type": {
+      "description": "Describes the type of interest rate applied to the security.",
+      "type": "string",
+      "enum": [
+        "combined",
+        "fixed",
+        "tracker",
+        "variable"
+      ]
     },
     "regulatory_book": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/regulatory_book"

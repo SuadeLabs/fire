@@ -27,7 +27,7 @@
       "minimum": 0
     },
     "city": {
-      "description": "The city in which the property is located. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "description": "The city in which the property is located.",
       "type": "string"
     },
     "country_code": {

@@ -31,13 +31,6 @@
       "description": "CUSIPs are identifiers created and delivered by the CSB (CUSIP Service Bureau). The CSB is managed on behalf of the American Bankers Association by Standard & Poor's. Security codes are assigned alphabetically from a series that includes deliberate built-in 'gaps' for future expansion. The first six characters which are known as the base (or CUSIP-6) uniquely identify the security. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
       "jurisdictions": ["US"]
     },
-    "description": {
-      "description": "A description of the security that clarifies the name of the security or issuer, type or nature of obligation, and, if applicable, key terms such as the maturity date and stated interest rate.",
-      "type": "string",
-      "jurisdictions": [
-        "US"
-      ]
-    },
     "orig_cusip": {
       "description": "The cusip at origination.",
       "type": "string",
@@ -64,19 +57,6 @@
     "price": {
       "description": "The price of a security. In general, this is the value that, when multiplied by the current face value or nominal amount of the security, results in the amount that would be received (excluding accrued interest) if the security were sold at market value. A security whose market value is equal to its outstanding face value has a price of 100. For equity securities, this is the price per share.",
       "type": "number",
-      "jurisdictions": [
-        "US"
-      ]
-    },
-    "rate_type": {
-      "description": "The type of rate for the security.",
-      "type": "string",
-      "enum": [
-        "combined",
-        "fixed",
-        "tracker",
-        "variable"
-      ],
       "jurisdictions": [
         "US"
       ]

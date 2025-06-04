@@ -60,13 +60,6 @@
         "US"
       ]
     },
-    "city": {
-      "description": "The name of the city in which the obligor is domiciled. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
-      "type": "string",
-      "jurisdictions": [
-        "US"
-      ]
-    },
     "credit_score": {
       "description": "The credit score of the borrower. Also see [credit_score_vendor], [credit_score_version] and [credit_score_date]. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
       "type": "string",
@@ -230,13 +223,6 @@
         "US"
       ]
     },
-    "mic_code": {
-      "description": "The name of the Stock Exchange on which the primary stock trades. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#mic_code",
-      "jurisdictions": [
-        "US"
-      ]
-    },
     "minority_interest": {
       "description": "The interest of shareholders who, in the aggregate, own less than half the shares in a corporation. On the consolidated balance sheets of companies whose subsidiaries are not wholly owned, the minority interest is shown as a separate equity account or as a liability of indefinite term. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
       "type": "number",
@@ -306,13 +292,6 @@
       "description": "The Net Operating Income (NOI) at origination.",
       "type": "integer",
       "monetary": true,
-      "jurisdictions": [
-        "US"
-      ]
-    },
-    "postal_code": {
-      "description": "The zip code in which the obligor is domiciled. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
-      "type": "string",
       "jurisdictions": [
         "US"
       ]

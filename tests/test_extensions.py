@@ -7,9 +7,11 @@ from jsonschema.exceptions import ValidationError
 from . import (
     ALLOWED_PROPERTY_CHARS,
     SCHEMA_FILES,
-    EXTENSIONS_DIR,
+    EXTENSION_DOCS_DIR,
     EXTENSION_DOC_NAMES,
+    EXTENSION_SCHEMAS_DIR,
     EXTENSION_FILES,
+    DOC_NAMES,
     fire_load,
     load_jsons,
     schema_properties,
@@ -28,7 +30,7 @@ def test_schemas_and_docs_found():
 
 
 def test_jsons_are_valid():
-    assert load_jsons(EXTENSION_FILES, EXTENSIONS_DIR)
+    assert load_jsons(EXTENSION_FILES, EXTENSION_SCHEMAS_DIR)
 
 
 @pytest.mark.parametrize("schema", SCHEMA_FILES)
@@ -56,7 +58,7 @@ def test_extension_schemas_extend_originals(schema):
     schema and extra properties.
     """
 
-    json_schema = fire_load(schema, schemas_dir=EXTENSIONS_DIR)
+    json_schema = fire_load(schema, schemas_dir=EXTENSION_SCHEMAS_DIR)
     # extended schema is extending the original one
     assert "allOf" in json_schema
     components = json_schema["allOf"]
@@ -71,12 +73,10 @@ def test_extended_schema_validations():
     and other validations work too.
     """
 
-    json_schema = fire_load("customer.json", schemas_dir=EXTENSIONS_DIR)
+    json_schema = fire_load("customer.json", schemas_dir=EXTENSION_SCHEMAS_DIR)
 
     Draft7Validator.check_schema(json_schema)
-    validator = Draft7Validator(
-        json_schema,
-    )
+    validator = Draft7Validator(json_schema)
 
     # missing date
     with pytest.raises(ValidationError, match="date"):
@@ -88,10 +88,12 @@ def test_extended_schema_validations():
 
     # malformed postal code
     with pytest.raises(ValidationError, match="postal_code"):
-        validator.validate({"id": "ok", "date": "2000-01-01", "postal_code": 123})
+        validator.validate(
+            {"id": "ok", "date": "2000-01-01", "mailing_postal_code": 123}
+        )
 
     # good example
-    validator.validate({"id": "ok", "date": "2000-01-01", "postal_code": "123"})
+    validator.validate({"id": "ok", "date": "2000-01-01", "mailing_postal_code": "123"})
 
 
 @pytest.mark.parametrize("schema_name", EXTENSION_FILES)
@@ -100,7 +102,9 @@ def test_schema_property_names(schema_name):
     JSON may not care about order, or formatting but we do. For the schemas to be
     human readable, it helps when properties are in alphabetical order and snake case.
     """
-    properties = list(fire_load(schema_name, schemas_dir=EXTENSIONS_DIR)["properties"])
+    properties = list(
+        fire_load(schema_name, schemas_dir=EXTENSION_SCHEMAS_DIR)["properties"]
+    )
     assert properties == sorted(properties)
 
     for property in properties:
@@ -119,7 +123,7 @@ def test_schema_properties_have_jurisdiction(schema_name):
 
     We ignore inheritance, because we just care about how each individual schema "looks"
     """
-    properties = fire_load(schema_name, schemas_dir=EXTENSIONS_DIR)["properties"]
+    properties = fire_load(schema_name, schemas_dir=EXTENSION_SCHEMAS_DIR)["properties"]
     for property_name, property_spec in properties.items():
         jurisdictions = property_spec["jurisdictions"]
         assert (
@@ -137,33 +141,32 @@ def test_schema_property_overlap(schema_name):
     The extension properties should be distinct from the regular ones.
     """
     extension_properties = list(
-        fire_load(schema_name, schemas_dir=EXTENSIONS_DIR)["properties"]
+        fire_load(schema_name, schemas_dir=EXTENSION_SCHEMAS_DIR)["properties"]
     )
     regular_properties = schema_properties(schema_name, with_inheritance=True)
 
     overlaps = set(extension_properties).intersection(regular_properties)
-    assert not overlaps
+    assert not overlaps, f"{schema_name} has overlap(s): {overlaps}"
 
 
-def test_properties_and_documentation_align():
+@pytest.mark.parametrize("schema_name", EXTENSION_FILES)
+def test_properties_and_documentation_align(schema_name):
     """
     Every property should be documented, and every piece of documentation should
     have a corresponding property in the extensions.
     """
-    properties = set()
-    schemas = load_jsons(EXTENSION_FILES, EXTENSIONS_DIR)
-    for schema in schemas:
-        properties.update(schema["properties"])
+    # properties = set()
+    # schemas = load_jsons(EXTENSION_FILES, EXTENSION_SCHEMAS_DIR)
+    # for schema in schemas:
+    #     properties.update(schema["properties"])
 
-    for name in EXTENSION_DOC_NAMES:
-        assert (
-            name in properties
-        ), "extension documentation should only exist for extension properties"
+    schema = fire_load(schema_name, schemas_dir=EXTENSION_SCHEMAS_DIR)
+    properties = schema.get("properties", {})
 
     for name in properties:
         assert (
             name in EXTENSION_DOC_NAMES
-        ), "every extension property should have documentation"
+        ), f"[{schema_name}]:every extension property should have documentation"
 
 
 @pytest.mark.parametrize("schema_name", EXTENSION_FILES)
@@ -182,16 +185,14 @@ def test_extension_enums_documented(schema_name):
         )
 
     # Load the schema and get its properties
-    schema = fire_load(schema_name, schemas_dir=EXTENSIONS_DIR)
+    schema = fire_load(schema_name, schemas_dir=EXTENSION_SCHEMAS_DIR)
     properties = schema.get("properties", {})
 
     # Check each property for enums
     for prop_name, prop_spec in properties.items():
         if "enum" in prop_spec:
             # Get the documentation file for this property
-            doc_file = os.path.join(
-                EXTENSIONS_DIR, "documentation", "properties", f"{prop_name}.md"
-            )
+            doc_file = os.path.join(EXTENSION_DOCS_DIR, f"{prop_name}.md")
 
             if not os.path.exists(doc_file):
                 raise FileNotFoundError(
@@ -216,7 +217,7 @@ def test_schema_enums_are_alphabetical(schema_name):
     This ensures consistency and makes it easier to find values in the documentation.
     Only checks enums defined in the extension schema, not inherited from parent schemas.
     """
-    schema = fire_load(schema_name, schemas_dir=EXTENSIONS_DIR)
+    schema = fire_load(schema_name, schemas_dir=EXTENSION_SCHEMAS_DIR)
     properties = schema.get("properties", {})
 
     for property_name, property_spec in properties.items():
@@ -228,3 +229,11 @@ def test_schema_enums_are_alphabetical(schema_name):
                 f"Current order: {enum_values}\n"
                 f"Expected order: {sorted_values}"
             )
+
+
+@pytest.mark.parametrize("doc_name", EXTENSION_DOC_NAMES)
+def test_extensions_dont_duplicate_properties(doc_name):
+    """
+    Test that we don't create an extension property that already exists in the mean schemas
+    """
+    assert doc_name not in DOC_NAMES

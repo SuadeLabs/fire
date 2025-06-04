@@ -9,6 +9,7 @@ SCHEMAS_DIR = os.path.join(HOME, "schemas")
 DOCS_DIR = os.path.join(HOME, "documentation", "properties")
 EXAMPLES_DIR = os.path.join(HOME, "examples")
 EXTENSIONS_DIR = os.path.join(HOME, "extensions")
+EXTENSION_SCHEMAS_DIR = os.path.join(EXTENSIONS_DIR, "schemas")
 EXTENSION_DOCS_DIR = os.path.join(EXTENSIONS_DIR, "documentation", "properties")
 
 SCHEMA_FILES = [f for f in os.listdir(SCHEMAS_DIR) if f.endswith(".json")]
@@ -20,7 +21,7 @@ DOC_NAMES = [f.split(".md")[0] for f in DOC_FILES]
 _, _, filenames = next(os.walk(EXAMPLES_DIR), (None, None, []))
 EXAMPLE_FILES = [f for f in filenames if f.endswith(".json")]
 
-EXTENSION_FILES = [f for f in os.listdir(EXTENSIONS_DIR) if f.endswith(".json")]
+EXTENSION_FILES = [f for f in os.listdir(EXTENSION_SCHEMAS_DIR) if f.endswith(".json")]
 EXTENSION_DOC_FILES = [f for f in os.listdir(EXTENSION_DOCS_DIR) if f.endswith(".md")]
 EXTENSION_DOC_NAMES = [f.split(".md")[0] for f in EXTENSION_DOC_FILES]
 
