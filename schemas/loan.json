@@ -26,6 +26,16 @@
     "accounting_treatment": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/accounting_treatment"
     },
+    "accrual_status": {
+      "description": "The accrual status of the loan or line of credit.",
+      "type": "string",
+      "enum": [
+        "accrual",
+        "non_accrual",
+        "securitised",
+        "serviced_for_others"
+      ]
+    },
     "accrued_interest_12m": {
       "description": "The cumulative accrued interest over the past 12 months. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
@@ -50,11 +60,27 @@
       "enum": [
         "formal",
         "interest_grace_period",
+        "mi_claim_adv",
         "modified_tnc",
         "none",
         "possessed",
+        "prin_def_rate",
+        "prin_def_rate_term",
+        "prin_def_term",
+        "principal_defer",
+        "principal_forgive",
+        "rate_prin_forgive",
+        "rate_red_frozen",
+        "rate_term",
+        "rate_term_prin_forgive",
+        "recap",
         "refinancing",
-        "temporary"
+        "renewal",
+        "reo",
+        "temporary",
+        "term_ext",
+        "term_prin_forgive",
+        "term_recap"
       ]
     },
     "arrears_balance": {
@@ -76,7 +102,29 @@
       "enum": [
         "FDTR",
         "UKBRBASE",
-        "ZERO"
+        "ZERO",
+        "cert_dep",
+        "cofi",
+        "cofi_11th",
+        "cofi_nm",
+        "cofi_other",
+        "cosi",
+        "mta",
+        "other",
+        "prime",
+        "sofr",
+        "sofr_1m",
+        "sofr_1y",
+        "sofr_3m",
+        "sofr_6m",
+        "sofr_other",
+        "tbill",
+        "tbill_1y",
+        "tbill_3m",
+        "tbill_3y",
+        "tbill_5y",
+        "tbill_6m",
+        "tbill_other"
       ]
     },
     "behavioral_curve_id": {
@@ -468,6 +516,21 @@
       "description": "The parent code assigned by the financial institution to identify a facility.",
       "type": "string"
     },
+    "participation_int": {
+      "description": "For participated or syndicated credit facilities that have closed and settled, the percentage of the total loan commitment held by the reporting entity. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "number"
+    },
+    "participation_type": {
+      "description": "For participated or syndicated credit facilities that have closed and settled, indicates the type of participation in the loan. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "string",
+      "enum": [
+        "agent_non_snc",
+        "agent_snc",
+        "none",
+        "participant_non_snc",
+        "participant_snc"
+      ]
+    },
     "pd_irb": {
       "description": "The probability of default as determined by internal rating-based methods. Percentage between 0 an 1.",
       "type": "number",
@@ -519,9 +582,14 @@
         "buy_to_let_house_purchase",
         "buy_to_let_other",
         "buy_to_let_remortgage",
+        "cash_out",
+        "commercial",
+        "commercial_property",
         "commodities_finance",
         "construction",
         "consumer_buy_to_let",
+        "debt_consolidation",
+        "education",
         "first_time_buyer",
         "first_time_buyer_cstr",
         "further_advance",
@@ -530,6 +598,7 @@
         "house_purchase_cstr",
         "ips",
         "lifetime_mortgage",
+        "medical",
         "non_b20",
         "object_finance",
         "object_finance_hq",
@@ -541,12 +610,16 @@
         "project_hq_phase",
         "project_pre_op",
         "promotional",
+        "rate",
         "reference",
+        "refinance",
         "remortgage",
         "remortgage_construct",
         "remortgage_other",
         "remortgage_othr_cstr",
-        "speculative_property"
+        "renovation",
+        "speculative_property",
+        "term"
       ]
     },
     "rate": {
@@ -611,6 +684,16 @@
       "description": "The internal ID for the legal entity under which the account is being reported.",
       "type": "string"
     },
+    "repurchase_status": {
+      "description": "The current status of the repurchase of the loan.",
+      "type": "string",
+      "enum": [
+        "complete_no_repurchase",
+        "complete_repurchased",
+        "in_process",
+        "initiated"
+      ]
+    },
     "resolution_date": {
       "description": "Date of resolution of the defaulted facility.",
       "type": "string",
@@ -658,6 +741,10 @@
         "subordinated_unsecured"
       ]
     },
+    "servicer_id": {
+      "description": "This is the unique id to identify the servicer of a loan.",
+      "type": "string"
+    },
     "servicing": {
       "description": "The method by which the loan shall be repaid",
       "type": "string",
@@ -688,8 +775,10 @@
         "actual",
         "cancellable",
         "cancelled",
+        "closed",
         "committed",
         "defaulted",
+        "frozen",
         "revolving"
       ]
     },
@@ -712,10 +801,19 @@
         "credit_facility",
         "education",
         "financial_lease",
+        "heloan",
         "heloc",
+        "heloc_lockout",
         "liquidity_facility",
         "mortgage",
         "mortgage_charter",
+        "mortgage_cra",
+        "mortgage_fha_project",
+        "mortgage_fha_res",
+        "mortgage_hud235",
+        "mortgage_no_pmi",
+        "mortgage_pmi",
+        "mortgage_va",
         "multiccy_facility",
         "new_auto",
         "nostro",

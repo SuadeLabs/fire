@@ -1,23 +1,31 @@
 import decimal
 import json
 import os
+from string import ascii_lowercase, digits
 
 
 HOME = os.path.join(os.path.dirname(__file__), "..")
 SCHEMAS_DIR = os.path.join(HOME, "schemas")
 DOCS_DIR = os.path.join(HOME, "documentation", "properties")
 EXAMPLES_DIR = os.path.join(HOME, "examples")
+EXTENSIONS_DIR = os.path.join(HOME, "extensions")
+EXTENSION_SCHEMAS_DIR = os.path.join(EXTENSIONS_DIR, "schemas")
+EXTENSION_DOCS_DIR = os.path.join(EXTENSIONS_DIR, "documentation", "properties")
 
-_, _, filenames = next(os.walk(SCHEMAS_DIR), (None, None, []))
-SCHEMA_FILES = [f for f in filenames if f.endswith(".json")]
+SCHEMA_FILES = [f for f in os.listdir(SCHEMAS_DIR) if f.endswith(".json")]
 SCHEMA_NAMES = [f.split(".json")[0] for f in SCHEMA_FILES]
 
-_, _, filenames = next(os.walk(DOCS_DIR), (None, None, []))
-DOC_FILES = [f for f in filenames if f.endswith(".md")]
+DOC_FILES = [f for f in os.listdir(DOCS_DIR) if f.endswith(".md")]
 DOC_NAMES = [f.split(".md")[0] for f in DOC_FILES]
 
 _, _, filenames = next(os.walk(EXAMPLES_DIR), (None, None, []))
 EXAMPLE_FILES = [f for f in filenames if f.endswith(".json")]
+
+EXTENSION_FILES = [f for f in os.listdir(EXTENSION_SCHEMAS_DIR) if f.endswith(".json")]
+EXTENSION_DOC_FILES = [f for f in os.listdir(EXTENSION_DOCS_DIR) if f.endswith(".md")]
+EXTENSION_DOC_NAMES = [f.split(".md")[0] for f in EXTENSION_DOC_FILES]
+
+ALLOWED_PROPERTY_CHARS = frozenset(ascii_lowercase + "_" + digits)
 
 # For transition only...
 OLD_SCHEMAS_DIR = os.path.join(HOME, "v1-dev")
@@ -81,10 +89,8 @@ def property_doc_name(property_name: str):
             return doc
 
 
-def fire_load(schema_name):
-    with open(os.path.join(SCHEMAS_DIR, schema_name)) as json_schema:
-        schema = json.load(json_schema)
-    return schema
+def fire_load(schema_name, schemas_dir=SCHEMAS_DIR):
+    return load_jsons((schema_name,), schemas_dir)[0]
 
 
 def fire_stats():

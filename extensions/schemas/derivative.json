@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Derivative Extended Schema",
+  "description": "Extended derivative schema containing all jurisdiction-specific extensions.",
+  "type": "object",
+  "properties": {
+    "period_pnl": {
+      "type": "integer",
+      "monetary": true,
+      "description": "The gains and losses in the period of the hedging instrument(s), associated with the hedged_risk and hedged_percentage. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": ["US"]
+    },
+    "spread": {
+      "type": "integer",
+      "description": "The rate that is added to the relevant index. The paid-spread-over-index rate plus the difference between the fixed coupon on the underlying note and the received fixed rate on the swap. This is represented in basis points (bps). Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": ["US"]
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/derivative.json"
+    }
+  ]
+}

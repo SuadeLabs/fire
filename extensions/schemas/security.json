@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Security Extended Schema",
+  "description": "Extended security schema containing all jurisdiction-specific extensions.",
+  "type": "object",
+  "properties": {
+    "amortised_cost": {
+      "description": "Amortised cost is the purchase price of a debt security adjusted for amortisation of premium or accretion of discount if the debt security was purchased at other than par or face value (for more information, refer to the FR Y-9C Glossary entry for 'premiums and discounts').",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "book_yield": {
+      "description": "The effective interest rate that would be used to determine the allowance for credit losses allocated to the respective security in accordance with ASC Topic 326.",
+      "type": "number",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "comments": {
+      "description": "This field can be used to report any supporting information regarding the instrument, including how it relates to amounts approved in the firm's capital plan.",
+      "type": "string",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "cusip": {
+      "type": "string",
+      "description": "CUSIPs are identifiers created and delivered by the CSB (CUSIP Service Bureau). The CSB is managed on behalf of the American Bankers Association by Standard & Poor's. Security codes are assigned alphabetically from a series that includes deliberate built-in 'gaps' for future expansion. The first six characters which are known as the base (or CUSIP-6) uniquely identify the security. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": ["US"]
+    },
+    "orig_cusip": {
+      "description": "The cusip at origination.",
+      "type": "string",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_notional_amount": {
+      "description": "The notional_amount at origination.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "period_pnl": {
+      "description": "The amount of the quarterly interest expense for the specific instrument net of any adjustments attributable to swaps.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "price": {
+      "description": "The price of a security. In general, this is the value that, when multiplied by the current face value or nominal amount of the security, results in the amount that would be received (excluding accrued interest) if the security were sold at market value. A security whose market value is equal to its outstanding face value has a price of 100. For equity securities, this is the price per share.",
+      "type": "number",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "reversion_base_rate": {
+      "description": "For instruments that convert from paying a fixed rate to paying a coupon/dividend rate that is linked to the rate of a particular index, report the index to which it is linked.",
+      "type": "string",
+      "enum": [
+        "FDTR",
+        "UKBRBASE",
+        "ZERO"
+      ],
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "reversion_spread": {
+      "description": "The rate that is added to the relevant index for instruments that convert from paying a fixed rate to paying a coupon/dividend with a coupon/dividend rate that is linked to the rate of a particular index. This is represented in basis points (bps).",
+      "type": "number",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "spread": {
+      "description": "The rate that is added to the relevant index for instruments with a coupon/dividend rate that is linked to the rate of a particular index (e.g., 1M LIBOR+50bps) at issuance. This is represented in basis points (bps).",
+      "type": "integer",
+      "jurisdictions": [
+        "US"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/security.json"
+    }
+  ]
+}

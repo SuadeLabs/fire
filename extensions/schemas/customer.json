@@ -1,0 +1,378 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Customer Extended Schema",
+  "description": "Extended customer schema containing all jurisdiction-specific extensions.",
+  "type": "object",
+  "properties": {
+    "accounts_payable": {
+      "description": "From the entity's financial statements: The obligations owed to creditors arising from the entity's ongoing operations, including the purchase of goods, materials, supplies, and services. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "accounts_payable_prev": {
+      "description": "From the entity's financial statements: The obligations owed to creditors arising from the entity's ongoing operations, including the purchase of goods, materials, supplies, and services from the previous reporting period. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "accounts_receivable": {
+      "description": "From the entity's financial statements: The money owed to the entity for merchandise or services or services sold on open account. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "accounts_receivable_prev": {
+      "description": "From the entity's financial statements: The money owed to the entity for merchandise or services or services sold on open account from the previous reporting period. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "audit_date": {
+      "description": "The date of the last audited financial statements. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "string",
+      "format": "date-time",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "capital_exp": {
+      "description": "From the entity's financial statements: The funds used to acquire a long-term asset resulting in depreciation deductions over the life of the acquired asset, gross of depreciation. This should include the trailing twelve month period ended one year prior to the financials_date. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "cash_securities": {
+      "description": "From the entity's financial statements: The cash, depository accounts and marketable securities of the entity that can be easily sold and readily converted into cash. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "credit_score": {
+      "description": "The credit score of the borrower. Also see [credit_score_vendor], [credit_score_version] and [credit_score_date]. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "type": "string",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "credit_score_date": {
+      "description": "The date on which the commercially available credit bureau score was obtained. Also see [credit_score_vendor], [credit_score_version] and [credit_score]. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "type": "string",
+      "format": "date-time",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "credit_score_vendor": {
+      "description": "The vendor of the commercially available credit bureau score. Also see [credit_score_date], [credit_score_version] and [credit_score]. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "type": "string",
+      "enum": [
+        "fico",
+        "other",
+        "vantage"
+      ],
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "credit_score_version": {
+      "description": "The version of the commercially available credit bureau score. Also see [credit_score_vendor], [credit_score_date] and [credit_score]. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "type": "string",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "curr_assets": {
+      "description": "From the entity's financial statements: The cash, accounts receivable, inventory, and other assets of the entity that are likely to be converted into cash, sold, exchanged, or expensed in the normal course of business, usually within one year and other assets expected to be converted to cash within a year. Examples include accounts receivable, prepaid expenses, and many negotiable securities as of the financials_date. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "curr_assets_prev": {
+      "description": "From the entity's financial statements: The cash, accounts receivable, inventory, and other assets of the entity that are likely to be converted into cash, sold, exchanged, or expensed in the normal course of business, usually within one year and other assets expected to be converted to cash within a year. This is the data one year prior to the financials_date. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "curr_liabilities": {
+      "description": "From the entity's financial statements: The short-term debt, accounts payable and other current liabilities of the entity that are due within one year. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "curr_liabilities_prev": {
+      "description": "From the entity's financial statements: The short-term debt, accounts payable and other current liabilities of the entity  that are due within one year. This is the data one year prior to financials_date. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "curr_long_term_debt": {
+      "description": "From the entity's financial statements: The portion of long-term debt of the entity due within one year. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "cusip": {
+      "type": "string",
+      "description": "CUSIPs are identifiers created and delivered by the CSB (CUSIP Service Bureau). The CSB is managed on behalf of the American Bankers Association by Standard & Poor's. Customer codes are assigned alphabetically from a series that includes deliberate built-in 'gaps' for future expansion. The first six characters which are known as the base (or CUSIP-6) uniquely identify the customer. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": ["US"]
+    },
+    "depr_amort": {
+      "description": "From the entity's financial statements: The total depreciation and amortisation costs of the entity of tangible and intangible assets allocated against revenue for the current period. This is the data for the trailing twelve month (TTM) period ended on the financials_date. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "financials_date": {
+      "description": "The as of date of the financial information. Also see [accounts_payable], [accounts_receivable], [capital_exp], [cash_securities], [curr_assets], [curr_liabilities], [depr_amort], [fixed_assets], [interest_expense], [inventory], [long_term_debt], [long_term_debt_maturity_amount], [net_income], [net_sales], [operating_income], [retained_earnings], [short_term_debt], [tangible_assets], [total_assets], [total_liabilities]\n\nRefer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "string",
+      "format": "date-time",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "fixed_assets": {
+      "description": "From the entity's financial statements: The tangible property of the entity used in the business and not for resale, net of depreciation. This includes, but is not limited to, buildings, furniture, fixtures, equipment, and land. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "interest_expense": {
+      "description": "From the entity's financial statements: The periodic expense to the entity  of securing short and long-term debt. This is the data for the trailing twelve month (TTM) period ended on the financials_date. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "inventory": {
+      "description": "From the entity's financial statements: The value of the raw materials, work in process, supplies used in operations, finished goods, and merchandise bought for resale of the entity . Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "inventory_prev": {
+      "description": "From the entity's financial statements: The value of the raw materials, work in process, supplies used in operations, finished goods, and merchandise bought for resale of the entity . This is the data one year prior to financials_date. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "long_term_debt": {
+      "description": "From the entity's financial statements: The liabilities of the entity  that are due in one year or more. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "mailing_address": {
+      "description": "The borrower's mailing street address. Must include street prefixes, suffixes, and unit number for condos and co-ops. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "type": "string",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "mailing_city": {
+      "description": "The borrower's mailing city. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "type": "string",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "mailing_postal_code": {
+      "description": "The borrower's mailing zip code. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "string",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "mailing_state": {
+      "description": "The borrower's mailing state. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "type": "string",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "minority_interest": {
+      "description": "The interest of shareholders who, in the aggregate, own less than half the shares in a corporation. On the consolidated balance sheets of companies whose subsidiaries are not wholly owned, the minority interest is shown as a separate equity account or as a liability of indefinite term. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 0.5,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "net_income": {
+      "description": "From the entity's financial statements: The income (or loss) reported by the entity  after expenses and losses have been subtracted from all revenues and gains for the fiscal period including discontinued operations. This is the data for the trailing twelve month (TTM) period ended on the financials_date. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "net_income_prev": {
+      "description": "From the entity's financial statements: The income (or loss) reported by the entity  after expenses and losses have been subtracted from all revenues and gains for the fiscal period including discontinued operations. This is the data for the trailing twelve month (TTM) period ended one year prior to the financials_date. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "net_sales": {
+      "description": "From the entity's financial statements: The gross sales of the entity reduced by cash discounts, trade discounts, and returned sales and allowances for which credit is given to customers less returns and allowances, freight out, and cash discounts allowed for the designated period. This is the data for the trailing twelve month (TTM) period ended on the financials_date. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "net_sales_prev": {
+      "description": "From the entity's financial statements: The gross sales of the entity reduced by cash discounts, trade discounts, and returned sales and allowances for which credit is given to customers less returns and allowances, freight out, and cash discounts allowed for the designated period. This should include the trailing twelve month period ended one year prior to the financials_date. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "noi": {
+      "description": "From the entity's financial statements: The most recent annualized net operating income as of the report date that serves as the primary source of repayment. Also see [noi_date]. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "noi_date": {
+      "description": "The date of the current Net Operating Income (NOI). Also see [noi]. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "string",
+      "format": "date-time",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "operating_income": {
+      "description": "From the entity's financial statements: The amount of profit (or loss) realized from continuing operations of the entity; typically represented as sales less items such as cost of goods sold, operating expenses, amortisation and depreciation. This is the data for the trailing twelve month (TTM) period ended on the financials_date. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "orig_noi": {
+      "description": "The Net Operating Income (NOI) at origination.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "regulator": {
+      "description": "Report the federal regulator of the entity. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "type": "string",
+      "enum": [
+        "fdic",
+        "frb",
+        "occ"
+      ],
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "retained_earnings": {
+      "description": "From the entity's financial statements: The cumulative retained earnings of the entity  less total dividend distributions to shareholders. Typically, it is the prior year's retained earnings plus net income less distributions. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "rssd_id": {
+      "description": "The RSSD ID of the national bank that has a financial interest in the loan. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "type": "string",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "short_term_debt": {
+      "description": "From the entity's financial statements: The debt obligations of the entity with a term of less than one year. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "stock_symbol": {
+      "description": "The Stock Symbol for stocks listed and traded on the regulated exchange. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "string",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "tangible_assets": {
+      "description": "From the entity's financial statements: The assets of the entity having a physical existence, such as cash, equipment, real estate, real property, and personal property such as buildings and machinery; accounts receivable are also usually considered tangible assets for accounting purposes. Tangible assets are distinguished from intangible assets, such as trademarks, copyrights, and goodwill, and natural resources (timberlands, oil reserves, and coal deposits). Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "tin": {
+      "description": "The Taxpayer Identification Number (TIN) assigned to the guarantor by the U.S. Internal Revenue Service (IRS) in the administration of tax laws. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "string",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "total_assets_prev": {
+      "description": "From the entity's financial statements: The sum of the current assets of the entity plus net property, plant, and equipment plus other non-current assets (including, but not limited to, intangible assets, deferred items, and investments and advances). This is the data one year prior to financials_date. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "total_liabilities": {
+      "description": "From the entity's financial statements: The sum of current liabilities plus long-term debt plus other non-current liabilities (including deferred taxes, investment tax credit, and minority interest) of the entity . Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": [
+        "US"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/customer.json"
+    }
+  ]
+}
