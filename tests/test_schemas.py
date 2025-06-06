@@ -324,6 +324,19 @@ class TestCurveSchema:
         }
         self.validator.validate(instance=valid_rate_curve)
 
+    def test_unknown_curve_type(self):
+        # Unknown curve type: numbers are default for backwards compatibility
+        unknown_curve = {
+            "id": "rate_curve_1",
+            "date": "2024-03-20T00:00:00Z",
+            "values": [{"reference": "1m", "value": 0.01}],
+        }
+        self.validator.validate(instance=unknown_curve)
+
+        unknown_curve["values"] = [{"reference": "1m", "value": "AAA"}]
+        with pytest.raises(ValidationError, match="is not of type 'number'"):
+            self.validator.validate(instance=unknown_curve)
+
     def test_invalid_mixed_value_types(self):
         """Test an invalid curve with mixed string and number values"""
         invalid_mixed_curve = {
@@ -336,9 +349,8 @@ class TestCurveSchema:
                 {"reference": "6m", "value": 0.02},
             ],
         }
-        with pytest.raises(ValidationError) as exc_info:
+        with pytest.raises(ValidationError, match="is not of type 'number'"):
             self.validator.validate(instance=invalid_mixed_curve)
-        assert "is not of type 'number'" in str(exc_info.value)
 
 
 class TestBackwardsCompatibility:
