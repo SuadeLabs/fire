@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "city"
-schemas:    [collateral, customer]
+schemas:    [collateral]
 ---
 
 # city

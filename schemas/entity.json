@@ -1055,6 +1055,10 @@
       "minimum": 0.0,
       "maximum": 1.0
     },
+    "postal_code": {
+      "description": "The post (zip) code in which the entity is domiciled.",
+      "type": "string"
+    },
     "relationship": {
       "description": "Relationship to parent.",
       "type": "string",
