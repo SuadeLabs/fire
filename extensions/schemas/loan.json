@@ -103,7 +103,7 @@
     "delinquent_amount_cap": {
       "type": "integer",
       "monetary": true,
-      "description": "The total amount in dollars of the delinquent amount that was capitalized and added to the principal balance through loss mitigation. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "description": "The total amount of the delinquent amount that was capitalized and added to the principal balance through loss mitigation. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
       "jurisdictions": [
         "US"
       ]
