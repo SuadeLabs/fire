@@ -11,6 +11,14 @@
         "US"
       ]
     },
+    "orig_charge": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "The lender charge on collateral at origination. See: charge.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
     "orig_valuation_type": {
       "description": "The value type at origination.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/extensions/collateral.json#/properties/valuation_type",

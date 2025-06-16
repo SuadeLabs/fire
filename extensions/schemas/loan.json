@@ -450,13 +450,6 @@
         "US"
       ]
     },
-    "orig_charge": {
-      "type": "integer",
-      "description": "The charge at origination.",
-      "jurisdictions": [
-        "US"
-      ]
-    },
     "orig_credit_score_vendor": {
       "type": "string",
       "description": "The vendor of the commercially available credit bureau score at origination. Also see [orig_credit_score] and [orig_credit_score_version]. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
