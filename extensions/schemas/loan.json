@@ -624,8 +624,8 @@
       ]
     },
     "orig_spread": {
-      "type": "number",
-      "description": "The spread at origination. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "type": "integer",
+      "description": "The spread at origination. This is represented in basis points (bps). Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
       "jurisdictions": [
         "US"
       ]
