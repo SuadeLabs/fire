@@ -15,10 +15,6 @@
       "minimum": 0,
       "monetary": true
     },
-    "city": {
-      "description": "The city in which the customer is located.",
-      "type": "string"
-    },
     "clearing_threshold": {
       "description": "Status of the clearing threshold as defined in EMIR",
       "type": "string",
@@ -56,10 +52,6 @@
       "type": "number",
       "minimum": 0.0,
       "maximum": 1.0
-    },
-    "postal_code": {
-      "description": "The post (zip) code in which the customer is domiciled.",
-      "type": "string"
     },
     "product_count": {
       "description": "The number of active products/trades this customer has with the firm.",

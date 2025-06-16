@@ -6,12 +6,7 @@
   "allOf": [{
     "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/entity.json"
   }],
-  "properties": {
-    "postal_code": {
-      "description": "The post (zip) code in which the issuer is domiciled.",
-      "type": "string"
-    }
-  },
+  "properties": {},
   "required": ["id", "date"],
   "additionalProperties": true
 }
