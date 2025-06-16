@@ -1,13 +1,13 @@
 ---
 layout:     property
 title:      "orig_charge"
-schemas:    [loan]
+schemas:    [collateral]
 ---
 
 # orig_charge
 
 ---
 
-The charge at origination.
+The lender charge on collateral at origination. See: charge.
 
---- 
+---

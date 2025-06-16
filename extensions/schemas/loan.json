@@ -6,6 +6,7 @@
   "properties": {
     "accrued_interest_after_mod": {
       "type": "integer",
+      "monetary": true,
       "description": "The accrued_interest after the loan has been modified. A loan arrears arrangement or modification refers to a situation where a lender and borrower agree to adjust the terms of an existing loan due to the borrower's difficulty in making scheduled repayments. This typically occurs after the borrower falls behind, enters arrears, or anticipates they soon will.",
       "jurisdictions": [
         "US"
@@ -60,6 +61,7 @@
     },
     "balance_after_mod": {
       "type": "integer",
+      "monetary": true,
       "description": "The remaining balance after the loan has been modified. A loan arrears arrangement or modification refers to a situation where a lender and borrower agree to adjust the terms of an existing loan due to the borrower's difficulty in making scheduled repayments. This typically occurs after the borrower falls behind, enters arrears, or anticipates they soon will.",
       "jurisdictions": [
         "US"
@@ -218,8 +220,8 @@
       ]
     },
     "int_reset_freq": {
-      "type": "string",
-      "description": "The adjustable rate periodic interest reset period. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer",
+      "description": "The adjustable rate periodic interest reset period. Denominated in whole multiples of the interest_repayment_frequency. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
       "jurisdictions": [
         "US"
       ]
@@ -245,6 +247,7 @@
     },
     "inv_term_amount": {
       "type": "integer",
+      "monetary": true,
       "description": "The total debt at the time of any involuntary termination. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
       "jurisdictions": [
         "US"
@@ -302,6 +305,7 @@
     },
     "loss_mitig_amt": {
       "type": "integer",
+      "monetary": true,
       "description": "The total amount that was deferred through loss mitigation. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
       "jurisdictions": [
         "US"
@@ -446,13 +450,6 @@
         "US"
       ]
     },
-    "orig_charge": {
-      "type": "integer",
-      "description": "The charge at origination.",
-      "jurisdictions": [
-        "US"
-      ]
-    },
     "orig_credit_score_vendor": {
       "type": "string",
       "description": "The vendor of the commercially available credit bureau score at origination. Also see [orig_credit_score] and [orig_credit_score_version]. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
@@ -517,8 +514,8 @@
       ]
     },
     "orig_int_reset_freq": {
-      "type": "string",
-      "description": "The adjustable rate periodic interest reset period at origination. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "type": "integer",
+      "description": "The adjustable rate periodic interest reset period at origination. Denominated in whole multiples of the interest_repayment_frequency. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
       "jurisdictions": [
         "US"
       ]
@@ -620,8 +617,8 @@
       ]
     },
     "orig_spread": {
-      "type": "number",
-      "description": "The spread at origination. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "type": "integer",
+      "description": "The spread at origination. This is represented in basis points (bps). Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
       "jurisdictions": [
         "US"
       ]
@@ -663,28 +660,32 @@
     },
     "periodic_pay_cap": {
       "type": "number",
-      "description": "The cap on monthly payments for adjustable rate loans. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "minimum": 0.0,
+      "description": "The cap on monthly payments for adjustable rate loans. Denominated as a percentage between 0 and 100. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
       "jurisdictions": [
         "US"
       ]
     },
     "periodic_pay_floor": {
       "type": "number",
-      "description": "The floor on monthly payments for adjustable rate loans. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "minimum": 0.0,
+      "description": "The floor on monthly payments for adjustable rate loans. Denominated as a percentage between 0 and 100. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
       "jurisdictions": [
         "US"
       ]
     },
     "periodic_rate_cap": {
       "type": "number",
-      "description": "The periodic interest rate cap for adjustable rate loans. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "minimum": 0.0,
+      "description": "The periodic interest rate cap for adjustable rate loans. Denominated as a percentage between 0 and 100. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
       "jurisdictions": [
         "US"
       ]
     },
     "periodic_rate_floor": {
       "type": "number",
-      "description": "The periodic interest rate floor for adjustable rate loans. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "minimum": 0.0,
+      "description": "The periodic interest rate floor for adjustable rate loans. Denominated as a percentage between 0 and 100. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
       "jurisdictions": [
         "US"
       ]
@@ -766,6 +767,7 @@
     },
     "settlement_amount": {
       "type": "integer",
+      "monetary": true,
       "description": "The settlement amount (portion of the outstanding unpaid principal balance) agreed to be paid by the customer. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
       "jurisdictions": [
         "US"
