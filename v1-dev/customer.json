@@ -38,6 +38,11 @@
       "type": "integer",
       "monetary": true
     },
+    "k_ccp_tutorial": {
+      "description": "Hypothetical capital of the QCCP in accordance with Article 50c of Regulation (EU) No 648/2012",
+      "type": "integer",
+      "monetary": true
+    },
     "k_ccp": {
       "description": "Hypothetical capital of the QCCP in accordance with Article 50c of Regulation (EU) No 648/2012",
       "type": "integer",
