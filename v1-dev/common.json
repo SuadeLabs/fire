@@ -589,7 +589,6 @@
       "SEK",
       "SGD",
       "SHP",
-      "SLE",
       "SLL",
       "SOS",
       "SRD",
@@ -627,7 +626,6 @@
       "XBC",
       "XBD",
       "XCD",
-      "XCG",
       "XDR",
       "XOF",
       "XPD",
@@ -639,8 +637,7 @@
       "XXX",
       "YER",
       "ZAR",
-      "ZMW",
-      "ZWG"
+      "ZMW"
     ]
   },
   "day_count_convention": {
