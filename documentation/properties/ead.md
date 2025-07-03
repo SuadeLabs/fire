@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "ead"
-schemas:    [loan, account]
+schemas:    [loan, account, derivative, security]
 ---
 
 # ead

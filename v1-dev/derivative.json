@@ -97,9 +97,24 @@
       "description": "The unique identifier used by the financial institution for the deal to which this derivative belongs.",
       "type": "string"
     },
+    "default_date": {
+      "description": "Date of default.",
+      "type": "string",
+      "format": "date-time"
+    },
     "delta": {
       "description": "Price sensitivity to the underlying.",
       "type": "number"
+    },
+    "ead": {
+      "description": "The EAD field allows users to input monetary exposure-at-default values across the derivative's lifecycle. Upon default, this field must be updated to reflect the final realised EAD value — that is, the actual exposure outstanding at the moment of default.",
+      "type": "integer",
+      "monetary": true
+    },
+    "economic_loss": {
+      "description": "The definition of loss, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss",
+      "monetary": true,
+      "type": "integer"
     },
     "end_date": {
       "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
@@ -340,6 +355,11 @@
     "reporting_id": {
       "description": "The internal ID for the legal entity under which the account is being reported.",
       "type": "string"
+    },
+    "resolution_date": {
+      "description": "Date of resolution of the defaulted facility.",
+      "type": "string",
+      "format": "date-time"
     },
     "rho": {
       "description": "Price sensitivity to interest rates.",

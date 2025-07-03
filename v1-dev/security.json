@@ -219,6 +219,11 @@
       "description": "The unique identifier used by the financial institution to identify the deal for this product that links it to other products of the same or different type.",
       "type": "string"
     },
+    "default_date": {
+      "description": "Date of default.",
+      "type": "string",
+      "format": "date-time"
+    },
     "description": {
       "description": "A more user-friendly description of the security.",
       "type": "string"
@@ -236,6 +241,16 @@
         "cumulative",
         "non_cumulative"
       ]
+    },
+    "ead": {
+      "description": "The EAD field allows users to input monetary exposure-at-default values across the security's lifecycle. Upon default, this field must be updated to reflect the final realised EAD value — that is, the actual exposure outstanding at the moment of default.",
+      "type": "integer",
+      "monetary": true
+    },
+    "economic_loss": {
+      "description": "The definition of loss, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss",
+      "monetary": true,
+      "type": "integer"
     },
     "encumbrance_amount": {
       "description": "The amount of the security that is encumbered by potential future commitments or legal liabilities such as within a repo pool. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -689,6 +704,11 @@
     "reporting_id": {
       "description": "The internal ID for the legal entity under which the account is being reported.",
       "type": "string"
+    },
+    "resolution_date": {
+      "description": "Date of resolution of the defaulted facility.",
+      "type": "string",
+      "format": "date-time"
     },
     "retention_pct": {
       "description": "The percentage of the issuance retained by the issuer. e.g. 0.05 is 5%.",
