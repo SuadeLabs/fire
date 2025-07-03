@@ -219,6 +219,11 @@
       "description": "The unique identifier used by the financial institution to identify the deal for this product that links it to other products of the same or different type.",
       "type": "string"
     },
+    "default_date": {
+      "description": "Date of default.",
+      "type": "string",
+      "format": "date-time"
+    },
     "description": {
       "description": "A more user-friendly description of the security.",
       "type": "string"
@@ -699,6 +704,11 @@
     "reporting_id": {
       "description": "The internal ID for the legal entity under which the account is being reported.",
       "type": "string"
+    },
+    "resolution_date": {
+      "description": "Date of resolution of the defaulted facility.",
+      "type": "string",
+      "format": "date-time"
     },
     "retention_pct": {
       "description": "The percentage of the issuance retained by the issuer. e.g. 0.05 is 5%.",

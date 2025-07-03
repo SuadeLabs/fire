@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "resolution_date"
-schemas:    [account, loan]
+schemas:    [account, loan, derivative, security]
 ---
 
 # resolution_date

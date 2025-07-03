@@ -97,6 +97,11 @@
       "description": "The unique identifier used by the financial institution for the deal to which this derivative belongs.",
       "type": "string"
     },
+    "default_date": {
+      "description": "Date of default.",
+      "type": "string",
+      "format": "date-time"
+    },
     "delta": {
       "description": "Price sensitivity to the underlying.",
       "type": "number"
@@ -350,6 +355,11 @@
     "reporting_id": {
       "description": "The internal ID for the legal entity under which the account is being reported.",
       "type": "string"
+    },
+    "resolution_date": {
+      "description": "Date of resolution of the defaulted facility.",
+      "type": "string",
+      "format": "date-time"
     },
     "rho": {
       "description": "Price sensitivity to interest rates.",
