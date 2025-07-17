@@ -31,6 +31,14 @@
       "description": "CUSIPs are identifiers created and delivered by the CSB (CUSIP Service Bureau). The CSB is managed on behalf of the American Bankers Association by Standard & Poor's. Security codes are assigned alphabetically from a series that includes deliberate built-in 'gaps' for future expansion. The first six characters which are known as the base (or CUSIP-6) uniquely identify the security. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
       "jurisdictions": ["US"]
     },
+    "custodian_country_code": {
+      "type": "string",
+      "description": "Custodians safeguard securities, hold them physically or electronically, and manage related tasks for the security owner. They can be a financial institution, or a US Resident Central Securities Deposits (CSD).",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/country_code",
+      "jurisdictions": [
+        "US"
+      ]
+    },
     "orig_cusip": {
       "description": "The cusip at origination.",
       "type": "string",
