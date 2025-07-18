@@ -148,6 +148,10 @@
         "last_of_layer"
       ]
     },
+    "hedge_id": {
+      "type": "string",
+      "description": "Unique identifier that establishes a relational link between a security and its associated derivative hedge. Enables consistent tracking, aggregation, and reconciliation of hedged positions across systems and datasets."
+    },
     "hedge_sidedness": {
       "type": "string",
       "description": "Whether the hedging instrument provides a one-sided effective offset of the hedged risk, as permitted under ASC 815-20-25-76.\n\nhttps://asc.fasb.org/1943274/2147480682/815-20-25-76",

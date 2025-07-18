@@ -356,6 +356,10 @@
       "description": "The unique identifier for the guarantor within the financial institution.",
       "type": "string"
     },
+    "hedge_id": {
+      "type": "string",
+      "description": "Unique identifier that establishes a relational link between a security and its associated derivative hedge. Enables consistent tracking, aggregation, and reconciliation of hedged positions across systems and datasets."
+    },
     "hedged_percentage": {
       "description": "In the case of a designated fair value hedge, the portion of the asset being hedged, as determined according to ASC 815-20-25-12 (b) and ASC 815-20-25-12A.",
       "type": "number",
