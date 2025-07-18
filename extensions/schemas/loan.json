@@ -338,6 +338,14 @@
       "jurisdictions": [
         "US"
       ]
+      },
+      "mod_house_debt_payments": {
+      "type": "integer",
+      "monetary": true,
+      "description": "A borrower's total monthly debt payments relating to proposed housing expenses after modification. Typically used after a borrower enters arrears or anticipates repayment difficulty.",
+      "jurisdictions": [
+        "US"
+      ]
     },
     "mod_monthly_payments": {
       "type": "integer",
@@ -487,6 +495,14 @@
     "orig_facility_id": {
       "type": "string",
       "description": "The facility_id at origination.",
+      "jurisdictions": [
+        "US"
+      ]
+      },
+      "orig_house_debt_payments": {
+      "type": "integer",
+      "monetary": true,
+      "description": "A borrower's total monthly debt payments relating to proposed housing expenses at origination.",
       "jurisdictions": [
         "US"
       ]
@@ -791,6 +807,14 @@
       "type": "string",
       "format": "date-time",
       "description": "The date designating when the loan was classified as a Troubled Debt Restructuring (TDR). Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "termination_value": {
+      "type": "integer",
+      "monetary": true,
+      "description": "Total projected market value of the lease at termination (leased vehicles only).",
       "jurisdictions": [
         "US"
       ]
