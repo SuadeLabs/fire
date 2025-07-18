@@ -149,6 +149,11 @@
     "ccf": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/ccf"
     },
+    "charge": {
+      "description": "Lender charge on collateral, 1 indicates first charge, 2 second and so on. 0 indicates a combination of charge levels.",
+      "type": "integer",
+      "minimum": 0
+    },
     "cost_center_code": {
       "description": "The organizational unit or sub-unit to which costs/profits are booked.",
       "type": "string"
