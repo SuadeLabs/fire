@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"charge"
-schemas:	[collateral,loan]
+schemas:	[collateral, loan]
 ---
 # charge
 
