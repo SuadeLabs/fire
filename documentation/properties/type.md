@@ -1523,6 +1523,14 @@ The most common XCS, and that traded in interbank markets, is a mark-to-market (
 ├── cash
 ├── security
 ├── auto
+│   ├── auto_other
+│   ├── car
+│   ├── convertible
+│   ├── luxury
+│   ├── sport
+│   ├── suv
+│   ├── truck
+│   └── van
 └── other
 ```
 
@@ -1692,6 +1700,38 @@ This identifies that the piece of collateral used is a security, as mapped via t
 ### auto
 
 This identifies a motor vehicle (such as an automobile, truck, or other types of vehicles) that is pledged by a borrower as collateral to secure a loan. If the borrower defaults on the loan, the lender has the legal right to seize the vehicle and sell it to recover the outstanding debt.
+
+### auto_other
+
+This identifies any other motor vehicle not covered in other attributes that is pledged by a borrower as collateral to secure a loan. If the borrower defaults on the loan, the lender has the legal right to seize the vehicle and sell it to recover the outstanding debt.
+
+### car
+
+This identifies a standard passenger vehicle (sedan, coupe, hatchback) that is pledged by a borrower as collateral to secure a loan. If the borrower defaults on the loan, the lender has the legal right to seize the vehicle and sell it to recover the outstanding debt.
+
+### convertible
+
+This identifies a vehicle with a retractable roof for open-air or enclosed driving that is pledged by a borrower as collateral to secure a loan. If the borrower defaults on the loan, the lender has the legal right to seize the vehicle and sell it to recover the outstanding debt.
+
+### luxury
+
+This identifies a premium vehicle that offers high-end features, superior materials, advanced technology, and enhanced comfort that is pledged by a borrower as collateral to secure a loan. If the borrower defaults on the loan, the lender has the legal right to seize the vehicle and sell it to recover the outstanding debt.
+
+### sport
+
+This identifies a high-performance automobile typically designed with enhanced speed, acceleration, handling, and sporty aesthetics that is pledged by a borrower as collateral to secure a loan. If the borrower defaults on the loan, the lender has the legal right to seize the vehicle and sell it to recover the outstanding debt.
+
+### suv
+
+This identifies a sport utility vehicle combining on-road comfort and off-road capability that is pledged by a borrower as collateral to secure a loan. If the borrower defaults on the loan, the lender has the legal right to seize the vehicle and sell it to recover the outstanding debt.
+
+### truck
+
+This identifies a motor vehicle designed for transporting cargo that is pledged by a borrower as collateral to secure a loan. If the borrower defaults on the loan, the lender has the legal right to seize the vehicle and sell it to recover the outstanding debt.
+
+### van
+
+This identifies a box-like motor vehicle for passengers or cargo, including minivans and full-size vans that is pledged by a borrower as collateral to secure a loan. If the borrower defaults on the loan, the lender has the legal right to seize the vehicle and sell it to recover the outstanding debt.
 
 ### other
 
