@@ -8,5 +8,5 @@ schemas:    [derivative, security]
 
 ---
 
-Unique identifier that establishes a relational link between a security and its associated derivative hedge. Enables consistent tracking, aggregation, and reconciliation of hedged positions across systems and datasets.
+Unique identifier that establishes a relational link between a derivative or a security and its associated derivative hedge (`id` of another derivative). Enables consistent tracking, aggregation, and reconciliation of hedged positions across systems and datasets.
 --- 
