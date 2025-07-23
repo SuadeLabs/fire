@@ -14,7 +14,7 @@ For additional details refer to: https://www.federalreserve.gov/apps/reportingfo
 
 ```bash
 ├── alt_a
-├── goverment_owned
+├── government_owned
 ├── non_prime
 └── prime
 ```
@@ -22,7 +22,7 @@ For additional details refer to: https://www.federalreserve.gov/apps/reportingfo
 ### alt_a
 Alt-A is a classification of mortgages with a risk profile falling between prime and subprime. They can be considered high risk due to provision factors customized by the lender. This type of loan tends to be more expensive for the borrower, as they may carry higher interest rates and/or fees. Refer to https://www.investopedia.com/terms/a/alt-a.asp.
 
-### goverment_owned
+### government_owned
 A mortgage loan that is owned or guaranteed by a government entity such as Fannie Mae, Freddie Mac, or Ginnie Mae, or other government-sponsored enterprises.
 
 ### non_prime

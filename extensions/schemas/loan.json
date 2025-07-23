@@ -42,6 +42,7 @@
         "refinancing",
         "renewal",
         "reo",
+        "short_sale",
         "temporary",
         "term_ext",
         "term_prin_forgive",
@@ -86,7 +87,7 @@
       "description": "The credit class designation as defined by the servicer. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
       "enum": [
         "alt_a",
-        "goverment_owned",
+        "government_owned",
         "non_prime",
         "prime"
       ],
@@ -602,6 +603,7 @@
       "enum": [
         "combined",
         "interest_only",
+        "option_arm",
         "other",
         "repayment"
       ],

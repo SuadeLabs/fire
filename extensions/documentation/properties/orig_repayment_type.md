@@ -13,6 +13,7 @@ The repayment_type at origination.
 ```bash
 ├── combined
 ├── interest_only
+├── option_arm
 ├── other
 └── repayment
 ```
@@ -22,6 +23,9 @@ Combined Repayment - A hybrid repayment structure that combines different repaym
 
 ### interest_only
 Interest Only - The borrower is only required to pay the interest portion of the loan for a specified period. During this period, no principal is being repaid, and the loan balance remains unchanged.
+
+### option_arm
+Option ARM - An option or payment-option ARM is an adjustable rate mortgage with several possible payment choices. 
 
 ### other
 Other Repayment Type - A repayment structure that doesn't fit into the standard categories. This could include specialized or custom repayment arrangements that are unique to specific loan products or borrower circumstances.
