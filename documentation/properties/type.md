@@ -740,18 +740,22 @@ Mortgages insured by the Department of Veterans Affairs.
 │   ├── mtn
 │   │   └── emtn
 │   ├── pibs
-│   └── abs
+│   ├── ars
+│   ├── abs
 │       ├── abs_lease
 │       │   └── abs_auto
 │       ├── abs_cc
 │       ├── abs_consumer
 │       ├── abs_corp
+│       ├── abs_sl
 │       ├── abs_sme
 │       │   ├── abs_sme_corp
 │       │   └── abs_sme_retail
 │       ├── abs_trade_rec
 │       ├── abs_wholesale
 │       ├── abs_other
+│       ├── cdo
+│           └── clo
 │       └── mbs
 │           ├── rmbs
 │           │   └── rmbs_income
@@ -870,6 +874,10 @@ Structure notes shall comprise contracts with embedded derivatives that are not 
 
 A special purpose vehicle is a separate legal entity created to fulfil a certain purpose for the parent.
 
+### ars
+An auction rate security (ARS) is a long term security with a variable interest rate that is periodically reset through an auction process.
+(https://www.federalreserve.gov/apps/mdrm/data-dictionary/search/item?keyword=P084%20&show_short_title=False&show_conf=False&rep_status=All&rep_state=Opened&rep_period=Before&date_start=20190808&date_end=20190808)
+
 ### abs
 
 An asset-backed security is a security whose income payments and hence value are derived from and collateralised (or "backed") by a specified pool of underlying assets. The pool of assets is typically a group of small and illiquid assets which are unable to be sold individually. Pooling the assets into financial instruments allows them to be sold to general investors, a process called securitisation. This allows the risk of investing in the underlying assets to be diversified because each security will represent a fraction of the total value of the diverse pool of underlying assets. The pools of underlying assets can include common payments from credit cards, auto loans, and mortgage loans, to esoteric cash flows from aircraft leases, royalty payments and movie revenues.
@@ -905,6 +913,9 @@ Asset-backed securities backed by corporate loans.
 
 Asset-backed securities backed by trade receivables.
 
+### abs_sl
+Asset-backed securities backed by student loans.
+
 ### abs_sme
 
 Asset-backed securities backed by SME loans.
@@ -928,6 +939,12 @@ Asset-backed securities backed by wholesale credit.
 ### abs_other
 
 Any other asset-backed securitisation not encompassed by one of the other classifications.
+
+### cdo
+Collateralized debt obligations: Asset-backed securities backed by a portfolio of fixed income assets.
+
+### clo
+Collateralized loan obligations : Asset-backed securities backed by a portfolio of loans.  In general, CLOs are backed by a variety of loans, including whole commercial loans, revolving credit facilities, letters of credit, and bankers’ acceptances.
 
 ### mbs
 
