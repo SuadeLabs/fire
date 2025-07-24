@@ -79,3 +79,6 @@ The bond shall be repaid using revenue from transportation infrastructure like t
 
 ### revenue_utilities
 The bond shall be repaid through user fees or service charges from public utility services (e.g., water, electricity).
+
+### other
+The bond shall be repaid using any other repayment method
