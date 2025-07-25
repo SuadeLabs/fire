@@ -784,6 +784,25 @@
         "subordinated_unsecured"
       ]
     },
+    "servicing": {
+      "description": "The method by which the debt shall be repaid",
+      "type": "string",
+      "enum": [
+        "app_backed",
+        "general_obligation",
+        "other",
+        "revenue",
+        "revenue_education",
+        "revenue_health",
+        "revenue_ind_dev",
+        "revenue_multi_housing",
+        "revenue_other",
+        "revenue_single_housing",
+        "revenue_tax",
+        "revenue_transport",
+        "revenue_utilities"
+      ]
+    },
     "sft_type": {
       "description": "The sft_type parameter defines the transaction mechanism conducted for the SFT for this security product.",
       "type": "string",
