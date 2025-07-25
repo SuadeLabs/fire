@@ -39,7 +39,9 @@ The [official interest rate][official] is the interest rate paid on commercial b
 
 ```bash
 ├── FDTR
+├── FESR
 ├── UKBRBASE
+├── USTSR
 ├── ZERO
 ├── cert_dep
 ├── cofi
@@ -68,8 +70,14 @@ The [official interest rate][official] is the interest rate paid on commercial b
 ### FDTR
 The base rate is tied to the Federal Reserve's target rate for the federal funds rate. This is the interest rate that banks charge each other for overnight loans of federal funds.
 
+### FESR
+The base rate is tied to the Federal Funds Effective Swap Rate.
+
 ### UKBRBASE
 The base rate is linked to the Bank of England's base rate, which is the interest rate that the Bank of England charges banks for secured overnight lending.
+
+### USTSR
+The base rate is tied to the US Treasury Security Interest Rate.
 
 ### ZERO
 The base rate is set to zero, indicating that the loan's interest rate is not tied to any external benchmark rate.

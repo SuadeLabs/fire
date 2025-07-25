@@ -37,7 +37,9 @@
       "type": "string",
       "enum": [
         "FDTR",
+        "FESR",
         "UKBRBASE",
+        "USTSR",
         "ZERO"
       ]
     },
