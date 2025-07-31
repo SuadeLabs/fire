@@ -108,7 +108,12 @@ Indicates that the product is a revolving credit. Revolving credit is a type of 
 ```bash
 ├── paid_up
 ├── called_up
+├── conversion
 ├── bankruptcy_remote
+├── other
+├── redeemed_and_replaced
+├── redeemed_not_replaced
+├── refinanced
 ├── unsettled
     └── free_deliveries
 └── non_operational
@@ -117,6 +122,24 @@ Indicates that the product is a revolving credit. Revolving credit is a type of 
 ### paid_up
 This indicates that capital has been [paid up][paidup] by the shareholders to the company that issued the shares.
 When used in combination with the purpose attribute, 'default_fund', equates to prefunded default fund contributions.
+
+### conversion
+The instrument was converted into another form, such as preferred stock converting into common equity.
+
+### redeemed_and_replaced
+The instrument was redeemed and a new instrument was issued to replace it (e.g., to maintain capital levels).
+
+### redeemed_not_replaced
+The instrument was redeemed and not replaced, reducing the outstanding capital base.
+
+### refinanced
+The instrument was redeemed and replaced with a different type of funding, such as debt or equity.
+
+### conversion
+The instrument was converted into another form, such as preferred stock converting into common equity.
+
+### other
+Any other redemption-related action not captured by the other redemption categories.
 
 ### called_up
 This indicates that capital has been [called up][calledup] by the company issuing the shares but has not been paid yet by the shareholders.
@@ -163,3 +186,18 @@ From [CRE70.10](https://www.bis.org/basel_framework/chapter/CRE/70.htm#:~:text=C
 [reg-d]: https://www.ecfr.gov/cgi-bin/retrieveECFR?gp=&SID=fe8bd6e281e0788a9ba7efda92e96e2f&mc=true&n=pt12.2.204&r=PART&ty=HTML#se12.2.204_12
 [CRE70]: https://www.bis.org/basel_framework/chapter/CRE/70.htm
 [investopedia-revolving-credit]:https://www.investopedia.com/terms/r/revolvingcredit.asp
+
+
+## Loan
+```bash
+├── actual
+├── committed
+    ├── cancellable
+    └── revolving
+├── cancelled
+├── closed
+├── defaulted
+└── frozen
+```
+### actual
+This is a live loan.
