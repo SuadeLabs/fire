@@ -646,6 +646,7 @@
         "deferred_tax",
         "depreciation",
         "expense",
+        "financial_lease",
         "income",
         "intangible",
         "internet_only",

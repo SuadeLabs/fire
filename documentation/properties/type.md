@@ -1082,6 +1082,7 @@ Index securities are reference records recording the details of an index using t
 ├── current
 │   └── current_io
 ├── debit_card (pending)
+├── financial_lease
 ├── internet_only
 ├── ira
 ├── isa
@@ -1152,6 +1153,10 @@ A credit card is then defined in Article 2 (34) and (5) as:
 
 > credit card means a category of payment instrument that enables the payer to initiate a credit card transaction;
 > credit card transaction means a card-based payment transaction where the amount of the transaction is debited in full or in part at a pre agreed specific calendar month date to the payer, in line with a prearranged credit facility, with or without interest;
+
+### financial_lease
+
+A finance lease is an arrangement under which one person (the lessor) provides the money to buy an asset which is used by another (the lessee) in return for an interest charge. A lease liability, in this case, is the present value of the future obligations under the lease agreement.
 
 ### current (checking, demand)
 
