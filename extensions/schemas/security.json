@@ -53,6 +53,15 @@
       "jurisdictions": [
         "US"
       ]
+      },
+    "orig_rate": {
+      "description": " the coupon/dividend rate for the instrument at issuance.",
+      "type": "integer",
+      "monetary": true,
+      "$ref": "https://suade.org/fire/book/documentation/properties/rate.html",
+      "jurisdictions": [
+        "US"
+      ]
     },
     "period_pnl": {
       "description": "The amount of the quarterly interest expense for the specific instrument net of any adjustments attributable to swaps.",
@@ -65,6 +74,13 @@
     "price": {
       "description": "The price of a security. In general, this is the value that, when multiplied by the current face value or nominal amount of the security, results in the amount that would be received (excluding accrued interest) if the security were sold at market value. A security whose market value is equal to its outstanding face value has a price of 100. For equity securities, this is the price per share.",
       "type": "number",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "qtd_divi_coupon_rate": {
+      "description": "The coupon/dividend rate paid in the reporting quarter.",
+      "type": "integer",
       "jurisdictions": [
         "US"
       ]
