@@ -879,9 +879,9 @@
         "non_operational",
         "other",
         "paid_up",
-        "redeemed_and_replaced",
-        "redeemed_not_replaced",
+        "redeemed",
         "refinanced",
+        "replaced",
         "unsettled"
       ]
     },
