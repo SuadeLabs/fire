@@ -111,9 +111,9 @@ Indicates that the product is a revolving credit. Revolving credit is a type of 
 ├── conversion
 ├── bankruptcy_remote
 ├── other
-├── redeemed_and_replaced
-├── redeemed_not_replaced
-├── refinanced
+├── redeemed
+   ├── refinanced
+   └── replaced
 ├── unsettled
     └── free_deliveries
 └── non_operational
@@ -126,10 +126,10 @@ When used in combination with the purpose attribute, 'default_fund', equates to 
 ### conversion
 The instrument was converted into another form, such as preferred stock converting into common equity.
 
-### redeemed_and_replaced
+### replaced
 The instrument was redeemed and a new instrument was issued to replace it (e.g., to maintain capital levels).
 
-### redeemed_not_replaced
+### redeemed
 The instrument was redeemed and not replaced, reducing the outstanding capital base.
 
 ### refinanced
