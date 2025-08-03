@@ -721,12 +721,24 @@ Mortgages insured by the Department of Veterans Affairs.
 ```bash
 ├── equity
 │   ├── dividend
+│   ├── reit_pref
 │   ├── share
+│   │   ├── common
+│   │   ├── cpp
+│   │   ├── cs_usg
+│   │   ├── cs_warrant
+│   │   ├── mcp
+│   │   ├── mcp_usg
 │   │   ├── treasury
-│   │   └── pref_share
+│   │   ├── pref_share
+│   │   └── cpp_tarp_pref
 │   ├── share_agg
-│   └── speculative_unlisted
-│   └── main_index_equity
+│   ├── speculative_unlisted
+│   ├── trups
+│   ├── trups_usg_pref
+│   ├── main_index_equity
+│   ├── nccp
+│   └── ncpp_convertible
 ├── debt
 │   ├── bond
 │   ├── covered_bond
@@ -793,6 +805,50 @@ A **cash** or cash-equivalent security such as a securitisation of cash deposits
 
 > "Cash on hand" includes holdings of national and foreign banknotes and coins in circulation that are commonly used to make payments.
 
+### common
+
+This is common stock, which is a child of _equity_, _share_ to be used when common equity tier 1 instruments are specified
+
+### cpp_tarp_pref
+
+This is CPP TARP Preferred - cumulative preferred stock issued under the capital purchase program (CPP) of the troubled asset relief program (TARP), which is a child of _equity_, _share_
+
+### cpp
+
+This is cumulative perpetual preferred (CPP) - perpetual preferred shares with cumulative dividends, which is a child of _equity_, _share_ 
+
+### mcp
+
+This is mandatory convertible preferred (mcp) - preferred equity instruments that mandatorily convert into common equity, which is a child of _equity_, _share_ 
+
+### mcp_usg
+
+This is MCP USG Preferred - Government-purchased Mandatory Convertible Preferred stock, which is a child of _equity_, _share_ 
+
+### ncpp
+
+This is NCPP Redeemable – Non-Cumulative Perpetual Preferred security that may be redeemed by the issuer at its discretion
+
+### reit_pref
+
+This is REIT Preferred - Preferred stock issued by a Real Estate Investment Trust subsidiary
+
+### trups_usg_pref
+
+USG Preferred TRUPS - Trust Preferred Securities purchased by the U.S. Government, which is a child of _equity_
+
+### ncpp_convertible
+
+This is NCPP Convertible - Non-Cumulative Perpetual Preferred security that can be converted into common equity, which is a child of _debt_
+
+### cs_usg
+
+This is CS USG Investment - Common Stock (CS) purchased by the U.S. Government as part of a direct investment program, which is a child of _equity_, _share_ 
+
+### cs_warrant
+
+This is CS Warrants - Warrants to purchase common stock issued alongside TARP or other capital instruments, which is a child of _equity_, _share_ 
+
 ### equity
 
 This is a "catch all" term for equity instruments such as _share_, _share_agg_ to be used when further granularity is not available or not needed.
@@ -819,6 +875,10 @@ As per OSFI and BCBS, a Speculative unlisted equity is defined as "an equity inv
 ### treasury
 
 According to IAS 32.33, if an entity reacquires its own equity instruments, those instruments shall be considered **treasury shares**, and shall be deducted from equity.
+
+### trups
+
+This is cumulative dated preferred (TRUPS) - trust Preferred Securities (trups) with cumulative dividends and a defined maturity date, which is a child of _equity_,
 
 ### main_index_equity
 

@@ -108,7 +108,12 @@ Indicates that the product is a revolving credit. Revolving credit is a type of 
 ```bash
 ├── paid_up
 ├── called_up
+├── conversion
 ├── bankruptcy_remote
+├── other
+├── redeemed
+   ├── refinanced
+   └── replaced
 ├── unsettled
     └── free_deliveries
 └── non_operational
@@ -117,6 +122,24 @@ Indicates that the product is a revolving credit. Revolving credit is a type of 
 ### paid_up
 This indicates that capital has been [paid up][paidup] by the shareholders to the company that issued the shares.
 When used in combination with the purpose attribute, 'default_fund', equates to prefunded default fund contributions.
+
+### conversion
+The instrument was converted into another form, such as preferred stock converting into common equity.
+
+### replaced
+The instrument was redeemed and a new instrument was issued to replace it (e.g., to maintain capital levels).
+
+### redeemed
+The instrument was redeemed and not replaced, reducing the outstanding capital base.
+
+### refinanced
+The instrument was redeemed and replaced with a different type of funding, such as debt or equity.
+
+### conversion
+The instrument was converted into another form, such as preferred stock converting into common equity.
+
+### other
+Any other redemption-related action not captured by the other redemption categories.
 
 ### called_up
 This indicates that capital has been [called up][calledup] by the company issuing the shares but has not been paid yet by the shareholders.
