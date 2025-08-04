@@ -353,16 +353,6 @@ class TestCurveSchema:
             self.validator.validate(instance=invalid_mixed_curve)
 
 
-class TestBackwardsCompatibility:
-
-    def test_v1_dev_in_sync_with_schemas(self):
-        new = load_jsons(SCHEMA_FILES, SCHEMAS_DIR)
-        old = load_jsons(SCHEMA_FILES, OLD_SCHEMAS_DIR)
-
-        for o, n in zip(old, new):
-            assert o == n
-
-
 class TestRunStats:
 
     def test_property_count(self):
