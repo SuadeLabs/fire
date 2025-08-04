@@ -12,6 +12,8 @@ The **currency_code** represents the currency of the data object and all the rel
 
 Currencies are represented as 3-letter codes in accordance with [ISO 4217][iso4217] standards.
 
+The following currency codes are deprecated and will be removed from Jan 2026: ANG, CUC, HRK, SLL, USS, ZWL.
+
 ---
 
 [acc]: https://github.com/suadelabs/fire/blob/master/documentation/properties/accrued_interest.md
