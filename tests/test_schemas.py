@@ -11,7 +11,6 @@ from . import (
     DOC_NAMES,
     EXAMPLES_DIR,
     EXAMPLE_FILES,
-    OLD_SCHEMAS_DIR,
     SCHEMAS_DIR,
     SCHEMA_FILES,
     SCHEMA_NAMES,
