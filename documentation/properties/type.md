@@ -667,7 +667,7 @@ Nostro loans are the firm's accounts at other financial institutions which are i
 
 ### financial_lease
 
-From the [UK Gov](https://www.gov.uk/hmrc-internal-manuals/business-leasing-manual/blm00040), a finance lease is an arrangement under which one person (the lessor) provides the money to buy an asset which is used by another (the lessee) in return for an interest charge. The lessor has security because they own the asset. The terms of the leasing arrangements aim to give the lessor an interest like turn and no more or less – however good or bad the asset proves to be for the end user.
+From the [UK Gov](https://www.gov.uk/hmrc-internal-manuals/business-leasing-manual/blm00040), a finance lease is an arrangement under which one person (the lessor) provides the money to buy an asset which is used by another (the lessee) in return for an interest charge. The lessor has security because they own the asset. The terms of the leasing arrangements aim to give the lessor an interest like turn and no more or less – however good or bad the asset proves to be for the end user. See also: [Wikipedia: Finance Lease](https://en.wikipedia.org/wiki/Finance_lease)
 
 ### education
 
@@ -1142,6 +1142,7 @@ Index securities are reference records recording the details of an index using t
 ├── current
 │   └── current_io
 ├── debit_card (pending)
+├── financial_lease
 ├── internet_only
 ├── ira
 ├── isa
@@ -1212,6 +1213,10 @@ A credit card is then defined in Article 2 (34) and (5) as:
 
 > credit card means a category of payment instrument that enables the payer to initiate a credit card transaction;
 > credit card transaction means a card-based payment transaction where the amount of the transaction is debited in full or in part at a pre agreed specific calendar month date to the payer, in line with a prearranged credit facility, with or without interest;
+
+### financial_lease
+
+A finance lease is an arrangement under which one person (the lessor) provides the money to buy an asset which is used by another (the lessee) in return for an interest charge. A lease liability, in this case, is the present value of the future obligations under the lease agreement. (see Loan - financial_lease above)
 
 ### current (checking, demand)
 
