@@ -875,6 +875,10 @@
       "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
       "type": "string"
     },
+    "spread": {
+      "description": "The additional rate that is added to the relevant index for instruments with a coupon/dividend rate that is linked to the rate of a particular index (e.g., 1M LIBOR+50bps) at issuance. This is represented in basis points (bps).",
+      "type": "integer"
+    },
     "start_date": {
       "description": "The timestamp that the trade or financial product commences. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",

@@ -407,6 +407,10 @@
       "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
       "type": "string"
     },
+    "spread": {
+      "type": "integer",
+      "description": "The additional rate that is added to the relevant index. The paid-spread-over-index rate plus the difference between the fixed coupon on the underlying note and the received fixed rate on the swap. This is represented in basis points (bps). Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information."
+    },
     "start_date": {
       "description": "Contract effective or commencement date; security issue date. Format YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",

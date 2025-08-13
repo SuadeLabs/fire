@@ -26,8 +26,11 @@ The bankruptcy chapter of the borrower.
 ### chapter_13
 [Chapter 13][chapter_13] of the Bankruptcy Code provides for adjustment of debts of an individual with regular income. Chapter 13 allows a debtor to keep property and pay debts over time, usually three to five years.
 
+### court_administration
+Any proceeding involving the intervention of a judicial body or similar aimed at reaching a refinancing agreement among the creditors, with the exception of any bankruptcy or insolvency proceedings.
+
 ### other
-Use this when the customer is understood to be bankrupt but where the exact bankruptcy chapter is unknown or does not meet another definition within the taxonomy. 
+Use this when the customer is understood to be bankrupt but where the exact bankruptcy chapter is unknown or does not meet another definition within the taxonomy.
 
 
 ---

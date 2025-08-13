@@ -87,13 +87,6 @@
       "jurisdictions": [
         "US"
       ]
-    },
-    "spread": {
-      "description": "The rate that is added to the relevant index for instruments with a coupon/dividend rate that is linked to the rate of a particular index (e.g., 1M LIBOR+50bps) at issuance. This is represented in basis points (bps).",
-      "type": "integer",
-      "jurisdictions": [
-        "US"
-      ]
     }
   },
   "allOf": [
