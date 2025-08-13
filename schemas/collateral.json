@@ -30,6 +30,11 @@
       "description": "The city in which the property is located.",
       "type": "string"
     },
+    "claims": {
+      "description": "The total amount of 3rd party claims on the collateral.",
+      "type": "integer",
+      "monetary": true
+    },
     "country_code": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/country_code",
       "description": "The country of collateral. Two-letter country code as defined according to ISO 3166-1."

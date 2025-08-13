@@ -261,20 +261,6 @@
         "US"
       ]
     },
-    "lifetime_rate_cap": {
-      "type": "number",
-      "description": "The lifetime interest rate cap for adjustable rate loans. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
-      "jurisdictions": [
-        "US"
-      ]
-    },
-    "lifetime_rate_floor": {
-      "type": "number",
-      "description": "The lifetime interest rate floor for adjustable rate loans. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
-      "jurisdictions": [
-        "US"
-      ]
-    },
     "liq_method": {
       "type": "string",
       "description": "The liquidation method for any loan. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
@@ -794,13 +780,6 @@
     "snc_id": {
       "type": "string",
       "description": "Where the credit facility is reported in the Shared National Credit collection and the reporting entity is the lead bank/agent, this field indicates the entities Internal Credit ID as reported in the Shared National Credit collection for this credit facility as of the most recent filing date. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
-      "jurisdictions": [
-        "US"
-      ]
-    },
-    "spread": {
-      "type": "integer",
-      "description": "The rate that is added to the relevant index to determine the monthly interest rate of the loan. This is represented in basis points (bps). Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
       "jurisdictions": [
         "US"
       ]

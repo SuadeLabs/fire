@@ -437,6 +437,14 @@
       "minimum": 0.0,
       "maximum": 1.0
     },
+    "lifetime_rate_cap": {
+      "type": "number",
+      "description": "The lifetime interest rate cap for adjustable rate loans. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information."
+    },
+    "lifetime_rate_floor": {
+      "type": "number",
+      "description": "The lifetime interest rate floor for adjustable rate loans. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information."
+    },
     "limit_amount": {
       "description": "The total credit limit on the loan. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
@@ -770,6 +778,10 @@
     "source": {
       "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
       "type": "string"
+    },
+    "spread": {
+      "type": "integer",
+      "description": "The additional rate that is added to the relevant base rate to determine the monthly interest rate of the loan. This is represented in basis points (bps). Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information."
     },
     "start_date": {
       "description": "The timestamp that the trade or financial product commences. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
