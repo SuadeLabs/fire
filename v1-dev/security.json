@@ -900,6 +900,11 @@
         "unsettled"
       ]
     },
+    "status_date": {
+      "description": "Provides the date on which the security status was executed.",
+      "type": "string",
+      "format": "date-time"
+    },    
     "stress_change": {
       "description": "The level of variation on the security's price or haircut or during a 30 day calendar market stress period in percentage terms",
       "type": "number",
