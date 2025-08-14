@@ -690,6 +690,9 @@
       "enum": [
         "combined",
         "fixed",
+        "fixed_to_fixed",
+        "fixed_to_float",
+        "step_up",
         "tracker",
         "variable"
       ]
