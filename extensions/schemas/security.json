@@ -71,24 +71,8 @@
     },
     "reversion_base_rate": {
       "description": "For instruments that convert from paying a fixed rate to paying a coupon/dividend rate that is linked to the rate of a particular index, report the index to which it is linked.",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/security.json#/base_rate",
       "type": "string",
-      "enum": [
-        "FDTR",
-        "UKBRBASE",
-        "ZERO",
-        "bbsw",
-        "bbsw_3m",
-        "euribor",
-        "euribor_1m",
-        "euribor_3m",
-        "euribor_6m",
-        "other",
-        "pboc",
-        "sofr",
-        "sofr_1m",
-        "sofr_3m",
-        "sofr_6m"
-      ],
       "jurisdictions": [
         "US"
       ]
