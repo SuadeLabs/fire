@@ -636,7 +636,7 @@
     },
     "orig_valuation_type": {
       "description": "The value type at origination.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/extensions/collateral.json#/properties/valuation_type",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/extensions/schemas/collateral.json#/properties/valuation_type",
       "jurisdictions": [
         "US"
       ]
