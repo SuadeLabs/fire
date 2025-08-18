@@ -59,6 +59,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── fines
 ├── firm_operating_expenses
 │   ├── computer_and_it_cost
+│   │   └── it_outsourcing
 │   ├── computer_software
 │   ├── non_life_ins_premium
 │   ├── occupancy_cost
@@ -487,6 +488,9 @@ Describes an account representing the part of staff expenses corresponding to th
 
 ### computer_and_it_costs
 Describes an account representing the part of operating expenses corresponding to the **computer_and_it_costs** paid by the reporting entity.
+
+### it_outsourcing
+Describes an account representing the part of operating expenses corresponding to the **it_outsourcing**, a specific type of **computer_and_it_costs**, paid by the reporting entity.
 
 ### computer_software
 Computer software intangibles. Required for BCAR RWA calculation and Reporting.  Ref: BCAR 40.290; Chapter 4, P164
