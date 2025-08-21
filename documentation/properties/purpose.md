@@ -79,10 +79,12 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── fx
 ├── intangible
 ├── interest
+│   ├── int_on_asset
 │   ├── int_on_bond_and_frn
 │   ├── int_on_deposit
 │   ├── int_on_derivative
 │   │   └── int_on_deriv_hedge
+│   ├── int_on_liability
 │   ├── int_on_loan_and_adv
 │   │   ├── int_on_bridging_finance
 │   │   ├── int_on_mortgage
@@ -419,11 +421,19 @@ Describes an account that holds the amount of interests receivable/payable as re
 ### int_on_sft
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **Securities Financing Transactions**.
 
+### int_on_asset
+
+Describes an account that holds the amount of interest receivable/payable reported in a Profit and Loss report and where the interest amount originates from assets
+
 ### int_on_bond_and_frn
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **bonds and Floating Rate Notes**.
 
 ### int_on_bridging_loan
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **bridging finance loans**.
+
+### int_on_liability
+
+Describes an account that holds the amount of interest receivable/payable as reported in a Profit and Loss report and where the interest amount originates from liabilities
 
 ### int_on_mortgage
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **loans secured on dwellings**.
