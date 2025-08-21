@@ -379,6 +379,11 @@
       "description": "The credit score of the customer at origination of the product using a commercially available credit bureau score.",
       "type": "integer"
     },
+    "orig_limit_amount": {
+      "description": "The original line of credit amount that was granted at the origination of the facility",
+      "type": "integer",
+      "monetary": true
+    },   
     "parent_facility_id": {
       "description": "The parent code assigned by the financial institution to identify a facility.",
       "type": "string"
