@@ -6,6 +6,7 @@ from string import digits
 import pytest
 from jsonschema import Draft7Validator
 from jsonschema.exceptions import ValidationError
+import requests
 from . import (
     ALLOWED_PROPERTY_CHARS,
     DOC_NAMES,
@@ -173,6 +174,41 @@ class TestSchemas:
         for prop, spec in properties.items():
             if "$ref" not in spec:
                 errs.extend((prop, r) for r in required if r not in spec)
+            else:
+                try:
+                    (url, ref_prop_path) = spec["$ref"].split("#")
+                except ValueError as exc:
+                    raise ValueError(
+                        f"{spec} is not an appropriate format. Should be {{url}}#/{{property_path}}"
+                    ) from exc
+                resp = requests.get(url)
+                assert resp.status_code == 200, f"Invalid url {url}"
+
+                prop_path_tuple = ref_prop_path.split("/")
+                if len(prop_path_tuple) == 3:
+                    (start, base, ref_prop_name) = prop_path_tuple
+                    assert start == "", "Referenced property path must begin with /"
+                    assert (
+                        base == "properties"
+                    ), f"Referenced property for schemas should be /properties/{ref_prop_name} but got {ref_prop_path}"
+                    ref_properties = resp.json()[base]
+
+                elif len(prop_path_tuple) == 2:
+                    (start, ref_prop_name) = prop_path_tuple
+                    assert start == "", "Referenced property path must begin with /"
+                    assert url.endswith(
+                        "common.json"
+                    ), f"Referenced property for schemas should be /properties/{ref_prop_name} but got {ref_prop_path}"
+                    ref_properties = resp.json()
+
+                else:
+                    raise ValueError(
+                        f"Invalid path {ref_prop_path} to reference property"
+                    )
+
+                assert (
+                    ref_prop_name in ref_properties
+                ), f"Property {ref_prop_path} does not exist for {schema_name}/{prop}"
 
         assert (
             not errs
@@ -353,7 +389,6 @@ class TestCurveSchema:
 
 
 class TestRunStats:
-
     def test_property_count(self):
         stats = fire_stats()
         print(f"\n\n    ======== FIRE STATISTICS =======\n\n{stats}\n\n")
