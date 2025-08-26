@@ -1,6 +1,7 @@
 import decimal
 import json
 import os
+import requests
 from string import ascii_lowercase, digits
 
 
@@ -131,3 +132,61 @@ def load_jsons(filenames, location):
         with open(os.path.join(location, filename)) as jsonfile:
             jsons.append(json.load(jsonfile))
     return jsons
+
+
+def check_schema_fields(schema_dir, schema_name):
+    """
+    Every property in a schema should have a type and description
+    """
+    errs = []
+    required = ("description", "type")
+    with open(os.path.join(schema_dir, schema_name)) as json_schema:
+        schema = json.load(json_schema)
+
+    if schema_name != "common.json":
+        properties = schema["properties"]
+    else:
+        properties = schema
+
+    for prop, spec in properties.items():
+        if "$ref" not in spec:
+            errs.extend((prop, r) for r in required if r not in spec)
+        else:
+            try:
+                (url, ref_prop_path) = spec["$ref"].split("#")
+            except ValueError as exc:
+                raise ValueError(
+                    f"{spec} is not an appropriate format. Should be {{url}}#/{{property_path}}"
+                ) from exc
+            resp = requests.get(url)
+            assert resp.status_code == 200, f"Invalid url {url}"
+
+            prop_path_tuple = ref_prop_path.split("/")
+            if len(prop_path_tuple) == 3:
+                (start, base, ref_prop_name) = prop_path_tuple
+                assert start == "", "Referenced property path must begin with /"
+                assert (
+                    base == "properties"
+                ), f"Referenced property for schemas should be /properties/{ref_prop_name} but got {ref_prop_path}"
+                ref_properties = resp.json()[base]
+
+            elif len(prop_path_tuple) == 2:
+                (start, ref_prop_name) = prop_path_tuple
+                assert start == "", "Referenced property path must begin with /"
+                assert url.endswith(
+                    "common.json"
+                ), f"Referenced property for schemas should be /properties/{ref_prop_name} but got {ref_prop_path}"
+                ref_properties = resp.json()
+
+            else:
+                raise ValueError(f"Invalid path {ref_prop_path} to reference property")
+
+            assert (
+                ref_prop_name in ref_properties
+            ), f"Property {ref_prop_path} does not exist for {schema_name}/{prop}"
+
+    assert (
+        not errs
+    ), "The following schemata are missing required fields:\n\t" + "\n\t".join(
+        f"- property '{e[0]}' missing required field '{e[1]}'" for e in errs
+    )
