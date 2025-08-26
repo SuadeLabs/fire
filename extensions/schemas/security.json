@@ -71,7 +71,7 @@
     },
     "reversion_base_rate": {
       "description": "For instruments that convert from paying a fixed rate to paying a coupon/dividend rate that is linked to the rate of a particular index, report the index to which it is linked.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/security.json#/base_rate",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/security.json#/properties/base_rate",
       "type": "string",
       "jurisdictions": [
         "US"
