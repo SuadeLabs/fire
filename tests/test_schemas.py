@@ -14,6 +14,7 @@ from . import (
     SCHEMAS_DIR,
     SCHEMA_FILES,
     SCHEMA_NAMES,
+    check_schema_fields,
     fire_stats,
     load_jsons,
     schema_enum_registry,
@@ -157,28 +158,7 @@ class TestSchemas:
 
     @pytest.mark.parametrize("schema_name", SCHEMA_FILES)
     def test_required_fields(self, schema_name):
-        """
-        Every property in a schema should have a type and description
-        """
-        errs = []
-        required = ("description", "type")
-        with open(os.path.join(SCHEMAS_DIR, schema_name)) as json_schema:
-            schema = json.load(json_schema)
-
-        if schema_name != "common.json":
-            properties = schema["properties"]
-        else:
-            properties = schema
-
-        for prop, spec in properties.items():
-            if "$ref" not in spec:
-                errs.extend((prop, r) for r in required if r not in spec)
-
-        assert (
-            not errs
-        ), "The following schemata are missing required fields:\n\t" + "\n\t".join(
-            f"- property '{e[0]}' missing required field '{e[1]}'" for e in errs
-        )
+        check_schema_fields(SCHEMAS_DIR, schema_name)
 
 
 class TestExamples:
@@ -353,7 +333,6 @@ class TestCurveSchema:
 
 
 class TestRunStats:
-
     def test_property_count(self):
         stats = fire_stats()
         print(f"\n\n    ======== FIRE STATISTICS =======\n\n{stats}\n\n")

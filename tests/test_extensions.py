@@ -12,6 +12,7 @@ from . import (
     EXTENSION_SCHEMAS_DIR,
     EXTENSION_FILES,
     DOC_NAMES,
+    check_schema_fields,
     fire_load,
     load_jsons,
     schema_properties,
@@ -31,6 +32,11 @@ def test_schemas_and_docs_found():
 
 def test_jsons_are_valid():
     assert load_jsons(EXTENSION_FILES, EXTENSION_SCHEMAS_DIR)
+
+
+@pytest.mark.parametrize("schema_name", EXTENSION_FILES)
+def test_required_fields(schema_name):
+    check_schema_fields(EXTENSION_SCHEMAS_DIR, schema_name)
 
 
 @pytest.mark.parametrize("schema", SCHEMA_FILES)
