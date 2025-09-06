@@ -96,6 +96,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   └── int_on_finance_leasing
 ├── intra_group_fee
 ├── inv_in_subsidiary
+├── msr
 ├── mtg_insurance
 │   ├── mtg_ins_nonconform
 ├── operational
@@ -139,6 +140,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── ded_fut_prof_temp_diff
 │   ├── fut_prof
 │   ├── fut_prof_temp_diff
+│   ├── nol_carryback
 │   ├── not_fut_prof
 │   ├── oth_tax_excl_temp_diff
 │   └── reclass_tax
@@ -325,6 +327,9 @@ Describes an account that holds the amount of fees receivables/payables originat
 ### commitments
 *needs definition*
 
+### msr
+Describes an account that holds mortgage servicing assets, also known as Mortgage Servicing Rights (MSRs), which are assets representing the contractual right to collect and process payments on a pool of mortgage loans on behalf of investors.
+
 ### tax
 Describes an account representing the amount of tax paid, received or deferred for the reporting period by the reporting entity.
 
@@ -345,6 +350,9 @@ Describes an account representing the amount of **deferred tax** non-deductible,
 
 ### fut_prof_temp_diff
 Describes an account representing the amount of **deferred tax** non-deductible, reliant on future profitability, arising due to temporary differences.
+
+### nol_carryback
+Describes an account representing the amount of taxes previously paid that the entity could recover through **net operating loss (nol) carrybacks** during the reporting period.
 
 ### not_fut_prof
 Describes an account representing the amount of **deferred tax** that do not rely on future profitability.
