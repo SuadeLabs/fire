@@ -1157,6 +1157,7 @@ Index securities are reference records recording the details of an index using t
 │   ├── amortisation
 │   ├── deferred
 │   │   └── deferred_tax
+│   │       └── valuation_allowance
 │   ├── depreciation
 │   ├── expense
 │   ├── income
@@ -1421,6 +1422,10 @@ An account representing monies spent (over a period).
 An account holding reserves. [Reserves][reserve] are created from profit or from capital gains and are retained by an entity for a specific or more general purpose. Reserves are essentially anything on the equity side of the balance sheet that is not capital.
 
 [reserve]: https://en.wikipedia.org/wiki/Reserve_(accounting)
+
+### valuation_allowance
+
+An account that holds valuation allowances related to deferred tax assets (DTAs) arising from temporary differences.
 
 ### other
 
