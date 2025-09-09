@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "internal_rating"
-schemas:    [entity, security]
+schemas:    [customer, issuer, guarantor]
 
 ---
 
@@ -9,7 +9,7 @@ schemas:    [entity, security]
 
 ---
 
-The **internal_rating** identifies the different categorizes for exposures that have no external ratings.  Financial organizations can assign internal ratings to rate and categorize these exposures to get different risk weight assignments.  
+The **internal_rating** identifies the different categorizes for exposures that have no external ratings.  Financial organizations can assign internal ratings to rate and categorize these exposures to get different risk weight assignments.
 For corporate unrated exposures, firms may categorize as "investment grade", "non-investment grade" or non-category.  Reference OSFI, Chapter 4, P62-
 
 

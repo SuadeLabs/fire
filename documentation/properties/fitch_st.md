@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "fitch_st"
-schemas:    [entity, security]
+schemas:    [customer, issuer, guarantor, security]
 ---
 
 # fitch_st

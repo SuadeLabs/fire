@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"sic_code"
-schemas:	[entity]
+schemas:	[customer, issuer, guarantor]
 ---
 
 # sic_code

@@ -52,7 +52,19 @@
       "enum": [
         "FDTR",
         "UKBRBASE",
-        "ZERO"
+        "ZERO",
+        "bbsw",
+        "bbsw_3m",
+        "euribor",
+        "euribor_1m",
+        "euribor_3m",
+        "euribor_6m",
+        "other",
+        "pboc",
+        "sofr",
+        "sofr_1m",
+        "sofr_3m",
+        "sofr_6m"
       ]
     },
     "break_dates": {
@@ -153,6 +165,12 @@
       "description": "The unique identifier of the credit support annex this security falls under. Typically where used as derivatives collateral.",
       "type": "string"
     },
+    "cum_write_offs": {
+      "description": "The portion of the security which has been written off.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
+    },
     "currency_code": {
       "description": "Actual currency of the security in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
@@ -213,11 +231,38 @@
       "description": "The unique identifier used by the financial institution to identify the deal for this product that links it to other products of the same or different type.",
       "type": "string"
     },
+    "default_date": {
+      "description": "Date of default.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "description": {
+      "description": "A more user-friendly description of the security.",
+      "type": "string"
+    },
     "detachment_point": {
       "description": "The threshold at which losses within the pool of underlying exposures would result in a complete loss of principal for the tranche containing the relevant securitisation position.",
       "type": "number",
       "minimum": 0.0,
       "maximum": 1.0
+    },
+    "distribution_type": {
+      "description": "The instrument's coupon/dividend distribution type, such as cumulative or noncumulative. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "string",
+      "enum": [
+        "cumulative",
+        "non_cumulative"
+      ]
+    },
+    "ead": {
+      "description": "The EAD field allows users to input monetary exposure-at-default values across the security's lifecycle. Upon default, this field must be updated to reflect the final realised EAD value — that is, the actual exposure outstanding at the moment of default.",
+      "type": "integer",
+      "monetary": true
+    },
+    "economic_loss": {
+      "description": "The definition of loss, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss",
+      "monetary": true,
+      "type": "integer"
     },
     "encumbrance_amount": {
       "description": "The amount of the security that is encumbered by potential future commitments or legal liabilities such as within a repo pool. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -240,6 +285,11 @@
         "variable",
         "variable_trapped"
       ]
+    },
+    "fees": {
+      "description": "The fees associated with the security.",
+      "type": "integer",
+      "monetary": true
     },
     "first_arrears_date": {
       "description": "The first date on which this security was in arrears.",
@@ -317,6 +367,16 @@
     "guarantor_id": {
       "description": "The unique identifier for the guarantor within the financial institution.",
       "type": "string"
+    },
+    "hedge_id": {
+      "type": "string",
+      "description": "Unique identifier that establishes a relational link between a security and its associated derivative hedge. Enables consistent tracking, aggregation, and reconciliation of hedged positions across systems and datasets."
+    },
+    "hedged_percentage": {
+      "description": "In the case of a designated fair value hedge, the portion of the asset being hedged, as determined according to ASC 815-20-25-12 (b) and ASC 815-20-25-12A.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1.0
     },
     "hqla_class": {
       "description": "What is the HQLA classification of this security?",
@@ -400,6 +460,16 @@
       "minLength": 12,
       "maxLength": 12
     },
+    "issuance_type": {
+      "description": "Indicates the type of placement for issuances. For example, private placements, other non-publicly offered securites, publicly offered securities or direct purchase municipal securities. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "string",
+      "enum": [
+        "direct_purch_municipal",
+        "non_public",
+        "private_placement",
+        "public_offering"
+      ]
+    },
     "issue_date": {
       "description": "The date on which the security is issued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
@@ -471,7 +541,7 @@
       "maximum": 1.0
     },
     "lgd_irb": {
-      "description": "The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.",
+      "description": "The loss given default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations.",
       "type": "number",
       "minimum": 0.0,
       "maximum": 1.0
@@ -571,7 +641,7 @@
       "type": "string"
     },
     "pd_irb": {
-      "description": "The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.",
+      "description": "The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations.",
       "type": "number",
       "minimum": 0.0,
       "maximum": 1.0
@@ -614,6 +684,19 @@
       "description": "The full interest rate applied to the security notional in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).",
       "type": "number"
     },
+    "rate_type": {
+      "description": "Describes the type of interest rate applied to the security.",
+      "type": "string",
+      "enum": [
+        "combined",
+        "fixed",
+        "fixed_to_fixed",
+        "fixed_to_float",
+        "step_up",
+        "tracker",
+        "variable"
+      ]
+    },
     "regulatory_book": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/regulatory_book"
     },
@@ -640,6 +723,11 @@
     "reporting_id": {
       "description": "The internal ID for the legal entity under which the account is being reported.",
       "type": "string"
+    },
+    "resolution_date": {
+      "description": "Date of resolution of the defaulted facility.",
+      "type": "string",
+      "format": "date-time"
     },
     "retention_pct": {
       "description": "The percentage of the issuance retained by the issuer. e.g. 0.05 is 5%.",
@@ -696,6 +784,10 @@
         "traditional"
       ]
     },
+    "sedol": {
+      "description": "The stock exchange daily official list (SEDOL) is a seven-character identification code assigned to securities that trade on the London Stock Exchange and various smaller exchanges in the United Kingdom. SEDOL codes are used for unit trusts, investment trusts, insurance-linked securities, and domestic and foreign stocks.",
+      "type" :"string"
+    },
     "seniority": {
       "description": "The seniority of the security in the event of sale or bankruptcy of the issuer.",
       "type": "string",
@@ -705,6 +797,25 @@
         "senior_unsecured",
         "subordinated_secured",
         "subordinated_unsecured"
+      ]
+    },
+    "servicing": {
+      "description": "The method by which the debt shall be repaid",
+      "type": "string",
+      "enum": [
+        "app_backed",
+        "general_obligation",
+        "other",
+        "revenue",
+        "revenue_education",
+        "revenue_health",
+        "revenue_ind_dev",
+        "revenue_multi_housing",
+        "revenue_other",
+        "revenue_single_housing",
+        "revenue_tax",
+        "revenue_transport",
+        "revenue_utilities"
       ]
     },
     "sft_type": {
@@ -778,9 +889,14 @@
       "enum": [
         "bankruptcy_remote",
         "called_up",
+        "conversion",
         "free_deliveries",
         "non_operational",
+        "other",
         "paid_up",
+        "redeemed",
+        "refinanced",
+        "replaced",
         "unsettled"
       ]
     },
@@ -812,9 +928,11 @@
         "abs_sme",
         "abs_sme_corp",
         "abs_sme_retail",
+        "abs_student",
         "abs_trade_rec",
         "abs_wholesale",
         "acceptance",
+        "ars",
         "bill_of_exchange",
         "bond",
         "cash",
@@ -823,15 +941,24 @@
         "cb_reserve",
         "cb_restricted_reserve",
         "cd",
+        "cdo",
+        "clo",
         "cmbs",
         "cmbs_income",
         "commercial_paper",
+        "common",
         "convertible_bond",
         "covered_bond",
+        "cpp",
+        "cpp_tarp_pref",
+        "cs_usg",
+        "cs_warrant",
         "debt",
         "dividend",
+        "documentary",
         "emtn",
         "equity",
+        "financial",
         "financial_guarantee",
         "financial_sloc",
         "frn",
@@ -839,16 +966,23 @@
         "index",
         "index_linked",
         "letter_of_credit",
+        "loan_pool",
         "main_index_equity",
         "mbs",
+        "mcp",
+        "mcp_usg",
         "mtn",
+        "ncpp",
+        "ncpp_convertible",
         "nha_mbs",
         "other",
+        "performance",
         "performance_bond",
         "performance_guarantee",
         "performance_sloc",
         "pibs",
         "pref_share",
+        "reit_pref",
         "rmbs",
         "rmbs_income",
         "rmbs_trans",
@@ -857,8 +991,11 @@
         "speculative_unlisted",
         "spv_mortgages",
         "spv_other",
+        "standby",
         "struct_note",
         "treasury",
+        "trups",
+        "trups_usg_pref",
         "urp",
         "warranty"
       ]

@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"customer_id"
-schemas:	[account, derivative_cash_flow, security]
+schemas:	[account, agreement, derivative_cash_flow, loan, security, derivative]
 ---
 
 # customer_id

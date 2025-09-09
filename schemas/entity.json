@@ -17,6 +17,40 @@
       "description": "City, town or village.",
       "type": "string"
     },
+    "address_county": {
+      "description": "The county or administrative region (e.g. NUTS code) for an entity's address.",
+      "type": "string"
+    },
+    "address_street": {
+      "description": "Street address for the Entity.",
+      "type": "string"
+    },
+    "bankruptcy_date": {
+      "description": "The date the bankruptcy proceedings were initiated. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "bankruptcy_type": {
+      "description": "The bankruptcy chapter of the borrower.",
+      "type": "string",
+      "enum": [
+        "chapter_11",
+        "chapter_12",
+        "chapter_13",
+        "chapter_7",
+        "chapter_9",
+        "court_administration",
+        "other"
+      ]
+    },
+    "birr_curve_id": {
+      "description": "The ID of the curve containing historical Borrower Internal Risk Ratings (BIRR) for this entity. The curve must be of type 'risk_rating'.",
+      "type": "string"
+    },
+    "birr_id": {
+      "type": "string",
+      "description": "The unique identifier of the Borrower Internal Risk Rating (BIRR), representing an internally assigned risk assessment for a customer based on their creditworthiness and financial stability."
+    },
     "boe_industry_code": {
       "description": "Bank of England industry code.",
       "type": "string"
@@ -209,7 +243,7 @@
       "maxLength": 20
     },
     "lgd_irb": {
-      "description": "The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.",
+      "description": "The loss given default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations.",
       "type": "number",
       "minimum": 0.0,
       "maximum": 1.0
@@ -1024,10 +1058,20 @@
       "type": "string"
     },
     "pd_irb": {
-      "description": "The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.",
+      "description": "The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations.",
       "type": "number",
       "minimum": 0.0,
       "maximum": 1.0
+    },
+    "pd_irb_ec": {
+      "description": "The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in economic capital calculations.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "postal_code": {
+      "description": "The post (zip) code in which the entity is domiciled.",
+      "type": "string"
     },
     "relationship": {
       "description": "Relationship to parent.",
@@ -1161,6 +1205,7 @@
         "credit_union",
         "deposit_broker",
         "export_credit_agency",
+        "federal_credit_union",
         "financial",
         "financial_holding",
         "fund",
@@ -1172,7 +1217,9 @@
         "local_authority",
         "mdb",
         "mmkt_fund",
+        "national_bank",
         "natural_person",
+        "non_member_bank",
         "other",
         "other_financial",
         "other_pse",
@@ -1194,6 +1241,8 @@
         "social_security_fund",
         "sovereign",
         "sspe",
+        "state_credit_union",
+        "state_member_bank",
         "state_owned_bank",
         "statutory_board",
         "supported_sme",

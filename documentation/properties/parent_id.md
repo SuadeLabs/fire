@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"parent_id"
-schemas:	[entity]
+schemas:	[customer, issuer, guarantor]
 ---
 
 # parent_id

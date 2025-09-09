@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"lei_code"
-schemas:	[entity]
+schemas:	[customer, issuer, guarantor]
 ---
 
 # lei_code

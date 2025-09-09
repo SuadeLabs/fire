@@ -26,13 +26,21 @@
       "type": "integer",
       "minimum": 0
     },
+    "city": {
+      "description": "The city in which the property is located.",
+      "type": "string"
+    },
+    "country_code": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/country_code",
+      "description": "The country of collateral. Two-letter country code as defined according to ISO 3166-1."
+    },
     "currency_code": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
     },
     "encumbrance_amount": {
       "description": "The amount of the collateral that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
-      "min": 0,
+      "minimum": 0,
       "monetary": true
     },
     "encumbrance_type": {
@@ -65,6 +73,10 @@
       "type": "integer",
       "monetary": true
     },
+    "postal_code": {
+      "description": "The zip code in which the property is located. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "type": "string"
+    },
     "regulatory_book": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/regulatory_book"
     },
@@ -81,24 +93,47 @@
       "type": "string",
       "format": "date-time"
     },
+    "street_address": {
+      "description": "The street address associated with the property. Must include street direction prefixes, direction suffixes, and unit number for condos and co-ops. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "type": "string"
+    },
     "type": {
       "description": "The collateral type defines the form of the collateral provided",
       "type": "string",
       "enum": [
         "auto",
+        "auto_other",
+        "car",
         "cash",
+        "co_op",
         "commercial_property",
         "commercial_property_hr",
+        "condo",
+        "convertible",
         "debenture",
-        "farm", 
+        "farm",
+        "four_units",
         "guarantee",
         "immovable_property",
         "life_policy",
+        "luxury",
+        "manufactured_house",
         "multifamily",
+        "one_unit",
         "other",
+        "planned_unit_dev",
         "res_property_hr",
+        "resi_mixed_use",
         "residential_property",
-	      "security"
+        "security",
+        "single_family",
+        "sport",
+        "suv",
+        "three_units",
+        "townhouse",
+        "truck",
+        "two_units",
+        "van"
       ]
     },
     "value": {

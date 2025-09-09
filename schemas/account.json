@@ -125,6 +125,21 @@
       "description": "The standardised methodology for calculating the number of days between two dates. It is used to calculate the amount of accrued interest or the present value.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/day_count_convention"
     },
+    "default_date": {
+      "description": "Date of default.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "ead": {
+      "description": "The EAD field allows users to input monetary exposure-at-default values across the loan's lifecycle. Upon default, this field must be updated to reflect the final realised EAD value — that is, the actual exposure outstanding at the moment of default.",
+      "type": "integer",
+      "monetary": true
+    },
+    "ead_irb_ec": {
+      "description": "The expected gross dollar exposure for each facility upon a borrower's default as determined by internal ratings-based approach. This value is used in economic capital calculations.",
+      "type": "integer",
+      "monetary": true
+    },
     "economic_loss": {
       "description": "The definition of loss, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss",
       "monetary": true,
@@ -151,6 +166,10 @@
       "description": "The end or maturity date of the account. Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
       "type": "string",
       "format": "date-time"
+    },
+    "facility_id": {
+      "description": "The code assigned by the financial institution to identify a facility.",
+      "type": "string"
     },
     "first_arrears_date": {
       "description": "The first date on which this account was in arrears.",
@@ -275,6 +294,16 @@
       "type": "string",
       "format": "date-time"
     },
+    "last_recovery_date": {
+      "description": "Date of most recent recovery in the reporting quarter.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_write_off_date": {
+      "description": "Date of Financial Institution's most recent Write Off in the reporting quarter.",
+      "type": "string",
+      "format": "date-time"
+    },
     "ledger_code": {
       "description": "The internal ledger code or line item name.",
       "type": "string"
@@ -286,7 +315,13 @@
       "maximum": 1.0
     },
     "lgd_irb": {
-      "description": "The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.",
+      "description": "The loss given default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "lgd_irb_ec": {
+      "description": "The loss given default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in economic capital calculations.",
       "type": "number",
       "minimum": 0.0,
       "maximum": 1.0
@@ -344,8 +379,18 @@
       "description": "The credit score of the customer at origination of the product using a commercially available credit bureau score.",
       "type": "integer"
     },
+    "parent_facility_id": {
+      "description": "The parent code assigned by the financial institution to identify a facility.",
+      "type": "string"
+    },
     "pd_irb": {
-      "description": "The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.",
+      "description": "The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "pd_irb_ec": {
+      "description": "The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in economic capital calculations.",
       "type": "number",
       "minimum": 0.0,
       "maximum": 1.0
@@ -420,6 +465,7 @@
         "general_credit_risk",
         "goodwill",
         "insurance_fee",
+        "int_on_asset",
         "int_on_bond_and_frn",
         "int_on_bridging_loan",
         "int_on_credit_card",
@@ -427,25 +473,31 @@
         "int_on_deriv_hedge",
         "int_on_derivative",
         "int_on_ecgd_lending",
+        "int_on_finance_leasing",
+        "int_on_liability",
         "int_on_loan_and_adv",
         "int_on_money_mkt",
         "int_on_mortgage",
         "int_on_sft",
         "int_unallocated",
+        "intangible",
         "interest",
         "intra_group_fee",
         "inv_in_subsidiary",
         "investment_banking_fee",
         "investment_property",
         "ips",
+        "it_outsourcing",
         "land",
         "loan_and_advance_fee",
         "machinery",
         "manufactured_dividend",
         "mortgage_fee",
+        "msr",
         "mtg_ins_nonconform",
         "mtg_insurance",
         "ni_contribution",
+        "nol_carryback",
         "non_life_ins_premium",
         "not_fut_prof",
         "occupancy_cost",
@@ -520,6 +572,16 @@
       "description": "The internal ID for the legal entity under which the account is being reported.",
       "type": "string"
     },
+    "resolution_date": {
+      "description": "Date of resolution of the defaulted facility.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "review_date": {
+      "description": "The currently scheduled review date for Counterparty exposure. This date should be set in the future. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the account resides. In accordance with ISO 3166-1",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/country_code"
@@ -532,6 +594,18 @@
       "description": "A particular predetermined date at which an account is rolled-over.",
       "type": "string",
       "format": "date-time"
+    },
+    "seniority": {
+      "description": "The seniority of the security in the event of sale or bankruptcy of the issuer.",
+      "type": "string",
+      "enum": [
+        "mezzanine",
+        "pari_passu",
+        "senior_secured",
+        "senior_unsecured",
+        "subordinated_secured",
+        "subordinated_unsecured"
+      ]
     },
     "source": {
       "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
@@ -577,6 +651,7 @@
         "deferred_tax",
         "depreciation",
         "expense",
+        "financial_lease",
         "income",
         "intangible",
         "internet_only",
@@ -603,6 +678,7 @@
         "third_party_savings",
         "time_deposit",
         "time_deposit_io",
+        "valuation_allowance",
         "vostro"
       ]
     },

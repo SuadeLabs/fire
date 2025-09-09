@@ -26,6 +26,16 @@
     "accounting_treatment": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/accounting_treatment"
     },
+    "accrual_status": {
+      "description": "The accrual status of the loan or line of credit.",
+      "type": "string",
+      "enum": [
+        "accrual",
+        "non_accrual",
+        "securitised",
+        "serviced_for_others"
+      ]
+    },
     "accrued_interest_12m": {
       "description": "The cumulative accrued interest over the past 12 months. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
@@ -50,11 +60,28 @@
       "enum": [
         "formal",
         "interest_grace_period",
+        "mi_claim_adv",
         "modified_tnc",
         "none",
         "possessed",
+        "prin_def_rate",
+        "prin_def_rate_term",
+        "prin_def_term",
+        "principal_defer",
+        "principal_forgive",
+        "rate_prin_forgive",
+        "rate_red_frozen",
+        "rate_term",
+        "rate_term_prin_forgive",
+        "recap",
         "refinancing",
-        "temporary"
+        "renewal",
+        "reo",
+        "short_sale",
+        "temporary",
+        "term_ext",
+        "term_prin_forgive",
+        "term_recap"
       ]
     },
     "arrears_balance": {
@@ -76,7 +103,29 @@
       "enum": [
         "FDTR",
         "UKBRBASE",
-        "ZERO"
+        "ZERO",
+        "cert_dep",
+        "cofi",
+        "cofi_11th",
+        "cofi_nm",
+        "cofi_other",
+        "cosi",
+        "mta",
+        "other",
+        "prime",
+        "sofr",
+        "sofr_1m",
+        "sofr_1y",
+        "sofr_3m",
+        "sofr_6m",
+        "sofr_other",
+        "tbill",
+        "tbill_1y",
+        "tbill_3m",
+        "tbill_3y",
+        "tbill_5y",
+        "tbill_6m",
+        "tbill_other"
       ]
     },
     "behavioral_curve_id": {
@@ -180,8 +229,23 @@
       "description": "Identifier used for linking this product as part of a larger deal. e.g. Two components of a single loan or matching a securitisation with it's underlying loan.",
       "type": "string"
     },
+    "default_date": {
+      "description": "Date of default.",
+      "type": "string",
+      "format": "date-time"
+    },
     "deferred_fees": {
       "description": "Deferred fees are deferred payments subject to prepayment risk and not included in the balance.",
+      "type": "integer",
+      "monetary": true
+    },
+    "ead": {
+      "description": "The EAD field allows users to input monetary exposure-at-default values across the loan's lifecycle. Upon default, this field must be updated to reflect the final realised EAD value — that is, the actual exposure outstanding at the moment of default.",
+      "type": "integer",
+      "monetary": true
+    },
+    "ead_irb_ec": {
+      "description": "The expected gross dollar exposure for each facility upon a borrower's default as determined by internal ratings-based approach. This value is used in economic capital calculations.",
       "type": "integer",
       "monetary": true
     },
@@ -222,6 +286,10 @@
     "facility_currency_code": {
       "description": "The currency of the credit facility if not the same as loan currency_code.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
+    },
+    "facility_id": {
+      "description": "The code assigned by the financial institution to identify a facility.",
+      "type": "string"
     },
     "fees": {
       "description": "The fees associated with the loan.",
@@ -332,21 +400,43 @@
       "type": "string",
       "format": "date-time"
     },
+    "last_recovery_date": {
+      "description": "Date of most recent recovery in the reporting quarter.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_write_off_date": {
+      "description": "Date of Financial Institution's most recent Write Off in the reporting quarter.",
+      "type": "string",
+      "format": "date-time"
+    },
     "ledger_code": {
       "description": "The internal ledger code or line item name.",
       "type": "string"
     },
     "lgd_downturn": {
-      "description": "The loss given default in the event of an economic downturn. Percentage between 0 an 1.",
-      "type": "number"
+      "description": "The loss given default in the event of an economic downturn. Percentage between 0 and 1.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
     },
     "lgd_floored": {
       "description": "The final LGD value after the relevant floors have been applied. To be used in the IRB RWA calculations",
-      "type": "number"
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
     },
     "lgd_irb": {
-      "description": "The loss given default as determined by internal rating-based methods.",
-      "type": "number"
+      "description": "The loss given default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "lgd_irb_ec": {
+      "description": "The loss given default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in economic capital calculations.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
     },
     "limit_amount": {
       "description": "The total credit limit on the loan. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -429,13 +519,42 @@
         "spv"
       ]
     },
-    "pd_irb": {
-      "description": "The probability of default as determined by internal rating-based methods. Percentage between 0 an 1.",
+    "parent_facility_id": {
+      "description": "The parent code assigned by the financial institution to identify a facility.",
+      "type": "string"
+    },
+    "participation_int": {
+      "description": "For participated or syndicated credit facilities that have closed and settled, the percentage of the total loan commitment held by the reporting entity. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
       "type": "number"
     },
+    "participation_type": {
+      "description": "For participated or syndicated credit facilities that have closed and settled, indicates the type of participation in the loan. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "string",
+      "enum": [
+        "agent_non_snc",
+        "agent_snc",
+        "none",
+        "participant_non_snc",
+        "participant_snc"
+      ]
+    },
+    "pd_irb": {
+      "description": "The probability of default as determined by internal rating-based methods. Percentage between 0 and 1.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "pd_irb_ec": {
+      "description": "The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in economic capital calculations.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
     "pd_retail_irb": {
-      "description": "The retail probability of default as determined by internal rating-based methods. Percentage between 0 an 1.",
-      "type": "number"
+      "description": "The retail probability of default as determined by internal rating-based methods. Percentage between 0 and 1.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
     },
     "prev_payment_date": {
       "description": "The most recent previous date at which interest was paid or accrued_interest balance returned to zero.",
@@ -472,9 +591,14 @@
         "buy_to_let_house_purchase",
         "buy_to_let_other",
         "buy_to_let_remortgage",
+        "cash_out",
+        "commercial",
+        "commercial_property",
         "commodities_finance",
         "construction",
         "consumer_buy_to_let",
+        "debt_consolidation",
+        "education",
         "first_time_buyer",
         "first_time_buyer_cstr",
         "further_advance",
@@ -483,21 +607,28 @@
         "house_purchase_cstr",
         "ips",
         "lifetime_mortgage",
+        "medical",
         "non_b20",
         "object_finance",
         "object_finance_hq",
         "operational",
+        "operational_non_sym",
+        "operational_sym",
         "other",
         "project_finance",
         "project_hq_phase",
         "project_pre_op",
         "promotional",
+        "rate",
         "reference",
+        "refinance",
         "remortgage",
         "remortgage_construct",
         "remortgage_other",
         "remortgage_othr_cstr",
-        "speculative_property"
+        "renovation",
+        "speculative_property",
+        "term"
       ]
     },
     "rate": {
@@ -550,6 +681,7 @@
       "enum": [
         "combined",
         "interest_only",
+        "option_arm",
         "other",
         "repayment"
       ]
@@ -562,6 +694,21 @@
       "description": "The internal ID for the legal entity under which the account is being reported.",
       "type": "string"
     },
+    "repurchase_status": {
+      "description": "The current status of the repurchase of the loan.",
+      "type": "string",
+      "enum": [
+        "complete_no_repurchase",
+        "complete_repurchased",
+        "in_process",
+        "initiated"
+      ]
+    },
+    "resolution_date": {
+      "description": "Date of resolution of the defaulted facility.",
+      "type": "string",
+      "format": "date-time"
+    },
     "reversion_date": {
       "description": "The timestamp that indicates the end of an initial period where the 'rate' is applied to a loan. After this the interest is calculated using the 'reversion_rate'. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
@@ -570,6 +717,11 @@
     "reversion_rate": {
       "description": "The rate to which the loan will revert after the reversion date. Percentages represented as a decimal/float, so 1.5 implies 1.5%.",
       "type": "number"
+    },
+    "review_date": {
+      "description": "The currently scheduled review date for Counterparty exposure. This date should be set in the future. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
     },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the product resides. In accordance with ISO 3166-1",
@@ -586,6 +738,22 @@
     "secured": {
       "description": "Is this loan secured or unsecured?",
       "type": "boolean"
+    },
+    "seniority": {
+      "description": "The seniority of the security in the event of sale or bankruptcy of the issuer.",
+      "type": "string",
+      "enum": [
+        "mezzanine",
+        "pari_passu",
+        "senior_secured",
+        "senior_unsecured",
+        "subordinated_secured",
+        "subordinated_unsecured"
+      ]
+    },
+    "servicer_id": {
+      "description": "This is the unique id to identify the servicer of a loan.",
+      "type": "string"
     },
     "servicing": {
       "description": "The method by which the loan shall be repaid",
@@ -617,8 +785,10 @@
         "actual",
         "cancellable",
         "cancelled",
+        "closed",
         "committed",
         "defaulted",
+        "frozen",
         "revolving"
       ]
     },
@@ -641,10 +811,19 @@
         "credit_facility",
         "education",
         "financial_lease",
+        "heloan",
         "heloc",
+        "heloc_lockout",
         "liquidity_facility",
         "mortgage",
         "mortgage_charter",
+        "mortgage_cra",
+        "mortgage_fha_project",
+        "mortgage_fha_res",
+        "mortgage_hud235",
+        "mortgage_no_pmi",
+        "mortgage_pmi",
+        "mortgage_va",
         "multiccy_facility",
         "new_auto",
         "nostro",

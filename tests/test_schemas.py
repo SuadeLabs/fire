@@ -1,26 +1,28 @@
 import json
 import os
 import re
-import unittest
+from string import digits
+
 import pytest
-from collections import OrderedDict
-from jsonschema import Draft4Validator
+from jsonschema import Draft7Validator
 from jsonschema.exceptions import ValidationError
 from . import (
+    ALLOWED_PROPERTY_CHARS,
     DOC_NAMES,
     EXAMPLES_DIR,
     EXAMPLE_FILES,
-    OLD_SCHEMAS_DIR,
     SCHEMAS_DIR,
     SCHEMA_FILES,
     SCHEMA_NAMES,
+    check_schema_fields,
     fire_stats,
     load_jsons,
     schema_enum_registry,
+    schema_properties,
 )
 
 
-class TestSchemas(unittest.TestCase):
+class TestSchemas:
     def test_schemas_and_docs_found(self):
         assert SCHEMA_NAMES
         assert DOC_NAMES
@@ -29,21 +31,22 @@ class TestSchemas(unittest.TestCase):
         load_jsons(SCHEMA_FILES, SCHEMAS_DIR)
         load_jsons(EXAMPLE_FILES, EXAMPLES_DIR)
 
-    def test_enum_registry(self):
-        for schema in SCHEMA_FILES:
-            enums = schema_enum_registry(schema)
-            if schema in [
-                "batch.json",
-                "example.json",
-                "guarantor.json",
-                "issuer.json",
-                "risk_rating.json",
-            ]:
-                assert not enums
-            else:
-                assert enums
+    @pytest.mark.parametrize("schema", SCHEMA_FILES)
+    def test_enum_registry(self, schema):
+        enums = schema_enum_registry(schema)
+        if schema in (
+            "batch.json",
+            "example.json",
+            "guarantor.json",
+            "issuer.json",
+            "risk_rating.json",
+        ):
+            assert not enums
+        else:
+            assert enums
 
-    def test_enums(self):
+    @pytest.mark.parametrize("schema", SCHEMA_FILES)
+    def test_enums(self, schema):
         """
         Enums should be snake_case (mostly)
         Enums should be less than 24 characters
@@ -77,60 +80,60 @@ class TestSchemas(unittest.TestCase):
         ]
 
         snake_pattern = re.compile("[a-z][a-z0-9]*(_[a-z0-9]*)*")
-        for schema in SCHEMA_FILES:
-            enums = schema_enum_registry(schema)
-            for enum, values in enums.items():
-                match = re.match(snake_pattern, enum)
-                assert match is not None, snake_error(schema, enum, "")
-                assert 0 == match.start(), snake_error(schema, enum, "")
-                assert len(enum) == match.end(), snake_error(schema, enum, "")
+        enums = schema_enum_registry(schema)
+        for enum, values in enums.items():
+            match = re.match(snake_pattern, enum)
+            assert match is not None, snake_error(schema, enum, "")
+            assert 0 == match.start(), snake_error(schema, enum, "")
+            assert len(enum) == match.end(), snake_error(schema, enum, "")
 
-                if enum not in legacy_long_names:
-                    assert len(enum) <= 22, len_error(
-                        schema, enum, "", len(enum)
-                    )  # noqa: E501
+            if enum not in legacy_long_names:
+                assert len(enum) <= 22, len_error(
+                    schema, enum, "", len(enum)
+                )  # noqa: E501
 
-                if enum in exceptions:
-                    continue
-                for v in values:
-                    match = re.match(snake_pattern, v)
-                    assert match is not None, snake_error(schema, enum, v)
-                    assert 0 == match.start(), snake_error(schema, enum, v)
-                    assert len(v) == match.end(), snake_error(schema, enum, v)
+            if enum in exceptions:
+                continue
+            for v in values:
+                match = re.match(snake_pattern, v)
+                assert match is not None, snake_error(schema, enum, v)
+                assert 0 == match.start(), snake_error(schema, enum, v)
+                assert len(v) == match.end(), snake_error(schema, enum, v)
 
-                    if v not in legacy_long_names:
-                        assert len(v) <= 22, len_error(schema, enum, v, len(v))
+                if v not in legacy_long_names:
+                    assert len(v) <= 22, len_error(schema, enum, v, len(v))
 
-    def test_schema_properties_are_alphabetical(self):
+    @pytest.mark.parametrize("schema_name", SCHEMA_FILES)
+    def test_schema_properties_are_alphabetical(self, schema_name):
         """
         JSON may not care about order, but we do. For the schemas to be
         human readable, it helps when properties are in alphabetical order.
+
+        We ignore inheritance, because we just care about how each individual schema "looks"
         """
-        for schema_name in SCHEMA_FILES:
-            with open(os.path.join(SCHEMAS_DIR, schema_name)) as json_schema:
-                schema = json.load(json_schema, object_pairs_hook=OrderedDict)  # noqa
-                if "properties" in schema:
-                    properties = schema["properties"].keys()
-                else:
-                    properties = schema.keys()
+        properties = list(schema_properties(schema_name, with_inheritance=False))
 
-                properties = list(properties)
+        if "id" in properties:
+            assert properties.pop(0) == "id"
+            assert properties.pop(0) == "date"
 
-                if "id" in properties:
-                    assert properties[0] == "id"
-                    assert properties[1] == "date"
-                    properties.pop(1)
-                    properties.pop(0)
+        assert properties == sorted(properties)
 
-                assert properties == sorted(properties)
+        for property in properties:
+            assert ALLOWED_PROPERTY_CHARS.issuperset(property)
+            assert property
+            assert property[0] not in digits + "_"
+            assert property[-1] != "_"
+            assert "__" not in property
 
-    def test_schema_enums_are_alphabetical(self):
+    @pytest.mark.parametrize("schema_name", SCHEMA_FILES)
+    def test_schema_enums_are_alphabetical(self, schema_name):
         """
         Oh yeah, Enums, too.
 
         Except if the order has a mathematical relationship (eg. frequencies)
         """
-        exceptions = [
+        exceptions = {
             "underlying_index_tenor",
             "margin_frequency",
             "repayment_frequency",
@@ -145,82 +148,51 @@ class TestSchemas(unittest.TestCase):
             "dbrs_st",
             "kbra_lt",
             "kbra_st",
-        ]
-        for schema_name in SCHEMA_FILES:
-            enums = schema_enum_registry(schema_name)
-            for enum in enums:
-                if enum in exceptions:
-                    continue
-                # print(sorted([str(e) for e in enums[enum]]))
-                assert enums[enum] == sorted(enums[enum])
+        }
+        enums = schema_enum_registry(schema_name)
+        for enum in enums:
+            if enum in exceptions:
+                continue
+            # print(sorted([str(e) for e in enums[enum]]))
+            assert enums[enum] == sorted(enums[enum])
 
-    def test_property_count(self):
-        stats = fire_stats()
-        print(f"\n\n    ======== FIRE STATISTICS =======\n\n{stats}\n\n")
-        assert stats
-
-    def test_required_fields(self):
-        """
-        Every property in a schema should have a type and description
-        """
-        errs = []
-        required = ["description", "type"]
-        for schema_name in SCHEMA_FILES:
-            with open(os.path.join(SCHEMAS_DIR, schema_name)) as json_schema:
-                schema = json.load(json_schema)
-
-            if schema_name != "common.json":
-                for prop, fields in schema["properties"].items():
-                    if "$ref" in fields:
-                        continue
-                    errs += [
-                        (schema_name, prop, r) for r in required if r not in fields
-                    ]
-            else:
-                errs += [(schema_name, prop, r) for r in required if r not in fields]
-
-        assert (
-            not errs
-        ), "The following schemata are missing required fields:\n\t" + "\n\t".join(
-            "- {} schema has property '{}' missing required field '{}'".format(
-                e[0], e[1], e[2]
-            )
-            for e in errs
-        )
+    @pytest.mark.parametrize("schema_name", SCHEMA_FILES)
+    def test_required_fields(self, schema_name):
+        check_schema_fields(SCHEMAS_DIR, schema_name)
 
 
 class TestExamples:
     with open(os.path.join(SCHEMAS_DIR, "example.json")) as ff:
         example_schema = json.load(ff)
 
-    validator = Draft4Validator(example_schema)
+    validator = Draft7Validator(example_schema)
 
-    def test_validating_all_examples(self):
+    @pytest.mark.parametrize("example_name", EXAMPLE_FILES)
+    def test_validating_all_examples(self, example_name):
         """
         Examples should match the example schema found in /schemas/example.json
         """
-        for example_name in EXAMPLE_FILES:
-            with open(os.path.join(EXAMPLES_DIR, example_name)) as ff:
-                ex = json.load(ff)
+        with open(os.path.join(EXAMPLES_DIR, example_name)) as ff:
+            ex = json.load(ff)
 
-            self.validator.validate(instance=ex)
+        self.validator.validate(instance=ex)
 
-    def test_ex_titles_match_filenames(self):
-        for example_name in EXAMPLE_FILES:
-            with open(os.path.join(EXAMPLES_DIR, example_name)) as ff:
-                ex = json.load(ff)
+    @pytest.mark.parametrize("example_name", EXAMPLE_FILES)
+    def test_ex_titles_match_filenames(self, example_name):
+        with open(os.path.join(EXAMPLES_DIR, example_name)) as ff:
+            ex = json.load(ff)
 
-            assert ex["title"] + ".json" == example_name
+        assert ex["title"] + ".json" == example_name
 
     def test_ex_titles_are_unique(self):
-        titles = []
+        titles = set()
         for example_name in EXAMPLE_FILES:
             with open(os.path.join(EXAMPLES_DIR, example_name)) as ff:
                 ex = json.load(ff)
 
             assert ex["title"] not in titles
 
-            titles.append(ex["title"])
+            titles.add(ex["title"])
 
     def test_bad_examples(self):
         """
@@ -297,11 +269,71 @@ class TestExamples:
             self.validator.validate(empty_data)
 
 
-class TestBackwardsCompatibility:
+class TestCurveSchema:
+    with open(os.path.join(SCHEMAS_DIR, "curve.json")) as ff:
+        curve_schema = json.load(ff)
 
-    def test_v1_dev_in_sync_with_schemas(self):
-        new = load_jsons(SCHEMA_FILES, SCHEMAS_DIR)
-        old = load_jsons(SCHEMA_FILES, OLD_SCHEMAS_DIR)
+    validator = Draft7Validator(curve_schema)
 
-        for o, n in zip(old, new):
-            assert o == n
+    def test_valid_risk_rating_curve(self):
+        """Test a valid risk rating curve with string values"""
+        valid_risk_rating_curve = {
+            "id": "risk_curve_1",
+            "date": "2024-03-20T00:00:00Z",
+            "type": "risk_rating",
+            "values": [
+                {"reference": "1m", "value": "AAA"},
+                {"reference": "3m", "value": "AA"},
+                {"reference": "6m", "value": "A"},
+            ],
+        }
+        self.validator.validate(instance=valid_risk_rating_curve)
+
+    def test_valid_rate_curve(self):
+        """Test a valid rate curve with number values"""
+        valid_rate_curve = {
+            "id": "rate_curve_1",
+            "date": "2024-03-20T00:00:00Z",
+            "type": "rate",
+            "values": [
+                {"reference": "1m", "value": 0.01},
+                {"reference": "3m", "value": 0.015},
+                {"reference": "6m", "value": 0.02},
+            ],
+        }
+        self.validator.validate(instance=valid_rate_curve)
+
+    def test_unknown_curve_type(self):
+        # Unknown curve type: numbers are default for backwards compatibility
+        unknown_curve = {
+            "id": "rate_curve_1",
+            "date": "2024-03-20T00:00:00Z",
+            "values": [{"reference": "1m", "value": 0.01}],
+        }
+        self.validator.validate(instance=unknown_curve)
+
+        unknown_curve["values"] = [{"reference": "1m", "value": "AAA"}]
+        with pytest.raises(ValidationError, match="is not of type 'number'"):
+            self.validator.validate(instance=unknown_curve)
+
+    def test_invalid_mixed_value_types(self):
+        """Test an invalid curve with mixed string and number values"""
+        invalid_mixed_curve = {
+            "id": "mixed_curve_1",
+            "date": "2024-03-20T00:00:00Z",
+            "type": "rate",
+            "values": [
+                {"reference": "1m", "value": 0.01},
+                {"reference": "3m", "value": "AAA"},
+                {"reference": "6m", "value": 0.02},
+            ],
+        }
+        with pytest.raises(ValidationError, match="is not of type 'number'"):
+            self.validator.validate(instance=invalid_mixed_curve)
+
+
+class TestRunStats:
+    def test_property_count(self):
+        stats = fire_stats()
+        print(f"\n\n    ======== FIRE STATISTICS =======\n\n{stats}\n\n")
+        assert stats

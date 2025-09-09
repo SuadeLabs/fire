@@ -42,8 +42,22 @@
       "type": "string",
       "enum": [
         "FDTR",
+        "FESR",
         "UKBRBASE",
-        "ZERO"
+        "USTSR",
+        "ZERO",
+        "bbsw",
+        "bbsw_3m",
+        "euribor",
+        "euribor_1m",
+        "euribor_3m",
+        "euribor_6m",
+        "other",
+        "pboc",
+        "sofr",
+        "sofr_1m",
+        "sofr_3m",
+        "sofr_6m"
       ]
     },
     "break_dates": {
@@ -102,9 +116,24 @@
       "description": "The unique identifier used by the financial institution for the deal to which this derivative belongs.",
       "type": "string"
     },
+    "default_date": {
+      "description": "Date of default.",
+      "type": "string",
+      "format": "date-time"
+    },
     "delta": {
       "description": "Price sensitivity to the underlying.",
       "type": "number"
+    },
+    "ead": {
+      "description": "The EAD field allows users to input monetary exposure-at-default values across the derivative's lifecycle. Upon default, this field must be updated to reflect the final realised EAD value — that is, the actual exposure outstanding at the moment of default.",
+      "type": "integer",
+      "monetary": true
+    },
+    "economic_loss": {
+      "description": "The definition of loss, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss",
+      "monetary": true,
+      "type": "integer"
     },
     "end_date": {
       "description": "YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
@@ -129,6 +158,61 @@
     "gamma": {
       "description": "Second-order price sensitivity to the underlying or rate of change of the delta.",
       "type": "number"
+    },
+    "hedge_designation": {
+      "type": "string",
+      "description": "ASU 2017-12 hedge designations allowed in conjunction with partial-term hedging election in ASC 815-20-25-12b(2)(ii). These designations are described in ASC 815-20-25-12A and 815-25-35-13B.\n\nhttps://asc.fasb.org/1943274/2147480682/815-20-25-12A\nhttps://asc.fasb.org/1943274/2147480295/815-25-35-13B",
+      "enum": [
+        "cash_flows",
+        "last_of_layer"
+      ]
+    },
+    "hedge_id": {
+      "type": "string",
+      "description": "Unique identifier that establishes a relational link between a security and its associated derivative hedge. Enables consistent tracking, aggregation, and reconciliation of hedged positions across systems and datasets."
+    },
+    "hedge_sidedness": {
+      "type": "string",
+      "description": "Whether the hedging instrument provides a one-sided effective offset of the hedged risk, as permitted under ASC 815-20-25-76.\n\nhttps://asc.fasb.org/1943274/2147480682/815-20-25-76",
+      "enum": [
+        "one_sided",
+        "two_sided"
+      ]
+    },
+    "hedge_type": {
+      "type": "string",
+      "description": "The type of hedge (fair value or cash flow hedge) associated with the holding. Whether it is hedging individually or is hedging as part of a portfolio of assets with similar risk that are hedged as a group in line with ASC 815-20-25-12 (b), ASC 815-20-2512A, or ASC 815-10-25-15.\n\nhttps://asc.fasb.org/1943274/2147480682/815-20-25-12\nhttps://asc.fasb.org/1943274/2147480682/815-20-25-12A\nhttps://asc.fasb.org/1943274/2147480682/815-10-25-15",
+      "enum": [
+        "cf_hedge",
+        "fv_hedge"
+      ]
+    },
+    "hedged_cf_type": {
+      "type": "string",
+      "description": "The type of cash flow associated with the hedge if it is a cash flow hedge. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "enum": [
+        "interest_only",
+        "other",
+        "partial",
+        "principal_interest",
+        "principal_only"
+      ]
+    },
+    "hedged_risk": {
+      "type": "string",
+      "description": "The risk being hedged, among the potential hedged risks described under ASC 815-20-25-12 and ASC 815-20-25-15.\n\nhttps://asc.fasb.org/1943274/2147480682/815-20-25-12\nhttps://asc.fasb.org/1943274/2147480682/815-20-25-15",
+      "enum": [
+        "cr",
+        "fv_option",
+        "fx",
+        "fx_cr",
+        "ir",
+        "ir_cr",
+        "ir_fx",
+        "ir_fx_cr",
+        "other",
+        "overall_fv_cf"
+      ]
     },
     "impairment_amount": {
       "description": "The impairment amount for a security is the allowance set aside by the firm for losses.",
@@ -185,7 +269,7 @@
       "maximum": 1.0
     },
     "lgd_irb": {
-      "description": "The loss given default as determined by internal rating-based methods, represented as a number between 0 and 1.",
+      "description": "The loss given default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations.",
       "type": "number",
       "minimum": 0.0,
       "maximum": 1.0
@@ -247,7 +331,7 @@
       "type": "boolean"
     },
     "pd_irb": {
-      "description": "The probability of default as determined by internal rating-based methods, represented as a number between 0 and 1.",
+      "description": "The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations.",
       "type": "number",
       "minimum": 0.0,
       "maximum": 1.0
@@ -294,6 +378,11 @@
     "reporting_id": {
       "description": "The internal ID for the legal entity under which the account is being reported.",
       "type": "string"
+    },
+    "resolution_date": {
+      "description": "Date of resolution of the defaulted facility.",
+      "type": "string",
+      "format": "date-time"
     },
     "rho": {
       "description": "Price sensitivity to interest rates.",

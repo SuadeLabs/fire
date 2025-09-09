@@ -4,6 +4,8 @@ import unittest
 
 import httpx
 import markdown
+import re
+import pytest
 from bs4 import BeautifulSoup
 
 from . import (
@@ -13,7 +15,60 @@ from . import (
     all_properties,
     property_doc_name,
     schema_enum_registry,
+    schema_properties,
 )
+
+LOCAL = os.getenv("GITHUB_ACTIONS") != "true"
+MISSING_DOCS = [
+    "account_ids",
+    "cb_haircut",
+    "col",
+    "comment",
+    "data",
+    "delta",
+    "derivative_id",
+    "forward_rate",
+    "gamma",
+    "insolvency_rank",
+    "leg",
+    "links",
+    "loan_id",
+    "loan_ids",
+    "next_exercise_date",
+    "next_payment_amount",
+    "next_receive_amount",
+    "next_receive_date",
+    "next_reset_date",
+    "page",
+    "payment_date",
+    "report_type",
+    "reset_date",
+    "rho",
+    "row",
+    "settlement_type",
+    "security_id",
+    "theta",
+    "title",
+    "underlying_derivative_id",
+    "underlying_issuer_id",
+    "underlying_security_id",
+    "underlying_strike",
+    "values",
+    "vega",
+    "vol_adj_fx",
+    # DO NOT ADD TO THIS LIST, ADD DOCUMENTATION!
+]
+
+
+def get_schema_refs_in_doc(docname):
+    regex = r"schemas:\s+\[(.*?)\]"  # capture what is in the brackets
+
+    filename = os.path.join(DOCS_DIR, f"{docname}.md")
+    with open(filename) as f:
+        for line in f.readlines():
+            schema_refs = re.findall(regex, line)
+            if schema_refs:
+                return schema_refs[0].split(", ")
 
 
 class TestDocs(unittest.TestCase):
@@ -21,52 +76,13 @@ class TestDocs(unittest.TestCase):
         """
         Ensure there are docs for every new attribute
         """
-        exceptions = [
-            "account_ids",
-            "cb_haircut",
-            "col",
-            "comment",
-            "data",
-            "delta",
-            "derivative_id",
-            "forward_rate",
-            "gamma",
-            "insolvency_rank",
-            "leg",
-            "links",
-            "loan_id",
-            "loan_ids",
-            "next_exercise_date",
-            "next_payment_amount",
-            "next_receive_amount",
-            "next_receive_date",
-            "next_reset_date",
-            "page",
-            "payment_date",
-            "report_type",
-            "reset_date",
-            "rho",
-            "row",
-            "settlement_type",
-            "security_id",
-            "theta",
-            "title",
-            "underlying_derivative_id",
-            "underlying_issuer_id",
-            "underlying_security_id",
-            "underlying_strike",
-            "values",
-            "vega",
-            "vol_adj_fx",
-            # DO NOT ADD TO THIS LIST, ADD DOCUMENTATION!
-        ]
 
         properties = all_properties()
         self.assertTrue(properties)
 
         no_docs = []
         for p in properties:
-            if p not in DOC_NAMES + exceptions:
+            if p not in DOC_NAMES + MISSING_DOCS:
                 no_docs.append(p)
 
         self.assertFalse(
@@ -118,6 +134,7 @@ class TestDocs(unittest.TestCase):
                             schema_name, v, enum
                         )  # noqa
 
+    @pytest.mark.skipif(LOCAL, reason="Too long to run locally")
     def test_urls_in_docs(self):
         async def async_requests(urls):
             async with httpx.AsyncClient(timeout=60) as client:
@@ -160,3 +177,74 @@ class TestDocs(unittest.TestCase):
             print(w)
 
         assert not not_founds, f"URLs not found: \n {not_founds}"
+
+    def test_docs_ref_correct_schemas(self):
+        """
+        Each doc should list the relevant schemas for that property.
+
+        Check this exists and is correct.
+
+        The syntax should be (on one line): "schemas: [x, y, z]"
+        """
+        for docname in DOC_NAMES:
+            schema_refs = get_schema_refs_in_doc(docname)
+            if schema_refs:
+                # check no dupes
+                assert len(schema_refs) == len(
+                    set(schema_refs)
+                ), f"Duplicate schema refs found for {docname}"
+
+                for schema_name in schema_refs:
+                    # Here we check the schemas found are real schemas
+                    assert schema_name in SCHEMA_NAMES, f"Failed for {docname}.md"
+
+                    # Here we check that the property is in the schema it says it is in
+                    err_msg = f"Property: {docname} not found in {schema_name}"
+                    assert docname in schema_properties(f"{schema_name}.json"), err_msg
+
+            if not schema_refs:
+                # Fail if no schema refs found at all
+                raise AssertionError(f"No schema references found for doc: {docname}")
+
+    def test_schemas_are_correctly_referenced_in_docs(self):
+        """
+        Here we check the reverse of the above, that schema properties are correctly documented
+        with references in their docs.
+
+        We skip abstract or inherited schemas as these are checked in child schemas. e.g. customer
+        for entity
+        """
+        dont_check = [
+            "batch",
+            "common",
+            "example",
+            "entity",
+        ]
+        for schema_name in SCHEMA_NAMES:
+            if schema_name in dont_check:
+                continue
+
+            for prop in schema_properties(f"{schema_name}.json"):
+                if prop in MISSING_DOCS:
+                    continue
+
+                schema_refs = get_schema_refs_in_doc(prop)
+                assert (
+                    schema_name in schema_refs
+                ), f"{schema_name} not found for doc: {prop}"
+
+    @pytest.mark.skip("This syntax rule has 501 transgressions, will take some fixing")
+    def test_referenced_schemas_have_a_section_in_docs(self):
+        """
+        If a doc pertains to multiple schemas, each schema should have its own section in the docs
+        identifiable with a level 1 header in markdown (#)
+        """
+        for docname in DOC_NAMES:
+            schema_refs = get_schema_refs_in_doc(docname)
+            if len(schema_refs) > 1:
+                filename = os.path.join(DOCS_DIR, f"{docname}.md")
+                with open(filename) as doc:
+                    for schema_ref in schema_refs:
+                        assert re.match(
+                            f"# {schema_ref}", doc.read()
+                        ), f"No level-1 header (section) found in {docname} for {schema_ref}"

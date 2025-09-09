@@ -59,6 +59,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── fines
 ├── firm_operating_expenses
 │   ├── computer_and_it_cost
+│   │   └── it_outsourcing
 │   ├── computer_software
 │   ├── non_life_ins_premium
 │   ├── occupancy_cost
@@ -76,11 +77,14 @@ The **purpose** property describes the reason behind the creation or usage of th
 │       ├── redundancy_pymt
 │       └── regular_wages
 ├── fx
+├── intangible
 ├── interest
+│   ├── int_on_asset
 │   ├── int_on_bond_and_frn
 │   ├── int_on_deposit
 │   ├── int_on_derivative
 │   │   └── int_on_deriv_hedge
+│   ├── int_on_liability
 │   ├── int_on_loan_and_adv
 │   │   ├── int_on_bridging_finance
 │   │   ├── int_on_mortgage
@@ -89,8 +93,10 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── int_on_money_mkt
 │   └── int_on_sft
 │   └── int_unallocated
+│   └── int_on_finance_leasing
 ├── intra_group_fee
 ├── inv_in_subsidiary
+├── msr
 ├── mtg_insurance
 │   ├── mtg_ins_nonconform
 ├── operational
@@ -134,6 +140,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── ded_fut_prof_temp_diff
 │   ├── fut_prof
 │   ├── fut_prof_temp_diff
+│   ├── nol_carryback
 │   ├── not_fut_prof
 │   ├── oth_tax_excl_temp_diff
 │   └── reclass_tax
@@ -183,16 +190,7 @@ Clearing and comparable services from the [CRR][crr] Article 422.4:
 > Clearing, custody or cash management or other comparable services referred to in points (a) and (d) of paragraph 3 only covers such services to the extent that they are rendered in the context of an established relationship on which the depositor has substantial dependency. They shall not merely consist in correspondent banking or prime brokerage services and the institution shall have evidence that the client is unable to withdraw amounts legally due over a 30 day horizon without compromising its operational functioning.
 
 ### operational
-Operational deposit from the [LCR][lcr] Article 27.6:
-> 6. In order to identify the deposits referred to in point (c) of paragraph 1, a credit institution shall consider that there is an established operational relationship with a non-financial customer, excluding term deposits, savings deposits and brokered deposits, where all of the following criteria are met:
-> (a) the remuneration of the account is priced at least 5 basis points below the prevailing rate for wholesale deposits with comparable characteristics, but need not be negative;
-> (b) the deposit is held in specifically designated accounts and priced without creating economic incentives for the depositor to maintain funds in the deposit in excess of what is needed for the operational relationship;
-> (c) material transactions are credited and debited on a frequent basis on the account considered;
-> (d) one of the following criteria is met:
-> (i) the relationship with the depositor has existed for at least 24 months;
-> (ii) the deposit is used for a minimum of 2 active services. These services may include direct or indirect access to national or international payment services, security trading or depository services.
-> Only that part of the deposit which is necessary to make use of the service of which the deposit is a by-product shall be treated as an operational deposit. The excess shall be treated as non-operational.
-Where the depositor is the reporting entity, the loan schema should be used. Where the depositor is the other party, the account schema should be used.
+*(see operational under account)*
 
 ### cash_management
 *Needs definition*
@@ -231,7 +229,7 @@ Excess operational deposits are defined as the part of the operational deposits 
 As opposed to short-term definition within **operational**, **custody** here refers to the long-term custody of financial assets such as those held for safekeeping by a custodian bank.
 
 ### defined_benefit
-A workplace pension based on your salary and how long you’ve worked for your employer. They’re sometimes called ‘final salary’ or ‘career average’ pension schemes. https://www.gov.uk/pension-types
+A workplace pension based on your salary and how long you've worked for your employer. They're sometimes called 'final salary' or 'career average' pension schemes. https://www.gov.uk/pension-types
 
 ### prime_brokerage
 Describes an account held for prime brokerage reasons but not including those contained above for operational reasons. These accounts are used for prime brokerage service transactions which are in essence investment activities including securities lending, leveraged trade executions and cash management, among other things.
@@ -329,6 +327,9 @@ Describes an account that holds the amount of fees receivables/payables originat
 ### commitments
 *needs definition*
 
+### msr
+Describes an account that holds mortgage servicing assets, also known as Mortgage Servicing Rights (MSRs), which are assets representing the contractual right to collect and process payments on a pool of mortgage loans on behalf of investors.
+
 ### tax
 Describes an account representing the amount of tax paid, received or deferred for the reporting period by the reporting entity.
 
@@ -349,6 +350,9 @@ Describes an account representing the amount of **deferred tax** non-deductible,
 
 ### fut_prof_temp_diff
 Describes an account representing the amount of **deferred tax** non-deductible, reliant on future profitability, arising due to temporary differences.
+
+### nol_carryback
+Describes an account representing the amount of taxes previously paid that the entity could recover through **net operating loss (nol) carrybacks** during the reporting period.
 
 ### not_fut_prof
 Describes an account representing the amount of **deferred tax** that do not rely on future profitability.
@@ -392,6 +396,9 @@ Describes an account that holds the amount of dividends received from **collecti
 ### dividend_from_money_mkt
 Describes an account that holds the amount of dividends received from **money market funds**.
 
+### intangible
+This is an asset that lacks physical substance such as a patent, brand, trademark, or copyright
+
 ### interest
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report
 
@@ -416,14 +423,25 @@ Describes an account that holds the amount of interests receivable/payable as re
 ### int_unallocated
 Describes an account that holds accrued interest that is unallocated.  Required for BCAR RWA calculation and reporting.
 
+### int_on_finance_leasing
+Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from interest from finance leasing.
+
 ### int_on_sft
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **Securities Financing Transactions**.
+
+### int_on_asset
+
+Describes an account that holds the amount of interest receivable/payable reported in a Profit and Loss report and where the interest amount originates from assets
 
 ### int_on_bond_and_frn
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **bonds and Floating Rate Notes**.
 
 ### int_on_bridging_loan
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **bridging finance loans**.
+
+### int_on_liability
+
+Describes an account that holds the amount of interest receivable/payable as reported in a Profit and Loss report and where the interest amount originates from liabilities
 
 ### int_on_mortgage
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **loans secured on dwellings**.
@@ -489,6 +507,9 @@ Describes an account representing the part of staff expenses corresponding to th
 ### computer_and_it_costs
 Describes an account representing the part of operating expenses corresponding to the **computer_and_it_costs** paid by the reporting entity.
 
+### it_outsourcing
+Describes an account representing the part of operating expenses corresponding to the **it_outsourcing**, a specific type of **computer_and_it_costs**, paid by the reporting entity.
+
 ### computer_software
 Computer software intangibles. Required for BCAR RWA calculation and Reporting.  Ref: BCAR 40.290; Chapter 4, P164
 
@@ -542,7 +563,7 @@ Describes an account representing the profit or loss made on investments in subs
 
 ### manufactured_dividend
 Describes an account representing the manufactured dividends paid or received by the reporting entity.
-The Bank of England defines manufactured dividends as payments that can arise when an institution borrows a security from a security lender or client and that security pays a dividend while on loan. As the security lender customarily maintains the right to payments which accrue on the security, the borrower will ‘manufacture’ a dividend payment back to the lender.
+The Bank of England defines manufactured dividends as payments that can arise when an institution borrows a security from a security lender or client and that security pays a dividend while on loan. As the security lender customarily maintains the right to payments which accrue on the security, the borrower will 'manufacture' a dividend payment back to the lender.
 BoE Form PL definitions: https://www.bankofengland.co.uk/statistics/data-collection/osca/forms-definitions-validations
 
 ### revaluation
@@ -558,10 +579,10 @@ Describes an account representing the amount of a provision beeing released as a
 Describes an account representing the amount of a provision beeing written-off as a risk materialised (e.g. the loan for which the provision was originally registered is deemed irrecoverable).
 
 ### mtg_insurance
-Prepaid portfolio mortgage insurance conforming to OSFI's 5 year amortization requirements.  Ref: BCAR 40.290; Chapter 4, P164
+Prepaid portfolio mortgage insurance conforming to OSFI's 5 year amortisation requirements.  Ref: BCAR 40.290; Chapter 4, P164
 
 ### mtg_ins_nonconform
-Prepaid portfolio mortgage insurance that does not conform to OSFI's 5 year amortization requirements.  Ref: BCAR 40.290; Chapter 4, P164
+Prepaid portfolio mortgage insurance that does not conform to OSFI's 5 year amortisation requirements.  Ref: BCAR 40.290; Chapter 4, P164
 
 ### adj_syn_inv_own_shares
 Adjustments of Synthetic positions - investments in own shares.  Required for BCAR RWA calculation and Reporting.  Ref: BCAR 40.290; Chapter 4, P164
@@ -595,8 +616,8 @@ In the context of [CRR][crr] Article 329, a reference derivative would be the un
 
 ### client_execution
 Derivatives given this purpose value represent execution of orders on behalf of clients.
-‘Execution of orders on behalf of clients’ means acting to conclude agreements to buy or sell one or more financial instruments
-on behalf of clients and includes the conclusion of agreements to sell financial instruments issued by an investment firm or a credit institution at the moment of their issuance. [Article 4(1)(5) of Directive 2014/65/EU (MiFID].
+'Execution of orders on behalf of clients' means acting to conclude agreements to buy or sell one or more financial instruments
+on behalf of clients and includes the conclusion of agreements to sell financial instruments issued by an investment firm or a credit institution at the moment of their issuance. [Article 4(1)(5) of Directive 2014/65/EU (MiFID)].
 
 ### client_transmission
 [FCA Handbook: PERG 13.3 Investment Services and Activities](https://www.handbook.fca.org.uk/handbook/PERG/13/3.html)
@@ -645,8 +666,13 @@ refer to interest cashflows only, and do not include any principal flows
 │   ├── buy_to_let_other
 │   ├── buy_to_let_construct
 │   └── consumer_buy_to_let
+├── commercial
+├── commercial_property
 ├── commodities_finance
 ├── construction
+│   └── renovation
+├── debt_consolidation
+├── education
 ├── first_time_buyer
 │   └── first_time_buyer_cstr
 ├── further_advance
@@ -655,16 +681,23 @@ refer to interest cashflows only, and do not include any principal flows
 │   └── house_purchase_cstr
 ├── ips
 ├── lifetime_mortgage
+├── medical
 ├── non_b20
 ├── object_finance
 │   └── object_finance_hq
 ├── operational
+│   ├── operational_non_sym
+│   └── operational_sym
 ├── other
 ├── project_finance
 │   ├── project_pre_op
 │   └── project_hq_phase
 ├── promotional
 ├── reference
+├── refinance
+│   ├── cash_out
+│   ├── rate
+│   └── term
 ├── remortgage
 │   └── remortgage_construct
 ├── remortgage_other
@@ -740,6 +773,12 @@ From [CRR][crr] Article 113(7):
 ### operational
 *(see operational under account)*
 
+### operational_sym
+Used to classify operational deposits where the credit institution is able to establish a corresponding symmetrical inflow rate.
+
+### operational_non_sym
+Used to classify operational deposits where the credit institution is not able to establish a corresponding symmetrical inflow rate.
+
 ### promotional
 As outlined in [LCR][lcr] Article 31(9), a **promotional loan**
 > shall be available only to persons who are not financial customers on a non-competitive, not for profit basis in order to promote public policy objectives of the Union or that Member State's central or regional government. It shall only be possible to draw on such facilities following the reasonably expected demand for a promotional loan and up to the amount of such demand provided there is a subsequent reporting on the use of the funds distributed;
@@ -775,12 +814,12 @@ loans to commercial fishermen.
 purchased from, merchants and dealers, either with or without recourse to the seller.
 (4) Loans to farmers that are guaranteed by the Farmers Home Administration (FmHA) or by
 the Small Business Administration (SBA) and that are extended, serviced, and collected
-by a party other than the FmHA or SBA. Include SBA “Guaranteed Interest Certificates,”
+by a party other than the FmHA or SBA. Include SBA "Guaranteed Interest Certificates,"
 which represent a beneficial interest in the entire SBA-guaranteed portion of an individual
 loan, provided the loan is for the financing of agricultural production or other lending to
-farmers. (Exclude SBA “Guaranteed Loan Pool Certificates,” which represent an
-undivided interest in a pool of SBA-guaranteed portions of loans. SBA “Guaranteed Loan
-Pool Certificates” should be reported as securities in Schedule RC-B, item 2, or, if held
+farmers. (Exclude SBA "Guaranteed Loan Pool Certificates," which represent an
+undivided interest in a pool of SBA-guaranteed portions of loans. SBA "Guaranteed Loan
+Pool Certificates" should be reported as securities in Schedule RC-B, item 2, or, if held
 for trading, in Schedule RC, item 5.)
 (5) Loans and advances to farmers for purchases of farm machinery, equipment, and
 implements.
@@ -827,7 +866,7 @@ Project Finance that are deemed high-quality will get preferential risk weight t
 
 > (3)	The revenues are availability-based19 or subject to a rate-of-return regulation or take-or-pay contract;
 
-> (4)	The project finance entity’s revenue depends on one main counterparty and this main counterparty shall be a central government, PSE or a corporate entity with a risk weight of 80% or lower;
+> (4)	The project finance entity's revenue depends on one main counterparty and this main counterparty shall be a central government, PSE or a corporate entity with a risk weight of 80% or lower;
 
 > (5)	The contractual provisions governing the exposure to the project finance entity provide for a high degree of protection for creditors in case of a default of the project finance entity;
 
@@ -890,6 +929,43 @@ As defined by OSFI Chapter 4, P66 and Chapter 5, P15:
 ### other
 The **other** enum value can be used when none of the other enum values apply or the value is *unknown*.
 
+
+### commercial
+
+Commercial business.
+
+### commercial_property
+
+Commercial real estate.
+
+### renovation
+
+Loans given for the purpose of renovations. This may also be known as a home improvement loan. 
+### debt_consolidation
+
+A loan that merges other debts into one loan.
+### education
+
+A loan used to cover educational expenses
+### medical
+
+A loan used to cover medical or dental expenses.
+
+### cash_out
+
+A cash-out refinance is a form of mortgage refinancing where the initial mortgage is paid off, and a new mortgage is established. The new mortgage loan is larger than the pre-existing loan amount, so the home equity is converted into a cash payout. Refer to https://corporatefinanceinstitute.com/resources/commercial-lending/cash-out-refinance.
+
+### rate		
+
+A rate refinance refers to refinancing a loan to take advantage of lower interest rates. 
+
+### term		
+
+A term refinance refers to refinancing a loan to either increase or decrease the term of the loan. 
+
+### refinance			
+
+A refinance, refers to revising and replacing the terms of an existing credit agreement, usually as it relates to a loan or mortgage. Refinancing a loan or mortgage is typically done to take advantage of lower interest rates or improve the loan terms, such as the monthly payment or length of the loan. Refer to https://www.investopedia.com/terms/r/refinance.asp.
 
 ## Security
 ```bash
@@ -972,7 +1048,7 @@ Use this enum to refer to funds reserved for the purpose of implementing, from a
 
 ---
 
-[reg]: https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32009R0494&from=EN
+[reg]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009R0494&from=EN
 [midifdir]: https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX:32014L0065
 [crr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013R0575
 [lcr]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061

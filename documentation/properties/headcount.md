@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "headcount"
-schemas:    [entity]
+schemas:    [customer, issuer, guarantor]
 ---
 
 # headcount

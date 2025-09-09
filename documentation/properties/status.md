@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"status"
-schemas:	[account, customer, loan, security]
+schemas:	[account, customer, loan, security, derivative]
 ---
 
 # status
@@ -46,10 +46,10 @@ The account has been cancelled but funds will be rolled-over in to another accou
 The account has been cancelled and the funds are known to be leaving the financial institution.
 
 ### audited
-Indicates profits that have been verified by persons independent of the firm that are responsible for the auditing of the firm’s accounts, as specified in condition (a) of Article 26 (2) of the CRR.
+Indicates profits that have been verified by persons independent of the firm that are responsible for the auditing of the firm's accounts, as specified in condition (a) of Article 26 (2) of the CRR.
 
 ### unaudited
-Indicates profits that have not been verified by persons independent of the firm that are responsible for the auditing of the firm’s accounts, thereby not meeting condition (a) of Article 26 (2) of the CRR.
+Indicates profits that have not been verified by persons independent of the firm that are responsible for the auditing of the firm's accounts, thereby not meeting condition (a) of Article 26 (2) of the CRR.
 
 ### other
 Any other status
@@ -70,7 +70,9 @@ The reporting institution has determined that the counterparty is part of an est
     ├── cancellable
     └── revolving
 ├── cancelled
-└── defaulted
+├── closed
+├── defaulted
+└── frozen
 ```
 ### actual
 This is a live loan.
@@ -90,8 +92,14 @@ See also [Basel CRE 20.94](https://www.bis.org/basel_framework/chapter/CRE/20.ht
 ### cancelled
 This is a loan that was committed but then later cancelled due to refusal by customer or expiry of offer.
 
+### closed
+A line of credit that is in its draw period where the credit line has been closed, allowing no further draws or increase in principal balance outstanding.
+
 ### defaulted
 This is a loan where the customer has defaulted or is non-performing.
+
+### frozen
+Identifies any line of credit that is in its draw period where the credit line has been temporarily frozen, allowing no further draws or increase in principal balance outstanding, in the reporting month.
 
 ### revolving
 Indicates that the product is a revolving credit. Revolving credit is a type of credit that allows a borrower to repeatedly borrow up to a certain limit without needing to reapply each time. As the borrower repays the balance, the credit becomes available again. See also [Revolving Credit on Investopedia][investopedia-revolving-credit]
@@ -100,7 +108,12 @@ Indicates that the product is a revolving credit. Revolving credit is a type of 
 ```bash
 ├── paid_up
 ├── called_up
+├── conversion
 ├── bankruptcy_remote
+├── other
+├── redeemed
+   ├── refinanced
+   └── replaced
 ├── unsettled
     └── free_deliveries
 └── non_operational
@@ -110,6 +123,24 @@ Indicates that the product is a revolving credit. Revolving credit is a type of 
 This indicates that capital has been [paid up][paidup] by the shareholders to the company that issued the shares.
 When used in combination with the purpose attribute, 'default_fund', equates to prefunded default fund contributions.
 
+### conversion
+The instrument was converted into another form, such as preferred stock converting into common equity.
+
+### replaced
+The instrument was redeemed and a new instrument was issued to replace it (e.g., to maintain capital levels).
+
+### redeemed
+The instrument was redeemed and not replaced, reducing the outstanding capital base.
+
+### refinanced
+The instrument was redeemed and replaced with a different type of funding, such as debt or equity.
+
+### conversion
+The instrument was converted into another form, such as preferred stock converting into common equity.
+
+### other
+Any other redemption-related action not captured by the other redemption categories.
+
 ### called_up
 This indicates that capital has been [called up][calledup] by the company issuing the shares but has not been paid yet by the shareholders.
 When used in combination with the purpose attribute, 'default_fund', equates to unfunded default fund contributions.
@@ -118,7 +149,7 @@ When used in combination with the purpose attribute, 'default_fund', equates to 
 [calledup]: https://www.legislation.gov.uk/ukpga/2006/46/section/547?view=plain
 
 ### bankruptcy_remote
-This indicates that the reporting institution has determined that the security will not be available to an entity’s creditors
+This indicates that the reporting institution has determined that the security will not be available to an entity's creditors
 in the event of the insolvency of that entity. When used in combination with the purpose attributes indicates that collateral
 posted by the reporting institution to its counterparty as initial or variation margin, is held in a bankruptcy-remote manner,
 and is therefore segregated from the counterparty's assets, as defined in Articles 276(1)(g) and 300(1) CRR.

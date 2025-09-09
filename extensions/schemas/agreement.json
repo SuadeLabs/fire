@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Agreement Extended Schema",
+  "description": "Extended agreement schema containing all jurisdiction-specific extensions.",
+  "type": "object",
+  "properties": {},
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/agreement.json"
+    }
+  ]
+}

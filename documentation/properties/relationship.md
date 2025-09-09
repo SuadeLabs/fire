@@ -1,14 +1,14 @@
 ---
 layout:		property
 title:		"relationship"
-schemas:	[entity]
+schemas:	[customer, issuer, guarantor]
 ---
 
 # relationship
 
 ---
 The **relationship** is used to describe the link betweek two entities. There are two categories:
-- The relationship between an entity (customer, issuer or guarantor) and it's ultimate parent. 
+- The relationship between an entity (customer, issuer or guarantor) and it's ultimate parent.
 - The relationship between an entity (customer, issuer or guarantor) and the reporting_entity.
 
 An entity can be a **parent_branch** or a **parent_subsidiary** of its ultimate parent.
@@ -54,7 +54,7 @@ This is in line with the criteria on influence and control described in BPM6 (Ba
 From the [Capital Requirements Regulation][crr]:
 > 'branch' means a place of business which forms a legally dependent part of an institution and which carries out directly all or some of the transactions inherent in the business of institutions;
 
-IFRS does not explicitly define a branch, but in practise it has been noted as an extension to the parent company. 
+IFRS does not explicitly define a branch, but in practise it has been noted as an extension to the parent company.
 
 From the IAS 21 definition of a foreign operation:
 > Foreign operation is an entity that is a subsidiary, associate, joint

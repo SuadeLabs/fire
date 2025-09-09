@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "credit_impaired"
-schemas:    [entity]
+schemas:    [customer, issuer, guarantor]
 ---
 
 # credit_impaired

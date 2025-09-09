@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"risk_group_id"
-schemas:	[entity]
+schemas:	[customer, issuer, guarantor]
 ---
 
 # risk_group_id
