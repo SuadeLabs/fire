@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "acc_fv_change_before_taxes"
-schemas:    [loan, security, derivative]
+schemas:    [account, derivative, loan, security]
 ---
 
 # acc_fv_change_before_taxes
