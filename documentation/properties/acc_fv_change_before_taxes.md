@@ -1,10 +1,10 @@
 ---
 layout:     property
-title:      "acc_change_fv_before_taxes"
-schemas:    [loan, security]
+title:      "acc_fv_change_before_taxes"
+schemas:    [loan, security, derivative]
 ---
 
-# acc_change_fv_before_taxes
+# acc_fv_change_before_taxes
 
 ---
 
