@@ -641,6 +641,14 @@
         "US"
       ]
     },
+    "outstanding_principal": {
+      "type": "integer",
+      "monetary": true,
+      "description": "Total unpaid principal balance of loans",
+      "jurisdictions": [
+        "US"
+      ]  
+    },
     "pay_type_end_draw": {
       "type": "string",
       "description": "How borrowers are required to repay any principal outstanding at the end of the allowable draw period. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
