@@ -113,6 +113,12 @@
       "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/cr_approach"
     },
+    "cum_write_offs": {
+      "description": "The portion of the loan which has been written off.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
+    },    
     "currency_code": {
       "description": "Actual currency of the Account in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
@@ -378,6 +384,11 @@
     "orig_credit_score": {
       "description": "The credit score of the customer at origination of the product using a commercially available credit bureau score.",
       "type": "integer"
+    },
+    "orig_limit_amount": {
+      "description": "The original line of credit amount that was granted at the origination of the facility",
+      "type": "integer",
+      "monetary": true
     },
     "parent_facility_id": {
       "description": "The parent code assigned by the financial institution to identify a facility.",

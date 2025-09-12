@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "cum_write_offs"
-schemas:    [loan, security]
+schemas:    [account, loan, security]
 ---
 
 # cum_write_offs
