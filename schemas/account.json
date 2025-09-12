@@ -341,6 +341,10 @@
       "type": "integer",
       "monetary": true
     },
+    "mna_id": {
+      "description": "The unique identifier of the Master Netting Agreement the account falls under. Typically used where a legally enforceable right to offset exists and where the reporting entity intends to settle on a net basis.",
+      "type": "string"
+    },
     "mtd_deposits": {
       "description": "Month to date amount deposited within the account as a naturally positive integer number of cents/pence.",
       "type": "integer",

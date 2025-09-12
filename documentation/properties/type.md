@@ -1785,6 +1785,7 @@ _NEEDS Definition_
 │   ├── fbf
 │   │   └── afb
 │   └── other_isda
+├── right_to_set_off
 └── other
 ```
 
@@ -1874,6 +1875,10 @@ https://theotcspace.com/knowledge_item/afb-agreement-federation-bancaire-francai
 ### other_isda
 
 Any other ISDA agreement.
+
+### right_to_set_off
+
+This represents a legal agreement allowing deposits and loans with the same counterparty to be netted when reported on the balance assuming the entity intends to settle on a net basis.
 
 ### other
 

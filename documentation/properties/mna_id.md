@@ -1,12 +1,12 @@
 ---
 layout:		property
 title:		"mna_id"
-schemas:	[derivative, derivative_cash_flow, security]
+schemas:	[derivative, derivative_cash_flow, security, account, loan]
 ---
 
 # mna_id
 
-The **mna_id** is the unique identifier of the Master Netting Agreement the security/derivative falls under. Typically where used as derivatives collateral.
+The **mna_id** is the unique identifier of the Master Netting Agreement the security/derivative/account/loan falls under. Typically where used as derivatives collateral or where a legally enforceable right to offset exists and where the reporting entity intends to settle on a net basis.
 
 ## Master Netting Agreement (MNA)
 The **MNA** refers to the netting agreement defined in the [CRR][crr] Article 296:
