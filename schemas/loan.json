@@ -468,6 +468,10 @@
       "type": "integer",
       "monetary": true
     },
+    "mna_id": {
+      "description": "The unique identifier of the Master Netting Agreement the loan falls under. Typically used where a legally enforceable right to offset exists and where the reporting entity intends to settle on a net basis.",
+      "type": "string"
+    },
     "movement": {
       "description": "The movement parameter describes how the loan arrived to the firm.",
       "type": "string",
