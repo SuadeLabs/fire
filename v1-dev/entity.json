@@ -1110,7 +1110,7 @@
       ]
     },
     "sic_code": {
-      "description": "The UK SIC 2007 standard industry and sector classification.",
+      "description": "Standard Industrial Classification (SIC) system. The applicable reference depends on jurisdiction.",
       "type": "integer",
       "minimum": 0,
       "maximum": 99999
