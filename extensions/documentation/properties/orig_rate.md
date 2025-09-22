@@ -1,13 +1,25 @@
 ---
 layout:     property
 title:      "orig_rate"
-schemas:    [loan]
+schemas:    [loan, security]
 ---
 
-# orig_rate
+# loan
+
+### orig_rate
 
 ---
 
 The rate at origination.
+
+--- 
+
+# security
+
+### orig_rate
+
+---
+
+The coupon/dividend rate for the instrument at issuance..
 
 --- 
