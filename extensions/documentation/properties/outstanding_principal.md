@@ -8,7 +8,7 @@ schemas:    [loan_transaction]
 
 ---
 
-Total unpaid principal balance of loans
+Total unpaid principal balance of loans as of the first charge-off event. Excludes accrued interest and fees. 
 
 For additional details refer to: https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q
 
