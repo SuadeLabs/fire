@@ -19,45 +19,24 @@
         "US"
       ]
     },
-    "arrears_arrange_comp": {
-      "type": "string",
-      "description": "The arrears_arrangement that has been completed for any loan. Successful completion is defined as the closing of loss mitigation activities where the borrower has no remaining delinquent obligations to the servicer.",
-      "enum": [
-        "formal",
-        "interest_grace_period",
-        "mi_claim_adv",
-        "modified_tnc",
-        "none",
-        "possessed",
-        "prin_def_rate",
-        "prin_def_rate_term",
-        "prin_def_term",
-        "principal_defer",
-        "principal_forgive",
-        "rate_prin_forgive",
-        "rate_red_frozen",
-        "rate_term",
-        "rate_term_prin_forgive",
-        "recap",
-        "refinancing",
-        "renewal",
-        "reo",
-        "short_sale",
-        "temporary",
-        "term_ext",
-        "term_prin_forgive",
-        "term_recap"
-      ],
-      "jurisdictions": [
-        "US"
-      ]
-    },
     "arrears_arrange_date": {
       "type": "string",
       "format": "date-time",
       "description": "The date on which the loan terms were most recently modified. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
       "jurisdictions": [
         "US"
+      ]
+    },
+      "arrears_arrange_status": {
+      "type": "string",
+      "description": "Represents the current state of the arrears_arrangement associated with a loan. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ],
+      "enum": [
+        "active",
+        "cancelled",
+        "completed"
       ]
     },
     "balance_after_mod": {
