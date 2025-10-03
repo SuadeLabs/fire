@@ -453,6 +453,7 @@
         "dealing_rev_fx",
         "dealing_rev_fx_nse",
         "dealing_rev_ir",
+        "dealing_rev_non_fin",
         "dealing_rev_sec",
         "dealing_rev_sec_nse",
         "dealing_revenue",
