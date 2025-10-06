@@ -9,7 +9,7 @@ schemas:    [account, derivative, derivative_cash_flow, loan, security]
 ---
 
 ## account
-An account is either an **asset**,  a **liability**, an **equity** or **pnl** (Profit & Loss) from the firm's point of view.
+An account is either an **asset**,  a **liability**, an **equity**, **pnl** (Profit & Loss) or **oci** (Other Comprehensive Income) from the firm's point of view.
 
 ### asset
 An account is considered an [**asset**][asset] if it is a present economic resource controlled by the entity as a result of
@@ -23,6 +23,9 @@ as a result of past events. For example, a [savings account][savings account] is
 An account is considered an [**equity**][equity] if it represents a residual interest in the firm's assets after all of its liabilities have been deducted. For example, a firm may allocate certain amounts of its profits to a [reserve][reserve] account for specific purposes (e.g. a revaluation reserve or a share plan reserve). This reserve account would be recognised as equity on the firm's balance sheet. Equity is typically split in to two types of accounts, capital and reserves.
 
 An account is considered [Profit and Loss (**pnl**)][pnl] if it represents income or expenses attributable to the firm over the period defined by the start and end dates.
+
+### oci
+**oci** is used to identify non-balance sheet information reported as Other Comprehensive Income in an institution's financial statements.
 
 [asset]: http://www.ifrs.org/-/media/project/conceptual-framework/exposure-draft/published-documents/ed-conceptual-framework.pdf
 [liability]: http://www.ifrs.org/-/media/project/conceptual-framework/exposure-draft/published-documents/ed-conceptual-framework.pdf
