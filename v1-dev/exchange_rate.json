@@ -17,6 +17,17 @@
       "description": "The base currency in accordance with ISO 4217 standards.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
     },
+    "period": {
+      "description": "Describes the reference methodology and period for the exchange rate.",
+      "type": "string",
+      "enum": [
+        "avg_12m",
+        "avg_1m",
+        "avg_3m",
+        "avg_6m",
+        "avg_ytd"
+      ]
+    },
     "quote": {
       "description": "The amount of the quote currency received in exchange for 1 unit of the base currency.",
       "type": "number"
@@ -34,6 +45,12 @@
       "type": "string"
     }
   },
-  "required": ["id", "date", "base_currency_code", "quote", "quote_currency_code"],
+  "required": [
+    "id",
+    "date",
+    "base_currency_code",
+    "quote",
+    "quote_currency_code"
+  ],
   "additionalProperties": true
 }
