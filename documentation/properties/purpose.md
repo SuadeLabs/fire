@@ -129,6 +129,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── restructuring
 ├── res_fund_contribution
 ├── revaluation
+│   ├── revaluation_reclass
 ├── revenue_reserve
 ├── share_plan
 ├── share_premium
@@ -568,6 +569,9 @@ BoE Form PL definitions: https://www.bankofengland.co.uk/statistics/data-collect
 
 ### revaluation
 Describes an account representing the revaluation made to reserves or provisions.
+
+### revaluation_reclass
+Describes the treatment related to a revaluation in which the resulting impact arising is to be reclassified.
 
 ### recovery
 Describes an account representing the amount recovered made to reserves or provisions.
