@@ -26,6 +26,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── commitments
 ├── critical_service
 ├── dealing_revenue
+│   ├── dealing_rev_non_fin
 │   ├── dealing_rev_fx
 │   │   └── dealing_rev_fx_nse
 │   ├── dealing_rev_sec
@@ -369,6 +370,9 @@ Describes an account that holds the amount of profits or losses arising from the
 
 ### dealing_rev_fx
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **fx instruments**.
+
+### dealing_rev_non_fin
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of non financial assets.
 
 ### dealing_rev_sec
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **securities**.
