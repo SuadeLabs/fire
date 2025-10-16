@@ -114,6 +114,7 @@ Indicates that the product is a revolving credit. Revolving credit is a type of 
 ├── redeemed
    ├── refinanced
    └── replaced
+├── repurchase   
 ├── unsettled
     └── free_deliveries
 └── non_operational
@@ -134,6 +135,9 @@ The instrument was redeemed and not replaced, reducing the outstanding capital b
 
 ### refinanced
 The instrument was redeemed and replaced with a different type of funding, such as debt or equity.
+
+### repurchase
+The instrument was repurchased by the issuing entity, such as a company repurchasing its own equity or debt from investors.
 
 ### conversion
 The instrument was converted into another form, such as preferred stock converting into common equity.
