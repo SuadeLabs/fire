@@ -620,6 +620,20 @@
         "US"
       ]
     },
+    "other_crf_purpose_desc": {
+      "type": "string",
+      "description": "This field can be used to report a free-text description of the credit facility purpose when it does not match any of the defined enumerated values. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "other_crf_type_desc": {
+      "type": "string",
+      "description": "This field can be used to report a free-text description of the credit facility type when it does not match any of the defined enumerated values. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
     "pay_type_end_draw": {
       "type": "string",
       "description": "How borrowers are required to repay any principal outstanding at the end of the allowable draw period. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
