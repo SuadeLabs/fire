@@ -415,6 +415,10 @@
       "description": "The name of the product as given by the financial institution to be used for display and reference purposes.",
       "type": "string"
     },
+    "provision_amount": {
+      "description": "The amount of reserves that is provisioned by the financial institution to cover the potential loss on the loan. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "string"
+    },
     "purpose": {
       "description": "The purpose for which the account was created or is being used.",
       "type": "string",
