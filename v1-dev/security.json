@@ -1000,6 +1000,12 @@
         "warranty"
       ]
     },
+    "undrawn_provision_amount": {
+      "description": "The amount of reserves that is provisioned by the financial institution to cover the potential loss on the undrawn portion of a loan. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
+    },
     "value_date": {
       "description": "The timestamp that the trade or financial product was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
