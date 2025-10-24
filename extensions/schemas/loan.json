@@ -61,6 +61,17 @@
         "US"
       ]
     },
+    "conversion_type": {
+      "type": "string",
+      "description": "Specifies the conversion of a loan's structure from its initial form to a different form upon a specified date, milestone, or trigger (e.g., line to term, construction to permanent).",
+      "enum": [
+        "converting_to_permanent",
+        "converting_to_term"
+      ],
+      "jurisdictions": [
+        "US"
+      ]
+    },
     "credit_class": {
       "type": "string",
       "description": "The credit class designation as defined by the servicer. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
@@ -773,6 +784,19 @@
     "snc_id": {
       "type": "string",
       "description": "Where the credit facility is reported in the Shared National Credit collection and the reporting entity is the lead bank/agent, this field indicates the entities Internal Credit ID as reported in the Shared National Credit collection for this credit facility as of the most recent filing date. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "syndication_status": {
+      "type": "string",
+      "description": "Specifies the execution status of the syndication agreement for the loan, indicating whether the commitment is unsigned, partially signed, or fully closed and settled among participants.",
+      "enum": [
+        "closed_not_settled",
+        "closed_settled",
+        "dual_signed",
+        "single_signed"
+      ],
       "jurisdictions": [
         "US"
       ]
