@@ -691,6 +691,15 @@
       "description": "The name of the reporting legal entity for display purposes.",
       "type": "string"
     },
+    "reporting_entity_role": {
+      "description": "The role played by the entity in the securitisation transaction (originator, sponsor, or investor)",
+      "type": "string",
+      "enum": [
+        "investor",
+        "originator",
+        "sponsor"
+      ]
+    }
     "reporting_id": {
       "description": "The internal ID for the legal entity under which the account is being reported.",
       "type": "string"
