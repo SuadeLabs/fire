@@ -19,45 +19,24 @@
         "US"
       ]
     },
-    "arrears_arrange_comp": {
-      "type": "string",
-      "description": "The arrears_arrangement that has been completed for any loan. Successful completion is defined as the closing of loss mitigation activities where the borrower has no remaining delinquent obligations to the servicer.",
-      "enum": [
-        "formal",
-        "interest_grace_period",
-        "mi_claim_adv",
-        "modified_tnc",
-        "none",
-        "possessed",
-        "prin_def_rate",
-        "prin_def_rate_term",
-        "prin_def_term",
-        "principal_defer",
-        "principal_forgive",
-        "rate_prin_forgive",
-        "rate_red_frozen",
-        "rate_term",
-        "rate_term_prin_forgive",
-        "recap",
-        "refinancing",
-        "renewal",
-        "reo",
-        "short_sale",
-        "temporary",
-        "term_ext",
-        "term_prin_forgive",
-        "term_recap"
-      ],
-      "jurisdictions": [
-        "US"
-      ]
-    },
     "arrears_arrange_date": {
       "type": "string",
       "format": "date-time",
       "description": "The date on which the loan terms were most recently modified. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
       "jurisdictions": [
         "US"
+      ]
+    },
+      "arrears_arrange_status": {
+      "type": "string",
+      "description": "Represents the current state of the arrears_arrangement associated with a loan. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "jurisdictions": [
+        "US"
+      ],
+      "enum": [
+        "active",
+        "cancelled",
+        "completed"
       ]
     },
     "balance_after_mod": {
@@ -78,6 +57,17 @@
     "business_line_name": {
       "type": "string",
       "description": "Free text indicating the internal line of business. For example: Private Banking, Corporate Banking, Asset- Based Lending, etc. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "conversion_type": {
+      "type": "string",
+      "description": "Specifies the conversion of a loan's structure from its initial form to a different form upon a specified date, milestone, or trigger (e.g., line to term, construction to permanent).",
+      "enum": [
+        "converting_to_permanent",
+        "converting_to_term"
+      ],
       "jurisdictions": [
         "US"
       ]
@@ -641,6 +631,20 @@
         "US"
       ]
     },
+    "other_crf_purpose_desc": {
+      "type": "string",
+      "description": "This field can be used to report a free-text description of the credit facility purpose when it does not match any of the defined enumerated values. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "other_crf_type_desc": {
+      "type": "string",
+      "description": "This field can be used to report a free-text description of the credit facility type when it does not match any of the defined enumerated values. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
     "pay_type_end_draw": {
       "type": "string",
       "description": "How borrowers are required to repay any principal outstanding at the end of the allowable draw period. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
@@ -780,6 +784,19 @@
     "snc_id": {
       "type": "string",
       "description": "Where the credit facility is reported in the Shared National Credit collection and the reporting entity is the lead bank/agent, this field indicates the entities Internal Credit ID as reported in the Shared National Credit collection for this credit facility as of the most recent filing date. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "syndication_status": {
+      "type": "string",
+      "description": "Specifies the execution status of the syndication agreement for the loan, indicating whether the commitment is unsigned, partially signed, or fully closed and settled among participants.",
+      "enum": [
+        "closed_not_settled",
+        "closed_settled",
+        "dual_signed",
+        "single_signed"
+      ],
       "jurisdictions": [
         "US"
       ]

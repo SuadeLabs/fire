@@ -26,6 +26,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── commitments
 ├── critical_service
 ├── dealing_revenue
+│   ├── dealing_rev_non_fin
 │   ├── dealing_rev_fx
 │   │   └── dealing_rev_fx_nse
 │   ├── dealing_rev_sec
@@ -78,6 +79,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │       └── regular_wages
 ├── fx
 ├── intangible
+│   └── intangible_lease
 ├── interest
 │   ├── int_on_asset
 │   ├── int_on_bond_and_frn
@@ -115,7 +117,10 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── machinery
 │   ├── property
 │   │   ├── investment_property
-│   │   └── own_property
+│   │   ├── investment_property
+│   │   │   └── investment_prop_lease
+│   │   ├── own_property
+│   │   └── property_lease
 │   ├── telecom_equipment
 │   └── vehicle
 ├── general_credit_risk
@@ -129,6 +134,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── restructuring
 ├── res_fund_contribution
 ├── revaluation
+│   ├── revaluation_reclass
 ├── revenue_reserve
 ├── share_plan
 ├── share_premium
@@ -239,6 +245,12 @@ IAS 40.5 defines **investment property** as:
 > property (land or a building - or part of a building - or both) held (by the owner or by the lessee as a right-of-use asset) to earn rentals or for capital appreciation or both, rather than for:
 (a) use in the production or supply of goods or services or for administrative purposes; or
 (b) sale in the ordinary course of business.
+
+### investment_prop_lease
+Represents a property leased to earn rentals or for capital appreciation or both, included on the balance sheet but which is not owned outright.
+
+### property_lease
+This represents an immovable property leased to or from the reporting entity included on the balance sheet but which is not owned outright.
 
 ### own_property
 IAS 40.5 defines **owner occupied property** as:
@@ -369,6 +381,9 @@ Describes an account that holds the amount of profits or losses arising from the
 ### dealing_rev_fx
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **fx instruments**.
 
+### dealing_rev_non_fin
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of non financial assets.
+
 ### dealing_rev_sec
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **securities**.
 
@@ -398,6 +413,9 @@ Describes an account that holds the amount of dividends received from **money ma
 
 ### intangible
 This is an asset that lacks physical substance such as a patent, brand, trademark, or copyright
+
+### intangible_lease
+This is a lease related to an intangible asset.
 
 ### interest
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report
@@ -568,6 +586,9 @@ BoE Form PL definitions: https://www.bankofengland.co.uk/statistics/data-collect
 
 ### revaluation
 Describes an account representing the revaluation made to reserves or provisions.
+
+### revaluation_reclass
+Describes the treatment related to a revaluation in which the resulting impact arising is to be reclassified.
 
 ### recovery
 Describes an account representing the amount recovered made to reserves or provisions.
