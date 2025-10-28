@@ -8,6 +8,6 @@ schemas:    [account, loan]
 
 ---
 
-The minimum interest on outstanding balance and fees that customers are due to repay within the next 30 days.
+The minimum interest on outstanding balance and fees that customers are due to repay.
 
 ---
