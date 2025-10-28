@@ -8,6 +8,6 @@ schemas:    [account, loan]
 
 ---
 
-The minimum principal balance that customers are due to repay within the next 30 days.
+The minimum principal balance that customers are due to repay.
 
 ---
