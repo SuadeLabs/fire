@@ -459,12 +459,12 @@
       "monetary": true
     },
     "min_interest_repayment": {
-      "description": "The minimum interest on outstanding balance and fees that customers are due to repay within the next 30 days.",
+      "description": "The minimum interest on outstanding balance and fees that customers are due to repay.",
       "type": "integer",
       "monetary": true
     },
     "min_principal_repayment": {
-      "description": "The minimum principal balance that customers are due to repay within the next 30 days.",
+      "description": "The minimum principal balance that customers are due to repay.",
       "type": "integer",
       "monetary": true
     },
