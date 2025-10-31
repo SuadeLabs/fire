@@ -703,6 +703,12 @@
         "b"
       ]
     },
+    "undrawn_provision_amount": {
+      "description": "The amount of reserves that is provisioned by the financial institution to cover the potential loss on the undrawn portion of a loan. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
+    },
     "version_id": {
       "description": "The version identifier of the data such as the firm's internal batch identifier.",
       "type": "string"
