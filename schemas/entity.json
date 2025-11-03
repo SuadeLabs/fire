@@ -1054,7 +1054,7 @@
       "type": "string"
     },
     "parent_id": {
-      "description": "The unique identifier for the ultimate parent of the person or legal entity.",
+      "description": "The unique identifier for the immediate parent of the person or legal entity.",
       "type": "string"
     },
     "pd_irb": {
