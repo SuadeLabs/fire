@@ -13,5 +13,3 @@ def test_examples_readme_is_generated_and_up_to_date():
     assert (
         result.returncode == 0
     ), f"examples/README.md is outdated. Run the builder and commit changes. Output: {result.stdout}\n{result.stderr}"
-
-

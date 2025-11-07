@@ -36,7 +36,9 @@ def collect_examples(examples_dir: pathlib.Path) -> Dict[str, List[pathlib.Path]
         if path.name.lower() == "package.json":
             continue
         rel = path.relative_to(examples_dir)
-        section = rel.parent.as_posix() if rel.parent != pathlib.Path(".") else "General"
+        section = (
+            rel.parent.as_posix() if rel.parent != pathlib.Path(".") else "General"
+        )
         groups.setdefault(section, []).append(path)
     return dict(sorted(groups.items(), key=lambda kv: kv[0].lower()))
 
@@ -62,7 +64,9 @@ def build_readme_content(examples_dir: pathlib.Path) -> str:
         for fp in sorted(files, key=lambda p: p.name.lower()):
             title, _, _ = load_example(fp)
             entry_anchor = title.lower().replace("_", "-").replace(" ", "-")
-            contents_lines.append(f"  - [{title.replace('_', ' ').title()}](#{entry_anchor})")
+            contents_lines.append(
+                f"  - [{title.replace('_', ' ').title()}](#{entry_anchor})"
+            )
     lines.extend(contents_lines)
     lines.append("")
 
@@ -100,5 +104,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
-
