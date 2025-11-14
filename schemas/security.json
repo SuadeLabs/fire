@@ -901,6 +901,7 @@
         "redeemed",
         "refinanced",
         "replaced",
+        "repurchase",
         "unsettled"
       ]
     },
