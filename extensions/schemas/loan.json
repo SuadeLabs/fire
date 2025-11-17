@@ -163,6 +163,14 @@
         "US"
       ]
     },
+    "first_write_off_principal": {
+      "type": "integer",
+      "monetary": true,
+      "description": "Total unpaid principal balance of loans, at the time of the first charge-off event. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]  
+    },
     "foreclosure_ref_date": {
       "type": "string",
       "format": "date-time",

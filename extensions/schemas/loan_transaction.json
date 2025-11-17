@@ -3,16 +3,7 @@
   "title": "Loan Transaction Extended Schema",
   "description": "Extended loan transaction schema containing all jurisdiction-specific extensions.",
   "type": "object",
-  "properties": {
-    },
-      "outstanding_principal": {
-      "type": "integer",
-      "monetary": true,
-      "description": "Total unpaid principal balance of loans",
-      "jurisdictions": [
-        "US"
-      ]
-  },
+  "properties": { },
   "allOf": [
     {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/loan_transaction.json"
