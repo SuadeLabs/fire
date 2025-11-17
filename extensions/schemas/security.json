@@ -54,6 +54,13 @@
         "US"
       ]
     },
+    "orig_rate": {
+      "description": "The coupon/dividend rate for the instrument at issuance.",
+      "type": "number",
+      "jurisdictions": [
+        "US"
+      ]
+    },    
     "period_pnl": {
       "description": "The amount of the quarterly interest expense for the specific instrument net of any adjustments attributable to swaps.",
       "type": "integer",
