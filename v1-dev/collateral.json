@@ -103,6 +103,7 @@
       "enum": [
         "auto",
         "auto_other",
+        "blanket_lien",
         "car",
         "cash",
         "co_op",

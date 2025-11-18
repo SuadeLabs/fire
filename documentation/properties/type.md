@@ -1551,6 +1551,7 @@ The most common XCS, and that traded in interbank markets, is a mark-to-market (
 ├── immovable_property
 ├── guarantee
 ├── debenture
+├── blanket_lien
 ├── life_policy
 ├── cash
 ├── security
@@ -1716,6 +1717,10 @@ _NEEDS Definition_
 ### debenture
 
 _NEEDS Definition_
+
+### blanket_lien
+
+Collateral arrangement in which the lender holds a lien of equal seniority across substantially all of the borrower's unencumbered assets, providing recourse to those assets in the event of default.
 
 ### life_policy
 

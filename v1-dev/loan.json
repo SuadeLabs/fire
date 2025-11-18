@@ -586,6 +586,7 @@
       "enum": [
         "agriculture",
         "bridging_loan",
+        "business_recap",
         "buy_to_let",
         "buy_to_let_construct",
         "buy_to_let_further_advance",
@@ -598,8 +599,10 @@
         "commodities_finance",
         "construction",
         "consumer_buy_to_let",
+        "corporate_finance",
         "debt_consolidation",
         "education",
+        "esop",
         "first_time_buyer",
         "first_time_buyer_cstr",
         "further_advance",
@@ -609,6 +612,7 @@
         "ips",
         "lifetime_mortgage",
         "medical",
+        "mergers_acquisitions",
         "non_b20",
         "object_finance",
         "object_finance_hq",
@@ -616,6 +620,7 @@
         "operational_non_sym",
         "operational_sym",
         "other",
+        "portfolio_acquisition",
         "project_finance",
         "project_hq_phase",
         "project_pre_op",
@@ -629,6 +634,7 @@
         "remortgage_othr_cstr",
         "renovation",
         "speculative_property",
+        "stock_buyback",
         "term"
       ]
     },
