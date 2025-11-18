@@ -20,9 +20,25 @@ For more information, refer to:
 ├── desktop
 ├── full
 ├── limited
+├── prospective_market_value
+│   ├── as_completed
+│   ├── as_is
+│   └── as_stabilized
 ├── purchase_price
 └── tav
 ```
+
+### as_completed
+
+The prospective market value of the property as of the date construction or renovation is expected to be completed, assuming all proposed improvements are finished according to the plans and specifications.
+
+### as_is
+
+The prospective market value of the property in its actual physical condition, use, and zoning as of the appraisal’s effective date, reflecting any deductions or discounts for incomplete construction, non-market leases, or other existing conditions.
+
+### as_stabilized
+
+The prospective market value of the property as of the date it is projected to achieve stabilized occupancy, representing the point when the property reaches typical market-level performance after lease-up or renovation.
 
 ### auto_val_model
 Automated Valuation Model (AVM) - A computer-driven mathematical model that uses property characteristics, location, and market conditions to determine property values without a physical inspection.
@@ -38,6 +54,10 @@ Full Appraisal - A comprehensive property valuation that includes a physical ins
 
 ### limited
 Limited Appraisal - A property valuation that includes a physical inspection but may have a more limited scope than a full appraisal, often focusing on specific aspects of the property.
+
+### prospective_market_value
+
+Prospective Market Value - A valuation provided by an appraiser for a property interest related to a credit decision for a proposed development or renovation project, based on the condition of the property at a specified stage of its development or renovation.
 
 ### purchase_price
 Purchase Price - The actual price paid for the property in a recent transaction, used as the basis for valuation.
