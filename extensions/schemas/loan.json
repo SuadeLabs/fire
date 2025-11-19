@@ -123,6 +123,7 @@
         "US"
       ],
       "enum": [
+        "expired",
         "fully_participated",
         "fully_syndicated",
         "involuntary_payoff",

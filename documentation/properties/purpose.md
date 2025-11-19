@@ -692,6 +692,12 @@ refer to interest cashflows only, and do not include any principal flows
 ├── commodities_finance
 ├── construction
 │   └── renovation
+├── corporate_finance
+│   ├── business_recap
+│   ├── esop
+│   ├── mergers_acquisitions
+│   ├── portfolio_acquisition
+│   └── stock_buyback
 ├── debt_consolidation
 ├── education
 ├── first_time_buyer
@@ -946,6 +952,30 @@ According to [Basel 3.1](https://www.europarl.europa.eu/doceo/document/A-9-2023-
 ### commodities_finance
 As defined by OSFI Chapter 4, P66 and Chapter 5, P15:
 > 'Commodities finance refers to short-term lending to finance reserves, inventories, or receivables of exchange-traded commodities (e.g., crude oil, metals, or crops), where the loan will be repaid from the proceeds of the sale of the commodity and the borrower has no independent capacity to repay the loan.
+
+### corporate_finance
+
+Financing with the intent to effect corporate actions or balance-sheet strategy.
+
+### business_recap
+
+Financing with the intent to recapitalize a business or fund dividend distributions to shareholders, designed to alter the company's capital structure or return capital to owners.
+
+### esop
+
+Financing with the intent to fund an Employee Stock Ownership Plan (ESOP).
+
+### mergers_acquisitions
+
+Financing with the intent to acquire equity interests including mergers, acquisitions, and LBOs/MBOs.
+
+### portfolio_acquisition
+
+Financing with the intent to fund the acquisition of a portfolio of assets, such as loans, receivables, or securities, including facilities structured through note purchase agreements.
+
+### stock_buyback
+
+Financing with the intent to fund a company's repurchase of its own outstanding shares, either in the open market or through a tender offer.
 
 ### other
 The **other** enum value can be used when none of the other enum values apply or the value is *unknown*.
