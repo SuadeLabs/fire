@@ -1547,6 +1547,12 @@ The most common XCS, and that traded in interbank markets, is a mark-to-market (
 │   └── res_property_hr
 ├── farm
 ├── commercial_property
+│   ├── healthcare
+│   ├── hospitality
+│   ├── industrial
+│   ├── office
+│   ├── retail
+│   ├── warehouse
 │   └── commercial_property_hr
 ├── immovable_property
 ├── guarantee
@@ -1689,6 +1695,30 @@ As per Article 124 (3) of CRR 575/2013: In order to be eligible for the treatmen
 (d) all the information required at origination of the exposure and for monitoring purposes is properly documented, including information on the ability of the obligor to repay and on the valuation of the property;
 (e) the requirements set out in Article 208 are met and the valuation rules set out in Article 229(1) are complied with.
 For the purposes of point (c), institutions may exclude situations where purely macro-economic factors affect both the value of the property and the performance of the obligor.
+
+### healthcare
+
+Property used for medical or health-related services, including hospitals, medical campuses, assisted-living facilities, memory care facilities, and skilled-nursing or long-term care homes.
+
+### hospitality
+
+Property providing short-term accommodation or leisure services, including hotels, resorts, and gaming or entertainment facilities.
+
+### industrial
+
+Property used for manufacturing, assembly, research and development, or light industrial activities. Excludes properties primarily used for warehousing or logistics.
+
+### office
+
+Property used for administrative, professional, or medical office purposes.
+
+### retail
+
+Property used for the sale of goods or services to the public, including shopping centers, malls, high-street retail, and standalone stores.
+
+### warehouse
+
+Property used for storage, logistics, or distribution of goods.
 
 ### multifamily
 

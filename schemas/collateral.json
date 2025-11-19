@@ -120,17 +120,22 @@
         "farm",
         "four_units",
         "guarantee",
+        "healthcare",
+        "hospitality",
         "immovable_property",
+        "industrial",
         "life_policy",
         "luxury",
         "manufactured_house",
         "multifamily",
+        "office",
         "one_unit",
         "other",
         "planned_unit_dev",
         "res_property_hr",
         "resi_mixed_use",
         "residential_property",
+        "retail",
         "security",
         "single_family",
         "sport",
@@ -139,7 +144,8 @@
         "townhouse",
         "truck",
         "two_units",
-        "van"
+        "van",
+        "warehouse"
       ]
     },
     "value": {
