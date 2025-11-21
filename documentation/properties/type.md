@@ -19,8 +19,10 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 ├── corporate
 │   ├── charity
 │   │   └── community_charity
-│   └── sme
-│       └── supported_sme
+│   ├── housing_coop
+│   ├── sme
+│   │   └── supported_sme
+│   └── social_housing_entity
 ├── financial
 │   ├── credit_institution
 │   │   ├── national_bank
@@ -92,6 +94,12 @@ As defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossa
 
 > (in accordance with section 417(1) of the Act (Definitions)) any partnership, including a partnership constituted under the law of a country or territory outside the United Kingdom, but not including a limited liability partnership.
 
+### housing_coop
+
+As defined in Appendix 2: PRA Rulebook: CRR Firms: (CRR) Article 124E 
+
+> An association or a cooperative of natural persons that exists with the sole purpose of granting its members the use of a primary residence in the property securing the loans. 
+
 ### sme
 
 The definition of an SME is based on a set of criteria, while in theory it is possible for this to be a dynamic field based on other relevant data provided (employee count, turnover etc.), often times the data is unavailable or not current and hence firm may wish to identify SMEs directly.
@@ -106,6 +114,12 @@ In this scenario, an SME type will be assumed to comply with the [EU SME Recomme
 ### supported_sme
 
 An SME with special treatment under the capital adequacy rules, invoking a special multiplier for RWAs
+
+### social_housing_entity
+
+As defined in Appendix 2: PRA Rulebook: CRR Firms: (CRR) Article 124E 
+
+> A public housing company or not-for-profit association regulated in the UK that exists to serve social purposes and to offer tenants long-term housing (a social housing exposure). 
 
 ### other
 
