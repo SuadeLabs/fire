@@ -1156,6 +1156,7 @@ Index securities are reference records recording the details of an index using t
 ├── current
 │   └── current_io
 ├── debit_card (pending)
+├── debt_securities_issued
 ├── financial_lease
 ├── internet_only
 ├── ira
@@ -1165,6 +1166,7 @@ Index securities are reference records recording the details of an index using t
 │   ├── isa_current
 │   │   └── isa_current_io
 │   └── isa_io
+├── loans_and_advances
 ├── money_market
 ├── non_product
 │   ├── accruals
@@ -1190,7 +1192,8 @@ Index securities are reference records recording the details of an index using t
 │   └── time_deposit_io
 ├── third_party_savings
 ├── vostro
-└── other
+├── other
+└── other_financial_liabilities
 ```
 
 ### call
