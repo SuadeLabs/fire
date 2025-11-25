@@ -83,6 +83,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── interest
 │   ├── int_on_asset
 │   ├── int_on_bond_and_frn
+    ├── int_on_debt_issued
 │   ├── int_on_deposit
 │   ├── int_on_derivative
 │   │   └── int_on_deriv_hedge
@@ -434,6 +435,9 @@ Describes an account that holds the amount of interests receivable/payable as re
 
 ### int_on_ecgd_lending
 Describes an account that holds the amount of interests receivable/payable where the interest amount originates from **loans** guaranteed by the Export Credits Guarantee Department (ECGD) also known as UK Export Finance.
+
+### int_on_debt_issued
+Describes an account that holds the amount of interest income/expense reported in a Profit and Loss report and where the interest amount originates from **debt securities issued**.
 
 ### int_on_deposit
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **deposits**.

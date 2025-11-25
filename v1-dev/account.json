@@ -486,6 +486,7 @@
         "int_on_bond_and_frn",
         "int_on_bridging_loan",
         "int_on_credit_card",
+        "int_on_debt_issued",
         "int_on_deposit",
         "int_on_deriv_hedge",
         "int_on_derivative",
