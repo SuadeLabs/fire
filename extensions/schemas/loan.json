@@ -411,8 +411,7 @@
       ]
     },
     "occupancy_rate": {
-      "type": "string",
-      "format": "number",
+      "type": "number",
       "description": "The current physical occupancy of rent-paying tenants, expressed as a percentage of the property's net rentable area. This represents the proportion of space that is presently leased and occupied as of the reporting date. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
       "jurisdictions": [
         "US"
