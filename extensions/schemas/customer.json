@@ -152,7 +152,8 @@
       "type": "string",
       "format": "date-time",
       "jurisdictions": [
-        "US"
+        "US",
+        "EU"
       ]
     },
     "fixed_assets": {
