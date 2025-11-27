@@ -26,14 +26,27 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── commitments
 ├── critical_service
 ├── dealing_revenue
-│   ├── dealing_rev_non_fin
+    ├── dealing_rev_credit_risk  
+    ├── dealing_rev_debt  
+    ├── dealing_rev_debt_issued  
+    ├── dealing_rev_deposits  
+    ├── dealing_rev_non_fin
 │   ├── dealing_rev_fx
 │   │   └── dealing_rev_fx_nse
 │   ├── dealing_rev_sec
+        ├── dealing_rev_equity
 │   │   └── dealing_rev_sec_nse
 │   ├── dealing_rev_ir
 │   └── dealing_rev_deriv
-│       └── dealing_rev_deriv_nse
+        ├── dealing_rev_deriv_com_risk
+        ├── dealing_rev_deriv_equ_risk
+        ├── dealing_rev_deriv_fx_gold_risk
+        ├── dealing_rev_deriv_int_risk
+        ├── dealing_rev_deriv_nse
+        └── dealing_rev_deriv_oth_risk
+    ├── dealing_rev_loan
+    ├── dealing_rev_oth_financial
+    └── dealing_rev_short_positions    
 ├── defined_benefit
 ├── deposit
 │   └── third_party_interest
@@ -401,6 +414,50 @@ Describes an account that holds the Net Spread Earnings (NSE) amount arising fro
 
 ### dealing_rev_deriv_nse
 Describes an account that holds the Net Spread Earnings (NSE) amount arising from the purchase and sale of **derivative instruments**. The NSE is indentified as the difference between the price paid/offered by the reporting entity and the price available in the open market (mid-market price) at the time of the transaction.
+
+### dealing_rev_equity
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **equity instruments**.
+
+### dealing_rev_debt
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **debt securities**.
+
+### dealing_rev_loan
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **loans and advances**.
+
+### dealing_rev_short_positions
+
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **short positions**.
+
+### dealing_rev_deposits
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **deposits**.
+
+### dealing_rev_debt_issued
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **debt securities issued**.
+
+### dealing_rev_oth_financial
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **other financial liabilities**.
+
+### dealing_rev_deriv_eco_hedge
+Describes an account that holds the amount of profits or losses arising from **derivatives** used to manage the credit risk of all or part of a financial instrument designated at fair value through profit or loss, in accordance with IFRS 9.6.7.
+
+### dealing_rev_deriv_com_risk
+
+DDescribes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of commodity **derivative** trading.
+
+### dealing_rev_deriv_int_risk
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of interest rate **derivatives**.
+
+### dealing_rev_deriv_equ_risk
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of equity **derivatives**.
+
+### dealing_rev_deriv_fx_gold_risk
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of foreign exchange and gold **derivatives**.
+
+### dealing_rev_credit_risk
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of credit-linked note trading.
+
+### dealing_rev_deriv_oth_risk
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **derivatives** not included in the categories above.
 
 ### dividend
 Describes an account that holds the amount of dividends paid or received as reported in a Profit and Loss report.
