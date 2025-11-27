@@ -161,13 +161,13 @@
         "d"
       ]
     },
-    "headcount": {
-      "description": "The number of full time staff.",
-      "type": "integer"
-    },
     "head_office_id": {
       "description": "The unique identifier for the head office of the legal entity.",
       "type": "string"
+    },
+    "headcount": {
+      "description": "The number of full time staff.",
+      "type": "integer"
     },
     "internal_rating": {
       "description": "Categorization of unrated exposure",
