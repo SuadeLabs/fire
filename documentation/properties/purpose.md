@@ -26,9 +26,9 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── commitments
 ├── critical_service
 ├── dealing_revenue
-    ├── dealing_rev_credit_risk  
+    ├── dealing_rev_cr 
+    ├── dealing_rev_dbt_issue   
     ├── dealing_rev_debt  
-    ├── dealing_rev_debt_issued  
     ├── dealing_rev_deposits  
     ├── dealing_rev_non_fin
 │   ├── dealing_rev_fx
@@ -38,15 +38,15 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   │   └── dealing_rev_sec_nse
 │   ├── dealing_rev_ir
 │   └── dealing_rev_deriv
-        ├── dealing_rev_deriv_com_risk
-        ├── dealing_rev_deriv_equ_risk
-        ├── dealing_rev_deriv_fx_gold_risk
-        ├── dealing_rev_deriv_int_risk
+        ├── dealing_rev_deriv_com
+        ├── dealing_rev_deriv_equ
+        ├── dealing_rev_deriv_fx
+        ├── dealing_rev_deriv_int
         ├── dealing_rev_deriv_nse
-        └── dealing_rev_deriv_oth_risk
+        └── dealing_rev_deriv_oth
     ├── dealing_rev_loan
-    ├── dealing_rev_oth_financial
-    └── dealing_rev_short_positions    
+    ├── dealing_rev_oth_finan
+    └── dealing_rev_short    
 ├── defined_benefit
 ├── deposit
 │   └── third_party_interest
@@ -424,39 +424,39 @@ Describes an account that holds the amount of profits or losses arising from the
 ### dealing_rev_loan
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **loans and advances**.
 
-### dealing_rev_short_positions
+### dealing_rev_short
 
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **short positions**.
 
 ### dealing_rev_deposits
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **deposits**.
 
-### dealing_rev_debt_issued
+### dealing_rev_dbt_issue
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **debt securities issued**.
 
-### dealing_rev_oth_financial
+### dealing_rev_oth_finan
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **other financial liabilities**.
 
-### dealing_rev_deriv_eco_hedge
+### dealing_rev_deriv_eco
 Describes an account that holds the amount of profits or losses arising from **derivatives** used to manage the credit risk of all or part of a financial instrument designated at fair value through profit or loss, in accordance with IFRS 9.6.7.
 
-### dealing_rev_deriv_com_risk
+### dealing_rev_deriv_com
 
 DDescribes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of commodity **derivative** trading.
 
-### dealing_rev_deriv_int_risk
+### dealing_rev_deriv_int
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of interest rate **derivatives**.
 
-### dealing_rev_deriv_equ_risk
+### dealing_rev_deriv_equ
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of equity **derivatives**.
 
-### dealing_rev_deriv_fx_gold_risk
+### dealing_rev_deriv_fx
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of foreign exchange and gold **derivatives**.
 
-### dealing_rev_credit_risk
+### dealing_rev_cr
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of credit-linked note trading.
 
-### dealing_rev_deriv_oth_risk
+### dealing_rev_deriv_oth
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **derivatives** not included in the categories above.
 
 ### dividend
