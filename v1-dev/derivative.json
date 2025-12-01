@@ -185,8 +185,8 @@
       "enum": [
         "cf_hedge",
         "fv_hedge",
-        "portfolio_fv_hedge",
-        "portfolio_cf_hedge"
+        "portfolio_cf_hedge",
+        "portfolio_fv_hedge"        
       ]
     },
     "hedged_cf_type": {
