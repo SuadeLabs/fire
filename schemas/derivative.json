@@ -184,7 +184,9 @@
       "description": "The type of hedge (fair value or cash flow hedge) associated with the holding. Whether it is hedging individually or is hedging as part of a portfolio of assets with similar risk that are hedged as a group in line with ASC 815-20-25-12 (b), ASC 815-20-2512A, or ASC 815-10-25-15.\n\nhttps://asc.fasb.org/1943274/2147480682/815-20-25-12\nhttps://asc.fasb.org/1943274/2147480682/815-20-25-12A\nhttps://asc.fasb.org/1943274/2147480682/815-10-25-15",
       "enum": [
         "cf_hedge",
-        "fv_hedge"
+        "fv_hedge",
+        "portfolio_cf_hedge",
+        "portfolio_fv_hedge"
       ]
     },
     "hedged_cf_type": {

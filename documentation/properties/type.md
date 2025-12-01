@@ -1156,6 +1156,7 @@ Index securities are reference records recording the details of an index using t
 ├── current
 │   └── current_io
 ├── debit_card (pending)
+├── debt_securities_issued
 ├── financial_lease
 ├── internet_only
 ├── ira
@@ -1165,6 +1166,7 @@ Index securities are reference records recording the details of an index using t
 │   ├── isa_current
 │   │   └── isa_current_io
 │   └── isa_io
+├── loans_and_advances
 ├── money_market
 ├── non_product
 │   ├── accruals
@@ -1190,7 +1192,8 @@ Index securities are reference records recording the details of an index using t
 │   └── time_deposit_io
 ├── third_party_savings
 ├── vostro
-└── other
+├── other
+└── other_financial_liab
 ```
 
 ### call
@@ -1202,6 +1205,10 @@ A call account is defined in the [Money Market Statistics Regulation][mm-stat] i
 ### cd
 
 A deposit account purely holding certificates of deposit (see _cd_ _Security_ **type**)
+
+### debt_securities_issued
+
+An account which holds **debt securities issued**
 
 ### prepaid_card
 
@@ -1244,6 +1251,14 @@ A current account that is offered and only accessible via the internet.
 ### bonds
 
 Any account containing notes, bonds or other securities instruments.
+
+### loans_and_advances
+
+An account which holds **loans and advances**
+
+### other_financial_liab
+
+An account which holds **other financial liabilities**
 
 ### retail_bonds
 

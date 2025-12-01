@@ -16,6 +16,12 @@ Cash flow hedge designation.
 ### fv_hedge
 Fair value hedge designation.
 
+### portfolio_cf_hedge
+Cash flow hedge designation for a portfolio of financial assets or financial liabilities.
+
+### portfolio_fv_hedge
+Fair value hedge designation for a portfolio of financial assets or financial liabilities.
+
 For additional details refer to:
 - https://asc.fasb.org/1943274/2147480682/815-20-25-12
 - https://asc.fasb.org/1943274/2147480682/815-20-25-12A
