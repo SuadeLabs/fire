@@ -152,6 +152,7 @@
       "type": "string",
       "format": "date-time",
       "jurisdictions": [
+        "LU",
         "US"
       ]
     },

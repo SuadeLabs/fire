@@ -175,6 +175,10 @@
         "d"
       ]
     },
+    "head_office_id": {
+      "description": "The unique identifier for the head office of the legal entity.",
+      "type": "string"
+    },
     "headcount": {
       "description": "The number of full time staff.",
       "type": "integer"
@@ -435,9 +439,10 @@
         "C.17.20",
         "C.17.21",
         "C.17.22",
+        "C.17.23",
         "C.17.24",
+        "C.17.25",
         "C.17.29",
-        "C.17.30",
         "C.18.10",
         "C.18.11",
         "C.18.12",
@@ -1349,6 +1354,12 @@
         "subsidiary"
       ]
     },
+    "riad_code": {
+      "description": "RIAD code is the unique counterparty identifier for all counterparties when reported from the NCBs to the ECB;",
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 50
+    },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the security resides. In accordance with ISO 3166-1",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/country_code"
@@ -1499,6 +1510,10 @@
         "unincorporated_biz",
         "unregulated_financial"
       ]
+    },
+    "ultimate_parent_id": {
+      "description": "The unique identifier for the ultimate parent of the person or legal entity.",
+      "type": "string"
     },
     "version_id": {
       "description": "The version identifier of the data such as the firm's internal batch identifier.",
