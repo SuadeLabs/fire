@@ -73,30 +73,34 @@
   },
   "required": ["id", "date", "values"],
   "additionalProperties": true,
-  "if": {
-    "properties": { "type": { "const": "risk_rating" } },
-    "required": ["type"]
-  },
-  "then": {
-    "properties": {
-      "values": {
-        "items": {
-          "properties": {
-            "value": { "type": "string" }
+  "oneOf": [
+    {
+      "required": ["type"],
+      "properties": {
+        "type": { "const": "risk_rating" },
+        "values": {
+          "items": {
+            "properties": {
+              "value": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    {
+      "not": {
+        "required": ["type"],
+        "properties": { "type": { "const": "risk_rating" } }
+      },
+      "properties": {
+        "values": {
+          "items": {
+            "properties": {
+              "value": { "type": "number" }
+            }
           }
         }
       }
     }
-  },
-  "else": {
-    "properties": {
-      "values": {
-        "items": {
-          "properties": {
-            "value": { "type": "number" }
-          }
-        }
-      }
-    }
-  }
+  ]
 }
