@@ -11,6 +11,17 @@ schemas:	[customer, issuer, guarantor]
 # Bankruptcy Type
 The bankruptcy chapter of the borrower.
 
+```bash
+├── court_administration
+├── insolvency
+│   ├── chapter_7
+│   ├── chapter_9
+│   ├── chapter_11
+│   ├── chapter_12
+│   └── chapter_13
+└── other
+```
+
 ### chapter_7
 [Chapter 7][chapter_7] of the Bankruptcy Code provides for "liquidation" - the sale of a debtor's nonexempt property and the distribution of the proceeds to creditors.
 
@@ -27,6 +38,9 @@ The bankruptcy chapter of the borrower.
 [Chapter 13][chapter_13] of the Bankruptcy Code provides for adjustment of debts of an individual with regular income. Chapter 13 allows a debtor to keep property and pay debts over time, usually three to five years.
 
 ### court_administration
+Any proceeding involving the intervention of a judicial body or similar aimed at reaching a refinancing agreement among the creditors, with the exception of any bankruptcy or insolvency proceedings.
+
+### insolvency
 Any proceeding involving the intervention of a judicial body or similar aimed at reaching a refinancing agreement among the creditors, with the exception of any bankruptcy or insolvency proceedings.
 
 ### other

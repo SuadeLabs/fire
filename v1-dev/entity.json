@@ -26,6 +26,8 @@
         "chapter_13",
         "chapter_7",
         "chapter_9",
+        "court_administration",
+        "insolvency",
         "other"
       ]
     },
@@ -1492,7 +1494,8 @@
         "statutory_board",
         "supported_sme",
         "unincorporated_biz",
-        "unregulated_financial"
+        "unregulated_financial",
+        "unincorporated_investment_fund"
       ]
     },
     "ultimate_parent_id": {
