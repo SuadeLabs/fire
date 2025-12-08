@@ -687,6 +687,10 @@
     "regulatory_book": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/regulatory_book"
     },
+    "regulatory_realestate": {
+      "description": "Is this loan a regulatory real estate exposure?",
+      "type": "boolean"
+    },
     "repayment_frequency": {
       "description": "Repayment frequency of the loan.",
       "type": "string",
