@@ -20,6 +20,7 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   ├── charity
 │   │   └── community_charity
 │   ├── housing_coop
+│   ├── property_spe
 │   ├── sme
 │   │   └── supported_sme
 │   └── social_housing_entity
@@ -99,6 +100,12 @@ As defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossa
 As defined in Appendix 2: PRA Rulebook: CRR Firms: (CRR) Article 124E 
 
 > An association or a cooperative of natural persons that exists with the sole purpose of granting its members the use of a primary residence in the property securing the loans. 
+
+### property_spe
+
+As defined in Appendix 2: PRA Rulebook: CRR Firms: (CRR) Article 124E 
+
+> An entity created specifically to finance and/or operate immovable property 
 
 ### sme
 
