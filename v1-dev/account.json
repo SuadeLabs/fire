@@ -96,9 +96,9 @@
     "ccf": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/ccf"
     },
-    "commissionChanged ": {
+    "commission": {
       "description": "Commission percentage to be added onto interest rate of the product to calculate the credit spread at inception of receiving the deposit.",
-      "type": "number"
+      "type": "integer"
     },
     "cost_center_code": {
       "description": "The organizational unit or sub-unit to which costs/profits are booked.",
