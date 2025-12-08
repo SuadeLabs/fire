@@ -41,7 +41,7 @@ The bankruptcy chapter of the borrower.
 Any proceeding involving the intervention of a judicial body or similar aimed at reaching a refinancing agreement among the creditors, with the exception of any bankruptcy or insolvency proceedings.
 
 ### insolvency
-Any proceeding involving the intervention of a judicial body or similar aimed at reaching a refinancing agreement among the creditors, with the exception of any bankruptcy or insolvency proceedings.
+The partial or total divestment of a counterparty and the appointment of a liquidator.
 
 ### other
 Use this when the customer is understood to be bankrupt but where the exact bankruptcy chapter is unknown or does not meet another definition within the taxonomy.

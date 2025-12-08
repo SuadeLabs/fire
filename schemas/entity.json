@@ -1508,9 +1508,9 @@
         "state_owned_bank",
         "statutory_board",
         "supported_sme",
+        "unincorp_inv_fund",
         "unincorporated_biz",
-        "unregulated_financial",
-        "unincorporated_investment_fund"
+        "unregulated_financial"
       ]
     },
     "ultimate_parent_id": {
