@@ -96,7 +96,7 @@
     "ccf": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/ccf"
     },
-    "commission_pct": {
+    "commissionChanged ": {
       "description": "Commission percentage to be added onto interest rate of the product to calculate the credit spread at inception of receiving the deposit.",
       "type": "number"
     },
