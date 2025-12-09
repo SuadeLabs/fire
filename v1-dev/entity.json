@@ -26,6 +26,8 @@
         "chapter_13",
         "chapter_7",
         "chapter_9",
+        "court_administration",
+        "insolvency",
         "other"
       ]
     },
@@ -1491,6 +1493,7 @@
         "state_owned_bank",
         "statutory_board",
         "supported_sme",
+        "unincorp_inv_fund",
         "unincorporated_biz",
         "unregulated_financial"
       ]

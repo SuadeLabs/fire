@@ -36,6 +36,7 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   │   │   └── promo_fed_home_loan
 │   ├── investment_firm
 │   │   ├── fund
+│   │   │   ├── unincorp_inv_fund
 │   │   ├── private_fund
 │   │   │   ├── hedge_fund
 │   │   │   └── private_equity_fund
@@ -366,6 +367,9 @@ Investment firm is defined in the [FCA Handbook](https://www.handbook.fca.org.uk
 > (b) a BIPRU firm.
 > (5) (in SYSC 19A(IFPRU Remuneration Code)) a firm in (3).
 > (6) (in SYSC 19D (Dual-regulated firms Remuneration Code)) a firm in (3) that is a UK designated investment firm.
+
+### unincorp_inv_fund
+_Unincorporated investment funds_ comprising investment portfolios owned by a group of participants and whose management is undertaken by other financial corporations
 
 ### ciu
 
