@@ -291,6 +291,14 @@
       "type": "integer",
       "monetary": true
     },
+    "fiduciary_status": {
+      "description": "Identification of instruments in which the observed agent acts in its own name but on behalf of and with the risk borne by a third party",
+      "type": "string",
+      "enum": [
+        "fiduciary",
+        "non_fiduciary"
+      ]
+    },
     "first_arrears_date": {
       "description": "The first date on which this security was in arrears.",
       "type": "string",
@@ -635,6 +643,10 @@
     "on_balance_sheet": {
       "description": "Is the security reported on the balance sheet of the financial institution?",
       "type": "boolean"
+    },
+    "orig_acc_fv_change_credit_risk": {
+      "description": "The difference between the outstanding nominal amount and the purchase price of the instrument at the purchase date. This amount should be reported for instruments purchased for an amount lower than the outstanding amount due to credit risk deterioration.",
+      "type": "integer"
     },
     "originator_id": {
       "description": "The unique identifier used by the financial institution to identify the originator of the security or securitisation.",

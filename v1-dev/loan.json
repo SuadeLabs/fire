@@ -297,6 +297,14 @@
       "type": "integer",
       "monetary": true
     },
+    "fiduciary_status": {
+      "description": "Identification of instruments in which the observed agent acts in its own name but on behalf of and with the risk borne by a third party",
+      "type": "string",
+      "enum": [
+        "fiduciary",
+        "non_fiduciary"
+      ]
+    },
     "first_arrears_date": {
       "description": "The first date on which this loan was in arrears.",
       "type": "string",
@@ -492,6 +500,10 @@
     "on_balance_sheet": {
       "description": "Is the loan reported on the balance sheet of the financial institution?",
       "type": "boolean"
+    },
+    "orig_acc_fv_change_credit_risk": {
+      "description": "The difference between the outstanding nominal amount and the purchase price of the instrument at the purchase date. This amount should be reported for instruments purchased for an amount lower than the outstanding amount due to credit risk deterioration.",
+      "type": "integer"
     },
     "orig_credit_score": {
       "description": "The credit score of the customer at origination of the product using a commercially available credit bureau score.",
@@ -798,6 +810,10 @@
         "frozen",
         "revolving"
       ]
+    },
+    "syndication_id": {
+      "description": "The code assigned by the lead arranger of the syndicated contract to uniquely identify each contract. Each syndicated contract will have one syndicated contract identifier. This value will not change over time and cannot be used by the lead arranger as the contract identifier for any other contract",
+      "type": "string"
     },
     "trade_date": {
       "description": "The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",

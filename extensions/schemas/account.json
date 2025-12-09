@@ -3,7 +3,29 @@
   "title": "Account Extended Schema",
   "description": "Extended account schema containing all jurisdiction-specific extensions.",
   "type": "object",
-  "properties": {},
+  "properties": {
+    "int_reset_freq": {
+      "type": "integer",
+      "description": "The adjustable rate periodic interest reset period. Denominated in whole multiples of the interest_repayment_frequency. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US",
+        "LU"
+      ]
+    },
+    "recourse": {
+      "description": "Whether there is recourse on a loan. Recourse on a loan refers to terms in the mortgage contract that give the owner of the note the right to pursue additional claims against the borrower beyond possession of the property. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "type": "string",
+      "enum": [
+        "full",
+        "none",
+        "partial"
+      ],
+      "jurisdictions": [
+        "US",
+        "LU"
+      ]
+    }
+  },
   "allOf": [
     {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/account.json"

@@ -223,7 +223,8 @@
       "type": "integer",
       "description": "The adjustable rate periodic interest reset period. Denominated in whole multiples of the interest_repayment_frequency. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
       "jurisdictions": [
-        "US"
+        "US",
+        "LU"
       ]
     },
     "int_tax_status": {
@@ -768,7 +769,8 @@
         "partial"
       ],
       "jurisdictions": [
-        "US"
+        "US",
+        "LU"
       ]
     },
     "renewal_date": {
