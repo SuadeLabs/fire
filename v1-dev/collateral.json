@@ -77,6 +77,10 @@
       "description": "The zip code in which the property is located. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
       "type": "string"
     },
+    "regulated": {
+      "description": "Identifies whether the collateral qualifies the exposure as 'regulatory' for credit risk purposes. ",
+      "type": "boolean"
+    },
     "regulatory_book": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/regulatory_book"
     },
