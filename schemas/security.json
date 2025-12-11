@@ -291,6 +291,14 @@
       "type": "integer",
       "monetary": true
     },
+    "fiduciary_status": {
+      "description": "Identification of instruments in which the observed agent acts in its own name but on behalf of and with the risk borne by a third party",
+      "type": "string",
+      "enum": [
+        "fiduciary",
+        "non_fiduciary"
+      ]
+    },
     "first_arrears_date": {
       "description": "The first date on which this security was in arrears.",
       "type": "string",
@@ -436,6 +444,10 @@
       "description": "The insolvency ranking as per the national legal fraamework of the reporting institution.",
       "type": "integer",
       "minimum": 1
+    },
+    "int_reset_freq": {
+      "description": "The adjustable rate periodic interest reset period. Denominated in whole multiples of the interest_repayment_frequency. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer"
     },
     "interest_repayment_frequency": {
       "description": "Repayment frequency of the interest.",
@@ -636,6 +648,10 @@
       "description": "Is the security reported on the balance sheet of the financial institution?",
       "type": "boolean"
     },
+    "orig_acc_fv_change_credit_risk": {
+      "description": "The difference between the outstanding nominal amount and the purchase price of the instrument at the purchase date. This amount should be reported for instruments purchased for an amount lower than the outstanding amount due to credit risk deterioration.",
+      "type": "integer"
+    },
     "originator_id": {
       "description": "The unique identifier used by the financial institution to identify the originator of the security or securitisation.",
       "type": "string"
@@ -700,6 +716,15 @@
         "step_up",
         "tracker",
         "variable"
+      ]
+    },
+    "recourse": {
+      "description": "Whether there is recourse on a loan. Recourse on a loan refers to terms in the mortgage contract that give the owner of the note the right to pursue additional claims against the borrower beyond possession of the property. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "type": "string",
+      "enum": [
+        "full",
+        "none",
+        "partial"
       ]
     },
     "regulatory_book": {
