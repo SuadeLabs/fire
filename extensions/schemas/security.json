@@ -39,14 +39,6 @@
         "US"
       ]
     },
-    "int_reset_freq": {
-      "type": "integer",
-      "description": "The adjustable rate periodic interest reset period. Denominated in whole multiples of the interest_repayment_frequency. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
-      "jurisdictions": [
-        "US",
-        "LU"
-      ]
-    },
     "orig_cusip": {
       "description": "The cusip at origination.",
       "type": "string",
@@ -82,19 +74,6 @@
       "type": "number",
       "jurisdictions": [
         "US"
-      ]
-    },
-    "recourse": {
-      "description": "Whether there is recourse on a loan. Recourse on a loan refers to terms in the mortgage contract that give the owner of the note the right to pursue additional claims against the borrower beyond possession of the property. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
-      "type": "string",
-      "enum": [
-        "full",
-        "none",
-        "partial"
-      ],
-      "jurisdictions": [
-        "US",
-        "LU"
       ]
     },
     "reversion_base_rate": {

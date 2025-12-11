@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "recourse"
-schemas:    [loan]
+schemas:    [account, loan, security]
 ---
 
 # recourse

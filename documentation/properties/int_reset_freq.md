@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "int_reset_freq"
-schemas:    [loan]
+schemas:    [account, loan, security]
 ---
 
 # int_reset_freq

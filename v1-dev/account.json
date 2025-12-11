@@ -273,6 +273,10 @@
       "type": "integer",
       "minimum": 1
     },
+    "int_reset_freq": {
+      "description": "The adjustable rate periodic interest reset period. Denominated in whole multiples of the interest_repayment_frequency. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer"
+    },
     "interest_repayment_frequency": {
       "description": "Repayment frequency of the interest.",
       "type": "string",
@@ -593,6 +597,15 @@
         "preferential",
         "tracker",
         "variable"
+      ]
+    },
+    "recourse": {
+      "description": "Whether there is recourse on a loan. Recourse on a loan refers to terms in the mortgage contract that give the owner of the note the right to pursue additional claims against the borrower beyond possession of the property. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "type": "string",
+      "enum": [
+        "full",
+        "none",
+        "partial"
       ]
     },
     "regulatory_book": {
