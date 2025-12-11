@@ -1,6 +1,6 @@
 ---
 layout:	property
-title:	"fiduciary_status"
+title:	"syndication_id"
 schemas: [loan]
 ---
 
