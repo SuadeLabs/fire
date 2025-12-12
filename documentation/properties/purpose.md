@@ -39,11 +39,18 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── dealing_rev_ir
 │   └── dealing_rev_deriv
         ├── dealing_rev_deriv_com
+            └── dealing_rev_dr_com_eco
+        ├── dealing_rev_deriv_eco
         ├── dealing_rev_deriv_equ
+            └── dealing_rev_dr_equ_eco
         ├── dealing_rev_deriv_fx
+            └── dealing_rev_dr_fx_eco
         ├── dealing_rev_deriv_int
+            └── dealing_rev_dr_int_eco
         ├── dealing_rev_deriv_nse
+            └── dealing_rev_dr_nse_eco
         └── dealing_rev_deriv_oth
+            └── dealing_rev_dr_oth_eco
     ├── dealing_rev_loan
     ├── dealing_rev_oth_finan
     └── dealing_rev_short    
@@ -426,7 +433,6 @@ Describes an account that holds the amount of profits or losses arising from the
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **loans and advances**.
 
 ### dealing_rev_short
-
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **short positions**.
 
 ### dealing_rev_deposits
@@ -438,12 +444,8 @@ Describes an account that holds the amount of profits or losses arising from the
 ### dealing_rev_oth_finan
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **other financial liabilities**.
 
-### dealing_rev_deriv_eco
-Describes an account that holds the amount of profits or losses arising from **derivatives** used to manage the credit risk of all or part of a financial instrument designated at fair value through profit or loss, in accordance with IFRS 9.6.7.
-
 ### dealing_rev_deriv_com
-
-DDescribes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of commodity **derivative** trading.
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of commodity **derivative** trading.
 
 ### dealing_rev_deriv_int
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of interest rate **derivatives**.
@@ -460,6 +462,23 @@ Describes an account that holds the amount of profits or losses arising from the
 ### dealing_rev_deriv_oth
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **derivatives** not included in the categories above.
 
+### dealing_rev_dr_com_eco
+Describes an account that holds the amounts of profits or losses arising from commodity **derivative** trading that are held for hedging purposes but do not meet the criteria to be effective hedging instruments in accordance with IFRS 9, with IAS 39 where IAS 39 is applied for hedge accounting purposes or with the accounting framework under national GAAP based on BAD
+
+### dealing_rev_dr_equ_eco
+Describes an account that holds the amounts of profits or losses arising from equity **derivative** trading that are held for hedging purposes but do not meet the criteria to be effective hedging instruments in accordance with IFRS 9, with IAS 39 where IAS 39 is applied for hedge accounting purposes or with the accounting framework under national GAAP based on BAD
+
+### dealing_rev_dr_fx_eco
+Describes an account that holds the amounts of profits or losses arising from foreign exchange **derivative** trading that are held for hedging purposes but do not meet the criteria to be effective hedging instruments in accordance with IFRS 9, with IAS 39 where IAS 39 is applied for hedge accounting purposes or with the accounting framework under national GAAP based on BAD
+
+### dealing_rev_dr_int_eco
+Describes an account that holds the amounts of profits or losses arising from interest rate **derivative** trading that are held for hedging purposes but do not meet the criteria to be effective hedging instruments in accordance with IFRS 9, with IAS 39 where IAS 39 is applied for hedge accounting purposes or with the accounting framework under national GAAP based on BAD
+
+### dealing_rev_dr_nse_eco
+Describes an account that holds the amounts of profits or losses arising from Net Spread Earnings (NSE) **derivative** trading that are held for hedging purposes but do not meet the criteria to be effective hedging instruments in accordance with IFRS 9, with IAS 39 where IAS 39 is applied for hedge accounting purposes or with the accounting framework under national GAAP based on BAD
+
+### dealing_rev_dr_oth_eco
+Describes an account that holds the amounts of profits or losses arising from other **derivative** trading that are held for hedging purposes but do not meet the criteria to be effective hedging instruments in accordance with IFRS 9, with IAS 39 where IAS 39 is applied for hedge accounting purposes or with the accounting framework under national GAAP based on BAD
 ### dividend
 Describes an account that holds the amount of dividends paid or received as reported in a Profit and Loss report.
 
