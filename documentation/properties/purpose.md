@@ -1153,7 +1153,6 @@ In the context of [CRR][crr] Article 328, a reference security would be the unde
 ### share_capital
 This indicates shares that have been [issued][issued] for the purpose of raising capital for the company.
 
-[issued]: https://www.investopedia.com/terms/s/sharecapital.asp
 
 ### non_controlling
 [Commission Regulation (EC) No 494/2009][reg] defines **non-controlling interest** as:
@@ -1168,14 +1167,14 @@ Use this enumeration value to highlight back to back trades defined as "exactly 
 ### single_collateral_pool
 Use this enumeration value to identify to securities which are placed into a central bank single collateral pool. A list of eligible security types for the Bank of England SCP can be found [here][scp]
 
-[scp]: https://www.bankofengland.co.uk/markets/eligible-collateral
 
 ### ocir
 Use this enum to refer to funds reserved for the purpose of implementing, from an operational point of view, the resolution strategy and, consequently, to stabilise and restructure the bank.
 
 [Bank of England OCIR][ocir]
 
-[ocir]: https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/supervisory-statement/2021/ss421-may-2021.pdf
+
+
 
 ---
 
@@ -1191,4 +1190,7 @@ Use this enum to refer to funds reserved for the purpose of implementing, from a
 [osfi-bb]: https://www.osfi-bsif.gc.ca/en/data-forms/reporting-returns/filing-financial-returns/financial-reporting-instructions/irb-credit-data-wholesale-portfolio-part-1-bb
 [osfi-bd]: https://www.osfi-bsif.gc.ca/en/data-forms/reporting-returns/filing-financial-returns/financial-reporting-instructions/irb-credit-data-retail-portfolio-part-1-bd
 [osfi-b20]: https://www.osfi-bsif.gc.ca/Eng/Docs/b20_dft.pdf
+[scp]: https://www.bankofengland.co.uk/markets/eligible-collateral
+[issued]: https://www.investopedia.com/terms/s/sharecapital.asp
+[ocir]: https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/supervisory-statement/2021/ss421-may-2021.pdf
 
