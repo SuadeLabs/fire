@@ -698,6 +698,7 @@
         "share_capital",
         "single_collateral_pool",
         "trade_finance",
+        "underwriting",
         "variation_margin"
       ]
     },
