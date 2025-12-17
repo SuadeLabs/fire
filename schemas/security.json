@@ -650,7 +650,8 @@
     },
     "orig_acc_fv_change_credit_risk": {
       "description": "The difference between the outstanding nominal amount and the purchase price of the instrument at the purchase date. This amount should be reported for instruments purchased for an amount lower than the outstanding amount due to credit risk deterioration.",
-      "type": "integer"
+      "type": "integer",
+      "monetary": true 
     },
     "originator_id": {
       "description": "The unique identifier used by the financial institution to identify the originator of the security or securitisation.",
