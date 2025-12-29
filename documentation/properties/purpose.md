@@ -1117,6 +1117,7 @@ A refinance, refers to revising and replacing the terms of an existing credit ag
 ├── insurance
 ├── back_to_back
 ├── ocir
+├── underwriting
 └── other
 ```
 ### investment_advice
@@ -1128,6 +1129,8 @@ The [Mifid Directive][midifdir] defines in Article 4(8) portfolio management as:
 ### trade_finance
 From [CRR][crr] definitions (80):
 > **Trade finance** means financing, including guarantees, connected to the exchange of goods and services through financial products of fixed short-term maturity, generally of less than one year, without automatic rollover;
+### underwriting
+> **underwriting** identifies underwriting transactions in order to calculate reduced capital requirements per [CRR][crr] Article 345.
 
 ### variation_margin
 Defined in accordance with Article 30(1) and Article 30(3) of the [LCR][lcr] regulation:
