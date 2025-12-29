@@ -148,6 +148,8 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── goodwill
 ├── pv_future_spread_inc
 ├── recovery
+│   ├── recovery_debt_sec
+│   └── recovery_loan_adv
 ├── rec_unidentified_cpty
 ├── reference
 ├── release
@@ -172,6 +174,8 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── oth_tax_excl_temp_diff
 │   └── reclass_tax
 └── write_off
+│   ├── write_off_debt_sec
+│   └── write_off_loans_adv
 ```
 
 ### dgs_contribution
@@ -673,11 +677,23 @@ Describes the treatment related to a revaluation in which the resulting impact a
 ### recovery
 Describes an account representing the amount recovered made to reserves or provisions.
 
+### recovery_debt_sec
+Describes an account representing the amount recovered for all debt securities made to reserves or provisions.
+
+### recovery_loan_adv
+Describes an account representing the amount recovered for all loans and advances made to reserves or provisions.
+
 ### release
-Describes an account representing the amount of a provision beeing released as a risk subsides (e.g. the loan for which the provision was originally registered is repaid).
+Describes an account representing the amount of a provision being released as a risk subsides (e.g. the loan for which the provision was originally registered is repaid).
 
 ### write_off
-Describes an account representing the amount of a provision beeing written-off as a risk materialised (e.g. the loan for which the provision was originally registered is deemed irrecoverable).
+Describes an account representing the amount of a provision being written-off as a risk materialised (e.g. the loan for which the provision was originally registered is deemed irrecoverable).
+
+### write_off_debt_sec
+Describes an account representing the amount of a provision being written-off for all debt securities as a risk materialised (e.g. the loan for which the provision was originally registered is deemed irrecoverable).
+
+### write_off_loans_adv
+Describes an account representing the amount of a provision being written-off for all loans and advances as a risk materialised (e.g. the loan for which the provision was originally registered is deemed irrecoverable).
 
 ### mtg_insurance
 Prepaid portfolio mortgage insurance conforming to OSFI's 5 year amortisation requirements.  Ref: BCAR 40.290; Chapter 4, P164
