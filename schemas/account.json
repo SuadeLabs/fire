@@ -779,6 +779,14 @@
       "description": "This is the penalty incurred by the customer for an early withdrawal on this account. An early withdrawal is defined as a withdrawal prior to the next_withdrawal_date. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
       "monetary": true
+    },
+    "write_off_type": {
+      "description": "Type of write-off based on whether the borrowers legal obligation is formally extinguished or remains in place.",
+      "type": "string",
+      "enum": [
+        "formal",
+        "internal"
+      ]
     }
   },
   "required": [
