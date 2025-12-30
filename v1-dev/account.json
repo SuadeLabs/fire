@@ -534,6 +534,7 @@
         "investment_prop_lease",
         "investment_property",
         "ips",
+        "it_outsourcing",
         "land",
         "loan_and_advance_fee",
         "machinery",
@@ -569,6 +570,8 @@
         "rec_unidentified_cpty",
         "reclass_tax",
         "recovery",
+        "recovery_debt_sec",
+        "recovery_loan_adv",
         "redundancy_pymt",
         "reference",
         "reg_loss",
@@ -579,6 +582,7 @@
         "restructuring",
         "retained_earnings",
         "revaluation",
+        "revaluation_reclass",
         "revenue_reserve",
         "share_plan",
         "share_premium",
@@ -590,7 +594,9 @@
         "underwriting_fee",
         "unsecured_loan_fee",
         "vehicle",
-        "write_off"
+        "write_off",
+        "write_off_debt_sec",
+        "write_off_loans_adv"
       ]
     },
     "rate": {
