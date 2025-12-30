@@ -22,6 +22,9 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   ├── housing_coop
 │   ├── property_spe
 │   ├── sme
+│   │   └── medium_sme
+│   │   └── micro_sme
+│   │   └── small_sme
 │   │   └── supported_sme
 │   └── social_housing_entity
 ├── financial
@@ -122,6 +125,26 @@ In this scenario, an SME type will be assumed to comply with the [EU SME Recomme
 ### supported_sme
 
 An SME with special treatment under the capital adequacy rules, invoking a special multiplier for RWAs
+
+### medium_sme
+
+A Medium Sized Enterprise is any entity engaged in an economic activity, irrespective of its 
+legal form (corporation, partnership, sole trader etc.), which employs fewer than 250 
+persons and whose annual turnover is greater than €10 million and less than or equal to 
+€50 million or whose annual balance sheet is greater than €10 million and less than or 
+equal to €43 million.
+
+### micro_sme
+
+A micro SME is one which does not meet the thresholds to be classified as a small SME.
+
+### small_sme
+
+Small enterprises are those engaged in an economic activity, irrespective of their legal form 
+(corporation, partnership, sole trader etc.), which employs fewer than 50 persons and whose 
+annual turnover or annual balance sheet is less than or equal to €10 million. If there are any 
+instances where border-line cases exist using these definitions of smal and medium sized 
+enterprises, the employee number threshold is to take precedence.
 
 ### social_housing_entity
 
