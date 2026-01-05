@@ -1050,14 +1050,6 @@
     "version_id": {
       "description": "The version identifier of the data such as the firm's internal batch identifier.",
       "type": "string"
-    },
-    "write_off_type": {
-      "description": "Type of write-off based on whether the borrowers legal obligation is formally extinguished or remains in place.",
-      "type": "string",
-      "enum": [
-        "formal",
-        "internal"
-      ]
     }
   },
   "required": [

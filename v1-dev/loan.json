@@ -884,14 +884,6 @@
     "vol_adj": {
       "description": "The volatility adjustment appropriate to the exposure.",
       "type": "number"
-    },
-    "write_off_type": {
-      "description": "Type of write-off based on whether the borrowers legal obligation is formally extinguished or remains in place.",
-      "type": "string",
-      "enum": [
-        "formal",
-        "internal"
-      ]
     }
   },
   "required": [

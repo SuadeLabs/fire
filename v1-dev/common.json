@@ -694,7 +694,11 @@
     "type": "string",
     "enum": [
       "collective",
+      "collective_formal",
+      "collective_internal",
       "individual",
+      "individual_formal",
+      "individual_internal",
       "write_off"
     ]
   },

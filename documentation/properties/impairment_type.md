@@ -18,11 +18,30 @@ Assets that can be impaired include land, buildings, machinery and equipment, lo
 
 With regards to loans, there are three categories they can fall into:
 
+```bash
+├── collective
+│   ├── collective_formal
+│   └── collective_internal
+├── individual
+│   ├── individual_formal
+│   └── individual_internal
+└── write_off
+```
+
 ### collective
 To be used if the instrument is subject to impairment in accordance with an applied accounting standard and is collectively assessed for impairment by being grouped together with instruments with similar credit risk characteristics.
 
 ### individual
 To be used if the instrument is subject to impairment in accordance with an applied accounting standard and is individually assessed for impairment.
+
+
+The suffix of both collective and invidudual into either formal or internal relates to whether the debt has been formally reduced/removed ro not as below:
+
+### formal
+Formal debt forgiveness where the borrower legal obligation is reduced/removed
+
+### internal
+Internal accounting write-off or provisioning decision without extinguishing legal repayment obligation.
 
 ### write_off
 Write-offs relate to amounts where the lender has no expectation of ever being able to recover value from the collateral or otherwise. It can relate to a financial asset in its entirety or to a portion of it. For example, an entity plans to enforce the collateral on a financial asset and expects to recover no more than 30 per cent of the financial asset from the collateral. If the entity has no reasonable prospects of recovering any further cash flows from the financial asset, it should write off the remaining 70 per cent of the financial asset.
