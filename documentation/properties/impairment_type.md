@@ -35,12 +35,18 @@ To be used if the instrument is subject to impairment in accordance with an appl
 To be used if the instrument is subject to impairment in accordance with an applied accounting standard and is individually assessed for impairment.
 
 
-The suffix of both collective and invidudual into either formal or internal relates to whether the debt has been formally reduced/removed ro not as below:
+The suffix of both collective and invidudual into either formal or internal relates to whether the debt has been formally reduced/removed or not as below:
 
-### formal
+### collective_formal
 Formal debt forgiveness where the borrower legal obligation is reduced/removed
 
-### internal
+### collective_internal
+Internal accounting write-off or provisioning decision without extinguishing legal repayment obligation.
+
+### individual_formal
+Formal debt forgiveness where the borrower legal obligation is reduced/removed
+
+### individual_internal
 Internal accounting write-off or provisioning decision without extinguishing legal repayment obligation.
 
 ### write_off
