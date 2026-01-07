@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "valuation_type"
-schemas:    [collateral]
+schemas:    [collateral, security]
 ---
 
 # valuation_type
@@ -17,15 +17,20 @@ For more information, refer to:
 ```bash
 ├── auto_val_model
 ├── broker_price
+├── counterparty
+├── creditor
 ├── desktop
 ├── full
 ├── limited
+├── mtm
+├── other
 ├── prospective_market_value
 │   ├── as_completed
 │   ├── as_is
 │   └── as_stabilized
 ├── purchase_price
-└── tav
+├── tav
+└── third_party
 ```
 
 ### as_completed
@@ -46,6 +51,16 @@ Automated Valuation Model (AVM) - A computer-driven mathematical model that uses
 ### broker_price
 Broker Price Opinion (BPO) - A professional estimate of a property's value provided by a real estate broker or agent, typically based on comparable sales and market analysis.
 
+### counterparty
+Counterparty estimation - A valuation method whereby the valuation is carried out by the protection provider.
+
+Reference: AnaCredit Reporting Manual Part II, chapter 9.4.6 Protection valuation approach
+
+### creditor
+Creditor valuation is a valuation method whereby the valuation is carried out by the creditor. The valuation may be undertaken by an external or staff appraiser who possesses the necessary qualifications, ability and experience to execute a valuation and who is not independent from the credit decision process.
+
+Reference: AnaCredit Reporting Manual Part II, chapter 9.4.6 Protection valuation approach
+
 ### desktop
 Desktop Appraisal - A property valuation that relies on publicly available data and records without a physical inspection of the property.
 
@@ -55,7 +70,17 @@ Full Appraisal - A comprehensive property valuation that includes a physical ins
 ### limited
 Limited Appraisal - A property valuation that includes a physical inspection but may have a more limited scope than a full appraisal, often focusing on specific aspects of the property.
 
-### prospective_market_value
+### mtm
+Mark-to-market is a valuation method whereby the protection value is based on unadjusted prices quoted at an exchange for identical assets and liabilities in an active market.
+
+Reference: AnaCredit Reporting Manual Part II, chapter 9.4.6 Protection valuation approach
+
+### other
+Definition: Other type of valuation is any other type of valuation that is not included in the previous categories of valuation approaches. 
+
+Reference: AnaCredit Reporting Manual Part II, chapter 9.4.6 Protection valuation approach
+
+### prospective_mkt_value
 
 Prospective Market Value - A valuation provided by an appraiser for a property interest related to a credit decision for a proposed development or renovation project, based on the condition of the property at a specified stage of its development or renovation.
 
@@ -64,5 +89,10 @@ Purchase Price - The actual price paid for the property in a recent transaction,
 
 ### tav
 Transaction Automated Valuation - An automated valuation that is specifically tied to a transaction, using transaction-specific data points to determine the property value.
+
+### third_party
+Third-party valuation is a valuation method in which the valuation is provided by an appraiser who is independent of the credit decision process.
+
+Reference: AnaCredit Reporting Manual Part II, chapter 9.4.6 Protection valuation approach
 
 --- 
