@@ -9,3 +9,5 @@ schemas:    [account, loan, agreement, security]
 ---
 
 The **guarantor id** is the unique identifier for the guarantor within the financial institution.
+
+---

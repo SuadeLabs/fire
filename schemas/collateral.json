@@ -78,6 +78,10 @@
       "type": "integer",
       "monetary": true
     },
+    "owner_id": {
+      "description": "identifies the provider of the collateral, including cases where the collateral is provided by a third party.",
+      "type": "string"
+    },
     "postal_code": {
       "description": "The zip code in which the property is located. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
       "type": "string"
