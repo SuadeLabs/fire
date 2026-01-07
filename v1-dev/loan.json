@@ -833,11 +833,6 @@
       "type": "string",
       "format": "date-time"
     },
-    "transferred_amount": {
-      "description": "Transferred amount of the economic ownership of the financial asset.",
-      "type": "integer",
-      "monetary": true
-    },
     "type": {
       "description": "The form of the loan product administered by the financial institution, with regards to common regulatory classifications.",
       "type": "string",
