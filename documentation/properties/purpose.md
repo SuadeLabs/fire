@@ -357,7 +357,7 @@ Describes an account that holds the amount of fees receivables/payables originat
 Describes an account that holds the amount of fees receivables/payables originating from **services that cannot be classified as financial**. These could include executor and trustee services, computer bureau services.
 
 ### professional_fee
-Describes an account that holds the amounnt of fees receivables/payables originating from **external professional services, including legal, accounting, consulting, and other professional services**
+Describes an account that holds the amount of fees receivables/payables originating from **external professional services, including legal, accounting, consulting, and other professional services**
 
 ### pension
 *needs definition*
