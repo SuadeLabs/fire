@@ -93,6 +93,11 @@
     "asset_liability": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/asset_liability"
     },
+    "authorised_limit_amount": {
+      "description": "The total amount of authorized Credit Risk exposure for all facility.",
+      "type": "integer",
+      "monetary": true
+    },
     "balance": {
       "description": "The balance of the loan or capital still to be repaid. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
