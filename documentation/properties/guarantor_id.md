@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "guarantor_id"
-schemas:    [loan, agreement, security]
+schemas:    [account, loan, agreement, security]
 ---
 
 # guarantor_id

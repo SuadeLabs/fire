@@ -255,6 +255,10 @@
         "us_fdic"
       ]
     },
+    "guarantor_id": {
+      "description": "The unique identifier for the guarantor within the financial institution.",
+      "type": "string"
+    },
     "impairment_amount": {
       "description": "The impairment amount is the allowance set aside by the firm that accounts for the event that the asset becomes impaired in the future.",
       "type": "integer",
