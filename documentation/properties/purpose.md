@@ -76,7 +76,8 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   │   ├── mortgage_fee
 │   │   └── unsecured_loan_fee
 │   ├── other_fs_fee
-│   └── other_non_fs_fee
+│   ├── other_non_fs_fee
+    └── professional_fee
 ├── fines
 ├── firm_operating_expenses
 │   ├── computer_and_it_cost
@@ -354,6 +355,9 @@ Describes an account that holds the amount of fees receivables/payables originat
 
 ### other_non_fs_fee
 Describes an account that holds the amount of fees receivables/payables originating from **services that cannot be classified as financial**. These could include executor and trustee services, computer bureau services.
+
+### professional_fee
+Describes an account that holds the amount of fees receivables/payables originating from **external professional services, including legal, accounting, consulting, and other professional services**
 
 ### pension
 *needs definition*
