@@ -11,7 +11,24 @@ schemas:    [collateral]
 **Type of protection value** 
 This data attribute is used for identifying the type of the protection value that corresponds to the protection value as reported in the data attribute “protection value”.
 
-![Table 114 Applicable type of protection value by type of protection](image.png)
+Reference: AnaCredit Reporting Manual Part II, cha 9.4.5
+> Table 114 – Applicable type of protection value by type of protection
+| Type of protection                                 | Type of protection value                                      |
+| -------------------------------------------------- | ------------------------------------------------------------- |
+| Gold                                               | Fair value                                                    |
+| Currency and deposits                              | Notional amount                                               |
+| Securities                                         | Notional amount                                               |
+| Loans                                              | Notional amount                                               |
+| Equity and investment fund shares or units         | Fair value                                                    |
+| Credit derivatives                                 | Notional amount                                               |
+| Financial guarantees other than credit derivatives | Notional amount                                               |
+| Trade receivables                                  | Notional amount                                               |
+| Life insurance policies pledged                    | Notional amount                                               |
+| Residential real estate collateral                 | Market value / long-term sustainable value                    |
+| Offices and commercial premises                    | Market value / long-term sustainable value                    |
+| Commercial real estate collateral                  | Market value / long-term sustainable value                    |
+| Other physical collateral                          | Fair value                                                    |
+| Other protection                                   | Notional amount / fair value (determined per protection item) |
 
 Notional amount and fair value are reported using **notional_amount** and **mtm_dirty** respectively.
 For real estate collateral, the value type is derived by combining **collateral.value** with **value_type** enums. 
