@@ -188,6 +188,14 @@
       "type": "string",
       "format": "date-time"
     },
+    "value_type": {
+      "description": "The type of protection value provided by the procetion provider",
+      "type": "string",
+      "enum": [
+        "long_term",
+        "market"
+      ]
+    },
     "version_id": {
       "description": "The version identifier of the data such as the firm's internal batch identifier.",
       "type": "string"
