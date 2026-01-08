@@ -553,19 +553,6 @@
         "US"
       ]
     },
-    "orig_rate_type": {
-      "type": "string",
-      "description": "The rate_type at origination.",
-      "enum": [
-        "combined",
-        "fixed",
-        "tracker",
-        "variable"
-      ],
-      "jurisdictions": [
-        "US"
-      ]
-    },
     "orig_ref_income": {
       "type": "integer",
       "monetary": true,

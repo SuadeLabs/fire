@@ -453,6 +453,16 @@
       "type": "integer",
       "monetary": true
     },
+    "orig_rate_type": {
+      "description": "The rate_type at origination.",
+      "type": "string",
+      "enum": [
+        "combined",
+        "fixed",
+        "tracker",
+        "variable"
+      ]
+    },
     "parent_facility_id": {
       "description": "The parent code assigned by the financial institution to identify a facility.",
       "type": "string"

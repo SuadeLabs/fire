@@ -551,6 +551,16 @@
       "type": "integer",
       "monetary": true
     },
+    "orig_rate_type": {
+      "description": "The rate_type at origination.",
+      "type": "string",
+      "enum": [
+        "combined",
+        "fixed",
+        "tracker",
+        "variable"
+      ]
+    },
     "originator_id": {
       "description": "The unique identifier used by the financial institution to identify the originator of the loan product.",
       "type": "string"
