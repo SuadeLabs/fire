@@ -415,6 +415,9 @@
     "impairment_status": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/impairment_status"
     },
+    "impairment_type": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/impairment_type"
+    },
     "index_composition": {
       "description": "Constituents and their proportion in an index.",
       "type": "array",

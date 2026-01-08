@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"arrears_arrangement"
-schemas:	[loan]
+schemas:	[account, loan]
 ---
 
 # arrears_arrangement

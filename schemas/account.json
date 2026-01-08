@@ -26,6 +26,37 @@
       "type": "integer",
       "monetary": true
     },
+    "arrears_arrangement": {
+      "description": "The arrangement the lender has made with the borrower regarding the amount referenced in the arrears_balance.",
+      "type": "string",
+      "enum": [
+        "formal",
+        "interest_grace_period",
+        "mi_claim_adv",
+        "modified_tnc",
+        "none",
+        "possessed",
+        "prin_def_rate",
+        "prin_def_rate_term",
+        "prin_def_term",
+        "principal_defer",
+        "principal_forgive",
+        "rate_prin_forgive",
+        "rate_red_frozen",
+        "rate_term",
+        "rate_term_prin_forgive",
+        "recap",
+        "refinancing",
+        "renewal",
+        "reo",
+        "settlement",
+        "short_sale",
+        "temporary",
+        "term_ext",
+        "term_prin_forgive",
+        "term_recap"
+      ]
+    },
     "arrears_balance": {
       "description": "The balance of the capital amount that is considered to be in arrears (for overdrafts/credit cards). Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
@@ -116,6 +147,12 @@
     "cr_approach": {
       "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/cr_approach"
+    },
+    "cum_recoveries": {
+      "description": "The total amount recovered since the date of default of the instrument.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
     },
     "cum_write_offs": {
       "description": "The portion of the loan which has been written off.",
