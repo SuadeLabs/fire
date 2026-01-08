@@ -315,6 +315,11 @@
       "type": "string",
       "format": "date-time"
     },
+    "first_principal_date": {
+      "description": "The date on which the first principal payment was/will be made based on the original loan terms. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "string",
+      "format": "date-time"
+      },
     "forbearance_date": {
       "description": "The date on which the first forbearance measure was granted to this product.  Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
       "type": "string",
