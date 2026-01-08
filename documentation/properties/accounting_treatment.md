@@ -8,7 +8,7 @@ schemas:    [account, derivative, loan, security]
 
 ---
 
-The accounting treatment of a product refers to which accounting classification or portfolio the asset/liability belongs within the [IFRS9][ifrs9] regime in accordance with Regulation (EU) 2015/534 (ECB/2015/13) applied by the financial firm or National GAAP.
+The accounting treatment of a product refers to which accounting classification or portfolio the asset/liability belongs within the [IFRS9][ifrs9] regime in accordance with Regulation (EU) 2015/53[...]
 
 ### cb_or_demand
 Cash balances at central banks and other demand deposits in accordance with IFRS.
@@ -17,10 +17,10 @@ Cash balances at central banks and other demand deposits in accordance with IFRS
 Financial assets held for trading in accordance with IFRS.
 
 ### fv_thru_pnl
-Financial assets measured at fair value through profit and loss and designated as such upon initial recognition or subsequently in accordance with IFRS, except those classified as financial assets held for trading.
+Financial assets measured at fair value through profit and loss and designated as such upon initial recognition or subsequently in accordance with IFRS, except those classified as financial assets[...]
 
 ### fv_mandatorily
-Non-trading financial assets mandatorily measured at fair value through profit or loss in accordance with IFRS.
+Non-trading financial assets mandatorily measured at fair value through profit and loss in accordance with IFRS.
 
 ### fv_oci
 Financial assets measured at fair value through other comprehensive income due to business model and cash-flows characteristics in accordance with IFRS.
@@ -29,13 +29,13 @@ Financial assets measured at fair value through other comprehensive income due t
 Financial assets measured at amortised cost in accordance with IFRS.
 
 ### deed_in_lieu
-A deed-in-lieu of foreclosure is an arrangement where a borrower voluntarily turns over ownership of their home to the lender to avoid the foreclosure process. Refer to https://www.consumerfinance.gov/ask-cfpb/what-is-a-deed-in-lieu-of-foreclosure-en-291/.
+A deed-in-lieu of foreclosure is an arrangement where a borrower voluntarily turns over ownership of their home to the lender to avoid the foreclosure process. Refer to https://www.consumerfinance[...]
 
 ### held_for_invest
-When a reporting entity holds an asset or purchased an asset (and has not elected fair value option (FVO) method of accounting) for which it has the intent and ability to hold for the foreseeable future or to maturity or payoff, the asset should be classified as held for investment. This is distinct from an asset classified as held-for-long-term-investment which has been elected to be measured using a fair value option.
+When a reporting entity holds an asset or purchased an asset (and has not elected fair value option (FVO) method of accounting) for which it has the intent and ability to hold for the foreseeable [...]
 
 ### held_for_invest_fvo
-When a reporting entity holds an asset or purchased an asset (and elected fair value option (FVO) method of accounting) for which it has the intent and ability to hold for the foreseeable future or to maturity or payoff, the asset should be classified as held for investment. This is distinct from an asset classified as held-for-long-term-investment which has been elected to be measured at amortized cost basis.
+When a reporting entity holds an asset or purchased an asset (and elected fair value option (FVO) method of accounting) for which it has the intent and ability to hold for the foreseeable future o[...]
 
 *Legacy and [IAS39][ias39] based classifications:*
 
@@ -44,7 +44,7 @@ When a reporting entity holds an asset or purchased an asset (and elected fair v
 ### held_for_hedge
 
 ### held_for_sale
-a non-current asset or disposal group to be classified as held for sale if its carrying amount will be recovered principally through a sale transaction instead of through continuing use. https://www.ifrs.org/issued-standards/list-of-standards/ifrs-5-non-current-assets-held-for-sale-and-discontinued-operations/
+a non-current asset or disposal group to be classified as held for sale if its carrying amount will be recovered principally through a sale transaction instead of through continuing use. https://w[...]
 
 
 ### held_to_maturity
@@ -52,7 +52,7 @@ a non-current asset or disposal group to be classified as held for sale if its c
 ### loans_and_recs
 
 ### trading_gaap
-As defined in Part 1, Section 4 of Annex V in [Commission Implementing Regulation (EU) 2021/451]: 'Trading financial assets' includes all financial assets and liabilities classified as trading under the relevant national GAAP based on BAD. Irrespective of the measurement methodology applied under the relevant national GAAP based on BAD, all derivatives with a positive balance for the reporting institution that are not classified as hedge accounting in accordance with paragraph 22 of this Part shall be reported as trading financial assets and those with a negative balance shall be reported as trading financial liabilities. That classification shall also apply to derivatives which according to national GAAP based on BAD are not recognised on the balance-sheet, or have only the changes in their fair value recognised on-balance sheet or which are used as economic hedges as defined in paragraph 137 of Part 2 of Annex V.
+As defined in Part 1, Section 4 of Annex V in [Commission Implementing Regulation (EU) 2021/451]: 'Trading financial assets' includes all financial assets and liabilities classified as trading und[...]
 
 ### ntnd_fv_pl
 As defined in the relevant national GAAP based on BAD.
@@ -61,24 +61,86 @@ As defined in the relevant national GAAP based on BAD.
 As defined in the relevant national GAAP based on BAD.
 
 ### ntnd_cost_based
-As defined in Part 1, Section 4 of Annex V in [Commission Implementing Regulation (EU) 2021/451]: Under national GAAP based on BAD, for financial assets, 'cost-based methods' shall include those valuation rules by which the debt instrument is measured at cost plus interest accrued less impairment losses.
+As defined in Part 1, Section 4 of Annex V in [Commission Implementing Regulation (EU) 2021/451]: Under national GAAP based on BAD, for financial assets, 'cost-based methods' shall include those v[...]
 
-Under national GAAP based on BAD, 'Non-trading non-derivative financial assets measured at a cost-based method' includes financial instruments measured at cost-based methods as well as instruments measured at the lower of cost or market ('LOCOM') under a non-continuous basis (moderate LOCOM), regardless of their actual measurement as of the reporting reference date. Assets measured at moderate LOCOM are assets for which LOCOM is applied only in specific circumstances. The applicable accounting framework provides for those circumstances, such as impairment, a prolonged decline in fair value compared to cost or change in the management intent. 
+Under national GAAP based on BAD, 'Non-trading non-derivative financial assets measured at a cost-based method' includes financial instruments measured at cost-based methods as well as instruments[...]
 
 ### other_gaap
-As defined in Part 1, Section 4 of Annex V in [Commission Implementing Regulation (EU) 2021/451]: Under national GAAP based on BAD, 'Other non-trading non-derivative financial assets' shall include financial assets that do not qualify for inclusion in other accounting portfolios. That accounting portfolio includes, among others, financial assets that are measured at LOCOM on a continuous basis ('strict LOCOM'). Assets measured at strict LOCOM are assets for which the applicable accounting framework either provides for the initial and subsequent measurement at LOCOM, or the initial measurement at cost and the subsequent measurement at LOCOM.
+As defined in Part 1, Section 4 of Annex V in [Commission Implementing Regulation (EU) 2021/451]: Under national GAAP based on BAD, 'Other non-trading non-derivative financial assets' shall includ[...]
 
 ### cb_or_demand_gaap
-Cash balances at central banks and other demand deposits in accordance with GAAP.
+Cash balances at central banks and other demand deposits in accordance with US GAAP.
+
+**US GAAP authoritative citations**
+
+- ASC 305 — Cash and Cash Equivalents
+  - Key sections to review: ASC 305-10 (Overview), ASC 305-10-20 (Definitions), ASC 305-10-25 (Recognition), ASC 305-10-50 (Presentation and disclosures)
+
+**Public guidance and further reading**
+
+- [FASB Accounting Standards Codification (home)](https://asc.fasb.org/)
+- [IAS Plus — ASC 305 summary](https://www.iasplus.com/en/standards/usgaap/asc-305)
+- [Deloitte: Cash and cash equivalents (technical library)](https://www2.deloitte.com/global/en/pages/audit/articles/cash-and-cash-equivalents.html)
+- [PwC: Cash and cash equivalents — US GAAP resources](https://www.pwc.com/us/en/services/accounting-advisory/library/cash-and-cash-equivalents.html)
+- [SEC: Division of Corporation Finance — Financial Reporting Manual (FRM)](https://www.sec.gov/corpfin)
+
 
 ### held_for_trading_gaap
-Financial assets held for trading in accordance with GAAP.
+Financial assets held for trading in accordance with US GAAP.
+
+**US GAAP authoritative citations**
+
+- ASC 320 — Investments — Debt and Equity Securities (trading classification for debt securities)
+  - Key sections: ASC 320-10 (Overview), ASC 320-10-20 (Definitions), ASC 320-10-35 (Subsequent measurement)
+- ASC 321 — Investments — Equity Securities (equity securities measured at fair value with changes recognized in earnings)
+  - Key sections: ASC 321-10 (Overview), ASC 321-10-35 (Subsequent measurement)
+- ASC 815 — Derivatives and Hedging (for instruments that meet the definition of a derivative and are accounted for as trading)
+
+**Public guidance and further reading**
+
+- [FASB Accounting Standards Codification (home)](https://asc.fasb.org/)
+- [IAS Plus — ASC 320 summary](https://www.iasplus.com/en/standards/usgaap/asc-320)
+- [IAS Plus — ASC 321 summary](https://www.iasplus.com/en/standards/usgaap/asc-321)
+- [Deloitte: Accounting for investments — debt & equity securities (ASC 320/321)](https://www2.deloitte.com/global/en/pages/audit/articles/investments-debt-equity-securities.html)
+- [PwC: Investments — accounting under US GAAP](https://www.pwc.com/us/en/services/accounting-advisory/library/investments-debt-equity-securities.html)
+
 
 ### fv_thru_pnl_gaap
-Financial assets measured at fair value through profit and loss and designated as such upon initial recognition or subsequently in accordance with GAAP, except those classified as financial assets held for trading.
+Financial assets measured at fair value through profit and loss and designated as such upon initial recognition or subsequently in accordance with US GAAP, except those classified as financial assets held for trading.
+
+**US GAAP authoritative citations**
+
+- ASC 825 — Financial Instruments (Fair-Value Option)
+  - Key sections: ASC 825-10 (Overview), ASC 825-10-25 (Election/recognition of the fair-value option)
+- ASC 820 — Fair Value Measurement (measurement framework and disclosures)
+  - Key sections: ASC 820-10 (Overview), ASC 820-10-35 (Measurement techniques), ASC 820-10-50 (Disclosures)
+- ASC 321 / ASC 320 — for interactions when instruments are equity or debt securities
+
+**Public guidance and further reading**
+
+- [FASB Accounting Standards Codification (home)](https://asc.fasb.org/)
+- [IAS Plus — ASC 825 summary](https://www.iasplus.com/en/standards/usgaap/asc-825)
+- [IAS Plus — ASC 820 summary](https://www.iasplus.com/en/standards/usgaap/asc-820)
+- [Deloitte: Fair value measurements and disclosures (ASC 820)](https://www2.deloitte.com/global/en/pages/audit/articles/fair-value-measurements-disclosures.html)
+- [PwC: Fair value measurements — US GAAP guidance](https://www.pwc.com/us/en/services/accounting-advisory/library/fair-value-measurement.html)
+
 
 ### fv_mandatorily_gaap
-Non-trading financial assets mandatorily measured at fair value through profit or loss in accordance with GAAP.
+Non-trading financial assets mandatorily measured at fair value through profit or loss in accordance with US GAAP.
+
+**US GAAP authoritative citations**
+
+- ASC 321 — Investments — Equity Securities (equity securities measured at fair value with changes recognized in earnings unless an accounting alternative applies)
+  - Key sections: ASC 321-10 (Overview), ASC 321-10-35 (Subsequent measurement)
+- ASC 320 — Investments — Debt and Equity Securities (trading debt securities measured at fair value through earnings)
+- ASC 820 — Fair Value Measurement (measurement and disclosure requirements)
+
+**Public guidance and further reading**
+
+- [FASB Accounting Standards Codification (home)](https://asc.fasb.org/)
+- [IAS Plus — ASC 321 summary](https://www.iasplus.com/en/standards/usgaap/asc-321)
+- [IAS Plus — ASC 320 summary](https://www.iasplus.com/en/standards/usgaap/asc-320)
+- [PwC: Accounting for investments and mandatory fair value under US GAAP](https://www.pwc.com/us/en/services/accounting-advisory/library/mandatory-fair-value.html)
 
 ---
 
