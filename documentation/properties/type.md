@@ -592,6 +592,8 @@ Charity serving communities and individuals. Includes non-profit institutions se
 │   └── heloc_lockout
 ├── heloan
 ├── trade_finance
+│   ├── export
+│   └── import
 ├── credit_facility
 ├── liquidity_facility
 ├── multiccy_facility
@@ -605,6 +607,14 @@ Charity serving communities and individuals. Includes non-profit institutions se
 From [CRR][crr] definitions (80):
 
 > Trade finance means financing, including guarantees, connected to the exchange of goods and services through financial products of fixed short-term maturity, generally of less than one year, without automatic rollover
+
+### export
+
+ Financing of goods and services (purchases, barter and/or gifts) from residents to non-residents.
+
+### import
+
+ Financing of goods and services (purchases, barter and/or gifts) from nonresidents to residents.
 
 ### auto
 
