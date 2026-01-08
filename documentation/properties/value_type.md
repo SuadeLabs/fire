@@ -6,13 +6,11 @@ schemas:    [collateral]
 
 # value_type
 
----
-
 **Type of protection value** 
 This data attribute is used for identifying the type of the protection value that corresponds to the protection value as reported in the data attribute “protection value”.
 
-Reference: AnaCredit Reporting Manual Part II, cha 9.4.5
-> Table 114 – Applicable type of protection value by type of protection
+Reference: AnaCredit Reporting Manual Part II, cha 9.4.5 - Table 114 – Applicable type of protection value by type of protection
+
 | Type of protection                                 | Type of protection value                                      |
 | -------------------------------------------------- | ------------------------------------------------------------- |
 | Gold                                               | Fair value                                                    |

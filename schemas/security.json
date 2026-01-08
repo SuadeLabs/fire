@@ -1048,24 +1048,13 @@
       "monetary": true
     },
     "valuation_type": {
-      "description": "Methodology used in the determination of the collateral value. Refer to https://www.ecfr.gov/current/title-12/chapter-VI/subchapter-B/part-614/subpart-F/section-614.4265 and https://www.federalreserve.gov/boarddocs/srletters/2010/sr1016a1.pdf",
+      "description": "Methodology used in the determination of the collateral value. Refer to AnaCredit Reporting Manual Part II, chapter 9.4.6 Protection valuation approach",
       "type": "string",
       "enum": [
-        "as_completed",
-        "as_is",
-        "as_stabilized",
-        "auto_val_model",
-        "broker_price",
         "counterparty",
         "creditor",
-        "desktop",
-        "full",
-        "limited",
         "mtm",
         "other",
-        "prospective_mkt_value",
-        "purchase_price",
-        "tav",
         "third_party"
       ]
     },

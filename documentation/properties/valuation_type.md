@@ -13,6 +13,9 @@ Methodology used in the determination of the collateral value.
 For more information, refer to:
 - https://www.ecfr.gov/current/title-12/chapter-VI/subchapter-B/part-614/subpart-F/section-614.4265
 - https://www.federalreserve.gov/boarddocs/srletters/2010/sr1016a1.pdf
+- AnaCredit Manual part 2, Chapter 9.4.6 https://www.banque-france.fr/fr/system/files/2023-08/banque_de_france_espace_declarants_anacredit_manual_part_ii_datasets_and_data_attributes_201905.en_.pdf/#page=231
+
+# collateral
 
 ```bash
 ├── auto_val_model
@@ -89,6 +92,41 @@ Purchase Price - The actual price paid for the property in a recent transaction,
 
 ### tav
 Transaction Automated Valuation - An automated valuation that is specifically tied to a transaction, using transaction-specific data points to determine the property value.
+
+### third_party
+Third-party valuation is a valuation method in which the valuation is provided by an appraiser who is independent of the credit decision process.
+
+Reference: AnaCredit Reporting Manual Part II, chapter 9.4.6 Protection valuation approach
+
+# security
+
+```bash
+├── counterparty
+├── creditor
+├── mtm
+├── other
+└── third_party
+```
+
+### counterparty
+Counterparty estimation - A valuation method whereby the valuation is carried out by the protection provider.
+
+Reference: AnaCredit Reporting Manual Part II, chapter 9.4.6 Protection valuation approach
+
+### creditor
+Creditor valuation is a valuation method whereby the valuation is carried out by the creditor. The valuation may be undertaken by an external or staff appraiser who possesses the necessary qualifications, ability and experience to execute a valuation and who is not independent from the credit decision process.
+
+Reference: AnaCredit Reporting Manual Part II, chapter 9.4.6 Protection valuation approach
+
+### mtm
+Mark-to-market is a valuation method whereby the protection value is based on unadjusted prices quoted at an exchange for identical assets and liabilities in an active market.
+
+Reference: AnaCredit Reporting Manual Part II, chapter 9.4.6 Protection valuation approach
+
+### other
+Definition: Other type of valuation is any other type of valuation that is not included in the previous categories of valuation approaches. 
+
+Reference: AnaCredit Reporting Manual Part II, chapter 9.4.6 Protection valuation approach
 
 ### third_party
 Third-party valuation is a valuation method in which the valuation is provided by an appraiser who is independent of the credit decision process.
