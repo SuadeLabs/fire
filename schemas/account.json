@@ -172,6 +172,10 @@
       "description": "The standardised methodology for calculating the number of days between two dates. It is used to calculate the amount of accrued interest or the present value.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/day_count_convention"
     },
+    "deal_id": {
+      "description": "The unique identifier used by the financial institution to identify the deal for this product that links it to other products of the same or different type.",
+      "type": "string"
+    },
     "default_date": {
       "description": "Date of default.",
       "type": "string",
