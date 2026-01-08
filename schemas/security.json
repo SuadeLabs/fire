@@ -690,6 +690,8 @@
         "custody",
         "default_fund",
         "derivative_collateral",
+        "export",
+        "import",
         "independent_collateral_amount",
         "insurance",
         "investment",

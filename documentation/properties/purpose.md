@@ -1133,6 +1133,8 @@ A refinance, refers to revising and replacing the terms of an existing credit ag
 │    ├──  investment_advice
 │    └──  portfolio_management
 ├── trade_finance
+│    ├──  export
+│    └──  import
 ├── aircraft_finance
 ├── insurance
 ├── back_to_back
@@ -1148,6 +1150,14 @@ The [Mifid Directive][midifdir] defines in Article 4(8) portfolio management as:
 ### trade_finance
 From [CRR][crr] definitions (80):
 > **Trade finance** means financing, including guarantees, connected to the exchange of goods and services through financial products of fixed short-term maturity, generally of less than one year, without automatic rollover;
+
+### export
+
+ Financing of goods and services (purchases, barter and/or gifts) from residents to non-residents.
+
+### import
+
+ Financing of goods and services (purchases, barter and/or gifts) from nonresidents to residents.
 
 ### variation_margin
 Defined in accordance with Article 30(1) and Article 30(3) of the [LCR][lcr] regulation:
