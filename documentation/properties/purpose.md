@@ -222,7 +222,9 @@ Clearing and comparable services from the [CRR][crr] Article 422.4:
 > Clearing, custody or cash management or other comparable services referred to in points (a) and (d) of paragraph 3 only covers such services to the extent that they are rendered in the context of an established relationship on which the depositor has substantial dependency. They shall not merely consist in correspondent banking or prime brokerage services and the institution shall have evidence that the client is unable to withdraw amounts legally due over a 30 day horizon without compromising its operational functioning.
 
 ### operational
-*(see operational under account)*
+Definition: Deposits held at other financial institutions for operational purposes, as outlined in LCR40.26 to LCR40.36, such as for clearing, custody, and cash management purposes, must be assumed to stay at those institutions – ie they must receive a 0% inflow rate, as noted in LCR40.31. The same methodology applied in LCR40.26 to LCR40.36 for operational deposit outflows should also be applied to determine if deposits held at another financial institution are operational deposits and receive a 0% inflow. As a general principle if the bank receiving the deposit classifies the deposit as operational, the bank placing it should also classify it as an operational deposit.
+
+https://www.bis.org/basel_framework/chapter/LCR/40.htm#:~:text=1%20FAQ-,40.89,-Deposits%20held%20at
 
 ### cash_management
 *Needs definition*
@@ -898,7 +900,9 @@ From [CRR][crr] Article 113(7):
 >A **lifetime_mortgage** is a very specific kind of British mortgage contract and is defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G1294.html). It is geared towards customers of a certain age in order to release equity and typically repayment occurs at the time of the customers death when the property is sold;
 
 ### operational
-*(see operational under account)*
+Definition: Deposits held at other financial institutions for operational purposes, as outlined in LCR40.26 to LCR40.36, such as for clearing, custody, and cash management purposes, must be assumed to stay at those institutions – ie they must receive a 0% inflow rate, as noted in LCR40.31. The same methodology applied in LCR40.26 to LCR40.36 for operational deposit outflows should also be applied to determine if deposits held at another financial institution are operational deposits and receive a 0% inflow. As a general principle if the bank receiving the deposit classifies the deposit as operational, the bank placing it should also classify it as an operational deposit.
+
+https://www.bis.org/basel_framework/chapter/LCR/40.htm#:~:text=1%20FAQ-,40.89,-Deposits%20held%20at
 
 ### operational_sym
 Used to classify operational deposits where the credit institution is able to establish a corresponding symmetrical inflow rate.
