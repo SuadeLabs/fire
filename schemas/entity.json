@@ -89,6 +89,14 @@
       "description": "Currency in accordance with ISO 4217. It should be consistent with the figures for turnover and total assets.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
     },
+    "customer_ids": {
+      "description": "The list of customers for this joint liability facility",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
     "dbrs_lt": {
       "description": "DBRS long term credit ratings",
       "type": "string",
