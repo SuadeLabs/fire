@@ -21,6 +21,10 @@
         "type": "string"
       }
     },
+    "address_county": {
+      "description": "The county or administrative region (e.g. NUTS code) for an collateral's address.",
+      "type": "string"
+    },
     "charge": {
       "description": "Lender charge on collateral, 1 indicates first charge, 2 second and so on. 0 indicates a combination of charge levels.",
       "type": "integer",
