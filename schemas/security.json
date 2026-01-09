@@ -1050,6 +1050,17 @@
       "minimum": 0,
       "monetary": true
     },
+    "valuation_type": {
+      "description": "Methodology used in the determination of the collateral value. Refer to AnaCredit Reporting Manual Part II, chapter 9.4.6 Protection valuation approach",
+      "type": "string",
+      "enum": [
+        "counterparty",
+        "creditor",
+        "mtm",
+        "other",
+        "third_party"
+      ]
+    },
     "value_date": {
       "description": "The timestamp that the trade or financial product was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",

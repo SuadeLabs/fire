@@ -65,6 +65,11 @@
     "asset_liability": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/asset_liability"
     },
+    "authorised_limit_amount": {
+      "description": "The total amount of authorized Credit Risk exposure for all facility.",
+      "type": "integer",
+      "monetary": true
+    },
     "balance": {
       "description": "The contractual balance on the date and in the currency given. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
@@ -291,6 +296,10 @@
         "sk_dpf",
         "us_fdic"
       ]
+    },
+    "guarantor_id": {
+      "description": "The unique identifier for the guarantor within the financial institution.",
+      "type": "string"
     },
     "impairment_amount": {
       "description": "The impairment amount is the allowance set aside by the firm that accounts for the event that the asset becomes impaired in the future.",

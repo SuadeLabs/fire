@@ -78,6 +78,10 @@
       "type": "integer",
       "monetary": true
     },
+    "owner_id": {
+      "description": "identifies the provider of the collateral, including cases where the collateral is provided by a third party.",
+      "type": "string"
+    },
     "postal_code": {
       "description": "The zip code in which the property is located. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
       "type": "string"
@@ -152,6 +156,28 @@
         "warehouse"
       ]
     },
+    "valuation_type": {
+      "description": "Methodology used in the determination of the collateral value. Refer to https://www.ecfr.gov/current/title-12/chapter-VI/subchapter-B/part-614/subpart-F/section-614.4265 and https://www.federalreserve.gov/boarddocs/srletters/2010/sr1016a1.pdf",
+      "type": "string",
+      "enum": [
+        "as_completed",
+        "as_is",
+        "as_stabilized",
+        "auto_val_model",
+        "broker_price",
+        "counterparty",
+        "creditor",
+        "desktop",
+        "full",
+        "limited",
+        "mtm",
+        "other",
+        "prospective_mkt_value",
+        "purchase_price",
+        "tav",
+        "third_party"
+      ]
+    },
     "value": {
       "description": "The valuation as used by the bank for the collateral on the value_date. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
@@ -161,6 +187,14 @@
       "description": "The timestamp that the collateral was valued. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
       "format": "date-time"
+    },
+    "value_type": {
+      "description": "The type of protection value provided by the procetion provider",
+      "type": "string",
+      "enum": [
+        "long_term",
+        "market"
+      ]
     },
     "version_id": {
       "description": "The version identifier of the data such as the firm's internal batch identifier.",
