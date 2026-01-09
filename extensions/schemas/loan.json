@@ -162,7 +162,7 @@
       "description": "Total unpaid principal balance of loans, at the time of the first charge-off event. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
       "jurisdictions": [
         "US"
-      ]  
+      ]
     },
     "foreclosure_ref_date": {
       "type": "string",
@@ -614,7 +614,7 @@
     },
     "orig_valuation_type": {
       "description": "The value type at origination.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/extensions/schemas/collateral.json#/properties/valuation_type",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/collateral.json#/properties/valuation_type",
       "jurisdictions": [
         "US"
       ]
