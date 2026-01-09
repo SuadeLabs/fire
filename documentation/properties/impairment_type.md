@@ -35,18 +35,22 @@ To be used if the instrument is subject to impairment in accordance with an appl
 To be used if the instrument is subject to impairment in accordance with an applied accounting standard and is individually assessed for impairment.
 
 
-The suffix of both collective and invidudual into either formal or internal relates to whether the debt has been formally reduced/removed or not as below:
+The suffix of both collective and invidudual into either formal or internal relates to whether the debt has been formally reduced/removed or not as below (Please see [Appendix 1 of Resident office returns under CBI][ror]):
 
 ### collective_formal
-Formal debt forgiveness where the borrower legal obligation is reduced/removed
+To be used if the instrument is subject to impairment in accordance with an applied accounting standard and is collectively assessed for impairment by being grouped together with instruments with similar credit risk characteristics.
+This represents formal debt forgiveness where the borrower legal obligation is reduced/removed
 
 ### collective_internal
+To be used if the instrument is subject to impairment in accordance with an applied accounting standard and is collectively assessed for impairment by being grouped together with instruments with similar credit risk characteristics.
 Internal accounting write-off or provisioning decision without extinguishing legal repayment obligation.
 
 ### individual_formal
-Formal debt forgiveness where the borrower legal obligation is reduced/removed
+To be used if the instrument is subject to impairment in accordance with an applied accounting standard and is individually assessed for impairment.
+This represents formal debt forgiveness where the borrower legal obligation is reduced/removed
 
 ### individual_internal
+To be used if the instrument is subject to impairment in accordance with an applied accounting standard and is individually assessed for impairment.
 Internal accounting write-off or provisioning decision without extinguishing legal repayment obligation.
 
 ### write_off
@@ -54,3 +58,4 @@ Write-offs relate to amounts where the lender has no expectation of ever being a
 
 
 [ias]: https://www.iasplus.com/en/standards/ias/ias39
+[ror]: https://www.centralbank.ie/docs/default-source/statistics/statistical-reporting-requirements/credit-institutions/rs2-rv2-and-rc2/notes-on-compilation-2022-(rs3-rv3-rc3)_v.1.2_final.pdf?sfvrsn=ea83991d_8
