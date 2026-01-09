@@ -758,6 +758,23 @@
       "description": "Can the security be rehypothecated by the borrower?",
       "type": "boolean"
     },
+    "repayment_frequency": {
+      "description": "Repayment frequency of the security.",
+      "type": "string",
+      "enum": [
+        "daily",
+        "weekly",
+        "bi_weekly",
+        "monthly",
+        "bi_monthly",
+        "quarterly",
+        "semi_annually",
+        "annually",
+        "at_maturity",
+        "biennially",
+        "sesquiennially"
+      ]
+    },
     "repayment_type": {
       "description": "The repayment or amortisation mechanism of the security or securitisation.",
       "type": "string",
