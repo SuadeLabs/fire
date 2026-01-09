@@ -148,14 +148,6 @@
         "US"
       ]
     },
-    "first_principal_date": {
-      "type": "string",
-      "format": "date-time",
-      "description": "The date on which the first principal payment was/will be made based on the original loan terms. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
-      "jurisdictions": [
-        "US"
-      ]
-    },
     "first_write_off_date": {
       "type": "string",
       "format": "date-time",
@@ -557,19 +549,6 @@
     "orig_rate": {
       "type": "number",
       "description": "The rate at origination.",
-      "jurisdictions": [
-        "US"
-      ]
-    },
-    "orig_rate_type": {
-      "type": "string",
-      "description": "The rate_type at origination.",
-      "enum": [
-        "combined",
-        "fixed",
-        "tracker",
-        "variable"
-      ],
       "jurisdictions": [
         "US"
       ]

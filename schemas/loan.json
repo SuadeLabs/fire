@@ -320,6 +320,11 @@
       "type": "string",
       "format": "date-time"
     },
+    "first_principal_date": {
+      "description": "The date on which the first principal payment was/will be made based on the original loan terms. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "string",
+      "format": "date-time"
+      },
     "forbearance_date": {
       "description": "The date on which the first forbearance measure was granted to this product.  Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
       "type": "string",
@@ -550,6 +555,16 @@
       "description": "The notional of the loan at origination.",
       "type": "integer",
       "monetary": true
+    },
+    "orig_rate_type": {
+      "description": "The rate_type at origination.",
+      "type": "string",
+      "enum": [
+        "combined",
+        "fixed",
+        "tracker",
+        "variable"
+      ]
     },
     "originator_id": {
       "description": "The unique identifier used by the financial institution to identify the originator of the loan product.",
@@ -883,10 +898,12 @@
         "credit_card",
         "credit_facility",
         "education",
+        "export",
         "financial_lease",
         "heloan",
         "heloc",
         "heloc_lockout",
+        "import",
         "liquidity_facility",
         "mortgage",
         "mortgage_charter",

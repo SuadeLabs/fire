@@ -1,12 +1,11 @@
 ---
 layout:     property
 title:      "orig_rate_type"
-schemas:    [loan]
+schemas:    [loan, account]
 ---
 
 # orig_rate_type
 
----
 
 The rate_type at origination.
 

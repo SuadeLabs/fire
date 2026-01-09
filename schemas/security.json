@@ -309,6 +309,11 @@
       "type": "string",
       "format": "date-time"
     },
+    "first_principal_date": {
+      "description": "The date on which the first principal payment was/will be made based on the original loan terms. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "string",
+      "format": "date-time"
+      },
     "fitch_lt": {
       "description": "Fitch long term credit ratings",
       "type": "string",
@@ -690,6 +695,8 @@
         "custody",
         "default_fund",
         "derivative_collateral",
+        "export",
+        "import",
         "independent_collateral_amount",
         "insurance",
         "investment",
