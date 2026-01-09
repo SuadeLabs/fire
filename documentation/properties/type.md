@@ -1634,6 +1634,7 @@ The most common XCS, and that traded in interbank markets, is a mark-to-market (
 ├── life_policy
 ├── cash
 ├── security
+├── trade_receivables
 ├── auto
 │   ├── auto_other
 │   ├── car
@@ -1836,6 +1837,13 @@ _NEEDS Definition_
 ### security
 
 This identifies that the piece of collateral used is a security, as mapped via the security schema and linked to the collateral schema using the collateral's `security_id` property.
+
+### trade_receivables
+Reference:  Trade receivables as defined in paragraph 85(c) of part 2 of Annex V to the
+amended Implementing Regulation (EU) No 680/2014. 
+> Trade receivables includes loans granted on the basis of bills or other documents that give the right to receive the proceeds of transactions for the sale of goods or provision of services (i.e. on the basis of “trade credit” as defined in Annex A to Regulation (EU) No 549/2013)
+This type of instrument includes all factoring and similar transactions, such as acceptances, outright purchase of trade receivables, forfaiting, discounting of invoices, bills of exchange, commercial papers and other claims, on the condition that the credit institution buys the trade receivables (both with and without recourse to the debtor).
+Notably, accounts receivable stemming from sales of non-banking products by credit institutions are not trade receivables if the creditor has not bought them from a third party. 
 
 ### auto
 
