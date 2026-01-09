@@ -561,20 +561,7 @@
         "US"
       ]
     },
-    "orig_repayment_type": {
-      "type": "string",
-      "description": "The repayment_type at origination.",
-      "enum": [
-        "combined",
-        "interest_only",
-        "option_arm",
-        "other",
-        "repayment"
-      ],
-      "jurisdictions": [
-        "US"
-      ]
-    },
+
     "orig_reversion_date": {
       "type": "string",
       "format": "date-time",
