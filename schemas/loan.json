@@ -581,6 +581,8 @@
       "description": "The repayment_type at origination.",
       "enum": [
         "combined",
+        "fixed",
+        "french",
         "interest_only",
         "option_arm",
         "other",
@@ -776,6 +778,8 @@
       "type": "string",
       "enum": [
         "combined",
+        "fixed",
+        "french",
         "interest_only",
         "option_arm",
         "other",
