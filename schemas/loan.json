@@ -506,7 +506,7 @@
       "type": "string"
     },
     "movement": {
-      "description": "The movement parameter describes how the loan arrived to the firm.",
+      "description": "The movement parameter describes how an asset or liability arrived or left the firm.",
       "type": "string",
       "enum": [
         "acquired",

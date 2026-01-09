@@ -7,7 +7,7 @@ schemas:	[loan, security]
 
 ---
 
-The **movement** parameter describes how an asset or liability arrived to the firm.
+The **movement** parameter describes how an asset or liability arrived or left the firm.
 
 # loan
 
