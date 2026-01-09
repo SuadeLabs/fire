@@ -616,7 +616,7 @@
       ]
     },
     "movement": {
-      "description": "The movement parameter describes how the security arrived to the firm.",
+      "description": "The movement parameter describes how an asset or liability arrived or left the firm.",
       "type": "string",
       "enum": [
         "asset",
