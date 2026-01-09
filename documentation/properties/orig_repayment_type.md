@@ -8,7 +8,8 @@ schemas:    [loan]
 
 ---
 
-The repayment_type at origination.
+The repayment_type at origination. 
+
 
 ```bash
 ├── combined

@@ -576,6 +576,17 @@
         "variable"
       ]
     },
+    "orig_repayment_type": {
+      "type": "string",
+      "description": "The repayment_type at origination.",
+      "enum": [
+        "combined",
+        "interest_only",
+        "option_arm",
+        "other",
+        "repayment"
+      ]
+    },
     "originator_id": {
       "description": "The unique identifier used by the financial institution to identify the originator of the loan product.",
       "type": "string"
