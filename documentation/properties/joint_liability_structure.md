@@ -6,7 +6,7 @@ schemas:    [loan]
 
 # joint_liability_structure
 
-Use with [**joint_customer_ids**][customer_ids] to capture the outstanding nominal amount for a single instrument where there are two or more debtors.
+Use with **joint_customer_ids** to capture the outstanding nominal amount for a single instrument where there are two or more debtors.
 
 The **joint_liability_structure** represents a list (an array) of allocated portion of the single instrument. See example below.
 
@@ -30,7 +30,5 @@ Example:
 | loan1         | cust2                    | 40,000.00              |
 
 
-
-[customer_ids]: https://suade.org/fire/book/documentation/properties/joint_customer_ids.html
 
 

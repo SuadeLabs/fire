@@ -8,7 +8,7 @@ schemas:    [customer, issuer, guarantor]
 
 
 
-Use with [**joint_liability_structure**][joint_liability_structure] to capture the outstanding nominal amount for a single instrument where there are two or more debtors.
+Use with **joint_liability_structure** to capture the outstanding nominal amount for a single instrument where there are two or more debtors.
 
 The **joint_customer_ids** represents the list (an array) of debtors of the single instrument. See example below.
 
@@ -31,7 +31,4 @@ Example:
 | loan1         | cust1                    | 70,000.00              |
 | loan1         | cust2                    | 40,000.00              |
 
-
-
-[joint_liability_structure]: https://suade.org/fire/book/documentation/properties/joint_liability_structure.html
 
