@@ -1,21 +1,21 @@
 ---
 layout:     property
-title:      "customer_ids"
+title:      "joint_customer_ids"
 schemas:    [customer, issuer, guarantor]
 ---
 
-# customer_ids
+# joint_customer_ids
 
 
 
 Use with [**joint_liability_structure**][joint_liability_structure] to capture the outstanding nominal amount for a single instrument where there are two or more debtors.
 
-The **customer_ids** represents the list (an array) of debtors of the single instrument. See example below.
+The **joint_customer_ids** represents the list (an array) of debtors of the single instrument. See example below.
 
 Example:
 | customer |        |              |
 |----------|--------|--------------|
-| id       | type   | **customer_ids** |
+| id       | type   | **joint_customer_ids** |
 | cust1    | credit_institution |              |
 | cust2    | credit_institution |              |
 | joint1   |        | [cust1, cust2] |
