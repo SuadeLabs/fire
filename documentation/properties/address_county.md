@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "address_county"
-schemas:    [customer, issuer, guarantor]
+schemas:    [customer, issuer, guarantor, collateral]
 ---
 
 # address_county
