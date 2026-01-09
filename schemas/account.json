@@ -348,6 +348,11 @@
         "sesquiennially"
       ]
     },
+    "last_arrears_date": {
+      "description": "The last date on which this loan was in arrears.",
+      "type": "string",
+      "format": "date-time"
+    },
     "last_drawdown_date": {
       "description": "The last date on which a drawdown was made on this account (overdraft).",
       "type": "string",
