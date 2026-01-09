@@ -227,6 +227,11 @@
       "description": "The code assigned by the financial institution to identify a facility.",
       "type": "string"
     },
+    "fees": {
+      "description": "The fees associated with the account.",
+      "type": "integer",
+      "monetary": true
+    },
     "first_arrears_date": {
       "description": "The first date on which this account was in arrears.",
       "type": "string",
