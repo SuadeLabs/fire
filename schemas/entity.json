@@ -196,6 +196,14 @@
       "description": "Flag to indicate that this should be considered an intra-group entity.",
       "type": "boolean"
     },
+    "joint_customer_ids": {
+      "description": "The list of customers for this joint liability facility",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
     "kbra_lt": {
       "description": "KBRA long term credit ratings",
       "type": "string",

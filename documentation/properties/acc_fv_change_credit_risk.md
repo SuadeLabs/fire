@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "acc_fv_change_credit_risk"
-schemas:    [loan, security]
+schemas:    [loan, security, account]
 ---
 
 # acc_fv_change_credit_risk

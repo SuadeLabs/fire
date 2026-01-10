@@ -6,7 +6,7 @@ schemas:	[account, loan, security]
 
 # rate_type
 
----
+
 
 The **rate_type** property describes the nature of the interest rate being applied in the **rate** property. This is useful in determining future cash flows
 
@@ -39,7 +39,7 @@ A **variable** rate which may be subject to change. For example as defined in th
 > includes all other interest rate bases (i.e. other than those defined above as 'fixed') applying to particular products, including those at, or at a discount or premium to, one of the firm's administered lending rates; those linked to Libor (or other market rate); those linked to an index (e.g. FTSE) etc. However if any such loan products are subject to a 'capped rate', then treat as 'fixed'.
 
 ### tracker
-A **tracker** rate type is a sub-category of **variable** rate types and indicates a direct relationship between the interest rate and the **base_rate**[br]. For example **base_rate**[br] + 1%.
+A **tracker** rate type is a sub-category of **variable** rate types and indicates a direct relationship between the interest rate and the [**base_rate**][br]. For example [**base_rate**][br] + 1%.
 
 ### preferential
 A **preferential** rate type is often a temporary lower interest rate compared to what the bank would normally charge as an introductory offer or a reward for loyal customers.
