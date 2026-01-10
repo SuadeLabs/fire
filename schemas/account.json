@@ -348,6 +348,11 @@
         "sesquiennially"
       ]
     },
+    "last_arrears_date": {
+      "description": "The last date on which this loan was in arrears.",
+      "type": "string",
+      "format": "date-time"
+    },
     "last_drawdown_date": {
       "description": "The last date on which a drawdown was made on this account (overdraft).",
       "type": "string",
@@ -700,6 +705,23 @@
     },
     "regulatory_book": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/regulatory_book"
+    },
+    "repayment_frequency": {
+      "description": "Repayment frequency of the product.",
+      "type": "string",
+      "enum": [
+        "daily",
+        "weekly",
+        "bi_weekly",
+        "monthly",
+        "bi_monthly",
+        "quarterly",
+        "semi_annually",
+        "annually",
+        "at_maturity",
+        "biennially",
+        "sesquiennially"
+      ]
     },
     "reporting_entity_name": {
       "description": "The name of the reporting legal entity for display purposes.",

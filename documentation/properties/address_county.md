@@ -1,12 +1,10 @@
 ---
 layout:     property
 title:      "address_county"
-schemas:    [customer, issuer, guarantor]
+schemas:    [customer, issuer, guarantor, collateral]
 ---
 
 # address_county
-
----
 
 The [Anacredit Regulation][anacredit] defines this attribute as the county or administrative division of the entity, represented by [NUTS 3][nuts] codes in EU for example.
 

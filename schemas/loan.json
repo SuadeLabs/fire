@@ -506,7 +506,7 @@
       "type": "string"
     },
     "movement": {
-      "description": "The movement parameter describes how the loan arrived to the firm.",
+      "description": "The movement parameter describes how an asset or liability arrived or left the firm.",
       "type": "string",
       "enum": [
         "acquired",
@@ -564,6 +564,19 @@
         "fixed",
         "tracker",
         "variable"
+      ]
+    },
+    "orig_repayment_type": {
+      "type": "string",
+      "description": "The repayment_type at origination.",
+      "enum": [
+        "combined",
+        "fixed",
+        "french",
+        "interest_only",
+        "option_arm",
+        "other",
+        "repayment"
       ]
     },
     "originator_id": {
@@ -755,6 +768,8 @@
       "type": "string",
       "enum": [
         "combined",
+        "fixed",
+        "french",
         "interest_only",
         "option_arm",
         "other",

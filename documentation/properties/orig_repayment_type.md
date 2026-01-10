@@ -6,9 +6,8 @@ schemas:    [loan]
 
 # orig_repayment_type
 
----
 
-The repayment_type at origination.
+The repayment_type at origination. 
 
 ```bash
 ├── combined
@@ -16,6 +15,8 @@ The repayment_type at origination.
 ├── option_arm
 ├── other
 └── repayment
+    ├── fixed
+    └── french
 ```
 
 ### combined
@@ -32,5 +33,11 @@ Other Repayment Type - A repayment structure that doesn't fit into the standard 
 
 ### repayment
 Full Repayment - The standard repayment structure where the borrower makes regular payments that include both principal and interest components. These payments are designed to fully amortize the loan over its term.
+
+### fixed
+Fixed amortisation schedule: Amortisation in which the principal amount repaid in each instalment is the same.
+
+### french
+French: Amortisation in which the total amount – principal plus interest – repaid in each instalment is the same.
 
 --- 
