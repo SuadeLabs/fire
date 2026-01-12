@@ -111,6 +111,8 @@ class TestDocs(unittest.TestCase):
             "country_code",  # TL;DR
             "currency_code",  # TL;DR
             "nace_code",  # TL;DR
+            "legal_form",  # TL;DR
+            "national_id_type", # TL;DR
             "interest_repayment_frequency",  # Same as repayment_frequency
             "reporting_relationship",  # same as relationship
         ]
