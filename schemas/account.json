@@ -462,6 +462,11 @@
       "description": "The credit score of the customer at origination of the product using a commercially available credit bureau score.",
       "type": "integer"
     },
+    "orig_guarantee_amount": {
+      "description": "The original amount that was guaranteed at the origination of the account",
+      "type": "integer",
+      "monetary": true
+    },
     "orig_limit_amount": {
       "description": "The original line of credit amount that was granted at the origination of the facility",
       "type": "integer",

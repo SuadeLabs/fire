@@ -386,6 +386,11 @@
       "description": "The adjustable rate periodic interest reset period. Denominated in whole multiples of the interest_repayment_frequency. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
       "type": "integer"
     },
+    "interest_only_end_date": {
+      "description": "The date on which the previous or upcoming interest-only period ends.",
+      "type": "string",
+      "format": "date-time"
+    },
     "interest_repayment_frequency": {
       "description": "Repayment frequency of the loan interest, if different from principal.",
       "type": "string",
@@ -545,6 +550,11 @@
     "orig_credit_score": {
       "description": "The credit score of the customer at origination of the product using a commercially available credit bureau score.",
       "type": "integer"
+    },
+    "orig_guarantee_amount": {
+      "description": "The original amount that was guaranteed at the origination of the facility",
+      "type": "integer",
+      "monetary": true
     },
     "orig_limit_amount": {
       "description": "The original line of credit amount that was granted at the origination of the facility",
