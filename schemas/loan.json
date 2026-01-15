@@ -408,7 +408,7 @@
       "type": "string",
       "maxLength": 20
     },
-    "joint_liability_structure": {
+    "joint_customer_structure": {
       "description": "Allocated portion of the joint liability facility for each debtor.",
       "type": "array",
       "minItems": 1,
