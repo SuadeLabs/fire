@@ -165,6 +165,12 @@
       "description": "The unique identifier of the credit support annex this security falls under. Typically where used as derivatives collateral.",
       "type": "string"
     },
+    "cum_recoveries": {
+      "description": "The total amount recovered since the date of default of the instrument.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
+    },
     "cum_write_offs": {
       "description": "The portion of the security which has been written off.",
       "type": "integer",
