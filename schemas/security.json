@@ -661,6 +661,19 @@
       "type": "integer",
       "monetary": true 
     },
+    "orig_rate_type": {
+      "description": "The rate_type at origination.",
+      "type": "string",
+      "enum": [
+        "combined",
+        "fixed",
+        "fixed_to_fixed",
+        "fixed_to_float",
+        "step_up",
+        "tracker",
+        "variable"
+      ]
+    },
     "originator_id": {
       "description": "The unique identifier used by the financial institution to identify the originator of the security or securitisation.",
       "type": "string"

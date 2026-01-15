@@ -18,6 +18,11 @@
       "type": "integer",
       "monetary": true
     },
+    "acc_fv_change_credit_risk": {
+      "description": "Accumulated changes in fair value due to credit risk.",
+      "type": "integer",
+      "monetary": true
+    },
     "accounting_treatment": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/accounting_treatment"
     },
@@ -226,6 +231,11 @@
     "facility_id": {
       "description": "The code assigned by the financial institution to identify a facility.",
       "type": "string"
+    },
+    "fees": {
+      "description": "The fees associated with the account.",
+      "type": "integer",
+      "monetary": true
     },
     "first_arrears_date": {
       "description": "The first date on which this account was in arrears.",

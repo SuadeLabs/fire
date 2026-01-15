@@ -408,6 +408,16 @@
       "type": "string",
       "maxLength": 20
     },
+    "joint_customer_structure": {
+      "description": "Allocated portion of the joint liability facility for each debtor.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+         "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+      }
+    },
     "last_arrears_date": {
       "description": "The last date on which this loan was in arrears.",
       "type": "string",
