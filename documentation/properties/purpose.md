@@ -98,6 +98,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │       ├── pension
 │       ├── redundancy_pymt
 │       └── regular_wages
+├── fv_hedge
 ├── fx
 ├── intangible
 │   └── intangible_lease
@@ -123,6 +124,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── msr
 ├── mtg_insurance
 │   ├── mtg_ins_nonconform
+├── net_inv_hedge
 ├── operational
 │   ├── cash_management
 │   ├── clearing
@@ -321,6 +323,13 @@ For example, in the EBA's FINREP F.1.3 report, the effective portion of the vari
 
 ### cf_hedge_reclass
 **Cash flow hedge reclass** describes an account that is the same as the standard cash flow hedge account, but one in which the profit and loss arising from the cashflow hedge is to be reclassified. It can be taken to equity, transferred to carry amount of hedged items or other reclassifications of the profit and losses.
+
+### fv_hedge
+IFRS 9.6.5.2 defines a **fair value hedge** as follows:
+ > A hedge of the exposure to changes in fair value of a recognised asset/liability or an unrecognised firm commitment (or component thereof) that is attributable to a particular risk and could affect profit or loss.
+
+ ### net_inv_hedge
+A hedge of the foreign currency exposure arising from the net investment in a foreign operation.
 
 ### fees
 Describes an account that holds the amount of fee/commission receivables/payables as reported in a Profit and Loss report.
