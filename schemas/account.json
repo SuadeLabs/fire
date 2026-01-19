@@ -487,6 +487,11 @@
         "variable"
       ]
     },
+    "other_accounting_adj": {
+      "description": "Accounting adjustments applied to the carrying amount for financial reporting. This is inclusive of EIR adjustments or adjustments due to timing or reconciliation differences",
+      "type": "integer",
+      "monetary": true
+    },
     "parent_facility_id": {
       "description": "The parent code assigned by the financial institution to identify a facility.",
       "type": "string"
