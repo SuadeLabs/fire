@@ -667,6 +667,16 @@
       "type": "integer",
       "monetary": true 
     },
+    "orig_mtm": {
+      "description": "is the mark-to-market value of the security at the origination of the transaction. Monetary number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
+    "orig_mtm_eur": {
+      "description": "is the mark-to-market value of the security in euro at the origination of the transaction. Monetary number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
     "orig_rate_type": {
       "description": "The rate_type at origination.",
       "type": "string",

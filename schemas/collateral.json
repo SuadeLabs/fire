@@ -82,6 +82,11 @@
       "type": "integer",
       "monetary": true
     },
+    "orig_value_eur": {
+      "description": "The valuation as used by the bank for the collateral in euro at the origination of the related loan or line of credit. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
     "owner_id": {
       "description": "identifies the provider of the collateral, including cases where the collateral is provided by a third party.",
       "type": "string"
