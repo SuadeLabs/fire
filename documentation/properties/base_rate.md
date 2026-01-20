@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "base_rate"
-schemas:    [derivative]
+schemas:    [account, derivative, loan, security]
 ---
 
 # base_rate

@@ -46,6 +46,9 @@
       "type": "integer",
       "monetary": true
     },
+    "base_rate": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/base_rate"
+    },
     "break_dates": {
       "description": "Dates where this contract can be broken (by either party). Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "array",

@@ -80,6 +80,9 @@
       "type": "integer",
       "monetary": true
     },
+    "base_rate": {
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/base_rate"
+    },
     "behavioral_curve_id": {
       "description": "The unique identifier for the behavioral curve used by the financial institution.",
       "type": "string"
