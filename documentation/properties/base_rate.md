@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "base_rate"
-schemas:    [account, derivative, loan, security]
+schemas:    [derivative]
 ---
 
 # base_rate
@@ -216,6 +216,12 @@ The base rate is tied to the US Treasury Security Interest Rate.
 
 ### ZERO
 The base rate is set to zero, indicating that the loan's interest rate is not tied to any external benchmark rate.
+
+### bbsw
+Bank Bill Swap Rate (BBSW) where the tenor is unknown. Refer to: https://www.rba.gov.au/mkt-operations/resources/interest-rate-benchmark-reform.html
+
+### bbsw_3m
+3 month Bank Bill Swap Rate (BBSW). Refer to: https://www.rba.gov.au/mkt-operations/resources/interest-rate-benchmark-reform.html
 
 ### chf_libor
 CHF Libor was the reference interest rate for many financial instruments denominated in Swiss Francs
@@ -657,6 +663,9 @@ A base rate other than one defined within the taxonomy.
 ### other_on
 Overnight other reference interest rate
 
+### pboc
+People’s Bank of China (PBOC) benchmark interest rate, where the specific rate or tenor is unknown
+
 ### prime
 Prime is one of several base rates used by banks to price short-term business loans. Refer to https://www.federalreserve.gov/releases/h15/.
 
@@ -773,93 +782,6 @@ The **base rate** represents the [basis][basis] of the [**rate**][ir] on the [**
 Basis can be defined as "the difference between the spot price of a given cash market asset and the price of its related futures contract." Therefore, the base rate can be viewed as the time value of the money referred to in the financial product and the difference between the interest rate and the base rate can be viewed as the [yield spread][ys] of the financial product over a defined index.
 
 In practice, the base rate conveys the information that the interest rate is directly or indirectly linked to another rate or index. For the purposes of consistency, the relevant Bloomberg Index ticker is used with "ZERO" used to indicate that there is no related base rate used for the determination of the interest rate.
-
-### FDTR
-Fed funds rate
-
-### UKBRBASE
-UK BoE base rate
-
-### ZERO
-0
-
-### bbsw
-Bank Bill Swap Rate (BBSW) where the tenor is unknown. Refer to: https://www.rba.gov.au/mkt-operations/resources/interest-rate-benchmark-reform.html
-
-### bbsw_3m
-3 month Bank Bill Swap Rate (BBSW). Refer to: https://www.rba.gov.au/mkt-operations/resources/interest-rate-benchmark-reform.html
-
-### chf_libor
-CHF Libor was the reference interest rate for many financial instruments denominated in Swiss Francs
-
-### eonia
-Euro OverNight Index Average (EONIA) was the interbank overnight lending reference rate for the euro
-
-### estr
-Euro short-term rate (€STR)
-
-### euribor
-Euro Interbank Offered Rate (Euribor) where the tenor is unknown.
-
-### euribor_1m
-1 month Euro Interbank Offered Rate (Euribor).
-
-### euribor_3m
-3 month Euro Interbank Offered Rate (Euribor).
-
-### euribor_6m
-6 month Euro Interbank Offered Rate (Euribor).
-
-### eur_libor
-Euro LIBOR was the London Interbank Offered Rate (LIBOR) denominated in euros
-
-### gbp_libor
-GBP LIBOR was the London Interbank Offered Rate (LIBOR) for pounds sterling
-
-### honia
-Hong Kong Dollar Overnight Index Average (HONIA)
-
-### jpy_libor
-JPY LIBOR was the London Interbank Offered Rate (LIBOR) for Japanese yen
-
-### mibor
- Mumbai Interbank Offered Rate (MIBOR)
-
-### multi_rate
-Instruments using multiple reference rates used for the calculation of the actual interest rate
-
-### other
-A base rate other than one defined within the taxonomy.
-
-### pboc
-People’s Bank of China (PBOC) benchmark interest rate, where the specific rate or tenor is unknown
-
-### saron
-Swiss Average Rate Overnight (SARON)
-
-### sofr
-Secured Overnight Financing Rate (SOFR) where the tenor is unknown.
-
-#### sofr_1m
-1 month Secured Overnight Financing Rate (SOFR).
-
-#### sofr_3m
-3 month Secured Overnight Financing Rate (SOFR).
-
-#### sofr_6m
-6 month Secured Overnight Financing Rate (SOFR).
-
-### sonia
-The Sterling Overnight Index Average (SONIA)
-
-### sora
-The Singapore Overnight Rate Average (SORA) 
-
-### tona
- Tokyo Overnight Average Rate (TONA)
-
-### usd_libor
-USD LIBOR was the London Interbank Offered Rate (LIBOR) for US dollars
 
 ---
 
