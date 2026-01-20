@@ -104,35 +104,7 @@
       "monetary": true
     },
     "base_rate": {
-      "description": "The base rate represents the basis of the repayment rate on the borrowed funds at the given date as agreed in the terms of the loan.",
-      "type": "string",
-      "enum": [
-        "FDTR",
-        "UKBRBASE",
-        "ZERO",
-        "cert_dep",
-        "cofi",
-        "cofi_11th",
-        "cofi_nm",
-        "cofi_other",
-        "cosi",
-        "mta",
-        "other",
-        "prime",
-        "sofr",
-        "sofr_1m",
-        "sofr_1y",
-        "sofr_3m",
-        "sofr_6m",
-        "sofr_other",
-        "tbill",
-        "tbill_1y",
-        "tbill_3m",
-        "tbill_3y",
-        "tbill_5y",
-        "tbill_6m",
-        "tbill_other"
-      ]
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/base_rate"
     },
     "behavioral_curve_id": {
       "description": "The unique identifier for the behavioral curve used by the financial institution.",

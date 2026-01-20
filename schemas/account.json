@@ -81,13 +81,7 @@
       "monetary": true
     },
     "base_rate": {
-      "description": "The base rate represents the basis of the rate on the balance at the given date as agreed in the terms of the account.",
-      "type": "string",
-      "enum": [
-        "FDTR",
-        "UKBRBASE",
-        "ZERO"
-      ]
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/base_rate"
     },
     "behavioral_curve_id": {
       "description": "The unique identifier for the behavioral curve used by the financial institution.",

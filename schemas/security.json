@@ -47,25 +47,7 @@
       "monetary": true
     },
     "base_rate": {
-      "description": "The base rate represents the basis of the rate on the balance at the given date as agreed in the terms of the financial product.",
-      "type": "string",
-      "enum": [
-        "FDTR",
-        "UKBRBASE",
-        "ZERO",
-        "bbsw",
-        "bbsw_3m",
-        "euribor",
-        "euribor_1m",
-        "euribor_3m",
-        "euribor_6m",
-        "other",
-        "pboc",
-        "sofr",
-        "sofr_1m",
-        "sofr_3m",
-        "sofr_6m"
-      ]
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/base_rate"
     },
     "break_dates": {
       "description": "Dates where this contract can be broken (by either party). Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
