@@ -18,6 +18,11 @@
       "type": "integer",
       "monetary": true
     },
+    "acc_fv_change_before_taxes_ytd": {
+      "description": "Accumulated change in fair value before taxes(YTD).",
+      "type": "integer",
+      "monetary": true
+    },
     "accounting_treatment": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/accounting_treatment"
     },
