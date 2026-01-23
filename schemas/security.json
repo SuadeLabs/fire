@@ -650,6 +650,11 @@
       "type": "integer",
       "monetary": true
     },
+    "notional_amount_eur": {
+      "description": "The notional value of a security's underlying asset in euro at its spot price. Monetary number of cents.",
+      "type": "integer",
+      "monetary": true
+    },
     "on_balance_sheet": {
       "description": "Is the security reported on the balance sheet of the financial institution?",
       "type": "boolean"
