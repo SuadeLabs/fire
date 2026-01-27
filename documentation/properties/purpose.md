@@ -92,7 +92,7 @@ The **purpose** property describes the reason behind the creation or usage of th
     ├── pay_services_other_fee
     ├── securities_other_fee
     ├── structured_finance_fee
-    ├── transfer_order_fee
+    └── transfer_order_fee
 ├── fines
 ├── fiduciary_transaction
 ├── firm_operating_expenses
