@@ -313,7 +313,9 @@ class TestCurveSchema:
         self.validator.validate(instance=unknown_curve)
 
         unknown_curve["values"] = [{"reference": "1m", "value": "AAA"}]
-        with pytest.raises(ValidationError, match="is not of type 'number'"):
+        with pytest.raises(
+            ValidationError, match="is not valid under any of the given schemas"
+        ):
             self.validator.validate(instance=unknown_curve)
 
     def test_invalid_mixed_value_types(self):
@@ -328,7 +330,9 @@ class TestCurveSchema:
                 {"reference": "6m", "value": 0.02},
             ],
         }
-        with pytest.raises(ValidationError, match="is not of type 'number'"):
+        with pytest.raises(
+            ValidationError, match="is not valid under any of the given schemas"
+        ):
             self.validator.validate(instance=invalid_mixed_curve)
 
 
