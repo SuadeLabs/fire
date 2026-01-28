@@ -137,6 +137,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   └── int_on_finance_leasing
 ├── intra_group_fee
 ├── inv_in_subsidiary
+├── litigation
 ├── msr
 ├── mtg_insurance
 │   ├── mtg_ins_nonconform
@@ -745,6 +746,9 @@ Describes an account representing the amount of voluntary contributions made to 
 
 ### inv_in_subsidiary
 Describes an account representing the profit or loss made on investments in subsidiaries, associates and special purpose entities.
+
+### litigation
+litigation expenses not related to credit risk that were not covered by an associated provision.
 
 ### manufactured_dividend
 Describes an account representing the manufactured dividends paid or received by the reporting entity.
