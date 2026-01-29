@@ -4,7 +4,6 @@ import os
 import requests
 from string import ascii_lowercase, digits
 
-
 HOME = os.path.join(os.path.dirname(__file__), "..")
 SCHEMAS_DIR = os.path.join(HOME, "schemas")
 DOCS_DIR = os.path.join(HOME, "documentation", "properties")
@@ -150,7 +149,7 @@ def check_schema_fields(schema_dir, schema_name):
             errs.extend((prop, r) for r in required if r not in spec)
         else:
             try:
-                (url, ref_prop_path) = spec["$ref"].split("#")
+                url, ref_prop_path = spec["$ref"].split("#")
             except ValueError as exc:
                 raise ValueError(
                     f"{spec} is not an appropriate format. Should be {{url}}#/{{property_path}}"
@@ -160,7 +159,7 @@ def check_schema_fields(schema_dir, schema_name):
 
             prop_path_tuple = ref_prop_path.split("/")
             if len(prop_path_tuple) == 3:
-                (start, base, ref_prop_name) = prop_path_tuple
+                start, base, ref_prop_name = prop_path_tuple
                 assert start == "", "Referenced property path must begin with /"
                 assert (
                     base == "properties"
@@ -168,7 +167,7 @@ def check_schema_fields(schema_dir, schema_name):
                 ref_properties = resp.json()[base]
 
             elif len(prop_path_tuple) == 2:
-                (start, ref_prop_name) = prop_path_tuple
+                start, ref_prop_name = prop_path_tuple
                 assert start == "", "Referenced property path must begin with /"
                 assert url.endswith(
                     "common.json"
