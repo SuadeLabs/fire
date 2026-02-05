@@ -8,10 +8,16 @@ schemas:	[customer, issuer, guarantor]
 
 ---
 
-The United Kingdom [**Standard Industrial Classification of Economic Activities**][siccode2007] (SIC) is used to classify business establishments and other standard units by the type of economic activity in which they are engaged. The new version of these codes (SIC 2007) was adopted by the UK as from 1st January 2008.
+The **Standard Industrial Classification (SIC)** is a system used to classify business establishments and other standard units by the type of economic activity in which they are engaged. The appropriate SIC reference depends on jurisdiction:
 
-The classification provides a framework for the collection, tabulation, presentation and analysis of data, and its use promotes uniformity.
+- **United Kingdom:** For UK-domiciled entities, the applicable reference is the [UK SIC classification][siccode2007] published by the Office for National Statistics. The current version of these codes (SIC 2007) has been in effect since 1 January 2008.
 
-In addition, it can be used for administrative purposes and by non-government bodies as a convenient way of classifying industrial activities into a common structure.
+- **United States:** For US-domiciled entities, the applicable reference is the [SIC code list][sec_sic] maintained by the U.S. Securities and Exchange Commission.
+
+The classification provides a consistent framework for the collection, tabulation, presentation and analysis of economic activity.
+
+---
 
 [siccode2007]: http://www.ons.gov.uk/methodology/classificationsandstandards/ukstandardindustrialclassificationofeconomicactivities/uksic2007
+
+[sec_sic]: https://www.sec.gov/search-filings/standard-industrial-classification-sic-code-list

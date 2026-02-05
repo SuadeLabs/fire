@@ -61,6 +61,17 @@
         "US"
       ]
     },
+    "conversion_type": {
+      "type": "string",
+      "description": "Specifies the conversion of a loan's structure from its initial form to a different form upon a specified date, milestone, or trigger (e.g., line to term, construction to permanent).",
+      "enum": [
+        "converting_to_permanent",
+        "converting_to_term"
+      ],
+      "jurisdictions": [
+        "US"
+      ]
+    },
     "credit_class": {
       "type": "string",
       "description": "The credit class designation as defined by the servicer. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
@@ -112,6 +123,7 @@
         "US"
       ],
       "enum": [
+        "expired",
         "fully_participated",
         "fully_syndicated",
         "involuntary_payoff",
@@ -136,18 +148,18 @@
         "US"
       ]
     },
-    "first_principal_date": {
-      "type": "string",
-      "format": "date-time",
-      "description": "The date on which the first principal payment was/will be made based on the original loan terms. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
-      "jurisdictions": [
-        "US"
-      ]
-    },
     "first_write_off_date": {
       "type": "string",
       "format": "date-time",
       "description": "The date of the first write off or charge-off event for the account. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "first_write_off_principal": {
+      "type": "integer",
+      "monetary": true,
+      "description": "Total unpaid principal balance of loans, at the time of the first charge-off event. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
       "jurisdictions": [
         "US"
       ]
@@ -195,13 +207,6 @@
         "stated_lender",
         "stated_unknown"
       ],
-      "jurisdictions": [
-        "US"
-      ]
-    },
-    "int_reset_freq": {
-      "type": "integer",
-      "description": "The adjustable rate periodic interest reset period. Denominated in whole multiples of the interest_repayment_frequency. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
       "jurisdictions": [
         "US"
       ]
@@ -390,6 +395,13 @@
         "US"
       ]
     },
+    "occupancy_rate": {
+      "type": "number",
+      "description": "The current physical occupancy of rent-paying tenants, expressed as a percentage of the property's net rentable area. This represents the proportion of space that is presently leased and occupied as of the reporting date. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
     "orig_base_rate": {
       "description": "The base rate at origination.",
       "type": "string",
@@ -541,19 +553,6 @@
         "US"
       ]
     },
-    "orig_rate_type": {
-      "type": "string",
-      "description": "The rate_type at origination.",
-      "enum": [
-        "combined",
-        "fixed",
-        "tracker",
-        "variable"
-      ],
-      "jurisdictions": [
-        "US"
-      ]
-    },
     "orig_ref_income": {
       "type": "integer",
       "monetary": true,
@@ -562,20 +561,7 @@
         "US"
       ]
     },
-    "orig_repayment_type": {
-      "type": "string",
-      "description": "The repayment_type at origination.",
-      "enum": [
-        "combined",
-        "interest_only",
-        "option_arm",
-        "other",
-        "repayment"
-      ],
-      "jurisdictions": [
-        "US"
-      ]
-    },
+
     "orig_reversion_date": {
       "type": "string",
       "format": "date-time",
@@ -615,7 +601,7 @@
     },
     "orig_valuation_type": {
       "description": "The value type at origination.",
-      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/extensions/schemas/collateral.json#/properties/valuation_type",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/collateral.json#/properties/valuation_type",
       "jurisdictions": [
         "US"
       ]
@@ -732,13 +718,6 @@
         "US"
       ]
     },
-    "recourse": {
-      "description": "Whether there is recourse on a loan. Recourse on a loan refers to terms in the mortgage contract that give the owner of the note the right to pursue additional claims against the borrower beyond possession of the property. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
-      "type": "boolean",
-      "jurisdictions": [
-        "US"
-      ]
-    },
     "renewal_date": {
       "type": "string",
       "format": "date-time",
@@ -773,6 +752,19 @@
     "snc_id": {
       "type": "string",
       "description": "Where the credit facility is reported in the Shared National Credit collection and the reporting entity is the lead bank/agent, this field indicates the entities Internal Credit ID as reported in the Shared National Credit collection for this credit facility as of the most recent filing date. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "jurisdictions": [
+        "US"
+      ]
+    },
+    "syndication_status": {
+      "type": "string",
+      "description": "Specifies the execution status of the syndication agreement for the loan, indicating whether the commitment is unsigned, partially signed, or fully closed and settled among participants.",
+      "enum": [
+        "closed_not_settled",
+        "closed_settled",
+        "dual_signed",
+        "single_signed"
+      ],
       "jurisdictions": [
         "US"
       ]

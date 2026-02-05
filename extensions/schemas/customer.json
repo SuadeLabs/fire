@@ -152,6 +152,7 @@
       "type": "string",
       "format": "date-time",
       "jurisdictions": [
+        "LU",
         "US"
       ]
     },
@@ -368,6 +369,14 @@
       "jurisdictions": [
         "US"
       ]
+    },
+    "total_resi_mortgages": {
+      "description": "Total number of mortgaged residential properties held by the obligor across all lenders, excluding the primary residence.",
+      "type": "integer",
+      "minimum": 0,
+      "jurisdictions": [
+        "GB"
+      ]  
     }
   },
   "allOf": [

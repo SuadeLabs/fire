@@ -11,6 +11,17 @@ schemas:	[customer, issuer, guarantor]
 # Bankruptcy Type
 The bankruptcy chapter of the borrower.
 
+```bash
+├── court_administration
+├── insolvency
+│   ├── chapter_7
+│   ├── chapter_9
+│   ├── chapter_11
+│   ├── chapter_12
+│   └── chapter_13
+└── other
+```
+
 ### chapter_7
 [Chapter 7][chapter_7] of the Bankruptcy Code provides for "liquidation" - the sale of a debtor's nonexempt property and the distribution of the proceeds to creditors.
 
@@ -28,6 +39,9 @@ The bankruptcy chapter of the borrower.
 
 ### court_administration
 Any proceeding involving the intervention of a judicial body or similar aimed at reaching a refinancing agreement among the creditors, with the exception of any bankruptcy or insolvency proceedings.
+
+### insolvency
+The partial or total divestment of a counterparty and the appointment of a liquidator.
 
 ### other
 Use this when the customer is understood to be bankrupt but where the exact bankruptcy chapter is unknown or does not meet another definition within the taxonomy.

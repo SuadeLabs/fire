@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "cum_recoveries"
-schemas:    [loan]
+schemas:    [account, loan, security]
 ---
 
 # cum_recoveries

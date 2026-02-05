@@ -18,6 +18,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── adj_syn_nonsig_inv_fin
 ├── adj_syn_mtg_def_ins
 ├── admin
+├── adv_mkt_com
 ├── capital_reserve
 ├── cf_hedge
 │ └── cf_hedge_reclass
@@ -26,14 +27,34 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── commitments
 ├── critical_service
 ├── dealing_revenue
-│   ├── dealing_rev_non_fin
+    ├── dealing_rev_cr 
+    ├── dealing_rev_dbt_issue   
+    ├── dealing_rev_debt  
+    ├── dealing_rev_deposits  
+    ├── dealing_rev_non_fin
 │   ├── dealing_rev_fx
 │   │   └── dealing_rev_fx_nse
 │   ├── dealing_rev_sec
+        ├── dealing_rev_equity
 │   │   └── dealing_rev_sec_nse
 │   ├── dealing_rev_ir
 │   └── dealing_rev_deriv
-│       └── dealing_rev_deriv_nse
+        ├── dealing_rev_deriv_com
+            └── dealing_rev_dr_com_eco
+        ├── dealing_rev_deriv_eco
+        ├── dealing_rev_deriv_equ
+            └── dealing_rev_dr_equ_eco
+        ├── dealing_rev_deriv_fx
+            └── dealing_rev_dr_fx_eco
+        ├── dealing_rev_deriv_int
+            └── dealing_rev_dr_int_eco
+        ├── dealing_rev_deriv_nse
+            └── dealing_rev_dr_nse_eco
+        └── dealing_rev_deriv_oth
+            └── dealing_rev_dr_oth_eco
+    ├── dealing_rev_loan
+    ├── dealing_rev_oth_finan
+    └── dealing_rev_short    
 ├── defined_benefit
 ├── deposit
 │   └── third_party_interest
@@ -45,19 +66,35 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── donation
 ├── employee
 ├── fees
+    ├── advisory_fee
+    ├── asset_mgmt_fee
+    ├── clearing_settl_fee
+    ├── commodity_fee
+    ├── corp_fin_other_fee
 │   ├── credit_card_fee
 │   ├── current_account_fee
 │   │   └── overdraft_fee
+    ├── debit_card_fee
 │   ├── derivative_fee
+    ├── distribution_fee
+    ├── fin_guarantee_fee
 │   ├── insurance_fee
 │   ├── investment_banking_fee
 │   │   └── underwriting_fee
 │   ├── loan_and_advance_fee
 │   │   ├── mortgage_fee
-│   │   └── unsecured_loan_fee
+│   │   ├── unsecured_loan_fee
+        └── loan_servicing_fee
 │   ├── other_fs_fee
-│   └── other_non_fs_fee
+│   ├── other_non_fs_fee
+    ├── professional_fee
+    ├── payment_order_fee
+    ├── pay_services_other_fee
+    ├── securities_other_fee
+    ├── structured_finance_fee
+    └── transfer_order_fee
 ├── fines
+├── fiduciary_transaction
 ├── firm_operating_expenses
 │   ├── computer_and_it_cost
 │   │   └── it_outsourcing
@@ -77,12 +114,14 @@ The **purpose** property describes the reason behind the creation or usage of th
 │       ├── pension
 │       ├── redundancy_pymt
 │       └── regular_wages
+├── fv_hedge
 ├── fx
 ├── intangible
 │   └── intangible_lease
 ├── interest
 │   ├── int_on_asset
 │   ├── int_on_bond_and_frn
+    ├── int_on_debt_issued
 │   ├── int_on_deposit
 │   ├── int_on_derivative
 │   │   └── int_on_deriv_hedge
@@ -98,9 +137,11 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   └── int_on_finance_leasing
 ├── intra_group_fee
 ├── inv_in_subsidiary
+├── litigation
 ├── msr
 ├── mtg_insurance
 │   ├── mtg_ins_nonconform
+├── net_inv_hedge
 ├── operational
 │   ├── cash_management
 │   ├── clearing
@@ -127,7 +168,10 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── goodwill
 ├── pv_future_spread_inc
 ├── recovery
+│   ├── recovery_debt_sec
+│   └── recovery_loan_adv
 ├── rec_unidentified_cpty
+├── reclassification
 ├── reference
 ├── release
 ├── reg_loss
@@ -151,6 +195,8 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── oth_tax_excl_temp_diff
 │   └── reclass_tax
 └── write_off
+│   ├── write_off_debt_sec
+│   └── write_off_loans_adv
 ```
 
 ### dgs_contribution
@@ -196,7 +242,9 @@ Clearing and comparable services from the [CRR][crr] Article 422.4:
 > Clearing, custody or cash management or other comparable services referred to in points (a) and (d) of paragraph 3 only covers such services to the extent that they are rendered in the context of an established relationship on which the depositor has substantial dependency. They shall not merely consist in correspondent banking or prime brokerage services and the institution shall have evidence that the client is unable to withdraw amounts legally due over a 30 day horizon without compromising its operational functioning.
 
 ### operational
-*(see operational under account)*
+Definition: Deposits held at other financial institutions for operational purposes, as outlined in LCR40.26 to LCR40.36, such as for clearing, custody, and cash management purposes, must be assumed to stay at those institutions – ie they must receive a 0% inflow rate, as noted in LCR40.31. The same methodology applied in LCR40.26 to LCR40.36 for operational deposit outflows should also be applied to determine if deposits held at another financial institution are operational deposits and receive a 0% inflow. As a general principle if the bank receiving the deposit classifies the deposit as operational, the bank placing it should also classify it as an operational deposit.
+
+https://www.bis.org/basel_framework/chapter/LCR/40.htm#:~:text=1%20FAQ-,40.89,-Deposits%20held%20at
 
 ### cash_management
 *Needs definition*
@@ -294,8 +342,30 @@ For example, in the EBA's FINREP F.1.3 report, the effective portion of the vari
 ### cf_hedge_reclass
 **Cash flow hedge reclass** describes an account that is the same as the standard cash flow hedge account, but one in which the profit and loss arising from the cashflow hedge is to be reclassified. It can be taken to equity, transferred to carry amount of hedged items or other reclassifications of the profit and losses.
 
+### fv_hedge
+IFRS 9.6.5.2 defines a **fair value hedge** as follows:
+ > A hedge of the exposure to changes in fair value of a recognised asset/liability or an unrecognised firm commitment (or component thereof) that is attributable to a particular risk and could affect profit or loss.
+
+ ### net_inv_hedge
+A hedge of the foreign currency exposure arising from the net investment in a foreign operation.
+
 ### fees
 Describes an account that holds the amount of fee/commission receivables/payables as reported in a Profit and Loss report.
+
+### advisory_fee
+Fee based advice’ shall include fees and commissions charged for advisory services to clients that are not directly linked to asset management, such as private banking related fees. M&A advisory fees shall not be included here.
+
+### asset_mgmt_fee
+Fees for asset management, custody, central administration for funds, and similar portfolio or fund‑management services.
+
+### clearing_settl_fee
+‘Clearing and settlement’ shall include fees and commission income (expenses) generated by (charged to) the institution where that institution participates in counterparty, clearing and settlement facilities.
+
+### commodity_fee
+Commodities’ include fee and commission income related to the commodity business.
+
+### corp_fin_other_fee
+All other corporate finance fees not classified as M&A advisory or treasury services.
 
 ### credit_card_fee
 Describes an account that holds the amount of fees receivables originating from **credit cards**.
@@ -303,8 +373,19 @@ Describes an account that holds the amount of fees receivables originating from 
 ### current_account_fee
 Describes an account that holds the amount of fees receivables/payables originating from **current accounts**.
 
+### debit_card_fee
+Fees earned or paid for debit card payment services, including card usage and related charges.
+
 ### derivative_fee
 Describes an account that holds the amount of fees receivables/payables originating from **overdraft accounts**.
+
+### distribution_fee
+fees and commissions earned from distribution of financial products issued by entities OUTSIDE the prudential group to the institution's customers. The institution acts as a distributor/intermediary but does NOT issue, manage, or service the products. Includes trailer commissions, initial placement fees, and volume-based incentives from product issuers.
+
+### fin_guarantee_fee
+Fees and commissions earned or paid over time from financial guarantees, recognised during the period through amortisation.
+Given: income recognised from fees initially recorded as other liabilities
+Received: expense recognised from fees initially recorded as other assets
 
 ### mortgage_fee
 Describes an account that holds the amount of fees receivables originating from **mortgage products**.
@@ -314,6 +395,9 @@ Describes an account that holds the amount of fees receivables originating from 
 
 ### unsecured_loan_fee
 Describes an account that holds the amount of fees receivables originating from **unsecured personal loans**.
+
+### loan_servicing_fee
+Fees from ‘Loan servicing activities’ shall include, on the income side, the fee and commission income generated by the institution providing loan servicing services and on the expense side, the fee and commission expense charged to the institution by loan service providers
 
 ### insurance_fee
 Describes an account that holds the amount of fees receivables originating from **insurance** activities.
@@ -329,6 +413,25 @@ Describes an account that holds the amount of fees receivables/payables originat
 
 ### other_non_fs_fee
 Describes an account that holds the amount of fees receivables/payables originating from **services that cannot be classified as financial**. These could include executor and trustee services, computer bureau services.
+
+### professional_fee
+Describes an account that holds the amount of fees receivables/payables originating from **external professional services, including legal, accounting, consulting, and other professional services**
+
+### payment_order_fee
+Fees earned or paid for payment orders and transfers, including domestic and international payments.
+
+### pay_services_other_fee
+All other payment service fees, including ATM usage fees and payment-related charges not elsewhere classified.
+
+### securities_other_fee
+**Other fee and commission income in relation to securities** shall include fees and commissions generated by the institution providing other services related with securities not originated or issued by the institution;
+
+### structured_finance_fee
+**Structured finance** shall include fees and commissions received for the involvement in the origination or issuance of financial instruments other than securities originated or issued by the institution
+
+### transfer_order_fee
+Fees earned for receiving, transmitting, or executing customer orders to buy or sell securities.
+
 
 ### pension
 *needs definition*
@@ -372,6 +475,9 @@ Describes an account representing the amount of **deferred tax** that do not rel
 ### reclass_tax
 Describes an account representing the amount of **reclassified pnl tax** paid, received or deferred for the reporting period by the reporting entity.
 
+### reclassification
+Describes an account representing the amount of **reclassified pnl tax** paid, received or deferred for the reporting period by the reporting entity.
+
 ### oth_tax_excl_temp_diff
 Deferred tax assets excluding those arising from temporary differences.  Required for BCAR rwa calculations and BCAR reporting.
 
@@ -402,6 +508,62 @@ Describes an account that holds the Net Spread Earnings (NSE) amount arising fro
 ### dealing_rev_deriv_nse
 Describes an account that holds the Net Spread Earnings (NSE) amount arising from the purchase and sale of **derivative instruments**. The NSE is indentified as the difference between the price paid/offered by the reporting entity and the price available in the open market (mid-market price) at the time of the transaction.
 
+### dealing_rev_equity
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **equity instruments**.
+
+### dealing_rev_debt
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **debt securities**.
+
+### dealing_rev_loan
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **loans and advances**.
+
+### dealing_rev_short
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **short positions**.
+
+### dealing_rev_deposits
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **deposits**.
+
+### dealing_rev_dbt_issue
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **debt securities issued**.
+
+### dealing_rev_oth_finan
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **other financial liabilities**.
+
+### dealing_rev_deriv_com
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of commodity **derivative** trading.
+
+### dealing_rev_deriv_int
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of interest rate **derivatives**.
+
+### dealing_rev_deriv_equ
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of equity **derivatives**.
+
+### dealing_rev_deriv_fx
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of foreign exchange and gold **derivatives**.
+
+### dealing_rev_cr
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of credit-linked note trading.
+
+### dealing_rev_deriv_oth
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **derivatives** not included in the categories above.
+
+### dealing_rev_dr_com_eco
+Describes an account that holds the amounts of profits or losses arising from commodity **derivative** trading that are held for hedging purposes but do not meet the criteria to be effective hedging instruments in accordance with IFRS 9, with IAS 39 where IAS 39 is applied for hedge accounting purposes or with the accounting framework under national GAAP based on BAD
+
+### dealing_rev_dr_equ_eco
+Describes an account that holds the amounts of profits or losses arising from equity **derivative** trading that are held for hedging purposes but do not meet the criteria to be effective hedging instruments in accordance with IFRS 9, with IAS 39 where IAS 39 is applied for hedge accounting purposes or with the accounting framework under national GAAP based on BAD
+
+### dealing_rev_dr_fx_eco
+Describes an account that holds the amounts of profits or losses arising from foreign exchange **derivative** trading that are held for hedging purposes but do not meet the criteria to be effective hedging instruments in accordance with IFRS 9, with IAS 39 where IAS 39 is applied for hedge accounting purposes or with the accounting framework under national GAAP based on BAD
+
+### dealing_rev_dr_int_eco
+Describes an account that holds the amounts of profits or losses arising from interest rate **derivative** trading that are held for hedging purposes but do not meet the criteria to be effective hedging instruments in accordance with IFRS 9, with IAS 39 where IAS 39 is applied for hedge accounting purposes or with the accounting framework under national GAAP based on BAD
+
+### dealing_rev_dr_nse_eco
+Describes an account that holds the amounts of profits or losses arising from Net Spread Earnings (NSE) **derivative** trading that are held for hedging purposes but do not meet the criteria to be effective hedging instruments in accordance with IFRS 9, with IAS 39 where IAS 39 is applied for hedge accounting purposes or with the accounting framework under national GAAP based on BAD
+
+### dealing_rev_dr_oth_eco
+Describes an account that holds the amounts of profits or losses arising from other **derivative** trading that are held for hedging purposes but do not meet the criteria to be effective hedging instruments in accordance with IFRS 9, with IAS 39 where IAS 39 is applied for hedge accounting purposes or with the accounting framework under national GAAP based on BAD
 ### dividend
 Describes an account that holds the amount of dividends paid or received as reported in a Profit and Loss report.
 
@@ -434,6 +596,9 @@ Describes an account that holds the amount of interests receivable/payable as re
 
 ### int_on_ecgd_lending
 Describes an account that holds the amount of interests receivable/payable where the interest amount originates from **loans** guaranteed by the Export Credits Guarantee Department (ECGD) also known as UK Export Finance.
+
+### int_on_debt_issued
+Describes an account that holds the amount of interest income/expense reported in a Profit and Loss report and where the interest amount originates from **debt securities issued**.
 
 ### int_on_deposit
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **deposits**.
@@ -573,11 +738,17 @@ BoE Form PL definitions: https://www.bankofengland.co.uk/statistics/data-collect
 ### fine
 Describes an account representing the amount of fines or compensation payments paid or provisioned by the reporting entity.
 
+### fiduciary_transaction
+‘Fiduciary transactions’ shall refer to the activities where the institution acts in its own name but for the account and at the risk of its customers. Frequently, in fiduciary transactions, the institution provides services, such as custody, asset management services, to a structured entity or managing portfolios on a discretionary basis. All fiduciary transactions shall be reported exclusively in this item irrespective of whether the institution provides other services.
+
 ### donation
 Describes an account representing the amount of voluntary contributions made to non-profit institutions.
 
 ### inv_in_subsidiary
 Describes an account representing the profit or loss made on investments in subsidiaries, associates and special purpose entities.
+
+### litigation
+litigation expenses not related to credit risk that were not covered by an associated provision.
 
 ### manufactured_dividend
 Describes an account representing the manufactured dividends paid or received by the reporting entity.
@@ -593,11 +764,23 @@ Describes the treatment related to a revaluation in which the resulting impact a
 ### recovery
 Describes an account representing the amount recovered made to reserves or provisions.
 
+### recovery_debt_sec
+Describes an account representing the amount recovered for all debt securities made to reserves or provisions.
+
+### recovery_loan_adv
+Describes an account representing the amount recovered for all loans and advances made to reserves or provisions.
+
 ### release
-Describes an account representing the amount of a provision beeing released as a risk subsides (e.g. the loan for which the provision was originally registered is repaid).
+Describes an account representing the amount of a provision being released as a risk subsides (e.g. the loan for which the provision was originally registered is repaid).
 
 ### write_off
-Describes an account representing the amount of a provision beeing written-off as a risk materialised (e.g. the loan for which the provision was originally registered is deemed irrecoverable).
+Describes an account representing the amount of a provision being written-off as a risk materialised (e.g. the loan for which the provision was originally registered is deemed irrecoverable).
+
+### write_off_debt_sec
+Describes an account representing the amount of a provision being written-off for all debt securities as a risk materialised (e.g. the loan for which the provision was originally registered is deemed irrecoverable).
+
+### write_off_loans_adv
+Describes an account representing the amount of a provision being written-off for all loans and advances as a risk materialised (e.g. the loan for which the provision was originally registered is deemed irrecoverable).
 
 ### mtg_insurance
 Prepaid portfolio mortgage insurance conforming to OSFI's 5 year amortisation requirements.  Ref: BCAR 40.290; Chapter 4, P164
@@ -619,6 +802,9 @@ Adjustments of Synthetic positions - non-significant investments in financials. 
 
 ### adj_syn_mtg_def_ins
 Adjustments of Synthetic positions - adj_syn_mtg_def_ins.  Required for BCAR RWA calculation and Reporting.  Ref: BCAR 40.290; Chapter 4, P164
+
+### adv_mkt_com
+**Advertising, marketing and communication** shall include expenses related to marketing communications activities such as advertising, direct or online marketing, and events.
 
 ### capital_reserve
 An account in the equity section of a company's balance sheet that indicates the cash on hand that can be used for future expenses or to offset any capital losses.
@@ -692,6 +878,12 @@ refer to interest cashflows only, and do not include any principal flows
 ├── commodities_finance
 ├── construction
 │   └── renovation
+├── corporate_finance
+│   ├── business_recap
+│   ├── esop
+│   ├── mergers_acquisitions
+│   ├── portfolio_acquisition
+│   └── stock_buyback
 ├── debt_consolidation
 ├── education
 ├── first_time_buyer
@@ -796,7 +988,9 @@ a loan given for financing for unimproved or non-revenue generating land where s
 >A **lifetime_mortgage** is a very specific kind of British mortgage contract and is defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G1294.html). It is geared towards customers of a certain age in order to release equity and typically repayment occurs at the time of the customers death when the property is sold;
 
 ### operational
-*(see operational under account)*
+Definition: Deposits held at other financial institutions for operational purposes, as outlined in LCR40.26 to LCR40.36, such as for clearing, custody, and cash management purposes, must be assumed to stay at those institutions – ie they must receive a 0% inflow rate, as noted in LCR40.31. The same methodology applied in LCR40.26 to LCR40.36 for operational deposit outflows should also be applied to determine if deposits held at another financial institution are operational deposits and receive a 0% inflow. As a general principle if the bank receiving the deposit classifies the deposit as operational, the bank placing it should also classify it as an operational deposit.
+
+https://www.bis.org/basel_framework/chapter/LCR/40.htm#:~:text=1%20FAQ-,40.89,-Deposits%20held%20at
 
 ### operational_sym
 Used to classify operational deposits where the credit institution is able to establish a corresponding symmetrical inflow rate.
@@ -951,6 +1145,30 @@ According to [Basel 3.1](https://www.europarl.europa.eu/doceo/document/A-9-2023-
 As defined by OSFI Chapter 4, P66 and Chapter 5, P15:
 > 'Commodities finance refers to short-term lending to finance reserves, inventories, or receivables of exchange-traded commodities (e.g., crude oil, metals, or crops), where the loan will be repaid from the proceeds of the sale of the commodity and the borrower has no independent capacity to repay the loan.
 
+### corporate_finance
+
+Financing with the intent to effect corporate actions or balance-sheet strategy.
+
+### business_recap
+
+Financing with the intent to recapitalize a business or fund dividend distributions to shareholders, designed to alter the company's capital structure or return capital to owners.
+
+### esop
+
+Financing with the intent to fund an Employee Stock Ownership Plan (ESOP).
+
+### mergers_acquisitions
+
+Financing with the intent to acquire equity interests including mergers, acquisitions, and LBOs/MBOs.
+
+### portfolio_acquisition
+
+Financing with the intent to fund the acquisition of a portfolio of assets, such as loans, receivables, or securities, including facilities structured through note purchase agreements.
+
+### stock_buyback
+
+Financing with the intent to fund a company's repurchase of its own outstanding shares, either in the open market or through a tender offer.
+
 ### other
 The **other** enum value can be used when none of the other enum values apply or the value is *unknown*.
 
@@ -1007,6 +1225,8 @@ A refinance, refers to revising and replacing the terms of an existing credit ag
 │    ├──  investment_advice
 │    └──  portfolio_management
 ├── trade_finance
+│    ├──  export
+│    └──  import
 ├── aircraft_finance
 ├── insurance
 ├── back_to_back
@@ -1022,6 +1242,14 @@ The [Mifid Directive][midifdir] defines in Article 4(8) portfolio management as:
 ### trade_finance
 From [CRR][crr] definitions (80):
 > **Trade finance** means financing, including guarantees, connected to the exchange of goods and services through financial products of fixed short-term maturity, generally of less than one year, without automatic rollover;
+
+### export
+
+ Financing of goods and services (purchases, barter and/or gifts) from residents to non-residents.
+
+### import
+
+ Financing of goods and services (purchases, barter and/or gifts) from nonresidents to residents.
 
 ### variation_margin
 Defined in accordance with Article 30(1) and Article 30(3) of the [LCR][lcr] regulation:

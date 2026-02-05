@@ -19,8 +19,14 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 ├── corporate
 │   ├── charity
 │   │   └── community_charity
-│   └── sme
-│       └── supported_sme
+│   ├── housing_coop
+│   ├── property_spe
+│   ├── sme
+│   │   └── medium_sme
+│   │   └── micro_sme
+│   │   └── small_sme
+│   │   └── supported_sme
+│   └── social_housing_entity
 ├── financial
 │   ├── credit_institution
 │   │   ├── national_bank
@@ -34,6 +40,7 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   │   │   └── promo_fed_home_loan
 │   ├── investment_firm
 │   │   ├── fund
+│   │   │   ├── unincorp_inv_fund
 │   │   ├── private_fund
 │   │   │   ├── hedge_fund
 │   │   │   └── private_equity_fund
@@ -92,6 +99,18 @@ As defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossa
 
 > (in accordance with section 417(1) of the Act (Definitions)) any partnership, including a partnership constituted under the law of a country or territory outside the United Kingdom, but not including a limited liability partnership.
 
+### housing_coop
+
+As defined in Appendix 2: PRA Rulebook: CRR Firms: (CRR) Article 124E 
+
+> An association or a cooperative of natural persons that exists with the sole purpose of granting its members the use of a primary residence in the property securing the loans. 
+
+### property_spe
+
+As defined in Appendix 2: PRA Rulebook: CRR Firms: (CRR) Article 124E 
+
+> An entity created specifically to finance and/or operate immovable property 
+
 ### sme
 
 The definition of an SME is based on a set of criteria, while in theory it is possible for this to be a dynamic field based on other relevant data provided (employee count, turnover etc.), often times the data is unavailable or not current and hence firm may wish to identify SMEs directly.
@@ -106,6 +125,32 @@ In this scenario, an SME type will be assumed to comply with the [EU SME Recomme
 ### supported_sme
 
 An SME with special treatment under the capital adequacy rules, invoking a special multiplier for RWAs
+
+### medium_sme
+
+A Medium Sized Enterprise is any entity engaged in an economic activity, irrespective of its 
+legal form (corporation, partnership, sole trader etc.), which employs fewer than 250 
+persons and whose annual turnover is greater than €10 million and less than or equal to 
+€50 million or whose annual balance sheet is greater than €10 million and less than or 
+equal to €43 million.
+
+### micro_sme
+
+A micro SME is one which does not meet the thresholds to be classified as a small SME.
+
+### small_sme
+
+Small enterprises are those engaged in an economic activity, irrespective of their legal form 
+(corporation, partnership, sole trader etc.), which employs fewer than 50 persons and whose 
+annual turnover or annual balance sheet is less than or equal to €10 million. If there are any 
+instances where border-line cases exist using these definitions of smal and medium sized 
+enterprises, the employee number threshold is to take precedence.
+
+### social_housing_entity
+
+As defined in Appendix 2: PRA Rulebook: CRR Firms: (CRR) Article 124E 
+
+> A public housing company or not-for-profit association regulated in the UK that exists to serve social purposes and to offer tenants long-term housing (a social housing exposure). 
 
 ### other
 
@@ -353,6 +398,9 @@ Investment firm is defined in the [FCA Handbook](https://www.handbook.fca.org.uk
 > (5) (in SYSC 19A(IFPRU Remuneration Code)) a firm in (3).
 > (6) (in SYSC 19D (Dual-regulated firms Remuneration Code)) a firm in (3) that is a UK designated investment firm.
 
+### unincorp_inv_fund
+_Unincorporated investment funds_ comprising investment portfolios owned by a group of participants and whose management is undertaken by other financial corporations
+
 ### ciu
 
 A collective investment undertaking is defined by the EU [here][lcr] Article 4(1)(7):
@@ -544,6 +592,8 @@ Charity serving communities and individuals. Includes non-profit institutions se
 │   └── heloc_lockout
 ├── heloan
 ├── trade_finance
+│   ├── export
+│   └── import
 ├── credit_facility
 ├── liquidity_facility
 ├── multiccy_facility
@@ -557,6 +607,14 @@ Charity serving communities and individuals. Includes non-profit institutions se
 From [CRR][crr] definitions (80):
 
 > Trade finance means financing, including guarantees, connected to the exchange of goods and services through financial products of fixed short-term maturity, generally of less than one year, without automatic rollover
+
+### export
+
+ Financing of goods and services (purchases, barter and/or gifts) from residents to non-residents.
+
+### import
+
+ Financing of goods and services (purchases, barter and/or gifts) from nonresidents to residents.
 
 ### auto
 
@@ -1142,6 +1200,7 @@ Index securities are reference records recording the details of an index using t
 ├── current
 │   └── current_io
 ├── debit_card (pending)
+├── debt_securities_issued
 ├── financial_lease
 ├── internet_only
 ├── ira
@@ -1151,6 +1210,7 @@ Index securities are reference records recording the details of an index using t
 │   ├── isa_current
 │   │   └── isa_current_io
 │   └── isa_io
+├── loans_and_advances
 ├── money_market
 ├── non_product
 │   ├── accruals
@@ -1176,7 +1236,8 @@ Index securities are reference records recording the details of an index using t
 │   └── time_deposit_io
 ├── third_party_savings
 ├── vostro
-└── other
+├── other
+└── other_financial_liab
 ```
 
 ### call
@@ -1188,6 +1249,10 @@ A call account is defined in the [Money Market Statistics Regulation][mm-stat] i
 ### cd
 
 A deposit account purely holding certificates of deposit (see _cd_ _Security_ **type**)
+
+### debt_securities_issued
+
+An account which holds **debt securities issued**
 
 ### prepaid_card
 
@@ -1230,6 +1295,14 @@ A current account that is offered and only accessible via the internet.
 ### bonds
 
 Any account containing notes, bonds or other securities instruments.
+
+### loans_and_advances
+
+An account which holds **loans and advances**
+
+### other_financial_liab
+
+An account which holds **other financial liabilities**
 
 ### retail_bonds
 
@@ -1547,13 +1620,21 @@ The most common XCS, and that traded in interbank markets, is a mark-to-market (
 │   └── res_property_hr
 ├── farm
 ├── commercial_property
+│   ├── healthcare
+│   ├── hospitality
+│   ├── industrial
+│   ├── office
+│   ├── retail
+│   ├── warehouse
 │   └── commercial_property_hr
 ├── immovable_property
 ├── guarantee
 ├── debenture
+├── blanket_lien
 ├── life_policy
 ├── cash
 ├── security
+├── trade_receivables
 ├── auto
 │   ├── auto_other
 │   ├── car
@@ -1689,6 +1770,30 @@ As per Article 124 (3) of CRR 575/2013: In order to be eligible for the treatmen
 (e) the requirements set out in Article 208 are met and the valuation rules set out in Article 229(1) are complied with.
 For the purposes of point (c), institutions may exclude situations where purely macro-economic factors affect both the value of the property and the performance of the obligor.
 
+### healthcare
+
+Property used for medical or health-related services, including hospitals, medical campuses, assisted-living facilities, memory care facilities, and skilled-nursing or long-term care homes.
+
+### hospitality
+
+Property providing short-term accommodation or leisure services, including hotels, resorts, and gaming or entertainment facilities.
+
+### industrial
+
+Property used for manufacturing, assembly, research and development, or light industrial activities. Excludes properties primarily used for warehousing or logistics.
+
+### office
+
+Property used for administrative, professional, or medical office purposes.
+
+### retail
+
+Property used for the sale of goods or services to the public, including shopping centers, malls, high-street retail, and standalone stores.
+
+### warehouse
+
+Property used for storage, logistics, or distribution of goods.
+
 ### multifamily
 
 Property composed of five or more residential dwellings.
@@ -1717,6 +1822,10 @@ _NEEDS Definition_
 
 _NEEDS Definition_
 
+### blanket_lien
+
+Collateral arrangement in which the lender holds a lien of equal seniority across substantially all of the borrower's unencumbered assets, providing recourse to those assets in the event of default.
+
 ### life_policy
 
 From Article 212(2) [CRR](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32013R0575), life insurance policies pledged as collateral will be considered if it meets certain criteria outlined in the article. These conditions include ,**but not limited to**, the credit institutions openly being assigned as the beneficiary and the life insurance company being notified of the pledge to the lending institution. Providing the conditions outlined in the article are met, the life insurance is eligble for use as collateral and the lender has a claim to some or all of the death benefit until the loan is repaid.
@@ -1728,6 +1837,13 @@ _NEEDS Definition_
 ### security
 
 This identifies that the piece of collateral used is a security, as mapped via the security schema and linked to the collateral schema using the collateral's `security_id` property.
+
+### trade_receivables
+Reference:  Trade receivables as defined in paragraph 85(c) of part 2 of Annex V to the
+amended Implementing Regulation (EU) No 680/2014. 
+> Trade receivables includes loans granted on the basis of bills or other documents that give the right to receive the proceeds of transactions for the sale of goods or provision of services (i.e. on the basis of “trade credit” as defined in Annex A to Regulation (EU) No 549/2013)
+This type of instrument includes all factoring and similar transactions, such as acceptances, outright purchase of trade receivables, forfaiting, discounting of invoices, bills of exchange, commercial papers and other claims, on the condition that the credit institution buys the trade receivables (both with and without recourse to the debtor).
+Notably, accounts receivable stemming from sales of non-banking products by credit institutions are not trade receivables if the creditor has not bought them from a third party. 
 
 ### auto
 

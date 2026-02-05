@@ -18,6 +18,11 @@
       "type": "integer",
       "monetary": true
     },
+    "acc_fv_change_before_taxes_ytd": {
+      "description": "Accumulated change in fair value before taxes(YTD).",
+      "type": "integer",
+      "monetary": true
+    },
     "accounting_treatment": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/accounting_treatment"
     },
@@ -184,7 +189,13 @@
       "description": "The type of hedge (fair value or cash flow hedge) associated with the holding. Whether it is hedging individually or is hedging as part of a portfolio of assets with similar risk that are hedged as a group in line with ASC 815-20-25-12 (b), ASC 815-20-2512A, or ASC 815-10-25-15.\n\nhttps://asc.fasb.org/1943274/2147480682/815-20-25-12\nhttps://asc.fasb.org/1943274/2147480682/815-20-25-12A\nhttps://asc.fasb.org/1943274/2147480682/815-10-25-15",
       "enum": [
         "cf_hedge",
-        "fv_hedge"
+        "cf_hedge_eco",
+        "fv_hedge",
+        "fv_hedge_eco",
+        "portfolio_cf_hedge",
+        "portfolio_cf_hedge_eco",
+        "portfolio_fv_hedge",
+        "portfolio_fv_hedge_eco"  
       ]
     },
     "hedged_cf_type": {
@@ -329,6 +340,11 @@
     "on_balance_sheet": {
       "description": "Is the derivative reported on the balance sheet of the financial institution?",
       "type": "boolean"
+    },
+    "other_accounting_adj": {
+      "description": "Accounting adjustments applied to the carrying amount for financial reporting. This is inclusive of EIR adjustments or adjustments due to timing or reconciliation differences",
+      "type": "integer",
+      "monetary": true
     },
     "pd_irb": {
       "description": "The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations.",

@@ -28,9 +28,6 @@ EXTENSION_DOC_NAMES = [f.split(".md")[0] for f in EXTENSION_DOC_FILES]
 
 ALLOWED_PROPERTY_CHARS = frozenset(ascii_lowercase + "_" + digits)
 
-# For transition only...
-OLD_SCHEMAS_DIR = os.path.join(HOME, "v1-dev")
-
 
 def schema_properties(schema_name, with_inheritance=True):
     """

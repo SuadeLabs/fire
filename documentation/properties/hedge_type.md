@@ -13,8 +13,26 @@ The type of hedge (fair value or cash flow hedge) associated with the holding. W
 ### cf_hedge
 Cash flow hedge designation.
 
+### cf_hedge_eco
+Cash flow with an economic hedge designation.
+
 ### fv_hedge
 Fair value hedge designation.
+
+### fv_hedge_eco
+Fair value with an economic hedge designation.
+
+### portfolio_cf_hedge
+Cash flow hedge designation for a portfolio of financial assets or financial liabilities.
+
+### portfolio_cf_hedge_eco
+Cash flow with an economic hedge designation for a portfolio of financial assets or financial liabilities.
+
+### portfolio_fv_hedge
+Fair value hedge designation for a portfolio of financial assets or financial liabilities.
+
+### portfolio_fv_hedge_eco
+Fair value with an economic hedge designation for a portfolio of financial assets or financial liabilities.
 
 For additional details refer to:
 - https://asc.fasb.org/1943274/2147480682/815-20-25-12

@@ -68,6 +68,7 @@ class TestSchemas:
             "underlying_index_tenor",  # day convention
             "base_rate",  # Bloomberg tickers,
             "nace_code",  # Nace code format: A.01.10
+            "legal_form",  # Nace code format: A.01.10
         ]
         legacy_long_names = [
             "independent_collateral_amount",

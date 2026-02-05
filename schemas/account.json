@@ -18,6 +18,21 @@
       "type": "integer",
       "monetary": true
     },
+    "acc_fv_change_before_taxes_ytd": {
+      "description": "Accumulated change in fair value before taxes(YTD).",
+      "type": "integer",
+      "monetary": true
+    },
+    "acc_fv_change_credit_risk": {
+      "description": "Accumulated changes in fair value due to credit risk.",
+      "type": "integer",
+      "monetary": true
+    },
+    "acc_fv_change_credit_risk_ytd": {
+      "description": "Accumulated changes in fair value due to credit risk(YTD).",
+      "type": "integer",
+      "monetary": true
+    },
     "accounting_treatment": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/accounting_treatment"
     },
@@ -25,6 +40,37 @@
       "description": "The accrued interest since the last payment date and due at the next payment date. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
       "monetary": true
+    },
+    "arrears_arrangement": {
+      "description": "The arrangement the lender has made with the borrower regarding the amount referenced in the arrears_balance.",
+      "type": "string",
+      "enum": [
+        "formal",
+        "interest_grace_period",
+        "mi_claim_adv",
+        "modified_tnc",
+        "none",
+        "possessed",
+        "prin_def_rate",
+        "prin_def_rate_term",
+        "prin_def_term",
+        "principal_defer",
+        "principal_forgive",
+        "rate_prin_forgive",
+        "rate_red_frozen",
+        "rate_term",
+        "rate_term_prin_forgive",
+        "recap",
+        "refinancing",
+        "renewal",
+        "reo",
+        "settlement",
+        "short_sale",
+        "temporary",
+        "term_ext",
+        "term_prin_forgive",
+        "term_recap"
+      ]
     },
     "arrears_balance": {
       "description": "The balance of the capital amount that is considered to be in arrears (for overdrafts/credit cards). Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -34,19 +80,18 @@
     "asset_liability": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/asset_liability"
     },
+    "authorised_limit_amount": {
+      "description": "The total amount of authorized Credit Risk exposure for all facility.",
+      "type": "integer",
+      "monetary": true
+    },
     "balance": {
       "description": "The contractual balance on the date and in the currency given. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
       "monetary": true
     },
     "base_rate": {
-      "description": "The base rate represents the basis of the rate on the balance at the given date as agreed in the terms of the account.",
-      "type": "string",
-      "enum": [
-        "FDTR",
-        "UKBRBASE",
-        "ZERO"
-      ]
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/base_rate"
     },
     "behavioral_curve_id": {
       "description": "The unique identifier for the behavioral curve used by the financial institution.",
@@ -96,6 +141,10 @@
     "ccf": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/ccf"
     },
+    "commission": {
+      "description": "Commission percentage to be added onto interest rate of the product to calculate the credit spread at inception of receiving the deposit.",
+      "type": "integer"
+    },
     "cost_center_code": {
       "description": "The organizational unit or sub-unit to which costs/profits are booked.",
       "type": "string"
@@ -112,6 +161,12 @@
     "cr_approach": {
       "description": "Specifies the approved credit risk rwa calculation approach to be applied to the exposure.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/cr_approach"
+    },
+    "cum_recoveries": {
+      "description": "The total amount recovered since the date of default of the instrument.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
     },
     "cum_write_offs": {
       "description": "The portion of the loan which has been written off.",
@@ -130,6 +185,10 @@
     "day_count_convention": {
       "description": "The standardised methodology for calculating the number of days between two dates. It is used to calculate the amount of accrued interest or the present value.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/day_count_convention"
+    },
+    "deal_id": {
+      "description": "The unique identifier used by the financial institution to identify the deal for this product that links it to other products of the same or different type.",
+      "type": "string"
     },
     "default_date": {
       "description": "Date of default.",
@@ -176,6 +235,11 @@
     "facility_id": {
       "description": "The code assigned by the financial institution to identify a facility.",
       "type": "string"
+    },
+    "fees": {
+      "description": "The fees associated with the account.",
+      "type": "integer",
+      "monetary": true
     },
     "first_arrears_date": {
       "description": "The first date on which this account was in arrears.",
@@ -251,6 +315,10 @@
         "us_fdic"
       ]
     },
+    "guarantor_id": {
+      "description": "The unique identifier for the guarantor within the financial institution.",
+      "type": "string"
+    },
     "impairment_amount": {
       "description": "The impairment amount is the allowance set aside by the firm that accounts for the event that the asset becomes impaired in the future.",
       "type": "integer",
@@ -273,6 +341,10 @@
       "type": "integer",
       "minimum": 1
     },
+    "int_reset_freq": {
+      "description": "The adjustable rate periodic interest reset period. Denominated in whole multiples of the interest_repayment_frequency. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer"
+    },
     "interest_repayment_frequency": {
       "description": "Repayment frequency of the interest.",
       "type": "string",
@@ -289,6 +361,11 @@
         "biennially",
         "sesquiennially"
       ]
+    },
+    "last_arrears_date": {
+      "description": "The last date on which this loan was in arrears.",
+      "type": "string",
+      "format": "date-time"
     },
     "last_drawdown_date": {
       "description": "The last date on which a drawdown was made on this account (overdraft).",
@@ -334,6 +411,16 @@
     },
     "limit_amount": {
       "description": "The minimum balance the customer can go overdrawn in their account.",
+      "type": "integer",
+      "monetary": true
+    },
+    "min_interest_repayment": {
+      "description": "The minimum interest on outstanding balance and fees that customers are due to repay.",
+      "type": "integer",
+      "monetary": true
+    },
+    "min_principal_repayment": {
+      "description": "The minimum principal balance that customers are due to repay.",
       "type": "integer",
       "monetary": true
     },
@@ -394,6 +481,21 @@
       "type": "integer",
       "monetary": true
     },
+    "orig_rate_type": {
+      "description": "The rate_type at origination.",
+      "type": "string",
+      "enum": [
+        "combined",
+        "fixed",
+        "tracker",
+        "variable"
+      ]
+    },
+    "other_accounting_adj": {
+      "description": "Accounting adjustments applied to the carrying amount for financial reporting. This is inclusive of EIR adjustments or adjustments due to timing or reconciliation differences",
+      "type": "integer",
+      "monetary": true
+    },
     "parent_facility_id": {
       "description": "The parent code assigned by the financial institution to identify a facility.",
       "type": "string"
@@ -419,6 +521,11 @@
       "description": "The name of the product as given by the financial institution to be used for display and reference purposes.",
       "type": "string"
     },
+    "provision_amount": {
+      "description": "The amount of reserves that is provisioned by the financial institution to cover the potential loss on the loan. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
     "purpose": {
       "description": "The purpose for which the account was created or is being used.",
       "type": "string",
@@ -429,7 +536,10 @@
         "adj_syn_nonsig_inv_fin",
         "adj_syn_other_inv_fin",
         "admin",
+        "adv_mkt_com",
+        "advisory_fee",
         "annual_bonus_accruals",
+        "asset_mgmt_fee",
         "benefit_in_kind",
         "capital_gain_tax",
         "capital_reserve",
@@ -438,31 +548,55 @@
         "cf_hedge_reclass",
         "ci_service",
         "clearing",
+        "clearing_settl_fee",
         "collateral",
         "commitments",
+        "commodity_fee",
         "computer_and_it_cost",
         "computer_peripheral",
         "computer_software",
+        "corp_fin_other_fee",
         "corporation_tax",
         "credit_card_fee",
         "critical_service",
         "current_account_fee",
         "custody",
+        "dealing_rev_cr",
+        "dealing_rev_dbt_issue",
+        "dealing_rev_debt",
+        "dealing_rev_deposits",
         "dealing_rev_deriv",
+        "dealing_rev_deriv_com",
+        "dealing_rev_deriv_equ",
+        "dealing_rev_deriv_fx",
+        "dealing_rev_deriv_int",
         "dealing_rev_deriv_nse",
-        "dealing_rev_fx",
+        "dealing_rev_deriv_oth",
+        "dealing_rev_dr_com_eco",
+        "dealing_rev_dr_equ_eco",
+        "dealing_rev_dr_fx_eco",
+        "dealing_rev_dr_int_eco",
+        "dealing_rev_dr_nse_eco",
+        "dealing_rev_dr_oth_eco",
+        "dealing_rev_equity",
+        "dealing_rev_fx", 
         "dealing_rev_fx_nse",
         "dealing_rev_ir",
+        "dealing_rev_loan",
         "dealing_rev_non_fin",
+        "dealing_rev_oth_finan",
         "dealing_rev_sec",
         "dealing_rev_sec_nse",
+        "dealing_rev_short",
         "dealing_revenue",
+        "debit_card_fee",
         "ded_fut_prof",
         "ded_fut_prof_temp_diff",
         "defined_benefit",
         "deposit",
         "derivative_fee",
         "dgs_contribution",
+        "distribution_fee",
         "div_from_cis",
         "div_from_money_mkt",
         "dividend",
@@ -471,12 +605,15 @@
         "employee_stock_option",
         "escrow",
         "fees",
+        "fiduciary_transaction",
+        "fin_guarantee_fee",
         "fine",
         "firm_operating_expenses",
         "firm_operations",
         "furniture",
         "fut_prof",
         "fut_prof_temp_diff",
+        "fv_hedge",
         "fx",
         "general_credit_risk",
         "goodwill",
@@ -485,6 +622,7 @@
         "int_on_bond_and_frn",
         "int_on_bridging_loan",
         "int_on_credit_card",
+        "int_on_debt_issued",
         "int_on_deposit",
         "int_on_deriv_hedge",
         "int_on_derivative",
@@ -507,13 +645,16 @@
         "ips",
         "it_outsourcing",
         "land",
+        "litigation",
         "loan_and_advance_fee",
+        "loan_servicing_fee",
         "machinery",
         "manufactured_dividend",
         "mortgage_fee",
         "msr",
         "mtg_ins_nonconform",
         "mtg_insurance",
+        "net_inv_hedge",
         "ni_contribution",
         "nol_carryback",
         "non_life_ins_premium",
@@ -532,15 +673,21 @@
         "other_staff_rem",
         "overdraft_fee",
         "own_property",
+        "pay_services_other_fee",
+        "payment_order_fee",
         "pension",
         "ppe",
         "prime_brokerage",
+        "professional_fee",
         "property",
         "property_lease",
         "pv_future_spread_inc",
         "rec_unidentified_cpty",
         "reclass_tax",
+        "reclassification",
         "recovery",
+        "recovery_debt_sec",
+        "recovery_loan_adv",
         "redundancy_pymt",
         "reference",
         "reg_loss",
@@ -553,17 +700,22 @@
         "revaluation",
         "revaluation_reclass",
         "revenue_reserve",
+        "securities_other_fee",
         "share_plan",
         "share_premium",
         "staff",
+        "structured_finance_fee",
         "system",
         "tax",
         "telecom_equipment",
         "third_party_interest",
+        "transfer_order_fee",
         "underwriting_fee",
         "unsecured_loan_fee",
         "vehicle",
-        "write_off"
+        "write_off",
+        "write_off_debt_sec",
+        "write_off_loans_adv"
       ]
     },
     "rate": {
@@ -581,8 +733,34 @@
         "variable"
       ]
     },
+    "recourse": {
+      "description": "Whether there is recourse on a loan. Recourse on a loan refers to terms in the mortgage contract that give the owner of the note the right to pursue additional claims against the borrower beyond possession of the property. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "type": "string",
+      "enum": [
+        "full",
+        "none",
+        "partial"
+      ]
+    },
     "regulatory_book": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/regulatory_book"
+    },
+    "repayment_frequency": {
+      "description": "Repayment frequency of the product.",
+      "type": "string",
+      "enum": [
+        "daily",
+        "weekly",
+        "bi_weekly",
+        "monthly",
+        "bi_monthly",
+        "quarterly",
+        "semi_annually",
+        "annually",
+        "at_maturity",
+        "biennially",
+        "sesquiennially"
+      ]
     },
     "reporting_entity_name": {
       "description": "The name of the reporting legal entity for display purposes.",
@@ -667,6 +845,7 @@
         "credit_card",
         "current",
         "current_io",
+        "debt_securities_issued",
         "deferred",
         "deferred_tax",
         "depreciation",
@@ -682,10 +861,12 @@
         "isa_io",
         "isa_time_deposit",
         "isa_time_deposit_io",
+        "loans_and_advances",
         "money_market",
         "non_deferred",
         "non_product",
         "other",
+        "other_financial_liab",
         "prepaid_card",
         "prepayments",
         "provision",
@@ -709,6 +890,12 @@
         "a",
         "b"
       ]
+    },
+    "undrawn_provision_amount": {
+      "description": "The amount of reserves that is provisioned by the financial institution to cover the potential loss on the undrawn portion of a loan. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
     },
     "version_id": {
       "description": "The version identifier of the data such as the firm's internal batch identifier.",

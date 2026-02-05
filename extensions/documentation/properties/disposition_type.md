@@ -18,7 +18,8 @@ For additional details refer to: https://www.federalreserve.gov/apps/reportingfo
 ├── liquidation
 ├── sold
 ├── fully_participated
-└── fully_syndicated
+├── fully_syndicated
+└── expired
 ```
 
 ### payoff
@@ -38,5 +39,9 @@ Fully Participated - The loan has been fully participated out to other financial
 
 ### fully_syndicated
 Fully Syndicated - The loan has been fully syndicated to a group of lenders, where the original lender may retain a portion of the loan but has distributed the majority of the credit risk to the syndicate members.
+
+### expired
+
+Expired - The loan commitment or agreement has reached its contractual expiration without renewal or extension. This includes commitments to commit and similar arrangements where terms were agreed but the facility was not drawn, renewed, or finalised, resulting in expiration as of the reporting date.
 
 --- 
