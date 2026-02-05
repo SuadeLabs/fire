@@ -893,6 +893,7 @@ refer to interest cashflows only, and do not include any principal flows
 ├── house_purchase
 │   └── house_purchase_cstr
 ├── ips
+├── land
 ├── lifetime_mortgage
 ├── medical
 ├── non_b20
@@ -979,6 +980,9 @@ Those Loans not complying with the guidelines and expectations set out in OSFI's
 ### ips
 From [CRR][crr] Article 113(7):
 > An **institutional protection scheme** is a contractual or statutory liability arrangement which protects those institutions and in particular ensures their liquidty and solvency where necessary;
+
+### land
+a loan given for financing for unimproved or non-revenue generating land where servicing or development has not occurred.
 
 ### lifetime_mortgage
 >A **lifetime_mortgage** is a very specific kind of British mortgage contract and is defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G1294.html). It is geared towards customers of a certain age in order to release equity and typically repayment occurs at the time of the customers death when the property is sold;
