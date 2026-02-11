@@ -26,10 +26,12 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── collateral
 ├── commitments
 ├── critical_service
+├── credit_risk
 ├── dealing_revenue
     ├── dealing_rev_cr 
     ├── dealing_rev_dbt_issue   
     ├── dealing_rev_debt  
+        └── dealing_rev_debt_recl
     ├── dealing_rev_deposits  
     ├── dealing_rev_non_fin
 │   ├── dealing_rev_fx
@@ -53,6 +55,7 @@ The **purpose** property describes the reason behind the creation or usage of th
         └── dealing_rev_deriv_oth
             └── dealing_rev_dr_oth_eco
     ├── dealing_rev_loan
+        └── dealing_rev_loan_recl
     ├── dealing_rev_oth_finan
     └── dealing_rev_short    
 ├── defined_benefit
@@ -116,6 +119,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │       └── regular_wages
 ├── fv_hedge
 ├── fx
+    └── fx_reclass
 ├── intangible
 │   └── intangible_lease
 ├── interest
@@ -142,6 +146,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── mtg_insurance
 │   ├── mtg_ins_nonconform
 ├── net_inv_hedge
+    └── net_inv_reclass
 ├── operational
 │   ├── cash_management
 │   ├── clearing
@@ -170,6 +175,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── recovery
 │   ├── recovery_debt_sec
 │   └── recovery_loan_adv
+├── real_estate
 ├── rec_unidentified_cpty
 ├── reclassification
 ├── reference
@@ -312,6 +318,9 @@ This refers to other **immovable property** not included in investment property 
 ### pv_future_spread_inc
 Present value of future spread income subject to prepayment risk, such as non-credit enhancing interest-only strips and deferred mortgage placement fees receivable.  Required for BCAR risk weight and reporting.
 
+### real_estate
+Real estate expenses’ shall mean expenses for repairs and maintenance that do not improve the use or prolong the useful life of the real estate, as well as utility expenses (water, electricity and heating). 
+
 ### rec_unidentified_cpty
 Corporate and retail receivables with unidentified counterparties.  Required for BCAR risk weight and reporting.
 
@@ -346,8 +355,11 @@ For example, in the EBA's FINREP F.1.3 report, the effective portion of the vari
 IFRS 9.6.5.2 defines a **fair value hedge** as follows:
  > A hedge of the exposure to changes in fair value of a recognised asset/liability or an unrecognised firm commitment (or component thereof) that is attributable to a particular risk and could affect profit or loss.
 
- ### net_inv_hedge
+### net_inv_hedge
 A hedge of the foreign currency exposure arising from the net investment in a foreign operation.
+
+### net_inv_reclass
+The reclassification (recycling) of cumulative effective hedge gains or losses to profit or loss relating to discontinued hedges of net investments in foreign operations, occurring when the hedged foreign operation is disposed of or when the hedge is determined to be no longer effective.
 
 ### fees
 Describes an account that holds the amount of fee/commission receivables/payables as reported in a Profit and Loss report.
@@ -369,6 +381,9 @@ All other corporate finance fees not classified as M&A advisory or treasury serv
 
 ### credit_card_fee
 Describes an account that holds the amount of fees receivables originating from **credit cards**.
+
+### credit_risk
+Expenses related to credit risk’ shall mean administrative expenses in the context of credit events, such as expenses incurred in respect of taking possession of collateral or legal proceedings
 
 ### current_account_fee
 Describes an account that holds the amount of fees receivables/payables originating from **current accounts**.
@@ -514,8 +529,14 @@ Describes an account that holds the amount of profits or losses arising from the
 ### dealing_rev_debt
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **debt securities**.
 
+### dealing_rev_debt_recl
+Gains or losses arising from the reclassification of debt securities between IFRS 9 measurement categories (Amortised Cost, Fair Value through Other Comprehensive Income, or Fair Value through Profit or Loss), recognized at the reclassification date when an entity changes its business model for managing these financial assets.
+
 ### dealing_rev_loan
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **loans and advances**.
+
+### dealing_rev_loan_recl
+Gains or losses arising from the reclassification of loans and advances between IFRS 9 measurement categories (Amortised Cost, Fair Value through Other Comprehensive Income, or Fair Value through Profit or Loss), recognized at the reclassification date when an entity changes its business model for managing these financial assets.
 
 ### dealing_rev_short
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **short positions**.
@@ -640,6 +661,9 @@ Describes an account that holds the amount of:
 
 ### fx
 *needs definition*
+
+### fx_reclass
+The reclassification (recycling) of cumulative foreign currency translation differences previously recognized in other comprehensive income (OCI) to profit or loss, occurring upon disposal, partial disposal, or loss of control of a foreign operation, or repayment of a monetary item that forms part of the net investment.
 
 ### admin
 *needs definition*
