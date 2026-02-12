@@ -133,6 +133,11 @@
         "d"
       ]
     },
+    "established_date": {
+      "description": "The effective date from which the investee’s business age is determined. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
+    },
     "fitch_lt": {
       "description": "Fitch long term credit ratings",
       "type": "string",
