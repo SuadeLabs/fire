@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "financials_date"
-schemas:    [customer]
+schemas:    [customer, issuer, guarantor]
 ---
 
 # financials_date

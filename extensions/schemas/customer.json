@@ -147,15 +147,7 @@
         "US"
       ]
     },
-    "financials_date": {
-      "description": "The as of date of the financial information. Also see [accounts_payable], [accounts_receivable], [capital_exp], [cash_securities], [curr_assets], [curr_liabilities], [depr_amort], [fixed_assets], [interest_expense], [inventory], [long_term_debt], [long_term_debt_maturity_amount], [net_income], [net_sales], [operating_income], [retained_earnings], [short_term_debt], [tangible_assets], [total_assets], [total_liabilities]\n\nRefer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
-      "type": "string",
-      "format": "date-time",
-      "jurisdictions": [
-        "LU",
-        "US"
-      ]
-    },
+
     "fixed_assets": {
       "description": "From the entity's financial statements: The tangible property of the entity used in the business and not for resale, net of depreciation. This includes, but is not limited to, buildings, furniture, fixtures, equipment, and land. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
       "type": "integer",
