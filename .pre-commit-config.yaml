@@ -1,0 +1,10 @@
+repos:
+  - repo: local
+    hooks:
+      - id: build-examples-readme
+        name: Build examples/README.md from directory structure
+        entry: python3 scripts/build_examples_readme.py && git add examples/README.md
+        language: system
+        pass_filenames: false
+        stages: [commit]
+        files: ^examples/
