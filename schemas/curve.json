@@ -47,8 +47,23 @@
             "description": "The reference item for the value. (x-axis)",
             "type": "string",
             "enum": [
-              "o_n", "1w", "1m", "3m", "6m", "9m", "12m", "15m", "18m",
-               "21m", "24m", "27m", "30m", "33m", "36m", "60m", "120m"
+              "o_n",
+              "1w",
+              "1m",
+              "3m",
+              "6m",
+              "9m",
+              "12m",
+              "15m",
+              "18m",
+              "21m",
+              "24m",
+              "27m",
+              "30m",
+              "33m",
+              "36m",
+              "60m",
+              "120m"
             ]
           },
           "value": {
@@ -63,7 +78,10 @@
             ]
           }
         },
-        "required": ["reference", "value"]
+        "required": [
+          "reference",
+          "value"
+        ]
       }
     },
     "version_id": {
@@ -71,32 +89,54 @@
       "type": "string"
     }
   },
-  "required": ["id", "date", "values"],
+  "required": [
+    "id",
+    "date",
+    "values"
+  ],
   "additionalProperties": true,
-  "if": {
-    "properties": { "type": { "const": "risk_rating" } },
-    "required": ["type"]
-  },
-  "then": {
-    "properties": {
-      "values": {
-        "items": {
-          "properties": {
-            "value": { "type": "string" }
+  "oneOf": [
+    {
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "const": "risk_rating"
+        },
+        "values": {
+          "items": {
+            "properties": {
+              "value": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "const": "risk_rating"
+          }
+        }
+      },
+      "properties": {
+        "values": {
+          "items": {
+            "properties": {
+              "value": {
+                "type": "number"
+              }
+            }
           }
         }
       }
     }
-  },
-  "else": {
-    "properties": {
-      "values": {
-        "items": {
-          "properties": {
-            "value": { "type": "number" }
-          }
-        }
-      }
-    }
-  }
+  ]
 }
