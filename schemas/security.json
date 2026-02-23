@@ -58,6 +58,7 @@
         "rate_red_frozen",
         "rate_term",
         "rate_term_prin_forgive",
+        "refinancing",
         "term_ext",
         "term_prin_forgive"
       ]
