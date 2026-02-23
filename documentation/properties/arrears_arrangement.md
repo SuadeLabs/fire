@@ -1,14 +1,14 @@
 ---
 layout:		property
 title:		"arrears_arrangement"
-schemas:	[account, loan]
+schemas:	[account, loan, security]
 ---
 
 # arrears_arrangement
 
 ---
 
-The **arrears_arrangement** is the property of a loan (debt) that describes how the borrower and lender are dealing with the unpaid capital or interest payments indicated in the **arrears_balance**. An arrears_arrangement does not necessarily require a positive arrears_balance as an arrangement may be reached between lender and borrower in anticipation of a future arrears situation eg. *Forbearance*. Forbearance is not an extremely well-defined concept within accounting standards. As such we have adopted the [forbearance definitions and categorisation adopted by the EBA][eba-forbearance-its] and used in the [Finrep ITS][finrep-its]. See also: [BBVA research paper on the topic][bbva-forbearance].
+The **arrears_arrangement** is the property of a loan or debt security that describes how the borrower/issuer and lender/holder are dealing with the unpaid capital or interest (coupon) payments indicated in the **arrears_balance**. An arrears_arrangement does not necessarily require a positive arrears_balance as an arrangement may be reached in anticipation of a future arrears situation eg. *Forbearance*. Forbearance is not an extremely well-defined concept within accounting standards. As such we have adopted the [forbearance definitions and categorisation adopted by the EBA][eba-forbearance-its] and used in the [Finrep ITS][finrep-its]. See also: [BBVA research paper on the topic][bbva-forbearance].
 
 [eba-forbearance-its]: https://www.eba.europa.eu/implementing-technical-standard-supervisory-reporting-forbearance-and-non-performing-exposures
 [bbva-forbearance]: https://www.bbvaresearch.com/wp-content/uploads/2017/12/2017-12-IFRS-9-Impact-on-forbearance-practices.pdf

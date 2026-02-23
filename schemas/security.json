@@ -41,6 +41,32 @@
       "type": "integer",
       "monetary": true
     },
+    "arrears_arrangement": {
+      "description": "The arrangement the lender/holder has made with the borrower/issuer regarding the amount referenced in the arrears_balance.",
+      "type": "string",
+      "enum": [
+        "formal",
+        "interest_grace_period",
+        "modified_tnc",
+        "none",
+        "prin_def_rate",
+        "prin_def_rate_term",
+        "prin_def_term",
+        "principal_defer",
+        "principal_forgive",
+        "rate_prin_forgive",
+        "rate_red_frozen",
+        "rate_term",
+        "rate_term_prin_forgive",
+        "term_ext",
+        "term_prin_forgive"
+      ]
+    },
+    "arrears_balance": {
+      "description": "The balance of the security amount that is considered to be in arrears. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "monetary": true
+    },
     "asset_liability": {
       "description": "Is the security (valued at either amortised cost or fair value) an asset or a liability on the firm's balance sheet.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/asset_liability"
