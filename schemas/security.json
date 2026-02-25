@@ -1010,6 +1010,7 @@
         "bankruptcy_remote",
         "called_up",
         "conversion",
+        "failed_to_deliver",
         "free_deliveries",
         "non_operational",
         "other",

@@ -110,6 +110,7 @@ Indicates that the product is a revolving credit. Revolving credit is a type of 
 ├── called_up
 ├── conversion
 ├── bankruptcy_remote
+├── failed_to_deliver
 ├── other
 ├── redeemed
    ├── refinanced
@@ -141,6 +142,11 @@ The instrument was repurchased by the issuing entity, such as a company repurcha
 
 ### conversion
 The instrument was converted into another form, such as preferred stock converting into common equity.
+
+### failed_to_deliver
+This identifies collateral or cash that has not been delivered or received on the date contractually agreed. For example, a repo
+where stock has been pledged on the contractual settlement date but cash has not been received will be pledge by the counterparty
+as an agreed date in the future.
 
 ### other
 Any other redemption-related action not captured by the other redemption categories.
