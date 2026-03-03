@@ -337,6 +337,16 @@
       "description": "The unique identifier for the guarantor of the loan.",
       "type": "string"
     },
+    "hedge_status": {
+      "description": "The type of eligible hedge applied to the loan.",
+      "type": "string",
+      "enum": [
+        "combined_hedge",
+        "financial_hedge",
+        "natural_hedge",
+        "unhedged"
+      ]
+    },
     "impairment_amount": {
       "description": "The impairment amount for a loan is the allowance for loan impairments set aside by the firm that accounts for the event that the loan becomes impaired in the future.",
       "type": "integer",
