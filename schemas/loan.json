@@ -854,8 +854,10 @@
       "enum": [
         "business",
         "pension",
+        "pension_assigned",
         "rent",
-        "salary"
+        "salary",
+        "salary_assigned"
       ]
     },
     "servicing_currency_code": {
