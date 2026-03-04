@@ -780,6 +780,7 @@
         "called_up",
         "free_deliveries",
         "non_operational",
+        "pending",
         "paid_up",
         "unsettled"
       ]
