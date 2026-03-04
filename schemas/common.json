@@ -853,6 +853,24 @@
       "std_30_365"
     ]
   },
+  "hedge_type": {
+    "description": "The type of hedge (fair value or cash flow hedge) associated with the holding. Whether it is hedging individually or is hedging as part of a portfolio of assets with similar risk that are hedged as a group in line with ASC 815-20-25-12 (b), ASC 815-20-2512A, or ASC 815-10-25-15.\n\nhttps://asc.fasb.org/1943274/2147480682/815-20-25-12\nhttps://asc.fasb.org/1943274/2147480682/815-20-25-12A\nhttps://asc.fasb.org/1943274/2147480682/815-10-25-15",
+    "type": "string",
+    "enum": [
+      "cf_hedge",
+      "cf_hedge_eco",
+      "combined",
+      "financial_hedge",
+      "fv_hedge",
+      "fv_hedge_eco",
+      "natural_hedge",
+      "portfolio_cf_hedge",
+      "portfolio_cf_hedge_eco",
+      "portfolio_fv_hedge",
+      "portfolio_fv_hedge_eco",
+      "unhedged"   
+    ]
+  },  
   "impairment_status": {
     "description": "The recognition stage for the impairment/expected credit loss of the product.",
     "type": "string",
