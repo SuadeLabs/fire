@@ -852,7 +852,7 @@
       "std_30_360",
       "std_30_365"
     ]
-  },
+  },  
   "impairment_status": {
     "description": "The recognition stage for the impairment/expected credit loss of the product.",
     "type": "string",
