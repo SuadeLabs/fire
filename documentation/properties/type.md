@@ -599,6 +599,7 @@ Charity serving communities and individuals. Includes non-profit institutions se
 ├── multiccy_facility
 ├── nostro
 ├── education
+├── overdraft
 └── other
 ```
 
@@ -733,6 +734,12 @@ From [Investopedia][investopedia-education-loan]:
 
 > An education loan is a sum of money borrowed to finance post-secondary education or higher education-related expenses. Education loans are intended to cover the cost of tuition, books and supplies, and living expenses while the borrower is in the process of pursuing a degree. Payments are often deferred while students are in college and, depending on the lender, for an additional six-month period after earning a degree.
 
+### overdraft
+From the EU Directive on Credit Agreements, Art.3(d)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008L0048#:~:text=means%20of%20instalments%3B-,(d),funds%20which%20exceed%20the%20current%20balance%20in%20the%20consumer%27s%20current%20account%3B,-(e)):
+> An Overdraft is a short-term facility allowing account holders to take money from their account when there is no money in it.
+
+This can be up to an agreed limit (arranged overdraft) or beyond the agreed limit at the bank’s discretion (unarranged overdraft). 
+Mapping note: Standard overdrafts should simply be mapped as accounts with type="current" and with a negative "balance". This usage of loan type="overdraft" is intended for stand-alone overdraft facilities or cases where the overdraft may also be collateralised (e.g. with real estate).
 
 ### other
 
