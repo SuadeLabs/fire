@@ -6,6 +6,7 @@ schemas:	[security]
 
 # securitisation_id
 
+
 ---
 
-Internally identifier of a securitisation transaction. Also used by all related securitisation tranches linked to the same transaction
+Internal identifier of a securitisation transaction. Also used by all securitisation tranches linked to the same transaction
