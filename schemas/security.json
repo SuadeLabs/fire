@@ -1036,7 +1036,7 @@
       "type": "integer"
     },
     "srt_type": {
-      "description": "Attribute used for a securitisation transaction. Indicates the CRR article under which a significant transfer has been achieved.",
+      "description": "Attribute used for a securitisation transaction. Indicates the CRR article under which a significant risk transfer has been achieved, if any.",
       "type": "string",
       "enum": [
         "art_244_1b",
@@ -1084,7 +1084,7 @@
       "minimum": 0.0
     },
     "third_party_risk_transfer":{
-      "description": "Attribute used for a securitisation transaction. Percentage of securitised assets transfered to 3rd party investors",
+      "description": "Attribute used for a securitisation transaction. Percentage of the securitised assets expected and unexpected losses transfered to 3rd parties.",
       "type": "number"
     },
     "trade_date": {
