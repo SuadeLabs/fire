@@ -74,7 +74,8 @@
   "required": ["id", "date", "values"],
   "additionalProperties": true,
   "if": {
-    "properties": { "type": { "const": "risk_rating" } }
+    "properties": { "type": { "const": "risk_rating" } },
+    "required": ["type"]
   },
   "then": {
     "properties": {

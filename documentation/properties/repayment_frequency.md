@@ -1,13 +1,26 @@
 ---
 layout:		property
 title:		"repayment_frequency"
-schemas:	[loan]
+schemas:	[loan, account, security]
 ---
 
 # repayment_frequency
 
----
+```bash
+├── daily
+├── weekly
+├── bi_weekly
+├── monthly
+├── bi_monthly
+├── quarterly
+├── semi_annually
+├── annually
+├── sesquiennially
+├── biennially
+└── at_maturity
+```
 
+## Loan
 Repayment frequency of the loan refers to how often the repayments occur.
 
 **The [FCA][repayment] defines 'Repayment Strategy' as:**
@@ -65,3 +78,11 @@ once every 2 years
 
 ### at_maturity
 upon maturity of the product (end_date)
+
+## Account
+Reportable products on the account schema: type = non_product, accurals, overdrafts, BANK_ACCOUNTS in calc_helpers
+
+
+## Security
+
+Reportable products on the security schema: type = bill_of_exchange, acceptance, commercial_paper, cash or sft-type = rev_repo, margin_loan 

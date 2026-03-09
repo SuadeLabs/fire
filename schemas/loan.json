@@ -18,13 +18,33 @@
       "type": "integer",
       "monetary": true
     },
+    "acc_fv_change_before_taxes_ytd": {
+      "description": "Accumulated change in fair value before taxes(YTD).",
+      "type": "integer",
+      "monetary": true
+    },
     "acc_fv_change_credit_risk": {
       "description": "Accumulated changes in fair value due to credit risk.",
       "type": "integer",
       "monetary": true
     },
+    "acc_fv_change_credit_risk_ytd": {
+      "description": "Accumulated changes in fair value due to credit risk(YTD).",
+      "type": "integer",
+      "monetary": true
+    },
     "accounting_treatment": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/accounting_treatment"
+    },
+    "accrual_status": {
+      "description": "The accrual status of the loan or line of credit.",
+      "type": "string",
+      "enum": [
+        "accrual",
+        "non_accrual",
+        "securitised",
+        "serviced_for_others"
+      ]
     },
     "accrued_interest_12m": {
       "description": "The cumulative accrued interest over the past 12 months. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -50,11 +70,29 @@
       "enum": [
         "formal",
         "interest_grace_period",
+        "mi_claim_adv",
         "modified_tnc",
         "none",
         "possessed",
+        "prin_def_rate",
+        "prin_def_rate_term",
+        "prin_def_term",
+        "principal_defer",
+        "principal_forgive",
+        "rate_prin_forgive",
+        "rate_red_frozen",
+        "rate_term",
+        "rate_term_prin_forgive",
+        "recap",
         "refinancing",
-        "temporary"
+        "renewal",
+        "reo",
+        "settlement",
+        "short_sale",
+        "temporary",
+        "term_ext",
+        "term_prin_forgive",
+        "term_recap"
       ]
     },
     "arrears_balance": {
@@ -65,19 +103,18 @@
     "asset_liability": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/asset_liability"
     },
+    "authorised_limit_amount": {
+      "description": "The total amount of authorized Credit Risk exposure for all facility.",
+      "type": "integer",
+      "monetary": true
+    },
     "balance": {
       "description": "The balance of the loan or capital still to be repaid. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
       "monetary": true
     },
     "base_rate": {
-      "description": "The base rate represents the basis of the repayment rate on the borrowed funds at the given date as agreed in the terms of the loan.",
-      "type": "string",
-      "enum": [
-        "FDTR",
-        "UKBRBASE",
-        "ZERO"
-      ]
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/base_rate"
     },
     "behavioral_curve_id": {
       "description": "The unique identifier for the behavioral curve used by the financial institution.",
@@ -195,6 +232,11 @@
       "type": "integer",
       "monetary": true
     },
+    "ead_irb_ec": {
+      "description": "The expected gross dollar exposure for each facility upon a borrower's default as determined by internal ratings-based approach. This value is used in economic capital calculations.",
+      "type": "integer",
+      "monetary": true
+    },
     "economic_loss": {
       "description": "The definition of loss, used in estimating Loss Given Default for the reporting segment. When measuring economic loss, as opposed to accounting loss",
       "monetary": true,
@@ -242,6 +284,14 @@
       "type": "integer",
       "monetary": true
     },
+    "fiduciary_status": {
+      "description": "Identification of instruments in which the observed agent acts in its own name but on behalf of and with the risk borne by a third party",
+      "type": "string",
+      "enum": [
+        "fiduciary",
+        "non_fiduciary"
+      ]
+    },
     "first_arrears_date": {
       "description": "The first date on which this loan was in arrears.",
       "type": "string",
@@ -252,6 +302,11 @@
       "type": "string",
       "format": "date-time"
     },
+    "first_principal_date": {
+      "description": "The date on which the first principal payment was/will be made based on the original loan terms. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "string",
+      "format": "date-time"
+      },
     "forbearance_date": {
       "description": "The date on which the first forbearance measure was granted to this product.  Format should be YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
       "type": "string",
@@ -309,6 +364,15 @@
         "single_not_evidenced"
       ]
     },
+    "int_reset_freq": {
+      "description": "The adjustable rate periodic interest reset period. Denominated in whole multiples of the interest_repayment_frequency. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "integer"
+    },
+    "interest_only_end_date": {
+      "description": "The date on which the previous or upcoming interest-only period ends.",
+      "type": "string",
+      "format": "date-time"
+    },
     "interest_repayment_frequency": {
       "description": "Repayment frequency of the loan interest, if different from principal.",
       "type": "string",
@@ -330,6 +394,16 @@
       "description": "The unique identifier for the issuer of the loan.",
       "type": "string",
       "maxLength": 20
+    },
+    "joint_customer_structure": {
+      "description": "Allocated portion of the joint liability facility for each debtor.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+         "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+      }
     },
     "last_arrears_date": {
       "description": "The last date on which this loan was in arrears.",
@@ -361,16 +435,36 @@
       "type": "string"
     },
     "lgd_downturn": {
-      "description": "The loss given default in the event of an economic downturn. Percentage between 0 an 1.",
-      "type": "number"
+      "description": "The loss given default in the event of an economic downturn. Percentage between 0 and 1.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
     },
     "lgd_floored": {
       "description": "The final LGD value after the relevant floors have been applied. To be used in the IRB RWA calculations",
-      "type": "number"
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
     },
     "lgd_irb": {
-      "description": "The loss given default as determined by internal rating-based methods.",
-      "type": "number"
+      "description": "The loss given default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in regulatory capital calculations.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "lgd_irb_ec": {
+      "description": "The loss given default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in economic capital calculations.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "lifetime_rate_cap": {
+      "type": "number",
+      "description": "The lifetime interest rate cap for adjustable rate loans. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information."
+    },
+    "lifetime_rate_floor": {
+      "type": "number",
+      "description": "The lifetime interest rate floor for adjustable rate loans. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information."
     },
     "limit_amount": {
       "description": "The total credit limit on the loan. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -384,6 +478,16 @@
       "minimum": 0,
       "monetary": true
     },
+    "min_interest_repayment": {
+      "description": "The minimum interest on outstanding balance and fees that customers are due to repay.",
+      "type": "integer",
+      "monetary": true
+    },
+    "min_principal_repayment": {
+      "description": "The minimum principal balance that customers are due to repay.",
+      "type": "integer",
+      "monetary": true
+    },
     "minimum_balance": {
       "description": "Indicates the minimum balance of each loan within the aggregate.",
       "type": "integer",
@@ -394,8 +498,12 @@
       "type": "integer",
       "monetary": true
     },
+    "mna_id": {
+      "description": "The unique identifier of the Master Netting Agreement the loan falls under. Typically used where a legally enforceable right to offset exists and where the reporting entity intends to settle on a net basis.",
+      "type": "string"
+    },
     "movement": {
-      "description": "The movement parameter describes how the loan arrived to the firm.",
+      "description": "The movement parameter describes how an asset or liability arrived or left the firm.",
       "type": "string",
       "enum": [
         "acquired",
@@ -426,6 +534,11 @@
       "description": "Is the loan reported on the balance sheet of the financial institution?",
       "type": "boolean"
     },
+    "orig_acc_fv_change_credit_risk": {
+      "description": "The difference between the outstanding nominal amount and the purchase price of the instrument at the purchase date. This amount should be reported for instruments purchased for an amount lower than the outstanding amount due to credit risk deterioration.",
+      "type": "integer",
+      "monetary": true 
+    },
     "orig_credit_score": {
       "description": "The credit score of the customer at origination of the product using a commercially available credit bureau score.",
       "type": "integer"
@@ -440,6 +553,29 @@
       "type": "integer",
       "monetary": true
     },
+    "orig_rate_type": {
+      "description": "The rate_type at origination.",
+      "type": "string",
+      "enum": [
+        "combined",
+        "fixed",
+        "tracker",
+        "variable"
+      ]
+    },
+    "orig_repayment_type": {
+      "type": "string",
+      "description": "The repayment_type at origination.",
+      "enum": [
+        "combined",
+        "fixed",
+        "french",
+        "interest_only",
+        "option_arm",
+        "other",
+        "repayment"
+      ]
+    },
     "originator_id": {
       "description": "The unique identifier used by the financial institution to identify the originator of the loan product.",
       "type": "string"
@@ -453,17 +589,47 @@
         "spv"
       ]
     },
+    "other_accounting_adj": {
+      "description": "Accounting adjustments applied to the carrying amount for financial reporting. This is inclusive of EIR adjustments or adjustments due to timing or reconciliation differences",
+      "type": "integer",
+      "monetary": true
+    },
     "parent_facility_id": {
       "description": "The parent code assigned by the financial institution to identify a facility.",
       "type": "string"
     },
-    "pd_irb": {
-      "description": "The probability of default as determined by internal rating-based methods. Percentage between 0 an 1.",
+    "participation_int": {
+      "description": "For participated or syndicated credit facilities that have closed and settled, the percentage of the total loan commitment held by the reporting entity. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
       "type": "number"
     },
+    "participation_type": {
+      "description": "For participated or syndicated credit facilities that have closed and settled, indicates the type of participation in the loan. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
+      "type": "string",
+      "enum": [
+        "agent_non_snc",
+        "agent_snc",
+        "none",
+        "participant_non_snc",
+        "participant_snc"
+      ]
+    },
+    "pd_irb": {
+      "description": "The probability of default as determined by internal rating-based methods. Percentage between 0 and 1.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "pd_irb_ec": {
+      "description": "The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in economic capital calculations.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
     "pd_retail_irb": {
-      "description": "The retail probability of default as determined by internal rating-based methods. Percentage between 0 an 1.",
-      "type": "number"
+      "description": "The retail probability of default as determined by internal rating-based methods. Percentage between 0 and 1.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
     },
     "prev_payment_date": {
       "description": "The most recent previous date at which interest was paid or accrued_interest balance returned to zero.",
@@ -494,15 +660,23 @@
       "enum": [
         "agriculture",
         "bridging_loan",
+        "business_recap",
         "buy_to_let",
         "buy_to_let_construct",
         "buy_to_let_further_advance",
         "buy_to_let_house_purchase",
         "buy_to_let_other",
         "buy_to_let_remortgage",
+        "cash_out",
+        "commercial",
+        "commercial_property",
         "commodities_finance",
         "construction",
         "consumer_buy_to_let",
+        "corporate_finance",
+        "debt_consolidation",
+        "education",
+        "esop",
         "first_time_buyer",
         "first_time_buyer_cstr",
         "further_advance",
@@ -510,22 +684,33 @@
         "house_purchase",
         "house_purchase_cstr",
         "ips",
+        "land",
         "lifetime_mortgage",
+        "medical",
+        "mergers_acquisitions",
         "non_b20",
         "object_finance",
         "object_finance_hq",
         "operational",
+        "operational_non_sym",
+        "operational_sym",
         "other",
+        "portfolio_acquisition",
         "project_finance",
         "project_hq_phase",
         "project_pre_op",
         "promotional",
+        "rate",
         "reference",
+        "refinance",
         "remortgage",
         "remortgage_construct",
         "remortgage_other",
         "remortgage_othr_cstr",
-        "speculative_property"
+        "renovation",
+        "speculative_property",
+        "stock_buyback",
+        "term"
       ]
     },
     "rate": {
@@ -540,6 +725,15 @@
         "fixed",
         "tracker",
         "variable"
+      ]
+    },
+    "recourse": {
+      "description": "Whether there is recourse on a loan. Recourse on a loan refers to terms in the mortgage contract that give the owner of the note the right to pursue additional claims against the borrower beyond possession of the property. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
+      "type": "string",
+      "enum": [
+        "full",
+        "none",
+        "partial"
       ]
     },
     "ref_income_amount": {
@@ -577,7 +771,10 @@
       "type": "string",
       "enum": [
         "combined",
+        "fixed",
+        "french",
         "interest_only",
+        "option_arm",
         "other",
         "repayment"
       ]
@@ -589,6 +786,16 @@
     "reporting_id": {
       "description": "The internal ID for the legal entity under which the account is being reported.",
       "type": "string"
+    },
+    "repurchase_status": {
+      "description": "The current status of the repurchase of the loan.",
+      "type": "string",
+      "enum": [
+        "complete_no_repurchase",
+        "complete_repurchased",
+        "in_process",
+        "initiated"
+      ]
     },
     "resolution_date": {
       "description": "Date of resolution of the defaulted facility.",
@@ -603,6 +810,11 @@
     "reversion_rate": {
       "description": "The rate to which the loan will revert after the reversion date. Percentages represented as a decimal/float, so 1.5 implies 1.5%.",
       "type": "number"
+    },
+    "review_date": {
+      "description": "The currently scheduled review date for Counterparty exposure. This date should be set in the future. Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
+      "type": "string",
+      "format": "date-time"
     },
     "risk_country_code": {
       "description": "Two-letter country code describing where the risk for the product resides. In accordance with ISO 3166-1",
@@ -632,14 +844,20 @@
         "subordinated_unsecured"
       ]
     },
+    "servicer_id": {
+      "description": "This is the unique id to identify the servicer of a loan.",
+      "type": "string"
+    },
     "servicing": {
       "description": "The method by which the loan shall be repaid",
       "type": "string",
       "enum": [
         "business",
         "pension",
+        "pension_assigned",
         "rent",
-        "salary"
+        "salary",
+        "salary_assigned"
       ]
     },
     "servicing_currency_code": {
@@ -649,6 +867,10 @@
     "source": {
       "description": "The source(s) where this data originated. If more than one source needs to be stored for data lineage, it should be separated by a dash. eg. Source1-Source2",
       "type": "string"
+    },
+    "spread": {
+      "type": "integer",
+      "description": "The additional rate that is added to the relevant base rate to determine the monthly interest rate of the loan. This is represented in basis points (bps). Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information."
     },
     "start_date": {
       "description": "The timestamp that the trade or financial product commences. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
@@ -662,15 +884,31 @@
         "actual",
         "cancellable",
         "cancelled",
+        "closed",
         "committed",
         "defaulted",
+        "frozen",
         "revolving"
       ]
+    },
+    "status_date": {
+      "description": "Provides the date on which status changed.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "syndication_id": {
+      "description": "The code assigned by the lead arranger of the syndicated contract to uniquely identify each contract. Each syndicated contract will have one syndicated contract identifier. This value will not change over time and cannot be used by the lead arranger as the contract identifier for any other contract",
+      "type": "string"
     },
     "trade_date": {
       "description": "The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
       "format": "date-time"
+    },
+    "transferred_amount": {
+      "description": "Transferred amount of the economic ownership of the financial asset.",
+      "type": "integer",
+      "monetary": true
     },
     "type": {
       "description": "The form of the loan product administered by the financial institution, with regards to common regulatory classifications.",
@@ -685,21 +923,39 @@
         "credit_card",
         "credit_facility",
         "education",
+        "export",
         "financial_lease",
+        "heloan",
         "heloc",
+        "heloc_lockout",
+        "import",
         "liquidity_facility",
         "mortgage",
         "mortgage_charter",
+        "mortgage_cra",
+        "mortgage_fha_project",
+        "mortgage_fha_res",
+        "mortgage_hud235",
+        "mortgage_no_pmi",
+        "mortgage_pmi",
+        "mortgage_va",
         "multiccy_facility",
         "new_auto",
         "nostro",
         "other",
+        "overdraft",
         "personal",
         "q_reverse_mortgage",
         "reverse_mortgage",
         "trade_finance",
         "used_auto"
       ]
+    },
+    "undrawn_provision_amount": {
+      "description": "The amount of reserves that is provisioned by the financial institution to cover the potential loss on the undrawn portion of a loan. Monetary type represented as a naturally positive integer number of cents/pence.",
+      "type": "integer",
+      "minimum": 0,
+      "monetary": true
     },
     "version_id": {
       "description": "The version identifier of the data such as the firm's internal batch identifier.",

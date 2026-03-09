@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "last_arrears_date"
-schemas:    [loan]
+schemas:    [loan, account]
 ---
 
 # last_arrears_date

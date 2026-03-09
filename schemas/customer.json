@@ -34,7 +34,7 @@
       "monetary": true
     },
     "incurred_cva": {
-      "description": "The amount of credit valuation adjustements being recognised by the institution as an incurred write-down, calculated without taking into account any offsetting debit value adjustment attributed to the firm's own credit risk, that has been already excluded from own funds.",
+      "description": "The amount of credit valuation adjustments being recognised by the institution as an incurred write-down, calculated without taking into account any offsetting debit value adjustment attributed to the firm's own credit risk, that has been already excluded from own funds.",
       "type": "integer",
       "monetary": true
     },
@@ -42,6 +42,16 @@
       "description": "Hypothetical capital of the QCCP in accordance with Article 50c of Regulation (EU) No 648/2012",
       "type": "integer",
       "monetary": true
+    },
+    "mic_code": {
+      "description": "The Stock Exchange where the company's primary stock trades",
+      "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/mic_code"
+    },
+    "pd_irb_ec": {
+      "description": "The probability of default as determined by internal ratings-based approach. Expressed as a percentage between 0 and 1. This value is used in economic capital calculations.",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
     },
     "product_count": {
       "description": "The number of active products/trades this customer has with the firm.",

@@ -1,10 +1,10 @@
 ---
 layout:     property
-title:      "acc_changes_fv_credit_risk"
-schemas:    [loan, security]
+title:      "acc_fv_change_credit_risk"
+schemas:    [loan, security, account]
 ---
 
-# acc_changes_fv_credit_risk
+# acc_fv_change_credit_risk
 
 ---
 

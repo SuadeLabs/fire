@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "guarantor_id"
-schemas:    [loan, agreement, security]
+schemas:    [account, loan, agreement, security]
 ---
 
 # guarantor_id
@@ -9,3 +9,5 @@ schemas:    [loan, agreement, security]
 ---
 
 The **guarantor id** is the unique identifier for the guarantor within the financial institution.
+
+---

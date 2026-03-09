@@ -7,7 +7,7 @@
     "count": {
       "description": "Number of records in this batch",
       "type": "integer",
-      "min": 0
+      "minimum": 0
     },
     "data": {
       "description": "An array of data items of a single type",

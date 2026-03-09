@@ -28,6 +28,14 @@ Financial assets measured at fair value through other comprehensive income due t
 ### amortised_cost
 Financial assets measured at amortised cost in accordance with IFRS.
 
+### deed_in_lieu
+A deed-in-lieu of foreclosure is an arrangement where a borrower voluntarily turns over ownership of their home to the lender to avoid the foreclosure process. Refer to https://www.consumerfinance.gov/ask-cfpb/what-is-a-deed-in-lieu-of-foreclosure-en-291/.
+
+### held_for_invest
+When a reporting entity holds an asset or purchased an asset (and has not elected fair value option (FVO) method of accounting) for which it has the intent and ability to hold for the foreseeable future or to maturity or payoff, the asset should be classified as held for investment. This is distinct from an asset classified as held-for-long-term-investment which has been elected to be measured using a fair value option.
+
+### held_for_invest_fvo
+When a reporting entity holds an asset or purchased an asset (and elected fair value option (FVO) method of accounting) for which it has the intent and ability to hold for the foreseeable future or to maturity or payoff, the asset should be classified as held for investment. This is distinct from an asset classified as held-for-long-term-investment which has been elected to be measured at amortized cost basis.
 
 *Legacy and [IAS39][ias39] based classifications:*
 
@@ -53,15 +61,50 @@ As defined in the relevant national GAAP based on BAD.
 As defined in the relevant national GAAP based on BAD.
 
 ### ntnd_cost_based
-As defined in Part 1, Section 4 of Annex V in [Commission Implementing Regulation (EU) 2021/451]: Under national GAAP based on BAD, for financial assets, ‘cost-based methods’ shall include those valuation rules by which the debt instrument is measured at cost plus interest accrued less impairment losses.
+As defined in Part 1, Section 4 of Annex V in [Commission Implementing Regulation (EU) 2021/451]: Under national GAAP based on BAD, for financial assets, 'cost-based methods' shall include those valuation rules by which the debt instrument is measured at cost plus interest accrued less impairment losses.
 
-Under national GAAP based on BAD, ‘Non-trading non-derivative financial assets measured at a cost-based method’ includes financial instruments measured at cost-based methods as well as instruments measured at the lower of cost or market (‘LOCOM’) under a non-continuous basis (moderate LOCOM), regardless of their actual measurement as of the reporting reference date. Assets measured at moderate LOCOM are assets for which LOCOM is applied only in specific circumstances. The applicable accounting framework provides for those circumstances, such as impairment, a prolonged decline in fair value compared to cost or change in the management intent. 
+Under national GAAP based on BAD, 'Non-trading non-derivative financial assets measured at a cost-based method' includes financial instruments measured at cost-based methods as well as instruments measured at the lower of cost or market ('LOCOM') under a non-continuous basis (moderate LOCOM), regardless of their actual measurement as of the reporting reference date. Assets measured at moderate LOCOM are assets for which LOCOM is applied only in specific circumstances. The applicable accounting framework provides for those circumstances, such as impairment, a prolonged decline in fair value compared to cost or change in the management intent. 
 
 ### other_gaap
-As defined in Part 1, Section 4 of Annex V in [Commission Implementing Regulation (EU) 2021/451]: Under national GAAP based on BAD, ‘Other non-trading non-derivative financial assets’ shall include financial assets that do not qualify for inclusion in other accounting portfolios. That accounting portfolio includes, among others, financial assets that are measured at LOCOM on a continuous basis (‘strict LOCOM’). Assets measured at strict LOCOM are assets for which the applicable accounting framework either provides for the initial and subsequent measurement at LOCOM, or the initial measurement at cost and the subsequent measurement at LOCOM.
+As defined in Part 1, Section 4 of Annex V in [Commission Implementing Regulation (EU) 2021/451]: Under national GAAP based on BAD, 'Other non-trading non-derivative financial assets' shall include financial assets that do not qualify for inclusion in other accounting portfolios. That accounting portfolio includes, among others, financial assets that are measured at LOCOM on a continuous basis ('strict LOCOM'). Assets measured at strict LOCOM are assets for which the applicable accounting framework either provides for the initial and subsequent measurement at LOCOM, or the initial measurement at cost and the subsequent measurement at LOCOM.
+
+### cb_or_demand_gaap
+Cash balances at central banks and other demand deposits in accordance with GAAP.
+
+### held_for_trading_gaap
+Financial assets held for trading in accordance with GAAP.
+
+### fv_thru_pnl_gaap
+Financial assets measured at fair value through profit and loss and designated as such upon initial recognition or subsequently in accordance with GAAP, except those classified as financial assets held for trading.
+
+### fv_mandatorily_gaap
+Non-trading financial assets mandatorily measured at fair value through profit or loss in accordance with GAAP.
 
 ---
 
 [ifrs9]: https://www.iasplus.com/en-gb/standards/ifrs-en-gb/ifrs9
 [ias39]: https://www.iasplus.com/en/standards/ias/ias39
 [Commission Implementing Regulation (EU) 2021/451]: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:02021R0451-20220303&from=EN
+
+
+
+| Property              | Accounting classification of instruments                                                         |
+| ----------------      | ---------------                                                                                  |
+| held_for_trading      | IFRS: Financial assets held for trading                                                          |
+| trading_gaap          | nGAAP: Trading Financial assets                                                                  |
+| fv_thru_pnl           | IFRS: Financial assets designated at fair value through profit or loss                           |
+| amortised_cost        | IFRS: Financial assets at amortised cost                                                         |
+| ntnd_fv_pl            | nGAAP: Non-trading non-derivative financial assets measured at fair value through profit or loss |
+| fv_oci                | IFRS: Financial assets at fair value through other comprehensive income                          |
+| ntnd_fv_equity        | nGAAP: Non-trading non-derivative financial assets measured at fair value to equity              |
+| loans_and_recs        | nGAAP: Loans and receivables                                                                     |
+| held_to_maturity      | nGAAP: Held-to-maturity investments                                                              |
+| ntnd_cost_based       | nGAAP: Non-trading non-derivative financial instruments measured at a cost-based method          |
+| cb_or_demand          | IFRS: Cash balances at central banks and other demand deposits                                   |
+| other_gaap            | nGAAP: Other Non-trading Non-derivative Financial assets                                         |
+| fv_mandatorily        | IFRS: Non-trading financial assets mandatorily at fair value through profit or loss              |
+| available_for_sale    | nGAAP: Available-for-sale financial assets                                                       |
+| cb_or_demand_gaap     | nGAAP: Cash balances at central banks and other demand deposits                                  |
+| held_for_trading_gaap | nGAAP: Financial assets held for trading                                                         |
+| fv_thru_pnl_gaap      | nGAAP: Financial assets designated at fair value through profit or loss                          |
+| fv_mandatorily_gaap   | nGAAP: Non-trading financial assets mandatorily at fair value through profit or loss             |

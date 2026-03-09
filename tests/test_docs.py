@@ -18,7 +18,7 @@ from . import (
     schema_properties,
 )
 
-
+LOCAL = os.getenv("GITHUB_ACTIONS") != "true"
 MISSING_DOCS = [
     "account_ids",
     "cb_haircut",
@@ -111,6 +111,8 @@ class TestDocs(unittest.TestCase):
             "country_code",  # TL;DR
             "currency_code",  # TL;DR
             "nace_code",  # TL;DR
+            "legal_form",  # TL;DR
+            "national_id_type",  # TL;DR
             "interest_repayment_frequency",  # Same as repayment_frequency
             "reporting_relationship",  # same as relationship
         ]
@@ -134,6 +136,7 @@ class TestDocs(unittest.TestCase):
                             schema_name, v, enum
                         )  # noqa
 
+    @pytest.mark.skipif(LOCAL, reason="Too long to run locally")
     def test_urls_in_docs(self):
         async def async_requests(urls):
             async with httpx.AsyncClient(timeout=60) as client:
