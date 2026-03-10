@@ -108,6 +108,7 @@ Indicates that the product is a revolving credit. Revolving credit is a type of 
 ```bash
 ├── paid_up
 ├── called_up
+├── pending
 ├── conversion
 ├── bankruptcy_remote
 ├── failed_to_deliver
@@ -157,6 +158,9 @@ When used in combination with the purpose attribute, 'default_fund', equates to 
 
 [paidup]: https://www.acra.gov.sg/how-to-guides/setting-up-a-local-company/share-capital
 [calledup]: https://www.legislation.gov.uk/ukpga/2006/46/section/547?view=plain
+
+### pending
+Representing items in the course of collection or transmission to/from financial institutions but not yet received or paid
 
 ### bankruptcy_remote
 This indicates that the reporting institution has determined that the security will not be available to an entity's creditors

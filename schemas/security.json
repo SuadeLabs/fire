@@ -1015,6 +1015,7 @@
         "non_operational",
         "other",
         "paid_up",
+        "pending",
         "redeemed",
         "refinanced",
         "replaced",
