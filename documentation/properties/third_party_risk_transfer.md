@@ -5,6 +5,7 @@ schemas:	[security]
 ---
 
 # third_party_risk_transfer
-Expected loss (EL) and unexpected loss (UL) of securitised assets transfered to third parties, expressed as a percentage of the total securitised assets EL + UL
+Risk transfer claimed by a securitisation Originator, measured as the Expected loss (EL) + the Unexpected loss (UL) of the underlying **securitised assets** transfered to third parties, expressed as a percentage of the EL + UL of the total **securitised assets**. For an originator reporting under SA, EL shall be the specific credit risk adjustment of the securitised assets and the UL shall be the capital requirement of the securitised assets. 
+
 
 ---
