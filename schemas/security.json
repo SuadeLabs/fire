@@ -1198,10 +1198,6 @@
       "minimum": 0,
       "monetary": true
     },
-    "unique_id": {
-      "description": "Attribute used for a securitisation transaction. Unique identifer used for securitisations issued on or after 1 January 2019, as defined in Article 11(1) of Commission Delegated Regulation (EU) 2020/1224",
-      "type": "string"
-    },
     "valuation_type": {
       "description": "Methodology used in the determination of the collateral value. Refer to AnaCredit Reporting Manual Part II, chapter 9.4.6 Protection valuation approach",
       "type": "string",
