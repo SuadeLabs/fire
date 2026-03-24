@@ -433,6 +433,11 @@
       "type": "string",
       "format": "date-time"
     },
+    "last_nonfull_pay_date": {
+      "description": "The last payment date on which the obligor did not repay the balance in full.",
+      "type": "string",
+      "format": "date-time"
+    },
     "last_payment_date": {
       "description": "The final payment date for interest payments, often coincides with end_date.",
       "type": "string",
