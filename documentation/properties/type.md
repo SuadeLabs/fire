@@ -869,6 +869,8 @@ Mortgages insured by the Department of Veterans Affairs.
 ├── cash
 ├── index
 ├── loan_pool
+├── securitisation
+│   └── re_securitisation
 └── other
 ```
 
@@ -1206,6 +1208,13 @@ Performance standby letter of credit
 
 ### performance_guarantee
 _Needs definition_
+
+### securitisation
+Securitisation transaction (see https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02017R2402-20210409#art_8:~:text=(1)%C2%A0,%E2%80%98securitisation%E2%80%99)
+
+### re_securitisation
+Securitisation transaction where at least one of the securitised exposures is a securitisation position (sub-type of securitisation)
+https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02017R2402-20210409#art_8:~:text=(4)%C2%A0,%E2%80%98resecuritisation
 
 ### share_agg
 _Needs definition_
