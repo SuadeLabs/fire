@@ -22,7 +22,8 @@ For PRA-regulated entities, this field also supports compliance with Article 123
 │   └── fv_hedge
 │       ├── portfolio_fv_hedge
 │       │   └── portfolio_fv_hedge_eco
-│       └── fv_hedge_eco   
+│       └── fv_hedge_eco  
+├── net_inv_hedge 
 ├── natural_hedge
 └── unhedged
 ```
@@ -44,6 +45,9 @@ Fair value hedge designation.
 
 ### fv_hedge_eco
 Fair value with an economic hedge designation.
+
+### net_inv_hedge
+hedge of the foreign currency exposure arising from the net investment in a foreign operation.
 
 ### portfolio_cf_hedge
 Cash flow hedge designation for a portfolio of financial assets or financial liabilities.
