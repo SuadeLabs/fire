@@ -245,6 +245,10 @@
     "el_irb": {
       "description": "The best estimate of expected loss when in default.",
       "type": "number"
+    },  
+    "el_irb_adj": {
+      "description": "Adjustment to expected loss due to post-model adjustments.",
+      "type": "number"
     },
     "encumbrance_amount": {
       "description": "The amount of the loan that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -850,6 +854,10 @@
     },
     "risk_weight_std": {
       "description": "The standardised approach risk weight represented as a decimal/float such that 1.5% is 0.015.",
+      "type": "number"
+    },
+    "rwa_irb_adj": {
+      "description": "Adjustment to risk-weighted exposure amount due to post-model adjustments.",
       "type": "number"
     },
     "secured": {
