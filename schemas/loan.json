@@ -348,6 +348,7 @@
         "fv_hedge",
         "fv_hedge_eco",
         "natural_hedge",
+        "net_inv_hedge",
         "portfolio_cf_hedge",
         "portfolio_cf_hedge_eco",
         "portfolio_fv_hedge",
