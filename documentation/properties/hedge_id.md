@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "hedge_id"
-schemas:    [derivative, security]
+schemas:    [account, derivative, loan, security]
 ---
 
 # hedge_id
