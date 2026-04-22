@@ -158,17 +158,39 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── prime_brokerage
 ├── ppe
 │   ├── computer_peripheral
+│   │   ├── cost_computer_perip
+│   │   ├── reval_computer_periph
 │   ├── furniture
+│   │   ├── cost_furniture
+│   │   ├── reval_furniture
 │   ├── land
+│   │   ├── cost.land
+│   │   ├── reval.land
 │   ├── machinery
+│   │   ├── cost_machinery
+│   │   ├── reval_machinery
 │   ├── property
 │   │   ├── investment_property
+│   │   │   └── cost_invest_prop
+│   │   │   └── fv_invest_prop
 │   │   ├── investment_property
+│   │   │   └── cost_invest_prop
+│   │   │   └── fv_invest_prop
 │   │   │   └── investment_prop_lease
+│   │   │       └── cost_invest_prop_lease
+│   │   │       └── fv_invest_prop_lease
 │   │   ├── own_property
+│   │   │   └── cost_own_prop
+│   │   │   └── reval_own_prop
 │   │   └── property_lease
+│   │   │   └── cost_prop_lease
+│   │   │   └── reval_prop_lease
 │   ├── telecom_equipment
-│   └── vehicle
+│   │   │   └── cost_telecom_equip
+│   │   │   └── reval_telecom_equip
+│   ├── vehicle
+│   │   │   └── cost_vehicle
+│   └─  └─  └── reval_vehicle
 ├── general_credit_risk
 ├── goodwill
 ├── pv_future_spread_inc
@@ -300,17 +322,41 @@ IAS 40.5 defines **investment property** as:
 (a) use in the production or supply of goods or services or for administrative purposes; or
 (b) sale in the ordinary course of business.
 
+### cost_invest_prop
+Investment property carried at original purchase price using cost model(IAS 16.30) 
+
+### fv_invest_prop
+Investment property Carried at fair value (market value) at each reporting date.
+
 ### investment_prop_lease
 Represents a property leased to earn rentals or for capital appreciation or both, included on the balance sheet but which is not owned outright.
 
+### cost_invest_prop_lease
+Investment property lease Carried at original purchase price using cost model.
+
+### fv_invest_prop_lease
+Investment property lease Carried at fair value (market value) at each reporting date.
+
 ### property_lease
 This represents an immovable property leased to or from the reporting entity included on the balance sheet but which is not owned outright.
+
+### cost_prop_lease
+property carried at original purchase price using cost model(IAS 16.30) 
+
+### reval_prop_lease
+Property lease carried at revalued amount (IAS 16.31)
 
 ### own_property
 IAS 40.5 defines **owner occupied property** as:
 > property held (by the owner or by the lessee as a right-of-use asset) for use in the production or supply of goods or services or for administrative purposes.
 
 For example, for the reporting of Notice MAS 610/1003, **owner occupied property** includes bank premises.
+
+### cost_own_prop
+owner occupied property carried at original purchase price using cost model(IAS 16.30) 
+
+### reval_own_prop
+owner occupied property carried at revalued amount (IAS 16.31)
 
 ### property
 This refers to other **immovable property** not included in investment property or owner occupied property,
@@ -684,23 +730,63 @@ IAS 16(6) defines **property plant and equipment** as:
 (a) are held for use in the production or supply of goods or services, for rental to others, or for administrative purposes; and
 (b) are expected to be used during more than one period.
 
+IAS 16(30) **Cost model**: after recognition, an asset is carried at its cost less accumulated depreciation and accumulated impairment losses.
+
+IAS 16(31) **Revaluation model**: after recognition, an asset whose fair value can be measured reliably is carried at a revalued amount, being its fair value at the date of revaluation less any subsequent accumulated depreciation and subsequent accumulated impairment losses.
+
 ### computer_peripheral
 Additional hardware used whilst connected to a computer e.g. printer, keyboard etc.
+
+### cost_computer_periph
+Computer peripheral carried at original purchase price using cost model (IAS 16.30) 
+
+### reval_computer_periph
+Computer peripheral Carried at revalued amount (IAS 16.31) 
 
 ### furniture
 Fixed tangible assets used to furnish an office.
 
+### cost_furniture
+Carried at original purchase price using cost model (IAS 16.30)
+
+### reval_furniture
+Furniture carried at revalued amount (IAS 16.31) 
+
 ### land
 A solid surface of the earth, or an area, not covered by water which is designated for a specific purpose or otherwise.
+
+### cost_land
+Land 
+
+### reval_land
+Land carried at revalued amount (IAS 16.31)
 
 ### machinery
 Fixed long-term tangible assets used by companies in its business operations, in particular, the creation of the goods or services.
 
+### cost_machinery
+Machinery carried at original purchase price using cost model (IAS 16.30)
+
+### reval_machinery
+Machinery carried at revalued amount (IAS 16.31)
+
 ### telecom_equipment
 Hardware used for the purposes of telecommunications.
 
+### cost_telecom_equip
+Telecom equipment carried at original purchase price using cost model (IAS 16.30)
+
+### reval_telecom_equip
+Telecom equipment carried at revalued amount (IAS 16.31)
+
 ### vehicle
 Fixed long-term assets of the company derived from trucks, vans, motorcycles and cars.
+
+### cost_vehicle
+Vehicle carried at original purchase price using cost model (IAS 16.30)
+
+### reval_vehicle
+Vehicle carried t revalued amount (IAS 16.31)
 
 ### other
 The **other** enum value can be used when it is known that none of the other enum values apply.
