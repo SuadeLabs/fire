@@ -121,7 +121,11 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── fx
     └── fx_reclass
 ├── intangible
+│   ├── cost_intangible
+│   ├── reval_intangible
 │   └── intangible_lease
+│       ├── cost_intangible_lease
+│       └── reval_intangible_lease
 ├── interest
 │   ├── int_on_asset
 │   ├── int_on_bond_and_frn
@@ -643,8 +647,20 @@ Describes an account that holds the amount of dividends received from **money ma
 ### intangible
 This is an asset that lacks physical substance such as a patent, brand, trademark, or copyright
 
+### cost_intangible
+intangible assets carried at original purchase price using cost model (IAS 16.30) 
+
+### reval_intangible
+intangibe assets carried at revalued amount (IAS 16.31)
+
 ### intangible_lease
 This is a lease related to an intangible asset.
+
+### cost_intangible_lease
+intangible leases carried at original purchase price using cost model (IAS 16.30) 
+
+### reval_intangible_lease
+intangible leases carrieed at revalued amount (IAS 16.31)
 
 ### interest
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report
