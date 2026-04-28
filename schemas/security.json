@@ -800,7 +800,7 @@
      },
     "quantity": {
       "description": "The number of securities associated with a position.",
-      "type": "integer",
+      "type": "integer"
     },
     "rate": {
       "description": "The full interest rate applied to the security notional in percentage terms. Note that this therefore includes the base_rate (ie. not the spread).",
