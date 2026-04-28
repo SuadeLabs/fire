@@ -39,6 +39,18 @@
         "US"
       ]
     },
+    "gross_purchase_eur": {
+      "description": "The market value of purcahses at the time of purchase in EUR.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": ["US"]
+    },
+    "gross_sale_eur": {
+      "description": "The market value of sales at the time of sale in EUR.",
+      "type": "integer",
+      "monetary": true,
+      "jurisdictions": ["US"]
+    },
     "orig_cusip": {
       "description": "The cusip at origination.",
       "type": "string",
