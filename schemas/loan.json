@@ -246,7 +246,7 @@
       "description": "The best estimate of expected loss when in default.",
       "type": "number"
     },  
-    "el_irb_adj": {
+    "ela_irb_adj": {
       "description": "Adjustment to expected loss due to post-model adjustments.",
       "type": "number"
     },
