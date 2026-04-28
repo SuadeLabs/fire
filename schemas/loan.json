@@ -247,7 +247,7 @@
       "type": "number"
     },  
     "ela_irb_adj": {
-      "description": "Adjustment to expected loss due to post-model adjustments.",
+      "description": "Adjustment to expected loss amount due to post-model adjustments.",
       "type": "number"
     },
     "encumbrance_amount": {
