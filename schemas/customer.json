@@ -75,7 +75,12 @@
       "enum": [
         "established"
       ]
-    }
+    },
+    "total_resi_mortgages": {
+      "description": "Total number of mortgaged residential properties held by the obligor across all lenders, excluding the primary residence.",
+      "type": "integer",
+      "minimum": 0
+    }    
   },
   "required": [
     "id",
