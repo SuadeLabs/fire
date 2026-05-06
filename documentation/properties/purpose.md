@@ -225,7 +225,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── nol_carryback
 │   ├── not_fut_prof
 │   ├── not_fut_prof_goodwill   
-│   ├── not_fut_prof_intangibles
+│   ├── not_fut_prof_intang
 │   ├── oth_tax_excl_temp_diff
 │   └── reclass_tax
 └── write_off
@@ -406,7 +406,7 @@ For example, in the EBA's FINREP F.1.3 report, the effective portion of the vari
 ### not_fut_prof_goodwill
 **Deferred tax liabilities for goodwill not reliant on future profitability** This is for any deferred tax liabilities related to goodwill, which is not reliant on the institutions future profitability. 
 
-### not_fut_prof_intangibles
+### not_fut_prof_intang
 **Deferred tax liabilities for intangibles not reliant on future profitability** This is for any deferred tax liaiblities related to intangibles, which is not reliant on the institutions future profitability. 
 
 ### fv_hedge
