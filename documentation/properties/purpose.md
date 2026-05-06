@@ -224,6 +224,8 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── fut_prof_temp_diff
 │   ├── nol_carryback
 │   ├── not_fut_prof
+│   ├── not_fut_prof_goodwill   
+│   ├── not_fut_prof_intangibles
 │   ├── oth_tax_excl_temp_diff
 │   └── reclass_tax
 └── write_off
@@ -400,6 +402,12 @@ For example, in the EBA's FINREP F.1.3 report, the effective portion of the vari
 
 ### cf_hedge_reclass
 **Cash flow hedge reclass** describes an account that is the same as the standard cash flow hedge account, but one in which the profit and loss arising from the cashflow hedge is to be reclassified. It can be taken to equity, transferred to carry amount of hedged items or other reclassifications of the profit and losses.
+
+### not_fut_prof_goodwill
+**Deferred tax liabilities for goodwill not reliant on future profitability** This is for any deferred tax liabilities related to goodwill, which is not reliant on the institutions future profitability. 
+
+### not_fut_prof_intangibles
+**Deferred tax liabilities for intangibles not reliant on future profitability** This is for any deferred tax liaiblities related to intangibles, which is not reliant on the institutions future profitability. 
 
 ### fv_hedge
 IFRS 9.6.5.2 defines a **fair value hedge** as follows:
@@ -696,7 +704,6 @@ Describes an account that holds the amount of interests receivable/payable as re
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **Securities Financing Transactions**.
 
 ### int_on_asset
-
 Describes an account that holds the amount of interest receivable/payable reported in a Profit and Loss report and where the interest amount originates from assets
 
 ### int_on_bond_and_frn
@@ -706,7 +713,6 @@ Describes an account that holds the amount of interests receivable/payable as re
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **bridging finance loans**.
 
 ### int_on_liability
-
 Describes an account that holds the amount of interest receivable/payable as reported in a Profit and Loss report and where the interest amount originates from liabilities
 
 ### int_on_mortgage
