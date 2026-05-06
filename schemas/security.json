@@ -406,6 +406,16 @@
       "minimum": 1,
       "maximum": 3
     },
+    "gross_purchase_eur": {
+      "description": "The market value of purcahses at the time of purchase in EUR.",
+      "type": "integer",
+      "monetary": true
+    },
+    "gross_sale_eur": {
+      "description": "The market value of sales at the time of sale in EUR.",
+      "type": "integer",
+      "monetary": true
+    },
     "guarantee_start_date": {
       "description": "The first day the security became guaranteed by the guarantor. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601",
       "type": "string",
