@@ -9,7 +9,9 @@ schemas:    [account, security]
 ```bash
 ├── tier_1
 ├── ce_tier_1
+├── ce_tier_1_ineligible  
 ├── add_tier_1
+│   └── add_tier_1_indirect
 ├── cet1_grandfathered
 ├── at1_grandfathered
 ├── tier_2
@@ -44,10 +46,16 @@ As set out in CRR Article 26, these are  capital instruments,
 provided that the conditions laid down in CRR Article 28 or, where applicable,
 Article 29 are met.
 
+### ce_tier_1_ineligible
+needs definition
+
 ### add_tier_1
 Securities classed as additional tier 1 capital instruments.
 As set out in CRR Article 51, these are capital instruments, where the
 conditions laid down in Article 52(1) are met.
+
+### add_tier_1_indirect
+needs definition
 
 ### tier_2
 Securities classed as Tier 2 capital instruments.
