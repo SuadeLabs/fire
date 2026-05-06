@@ -55,7 +55,7 @@ As set out in CRR Article 51, these are capital instruments, where the
 conditions laid down in Article 52(1) are met.
 
 ### add_tier_1_indirect
-needs definition
+Indirect holdings of securities classed as additional tier 1 capital instruments where the condition set out in point (b)(ii) of Article 52(1) is met.
 
 ### tier_2
 Securities classed as Tier 2 capital instruments.
