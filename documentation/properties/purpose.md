@@ -21,43 +21,43 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── adv_mkt_com
 ├── capital_reserve
 ├── cf_hedge
-│ └── cf_hedge_reclass
+│   └── cf_hedge_reclass
 ├── ci_service
 ├── collateral
 ├── commitments
 ├── critical_service
 ├── credit_risk
 ├── dealing_revenue
-    ├── dealing_rev_cr 
-    ├── dealing_rev_dbt_issue   
-    ├── dealing_rev_debt  
-        └── dealing_rev_debt_recl
-    ├── dealing_rev_deposits  
-    ├── dealing_rev_non_fin
+│   ├── dealing_rev_cr 
+│   ├── dealing_rev_dbt_issue   
+│   └── dealing_rev_debt  
+│   │   └── dealing_rev_debt_recl
+│   ├── dealing_rev_deposits  
+│   ├── dealing_rev_non_fin
 │   ├── dealing_rev_fx
 │   │   └── dealing_rev_fx_nse
 │   ├── dealing_rev_sec
-        ├── dealing_rev_equity
+│   │   ├── dealing_rev_equity
 │   │   └── dealing_rev_sec_nse
 │   ├── dealing_rev_ir
-│   └── dealing_rev_deriv
-        ├── dealing_rev_deriv_com
-            └── dealing_rev_dr_com_eco
-        ├── dealing_rev_deriv_eco
-        ├── dealing_rev_deriv_equ
-            └── dealing_rev_dr_equ_eco
-        ├── dealing_rev_deriv_fx
-            └── dealing_rev_dr_fx_eco
-        ├── dealing_rev_deriv_int
-            └── dealing_rev_dr_int_eco
-        ├── dealing_rev_deriv_nse
-            └── dealing_rev_dr_nse_eco
-        └── dealing_rev_deriv_oth
-            └── dealing_rev_dr_oth_eco
-    ├── dealing_rev_loan
-        └── dealing_rev_loan_recl
-    ├── dealing_rev_oth_finan
-    └── dealing_rev_short    
+│   ├── dealing_rev_deriv
+│   │   ├── dealing_rev_deriv_com
+│   │   │   └── dealing_rev_dr_com_eco
+│   │   ├── dealing_rev_deriv_eco
+│   │   ├── dealing_rev_deriv_equ
+│   │   │   └── dealing_rev_dr_equ_eco
+│   │   ├── dealing_rev_deriv_fx
+│   │   │   └── dealing_rev_dr_fx_eco
+│   │   ├── dealing_rev_deriv_int
+│   │   │   └── dealing_rev_dr_int_eco
+│   │   ├── dealing_rev_deriv_nse
+│   │   │   └── dealing_rev_dr_nse_eco
+│   │   └── dealing_rev_deriv_oth
+│   │       └── dealing_rev_dr_oth_eco
+│   ├── dealing_rev_loan
+│   │   └── dealing_rev_loan_recl
+│   ├── dealing_rev_oth_finan
+│   └── dealing_rev_short    
 ├── defined_benefit
 ├── deposit
 │   └── third_party_interest
@@ -69,33 +69,33 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── donation
 ├── employee
 ├── fees
-    ├── advisory_fee
-    ├── asset_mgmt_fee
-    ├── clearing_settl_fee
-    ├── commodity_fee
-    ├── corp_fin_other_fee
+│   ├── advisory_fee
+│   ├── asset_mgmt_fee
+│   ├── clearing_settl_fee
+│   ├── commodity_fee
+│   ├── corp_fin_other_fee
 │   ├── credit_card_fee
 │   ├── current_account_fee
 │   │   └── overdraft_fee
-    ├── debit_card_fee
+│   ├── debit_card_fee
 │   ├── derivative_fee
-    ├── distribution_fee
-    ├── fin_guarantee_fee
+│   ├── distribution_fee
+│   ├── fin_guarantee_fee
 │   ├── insurance_fee
 │   ├── investment_banking_fee
 │   │   └── underwriting_fee
 │   ├── loan_and_advance_fee
 │   │   ├── mortgage_fee
 │   │   ├── unsecured_loan_fee
-        └── loan_servicing_fee
+│   │   └── loan_servicing_fee
 │   ├── other_fs_fee
 │   ├── other_non_fs_fee
-    ├── professional_fee
-    ├── payment_order_fee
-    ├── pay_services_other_fee
-    ├── securities_other_fee
-    ├── structured_finance_fee
-    └── transfer_order_fee
+│   ├── professional_fee
+│   ├── payment_order_fee
+│   ├── pay_services_other_fee
+│   ├── securities_other_fee
+│   ├── structured_finance_fee
+│   └── transfer_order_fee
 ├── fines
 ├── fiduciary_transaction
 ├── firm_operating_expenses
@@ -119,7 +119,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 │       └── regular_wages
 ├── fv_hedge
 ├── fx
-    └── fx_reclass
+│   └── fx_reclass
 ├── intangible
 │   ├── cost_intangible
 │   ├── reval_intangible
@@ -129,7 +129,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── interest
 │   ├── int_on_asset
 │   ├── int_on_bond_and_frn
-    ├── int_on_debt_issued
+│   ├── int_on_debt_issued
 │   ├── int_on_deposit
 │   ├── int_on_derivative
 │   │   └── int_on_deriv_hedge
@@ -140,17 +140,17 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   │   ├── int_on_credit_card
 │   │   └── int_on_ecgd_lending
 │   ├── int_on_money_mkt
-│   └── int_on_sft
-│   └── int_unallocated
+│   ├── int_on_sft
+│   ├── int_unallocated
 │   └── int_on_finance_leasing
 ├── intra_group_fee
 ├── inv_in_subsidiary
 ├── litigation
 ├── msr
 ├── mtg_insurance
-│   ├── mtg_ins_nonconform
+│   └── mtg_ins_nonconform
 ├── net_inv_hedge
-    └── net_inv_reclass
+│   └── net_inv_reclass
 ├── operational
 │   ├── cash_management
 │   ├── clearing
@@ -163,38 +163,38 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── ppe
 │   ├── computer_peripheral
 │   │   ├── cost_computer_perip
-│   │   ├── reval_computer_periph
+│   │   └── reval_computer_periph
 │   ├── furniture
 │   │   ├── cost_furniture
-│   │   ├── reval_furniture
+│   │   └── reval_furniture
 │   ├── land
-│   │   ├── cost.land
-│   │   ├── reval.land
+│   │   ├── cost_land
+│   │   └── reval_land
 │   ├── machinery
 │   │   ├── cost_machinery
-│   │   ├── reval_machinery
+│   │   └── reval_machinery
 │   ├── property
 │   │   ├── investment_property
-│   │   │   └── cost_invest_prop
+│   │   │   ├── cost_invest_prop
 │   │   │   └── fv_invest_prop
 │   │   ├── investment_property
-│   │   │   └── cost_invest_prop
-│   │   │   └── fv_invest_prop
+│   │   │   ├── cost_invest_prop
+│   │   │   ├── fv_invest_prop
 │   │   │   └── investment_prop_lease
-│   │   │       └── cost_invest_prop_lease
+│   │   │       ├── cost_invest_prop_lease
 │   │   │       └── fv_invest_prop_lease
 │   │   ├── own_property
-│   │   │   └── cost_own_prop
+│   │   │   ├── cost_own_prop
 │   │   │   └── reval_own_prop
 │   │   └── property_lease
-│   │   │   └── cost_prop_lease
-│   │   │   └── reval_prop_lease
+│   │       ├── cost_prop_lease
+│   │       └── reval_prop_lease
 │   ├── telecom_equipment
-│   │   │   └── cost_telecom_equip
-│   │   │   └── reval_telecom_equip
-│   ├── vehicle
-│   │   │   └── cost_vehicle
-│   └─  └─  └── reval_vehicle
+│   │   ├── cost_telecom_equip
+│   │   └── reval_telecom_equip
+│   └── vehicle
+│       ├── cost_vehicle
+│       └── reval_vehicle
 ├── general_credit_risk
 ├── goodwill
 ├── pv_future_spread_inc
@@ -210,7 +210,7 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── restructuring
 ├── res_fund_contribution
 ├── revaluation
-│   ├── revaluation_reclass
+│   └── revaluation_reclass
 ├── revenue_reserve
 ├── share_plan
 ├── share_premium
@@ -224,11 +224,13 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   ├── fut_prof_temp_diff
 │   ├── nol_carryback
 │   ├── not_fut_prof
+│   │   ├── not_fut_prof_goodwill   
+│   │   └── not_fut_prof_intang
 │   ├── oth_tax_excl_temp_diff
 │   └── reclass_tax
 └── write_off
-│   ├── write_off_debt_sec
-│   └── write_off_loans_adv
+    ├── write_off_debt_sec
+    └── write_off_loans_adv
 ```
 
 ### dgs_contribution
@@ -400,6 +402,12 @@ For example, in the EBA's FINREP F.1.3 report, the effective portion of the vari
 
 ### cf_hedge_reclass
 **Cash flow hedge reclass** describes an account that is the same as the standard cash flow hedge account, but one in which the profit and loss arising from the cashflow hedge is to be reclassified. It can be taken to equity, transferred to carry amount of hedged items or other reclassifications of the profit and losses.
+
+### not_fut_prof_goodwill
+**Deferred tax liabilities for goodwill not reliant on future profitability** This is for any deferred tax liabilities related to goodwill, which is not reliant on the institutions future profitability. 
+
+### not_fut_prof_intang
+**Deferred tax liabilities for intangibles not reliant on future profitability** This is for any deferred tax liaiblities related to intangibles, which is not reliant on the institutions future profitability. 
 
 ### fv_hedge
 IFRS 9.6.5.2 defines a **fair value hedge** as follows:
@@ -696,7 +704,6 @@ Describes an account that holds the amount of interests receivable/payable as re
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **Securities Financing Transactions**.
 
 ### int_on_asset
-
 Describes an account that holds the amount of interest receivable/payable reported in a Profit and Loss report and where the interest amount originates from assets
 
 ### int_on_bond_and_frn
@@ -706,7 +713,6 @@ Describes an account that holds the amount of interests receivable/payable as re
 Describes an account that holds the amount of interests receivable/payable as reported in a Profit and Loss report and where the interest amount originates from **bridging finance loans**.
 
 ### int_on_liability
-
 Describes an account that holds the amount of interest receivable/payable as reported in a Profit and Loss report and where the interest amount originates from liabilities
 
 ### int_on_mortgage
