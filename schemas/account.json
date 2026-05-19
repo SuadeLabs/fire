@@ -885,6 +885,11 @@
         "unaudited"
       ]
     },
+        "status_date": {
+      "description": "Provides the date on which status changed.",
+      "type": "string",
+      "format": "date-time"
+    },
     "trade_date": {
       "description": "The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "string",
