@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"status_date"
-schemas:	[loan, security]
+schemas:	[account, loan, security]
 ---
 
 # status_date
