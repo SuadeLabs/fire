@@ -1353,6 +1353,7 @@ A refinance, refers to revising and replacing the terms of an existing credit ag
 ├── reference
 ├── share_capital
 │    └──  non_controlling
+├── share_premium
 ├── investment
 │    ├──  investment_advice
 │    └──  portfolio_management
@@ -1408,6 +1409,10 @@ In the context of [CRR][crr] Article 328, a reference security would be the unde
 This indicates shares that have been [issued][issued] for the purpose of raising capital for the company.
 
 [issued]: https://www.investopedia.com/terms/s/sharecapital.asp
+
+### share_premium
+
+This is a reserve account whose funds can only be used for purposes provided in the corporate bylaws, such as for share issue costs or issuance of bonus shares, but cannot be used for dividends.
 
 ### non_controlling
 [Commission Regulation (EC) No 494/2009][reg] defines **non-controlling interest** as:
