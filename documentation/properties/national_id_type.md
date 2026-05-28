@@ -14,4 +14,4 @@ Reference: [AnaCredit Reporting Manual Part II, section 12.4.3](<https://www.ecb
 
 Reference: [ECB Website](<https://www.ecb.europa.eu/stats/ecb_statistics/anacredit/html/index.en.html>)
 
-Reference: [List of national identifiers](<https://www.ecb.europa.eu/stats/money/aggregates/anacredit/shared/pdf/List_of_national_identifiers.en.xlsx>)
+Reference: [List of national identifiers](<https://www.ecb.europa.eu/stats/money/aggregates/anacredit/shared/pdf/List_of_national_identifiers_ver_3_6.xlsx>)
