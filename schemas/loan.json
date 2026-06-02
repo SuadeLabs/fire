@@ -248,7 +248,8 @@
     },  
     "ela_irb_adj": {
       "description": "Adjustment to expected loss amount due to post-model adjustments.",
-      "type": "number"
+      "type": "integer",
+      "monetary": true
     },
     "encumbrance_amount": {
       "description": "The amount of the loan that is encumbered by potential future commitments or legal liabilities. Monetary type represented as a naturally positive integer number of cents/pence.",
@@ -862,7 +863,8 @@
     },
     "rwa_irb_adj": {
       "description": "Adjustment to risk-weighted exposure amount due to post-model adjustments.",
-      "type": "number"
+      "type": "integer",
+      "monetary":true
     },
     "secured": {
       "description": "Is this loan secured or unsecured?",
