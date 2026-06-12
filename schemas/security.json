@@ -932,6 +932,17 @@
       "description": "The standardised approach risk weight represented as a decimal/float such that 1.5% is 0.015.",
       "type": "number"
     },
+    "roll_out_classes": {
+      "description": "The roll-out classes applicable for the IRB Approach, as defined in Article 147B of the Credit Risk: Internal Ratings Based Approach (CRR) Part. Exposures shall be assigned to the roll-out class assigned to those exposures before taking into account any Credit Risk Mitigation (CRM) substitution effects.",
+      "type": "string",
+      "enum": [
+        "corporate",
+        "corporate_pur_rec",
+        "institutions",
+        "retail_other",
+        "retail_pur_rec"
+      ]
+    },
     "securitisation_id": {
       "description": "Attribute used for a securitisation transaction. Unique internal code used to identify the securitisation transaction and all related tranches",
       "type": "string"
