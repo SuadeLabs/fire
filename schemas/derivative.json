@@ -200,9 +200,9 @@
         "portfolio_cf_hedge_eco",
         "portfolio_fv_hedge",
         "portfolio_fv_hedge_eco",
-        "unhedged"   
+        "unhedged"
       ]
-    },  
+    },
     "hedged_cf_type": {
       "type": "string",
       "description": "The type of cash flow associated with the hedge if it is a cash flow hedge. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14Q for more information.",
@@ -420,6 +420,17 @@
     "risk_weight_std": {
       "description": "The standardised approach risk weight represented as a decimal/float such that 1.5% is 0.015.",
       "type": "number"
+    },
+    "roll_out_class": {
+      "description": "The roll-out classes applicable for the IRB Approach, as defined in Article 147B of the Credit Risk: Internal Ratings Based Approach (CRR) Part. Exposures shall be assigned to the roll-out class assigned to those exposures before taking into account any Credit Risk Mitigation (CRM) substitution effects.",
+      "type": "string",
+      "enum": [
+        "corporate",
+        "corporate_pur_rec",
+        "institutions",
+        "retail_other",
+        "retail_pur_rec"
+      ]
     },
     "settlement_type": {
       "description": "The type of settlement for the contract.",

@@ -132,7 +132,7 @@
         "bas_tier_2",
         "bas_tier_3",
         "ce_tier_1",
-        "ce_tier_1_ineligible",  
+        "ce_tier_1_ineligible",
         "cet1_grandfathered",
         "t2_grandfathered",
         "tier_1",
@@ -175,7 +175,7 @@
       "type": "integer",
       "minimum": 0,
       "monetary": true
-    },    
+    },
     "currency_code": {
       "description": "Actual currency of the Account in accordance with ISO 4217 standards. It should be consistent with balance, accrued_interest, guarantee_amount and other monetary amounts.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
@@ -341,7 +341,7 @@
         "portfolio_cf_hedge_eco",
         "portfolio_fv_hedge",
         "portfolio_fv_hedge_eco",
-        "unhedged"   
+        "unhedged"
       ]
     },
     "impairment_amount": {
@@ -618,7 +618,7 @@
         "dealing_rev_dr_nse_eco",
         "dealing_rev_dr_oth_eco",
         "dealing_rev_equity",
-        "dealing_rev_fx", 
+        "dealing_rev_fx",
         "dealing_rev_fx_nse",
         "dealing_rev_ir",
         "dealing_rev_loan",
@@ -844,6 +844,20 @@
     "risk_weight_std": {
       "description": "The standardised approach risk weight represented as a decimal/float such that 1.5% is 0.015.",
       "type": "number"
+    },
+     "roll_out_class": {
+      "description": "The roll-out classes applicable for the IRB Approach, as defined in Article 147B of the Credit Risk: Internal Ratings Based Approach (CRR) Part. Exposures shall be assigned to the roll-out class assigned to those exposures before taking into account any Credit Risk Mitigation (CRM) substitution effects.",
+      "type": "string",
+      "enum": [
+        "corporate",
+        "corporate_pur_rec",
+        "corporate_spec_lend",
+        "institutions",
+        "retail_immovable_prop",
+        "retail_other",
+        "retail_pur_rec",
+        "retail_qrre"
+      ]
     },
     "rollover_date": {
       "description": "A particular predetermined date at which an account is rolled-over.",
