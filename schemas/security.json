@@ -447,7 +447,7 @@
         "portfolio_cf_hedge_eco",
         "portfolio_fv_hedge",
         "portfolio_fv_hedge_eco",
-        "unhedged"   
+        "unhedged"
       ]
     },
     "hedged_percentage": {
@@ -729,7 +729,7 @@
     "orig_acc_fv_change_credit_risk": {
       "description": "The difference between the outstanding nominal amount and the purchase price of the instrument at the purchase date. This amount should be reported for instruments purchased for an amount lower than the outstanding amount due to credit risk deterioration.",
       "type": "integer",
-      "monetary": true 
+      "monetary": true
     },
     "orig_mtm": {
       "description": "is the mark-to-market value of the security at the origination of the transaction. Monetary number of cents/pence.",
@@ -932,7 +932,7 @@
       "description": "The standardised approach risk weight represented as a decimal/float such that 1.5% is 0.015.",
       "type": "number"
     },
-    "roll_out_classes": {
+    "roll_out_class": {
       "description": "The roll-out classes applicable for the IRB Approach, as defined in Article 147B of the Credit Risk: Internal Ratings Based Approach (CRR) Part. Exposures shall be assigned to the roll-out class assigned to those exposures before taking into account any Credit Risk Mitigation (CRM) substitution effects.",
       "type": "string",
       "enum": [

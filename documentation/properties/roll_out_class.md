@@ -1,10 +1,10 @@
 ---
 layout:     property
-title:      "roll_out_classes"
+title:      "roll_out_class"
 schemas:    [account, derivative, loan, security]
 ---
 
-# roll_out_classes
+# roll_out_class
 
 ```bash
 ├── corporate
