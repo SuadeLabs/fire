@@ -649,7 +649,14 @@
       "sec_erba",
       "sec_sa",
       "sec_sa_lt",
-      "std"
+      "std",
+      "std_class_cant_model",
+      "std_class_immaterial",
+      "std_class_not_low_capr",
+      "std_connected_parties",
+      "std_exp_cant_model",
+      "std_exp_immaterial",
+      "std_rollout_plan"
     ]
   },
   "currency_code": {
