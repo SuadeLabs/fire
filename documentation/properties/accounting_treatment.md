@@ -33,7 +33,7 @@ https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2021/is
 
 ### fv_thru_pnl_managed_cr
 Designated when the entity uses a credit derivative to manage the credit risk of the instrument and elects to measure that instrument, or a proportion of it, at fair value through profit or loss to align with the derivative.
-https://eur-lex.europa.eu/eli/reg/2016/2067/oj/eng#:~:text=Eligibility%20of%20credit,the%20designation%20concurrently.
+https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2021/issued/part-a/ifrs-9-financial-instruments.pdf
 
 ### fv_mandatorily
 Non-trading financial assets mandatorily measured at fair value through profit or loss in accordance with IFRS.
