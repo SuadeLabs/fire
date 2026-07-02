@@ -17,7 +17,23 @@ Cash balances at central banks and other demand deposits in accordance with IFRS
 Financial assets held for trading in accordance with IFRS.
 
 ### fv_thru_pnl
-Financial assets measured at fair value through profit and loss and designated as such upon initial recognition or subsequently in accordance with IFRS, except those classified as financial assets held for trading.
+Financial assets or liabilities measured at fair value through profit and loss and designated as such upon initial recognition or subsequently in accordance with IFRS, except those classified as financial assets held for trading.
+
+### fv_thru_pnl_mismatch
+Designated at initial recognition to eliminate or significantly reduce an accounting mismatch. 
+https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2021/issued/part-a/ifrs-9-financial-instruments.pdf
+
+### fv_thru_pnl_group
+Designated because the instrument belongs to a group of financial instruments that is managed, and whose performance is evaluated, on a fair value basis under a documented risk management or investment strategy.
+https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2021/issued/part-a/ifrs-9-financial-instruments.pdf
+
+### fv_thru_pnl_hybrid
+Designated because the instrument is a hybrid contract containing one or more embedded derivatives that would otherwise require separation from the host. Instead of separating them, the entity measures the whole contract at fair value through profit or loss.
+https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2021/issued/part-a/ifrs-9-financial-instruments.pdf
+
+### fv_thru_pnl_managed_cr
+Designated when the entity uses a credit derivative to manage the credit risk of the instrument and elects to measure that instrument, or a proportion of it, at fair value through profit or loss to align with the derivative.
+https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2021/issued/part-a/ifrs-9-financial-instruments.pdf
 
 ### fv_mandatorily
 Non-trading financial assets mandatorily measured at fair value through profit or loss in accordance with IFRS.
