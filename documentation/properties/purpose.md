@@ -214,9 +214,9 @@ The **purpose** property describes the reason behind the creation or usage of th
 ├── revenue_reserve
 ├── share_plan
 ├── share_premium
-│   ├── ordinary_share_prem
-│   ├── preference_share_prem
-│   └── convertible_share_prem
+│   ├── share_prem_convertible
+│   ├── share_prem_ordinary
+│   └── share_prem_preference
 ├── system
 ├── tax
 │   ├── capital_gain_tax
@@ -388,13 +388,13 @@ This is a reserve account where funds are held with the purpose of share plans a
 ### share_premium
 This is a reserve account whose funds can only be used for purposes provided in the corporate bylaws, such as for share issue costs or issuance of bonus shares, but cannot be used for dividends.
 
-### ordinary_share_prem
+### share_prem_ordinary
 The portion of the share premium reserve attributable to ordinary shares, representing amounts received above the nominal (par) value on their issuance.
 
-### preference_share_prem
+### share_prem_preference
 The portion of the share premium reserve attributable to preferred (preference) shares, representing amounts received above the nominal (par) value on their issuance.
 
-### convertible_share_prem
+### share_prem_convertible
 The portion of the share premium reserve attributable to the issuance or conversion of convertible equity instruments, representing amounts recognised above the nominal (par) value of the shares issued.
 
 ### reg_loss
