@@ -111,6 +111,11 @@
         "format": "date-time"
       }
     },
+    "bs_reclass_date": {
+      "description": "Date when the account has been reclassified",
+      "type": "string",
+      "format": "date-time"
+    },
     "call_dates": {
       "description": "Dates where this contract can be called (by the customer). Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "array",
@@ -580,6 +585,7 @@
         "computer_and_it_cost",
         "computer_peripheral",
         "computer_software",
+        "convertible_share_prem",
         "corp_fin_other_fee",
         "corporation_tax",
         "cost_computer_periph",
@@ -709,6 +715,7 @@
         "operational",
         "operational_escrow",
         "operational_excess",
+        "ordinary_share_prem",
         "oth_tax_excl_temp_diff",
         "other",
         "other_expenditure",
@@ -723,6 +730,7 @@
         "payment_order_fee",
         "pension",
         "ppe",
+        "preference_share_prem",
         "prime_brokerage",
         "professional_fee",
         "property",

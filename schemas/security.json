@@ -95,6 +95,11 @@
         "format": "date-time"
       }
     },
+    "bs_reclass_date": {
+      "description": "Date when the security has been reclassified",
+      "type": "string",
+      "format": "date-time"
+    },
     "bs_recognition": {
       "description": "Attribute used for a securitisation transaction. Summarises the accounting treatment of the securitised assets",
       "type": "string",
