@@ -111,6 +111,11 @@
         "format": "date-time"
       }
     },
+    "bs_reclass_date": {
+      "description": "Date when the account has been reclassified",
+      "type": "string",
+      "format": "date-time"
+    },
     "call_dates": {
       "description": "Dates where this contract can be called (by the customer). Formatted as YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
       "type": "array",
@@ -759,6 +764,9 @@
         "revenue_reserve",
         "securities_other_fee",
         "share_plan",
+        "share_prem_convertible",
+        "share_prem_ordinary",
+        "share_prem_preference",
         "share_premium",
         "staff",
         "structured_finance_fee",
