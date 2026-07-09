@@ -64,6 +64,20 @@
         "principal"
       ]
     },
+    "arrears_arrange_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date on which the loan terms were most recently modified."
+    },
+    "arrears_arrange_status": {
+      "type": "string",
+      "description": "Represents the current state of the arrears_arrangement associated with a loan.",
+      "enum": [
+        "active",
+        "cancelled",
+        "completed"
+      ]
+    },
     "arrears_arrangement": {
       "description": "The arrangement the lender has made with the borrower regarding the amount referenced in the arrears_balance.",
       "type": "string",

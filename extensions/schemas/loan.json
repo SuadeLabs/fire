@@ -19,26 +19,6 @@
         "US"
       ]
     },
-    "arrears_arrange_date": {
-      "type": "string",
-      "format": "date-time",
-      "description": "The date on which the loan terms were most recently modified. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
-      "jurisdictions": [
-        "US"
-      ]
-    },
-      "arrears_arrange_status": {
-      "type": "string",
-      "description": "Represents the current state of the arrears_arrangement associated with a loan. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
-      "jurisdictions": [
-        "US"
-      ],
-      "enum": [
-        "active",
-        "cancelled",
-        "completed"
-      ]
-    },
     "balance_after_mod": {
       "type": "integer",
       "monetary": true,
