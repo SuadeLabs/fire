@@ -34,6 +34,10 @@ The **purpose** property describes the reason behind the creation or usage of th
 │   │   └── dealing_rev_debt_recl
 │   ├── dealing_rev_deposits  
 │   ├── dealing_rev_non_fin
+│   │   └── deal_rev_non_fi_intang
+│   │   └── deal_rev_non_fi_other
+│   │   └── deal_rev_non_fi_ppe
+│   │   └── deal_rev_non_fi_prop
 │   ├── dealing_rev_fx
 │   │   └── dealing_rev_fx_nse
 │   ├── dealing_rev_sec
@@ -574,6 +578,18 @@ Describes an account that holds the amount of profits or losses arising from the
 
 ### dealing_rev_non_fin
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of non financial assets.
+
+### deal_rev_non_fi_intang
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of intangible assets.
+
+### deal_rev_non_fi_other
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of other non financial assets.
+
+### deal_rev_non_fi_ppe
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of ppe.
+
+### deal_rev_non_fi_prop
+Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of investment properties.
 
 ### dealing_rev_sec
 Describes an account that holds the amount of profits or losses arising from the purchase, sale and holdings of **securities**.
