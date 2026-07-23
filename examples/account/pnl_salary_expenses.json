@@ -1,0 +1,17 @@
+{
+  "title": "pnl_salary_expenses",
+  "comment": "P&L expense line item for GBP regular wage payments.",
+  "data": {
+    "account": [
+      {
+        "id": "salary_expenses",
+        "date": "2017-06-30T14:03:12Z",
+        "currency_code": "GBP",
+        "balance": 30000,
+        "type": "expense",
+        "asset_liability": "pnl",
+        "purpose": "regular_wages"
+      }
+    ]
+  }
+}
