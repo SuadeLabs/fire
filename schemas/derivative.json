@@ -254,7 +254,7 @@
       "minimum": 1
     },
     "isin_code": {
-      "description": "The unique International Securities Identification Number for the security according to ISO 6166.",
+      "description": "The unique International Securities Identification Number for the derivative according to ISO 6166.",
       "type": "string",
       "minLength": 12,
       "maxLength": 12
