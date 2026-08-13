@@ -253,6 +253,12 @@
       "type": "integer",
       "minimum": 1
     },
+    "isin_code": {
+      "description": "The unique International Securities Identification Number for the security according to ISO 6166.",
+      "type": "string",
+      "minLength": 12,
+      "maxLength": 12
+    },
     "last_exercise_date": {
       "description": "The last date on which an option can be exercised. For European options, it is the option exercise date",
       "type": "string",

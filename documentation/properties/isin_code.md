@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"isin_code"
-schemas:	[security]
+schemas:	[derivative, security]
 ---
 
 # isin_code
@@ -15,6 +15,8 @@ The FCA Handbook Glossary defines an [International Securities Identification Nu
 [fca]: https://www.handbook.fca.org.uk/handbook/glossary/G2825.html?starts-with=I
 
 An ISIN uniquely identifies a security. Its structure is defined in [ISO 6166][wiki2]. Securities for which ISINs are issued include bonds, commercial paper, stocks and warrants.
+
+The ISIN on the derivative schema represents the ISIN assigned to the derivative contract itself, where one exists — distinct from any ISIN belonging to the contract's underlying instrument
 
 ISINs consist of two alphabetic characters, which are the ISO 3166-1 alpha-2 code for the issuing country, nine alpha-numeric digits (the National Securities Identifying Number, or NSIN, which identifies the security), and one numeric check digit. The NSIN is issued by a national numbering agency (NNA) for that country. Regional substitute NNAs have been allocated the task of functioning as NNAs in those countries where NNAs have not yet been established.
 
