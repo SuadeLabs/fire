@@ -263,6 +263,15 @@
       "type": "string",
       "format": "date-time"
     },
+    "forbearance_history": {
+      "description": "Indicates whether an instrument has a forbearance history beyond a single episode, or had an additional measure granted during an active forbearance period; blank if not applicable.",
+      "type": "string",
+      "enum": [
+        "additional",
+        "x2",
+        "x3"
+      ]
+    },
     "fraud_loss": {
       "description": "The total value of accounting losses incurred by the Financial Institution due to fraudulent activities within the reporting segment.",
       "type": "integer",

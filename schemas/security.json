@@ -403,6 +403,15 @@
       "type": "string",
       "format": "date-time"
     },
+    "forbearance_history": {
+      "description": "Indicates whether an instrument has a forbearance history beyond a single episode, or had an additional measure granted during an active forbearance period; blank if not applicable.",
+      "type": "string",
+      "enum": [
+        "additional",
+        "x2",
+        "x3"
+      ]
+    },
     "frr_id": {
       "description": "The internal facility risk rating assigned to a facility based on its specific risk characteristics, including collateral and seniority.",
       "type": "string"
