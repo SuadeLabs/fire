@@ -2,7 +2,7 @@ fake-factory==0.5.7
 iso3166==0.8
 jsonschema==4.17.3
 pytest>=7.0.0
-markdown==3.5.2
+markdown==3.8.1
 httpx==0.27.0
 beautifulsoup4==4.12
 requests>=2.32.4
