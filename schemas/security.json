@@ -423,7 +423,7 @@
       "maximum": 3
     },
     "gross_purchase_eur": {
-      "description": "The market value of purcahses at the time of purchase in EUR.",
+      "description": "The market value of purchases at the time of purchase in EUR.",
       "type": "integer",
       "monetary": true
     },
