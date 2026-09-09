@@ -39,4 +39,23 @@ jobs:
 
       - name: Test with pytest
         run: |
-          pytest -v
+          pytest tests -v
+
+  test_fire_mcp:
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install fire_mcp
+        run: |
+          pip install -e "fire_mcp/[dev]"
+
+      - name: Test with pytest
+        run: |
+          pytest fire_mcp/tests -v

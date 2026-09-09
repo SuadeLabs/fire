@@ -1,6 +1,8 @@
 **/**/*.pyc
 **/**/*pycache*
 /*venv
+fire_mcp/.venv
+fire_mcp/*.egg-info
 .vscode/
 .hypothesis/
 **/**/*.gz

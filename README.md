@@ -41,6 +41,9 @@ Please see the [contributing guidelines][contributing] and [guiding principles][
 ### Random FIRE Data Generator
 Included is a [random data generator][random-fire] which will generate data in line with the FIRE schema, but not necessarily realistic. (eg. You might get a loan with a balance of 10 but accrued interest of 1 million)
 
+### MCP Server
+An [MCP](https://modelcontextprotocol.io) server for mapping external data onto FIRE is available in [`fire_mcp/`][fire-mcp].
+
 ### Testing
 You can run tests locally via `./run_tests.sh` or view the CI test results in the [Actions tab][actions]
 
@@ -56,4 +59,5 @@ You can run tests locally via `./run_tests.sh` or view the CI test results in th
 [odi]:		http://opendata.institute/
 [odine]:	https://opendataincubator.eu/
 [random-fire]:      https://github.com/SuadeLabs/fire/blob/master/random_fire_generator.py
+[fire-mcp]:         https://github.com/SuadeLabs/fire/blob/master/fire_mcp/README.md
 [actions]:        https://github.com/SuadeLabs/fire/actions/workflows/ci-pipeline.yml
