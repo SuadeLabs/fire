@@ -1622,7 +1622,7 @@ The settlement value is based on the difference between the exchange rate specif
 
 A [**forward rate agreement**][fra] is an interest rate forward contract in which the rate to be paid or received on a specific obligation for a set period of time, beginning at some time in the future, is determined at contract initiation.
 
-[fra]: https://www.bis.org/statistics/glossary.htm?&selection=315&scope=Statistics&c=a&base=term
+[fra]: https://data.bis.org/help/glossary?item=Forward+rate+agreements
 
 ### variance_swap
 
