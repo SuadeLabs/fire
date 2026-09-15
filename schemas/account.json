@@ -80,11 +80,6 @@
     "asset_liability": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/asset_liability"
     },
-    "authorised_limit_amount": {
-      "description": "The total amount of authorized Credit Risk exposure for all facility.",
-      "type": "integer",
-      "monetary": true
-    },
     "balance": {
       "description": "The contractual balance on the date and in the currency given. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
@@ -924,6 +919,11 @@
       "description": "Provides the date on which status changed.",
       "type": "string",
       "format": "date-time"
+    },
+    "sub_limit_amount": {
+      "description": "It represents a specific sub-limit amount established for an instrument or counterparty within a facility.",
+      "type": "integer",
+      "monetary": true
     },
     "trade_date": {
       "description": "The timestamp that the trade or financial product terms are agreed. YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.",
