@@ -277,7 +277,7 @@ A **regional government** is a government entity that only has control on a spec
 
 ### central_govt
 
-A **central government** is the government of a nation-state. While some countries may have **regional governments** that operate autonomously, the **central goverment** is the governing system that is concerned with issues that affect the entire nation.
+A **central government** is the government of a nation-state. While some countries may have **regional governments** that operate autonomously, the **central government** is the governing system that is concerned with issues that affect the entire nation.
 
 ### local_authority
 
@@ -502,7 +502,7 @@ The [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossary/G569.html?d
 
 ### financial_holding
 
-A financial holding copmany is defined by the EU [here][lcr] Article 4(1)(20):
+A financial holding company is defined by the EU [here][lcr] Article 4(1)(20):
 
 > (20) 'financial holding company' means a financial institution, the subsidiaries of which are exclusively or mainly institutions or financial institutions, at least one of such subsidiaries being an institution, and which is not a mixed financial holding company;
 
@@ -518,7 +518,7 @@ Any other type to be classified as financial but not one of the other types witi
 
 ### pic
 
-A financial holding copmany is defined by the EU [here](http://eur-lex.europa.eu/eli/reg_del/2015/61/oj) Article 3:
+A financial holding company is defined by the EU [here](http://eur-lex.europa.eu/eli/reg_del/2015/61/oj) Article 3:
 
 > 'personal investment company' ('PIC') means an undertaking or a trust whose owner or beneficial owner, respectively, is a natural person or a group of closely related natural persons, which was set up with the sole purpose of managing the wealth of the owners and which does not carry out any other commercial, industrial or professional activity. The purpose of the PIC may include other ancillary activities such as segregating the owners' assets from corporate assets, facilitating the transmission of assets within a family or preventing a split of the assets after the death of a member of the family, provided these are connected to the main purpose of managing the owners' wealth;
 
