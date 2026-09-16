@@ -117,11 +117,6 @@
     "asset_liability": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/asset_liability"
     },
-    "authorised_limit_amount": {
-      "description": "The total amount of authorized Credit Risk exposure for all facility.",
-      "type": "integer",
-      "monetary": true
-    },
     "balance": {
       "description": "The balance of the loan or capital still to be repaid. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
@@ -970,6 +965,11 @@
       "description": "Provides the date on which status changed.",
       "type": "string",
       "format": "date-time"
+    },
+    "sub_limit_amount": {
+      "description": "It represents a specific sub-limit amount established for an instrument or counterparty within a facility.",
+      "type": "integer",
+      "monetary": true
     },
     "syndication_id": {
       "description": "The code assigned by the lead arranger of the syndicated contract to uniquely identify each contract. Each syndicated contract will have one syndicated contract identifier. This value will not change over time and cannot be used by the lead arranger as the contract identifier for any other contract",
