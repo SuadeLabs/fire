@@ -1,0 +1,18 @@
+{
+  "title": "pnl_interest_income",
+  "comment": "P&L income line item representing GBP interest earned.",
+  "data": {
+    "account": [
+      {
+        "id": "interest_income",
+        "date": "2017-06-30T14:03:12Z",
+        "currency_code": "GBP",
+        "balance": 30000,
+        "type": "income",
+        "asset_liability": "pnl",
+        "purpose": "interest",
+        "customer_id": "C123456"
+      }
+    ]
+  }
+}
