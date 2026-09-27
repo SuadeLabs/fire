@@ -1,0 +1,26 @@
+{
+  "title": "firm_operating_expenses",
+  "comment": "Normal operating expenses incurred by the reporting institution",
+  "data": {
+    "account": [
+      {
+        "id": "firm_operating_expenses",
+        "date": "2025-10-06T00:00:00+00:00",
+        "balance": 199556693,
+        "start_date": "2025-10-06T00:00:00+00:00",
+        "end_date": "2027-10-06T00:00:00+00:00",
+        "trade_date": "2025-10-06T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "ledger_code": "A53434",
+        "currency_code": "GBP",
+        "accounting_treatment": "amortised_cost",
+        "country_code": "GB",
+        "status": "active",
+        "purpose": "firm_operating_expenses",
+        "asset_liability": "pnl",
+        "regulatory_book": "banking_book",
+        "type": "expense"
+      }
+    ]
+  }
+}

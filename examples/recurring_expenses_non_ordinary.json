@@ -1,0 +1,26 @@
+{
+  "title": "recurring_expenses_non_ordinary",
+  "comment": "Recurring expenses incurred from outside of the reporting institution's ordinary business activities",
+  "data": {
+    "account": [
+      {
+        "id": "recurring_expenses_non_ordinary",
+        "date": "2025-10-06T00:00:00+00:00",
+        "balance": 292991,
+        "start_date": "2025-09-07T00:00:00+00:00",
+        "end_date": "2025-10-08T00:00:00+00:00",
+        "interest_repayment_frequency": "at_maturity",
+        "trade_date": "2025-09-07T00:00:00+00:00",
+        "on_balance_sheet": false,
+        "reporting_entity_name": "ABC",
+        "currency_code": "GBP",
+        "country_code": "GB",
+        "purpose": "admin",
+        "asset_liability": "pnl",
+        "risk_country_code": "GB",
+        "count": 1,
+        "type": "expense"
+      }
+    ]
+  }
+}
