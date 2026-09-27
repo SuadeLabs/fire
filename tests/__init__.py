@@ -8,6 +8,7 @@ HOME = os.path.join(os.path.dirname(__file__), "..")
 SCHEMAS_DIR = os.path.join(HOME, "schemas")
 DOCS_DIR = os.path.join(HOME, "documentation", "properties")
 EXAMPLES_DIR = os.path.join(HOME, "examples")
+SCHEMA_URL = "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/"
 EXTENSIONS_DIR = os.path.join(HOME, "extensions")
 EXTENSION_SCHEMAS_DIR = os.path.join(EXTENSIONS_DIR, "schemas")
 EXTENSION_DOCS_DIR = os.path.join(EXTENSIONS_DIR, "documentation", "properties")

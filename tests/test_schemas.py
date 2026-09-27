@@ -4,7 +4,7 @@ import re
 from string import digits
 
 import pytest
-from jsonschema import Draft7Validator
+from jsonschema import Draft7Validator, RefResolver
 from jsonschema.exceptions import ValidationError
 from . import (
     ALLOWED_PROPERTY_CHARS,
@@ -13,8 +13,10 @@ from . import (
     EXAMPLE_FILES,
     SCHEMAS_DIR,
     SCHEMA_FILES,
+    SCHEMA_URL,
     SCHEMA_NAMES,
     check_schema_fields,
+    fire_load,
     fire_stats,
     load_jsons,
     schema_enum_registry,
@@ -166,12 +168,19 @@ class TestExamples:
     with open(os.path.join(SCHEMAS_DIR, "example.json")) as ff:
         example_schema = json.load(ff)
 
-    validator = Draft7Validator(example_schema)
+    local_store = {SCHEMA_URL + name: fire_load(name) for name in SCHEMA_FILES}
+    validator = Draft7Validator(
+        example_schema,
+        resolver=RefResolver(
+            SCHEMA_URL + "example.json", example_schema, store=local_store
+        ),
+    )
 
     @pytest.mark.parametrize("example_name", EXAMPLE_FILES)
     def test_validating_all_examples(self, example_name):
         """
-        Examples should match the example schema found in /schemas/example.json
+        Examples should match the example schema found in /schemas/example.json,
+        with every record valid against the local FIRE schemas
         """
         with open(os.path.join(EXAMPLES_DIR, example_name)) as ff:
             ex = json.load(ff)
