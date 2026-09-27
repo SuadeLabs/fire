@@ -1,6 +1,6 @@
 {
   "title": "speculative_property_commercial_loan",
-  "comment": "Commercial loans for the purposes of the acquisition of or development or construction on land in relation to immovable property, or of and in relation to such property, with the intention of reselling for profit;",
+  "comment": "A commercial loan to acquire, develop or build on land or immovable property with the intention of reselling it for profit. Includes the actual loan and its cancelled record.",
   "data": {
     "loan": [
       {

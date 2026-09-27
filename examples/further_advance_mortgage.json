@@ -1,6 +1,6 @@
 {
   "title": "further_advance_mortgage",
-  "comment": "A further advance is an additional loan from your existing mortgage lender, secured against your home's equity. It acts as a separate sub-account",
+  "comment": "An additional loan from the borrower's existing mortgage lender, secured against the equity in their home and held as a separate sub-account. Includes the actual loan and its cancelled record.",
   "data": {
     "loan": [
       {

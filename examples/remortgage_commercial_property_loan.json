@@ -1,6 +1,6 @@
 {
   "title": "remortgage_commercial_property_loan",
-  "comment": "A commercial property remortgage is the process of replacing an existing commercial mortgage with a new loan on the same property, either with the current lender or a new one.",
+  "comment": "A commercial property remortgage, replacing an existing commercial mortgage with a new loan on the same property, with the current lender or a new one. Includes the actual loan and its cancelled record.",
   "data": {
     "loan": [
       {

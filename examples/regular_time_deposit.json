@@ -1,6 +1,6 @@
 {
   "title": "regular_time_deposit",
-  "comment": "A time_deposit account is a fixed term deposit with an end_date. It must have a maturity of at least 7 days.",
+  "comment": "A fixed-term deposit with an end date and a maturity of at least 7 days.",
   "data": {
     "account": [
       {

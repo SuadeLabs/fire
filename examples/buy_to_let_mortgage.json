@@ -1,6 +1,6 @@
 {
   "title": "buy_to_let_mortgage",
-  "comment": "A buy-to-let mortgage is a specialized loan for purchasing or refinancing a property intended for rental income rather than personal occupation",
+  "comment": "A mortgage for purchasing or refinancing a property intended for rental income rather than owner occupation. Includes the actual loan and its committed record.",
   "data": {
     "loan": [
       {

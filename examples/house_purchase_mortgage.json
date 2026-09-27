@@ -1,6 +1,6 @@
 {
   "title": "house_purchase_mortgage",
-  "comment": "A house purchase mortgage loan is a secured loan used to buy real estate, where the property itself serves as collateral",
+  "comment": "A mortgage used to buy residential property, secured on the property itself. Includes the actual loan and its committed record.",
   "data": {
     "loan": [
       {

@@ -1,6 +1,6 @@
 {
   "title": "vostro_account",
-  "comment": "A bank account held by a foreign bank to conduct transactions in the same currency as the domestic reporter bank",
+  "comment": "An account held at the firm by a foreign bank to conduct transactions in the firm's domestic currency.",
   "data": {
     "account": [
       {

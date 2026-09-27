@@ -1,6 +1,6 @@
 {
   "title": "expense_account",
-  "comment": "An expense account is an expense incurred by the institution during the reporting period. Example: Wages, admin charge, ppe, etc.",
+  "comment": "An expense incurred by the institution during the reporting period, such as wages, administration charges or property, plant and equipment.",
   "data": {
     "account": [
       {

@@ -1,6 +1,6 @@
 {
   "title": "corporate_bond",
-  "comment": "Debt Instruments Issued By A Corporate",
+  "comment": "A debt instrument issued by a corporate.",
   "data": {
     "security": [
       {

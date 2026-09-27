@@ -1,6 +1,6 @@
 {
   "title": "other_personal_loan",
-  "comment": "loans and credit facilities to individuals, where loan purpose is not defined. (Loan purpose = other)",
+  "comment": "A loan or credit facility to an individual whose purpose does not fit any of the defined purposes.",
   "data": {
     "loan": [
       {

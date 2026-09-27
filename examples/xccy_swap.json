@@ -1,6 +1,6 @@
 {
   "title": "xccy_swap",
-  "comment": "A swap exchanging cash flows in two different currencies, providing long exposure to the underlying position.",
+  "comment": "A cross-currency swap exchanging cash flows in two different currencies, shown as its fixed and floating legs.",
   "data": {
     "derivative": [
       {

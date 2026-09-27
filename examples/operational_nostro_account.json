@@ -1,6 +1,6 @@
 {
   "title": "operational_nostro_account",
-  "comment": "Nostro loans are the firm’s accounts at other financial institutions which are in effect loans to other firms. where purpose = operational meaning that its an operational account to meet the institution's expenses",
+  "comment": "The firm's account at another financial institution, held for operational purposes such as meeting the institution's expenses.",
   "data": {
     "loan": [
       {

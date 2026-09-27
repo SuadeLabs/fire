@@ -1,6 +1,6 @@
 {
   "title": "guaranteed_corporate_bond",
-  "comment": "Guaranteed Debt Instruments Issued By A Corporate",
+  "comment": "A debt instrument issued by a corporate and guaranteed by a third party.",
   "data": {
     "security": [
       {

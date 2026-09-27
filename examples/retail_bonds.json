@@ -1,6 +1,6 @@
 {
   "title": "retail_bonds",
-  "comment": "Any account containing notes, bonds and other securities issued which are sold exclusively in the retail market and held in a retail account.",
+  "comment": "An account holding notes, bonds or other securities issued exclusively to the retail market and held in a retail account.",
   "data": {
     "account": [
       {

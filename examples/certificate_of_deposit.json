@@ -1,6 +1,6 @@
 {
   "title": "certificate_of_deposit",
-  "comment": "A certificate of deposit is also a promissory note, however can only be issued by a bank. It has a fixed maturity and specified fixed interest rate.",
+  "comment": "A certificate of deposit: a promissory note issued by a bank with a fixed maturity and a fixed interest rate.",
   "data": {
     "security": [
       {

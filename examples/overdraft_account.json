@@ -1,6 +1,6 @@
 {
   "title": "overdraft_account",
-  "comment": "A current account which is in overdraft",
+  "comment": "A current account in overdraft.",
   "data": {
     "account": [
       {

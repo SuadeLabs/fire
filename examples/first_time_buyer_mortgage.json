@@ -1,6 +1,6 @@
 {
   "title": "first_time_buyer_mortgage",
-  "comment": "First-time buyer mortgage loans are financial products tailored for individuals with no prior history of property ownership.",
+  "comment": "A mortgage for borrowers with no previous history of property ownership. Includes the actual loan and its committed record.",
   "data": {
     "loan": [
       {

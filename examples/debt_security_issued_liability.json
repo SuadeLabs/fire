@@ -1,6 +1,6 @@
 {
   "title": "debt_security_issued_liability",
-  "comment": "A Securities Issuance Of Stocks Or Bonds (Determined By The Security - Type)",
+  "comment": "A debt security issued by the firm and classified as a liability.",
   "data": {
     "security": [
       {

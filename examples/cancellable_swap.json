@@ -1,6 +1,6 @@
 {
   "title": "cancellable_swap",
-  "comment": "An interest rate swap containing an option allowing the contract to be cancelled before maturity.",
+  "comment": "An interest rate swap with an option to cancel the contract before maturity, shown as its fixed and floating legs.",
   "data": {
     "derivative": [
       {

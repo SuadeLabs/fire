@@ -1,6 +1,6 @@
 {
   "title": "single_stock_forward_in_stocks",
-  "comment": "A forward contract on a specific individual stock, with the underlying quantity specified in shares.",
+  "comment": "A forward contract on a single company's stock, with the underlying quantity specified in shares.",
   "data": {
     "derivative": [
       {

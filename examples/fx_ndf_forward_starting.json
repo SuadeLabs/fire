@@ -1,6 +1,6 @@
 {
   "title": "fx_ndf_forward_starting",
-  "comment": "A forward-starting non-deliverable FX forward that begins at a future date, with a short position.",
+  "comment": "A forward-starting non-deliverable FX forward, shown as its two legs.",
   "data": {
     "derivative": [
       {

@@ -1,6 +1,6 @@
 {
   "title": "time_deposit_transactional",
-  "comment": "A time_deposit account is a fixed term deposit with an end_date. It must have a maturity of at least 7 days. This account is status = transactional.  A retail deposit shall be considered as being held in a transactional account where salaries, income or transactions are regularly credited and debited respectively against that account.",
+  "comment": "A fixed-term deposit held in a transactional account, where salaries, income or payments are regularly credited and debited.",
   "data": {
     "account": [
       {

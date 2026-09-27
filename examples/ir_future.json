@@ -1,6 +1,6 @@
 {
   "title": "ir_future",
-  "comment": "A futures contract whose underlying asset or reference is an interest rate.",
+  "comment": "A futures contract whose underlying reference is an interest rate.",
   "data": {
     "derivative": [
       {

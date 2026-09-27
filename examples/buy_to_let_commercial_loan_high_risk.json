@@ -1,6 +1,6 @@
 {
   "title": "buy_to_let_commercial_loan_high_risk",
-  "comment": "High risk commercial loan for buy_to_let refers to a real estate loan where the borrower is purchasing the property with a view of renting it out on a commercial basis to an unrelated third party. Receives 100% risk weight.",
+  "comment": "A high-risk commercial buy-to-let loan, secured by high-risk commercial property collateral, where the borrower rents the property out to an unrelated third party. Receives a 100% risk weight.",
   "data": {
     "loan": [
       {

@@ -1,6 +1,6 @@
 {
   "title": "savings_account",
-  "comment": "A deposit account that earns interest which is not require to have a term end_date. An \"easy access\" account deposit",
+  "comment": "An easy-access deposit account that earns interest and has no fixed end date.",
   "data": {
     "account": [
       {

@@ -1,6 +1,6 @@
 {
   "title": "fx_ndf",
-  "comment": "A short non-deliverable FX forward settled using the difference between the contracted and prevailing exchange rates.",
+  "comment": "A non-deliverable FX forward, settled on the difference between the contracted and prevailing exchange rates, shown as its two legs.",
   "data": {
     "derivative": [
       {

@@ -1,6 +1,6 @@
 {
   "title": "construction_mortgage",
-  "comment": "Construction mortgage loans are short-term loans designed to finance the building or major renovation of a property",
+  "comment": "A short-term mortgage used to finance the construction or major renovation of a property. Includes the actual loan and its cancelled record.",
   "data": {
     "loan": [
       {

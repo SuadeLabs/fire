@@ -1,6 +1,6 @@
 {
   "title": "overnight_index_swap",
-  "comment": "An overnight index swap involving a fixed interest rate leg.",
+  "comment": "An overnight index swap, shown as its fixed and floating legs.",
   "data": {
     "derivative": [
       {

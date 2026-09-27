@@ -1,6 +1,6 @@
 {
   "title": "nostro_account",
-  "comment": "Nostro loans are the firm’s accounts at other financial institutions which are in effect loans to other firms where purpose is not defined",
+  "comment": "The firm's account at another financial institution, in effect a loan to that institution, with no specific purpose.",
   "data": {
     "loan": [
       {

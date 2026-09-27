@@ -1,6 +1,6 @@
 {
   "title": "buy_to_let_commercial_loan",
-  "comment": "Commercial loan for buy_to_let refers to a real estate loan where the borrower is purchasing the property with a view of renting it out on a commercial basis to an unrelated third party.",
+  "comment": "A commercial real estate loan where the borrower is purchasing the property to rent it out on a commercial basis to an unrelated third party. Includes the actual loan and its committed record.",
   "data": {
     "loan": [
       {

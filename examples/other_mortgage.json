@@ -1,6 +1,6 @@
 {
   "title": "other_mortgage",
-  "comment": "Mortgage loans with purpose = other, where specific purpose is not present in FIRE",
+  "comment": "A mortgage whose purpose does not fit any of the defined purposes. Includes the actual loan and its committed record.",
   "data": {
     "loan": [
       {

@@ -1,6 +1,6 @@
 {
   "title": "central_bank_required_reserves",
-  "comment": "Reserves held by the credit institution in a central bank",
+  "comment": "Minimum reserves held by the credit institution at a central bank.",
   "data": {
     "security": [
       {

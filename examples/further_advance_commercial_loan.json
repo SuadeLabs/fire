@@ -1,6 +1,6 @@
 {
   "title": "further_advance_commercial_loan",
-  "comment": "A further advance commercial loan is a way to borrow more money from your current mortgage lender. It runs alongside your original commercial loan, often acting as a separate sub-account with its own interest rate and repayment term",
+  "comment": "An additional commercial loan from the borrower's existing lender, running alongside the original loan with its own interest rate and repayment term. Includes the actual loan and its committed record.",
   "data": {
     "loan": [
       {

@@ -1,6 +1,6 @@
 {
   "title": "bankruptcy_remote_bond",
-  "comment": "A Debt Instrument That Will Not Be Available To An Entity’S Creditors In The Event Of The Insolvency Of That Entity",
+  "comment": "A debt instrument that will not be available to an entity's creditors in the event of that entity's insolvency.",
   "data": {
     "security": [
       {

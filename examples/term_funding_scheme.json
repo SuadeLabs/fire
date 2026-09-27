@@ -1,6 +1,6 @@
 {
   "title": "term_funding_scheme",
-  "comment": "An Agreement In Which One Party Purchases Securities Or Commodities And Commits To Resell Equivalent Assets To The Original Seller At A Specified Future Date And Price.",
+  "comment": "Funding drawn under the Bank of England Term Funding Scheme, shown as its asset and liability legs under the same deal.",
   "data": {
     "security": [
       {

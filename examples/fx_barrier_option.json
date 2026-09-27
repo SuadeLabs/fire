@@ -1,6 +1,6 @@
 {
   "title": "fx_barrier_option",
-  "comment": "A short call option on an FX rate with a specified barrier level that can activate or terminate the option.",
+  "comment": "An FX call option with a barrier level that can activate or terminate the option, shown as a long and a short position.",
   "data": {
     "derivative": [
       {

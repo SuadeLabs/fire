@@ -1,6 +1,6 @@
 {
   "title": "unsettled_repo",
-  "comment": "This trade represents a repurchase agreement which is pending settlement",
+  "comment": "A repurchase agreement pending settlement, shown as its cash legs and the security leg.",
   "data": {
     "security": [
       {

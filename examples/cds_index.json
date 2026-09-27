@@ -1,6 +1,6 @@
 {
   "title": "cds_index",
-  "comment": "A credit default swap referencing a basket or index of underlying credit entities.",
+  "comment": "A credit default swap referencing an index of underlying credit entities.",
   "data": {
     "derivative": [
       {

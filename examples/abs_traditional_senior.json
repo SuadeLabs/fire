@@ -1,6 +1,6 @@
 {
   "title": "abs_traditional_senior",
-  "comment": "‘Traditional Securitisation’: Involves The Transfer Of The Economic Interest In The Exposures Being Securitised Through The Transfer Of Ownership",
+  "comment": "Senior tranche of a traditional securitisation, where the economic interest in the securitised exposures is transferred through a transfer of ownership.",
   "data": {
     "security": [
       {

@@ -1,6 +1,6 @@
 {
   "title": "interest_rate_swap_amortising",
-  "comment": "An interest rate swap with notional amount that decreases over the life of the contract.",
+  "comment": "An interest rate swap whose notional amount decreases over the life of the contract, shown as its fixed and floating legs.",
   "data": {
     "derivative": [
       {

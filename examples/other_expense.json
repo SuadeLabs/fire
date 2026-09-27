@@ -1,6 +1,6 @@
 {
   "title": "other_expense",
-  "comment": "Other expenses incurred where the purpose differs from those already specified",
+  "comment": "Expenses whose purpose differs from those already specified.",
   "data": {
     "account": [
       {

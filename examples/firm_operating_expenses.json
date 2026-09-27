@@ -1,6 +1,6 @@
 {
   "title": "firm_operating_expenses",
-  "comment": "Normal operating expenses incurred by the reporting institution",
+  "comment": "Normal operating expenses incurred by the institution.",
   "data": {
     "account": [
       {

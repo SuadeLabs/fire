@@ -1,6 +1,6 @@
 {
   "title": "recurring_expenses_non_ordinary",
-  "comment": "Recurring expenses incurred from outside of the reporting institution's ordinary business activities",
+  "comment": "Recurring expenses arising outside the institution's ordinary business activities.",
   "data": {
     "account": [
       {

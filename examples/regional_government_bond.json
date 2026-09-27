@@ -1,6 +1,6 @@
 {
   "title": "regional_government_bond",
-  "comment": "Debt Instruments Issued By A Regional Government",
+  "comment": "A debt instrument issued by a regional government.",
   "data": {
     "security": [
       {

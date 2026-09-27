@@ -1,6 +1,6 @@
 {
   "title": "other_remortgage",
-  "comment": "A remortgage loan is the process of paying off an existing mortgage on your property with a brand new loan with purpose = other where a specific enum is not defined in FIRE",
+  "comment": "A remortgage, replacing an existing mortgage with a new loan, for a purpose not covered by the defined remortgage purposes. Includes the actual loan and its cancelled record.",
   "data": {
     "loan": [
       {

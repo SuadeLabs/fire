@@ -1,6 +1,6 @@
 {
   "title": "fx_forward",
-  "comment": "An FX forward to sell one currency and buy another at a predetermined exchange rate on a future date.",
+  "comment": "An FX forward to sell one currency and buy another at a predetermined exchange rate on a future date, shown as its two legs.",
   "data": {
     "derivative": [
       {

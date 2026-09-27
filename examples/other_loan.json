@@ -1,6 +1,6 @@
 {
   "title": "other_loan",
-  "comment": "Trading for borrowing against various positions, i.e. funding for a short position. This can be asset/liability dependant on who is faciliating the trade.",
+  "comment": "Borrowing against trading positions, for example funding for a short position. This can be an asset or a liability depending on who is facilitating the trade.",
   "data": {
     "loan": [
       {

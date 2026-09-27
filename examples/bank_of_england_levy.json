@@ -1,6 +1,6 @@
 {
   "title": "bank_of_england_levy",
-  "comment": "The Bank of England levy, which replaced the former Cash Ratio Deposit Scheme, is a levy which covers the BoE's operational costs",
+  "comment": "The Bank of England levy, which replaced the former Cash Ratio Deposit Scheme and covers the Bank of England's operational costs.",
   "data": {
     "security": [
       {

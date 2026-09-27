@@ -1,6 +1,6 @@
 {
   "title": "interest_rate_swap_forward_starting",
-  "comment": "An interest rate swap agreed today that begins on a future date.",
+  "comment": "An interest rate swap agreed today that starts on a future date, shown as its fixed and floating legs.",
   "data": {
     "derivative": [
       {

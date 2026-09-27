@@ -1,6 +1,6 @@
 {
   "title": "repo_asset",
-  "comment": "An Agreement In Which One Party Purchases Securities Or Commodities And Commits To Resell Equivalent Assets To The Original Seller At A Specified Future Date And Price.",
+  "comment": "The asset side of a repurchase agreement, where one party sells securities and commits to buy equivalent assets back at a specified future date and price.",
   "data": {
     "security": [
       {

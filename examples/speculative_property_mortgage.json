@@ -1,6 +1,6 @@
 {
   "title": "speculative_property_mortgage",
-  "comment": "Speculative property mortgage loans are financing agreements used when a borrower,often a property developer, acquires land or constructs a building without having any pre-secured buyers or tenants. The property is developed solely relying on anticipated market demand with the goal of selling or leasing it for a profit",
+  "comment": "A mortgage used when a borrower, often a property developer, acquires land or builds without pre-secured buyers or tenants, relying on anticipated demand to sell or lease at a profit. Includes the actual loan and its committed record.",
   "data": {
     "loan": [
       {

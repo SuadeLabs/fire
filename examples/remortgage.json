@@ -1,6 +1,6 @@
 {
   "title": "remortgage",
-  "comment": "A remortgage loan is the process of paying off an existing mortgage on your property with a brand new loan",
+  "comment": "A remortgage, replacing an existing mortgage on a property with a new loan. Includes the actual loan and its committed record.",
   "data": {
     "loan": [
       {

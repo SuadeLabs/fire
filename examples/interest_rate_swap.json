@@ -1,6 +1,6 @@
 {
   "title": "interest_rate_swap",
-  "comment": "An interest rate swap where the position pays the fixed interest rate and receives the floating rate.",
+  "comment": "An interest rate swap paying the fixed rate and receiving the floating rate, shown as its two legs.",
   "data": {
     "derivative": [
       {

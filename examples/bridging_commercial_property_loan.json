@@ -1,6 +1,6 @@
 {
   "title": "bridging_commercial_property_loan",
-  "comment": "A commercial bridging loan is a short-term, secured by commercial property, used for temporary funding gap when buying or developing a business property. Borrowers typically use these loans to quickly secure a property, fund urgent refurbishments, or cover cash flow shortages while arranging permanent financing or selling another asset",
+  "comment": "A short-term commercial bridging loan secured by commercial property, used to fund a temporary gap when buying or developing a business property, for example to secure a property quickly, fund urgent refurbishment, or cover cash flow while arranging permanent financing. Includes the actual loan and its committed record.",
   "data": {
     "loan": [
       {

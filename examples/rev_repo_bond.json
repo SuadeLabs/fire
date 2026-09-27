@@ -1,6 +1,6 @@
 {
   "title": "rev_repo_bond",
-  "comment": "An Agreement In Which One Party Purchases Securities Or Commodities And Commits To Resell Equivalent Assets To The Original Seller At A Specified Future Date And Price.",
+  "comment": "A reverse repurchase agreement, where the firm buys securities and commits to sell equivalent assets back at a specified future date and price, shown as its liability and asset legs.",
   "data": {
     "security": [
       {

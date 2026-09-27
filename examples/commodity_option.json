@@ -1,6 +1,6 @@
 {
   "title": "commodity_option",
-  "comment": "An option giving exposure to the price of an underlying commodity.",
+  "comment": "An option on the price of an underlying commodity.",
   "data": {
     "derivative": [
       {

@@ -1,6 +1,6 @@
 {
   "title": "equity_single_name_future",
-  "comment": "A futures contract whose underlying asset is an individual company's stock.",
+  "comment": "A futures contract whose underlying asset is a single company's stock.",
   "data": {
     "derivative": [
       {

@@ -1,6 +1,6 @@
 {
   "title": "covered_bond",
-  "comment": "Debt Instruments Issued By Credit Institutions And Secured By A Cover Pool Of Assets Which Typically Consist Of Mortgage Loans Or Public Sector Debt",
+  "comment": "A debt instrument issued by a credit institution and secured by a cover pool of assets, typically mortgage loans or public sector debt.",
   "data": {
     "security": [
       {

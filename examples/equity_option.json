@@ -1,6 +1,6 @@
 {
   "title": "equity_option",
-  "comment": "An option contract whose underlying asset is an individual company's stock.",
+  "comment": "An option contract whose underlying asset is a single company's stock.",
   "data": {
     "derivative": [
       {

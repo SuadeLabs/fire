@@ -1,6 +1,6 @@
 {
   "title": "single_stock_forward",
-  "comment": "A forward contract to buy or sell a specific individual stock at a predetermined price on a future date.",
+  "comment": "A forward contract to buy or sell a single company's stock at a predetermined price on a future date.",
   "data": {
     "derivative": [
       {

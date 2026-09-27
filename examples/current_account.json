@@ -1,6 +1,6 @@
 {
   "title": "current_account",
-  "comment": "Regular current account with funds available on demand for the customer",
+  "comment": "A current account with funds available to the customer on demand.",
   "data": {
     "account": [
       {

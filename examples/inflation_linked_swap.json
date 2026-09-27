@@ -1,6 +1,6 @@
 {
   "title": "inflation_linked_swap",
-  "comment": "A swap with cash flows linked to an inflation index.",
+  "comment": "A swap with cash flows linked to an inflation index, shown as its fixed and indexed legs.",
   "data": {
     "derivative": [
       {

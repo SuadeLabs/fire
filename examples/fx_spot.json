@@ -1,6 +1,6 @@
 {
   "title": "fx_spot",
-  "comment": "A spot FX transaction involving the sale of one currency and purchase of another.",
+  "comment": "A spot FX transaction selling one currency and buying another, shown as its two legs.",
   "data": {
     "derivative": [
       {

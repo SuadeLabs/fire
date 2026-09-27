@@ -1,6 +1,6 @@
 {
   "title": "unknown_expenses",
-  "comment": "Expenses recorded where the purpose has not yet been determined",
+  "comment": "Expenses whose purpose has not yet been determined.",
   "data": {
     "account": [
       {

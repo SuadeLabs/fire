@@ -1,6 +1,6 @@
 {
   "title": "isa_time_deposit",
-  "comment": "An isa_time_deposit is an individual savings account which is a scheme of investment satisfying the conditions prescribed in the UK’s ISA Regulations. This account type has an end_date which allows for future cashflow calculations to be done by Suade",
+  "comment": "A fixed-term individual savings account (ISA) satisfying the conditions of the UK ISA Regulations. The end date allows future cash flows to be projected.",
   "data": {
     "account": [
       {

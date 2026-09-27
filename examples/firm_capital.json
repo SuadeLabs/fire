@@ -1,6 +1,6 @@
 {
   "title": "firm_capital",
-  "comment": "Capital Resources - Tier 1",
+  "comment": "Paid-up share capital forming part of the firm's tier 1 capital.",
   "data": {
     "security": [
       {

@@ -1,6 +1,6 @@
 {
   "title": "buy_to_let_construction_mortgage",
-  "comment": "Buy-to-let construction mortgages are specialized loans used by property investors to finance the building or extensive renovation of a residential property intended for rental.",
+  "comment": "A mortgage used by property investors to finance the construction or extensive renovation of a residential property intended for rental. Includes the actual loan and its committed record.",
   "data": {
     "loan": [
       {

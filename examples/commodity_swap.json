@@ -1,6 +1,6 @@
 {
   "title": "commodity_swap",
-  "comment": "A swap providing exposure to the price of an underlying commodity.",
+  "comment": "A swap on the price of an underlying commodity, shown as its indexed and floating legs.",
   "data": {
     "derivative": [
       {

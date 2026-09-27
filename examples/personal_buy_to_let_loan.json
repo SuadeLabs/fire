@@ -1,6 +1,6 @@
 {
   "title": "personal_buy_to_let_loan",
-  "comment": "loans and credit facilities to individuals, who are purchasing properties with a view of renting it out for income purposes",
+  "comment": "A loan or credit facility to an individual purchasing property to rent out for income.",
   "data": {
     "loan": [
       {

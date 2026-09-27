@@ -1,6 +1,6 @@
 {
   "title": "commodity_asian_option",
-  "comment": "A commodity option whose payoff is based on an average underlying commodity price over a specified period.",
+  "comment": "A commodity option whose payoff is based on the average price of the underlying commodity over a specified period.",
   "data": {
     "derivative": [
       {

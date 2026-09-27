@@ -1,6 +1,6 @@
 {
   "title": "abs_sts_securitisation",
-  "comment": "Sts Securitisations Eligible For Preferential Capital Treatment , Traditional Or Synthetic Securitisations",
+  "comment": "Simple, transparent and standardised (STS) securitisation position eligible for preferential capital treatment, from either a traditional or synthetic securitisation.",
   "data": {
     "security": [
       {
