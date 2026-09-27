@@ -1,37 +1,62 @@
 {
   "title": "equity_option",
-  "comment": "equity_option",
+  "comment": "An option contract whose underlying asset is an individual company's stock.",
   "data": {
     "derivative": [
       {
-        "date": "2020-03-31T00:00:00",
-        "id": "1",
-        "deal_id": "2",
+        "id": "equity_single_name_option",
+        "date": "2026-01-26T00:00:00+00:00",
+        "mna_id": "falcon1",
+        "csa_id": "nectar",
         "asset_class": "eq_single",
         "type": "option",
-        "leg_type": "call",
-        "position": "long",
+        "position": "short",
+        "leg_type": "put",
         "currency_code": "USD",
-        "underlying_quantity": 100.00,
-        "strike": 40.00,
-        "underlying_security_id": "EquityABC",
-        "underlying_price": 25.00,
-        "trade_date": "2020-02-25T00:00:00",
-        "start_date": "2020-02-27T00:00:00",
-        "end_date": "2021-02-27T00:00:00",
-        "last_exercise_date": "2020-12-05T00:00:00",
-        "settlement_type": "cash",
-        "mtm_dirty": 10
+        "notional_amount": 10000000,
+        "strike": 80,
+        "mtm_dirty": -100000,
+        "underlying_security_id": "Corp_XYZ_stock",
+        "trade_date": "2025-10-24T00:00:00+00:00",
+        "start_date": "2025-10-26T00:00:00+00:00",
+        "end_date": "2026-10-27T00:00:00+00:00",
+        "last_exercise_date": "2026-10-25T00:00:00+00:00",
+        "regulatory_book": "trading_book",
+        "underlying_price": 50,
+        "delta": -1,
+        "customer_id": "lantern1"
       }
     ],
-    "security": [
+    "customer": [
       {
-        "date": "2020-03-31T00:00:00",
-        "id": "EquityABC",
-        "type": "equity",
-        "currency_code": "USD",
-        "start_date": "2017-01-01T00:00:00",
-        "purpose": "reference"
+        "id": "lantern1",
+        "date": "2026-01-26T00:00:00+00:00",
+        "type": "corporate",
+        "country_code": "GB",
+        "name": "Corporate entity 1",
+        "legal_entity_name": "Corporate entity 1",
+        "currency_code": "GBP",
+        "moodys_lt": "baa2",
+        "snp_lt": "bbb"
+      }
+    ],
+    "agreement": [
+      {
+        "id": "nectar",
+        "date": "2026-01-26T00:00:00+00:00",
+        "customer_id": "lantern1",
+        "type": "isda",
+        "base_currency_code": "EUR",
+        "country_code": "GB",
+        "margin_frequency": "daily"
+      },
+      {
+        "id": "falcon1",
+        "date": "2026-01-26T00:00:00+00:00",
+        "customer_id": "lantern1",
+        "type": "isda",
+        "base_currency_code": "EUR",
+        "country_code": "GB"
       }
     ]
   }

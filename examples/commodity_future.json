@@ -1,26 +1,28 @@
 {
-  "title": "fx_future",
-  "comment": "A futures contract to exchange one currency for another at a predetermined rate on a future date.",
+  "title": "commodity_future",
+  "comment": "A futures contract whose underlying asset is a commodity.",
   "data": {
     "derivative": [
       {
-        "id": "fx_future",
+        "id": "commodity_future",
         "date": "2026-01-26T00:00:00+00:00",
         "mna_id": "kernel1",
         "csa_id": "olive",
-        "asset_class": "fx",
+        "asset_class": "energy",
         "type": "future",
         "position": "short",
         "leg_type": "indexed",
-        "currency_code": "EUR",
+        "currency_code": "USD",
         "notional_amount": 10000000,
-        "mtm_dirty": 10000,
-        "underlying_currency_code": "USD",
+        "rate": 80,
+        "mtm_dirty": 100000,
+        "underlying_index": "Brent Crude Oil",
         "trade_date": "2025-10-24T00:00:00+00:00",
         "start_date": "2025-10-26T00:00:00+00:00",
-        "end_date": "2026-06-15T00:00:00+00:00",
-        "settlement_type": "cash",
+        "end_date": "2026-06-17T00:00:00+00:00",
+        "settlement_type": "physical",
         "regulatory_book": "trading_book",
+        "delta": -1,
         "customer_id": "CCP_01"
       }
     ],

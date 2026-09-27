@@ -1,37 +1,86 @@
 {
-    "title": "fx_forward",
-    "comment": "fx_forward",
-    "data": {
-      "derivative": [
-        {
-          "date": "2019-04-30T00:00:00",
-          "id": "audusd_swap:aud",
-          "deal_id": "audusd_fx_fwd",
-          "asset_class": "fx",
-          "type": "forward",
-          "leg_type": "fixed",
-          "position": "short",
-          "currency_code": "AUD",
-          "notional_amount": 10000,
-          "trade_date": "2019-02-25T00:00:00",
-          "start_date": "2019-02-27T00:00:00",
-          "end_date": "2020-02-27T00:00:00",
-          "mtm_dirty": -2
-        },
-        {
-          "date": "2019-04-30T00:00:00",
-          "id": "audusd_swap:usd",
-          "deal_id": "audusd_fx_fwd",
-          "asset_class": "fx",
-          "type": "forward",
-          "leg_type": "fixed",
-          "position": "long",
-          "currency_code": "USD",
-          "notional_amount": 10275,
-          "trade_date": "2019-02-25T00:00:00",
-          "start_date": "2019-02-27T00:00:00",
-          "end_date": "2020-02-27T00:00:00"
-        }
-      ]
-    }
+  "title": "fx_forward",
+  "comment": "An FX forward to sell one currency and buy another at a predetermined exchange rate on a future date.",
+  "data": {
+    "derivative": [
+      {
+        "id": "fx_forward_short",
+        "date": "2026-01-26T00:00:00+00:00",
+        "mna_id": "garden1",
+        "deal_id": "silver",
+        "asset_class": "fx",
+        "type": "forward",
+        "position": "short",
+        "leg_type": "fixed",
+        "currency_code": "EUR",
+        "notional_amount": 6191853,
+        "mtm_dirty": -6052206,
+        "trade_date": "2023-08-07T00:00:00+00:00",
+        "start_date": "2023-08-07T00:00:00+00:00",
+        "end_date": "2027-04-19T00:00:00+00:00",
+        "regulatory_book": "trading_book",
+        "delta": -1,
+        "fvh_level": 2,
+        "purpose": "back_to_back",
+        "initial_margin": 0,
+        "on_balance_sheet": true,
+        "reporting_id": "12453",
+        "reporting_entity_name": "987463",
+        "asset_liability": "asset",
+        "accounting_treatment": "held_for_trading",
+        "customer_id": "CU09831"
+      },
+      {
+        "id": "fx_forward_long",
+        "date": "2026-01-26T00:00:00+00:00",
+        "mna_id": "garden1",
+        "deal_id": "silver",
+        "asset_class": "fx",
+        "type": "forward",
+        "position": "long",
+        "leg_type": "fixed",
+        "currency_code": "CZK",
+        "notional_amount": 154000000,
+        "mtm_dirty": 148100646,
+        "trade_date": "2023-08-07T00:00:00+00:00",
+        "start_date": "2023-08-07T00:00:00+00:00",
+        "end_date": "2027-04-19T00:00:00+00:00",
+        "regulatory_book": "trading_book",
+        "delta": 1,
+        "fvh_level": 2,
+        "purpose": "back_to_back",
+        "initial_margin": 0,
+        "on_balance_sheet": true,
+        "reporting_id": "12453",
+        "reporting_entity_name": "987463",
+        "asset_liability": "asset",
+        "accounting_treatment": "held_for_trading",
+        "customer_id": "CU09831"
+      }
+    ],
+    "customer": [
+      {
+        "id": "CU09831",
+        "date": "2026-01-26T00:00:00+00:00",
+        "type": "corporate",
+        "country_code": "DE",
+        "name": "Corporate entity 3",
+        "legal_entity_name": "Legal Name 2",
+        "fitch_lt": "a_minus",
+        "moodys_lt": "baa1",
+        "snp_lt": "bbb_plus",
+        "intra_group": false,
+        "parent_id": "orchid",
+        "sic_code": 32990,
+        "lei_code": "AB000000000000L00072"
+      }
+    ],
+    "agreement": [
+      {
+        "id": "garden1",
+        "date": "2026-01-26T00:00:00+00:00",
+        "country_code": "DE"
+      }
+    ]
   }
+}

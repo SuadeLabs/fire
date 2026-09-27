@@ -1,50 +1,60 @@
 {
-  "title": "commodity_option",
-  "comment": "An option giving exposure to the price of an underlying commodity.",
+  "title": "equity_index_option",
+  "comment": "An option contract whose underlying asset is an equity index.",
   "data": {
     "derivative": [
       {
-        "id": "commodity_option",
+        "id": "equity_index_option",
         "date": "2026-01-26T00:00:00+00:00",
-        "mna_id": "harbor1",
-        "asset_class": "agri",
+        "mna_id": "falcon1",
+        "csa_id": "nectar",
+        "asset_class": "eq_index",
         "type": "option",
         "position": "short",
         "leg_type": "put",
         "currency_code": "USD",
         "notional_amount": 10000000,
-        "strike": 0.2,
+        "strike": 5000,
         "mtm_dirty": -100000,
-        "underlying_index": "Sugar",
+        "underlying_security_id": "SPX",
         "trade_date": "2025-10-24T00:00:00+00:00",
         "start_date": "2025-10-26T00:00:00+00:00",
         "end_date": "2026-10-27T00:00:00+00:00",
         "last_exercise_date": "2026-10-25T00:00:00+00:00",
         "settlement_type": "cash",
         "regulatory_book": "trading_book",
-        "underlying_price": 0.22,
+        "underlying_price": 5200,
         "delta": -1,
-        "customer_id": "CU0941"
+        "customer_id": "lantern1"
       }
     ],
     "customer": [
       {
-        "id": "CU0941",
+        "id": "lantern1",
         "date": "2026-01-26T00:00:00+00:00",
-        "type": "credit_institution",
+        "type": "corporate",
         "country_code": "GB",
-        "name": "Bank 1",
-        "legal_entity_name": "Bank 1",
+        "name": "Corporate entity 1",
+        "legal_entity_name": "Corporate entity 1",
         "currency_code": "GBP",
-        "moodys_lt": "aa2",
-        "snp_lt": "aa"
+        "moodys_lt": "baa2",
+        "snp_lt": "bbb"
       }
     ],
     "agreement": [
       {
-        "id": "harbor1",
+        "id": "nectar",
         "date": "2026-01-26T00:00:00+00:00",
-        "customer_id": "CU0941",
+        "customer_id": "lantern1",
+        "type": "isda",
+        "base_currency_code": "EUR",
+        "country_code": "GB",
+        "margin_frequency": "daily"
+      },
+      {
+        "id": "falcon1",
+        "date": "2026-01-26T00:00:00+00:00",
+        "customer_id": "lantern1",
         "type": "isda",
         "base_currency_code": "EUR",
         "country_code": "GB"

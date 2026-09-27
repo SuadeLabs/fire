@@ -1,100 +1,81 @@
 {
   "title": "interest_rate_swap_amortising",
-  "comment": "Interest Rate Swap Amortising",
+  "comment": "An interest rate swap with notional amount that decreases over the life of the contract.",
   "data": {
     "derivative": [
       {
-        "id": "eur_10y_irs_fixed",
-        "deal_id": "eur_10y_irs",
-        "date": "2020-03-31T00:00:00",
+        "id": "interest_rate_swap_amortising_long",
+        "date": "2026-01-26T00:00:00+00:00",
+        "mna_id": "falcon1",
+        "csa_id": "nectar",
+        "deal_id": "thunder",
         "asset_class": "ir",
         "type": "vanilla_swap",
-        "leg_type": "fixed",
         "position": "long",
-        "currency_code": "EUR",
-        "notional_amount": 10000,
-        "trade_date": "2020-01-29T00:00:00",
-        "start_date": "2020-01-31T00:00:00",
-        "end_date": "2022-01-31T00:00:00",
-        "rate": 0.01,
-        "mtm_dirty": 70
+        "leg_type": "fixed",
+        "currency_code": "USD",
+        "notional_amount": 10000000,
+        "rate": 0.025,
+        "mtm_dirty": 100000,
+        "trade_date": "2025-10-24T00:00:00+00:00",
+        "start_date": "2025-10-26T00:00:00+00:00",
+        "end_date": "2026-10-27T00:00:00+00:00",
+        "regulatory_book": "trading_book",
+        "customer_id": "lantern1"
       },
       {
-        "id": "eur_10y_irs_floating",
-        "deal_id": "long_eur_10y_irs",
-        "date": "2020-03-31T00:00:00",
+        "id": "interest_rate_swap_amortising_short",
+        "date": "2026-01-26T00:00:00+00:00",
+        "mna_id": "falcon1",
+        "csa_id": "nectar",
+        "deal_id": "thunder",
         "asset_class": "ir",
         "type": "vanilla_swap",
-        "leg_type": "floating",
         "position": "short",
-        "currency_code": "EUR",
-        "notional_amount": 10000,
-        "trade_date": "2020-01-29T00:00:00",
-        "start_date": "2020-01-31T00:00:00",
-        "end_date": "2022-01-31T00:00:00",
-        "underlying_index": "EURIBOR",
-        "underlying_index_tenor": "6m",
-        "rate": 0.0025
+        "leg_type": "floating",
+        "currency_code": "USD",
+        "notional_amount": 10000000,
+        "mtm_dirty": 0,
+        "underlying_index": "USD_LIBOR",
+        "underlying_index_tenor": "3m",
+        "trade_date": "2025-10-24T00:00:00+00:00",
+        "start_date": "2025-10-26T00:00:00+00:00",
+        "end_date": "2026-10-27T00:00:00+00:00",
+        "next_reset_date": "2026-04-26T00:00:00+00:00",
+        "regulatory_book": "trading_book",
+        "customer_id": "lantern1"
       }
     ],
-    "derivative_cash_flow": [
+    "customer": [
       {
-        "id": "eur_10y_irs_fixed_1",
-        "derivative_id": "eur_10y_irs_fixed",
-        "date": "2020-03-31T00:00:00",
-        "currency_code": "EUR",
-        "notional_amount": 10000,
-        "reset_date": "2020-01-31T00:00:00",
-        "payment_date": "2021-01-31T00:00:00"
+        "id": "lantern1",
+        "date": "2026-01-26T00:00:00+00:00",
+        "type": "corporate",
+        "country_code": "GB",
+        "name": "Corporate entity 1",
+        "legal_entity_name": "Corporate entity 1",
+        "currency_code": "GBP",
+        "moodys_lt": "baa2",
+        "snp_lt": "bbb"
+      }
+    ],
+    "agreement": [
+      {
+        "id": "nectar",
+        "date": "2026-01-26T00:00:00+00:00",
+        "customer_id": "lantern1",
+        "type": "isda",
+        "base_currency_code": "EUR",
+        "country_code": "GB",
+        "margin_frequency": "daily"
       },
       {
-        "id": "eur_10y_irs_fixed_2",
-        "derivative_id": "eur_10y_irs_fixed",
-        "date": "2020-03-31T00:00:00",
-        "currency_code": "EUR",
-        "notional_amount": 5000,
-        "reset_date": "2021-01-31T00:00:00",
-        "payment_date": "2022-01-31T00:00:00"
-      },
-      {
-        "id": "eur_10y_irs_floating_1",
-        "derivative_id": "eur_10y_irs_floating",
-        "date": "2020-03-31T00:00:00",
-        "currency_code": "EUR",
-        "notional_amount": 10000,
-        "reset_date": "2021-01-31T00:00:00",
-        "payment_date": "2021_07_31T00:00:00",
-        "forward_rate": 0.0075
-      },
-      {
-        "id": "eur_10y_irs_floating_2",
-        "derivative_id": "eur_10y_irs_floating",
-        "date": "2020-03-31T00:00:00",
-        "currency_code": "EUR",
-        "notional_amount": 10000,
-        "reset_date": "2021-07-31T00:00:00",
-        "payment_date": "2022-01-31T00:00:00",
-        "forward_rate": 0.0125
-      },
-      {
-        "id": "eur_10y_irs_floating_3",
-        "derivative_id": "eur_10y_irs_floating",
-        "date": "2020-03-31T00:00:00",
-        "currency_code": "EUR",
-        "notional_amount": 5000,
-        "reset_date": "2022-01-31T00:00:00",
-        "payment_date": "2022-07-31T00:00:00",
-        "forward_rate": 0.0175
-      },
-      {
-        "id": "eur_10y_irs_floating_4",
-        "derivative_id": "eur_10y_irs_floating",
-        "date": "2020-03-31T00:00:00",
-        "currency_code": "EUR",
-        "notional_amount": 5000,
-        "reset_date": "2022-07-31T00:00:00",
-        "payment_date": "2023-01-31T00:00:00",
-        "forward_rate": 0.0225
+        "id": "falcon1",
+        "date": "2026-01-26T00:00:00+00:00",
+        "customer_id": "lantern1",
+        "type": "isda",
+        "base_currency_code": "EUR",
+        "country_code": "GB"
       }
     ]
   }
