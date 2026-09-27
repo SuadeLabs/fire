@@ -1,0 +1,76 @@
+{
+  "title": "buy_to_let_commercial_loan_high_risk",
+  "comment": "High risk commercial loan for buy_to_let refers to a real estate loan where the borrower is purchasing the property with a view of renting it out on a commercial basis to an unrelated third party. Receives 100% risk weight.",
+  "data": {
+    "loan": [
+      {
+        "id": "buy_to_let_commercial_loan_high_risk",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest_balance": 2454795,
+        "asset_liability": "asset",
+        "balance": 802454795,
+        "count": 27,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "Name 12345",
+        "customers": [
+          {
+            "id": "Name 12345",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2028-06-12T00:00:00+00:00",
+        "limit_amount": 800000000,
+        "movement": "other",
+        "next_payment_date": "2025-09-10T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "purpose": "other",
+        "rate": 7,
+        "rate_type": "variable",
+        "repayment_frequency": "monthly",
+        "repayment_type": "interest_only",
+        "risk_country_code": "GB",
+        "secured": true,
+        "start_date": "2025-06-10T00:00:00+00:00",
+        "status": "actual",
+        "trade_date": "2025-06-10T00:00:00+00:00",
+        "type": "commercial",
+        "regulatory_book": "banking_book"
+      }
+    ],
+    "customer": [
+      {
+        "id": "Name 12345",
+        "date": "2025-08-26T00:00:00+00:00",
+        "boe_sector_code": "Non FinCorp; Non fincorp other than public corp",
+        "country_code": "GB",
+        "credit_impaired": false,
+        "intra_group": false,
+        "product_count": 3,
+        "sic_code": 68320,
+        "source": "Equation",
+        "start_date": "2025-05-28T00:00:00+00:00",
+        "status": "established",
+        "type": "sme"
+      }
+    ],
+    "collateral": [
+      {
+        "id": "buy_to_let_commercial_loan_high_risk_collateral",
+        "date": "2024-12-31T00:00:00+00:00",
+        "loan_ids": [
+          "buy_to_let_commercial_loan_high_risk"
+        ],
+        "charge": 1,
+        "end_date": "2025-01-01T00:00:00+00:00",
+        "start_date": "2024-12-31T00:00:00+00:00",
+        "type": "commercial_property_hr",
+        "value": 208333300,
+        "value_date": "2024-02-07T00:00:00+00:00",
+        "regulatory_book": "banking_book",
+        "currency_code": "GBP"
+      }
+    ]
+  }
+}

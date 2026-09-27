@@ -1,0 +1,94 @@
+{
+  "title": "buy_to_let_mortgage",
+  "comment": "A buy-to-let mortgage is a specialized loan for purchasing or refinancing a property intended for rental income rather than personal occupation",
+  "data": {
+    "loan": [
+      {
+        "id": "buy_to_let_mortgage_actual",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest_balance": 2896,
+        "asset_liability": "asset",
+        "balance": 1124323,
+        "count": 19,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "PET211",
+        "customers": [
+          {
+            "id": "PET211",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2026-11-16T00:00:00+00:00",
+        "limit_amount": 1121427,
+        "movement": "other",
+        "next_payment_date": "2025-09-15T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "purpose": "buy_to_let",
+        "rate": 7.25,
+        "rate_type": "variable",
+        "repayment_frequency": "monthly",
+        "repayment_type": "combined",
+        "risk_country_code": "GB",
+        "secured": true,
+        "start_date": "2016-11-14T00:00:00+00:00",
+        "status": "actual",
+        "trade_date": "2016-11-14T00:00:00+00:00",
+        "type": "mortgage",
+        "regulatory_book": "banking_book"
+      },
+      {
+        "id": "buy_to_let_mortgage_committed",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest_balance": 2896,
+        "asset_liability": "asset",
+        "balance": 1124323,
+        "count": 19,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "PET211",
+        "customers": [
+          {
+            "id": "PET211",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2026-11-16T00:00:00+00:00",
+        "limit_amount": 1121427,
+        "movement": "other",
+        "next_payment_date": "2025-09-15T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "purpose": "buy_to_let",
+        "rate": 7.25,
+        "rate_type": "variable",
+        "repayment_frequency": "monthly",
+        "repayment_type": "combined",
+        "risk_country_code": "GB",
+        "secured": true,
+        "start_date": "2016-11-14T00:00:00+00:00",
+        "status": "committed",
+        "trade_date": "2016-11-14T00:00:00+00:00",
+        "type": "mortgage",
+        "regulatory_book": "banking_book"
+      }
+    ],
+    "customer": [
+      {
+        "id": "PET211",
+        "date": "2025-08-26T00:00:00+00:00",
+        "boe_sector_code": "Non FinCorp; Non fincorp other than public corp",
+        "country_code": "CY",
+        "credit_impaired": false,
+        "intra_group": false,
+        "product_count": 2,
+        "sic_code": 68320,
+        "source": "Equation",
+        "start_date": "1994-09-15T00:00:00+00:00",
+        "status": "established",
+        "type": "unincorporated_biz"
+      }
+    ]
+  }
+}

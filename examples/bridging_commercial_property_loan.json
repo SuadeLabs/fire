@@ -1,0 +1,93 @@
+{
+  "title": "bridging_commercial_property_loan",
+  "comment": "A commercial bridging loan is a short-term, secured by commercial property, used for temporary funding gap when buying or developing a business property. Borrowers typically use these loans to quickly secure a property, fund urgent refurbishments, or cover cash flow shortages while arranging permanent financing or selling another asset",
+  "data": {
+    "loan": [
+      {
+        "id": "bridging_commercial_property_loan_actual",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest_balance": 6378145,
+        "asset_liability": "asset",
+        "balance": 957562189,
+        "count": 1,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "awqe123",
+        "customers": [
+          {
+            "id": "awqe123",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2026-04-30T00:00:00+00:00",
+        "limit_amount": 951184044,
+        "movement": "other",
+        "next_payment_date": "2026-04-30T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "purpose": "bridging_loan",
+        "rate": 9,
+        "rate_type": "variable",
+        "repayment_frequency": "monthly",
+        "repayment_type": "combined",
+        "risk_country_code": "GB",
+        "secured": true,
+        "start_date": "2025-07-31T00:00:00+00:00",
+        "status": "actual",
+        "trade_date": "2025-07-31T00:00:00+00:00",
+        "type": "commercial_property",
+        "regulatory_book": "banking_book"
+      },
+      {
+        "id": "bridging_commercial_property_loan_committed",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest_balance": 6378145,
+        "asset_liability": "asset",
+        "balance": 957562189,
+        "count": 1,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "awqe123",
+        "customers": [
+          {
+            "id": "awqe123",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2026-04-30T00:00:00+00:00",
+        "limit_amount": 951184044,
+        "movement": "other",
+        "next_payment_date": "2026-04-30T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "purpose": "bridging_loan",
+        "rate": 9,
+        "rate_type": "variable",
+        "repayment_frequency": "monthly",
+        "repayment_type": "combined",
+        "risk_country_code": "GB",
+        "secured": true,
+        "start_date": "2025-07-31T00:00:00+00:00",
+        "status": "committed",
+        "trade_date": "2025-07-31T00:00:00+00:00",
+        "type": "commercial_property",
+        "regulatory_book": "banking_book"
+      }
+    ],
+    "customer": [
+      {
+        "id": "awqe123",
+        "date": "2025-08-26T00:00:00+00:00",
+        "boe_sector_code": "Other UK residents; Unincorporated businesses other than unlimited liability partnerships",
+        "country_code": "GB",
+        "credit_impaired": false,
+        "intra_group": false,
+        "product_count": 0,
+        "sic_code": 41100,
+        "source": "Equation",
+        "start_date": "2025-07-31T00:00:00+00:00",
+        "type": "unincorporated_biz"
+      }
+    ]
+  }
+}

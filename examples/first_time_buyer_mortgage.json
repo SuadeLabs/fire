@@ -1,0 +1,94 @@
+{
+  "title": "first_time_buyer_mortgage",
+  "comment": "First-time buyer mortgage loans are financial products tailored for individuals with no prior history of property ownership.",
+  "data": {
+    "loan": [
+      {
+        "id": "first_time_buyer_mortgage_actual",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest_balance": 14516,
+        "asset_liability": "asset",
+        "balance": 4138427,
+        "count": 1,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "BFD123",
+        "customers": [
+          {
+            "id": "BFD123",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2031-06-07T00:00:00+00:00",
+        "limit_amount": 4123911,
+        "movement": "other",
+        "next_payment_date": "2025-09-05T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "purpose": "first_time_buyer",
+        "rate": 5.84,
+        "rate_type": "fixed",
+        "repayment_frequency": "monthly",
+        "repayment_type": "combined",
+        "risk_country_code": "GB",
+        "secured": true,
+        "start_date": "2007-07-05T00:00:00+00:00",
+        "status": "actual",
+        "trade_date": "2007-07-05T00:00:00+00:00",
+        "type": "mortgage",
+        "regulatory_book": "banking_book"
+      },
+      {
+        "id": "first_time_buyer_mortgage_committed",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest_balance": 14516,
+        "asset_liability": "asset",
+        "balance": 4138427,
+        "count": 1,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "BFD123",
+        "customers": [
+          {
+            "id": "BFD123",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2031-06-07T00:00:00+00:00",
+        "limit_amount": 4123911,
+        "movement": "other",
+        "next_payment_date": "2025-09-05T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "purpose": "first_time_buyer",
+        "rate": 5.84,
+        "rate_type": "fixed",
+        "repayment_frequency": "monthly",
+        "repayment_type": "combined",
+        "risk_country_code": "GB",
+        "secured": true,
+        "start_date": "2007-07-05T00:00:00+00:00",
+        "status": "committed",
+        "trade_date": "2007-07-05T00:00:00+00:00",
+        "type": "mortgage",
+        "regulatory_book": "banking_book"
+      }
+    ],
+    "customer": [
+      {
+        "id": "BFD123",
+        "date": "2025-08-26T00:00:00+00:00",
+        "boe_sector_code": "Other UK residents; Individual and individual trusts",
+        "country_code": "GB",
+        "credit_impaired": false,
+        "intra_group": false,
+        "product_count": 2,
+        "sic_code": 0,
+        "source": "Equation",
+        "start_date": "2007-05-15T00:00:00+00:00",
+        "status": "established",
+        "type": "natural_person"
+      }
+    ]
+  }
+}

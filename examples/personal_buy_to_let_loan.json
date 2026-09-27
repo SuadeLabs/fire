@@ -1,0 +1,59 @@
+{
+  "title": "personal_buy_to_let_loan",
+  "comment": "loans and credit facilities to individuals, who are purchasing properties with a view of renting it out for income purposes",
+  "data": {
+    "loan": [
+      {
+        "id": "personal_buy_to_let_loan",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest_balance": 32775,
+        "asset_liability": "asset",
+        "balance": 17755303,
+        "count": 3,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "CU11231",
+        "customers": [
+          {
+            "id": "CU11231",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2025-09-12T00:00:00+00:00",
+        "limit_amount": 17722528,
+        "movement": "other",
+        "next_payment_date": "2025-09-12T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "purpose": "buy_to_let",
+        "rate": 4.5,
+        "rate_type": "variable",
+        "repayment_frequency": "monthly",
+        "repayment_type": "combined",
+        "risk_country_code": "GB",
+        "secured": true,
+        "start_date": "2015-03-12T00:00:00+00:00",
+        "status": "actual",
+        "trade_date": "2015-03-12T00:00:00+00:00",
+        "type": "personal",
+        "regulatory_book": "banking_book"
+      }
+    ],
+    "customer": [
+      {
+        "id": "CU11231",
+        "date": "2025-08-26T00:00:00+00:00",
+        "boe_sector_code": "Other UK residents; Individual and individual trusts",
+        "country_code": "GB",
+        "credit_impaired": false,
+        "intra_group": false,
+        "product_count": 2,
+        "sic_code": 0,
+        "source": "Equation",
+        "start_date": "2006-07-10T00:00:00+00:00",
+        "status": "established",
+        "type": "natural_person"
+      }
+    ]
+  }
+}

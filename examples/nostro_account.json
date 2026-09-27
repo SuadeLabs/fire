@@ -1,0 +1,49 @@
+{
+  "title": "nostro_account",
+  "comment": "Nostro loans are the firm’s accounts at other financial institutions which are in effect loans to other firms where purpose is not defined",
+  "data": {
+    "loan": [
+      {
+        "id": "nostro_account",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "asset_liability": "asset",
+        "balance": 2644333,
+        "count": 1,
+        "currency_code": "GBP",
+        "customer_id": "CU141",
+        "customers": [
+          {
+            "id": "CU141",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2025-08-27T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "product_name": "non_trade",
+        "reporting_id": "FI6C7E5PBUB3F9K43B44",
+        "reporting_entity_name": "17491",
+        "start_date": "2025-08-26T00:00:00+00:00",
+        "trade_date": "2025-08-26T00:00:00+00:00",
+        "type": "nostro",
+        "regulatory_book": "banking_book"
+      }
+    ],
+    "customer": [
+      {
+        "id": "CU141",
+        "date": "2025-08-26T00:00:00+00:00",
+        "country_code": "GB",
+        "intra_group": false,
+        "moodys_lt": "a1",
+        "sic_code": 64999,
+        "type": "credit_institution",
+        "legal_entity_name": "Legal Name 000003",
+        "lei_code": "3129009N55YRQC69CN08",
+        "name": "Customer Name 000003",
+        "snp_lt": "a_plus",
+        "fitch_lt": "a_plus"
+      }
+    ]
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "title": "speculative_property_commercial_loan",
+  "comment": "Commercial loans for the purposes of the acquisition of or development or construction on land in relation to immovable property, or of and in relation to such property, with the intention of reselling for profit;",
+  "data": {
+    "loan": [
+      {
+        "id": "speculative_property_commercial_loan_actual",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest_balance": 686290,
+        "asset_liability": "asset",
+        "balance": 298363987,
+        "count": 3,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "Nam56789",
+        "customers": [
+          {
+            "id": "Nam56789",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2027-01-18T00:00:00+00:00",
+        "limit_amount": 297677697,
+        "movement": "other",
+        "next_payment_date": "2027-01-18T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "purpose": "speculative_property",
+        "rate": 9.35,
+        "rate_type": "variable",
+        "repayment_frequency": "monthly",
+        "repayment_type": "combined",
+        "risk_country_code": "GB",
+        "secured": true,
+        "start_date": "2025-01-16T00:00:00+00:00",
+        "status": "actual",
+        "trade_date": "2025-01-16T00:00:00+00:00",
+        "type": "commercial",
+        "regulatory_book": "banking_book"
+      },
+      {
+        "id": "speculative_property_commercial_loan_cancelled",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest_balance": 686290,
+        "asset_liability": "asset",
+        "balance": 298363987,
+        "count": 3,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "Nam56789",
+        "customers": [
+          {
+            "id": "Nam56789",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2027-01-18T00:00:00+00:00",
+        "limit_amount": 297677697,
+        "movement": "other",
+        "next_payment_date": "2027-01-18T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "purpose": "speculative_property",
+        "rate": 9.35,
+        "rate_type": "variable",
+        "repayment_frequency": "monthly",
+        "repayment_type": "combined",
+        "risk_country_code": "GB",
+        "secured": true,
+        "start_date": "2025-01-16T00:00:00+00:00",
+        "status": "cancelled",
+        "trade_date": "2025-01-16T00:00:00+00:00",
+        "type": "commercial",
+        "regulatory_book": "banking_book"
+      }
+    ],
+    "customer": [
+      {
+        "id": "Nam56789",
+        "date": "2025-08-26T00:00:00+00:00",
+        "boe_sector_code": "Non FinCorp; Non fincorp other than public corp",
+        "country_code": "GB",
+        "credit_impaired": false,
+        "intra_group": false,
+        "product_count": 2,
+        "sic_code": 41100,
+        "source": "Equation",
+        "start_date": "2024-10-07T00:00:00+00:00",
+        "status": "established",
+        "type": "sme"
+      }
+    ]
+  }
+}

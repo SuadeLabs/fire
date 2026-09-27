@@ -1,0 +1,94 @@
+{
+  "title": "other_commercial_loan",
+  "comment": "Commercial loan others refers to a real estate loan where the current purpose enums donot fit the definition",
+  "data": {
+    "loan": [
+      {
+        "id": "other_commercial_loan_actual",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest_balance": 24705,
+        "asset_liability": "asset",
+        "balance": 225461644,
+        "count": 5,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "Name 09876",
+        "customers": [
+          {
+            "id": "Name 09876",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2025-11-25T00:00:00+00:00",
+        "limit_amount": 225436939,
+        "movement": "other",
+        "next_payment_date": "2025-11-25T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "purpose": "other",
+        "rate": 4,
+        "rate_type": "fixed",
+        "repayment_frequency": "quarterly",
+        "repayment_type": "combined",
+        "risk_country_code": "GB",
+        "secured": true,
+        "start_date": "2022-05-25T00:00:00+00:00",
+        "status": "actual",
+        "trade_date": "2022-05-25T00:00:00+00:00",
+        "type": "commercial",
+        "regulatory_book": "banking_book"
+      },
+      {
+        "id": "other_commercial_loan_committed",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest_balance": 24705,
+        "asset_liability": "asset",
+        "balance": 225461644,
+        "count": 5,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "Name 09876",
+        "customers": [
+          {
+            "id": "Name 09876",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2025-11-25T00:00:00+00:00",
+        "limit_amount": 225436939,
+        "movement": "other",
+        "next_payment_date": "2025-11-25T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "purpose": "other",
+        "rate": 4,
+        "rate_type": "fixed",
+        "repayment_frequency": "quarterly",
+        "repayment_type": "combined",
+        "risk_country_code": "GB",
+        "secured": true,
+        "start_date": "2022-05-25T00:00:00+00:00",
+        "status": "committed",
+        "trade_date": "2022-05-25T00:00:00+00:00",
+        "type": "commercial",
+        "regulatory_book": "banking_book"
+      }
+    ],
+    "customer": [
+      {
+        "id": "Name 09876",
+        "date": "2025-08-26T00:00:00+00:00",
+        "boe_sector_code": "Non FinCorp; Non fincorp other than public corp",
+        "country_code": "GB",
+        "credit_impaired": false,
+        "intra_group": false,
+        "product_count": 1,
+        "sic_code": 68320,
+        "source": "Equation",
+        "start_date": "2021-12-02T00:00:00+00:00",
+        "status": "established",
+        "type": "sme"
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "title": "operational_nostro_account",
+  "comment": "Nostro loans are the firm’s accounts at other financial institutions which are in effect loans to other firms. where purpose = operational meaning that its an operational account to meet the institution's expenses",
+  "data": {
+    "loan": [
+      {
+        "id": "operational_nostro_account",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "cb_or_demand",
+        "accrued_interest_balance": 0,
+        "asset_liability": "asset",
+        "balance": 5022196,
+        "count": 5,
+        "country_code": "GR",
+        "currency_code": "CHF",
+        "customer_id": "CU1522",
+        "customers": [
+          {
+            "id": "CU1522",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2025-08-27T00:00:00+00:00",
+        "impairment_status": "stage_1",
+        "ledger_code": "85302062",
+        "next_payment_date": "2025-08-27T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "product_name": "BC",
+        "purpose": "operational",
+        "repayment_frequency": "at_maturity",
+        "start_date": "2025-08-26T00:00:00+00:00",
+        "trade_date": "2025-08-26T00:00:00+00:00",
+        "type": "nostro",
+        "regulatory_book": "banking_book"
+      }
+    ],
+    "customer": [
+      {
+        "id": "CU1522",
+        "date": "2025-08-26T00:00:00+00:00",
+        "country_code": "GR",
+        "intra_group": true,
+        "moodys_lt": "ba2",
+        "sic_code": 64191,
+        "type": "credit_institution",
+        "legal_entity_name": "C BANK",
+        "lei_code": "1239009N55YRQC69CN08",
+        "name": "CBANK",
+        "reporting_relationship": "parent",
+        "moodys_st": "np"
+      }
+    ]
+  }
+}

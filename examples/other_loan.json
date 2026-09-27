@@ -1,0 +1,48 @@
+{
+  "title": "other_loan",
+  "comment": "Trading for borrowing against various positions, i.e. funding for a short position. This can be asset/liability dependant on who is faciliating the trade.",
+  "data": {
+    "loan": [
+      {
+        "id": "other_loan",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "asset_liability": "liability",
+        "balance": -482204,
+        "count": 2,
+        "currency_code": "AUD",
+        "customer_id": "CU10987654",
+        "customers": [
+          {
+            "id": "CU10987654",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2025-08-27T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "product_name": "funding",
+        "reporting_id": "FI6C7E5PBUB3F9K43B44",
+        "reporting_entity_name": "17491",
+        "start_date": "2025-08-26T00:00:00+00:00",
+        "trade_date": "2025-08-26T00:00:00+00:00",
+        "type": "other",
+        "regulatory_book": "banking_book"
+      }
+    ],
+    "customer": [
+      {
+        "id": "CU10987654",
+        "date": "2025-08-26T00:00:00+00:00",
+        "country_code": "BE",
+        "intra_group": false,
+        "sic_code": 66190,
+        "type": "ccp",
+        "legal_entity_name": "Legal Name 000466",
+        "lei_code": "4129009N55YRQC69CN08",
+        "name": "Customer Name 000466",
+        "snp_lt": "aa",
+        "fitch_lt": "aa"
+      }
+    ]
+  }
+}
