@@ -1,0 +1,112 @@
+{
+  "title": "repo_liability",
+  "comment": "An Agreement In Which One Party Purchases Securities Or Commodities And Commits To Resell Equivalent Assets To The Original Seller At A Specified Future Date And Price.",
+  "data": {
+    "security": [
+      {
+        "id": "repo_liability",
+        "date": "2025-10-06T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest": 9936442,
+        "asset_liability": "liability",
+        "balance": 25009936442,
+        "currency_code": "GBP",
+        "customer_id": "birch",
+        "deal_id": "413514",
+        "end_date": "2028-01-04T00:00:00+00:00",
+        "interest_repayment_frequency": "quarterly",
+        "issuer_id": "willow",
+        "last_payment_date": "2028-01-05T00:00:00+00:00",
+        "maturity_date": "2028-01-04T00:00:00+00:00",
+        "movement": "cash",
+        "mtm_clean": 25000000000,
+        "mtm_dirty": 25009936437,
+        "next_payment_date": "2026-01-04T00:00:00+00:00",
+        "notional_amount": 25000000000,
+        "on_balance_sheet": true,
+        "product_name": "L: Long Term Repo Float",
+        "rate": 0,
+        "regulatory_book": "banking_book",
+        "rehypothecation": false,
+        "reporting_id": "iris",
+        "reporting_entity_name": "iris",
+        "sft_type": "repo",
+        "start_date": "2025-01-04T00:00:00+00:00",
+        "type": "covered_bond",
+        "trade_date": "2025-01-01T00:00:00+00:00"
+      },
+      {
+        "id": "repo_liability2",
+        "date": "2025-10-06T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest": 6480736,
+        "asset_liability": "liability",
+        "balance": 25006480736,
+        "currency_code": "GBP",
+        "customer_id": "birch1",
+        "deal_id": "413514",
+        "end_date": "2028-01-05T00:00:00+00:00",
+        "interest_repayment_frequency": "quarterly",
+        "issuer_id": "willow",
+        "last_payment_date": "2028-01-06T00:00:00+00:00",
+        "maturity_date": "2028-01-05T00:00:00+00:00",
+        "movement": "cash",
+        "mtm_clean": 25000000000,
+        "mtm_dirty": 25006480731,
+        "next_payment_date": "2026-01-05T00:00:00+00:00",
+        "notional_amount": 25000000000,
+        "on_balance_sheet": true,
+        "product_name": "L: Long Term Repo Float",
+        "rate": 3.967,
+        "regulatory_book": "banking_book",
+        "rehypothecation": false,
+        "reporting_id": "iris",
+        "reporting_entity_name": "iris",
+        "sft_type": "repo",
+        "start_date": "2025-01-05T00:00:00+00:00",
+        "type": "covered_bond",
+        "trade_date": "2025-01-02T00:00:00+00:00"
+      }
+    ],
+    "customer": [
+      {
+        "id": "birch",
+        "date": "2025-10-05T00:00:00+00:00",
+        "country_code": "GB",
+        "credit_impaired": false,
+        "intra_group": false,
+        "legal_entity_name": "rain",
+        "moodys_lt": "aa3",
+        "name": "rain",
+        "parent_id": "echo",
+        "type": "credit_institution",
+        "status": "established"
+      },
+      {
+        "id": "birch1",
+        "date": "2025-10-06T00:00:00+00:00",
+        "country_code": "GB",
+        "credit_impaired": false,
+        "intra_group": false,
+        "legal_entity_name": "rain",
+        "moodys_lt": "aa3",
+        "name": "rain",
+        "parent_id": "echo",
+        "type": "credit_institution",
+        "status": "established"
+      }
+    ],
+    "issuer": [
+      {
+        "id": "willow",
+        "date": "2025-10-06T00:00:00+00:00",
+        "country_code": "GB",
+        "intra_group": true,
+        "legal_entity_name": "willow",
+        "moodys_lt": "a3",
+        "name": "willow",
+        "type": "building_society"
+      }
+    ]
+  }
+}

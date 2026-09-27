@@ -1,0 +1,57 @@
+{
+  "title": "abs_sts_securitisation",
+  "comment": "Sts Securitisations Eligible For Preferential Capital Treatment , Traditional Or Synthetic Securitisations",
+  "data": {
+    "security": [
+      {
+        "id": "asset_backed_security_sts_securitisation",
+        "date": "2025-10-06T00:00:00+00:00",
+        "accounting_treatment": "held_for_trading",
+        "asset_liability": "asset",
+        "attachment_point": 0.79015972,
+        "cost_center_code": "ASDF",
+        "country_code": "GB",
+        "cr_approach": "sec_erba",
+        "currency_code": "GBP",
+        "customer_id": "ripple",
+        "detachment_point": 1,
+        "deal_id": "dawn",
+        "end_date": "2029-10-31T00:00:00+00:00",
+        "isin_code": "GB91282CJJ18",
+        "issuer_id": "Iss1",
+        "ledger_code": "152503",
+        "maturity_date": "2029-10-31T00:00:00+00:00",
+        "moodys_lt": "aaa",
+        "movement": "asset",
+        "mtm_clean": 195668053,
+        "mtm_dirty": 195922924,
+        "notional_amount": 250500000,
+        "on_balance_sheet": true,
+        "product_name": "unencumbered",
+        "regulatory_book": "trading_book",
+        "reporting_id": "ripple",
+        "reporting_entity_name": "ripple",
+        "securitisation_type": "sts_traditional",
+        "seniority": "senior_secured",
+        "snp_lt": "aa_plus",
+        "start_date": "2025-10-06T00:00:00+00:00",
+        "type": "abs",
+        "trade_date": "2025-10-06T00:00:00+00:00"
+      }
+    ],
+    "customer": [
+      {
+        "id": "ripple",
+        "date": "2025-10-06T00:00:00+00:00"
+      }
+    ],
+    "issuer": [
+      {
+        "id": "Iss1",
+        "date": "2025-10-06T00:00:00+00:00",
+        "lei_code": "AB000000000000L00297",
+        "type": "corporate"
+      }
+    ]
+  }
+}

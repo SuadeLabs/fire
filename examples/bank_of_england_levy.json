@@ -1,0 +1,39 @@
+{
+  "title": "bank_of_england_levy",
+  "comment": "The Bank of England levy, which replaced the former Cash Ratio Deposit Scheme, is a levy which covers the BoE's operational costs",
+  "data": {
+    "security": [
+      {
+        "id": "bank_of_england_levy",
+        "date": "2025-10-06T00:00:00+00:00",
+        "accounting_treatment": "fv_oci",
+        "asset_liability": "asset",
+        "currency_code": "GBP",
+        "customer_id": "central_bank",
+        "deal_id": "31232",
+        "hqla_class": "i",
+        "interest_repayment_frequency": "at_maturity",
+        "movement": "asset",
+        "mtm_clean": 100,
+        "mtm_dirty": 100,
+        "notional_amount": 100,
+        "on_balance_sheet": true,
+        "product_name": "Cash Ratio Deposit",
+        "rate": 0,
+        "regulatory_book": "banking_book",
+        "reporting_id": "123456",
+        "reporting_entity_name": "123456",
+        "start_date": "2025-10-06T00:00:00+00:00",
+        "type": "cash_ratio_deposit",
+        "trade_date": "2025-10-06T00:00:00+00:00",
+        "value_date": "2025-10-06T00:00:00+00:00"
+      }
+    ],
+    "customer": [
+      {
+        "id": "central_bank",
+        "date": "2025-10-06T00:00:00+00:00"
+      }
+    ]
+  }
+}

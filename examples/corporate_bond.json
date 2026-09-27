@@ -1,0 +1,55 @@
+{
+  "title": "corporate_bond",
+  "comment": "Debt Instruments Issued By A Corporate",
+  "data": {
+    "security": [
+      {
+        "id": "corporate_bond",
+        "date": "2025-10-06T00:00:00+00:00",
+        "accounting_treatment": "held_for_trading",
+        "asset_liability": "asset",
+        "balance": 400000,
+        "currency_code": "EUR",
+        "deal_id": "12321",
+        "end_date": "2025-11-03T00:00:00+00:00",
+        "fitch_lt": "bbb_plus",
+        "fvh_level": 2,
+        "hqla_class": "iib",
+        "isin_code": "AB0000007320",
+        "issuer_id": "Iss8",
+        "moodys_lt": "a3",
+        "movement": "asset",
+        "mtm_dirty": 402857,
+        "notional_amount": 400000,
+        "on_balance_sheet": true,
+        "product_name": "bond",
+        "rate": 0.875,
+        "regulatory_book": "trading_book",
+        "rehypothecation": true,
+        "reporting_id": "honey",
+        "reporting_entity_name": "honey",
+        "snp_lt": "bbb_plus",
+        "start_date": "2016-11-03T00:00:00+00:00",
+        "type": "bond",
+        "trade_date": "2025-10-06T00:00:00+00:00"
+      }
+    ],
+    "issuer": [
+      {
+        "id": "Iss8",
+        "date": "2025-10-06T00:00:00+00:00",
+        "country_code": "US",
+        "fitch_lt": "bbb_plus",
+        "intra_group": false,
+        "legal_entity_name": "Iss8",
+        "lei_code": "AB000000000000L00941",
+        "moodys_lt": "a3",
+        "name": "Iss8",
+        "parent_id": "IS01462",
+        "sic_code": 32990,
+        "snp_lt": "bbb_plus",
+        "type": "corporate"
+      }
+    ]
+  }
+}

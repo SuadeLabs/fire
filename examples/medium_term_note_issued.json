@@ -1,0 +1,51 @@
+{
+  "title": "medium_term_note_issued",
+  "comment": "Debt Instrument Issued By A Company, Typically With Maturities Ranging From One To Ten Years",
+  "data": {
+    "security": [
+      {
+        "id": "medium_term_note_issued",
+        "date": "2025-10-06T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest": 97297297,
+        "asset_liability": "liability",
+        "balance": 25097297297,
+        "currency_code": "GBP",
+        "deal_id": "12322",
+        "end_date": "2031-01-26T00:00:00+00:00",
+        "interest_repayment_frequency": "semi_annually",
+        "isin_code": "GB91282CJJ18",
+        "issuer_id": "willow",
+        "last_payment_date": "2031-01-26T00:00:00+00:00",
+        "maturity_date": "2031-01-26T00:00:00+00:00",
+        "movement": "issuance",
+        "mtm_clean": 21542750000,
+        "mtm_dirty": 21640047292,
+        "next_payment_date": "2026-01-28T00:00:00+00:00",
+        "notional_amount": 25000000000,
+        "on_balance_sheet": true,
+        "product_name": "L: SNP MTN-Fixed",
+        "rate": 2,
+        "regulatory_book": "banking_book",
+        "rehypothecation": false,
+        "reporting_id": "iris",
+        "reporting_entity_name": "iris",
+        "start_date": "2021-06-03T00:00:00+00:00",
+        "type": "mtn",
+        "trade_date": "2021-05-27T00:00:00+00:00"
+      }
+    ],
+    "issuer": [
+      {
+        "id": "willow",
+        "date": "2025-10-06T00:00:00+00:00",
+        "country_code": "GB",
+        "intra_group": true,
+        "legal_entity_name": "willow",
+        "moodys_lt": "a3",
+        "name": "willow",
+        "type": "building_society"
+      }
+    ]
+  }
+}

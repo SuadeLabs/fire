@@ -1,0 +1,67 @@
+{
+  "title": "repo_asset",
+  "comment": "An Agreement In Which One Party Purchases Securities Or Commodities And Commits To Resell Equivalent Assets To The Original Seller At A Specified Future Date And Price.",
+  "data": {
+    "security": [
+      {
+        "id": "repo_asset",
+        "date": "2025-10-06T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest": 0,
+        "asset_liability": "asset",
+        "balance": 27091300000,
+        "cb_haircut": 0.12,
+        "currency_code": "GBP",
+        "customer_id": "birch1",
+        "deal_id": "41231",
+        "end_date": "2028-01-04T00:00:00+00:00",
+        "hqla_class": "ineligible",
+        "interest_repayment_frequency": "quarterly",
+        "isin_code": "GB91282CJJ18",
+        "issuer_id": "willow",
+        "maturity_date": "2028-01-04T00:00:00+00:00",
+        "movement": "asset",
+        "mtm_clean": -27073826112,
+        "mtm_dirty": -27073826107,
+        "notional_amount": -27091300000,
+        "on_balance_sheet": true,
+        "product_name": "A:Covered Bond Flt 2013",
+        "regulatory_book": "banking_book",
+        "rehypothecation": true,
+        "reporting_id": "iris",
+        "reporting_entity_name": "iris",
+        "sft_type": "repo",
+        "start_date": "2025-01-04T00:00:00+00:00",
+        "type": "covered_bond",
+        "trade_date": "2025-01-01T00:00:00+00:00"
+      }
+    ],
+    "customer": [
+      {
+        "id": "birch1",
+        "date": "2025-10-05T00:00:00+00:00",
+        "country_code": "GB",
+        "credit_impaired": false,
+        "intra_group": false,
+        "legal_entity_name": "rain",
+        "moodys_lt": "aa3",
+        "name": "rain",
+        "parent_id": "echo",
+        "type": "credit_institution",
+        "status": "established"
+      }
+    ],
+    "issuer": [
+      {
+        "id": "willow",
+        "date": "2025-10-06T00:00:00+00:00",
+        "country_code": "GB",
+        "intra_group": true,
+        "legal_entity_name": "willow",
+        "moodys_lt": "a3",
+        "name": "willow",
+        "type": "building_society"
+      }
+    ]
+  }
+}

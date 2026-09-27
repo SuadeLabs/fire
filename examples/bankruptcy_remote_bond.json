@@ -1,0 +1,88 @@
+{
+  "title": "bankruptcy_remote_bond",
+  "comment": "A Debt Instrument That Will Not Be Available To An Entity’S Creditors In The Event Of The Insolvency Of That Entity",
+  "data": {
+    "security": [
+      {
+        "id": "bankrupcy_remote_bond",
+        "date": "2025-10-06T00:00:00+00:00",
+        "asset_liability": "liability",
+        "balance": 0,
+        "csa_id": "cactus",
+        "currency_code": "USD",
+        "customer_id": "velvet",
+        "deal_id": "12323",
+        "end_date": "2027-09-30T00:00:00+00:00",
+        "fitch_lt": "aa",
+        "hqla_class": "iia",
+        "isin_code": "AB0000019218",
+        "issuer_id": "grove",
+        "mna_id": "MNA6789",
+        "moodys_lt": "aa2",
+        "movement": "asset",
+        "mtm_dirty": 9337016,
+        "on_balance_sheet": false,
+        "product_name": "collateral_security_im",
+        "purpose": "independent_collateral_amount",
+        "regulatory_book": "trading_book",
+        "rehypothecation": false,
+        "reporting_id": "honey",
+        "reporting_entity_name": "honey",
+        "status": "bankruptcy_remote",
+        "start_date": "2025-10-06T00:00:00+00:00",
+        "type": "bond",
+        "trade_date": "2025-10-06T00:00:00+00:00"
+      }
+    ],
+    "customer": [
+      {
+        "id": "velvet",
+        "date": "2025-10-06T00:00:00+00:00",
+        "country_code": "FR",
+        "fitch_lt": "a",
+        "intra_group": false,
+        "legal_entity_name": "ocean",
+        "lei_code": "AB000000000000L00225",
+        "moodys_lt": "a1",
+        "name": "ocean",
+        "parent_id": "blossom",
+        "sic_code": 64999,
+        "snp_lt": "a_plus",
+        "type": "credit_institution"
+      }
+    ],
+    "issuer": [
+      {
+        "id": "grove",
+        "date": "2025-10-06T00:00:00+00:00",
+        "country_code": "JE",
+        "fitch_lt": "aa",
+        "legal_entity_name": "grove",
+        "lei_code": "AB000000000000L01090",
+        "moodys_lt": "aa2",
+        "name": "grove",
+        "type": "corporate"
+      }
+    ],
+    "agreement": [
+      {
+        "id": "MNA6789",
+        "date": "2025-10-06T00:00:00+00:00",
+        "base_currency_code": "USD",
+        "country_code": "FR",
+        "margin_frequency": "daily_settled",
+        "minimum_transfer_amount": 0,
+        "threshold": 0
+      },
+      {
+        "id": "cactus",
+        "date": "2025-10-06T00:00:00+00:00",
+        "base_currency_code": "USD",
+        "country_code": "FR",
+        "margin_frequency": "daily_settled",
+        "minimum_transfer_amount": 0,
+        "threshold": 0
+      }
+    ]
+  }
+}
