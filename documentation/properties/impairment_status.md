@@ -49,7 +49,7 @@ Further reading:
 * [HKMA Loan classification system][hkma-lcs]
 * [MAS 612][mas612]
 
-Some agencies may also refer to *classified* loans as those that fall in substandard, doubtful and loss categories (occassionally watch/special mention as well).
+Some agencies may also refer to *classified* loans as those that fall in substandard, doubtful and loss categories (occasionally watch/special mention as well).
 
 ### performing
 
