@@ -1,0 +1,57 @@
+{
+  "title": "abs_traditional_subordinated",
+  "comment": "Subordinated tranche of a traditional securitisation, where the economic interest in the securitised exposures is transferred through a transfer of ownership.",
+  "data": {
+    "security": [
+      {
+        "id": "asset_backed_security_securitisation_traditional_subordinated",
+        "date": "2025-10-06T00:00:00+00:00",
+        "accounting_treatment": "held_for_trading",
+        "asset_liability": "asset",
+        "attachment_point": 0.34490904,
+        "cost_center_code": "DSAA",
+        "country_code": "IE",
+        "cr_approach": "sec_erba",
+        "currency_code": "EUR",
+        "customer_id": "ripple",
+        "detachment_point": 0.44450627,
+        "deal_id": "ember",
+        "end_date": "2031-09-28T00:00:00+00:00",
+        "isin_code": "GB91282CJJ18",
+        "issuer_id": "Iss2",
+        "ledger_code": "152503",
+        "maturity_date": "2031-09-28T00:00:00+00:00",
+        "moodys_lt": "aa3",
+        "movement": "asset",
+        "mtm_clean": 224170500,
+        "mtm_dirty": 224546818,
+        "notional_amount": 223500000,
+        "on_balance_sheet": true,
+        "product_name": "unencumbered",
+        "regulatory_book": "trading_book",
+        "reporting_id": "ripple",
+        "reporting_entity_name": "ripple",
+        "securitisation_type": "traditional",
+        "seniority": "subordinated_secured",
+        "snp_lt": "a_plus",
+        "start_date": "2025-10-06T00:00:00+00:00",
+        "type": "abs",
+        "trade_date": "2025-10-06T00:00:00+00:00"
+      }
+    ],
+    "customer": [
+      {
+        "id": "ripple",
+        "date": "2025-10-06T00:00:00+00:00"
+      }
+    ],
+    "issuer": [
+      {
+        "id": "Iss2",
+        "date": "2025-10-06T00:00:00+00:00",
+        "lei_code": "AB000000000000L00297",
+        "type": "corporate"
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "title": "other_expense",
+  "comment": "Expenses whose purpose differs from those already specified.",
+  "data": {
+    "account": [
+      {
+        "id": "other_expense",
+        "date": "2025-10-06T00:00:00+00:00",
+        "balance": 141550566,
+        "start_date": "2025-10-06T00:00:00+00:00",
+        "end_date": "2025-10-07T00:00:00+00:00",
+        "trade_date": "2025-10-06T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "ledger_code": "A4234234",
+        "currency_code": "GBP",
+        "accounting_treatment": "amortised_cost",
+        "country_code": "GB",
+        "status": "active",
+        "purpose": "other",
+        "asset_liability": "pnl",
+        "regulatory_book": "banking_book",
+        "type": "expense"
+      }
+    ]
+  }
+}

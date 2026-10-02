@@ -1,0 +1,65 @@
+{
+  "title": "debt_security_issued_liability",
+  "comment": "A debt security issued by the firm and classified as a liability.",
+  "data": {
+    "security": [
+      {
+        "id": "debt_security_issued_liability",
+        "date": "2025-10-06T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest": 927049,
+        "asset_liability": "liability",
+        "balance": 1500927049,
+        "currency_code": "GBP",
+        "customer_id": "saffron",
+        "deal_id": "12319",
+        "end_date": "2032-09-29T00:00:00+00:00",
+        "interest_repayment_frequency": "semi_annually",
+        "issuer_id": "willow",
+        "last_payment_date": "2032-09-29T00:00:00+00:00",
+        "maturity_date": "2032-09-29T00:00:00+00:00",
+        "movement": "issuance",
+        "mtm_clean": 1507342013,
+        "mtm_dirty": 1508269057,
+        "next_payment_date": "2026-04-05T00:00:00+00:00",
+        "notional_amount": 1500000000,
+        "on_balance_sheet": true,
+        "product_name": "L: Ann Int Sub Debt-Fixed",
+        "rate": 7.54,
+        "regulatory_book": "banking_book",
+        "rehypothecation": false,
+        "reporting_id": "iris",
+        "reporting_entity_name": "iris",
+        "start_date": "2009-10-04T00:00:00+00:00",
+        "type": "debt",
+        "trade_date": "2009-10-04T00:00:00+00:00"
+      }
+    ],
+    "customer": [
+      {
+        "id": "saffron",
+        "date": "2025-10-05T00:00:00+00:00",
+        "country_code": "GB",
+        "credit_impaired": false,
+        "intra_group": false,
+        "legal_entity_name": "mango",
+        "name": "mango",
+        "parent_id": "walnut",
+        "type": "financial",
+        "status": "established"
+      }
+    ],
+    "issuer": [
+      {
+        "id": "willow",
+        "date": "2025-10-06T00:00:00+00:00",
+        "country_code": "GB",
+        "intra_group": true,
+        "legal_entity_name": "willow",
+        "moodys_lt": "a3",
+        "name": "willow",
+        "type": "building_society"
+      }
+    ]
+  }
+}

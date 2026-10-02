@@ -1,0 +1,62 @@
+{
+  "title": "commodity_future",
+  "comment": "A futures contract whose underlying asset is a commodity.",
+  "data": {
+    "derivative": [
+      {
+        "id": "commodity_future",
+        "date": "2026-01-26T00:00:00+00:00",
+        "mna_id": "kernel1",
+        "csa_id": "olive",
+        "asset_class": "energy",
+        "type": "future",
+        "position": "short",
+        "leg_type": "indexed",
+        "currency_code": "USD",
+        "notional_amount": 10000000,
+        "rate": 80,
+        "mtm_dirty": 100000,
+        "underlying_index": "Brent Crude Oil",
+        "trade_date": "2025-10-24T00:00:00+00:00",
+        "start_date": "2025-10-26T00:00:00+00:00",
+        "end_date": "2026-06-17T00:00:00+00:00",
+        "settlement_type": "physical",
+        "regulatory_book": "trading_book",
+        "delta": -1,
+        "customer_id": "CCP_01"
+      }
+    ],
+    "customer": [
+      {
+        "id": "CCP_01",
+        "date": "2026-01-26T00:00:00+00:00",
+        "type": "ccp",
+        "country_code": "GB",
+        "name": "Corp 5",
+        "legal_entity_name": "Corp 5",
+        "currency_code": "GBP",
+        "moodys_lt": "a3",
+        "snp_lt": "a"
+      }
+    ],
+    "agreement": [
+      {
+        "id": "olive",
+        "date": "2026-01-26T00:00:00+00:00",
+        "customer_id": "quartz1",
+        "type": "isda",
+        "base_currency_code": "EUR",
+        "country_code": "GB",
+        "margin_frequency": "daily_settled"
+      },
+      {
+        "id": "kernel1",
+        "date": "2026-01-26T00:00:00+00:00",
+        "customer_id": "CCP_01",
+        "type": "isda",
+        "base_currency_code": "EUR",
+        "country_code": "GB"
+      }
+    ]
+  }
+}

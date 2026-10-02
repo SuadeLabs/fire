@@ -1,0 +1,94 @@
+{
+  "title": "house_purchase_mortgage",
+  "comment": "A mortgage used to buy residential property, secured on the property itself. Includes the actual loan and its committed record.",
+  "data": {
+    "loan": [
+      {
+        "id": "house_purchase_mortgage_actual",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest_balance": 37174,
+        "asset_liability": "asset",
+        "balance": 12305240,
+        "count": 1,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "SDF123",
+        "customers": [
+          {
+            "id": "SDF123",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2035-06-30T00:00:00+00:00",
+        "limit_amount": 12268066,
+        "movement": "other",
+        "next_payment_date": "2025-08-29T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "purpose": "house_purchase",
+        "rate": 3.95,
+        "rate_type": "fixed",
+        "repayment_frequency": "monthly",
+        "repayment_type": "combined",
+        "risk_country_code": "GB",
+        "secured": true,
+        "start_date": "2015-06-30T00:00:00+00:00",
+        "status": "actual",
+        "trade_date": "2015-06-30T00:00:00+00:00",
+        "type": "mortgage",
+        "regulatory_book": "banking_book"
+      },
+      {
+        "id": "house_purchase_mortgage_committed",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest_balance": 37174,
+        "asset_liability": "asset",
+        "balance": 12305240,
+        "count": 1,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "SDF123",
+        "customers": [
+          {
+            "id": "SDF123",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2035-06-30T00:00:00+00:00",
+        "limit_amount": 12268066,
+        "movement": "other",
+        "next_payment_date": "2025-08-29T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "purpose": "house_purchase",
+        "rate": 3.95,
+        "rate_type": "fixed",
+        "repayment_frequency": "monthly",
+        "repayment_type": "combined",
+        "risk_country_code": "GB",
+        "secured": true,
+        "start_date": "2015-06-30T00:00:00+00:00",
+        "status": "committed",
+        "trade_date": "2015-06-30T00:00:00+00:00",
+        "type": "mortgage",
+        "regulatory_book": "banking_book"
+      }
+    ],
+    "customer": [
+      {
+        "id": "SDF123",
+        "date": "2025-08-26T00:00:00+00:00",
+        "boe_sector_code": "Other UK residents; Individual and individual trusts",
+        "country_code": "GB",
+        "credit_impaired": false,
+        "intra_group": false,
+        "product_count": 2,
+        "sic_code": 0,
+        "source": "Equation",
+        "start_date": "2015-04-23T00:00:00+00:00",
+        "status": "established",
+        "type": "natural_person"
+      }
+    ]
+  }
+}

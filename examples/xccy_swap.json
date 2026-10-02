@@ -1,131 +1,82 @@
 {
   "title": "xccy_swap",
-  "comment": "USD-AUD xccy",
+  "comment": "A cross-currency swap exchanging cash flows in two different currencies, shown as its fixed and floating legs.",
   "data": {
     "derivative": [
       {
-        "date": "2020-03-31T00:00:00",
-        "id": "AUDUSD_xccy:AUD",
-        "deal_id": "AUDUSD_xccy",
+        "id": "cross_currency_swap_long",
+        "date": "2026-01-26T00:00:00+00:00",
+        "mna_id": "falcon1",
+        "csa_id": "nectar",
+        "deal_id": "hazel",
         "asset_class": "fx",
         "type": "xccy",
-        "leg_type": "fixed",
         "position": "long",
-        "currency_code": "AUD",
-        "notional_amount": 14000,
-        "rate": 0.01,
-        "trade_date": "2019-02-25T00:00:00",
-        "start_date": "2020-02-27T00:00:00",
-        "end_date": "2030-02-27T00:00:00",
-        "mtm_dirty": 1140
+        "leg_type": "fixed",
+        "currency_code": "EUR",
+        "notional_amount": 10000000,
+        "rate": 0.025,
+        "mtm_dirty": 100000,
+        "trade_date": "2025-10-24T00:00:00+00:00",
+        "start_date": "2025-10-26T00:00:00+00:00",
+        "end_date": "2030-10-27T00:00:00+00:00",
+        "regulatory_book": "trading_book",
+        "customer_id": "lantern1"
       },
       {
-        "date": "2020-03-31T00:00:00",
-        "id": "AUDUSD_xccy:USD",
-        "deal_id": "AUDUSD_xccy",
+        "id": "cross_currency_swap_short",
+        "date": "2026-01-26T00:00:00+00:00",
+        "mna_id": "falcon1",
+        "csa_id": "nectar",
+        "deal_id": "hazel",
         "asset_class": "fx",
         "type": "xccy",
         "position": "short",
         "leg_type": "floating",
         "currency_code": "USD",
-        "notional_amount": 10000,
-        "underlying_index": "USD_LIBOR_BBA",
+        "notional_amount": 12500000,
+        "rate": -0.001,
+        "mtm_dirty": 0,
+        "underlying_index": "USD_LIBOR",
         "underlying_index_tenor": "3m",
-        "trade_date": "2019-02-25T00:00:00",
-        "start_date": "2020-02-27T00:00:00",
-        "end_date": "2030-02-27T00:00:00"
+        "trade_date": "2025-10-24T00:00:00+00:00",
+        "start_date": "2025-10-26T00:00:00+00:00",
+        "end_date": "2030-10-27T00:00:00+00:00",
+        "next_reset_date": "2026-04-26T00:00:00+00:00",
+        "regulatory_book": "trading_book",
+        "customer_id": "lantern1"
       }
     ],
-    "derivative_cash_flow": [
+    "customer": [
       {
-        "id": "1",
-        "date": "2020-03-31T00:00:00",
-        "derivative_id": "AUDUSD_xccy:AUD",
-        "currency_code": "AUD",
-        "notional_amount": 14000,
-        "reset_date": "2019-02-27T00:00:00",
-        "payment_date": "2019-02-27T00:00:00",
-        "balance": -14000,
-        "purpose": "principal"
+        "id": "lantern1",
+        "date": "2026-01-26T00:00:00+00:00",
+        "type": "corporate",
+        "country_code": "GB",
+        "name": "Corporate entity 1",
+        "legal_entity_name": "Corporate entity 1",
+        "currency_code": "GBP",
+        "moodys_lt": "baa2",
+        "snp_lt": "bbb"
+      }
+    ],
+    "agreement": [
+      {
+        "id": "nectar",
+        "date": "2026-01-26T00:00:00+00:00",
+        "customer_id": "lantern1",
+        "type": "isda",
+        "base_currency_code": "EUR",
+        "country_code": "GB",
+        "margin_frequency": "daily"
       },
       {
-        "id": "2",
-        "date": "2020-03-31T00:00:00",
-        "derivative_id": "AUDUSD_xccy:AUD",
-        "currency_code": "AUD",
-        "notional_amount": 14000,
-        "reset_date": "2029-02-27T00:00:00",
-        "payment_date": "2029-02-27T00:00:00",
-        "balance": 14000,
-        "purpose": "principal"
-      },
-      {
-        "id": "3",
-        "date": "2020-03-31T00:00:00",
-        "derivative_id": "AUDUSD_xccy:USD",
-        "currency_code": "USD",
-        "notional_amount": 10000,
-        "reset_date": "2019-02-27T00:00:00",
-        "payment_date": "2019-02-27T00:00:00",
-        "balance": 10000,
-        "purpose": "principal"
-      },
-      {
-        "id": "4",
-        "date": "2020-03-31T00:00:00",
-        "derivative_id": "AUDUSD_xccy:USD",
-        "currency_code": "USD",
-        "notional_amount": 10000,
-        "reset_date": "2029-02-27T00:00:00",
-        "payment_date": "2029-02-27T00:00:00",
-        "balance": -10000,
-        "purpose": "principal"
-      },
-      {
-        "id": "5",
-        "date": "2020-03-31T00:00:00",
-        "derivative_id": "AUDUSD_xccy:AUD",
-        "currency_code": "USD",
-        "reset_date": "2020-02-27T00:00:00",
-        "payment_date": "2021-02-27T00:00:00",
-        "notional_amount": 14000,
-        "balance": 140,
-        "purpose": "interest"
-      },
-      {
-        "id": "6",
-        "date": "2020-03-31T00:00:00",
-        "derivative_id": "AUDUSD_xccy:AUD",
-        "currency_code": "USD",
-        "reset_date": "2028-02-27T00:00:00",
-        "payment_date": "2029-02-27T00:00:00",
-        "notional_amount": 14000,
-        "balance": 140,
-        "purpose": "interest"
-      },
-      {
-        "id": "7",
-        "date": "2020-03-31T00:00:00",
-        "derivative_id": "AUDUSD_xccy:USD",
-        "currency_code": "USD",
-        "reset_date": "2020-02-27T00:00:00",
-        "payment_date": "2020-05-27T00:00:00",
-        "notional_amount": 10000,
-        "forward_rate": 0.01,
-        "balance": -2466,
-        "purpose": "interest"
-      },
-      {
-        "id": "8",
-        "date": "2020-03-31T00:00:00",
-        "derivative_id": "AUDUSD_xccy:USD",
-        "currency_code": "USD",
-        "reset_date": "2028-11-27T00:00:00",
-        "payment_date": "2029-02-27T00:00:00",
-        "notional_amount": 10000,
-        "forward_rate": 0.02,
-        "balance": -5042,
-        "purpose": "interest"
+        "id": "falcon1",
+        "date": "2026-01-26T00:00:00+00:00",
+        "customer_id": "lantern1",
+        "type": "isda",
+        "base_currency_code": "EUR",
+        "country_code": "GB"
       }
     ]
   }

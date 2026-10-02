@@ -1,25 +1,59 @@
 {
   "title": "fx_future",
-  "comment": "EUR CAD Future",
+  "comment": "A futures contract to exchange one currency for another at a predetermined rate on a future date.",
   "data": {
     "derivative": [
       {
-        "date": "2019-04-01T00:00:00",
-        "id": "eur_cad_future",
+        "id": "fx_future",
+        "date": "2026-01-26T00:00:00+00:00",
+        "mna_id": "kernel1",
+        "csa_id": "olive",
         "asset_class": "fx",
         "type": "future",
+        "position": "short",
         "leg_type": "indexed",
-        "position": "long",
         "currency_code": "EUR",
-        "notional_amount": 100,
-        "underlying_currency_code": "CAD",
-        "trade_date": "2019-04-01T00:00:00",
-        "start_date": "2019-06-15T00:00:00",
-        "end_date": "2019-09-15T00:00:00",
-        "rate": 1.4,
-        "underlying_price": 1.38,
-        "settlement_type": "physical",
-        "mtm_dirty": -2
+        "notional_amount": 10000000,
+        "mtm_dirty": 10000,
+        "underlying_currency_code": "USD",
+        "trade_date": "2025-10-24T00:00:00+00:00",
+        "start_date": "2025-10-26T00:00:00+00:00",
+        "end_date": "2026-06-15T00:00:00+00:00",
+        "settlement_type": "cash",
+        "regulatory_book": "trading_book",
+        "customer_id": "CCP_01"
+      }
+    ],
+    "customer": [
+      {
+        "id": "CCP_01",
+        "date": "2026-01-26T00:00:00+00:00",
+        "type": "ccp",
+        "country_code": "GB",
+        "name": "Corp 5",
+        "legal_entity_name": "Corp 5",
+        "currency_code": "GBP",
+        "moodys_lt": "a3",
+        "snp_lt": "a"
+      }
+    ],
+    "agreement": [
+      {
+        "id": "olive",
+        "date": "2026-01-26T00:00:00+00:00",
+        "customer_id": "quartz1",
+        "type": "isda",
+        "base_currency_code": "EUR",
+        "country_code": "GB",
+        "margin_frequency": "daily_settled"
+      },
+      {
+        "id": "kernel1",
+        "date": "2026-01-26T00:00:00+00:00",
+        "customer_id": "CCP_01",
+        "type": "isda",
+        "base_currency_code": "EUR",
+        "country_code": "GB"
       }
     ]
   }

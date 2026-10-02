@@ -1,0 +1,94 @@
+{
+  "title": "remortgage",
+  "comment": "A remortgage, replacing an existing mortgage on a property with a new loan. Includes the actual loan and its committed record.",
+  "data": {
+    "loan": [
+      {
+        "id": "remortgage_actual",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest_balance": 2672,
+        "asset_liability": "asset",
+        "balance": 1123568,
+        "count": 1,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "CXZ123",
+        "customers": [
+          {
+            "id": "CXZ123",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2026-06-15T00:00:00+00:00",
+        "limit_amount": 1120896,
+        "movement": "other",
+        "next_payment_date": "2025-09-15T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "purpose": "remortgage",
+        "rate": 7.25,
+        "rate_type": "variable",
+        "repayment_frequency": "monthly",
+        "repayment_type": "combined",
+        "risk_country_code": "GB",
+        "secured": true,
+        "start_date": "2011-06-15T00:00:00+00:00",
+        "status": "actual",
+        "trade_date": "2011-06-15T00:00:00+00:00",
+        "type": "mortgage",
+        "regulatory_book": "banking_book"
+      },
+      {
+        "id": "remortgage_committed",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest_balance": 2672,
+        "asset_liability": "asset",
+        "balance": 1123568,
+        "count": 1,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "CXZ123",
+        "customers": [
+          {
+            "id": "CXZ123",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2026-06-15T00:00:00+00:00",
+        "limit_amount": 1120896,
+        "movement": "other",
+        "next_payment_date": "2025-09-15T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "purpose": "remortgage",
+        "rate": 7.25,
+        "rate_type": "variable",
+        "repayment_frequency": "monthly",
+        "repayment_type": "combined",
+        "risk_country_code": "GB",
+        "secured": true,
+        "start_date": "2011-06-15T00:00:00+00:00",
+        "status": "committed",
+        "trade_date": "2011-06-15T00:00:00+00:00",
+        "type": "mortgage",
+        "regulatory_book": "banking_book"
+      }
+    ],
+    "customer": [
+      {
+        "id": "CXZ123",
+        "date": "2025-08-26T00:00:00+00:00",
+        "boe_sector_code": "Other UK residents; Individual and individual trusts",
+        "country_code": "GB",
+        "credit_impaired": false,
+        "intra_group": false,
+        "product_count": 5,
+        "sic_code": 0,
+        "source": "Equation",
+        "start_date": "2005-05-17T00:00:00+00:00",
+        "status": "established",
+        "type": "natural_person"
+      }
+    ]
+  }
+}

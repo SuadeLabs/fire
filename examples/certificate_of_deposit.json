@@ -1,0 +1,71 @@
+{
+  "title": "certificate_of_deposit",
+  "comment": "A certificate of deposit: a promissory note issued by a bank with a fixed maturity and a fixed interest rate.",
+  "data": {
+    "security": [
+      {
+        "id": "certificate_of_deposit",
+        "date": "2025-10-06T00:00:00+00:00",
+        "accounting_treatment": "fv_oci",
+        "accrued_interest": 0,
+        "asset_liability": "asset",
+        "balance": 2630250,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "eagle",
+        "end_date": "2025-11-01T00:00:00+00:00",
+        "encumbrance_amount": 0,
+        "hqla_class": "ineligible",
+        "interest_repayment_frequency": "annually",
+        "issuer_id": "ISS11",
+        "last_payment_date": "2025-11-01T00:00:00+00:00",
+        "maturity_date": "2025-11-01T00:00:00+00:00",
+        "movement": "asset",
+        "mtm_clean": 2500000,
+        "mtm_dirty": 2599573,
+        "next_payment_date": "2025-11-01T00:00:00+00:00",
+        "notional_amount": 2500000,
+        "on_balance_sheet": true,
+        "product_name": "CD 1",
+        "rate": 5.21,
+        "regulatory_book": "banking_book",
+        "rehypothecation": true,
+        "reporting_id": "juniper",
+        "reporting_entity_name": "juniper",
+        "risk_country_code": "GB",
+        "start_date": "2024-11-02T00:00:00+00:00",
+        "type": "cd",
+        "trade_date": "2024-11-02T00:00:00+00:00",
+        "value_date": "2024-11-02T00:00:00+00:00"
+      }
+    ],
+    "customer": [
+      {
+        "id": "eagle",
+        "date": "2025-10-06T00:00:00+00:00",
+        "country_code": "GB",
+        "credit_impaired": false,
+        "intra_group": false,
+        "parent_id": "heather",
+        "risk_country_code": "GB",
+        "type": "credit_institution",
+        "currency_code": "GBP",
+        "product_count": 1,
+        "status": "established"
+      }
+    ],
+    "issuer": [
+      {
+        "id": "ISS11",
+        "date": "2025-10-06T00:00:00+00:00",
+        "country_code": "GB",
+        "cqs_standardised": 1,
+        "legal_entity_name": "ISS11",
+        "lei_code": "AB000000000000L00297",
+        "name": "ISS11",
+        "nace_code": "K.64.90",
+        "type": "credit_institution"
+      }
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "title": "commodity_swap",
+  "comment": "A swap on the price of an underlying commodity, shown as its indexed and floating legs.",
+  "data": {
+    "derivative": [
+      {
+        "id": "commodity_swap_long",
+        "date": "2026-01-26T00:00:00+00:00",
+        "mna_id": "harbor1",
+        "deal_id": "glacier",
+        "asset_class": "energy",
+        "type": "vanilla_swap",
+        "position": "long",
+        "leg_type": "indexed",
+        "currency_code": "USD",
+        "notional_amount": 10000000,
+        "rate": 0,
+        "mtm_dirty": 100000,
+        "underlying_index": "Brent Crude Oil",
+        "trade_date": "2025-10-24T00:00:00+00:00",
+        "start_date": "2025-10-26T00:00:00+00:00",
+        "end_date": "2030-10-27T00:00:00+00:00",
+        "regulatory_book": "trading_book",
+        "customer_id": "CU0941"
+      },
+      {
+        "id": "commodity_swap_short",
+        "date": "2026-01-26T00:00:00+00:00",
+        "mna_id": "harbor1",
+        "deal_id": "glacier",
+        "asset_class": "energy",
+        "type": "vanilla_swap",
+        "position": "short",
+        "leg_type": "floating",
+        "currency_code": "USD",
+        "notional_amount": 10000000,
+        "rate": 0.005,
+        "mtm_dirty": 0,
+        "underlying_index": "USD_LIBOR_3M",
+        "underlying_index_tenor": "3m",
+        "trade_date": "2025-10-24T00:00:00+00:00",
+        "start_date": "2025-10-26T00:00:00+00:00",
+        "end_date": "2030-10-27T00:00:00+00:00",
+        "next_reset_date": "2026-04-26T00:00:00+00:00",
+        "regulatory_book": "trading_book",
+        "customer_id": "CU0941"
+      }
+    ],
+    "customer": [
+      {
+        "id": "CU0941",
+        "date": "2026-01-26T00:00:00+00:00",
+        "type": "credit_institution",
+        "country_code": "GB",
+        "name": "Bank 1",
+        "legal_entity_name": "Bank 1",
+        "currency_code": "GBP",
+        "moodys_lt": "aa2",
+        "snp_lt": "aa"
+      }
+    ],
+    "agreement": [
+      {
+        "id": "harbor1",
+        "date": "2026-01-26T00:00:00+00:00",
+        "customer_id": "CU0941",
+        "type": "isda",
+        "base_currency_code": "EUR",
+        "country_code": "GB"
+      }
+    ]
+  }
+}

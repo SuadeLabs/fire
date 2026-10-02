@@ -1,0 +1,21 @@
+{
+  "title": "expense_account",
+  "comment": "An expense incurred by the institution during the reporting period, such as wages, administration charges or property, plant and equipment.",
+  "data": {
+    "account": [
+      {
+        "id": "expense_account",
+        "date": "2025-10-06T00:00:00+00:00",
+        "balance": 20198,
+        "start_date": "2025-10-06T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "reporting_id": "ASD8802",
+        "ledger_code": "A423423",
+        "currency_code": "GBP",
+        "asset_liability": "pnl",
+        "regulatory_book": "banking_book",
+        "type": "expense"
+      }
+    ]
+  }
+}

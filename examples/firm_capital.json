@@ -1,0 +1,26 @@
+{
+  "title": "firm_capital",
+  "comment": "Paid-up share capital forming part of the firm's tier 1 capital.",
+  "data": {
+    "security": [
+      {
+        "id": "firm_capital",
+        "date": "2025-10-06T00:00:00+00:00",
+        "asset_liability": "equity",
+        "balance": 37500,
+        "capital_tier": "tier_1",
+        "currency_code": "EUR",
+        "on_balance_sheet": true,
+        "product_name": "non_trade",
+        "purpose": "share_capital",
+        "regulatory_book": "trading_book",
+        "reporting_id": "honey",
+        "reporting_entity_name": "honey",
+        "status": "paid_up",
+        "start_date": "2025-10-06T00:00:00+00:00",
+        "type": "share",
+        "trade_date": "2025-10-06T00:00:00+00:00"
+      }
+    ]
+  }
+}

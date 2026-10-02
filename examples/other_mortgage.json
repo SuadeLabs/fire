@@ -1,0 +1,94 @@
+{
+  "title": "other_mortgage",
+  "comment": "A mortgage whose purpose does not fit any of the defined purposes. Includes the actual loan and its committed record.",
+  "data": {
+    "loan": [
+      {
+        "id": "other_mortgage_actual",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest_balance": 1336713,
+        "asset_liability": "asset",
+        "balance": 310036713,
+        "count": 7,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "CAS211",
+        "customers": [
+          {
+            "id": "CAS211",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2026-06-15T00:00:00+00:00",
+        "limit_amount": 308700000,
+        "movement": "other",
+        "next_payment_date": "2025-08-29T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "purpose": "other",
+        "rate": 5.45,
+        "rate_type": "fixed",
+        "repayment_frequency": "monthly",
+        "repayment_type": "interest_only",
+        "risk_country_code": "GB",
+        "secured": true,
+        "start_date": "2019-08-29T00:00:00+00:00",
+        "status": "actual",
+        "trade_date": "2019-08-29T00:00:00+00:00",
+        "type": "mortgage",
+        "regulatory_book": "banking_book"
+      },
+      {
+        "id": "other_mortgage_committed",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest_balance": 1336713,
+        "asset_liability": "asset",
+        "balance": 310036713,
+        "count": 7,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "CAS211",
+        "customers": [
+          {
+            "id": "CAS211",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2026-06-15T00:00:00+00:00",
+        "limit_amount": 308700000,
+        "movement": "other",
+        "next_payment_date": "2025-08-29T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "purpose": "other",
+        "rate": 5.45,
+        "rate_type": "fixed",
+        "repayment_frequency": "monthly",
+        "repayment_type": "interest_only",
+        "risk_country_code": "GB",
+        "secured": true,
+        "start_date": "2019-08-29T00:00:00+00:00",
+        "status": "committed",
+        "trade_date": "2019-08-29T00:00:00+00:00",
+        "type": "mortgage",
+        "regulatory_book": "banking_book"
+      }
+    ],
+    "customer": [
+      {
+        "id": "CAS211",
+        "date": "2025-08-26T00:00:00+00:00",
+        "boe_sector_code": "Non FinCorp; Non fincorp other than public corp",
+        "country_code": "GB",
+        "credit_impaired": false,
+        "intra_group": false,
+        "product_count": 4,
+        "sic_code": 68320,
+        "source": "Equation",
+        "start_date": "1994-10-04T00:00:00+00:00",
+        "status": "established",
+        "type": "unincorporated_biz"
+      }
+    ]
+  }
+}

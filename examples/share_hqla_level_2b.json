@@ -1,0 +1,50 @@
+{
+  "title": "share_hqla_level_2b",
+  "comment": "Common equity shares held by the firm that are eligible as level 2B high-quality liquid assets (HQLA).",
+  "data": {
+    "security": [
+      {
+        "id": "share_hqla_level_2b",
+        "date": "2025-10-06T00:00:00+00:00",
+        "accounting_treatment": "held_for_trading",
+        "asset_liability": "asset",
+        "balance": 89730,
+        "currency_code": "EUR",
+        "deal_id": "12315",
+        "fvh_level": 1,
+        "hqla_class": "iib",
+        "isin_code": "AB0000001620",
+        "issuer_id": "Iss5",
+        "mic_code": "XAMS",
+        "movement": "asset",
+        "mtm_dirty": 89720,
+        "notional_amount": 89730,
+        "on_balance_sheet": true,
+        "product_name": "equity",
+        "regulatory_book": "trading_book",
+        "rehypothecation": false,
+        "reporting_id": "honey",
+        "reporting_entity_name": "honey",
+        "start_date": "2025-10-06T00:00:00+00:00",
+        "type": "share",
+        "trade_date": "2025-10-06T00:00:00+00:00"
+      }
+    ],
+    "issuer": [
+      {
+        "id": "Iss5",
+        "date": "2025-10-06T00:00:00+00:00",
+        "country_code": "NL",
+        "fitch_lt": "a_plus",
+        "intra_group": false,
+        "legal_entity_name": "Iss5",
+        "lei_code": "AB000000000000L00420",
+        "moodys_lt": "a2",
+        "name": "Iss5",
+        "parent_id": "IS01006",
+        "sic_code": 32990,
+        "type": "corporate"
+      }
+    ]
+  }
+}

@@ -1,17 +1,42 @@
 {
   "title": "vostro_account",
-  "comment": "A bank's nostro account at your bank",
+  "comment": "An account held at the firm by a foreign bank to conduct transactions in the firm's domestic currency.",
   "data": {
     "account": [
       {
-        "id": "Vostro account at your bank",
-        "date": "2017-06-30T14:03:12Z",
+        "id": "vostro",
+        "date": "2025-10-06T00:00:00+00:00",
+        "balance": 7235235,
+        "start_date": "2025-09-01T00:00:00+00:00",
+        "trade_date": "2025-10-06T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "ledger_code": "A23424",
         "currency_code": "GBP",
-        "balance": 100000,
+        "accounting_treatment": "amortised_cost",
+        "country_code": "GR",
+        "status": "transactional",
+        "guarantee_scheme": "gb_fscs",
+        "purpose": "deposit",
+        "asset_liability": "liability",
+        "regulatory_book": "banking_book",
         "type": "vostro",
-        "asset_liability": "asset",
-        "customer_id": "bank_123_id",
-        "on_balance_sheet": true
+        "customer_id": "CU12452"
+      }
+    ],
+    "customer": [
+      {
+        "id": "CU12452",
+        "date": "2025-10-06T00:00:00+00:00",
+        "type": "credit_institution",
+        "intra_group": true,
+        "lei_code": "TYRUIE12312OWE546372",
+        "legal_entity_name": "cherries",
+        "name": "pineapples",
+        "sic_code": 64191,
+        "country_code": "GR",
+        "reporting_relationship": "parent",
+        "moodys_st": "np",
+        "moodys_lt": "ba2"
       }
     ]
   }

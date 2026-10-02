@@ -1,24 +1,63 @@
 {
   "title": "ir_future",
-  "comment": "ir_future",
+  "comment": "A futures contract whose underlying reference is an interest rate.",
   "data": {
     "derivative": [
       {
-        "date": "2019-04-30T00:00:00",
-        "id": "june_eurodollar_future",
+        "id": "interest_rate_future",
+        "date": "2026-01-26T00:00:00+00:00",
+        "mna_id": "kernel1",
+        "csa_id": "olive",
         "asset_class": "ir",
         "type": "future",
-        "leg_type": "indexed",
         "position": "long",
+        "leg_type": "indexed",
         "currency_code": "EUR",
-        "notional_amount": 100,
-        "underlying_currency_code": "USD",
-        "trade_date": "2018-04-01T00:00:00",
-        "start_date": "2019-05-02T00:00:00",
-        "end_date": "2019-05-04T00:00:00",
-        "last_payment_date": "2019-08-02T00:00:00",
-        "mtm_dirty": -2,
-        "settlement_type": "cash"
+        "notional_amount": 10000000,
+        "rate": 0.02,
+        "mtm_dirty": 100000,
+        "underlying_index": "EURIBOR",
+        "underlying_index_tenor": "3m",
+        "trade_date": "2025-10-24T00:00:00+00:00",
+        "start_date": "2025-10-26T00:00:00+00:00",
+        "end_date": "2026-06-15T00:00:00+00:00",
+        "last_payment_date": "2026-09-15T00:00:00+00:00",
+        "settlement_type": "cash",
+        "regulatory_book": "trading_book",
+        "delta": -1,
+        "customer_id": "CCP_01"
+      }
+    ],
+    "customer": [
+      {
+        "id": "CCP_01",
+        "date": "2026-01-26T00:00:00+00:00",
+        "type": "ccp",
+        "country_code": "GB",
+        "name": "Corp 5",
+        "legal_entity_name": "Corp 5",
+        "currency_code": "GBP",
+        "moodys_lt": "a3",
+        "snp_lt": "a"
+      }
+    ],
+    "agreement": [
+      {
+        "id": "olive",
+        "date": "2026-01-26T00:00:00+00:00",
+        "customer_id": "quartz1",
+        "type": "isda",
+        "base_currency_code": "EUR",
+        "country_code": "GB",
+        "margin_frequency": "daily_settled"
+      },
+      {
+        "id": "kernel1",
+        "date": "2026-01-26T00:00:00+00:00",
+        "customer_id": "CCP_01",
+        "type": "isda",
+        "base_currency_code": "EUR",
+        "country_code": "GB"
       }
     ]
   }

@@ -1,0 +1,48 @@
+{
+  "title": "regular_time_deposit",
+  "comment": "A fixed-term deposit with an end date and a maturity of at least 7 days.",
+  "data": {
+    "account": [
+      {
+        "id": "regular_time_deposit",
+        "date": "2025-10-06T00:00:00+00:00",
+        "balance": 15073290,
+        "limit_amount": 0,
+        "arrears_balance": 0,
+        "guarantee_amount": 0,
+        "rate": 4.82,
+        "accrued_interest": 73290,
+        "start_date": "2021-08-31T00:00:00+00:00",
+        "end_date": "2027-09-01T00:00:00+00:00",
+        "trade_date": "2021-08-31T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "currency_code": "GBP",
+        "accounting_treatment": "amortised_cost",
+        "country_code": "GB",
+        "status": "active",
+        "rate_type": "fixed",
+        "purpose": "deposit",
+        "asset_liability": "liability",
+        "regulatory_book": "banking_book",
+        "minimum_balance_eur": 0,
+        "type": "time_deposit",
+        "customer_id": "qwd123"
+      }
+    ],
+    "customer": [
+      {
+        "id": "qwd123",
+        "date": "2025-10-06T00:00:00+00:00",
+        "type": "natural_person",
+        "product_count": 2,
+        "start_date": "2021-08-16T00:00:00+00:00",
+        "status": "established",
+        "boe_sector_code": "Other UK residents; Individual and individual trusts",
+        "credit_impaired": false,
+        "intra_group": false,
+        "sic_code": 0,
+        "country_code": "GB"
+      }
+    ]
+  }
+}

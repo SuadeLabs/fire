@@ -1,0 +1,59 @@
+{
+  "title": "central_bank_required_reserves",
+  "comment": "Minimum reserves held by the credit institution at a central bank.",
+  "data": {
+    "security": [
+      {
+        "id": "central_bank_required_reserves",
+        "date": "2025-10-06T00:00:00+00:00",
+        "accrued_interest": 143440,
+        "asset_liability": "asset",
+        "balance": 48701781,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "central_bank",
+        "hqla_class": "i",
+        "issuer_id": "ISS10",
+        "movement": "asset",
+        "mtm_dirty": 48558341,
+        "next_payment_date": "2025-10-25T00:00:00+00:00",
+        "notional_amount": 48558341,
+        "on_balance_sheet": true,
+        "regulatory_book": "banking_book",
+        "risk_country_code": "GB",
+        "start_date": "2025-10-06T00:00:00+00:00",
+        "type": "cb_reserve",
+        "trade_date": "2025-10-06T00:00:00+00:00",
+        "value_date": "2025-10-06T00:00:00+00:00"
+      }
+    ],
+    "customer": [
+      {
+        "id": "central_bank",
+        "date": "2025-10-06T00:00:00+00:00",
+        "country_code": "GB",
+        "credit_impaired": false,
+        "cqs_standardised": 2,
+        "intra_group": false,
+        "risk_country_code": "GB",
+        "type": "central_bank",
+        "currency_code": "GBP",
+        "product_count": 0,
+        "status": "established"
+      }
+    ],
+    "issuer": [
+      {
+        "id": "willow",
+        "date": "2025-10-06T00:00:00+00:00",
+        "country_code": "GB",
+        "cqs_standardised": 2,
+        "legal_entity_name": "willow",
+        "lei_code": "AB000000000000L00297",
+        "name": "willow",
+        "nace_code": "K.64.11",
+        "type": "central_bank"
+      }
+    ]
+  }
+}

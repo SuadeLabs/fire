@@ -1,0 +1,68 @@
+{
+  "title": "guaranteed_corporate_bond",
+  "comment": "A debt instrument issued by a corporate and guaranteed by a third party.",
+  "data": {
+    "security": [
+      {
+        "id": "guaranteed_corporate_bond",
+        "date": "2025-10-06T00:00:00+00:00",
+        "accounting_treatment": "held_for_trading",
+        "asset_liability": "asset",
+        "balance": 53000,
+        "currency_code": "EUR",
+        "deal_id": "12318",
+        "end_date": "2031-12-04T00:00:00+00:00",
+        "fvh_level": 2,
+        "guarantor_id": "GU00107",
+        "hqla_class": "iia",
+        "isin_code": "GB91282CJU18",
+        "issuer_id": "Iss7",
+        "moodys_lt": "aa1",
+        "movement": "asset",
+        "mtm_dirty": 53392,
+        "notional_amount": 53000,
+        "on_balance_sheet": true,
+        "product_name": "bond",
+        "rate": 2.85,
+        "regulatory_book": "trading_book",
+        "rehypothecation": true,
+        "reporting_id": "honey",
+        "reporting_entity_name": "honey",
+        "snp_lt": "aaa",
+        "start_date": "2025-06-04T00:00:00+00:00",
+        "type": "bond",
+        "trade_date": "2025-10-06T00:00:00+00:00"
+      }
+    ],
+    "issuer": [
+      {
+        "id": "Iss7",
+        "date": "2025-10-06T00:00:00+00:00",
+        "country_code": "CA",
+        "intra_group": false,
+        "legal_entity_name": "Iss7",
+        "lei_code": "AB000000000000L00905",
+        "moodys_lt": "aa1",
+        "name": "Iss7",
+        "parent_id": "IS01384",
+        "sic_code": 65300,
+        "type": "corporate"
+      }
+    ],
+    "guarantor": [
+      {
+        "id": "GU00107",
+        "date": "2025-10-06T00:00:00+00:00",
+        "country_code": "CA",
+        "intra_group": false,
+        "legal_entity_name": "Legal Name 000107",
+        "lei_code": "AB000000000000L00345",
+        "moodys_lt": "aa1",
+        "name": "Guarantor Name 000107",
+        "sic_code": 65300,
+        "snp_lt": "aaa",
+        "type": "corporate"
+      }
+    ]
+  }
+}

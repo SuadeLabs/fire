@@ -1,27 +1,52 @@
 {
   "title": "commodity_asian_option",
-  "comment": "Commodity Asian Option",
+  "comment": "A commodity option whose payoff is based on the average price of the underlying commodity over a specified period.",
   "data": {
     "derivative": [
       {
-        "date": "2020-03-31T00:00:00",
-        "id": "1",
+        "id": "commodity_asian_option",
+        "date": "2026-01-26T00:00:00+00:00",
+        "mna_id": "harbor1",
         "asset_class": "metals",
         "type": "option",
-        "leg_type": "put",
-        "position": "long",
+        "position": "short",
+        "leg_type": "call",
         "currency_code": "USD",
-        "underlying_quantity": 100,
-        "strike": 9829,
-        "underlying_index": "copper average",
-        "underlying_price": 9829,
-        "supervisory_price": 9766,
-        "trade_date": "2020-02-25T00:00:00",
-        "start_date": "2020-02-27T00:00:00",
-        "end_date": "2021-06-02T00:00:00",
-        "last_exercise_date": "2020-12-05T00:00:00",
+        "notional_amount": 10000000,
+        "rate": 50,
+        "mtm_dirty": -10000,
+        "underlying_index": "Copper 3-month average",
+        "trade_date": "2025-10-24T00:00:00+00:00",
+        "start_date": "2025-10-26T00:00:00+00:00",
+        "end_date": "2026-10-27T00:00:00+00:00",
         "settlement_type": "physical",
-        "mtm_dirty": 80
+        "regulatory_book": "trading_book",
+        "underlying_price": 9250,
+        "supervisory_price": 8200,
+        "customer_id": "CU0941"
+      }
+    ],
+    "customer": [
+      {
+        "id": "CU0941",
+        "date": "2026-01-26T00:00:00+00:00",
+        "type": "credit_institution",
+        "country_code": "GB",
+        "name": "Bank 1",
+        "legal_entity_name": "Bank 1",
+        "currency_code": "GBP",
+        "moodys_lt": "aa2",
+        "snp_lt": "aa"
+      }
+    ],
+    "agreement": [
+      {
+        "id": "harbor1",
+        "date": "2026-01-26T00:00:00+00:00",
+        "customer_id": "CU0941",
+        "type": "isda",
+        "base_currency_code": "EUR",
+        "country_code": "GB"
       }
     ]
   }

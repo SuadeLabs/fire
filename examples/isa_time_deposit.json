@@ -1,0 +1,49 @@
+{
+  "title": "isa_time_deposit",
+  "comment": "A fixed-term individual savings account (ISA) satisfying the conditions of the UK ISA Regulations. The end date allows future cash flows to be projected.",
+  "data": {
+    "account": [
+      {
+        "id": "isa_time_deposit",
+        "date": "2025-10-06T00:00:00+00:00",
+        "balance": 2943348,
+        "limit_amount": 0,
+        "arrears_balance": 0,
+        "guarantee_amount": 2920877,
+        "rate": 4.32,
+        "accrued_interest": 22471,
+        "start_date": "2025-08-17T00:00:00+00:00",
+        "end_date": "2026-08-03T00:00:00+00:00",
+        "trade_date": "2025-08-17T00:00:00+00:00",
+        "next_withdrawal_date": "2025-10-21T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "currency_code": "GBP",
+        "accounting_treatment": "amortised_cost",
+        "country_code": "GB",
+        "status": "active",
+        "guarantee_scheme": "gb_fscs",
+        "rate_type": "variable",
+        "purpose": "deposit",
+        "asset_liability": "liability",
+        "regulatory_book": "banking_book",
+        "minimum_balance_eur": 0,
+        "type": "isa",
+        "customer_id": "qwd324"
+      }
+    ],
+    "customer": [
+      {
+        "id": "qwd324",
+        "date": "2025-10-06T00:00:00+00:00",
+        "type": "natural_person",
+        "product_count": 1,
+        "start_date": "2025-08-03T00:00:00+00:00",
+        "boe_sector_code": "Other UK residents; Individual and individual trusts",
+        "credit_impaired": false,
+        "intra_group": false,
+        "sic_code": 0,
+        "country_code": "GB"
+      }
+    ]
+  }
+}

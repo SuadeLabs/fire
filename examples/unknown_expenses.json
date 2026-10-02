@@ -1,0 +1,24 @@
+{
+  "title": "unknown_expenses",
+  "comment": "Expenses whose purpose has not yet been determined.",
+  "data": {
+    "account": [
+      {
+        "id": "unknown_expenses",
+        "date": "2025-10-06T00:00:00+00:00",
+        "balance": 2277526,
+        "start_date": "2025-10-06T00:00:00+00:00",
+        "end_date": "2025-10-07T00:00:00+00:00",
+        "trade_date": "2025-10-06T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "reporting_entity_name": "QWE17491",
+        "reporting_id": "FI6C7E5PBUB3F9K43B44",
+        "currency_code": "CAD",
+        "country_code": "CA",
+        "asset_liability": "pnl",
+        "regulatory_book": "banking_book",
+        "type": "expense"
+      }
+    ]
+  }
+}
