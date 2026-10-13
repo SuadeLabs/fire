@@ -20,44 +20,21 @@ from . import (
 
 LOCAL = os.getenv("GITHUB_ACTIONS") != "true"
 MISSING_DOCS = [
-    "account_ids",
-    "cb_haircut",
-    "col",
-    "comment",
-    "data",
-    "delta",
-    "derivative_id",
-    "forward_rate",
-    "gamma",
-    "insolvency_rank",
-    "leg",
-    "links",
-    "loan_id",
-    "loan_ids",
-    "next_exercise_date",
-    "next_payment_amount",
-    "next_receive_amount",
-    "next_receive_date",
-    "next_reset_date",
-    "page",
-    "payment_date",
-    "report_type",
-    "reset_date",
-    "rho",
-    "row",
-    "settlement_type",
-    "security_id",
-    "theta",
-    "title",
-    "underlying_derivative_id",
-    "underlying_issuer_id",
-    "underlying_security_id",
-    "underlying_strike",
-    "values",
-    "vega",
-    "vol_adj_fx",
     # DO NOT ADD TO THIS LIST, ADD DOCUMENTATION!
 ]
+DOC_EXEMPT_SCHEMAS = {"batch", "example"}
+
+
+def exempt_from_docs(prop):
+    if prop in MISSING_DOCS:
+        return True
+
+    found_in = {
+        schema_name
+        for schema_name in SCHEMA_NAMES
+        if prop in schema_properties(f"{schema_name}.json")
+    }
+    return bool(found_in) and found_in.issubset(DOC_EXEMPT_SCHEMAS)
 
 
 def get_schema_refs_in_doc(docname):
@@ -82,7 +59,7 @@ class TestDocs(unittest.TestCase):
 
         no_docs = []
         for p in properties:
-            if p not in DOC_NAMES + MISSING_DOCS:
+            if p not in DOC_NAMES and not exempt_from_docs(p):
                 no_docs.append(p)
 
         self.assertFalse(
@@ -227,7 +204,7 @@ class TestDocs(unittest.TestCase):
                 continue
 
             for prop in schema_properties(f"{schema_name}.json"):
-                if prop in MISSING_DOCS:
+                if exempt_from_docs(prop):
                     continue
 
                 schema_refs = get_schema_refs_in_doc(prop)
