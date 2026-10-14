@@ -22,9 +22,8 @@
       "type": "string"
     },
     "contribution_amount": {
-      "description": "The contribution amount this adjustment should make to the specified report cell. A positive/negative number in minor units (cents/pence).",
-      "type": "integer",
-      "monetary": true
+      "description": "The contribution amount this adjustment should make to the specified report cell. A positive/negative number, which if representing a monetary amount (i.e. accompanied by a currency code) is in minor units (cents/pence).",
+      "type": "number"
     },
     "contribution_text": {
       "description": "The text to use for the adjustment where the reported cell is not a monetary value.",
@@ -63,8 +62,5 @@
     {"required": ["id", "date", "report_type", "row", "col", "contribution_amount"]},
     {"required": ["id", "date", "report_type", "row", "col", "contribution_text"]}
   ],
-  "dependencies": {
-    "contribution_amount": ["currency_code"]
-  },
   "additionalProperties": true
 }
