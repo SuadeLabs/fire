@@ -271,10 +271,10 @@ The **collateral** enum type identifies an account or deposit received as collat
 Within the context of **operational** deposits as defined in Artcle 27.1(d) of the [LCR][lcr], the **ips** enum indicates that the account is maintained by the depositor to obtain cash clearing and central institution services and where the deposit taking institution belongs to an  institutional protection scheme or equivalent network as referred in Article 16 of the [LCR][lcr].
 
 ### escrow
-*needs definition*
+An account holding money with a third party until specified contractual conditions are satisfied and the funds can be released. See the [California DFPI escrow definition][escrow-definition].
 
 ### operational_escrow
-*needs definition*
+An escrow account maintained as part of an operational banking relationship. Classification as an operational deposit also requires the applicable dependency and service criteria; the escrow arrangement alone is insufficient. See [Basel LCR40.26–40.36][operational-deposits].
 
 ### clearing
 The **clearing** enum value indicates that the account or deposit is being maintained for clearing, settlement, custody or cash management services in the context of an **operational** relationship and hence can be treated as a very short term exposure.
@@ -288,34 +288,34 @@ Definition: Deposits held at other financial institutions for operational purpos
 https://www.bis.org/basel_framework/chapter/LCR/40.htm#:~:text=1%20FAQ-,40.89,-Deposits%20held%20at
 
 ### cash_management
-*Needs definition*
+An account maintained for services that manage a customer’s cash flows, such as collections, payments, payroll and control of disbursements. For operational-deposit treatment, see [Basel LCR40.35 and the conditions in LCR40.26–40.32][operational-deposits].
 
 ### critical_service
-*Needs definition*
+An account relating to liabilities for goods or services critical to the firm’s daily operations, such as IT, utilities or premises maintenance. See [BRRD, Article 44(2)(g)(ii)][brrd-liabilities].
 
 ### div_from_cis
-*Needs definition*
+An account recording dividends received from collective investment schemes. These are distributions from an investment fund; see the [SEC explanation of mutual fund dividend payments][fund-income].
 
 ### div_from_money_mkt
-*Needs definition*
+An account recording dividends received from money market funds. See the [SEC explanation of money market fund dividend payments][money-market-income].
 
 ### firm_operating_expenses
-*Needs definition*
+An account recording expenses incurred in the ordinary operation of the firm. Use a more specific purpose, such as **staff** or **admin**, where applicable. See the [FIRE operating expenses example][operating-expenses-example].
 
 ### firm_operations
-*Needs definition*
+An account maintained for the firm’s own business operations. This is the general operational purpose; **firm_operating_expenses** specifically identifies expense accounts.
 
 ### int_on_derivative
-*Needs definition*
+An account recording interest receivable or payable under derivative contracts, such as the fixed or floating interest payments on an interest rate swap. See [HMRC’s interest rate swap explanation][swap-interest].
 
 ### loan_and_advance_fee
-*Needs definition*
+An account recording fees relating to loans and advances, including origination, administration or servicing fees. Accounting treatment depends on whether a fee is integral to the effective interest rate; see [IFRS 9, paragraphs B5.4.1–B5.4.3][ifrs9-fees].
 
 ### retained_earnings
-*Needs definition*
+An equity account recording accumulated profits and losses retained by the firm after distributions to shareholders. It does not represent a separate cash balance. See [Cornell’s retained earnings definition][retained-earnings-definition].
 
 ### system
-*Needs definition*
+An account relating to liabilities to payment or securities settlement systems, their operators or participants arising from participation in those systems. For the scope and maturity conditions of the related bail-in exclusion, see [BRRD, Article 44(2)(f)][brrd-liabilities].
 
 ### operational_excess
 Excess operational deposits are defined as the part of the operational deposits (as defined in [LCR][lcr] Article 27.6) held in excess of those required for the provision of operational services. The distinction between operational deposits and excess operational deposits is required for the reporting of section 1.1.3 in the ouflows section of the [LCR][lcr]
@@ -523,13 +523,13 @@ Fees earned for receiving, transmitting, or executing customer orders to buy or 
 
 
 ### pension
-*needs definition*
+An account recording employee pension costs or obligations, including amounts relating to defined contribution or defined benefit arrangements. See [IAS 19, “About” and “Standard history”][employee-benefits].
 
 ### restructuring
-*needs definition*
+An account recording amounts relating to a planned reorganisation that materially changes the scope or manner of the firm’s business, including provisions where recognition criteria are met. See [IAS 37, paragraph 10 and paragraphs 70–83][restructuring-provisions].
 
 ### commitments
-*needs definition*
+An account recording amounts relating to commitments to provide credit, including provisions for expected credit losses on loan commitments where required. See [IFRS 9, paragraphs 2.1(g) and 5.5.1][ifrs9-fees].
 
 ### msr
 Describes an account that holds mortgage servicing assets, also known as Mortgage Servicing Rights (MSRs), which are assets representing the contractual right to collect and process payments on a pool of mortgage loans on behalf of investors.
@@ -756,16 +756,16 @@ Describes an account that holds the amount of:
     and charged to each group entity (e.g. IT support).
 
 ### fx
-*needs definition*
+An account recording foreign exchange gains or losses arising from foreign currency transactions or retranslation of monetary items. See [IAS 21, paragraphs 28–32][exchange-differences]. Use **fx_reclass** for the separate recycling of accumulated translation differences.
 
 ### fx_reclass
 The reclassification (recycling) of cumulative foreign currency translation differences previously recognized in other comprehensive income (OCI) to profit or loss, occurring upon disposal, partial disposal, or loss of control of a foreign operation, or repayment of a monetary item that forms part of the net investment.
 
 ### admin
-*needs definition*
+An account recording administrative overheads, such as office, professional and support-service expenses. In this hierarchy, employee remuneration and benefits are identified separately by **staff**.
 
 ### staff
-*needs definition*
+An account recording employee remuneration and related benefit costs, such as wages, salaries, social security contributions and pensions. See [IAS 19’s description of employee benefits][employee-benefits].
 
 ### general_credit_risk
 Account which has an amount of general loan loss provision for credit risks that has been recognised in the financial statements of the institution in accordance with the applicable accounting framework.
@@ -1445,7 +1445,7 @@ This indicates shares that have been [issued][issued] for the purpose of raising
 Use this enumeration value to highlight back to back trades defined as "exactly matching" in [Pruval Delegated Regulation][pruval] Article 4 (2)
 
 ### aircraft_finance
-*Needs definition*
+Financing for the acquisition or leasing of aircraft. Aircraft financing that relies primarily on cash flows from the financed aircraft is an example of object finance; see [Basel CRE30.12][object-finance].
 
 ### single_collateral_pool
 Use this enumeration value to identify to securities which are placed into a central bank single collateral pool. A list of eligible security types for the Bank of England SCP can be found [here][scp]
@@ -1474,3 +1474,16 @@ Use this enum to refer to funds reserved for the purpose of implementing, from a
 [osfi-bd]: https://www.osfi-bsif.gc.ca/en/data-forms/reporting-returns/filing-financial-returns/financial-reporting-instructions/irb-credit-data-retail-portfolio-part-1-bd
 [osfi-b20]: https://www.osfi-bsif.gc.ca/Eng/Docs/b20_dft.pdf
 
+[escrow-definition]: https://dfpi.ca.gov/regulated-industries/escrow-law/general-definitions/
+[operational-deposits]: https://www.bis.org/committees/bcbs/basel-framework/standard/lcr/40/inforce/2019-12-15/published/2023-03-30#:~:text=40.35
+[brrd-liabilities]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0059#:~:text=Scope%20of%20bail-in%20tool
+[fund-income]: https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-funds-etfs/mutual-funds#:~:text=Dividend%20Payments
+[money-market-income]: https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-5
+[operating-expenses-example]: https://github.com/SuadeLabs/fire/blob/master/examples/firm_operating_expenses.json
+[swap-interest]: https://www.gov.uk/hmrc-internal-manuals/corporate-finance-manual/cfm1107#:~:text=Interest%20rate%20swap
+[ifrs9-fees]: https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2022/issued/part-a/ifrs-9-financial-instruments.pdf?bypass=on
+[retained-earnings-definition]: https://www.law.cornell.edu/wex/retained_earnings
+[employee-benefits]: https://www.ifrs.org/issued-standards/list-of-standards/ias-19-employee-benefits/
+[restructuring-provisions]: https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2021/issued/part-a/ias-37-provisions-contingent-liabilities-and-contingent-assets.pdf
+[exchange-differences]: https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2022/issued/part-a/ias-21-the-effects-of-changes-in-foreign-exchange-rates.pdf?bypass=on
+[object-finance]: https://www.bis.org/committees/bcbs/basel-framework/standard/cre/30/inforce/2019-12-15/published/2019-12-15#:~:text=30.12
