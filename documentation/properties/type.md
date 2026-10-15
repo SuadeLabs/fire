@@ -882,51 +882,69 @@ A **cash** or cash-equivalent security such as a securitisation of cash deposits
 
 ### common
 
-This is common stock, which is a child of _equity_, _share_ to be used when common equity tier 1 instruments are specified
+Common stock (ordinary shares), a child of **equity**, **share**. See the [SEC’s stock guide, “What kinds of stocks are there?”][equity-sec-stocks]. Classification as Common Equity Tier 1 capital additionally requires the applicable regulatory criteria; see [CRR Articles 26 and 28][equity-crr-cet1].
 
 ### cpp_tarp_pref
 
 This is CPP TARP Preferred - cumulative preferred stock issued under the capital purchase program (CPP) of the troubled asset relief program (TARP), which is a child of _equity_, _share_
 
+See the [US Treasury’s 2008 Capital Purchase Program description][equity-tarp-cpp], which describes the preferred shares and accompanying warrants. Here CPP means the programme; in **cpp** below it means cumulative perpetual preferred.
+
 ### cpp
 
 This is cumulative perpetual preferred (CPP) - perpetual preferred shares with cumulative dividends, which is a child of _equity_, _share_
+
+For the distinction between cumulative and non-cumulative dividends, see the [Federal Reserve’s historical capital rules, section II.A.1.c.ii(1)–(3)][equity-fed-preferred].
 
 ### mcp
 
 This is mandatory convertible preferred (mcp) - preferred equity instruments that mandatorily convert into common equity, which is a child of _equity_, _share_
 
+For a government-held example, see the [Treasury’s description of its mandatory convertible preferred stock in Ally][equity-treasury-ally]. The conversion terms are specified in the instrument’s contract.
+
 ### mcp_usg
 
 This is MCP USG Preferred - Government-purchased Mandatory Convertible Preferred stock, which is a child of _equity_, _share_
+
+See the [Treasury’s Ally investment disclosure, including the “USG Capital Outstanding in Ally” table][equity-treasury-ally].
 
 ### ncpp
 
 This is NCPP Redeemable – Non-Cumulative Perpetual Preferred security that may be redeemed by the issuer at its discretion
 
+See the [Federal Reserve’s historical capital rules, section II.A.1.c.ii(1)–(3)][equity-fed-preferred] for perpetual maturity, issuer redemption and non-cumulative dividend features. Redemption remains subject to the instrument’s terms and applicable regulatory approvals.
+
 ### reit_pref
 
 This is REIT Preferred - Preferred stock issued by a Real Estate Investment Trust subsidiary
+
+See the [Federal Reserve’s historical FR Y-14A instructions, Schedule HC-R Memoranda, line item 130][equity-reit-preferred], which identifies REIT preferred securities as a preferred-stock category.
 
 ### trups_usg_pref
 
 USG Preferred TRUPS - Trust Preferred Securities purchased by the U.S. Government, which is a child of _equity_
 
+For an example of government-held TruPS, see the [Treasury’s Ally investment disclosure and capital table][equity-treasury-ally].
+
 ### ncpp_convertible
 
-This is NCPP Convertible - Non-Cumulative Perpetual Preferred security that can be converted into common equity, which is a child of _debt_
+Non-cumulative perpetual preferred stock that can be converted into common equity, grouped under **equity** in FIRE. For non-cumulative and perpetual features, see the [Federal Reserve’s historical capital rules, section II.A.1.c.ii][equity-fed-preferred]; for conversion into ordinary shares, see [IAS 33, paragraph 7(a)][equity-ias33].
 
 ### cs_usg
 
-This is CS USG Investment - Common Stock (CS) purchased by the U.S. Government as part of a direct investment program, which is a child of _equity_, _share_
+Common stock held by the U.S. Government through an investment programme, including shares received by converting an earlier preferred-stock investment. See the [Treasury’s conversion of Ally preferred shares into common stock][equity-treasury-ally].
 
 ### cs_warrant
 
 This is CS Warrants - Warrants to purchase common stock issued alongside TARP or other capital instruments, which is a child of _equity_, _share_
 
+See the [US Treasury’s CPP description][equity-tarp-cpp], which explains warrants to purchase common stock issued alongside its preferred-stock investments.
+
 ### equity
 
 This is a "catch all" term for equity instruments such as _share_, _share_agg_ to be used when further granularity is not available or not needed.
+
+For the underlying accounting definition of an equity instrument as a residual interest after deducting liabilities, see [IAS 32, paragraph 11][equity-ias32]. The FIRE grouping does not by itself determine accounting or regulatory capital eligibility.
 
 ### dividend
 
@@ -937,51 +955,70 @@ A distribution of a company's post-tax profits made to its shareholders. Dividen
 
 Denotes if the security is a share (stock) or represents an aggregate for a portfolio or package of shares.
 
+See the [SEC’s stock guide, “What are stocks?”][equity-sec-stocks] for the ownership interest represented by shares. **share_agg** is FIRE’s grouping for multiple share positions.
+
 ### pref_share
 
 The [FCA](https://www.handbook.fca.org.uk/handbook/glossary/G1587.html) defines a **preference share** as:
 
 > A share conferring preference as to income or return of capital which does not form part of the equity share capital of a company
 
+See also the [SEC’s explanation of preferred stockholders’ dividend and liquidation priority][equity-sec-stocks].
+
 ### speculative_unlisted
 
-As per OSFI and BCBS, a Speculative unlisted equity is defined as "an equity investments in unlisted companies that are invested for short-term resale purposes, or are considered venture capital or similar investments which are subject to price volatility and are acquired in anticipation of significant future capital gains, or are held with trading intent. Investments in unlisted equities of corporate clients with which the institution has or intends to establish a long-term business relationship and debt-equity swaps for corporate restructuring purposes would be excluded." OSFI Chapter 4 P76.
+An equity investment in an unlisted company held for short-term resale, with trading intent, or as a venture-capital or similar investment seeking substantial capital gains. Long-term customer relationships and debt-equity swaps for corporate restructuring are excluded from this category. See [Basel Framework CRE20.58][equity-speculative].
 
 ### treasury
 
 According to IAS 32.33, if an entity reacquires its own equity instruments, those instruments shall be considered **treasury shares**, and shall be deducted from equity.
 
+See [IAS 32, paragraph 33, “Treasury shares”][equity-ias32].
+
 ### trups
 
-This is cumulative dated preferred (TRUPS) - trust Preferred Securities (trups) with cumulative dividends and a defined maturity date, which is a child of _equity_,
+Trust preferred securities issued through a trust sponsored by a banking organisation, typically backed by the sponsor’s junior subordinated debt and allowing deferred distributions. See the [Federal Reserve’s historical capital rules, section II.A.1.c.iv(1)–(3)][equity-fed-trups]. These distinguish the trust securities from the underlying debt’s maturity; FIRE groups the instruments under **equity**.
 
 ### main_index_equity
 
 The main_index_equity identifies equities that are constituents of a main index for the purposes of applying a volatility adjustment in line with [Article 224](https://www.eba.europa.eu/regulation-and-policy/single-rulebook/interactive-single-rulebook/16006).
 
+The corresponding legislative text is available on [EUR-Lex: CRR Article 224(1), Table 3][equity-main-index].
+
+The **ciu_*** categories below identify fund holdings by their underlying assets.
+Liquidity eligibility also depends on [Article 15(1) of Delegated Regulation (EU) 2015/61][equity-ciu-assets]; the enum alone does not establish eligibility.
+
 ### ciu_cash_cb
-CIU where the underlying is coins/banknotes and/or central bank exposures
+
+Shares or units in a collective investment undertaking (CIU) whose underlying assets are coins, banknotes and/or central bank exposures. See [Article 15(2) and (4)][equity-ciu-assets].
 
 ### ciu_secs_excl_cov
-CIU where the underlying is debt securities excluding covered bonds
+
+Shares or units in a collective investment undertaking (CIU) whose underlying assets are debt securities other than covered bonds. See [Article 15(2) and (4)][equity-ciu-assets].
 
 ### ciu_cov_bond
-CIU where the underlying is covered bonds
+
+Shares or units in a collective investment undertaking (CIU) whose underlying assets are covered bonds. See [Article 15(2) and (4)][equity-ciu-assets].
 
 ### ciu_corp_bond
-CIU where the underlying is corporate debt securities
+
+Shares or units in a collective investment undertaking (CIU) whose underlying assets are corporate debt securities. See [Article 15(2) and (4)][equity-ciu-assets].
 
 ### ciu_public_sec
-CIU where the underlying is claims on or guaranteed by central governments, central banks, regional governments, local authorities or public sector entities
+
+Shares or units in a collective investment undertaking (CIU) whose underlying assets are claims on, or guaranteed by, central governments, central banks, regional governments, local authorities or public sector entities. See [Article 15(2) and (4)][equity-ciu-assets].
 
 ### ciu_rmbs_auto
-CIU where the underlying is asset-backed securities (residential or auto)
+
+Shares or units in a collective investment undertaking (CIU) whose underlying assets are residential mortgage or auto-loan asset-backed securities. See [Article 15(2) and (4)][equity-ciu-assets].
 
 ### ciu_abs_oth
-CIU where the underlying is asset-backed securities (commercial or individuals)
+
+Shares or units in a collective investment undertaking (CIU) whose underlying assets are other asset-backed securities, such as those backed by commercial or individual lending. See [Article 15(2) and (4)][equity-ciu-assets].
 
 ### ciu_shares
-CIU where the underlying is shares (major stock index)
+
+Shares or units in a collective investment undertaking (CIU) whose underlying assets are shares included in a major stock index. See [Article 15(2) and (4)][equity-ciu-assets].
 
 ### debt
 This is a "catch all" term for debt of any kind, _bond_, _bond_amortising_, _covered_bond_, _abs_, _residential_mbs_, _non_residential_mbs_, _frn_, _govt_gteed_frn_, to be used when further granularity is not available or not needed.
@@ -2273,3 +2310,16 @@ Loans in the segment that were charged-off due to bankruptcy during the reportin
 [collateral-guarantees]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575#:~:text=Additional%20requirements%20for%20guarantees
 [cash-collateral]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575#:~:text=Cash%20on%20deposit
 [debenture-security]: https://www.gov.uk/hmrc-internal-manuals/debt-management-and-banking/dmbm655260
+
+[equity-sec-stocks]: https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks#:~:text=What%20kinds%20of%20stocks%20are%20there
+[equity-crr-cet1]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575#:~:text=Article%2028
+[equity-tarp-cpp]: https://home.treasury.gov/news/press-releases/hp1207#:~:text=senior%20preferred%20shares
+[equity-fed-preferred]: https://www.federalreserve.gov/frrs/regulations/iidefinition-of-qualifying-capital-for-the-risk-based-capital-ratio.htm#:~:text=Noncumulative%20and%20cumulative%20features
+[equity-treasury-ally]: https://home.treasury.gov/news/press-releases/tg1014#:~:text=Mandatory%20Convertible%20Preferred
+[equity-reit-preferred]: https://www.federalreserve.gov/apps/reportingforms/Download/DownloadAttachment?guid=cac26886-1dad-49d3-9799-dc937cee8907
+[equity-ias32]: https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2022/issued/part-a/ias-32-financial-instruments-presentation.pdf?bypass=on
+[equity-speculative]: https://www.bis.org/committees/bcbs/basel-framework/standard/cre/20/inforce/2023-01-01/published/2022-12-08#:~:text=20.58
+[equity-fed-trups]: https://www.federalreserve.gov/frrs/regulations/iidefinition-of-qualifying-capital-for-the-risk-based-capital-ratio.htm#:~:text=Trust%20preferred%20securities%20are%20defined
+[equity-main-index]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575#:~:text=Article%20224
+[equity-ciu-assets]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32015R0061#:~:text=Article%2015
+[equity-ias33]: https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2024/issued/part-a/ias-33-earnings-per-share.pdf?bypass=on
