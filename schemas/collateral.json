@@ -39,6 +39,13 @@
       "type": "integer",
       "monetary": true
     },
+    "construction_status": {
+      "description": "The current descriptive status of a construction / ADC project.",
+      "type": "string",
+      "enum": [
+        "substantially_complete"
+      ]
+    },
     "country_code": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/country_code",
       "description": "The country of collateral. Two-letter country code as defined according to ISO 3166-1."
@@ -77,6 +84,11 @@
         "type": "string"
       }
     },
+    "number_of_stories": {
+      "description": "The number of stories (physical floors) within a build/building. Shows the number of stories on or above the ground, i.e. a bungalow has 1 story.",
+      "type": "integer",
+      "monetary": false
+    },
     "orig_value": {
       "description": "The valuation as used by the bank for the collateral at the origination of the related loan or line of credit. Monetary type represented as a naturally positive integer number of cents/pence.",
       "type": "integer",
@@ -94,6 +106,10 @@
     "postal_code": {
       "description": "The zip code in which the property is located. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
       "type": "string"
+    },
+    "pre_sales_pct": {
+      "description": "Percentage denoting the amount of sold units or leased space that has been legally backed by buyers/tenants prior to ADC build completion. Must be populated as the percentage by Monetary Value",
+      "type": "number"
     },
     "regulated": {
       "description": "Identifies whether the collateral qualifies the exposure as 'regulatory' for credit risk purposes. ",
