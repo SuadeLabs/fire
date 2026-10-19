@@ -285,6 +285,10 @@
       "type": "string",
       "format": "date-time"
     },
+    "equity_at_risk_pct": {
+      "description": "The percentage of Equity at Risk within an ADC undertaking, as a decimal/float. See OFSI BCAR 2027 Ch4 Para 119. Only to be populated if a minimum of 5% equity at risk is made up of cash contributions and a maximum of 10% equity at risk is made up of subordinated debt.",
+      "type": "number"
+    },
     "facility_currency_code": {
       "description": "The currency of the credit facility if not the same as loan currency_code.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/currency_code"
@@ -736,6 +740,7 @@
         "house_purchase_cstr",
         "ips",
         "land",
+        "land_acquisition",
         "lifetime_mortgage",
         "medical",
         "mergers_acquisitions",
@@ -751,6 +756,7 @@
         "project_hq_phase",
         "project_pre_op",
         "promotional",
+        "purpose_built_rental",
         "rate",
         "reference",
         "refinance",
