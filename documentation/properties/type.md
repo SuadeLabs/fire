@@ -140,11 +140,7 @@ A micro SME is one which does not meet the thresholds to be classified as a smal
 
 ### small_sme
 
-Small enterprises are those engaged in an economic activity, irrespective of their legal form
-(corporation, partnership, sole trader etc.), which employs fewer than 50 persons and whose
-annual turnover or annual balance sheet is less than or equal to €10 million. If there are any
-instances where border-line cases exist using these definitions of smal and medium sized
-enterprises, the employee number threshold is to take precedence.
+Small enterprises are those engaged in an economic activity, irrespective of their legal form (corporation, partnership, sole trader etc.), which employs fewer than 50 persons and whose annual turnover or annual balance sheet is less than or equal to €10 million. If there are any instances where border-line cases exist using these definitions of small and medium sized enterprises, the employee number threshold is to take precedence.
 
 ### social_housing_entity
 
