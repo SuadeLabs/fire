@@ -129,6 +129,10 @@ Ancillary own funds classified as Tier 3 under Solvency II because they do not m
 ### bas_tier_3
 Basic own funds classified as Tier 3 under Solvency II because they do not meet the Tier 1 or Tier 2 criteria. See [Directive 2009/138/EC, Articles 88 and 94(3)][solvency-own-funds].
 
+
+---
+
+
 [solvency-own-funds]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009L0138#:~:text=Classification%20into%20tiers
 [solvency-classification]: https://www.eiopa.europa.eu/rulebook/solvency-ii-single-rulebook/article-2182_en
 
