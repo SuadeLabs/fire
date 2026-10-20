@@ -9,7 +9,7 @@ schemas:    [account, security]
 ```bash
 ├── tier_1
 ├── ce_tier_1
-├── ce_tier_1_ineligible  
+├── ce_tier_1_ineligible
 ├── add_tier_1
 │   └── add_tier_1_indirect
 ├── cet1_grandfathered
@@ -134,7 +134,7 @@ Basic own funds classified as Tier 3 under Solvency II because they do not meet 
 
 [basel-capital]: https://www.bis.org/committees/bcbs/basel-framework/standard/cap?allChapters=true#:~:text=10.1
 [basel-tier2]: https://www.bis.org/committees/bcbs/basel-framework/standard/cap?allChapters=true#:~:text=Tier%202%20capital
-[basel2-tier3]: https://www.bis.org/publ/bcbs128b.pdf
+[basel2-tier3]: https://www.bis.org/publications/200606-standards-basel-ii-international-convergence-capital-measurement-and-capital-standards-revised-framework.pdf
 [basel3-tier3]: https://www.bis.org/publ/bcbs189.pdf
 [crr-own-funds]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575#:~:text=Own%20funds
 [crr-tier-1]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575#:~:text=Article%2025
