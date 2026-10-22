@@ -285,8 +285,8 @@
       "type": "string",
       "format": "date-time"
     },
-    "equity_at_risk_pct": {
-      "description": "The percentage of Equity at Risk within an ADC undertaking, as a decimal/float. See OFSI BCAR 2027 Ch4 Para 119. Only to be populated if a minimum of 5% equity at risk is made up of cash contributions and a maximum of 10% equity at risk is made up of subordinated debt.",
+    "equity_at_risk": {
+      "description": "The Equity at Risk within an ADC undertaking, as a Percentage between 0 and 1 (decimal/float). See OFSI BCAR 2027 Ch4 Para 119. Only to be populated if a minimum of 5% equity at risk is made up of cash contributions and a maximum of 10% equity at risk is made up of subordinated debt.",
       "type": "number"
     },
     "facility_currency_code": {
