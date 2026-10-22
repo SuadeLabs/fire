@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"status"
-schemas:	[account, customer, loan, security, derivative]
+schemas:	[account, customer, loan, security, derivative, collateral]
 ---
 
 # status
@@ -9,6 +9,8 @@ schemas:	[account, customer, loan, security, derivative]
 ---
 
 The **status** property indicates the current state of the financial product. A product can be active, cancelled, defaulted, committed etc. This is generally used to differentiate potential offers committed by the institution (lending decision taken) but not yet accepted by a customer. The status could also indicate liabilities which have been cancelled but are still being held within the dataset (until maturity or otherwise).
+
+For collateral, the status property captures the asset's physical or operational readiness - such as property-builds which are currently under construction, or those that are completed and occupied. This reflects the risk of the underlying collateral and related loans.
 
 ## Account
 
@@ -194,6 +196,33 @@ This indicates that the transaction is still unsettled after its due delivery da
 ### free_deliveries
 
 From [CRE70.10](https://www.bis.org/basel_framework/chapter/CRE/70.htm#:~:text=Capital%20requirements%20for%20non%2DDvP%20transactions%20(free%20deliveries)), free deliveries are a specific type of unsettled transaction. Indicates that cash is paid without receipt of the corresponding receivable  (securities, foreign currencies, gold, or commodities) or, conversely, deliverables were delivered without receipt of the corresponding cash payment (non-DvP, or free deliveries) expose firms to a risk of loss on the full amount of cash paid or deliverables delivered.
+
+
+## Collateral
+
+```bash
+├── land_acquisition
+└── substantially_complete
+```
+
+### land_acquisition
+
+Distinguishes land-acquisition and site-acquisition loans from development or construction under the ADC (Acquisition, Development, and Construction) collateral class. It enables compliance with regulatory capital needs for exposures to ADC collateral for which the construction is very early on into the development cycle.
+> OSFI BCAR (4.1.13, Para 124): For residential land acquisition exposures, a 100% risk weight is assigned to exposures with an LTV that does not exceed 60%. All other land acquisition exposures are assigned a risk weight of 150%.
+> 
+> Basel Framework (CRE 20.90) Land ADC exposures refers to loans to companies or SPVs financing any of the land acquisition for development and construction purposes, or development and construction of any residential or commercial property.
+
+
+### substantially_complete
+
+Indicates whether a development or construction asset has reached 'official' build completion, permitting legal occupancy. This denotes that it *may* legally be occupied/lived-in (not to be confused with whether or not it *is* currently occupied/lived-in).
+
+Setting collateral as 'substantially complete' transitions exposures out of the higher-risk ADC (Acquisition, Development, and Construction) categories, into standard 'Completed' Real Estate categories, where capital requirements and risk weights are generally reduced. 
+This status requires formal legal certification. An asset cannot be flagged as 'complete' solely based on construction progress; it requires an issued government/municipal certificate of occupancy, and adherence to LTV requirements, which vary by regulator.
+
+> OSFI BCAR (4.1.13, Para 122): ADC (Acquisition, Development, and Construction) projects which are substantially completed should be risk-weighted using the risk weights for income producing commercial real estate in Table 13 above, if the LTV of the exposure is no more than 80%. A project is considered substantially completed if the certificate of occupancy has been issued to the borrower.
+
+
 
 ---
 [lcr]:  http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061
