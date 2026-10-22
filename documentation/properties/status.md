@@ -220,7 +220,7 @@ Indicates whether a development or construction asset has reached 'official' bui
 Setting collateral as 'substantially complete' transitions exposures out of the higher-risk ADC (Acquisition, Development, and Construction) categories, into standard 'Completed' Real Estate categories, where capital requirements and risk weights are generally reduced. 
 This status requires formal legal certification. An asset cannot be flagged as 'complete' solely based on construction progress; it requires an issued government/municipal certificate of occupancy, and adherence to LTV requirements, which vary by regulator.
 
-> OSFI BCAR (4.1.13, Para 122): ADC (Acquisition, Development, and Construction) projects which are substantially completed should be risk-weighted using the risk weights for income producing commercial real estate in Table 13 above, if the LTV of the exposure is no more than 80%. A project is considered substantially completed if the certificate of occupancy has been issued to the borrower.
+> OSFI BCAR (4.1.13, Para 122): ADC projects which are substantially completed should be risk-weighted using the risk weights for income producing commercial real estate in Table 13 above, if the LTV of the exposure is no more than 80%. A project is considered substantially completed if the certificate of occupancy has been issued to the borrower.
 
 
 
