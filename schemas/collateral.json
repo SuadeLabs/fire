@@ -39,10 +39,11 @@
       "type": "integer",
       "monetary": true
     },
-    "construction_status": {
+    "status": {
       "description": "The current descriptive status of a construction / ADC project.",
       "type": "string",
       "enum": [
+        "land_acquisition",
         "substantially_complete"
       ]
     },
@@ -107,7 +108,7 @@
       "description": "The zip code in which the property is located. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
       "type": "string"
     },
-    "pre_sales_pct": {
+    "pre_sales": {
       "description": "Percentage denoting the amount of sold units or leased space that has been legally backed by buyers/tenants prior to ADC build completion. Must be populated as the percentage by Monetary Value",
       "type": "number"
     },
