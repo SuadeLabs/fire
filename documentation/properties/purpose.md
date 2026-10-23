@@ -1037,6 +1037,7 @@ refer to interest cashflows only, and do not include any principal flows
 ├── commercial_property
 ├── commodities_finance
 ├── construction
+│   ├── purpose_built_rental
 │   └── renovation
 ├── corporate_finance
 │   ├── business_recap
@@ -1344,6 +1345,11 @@ Commercial real estate.
 ### renovation
 
 Loans given for the purpose of renovations. This may also be known as a home improvement loan. 
+
+### purpose_built_rental
+
+Loans given for purpose of developing (ADC) purpose built rental property. This represents a single title/ownership in which all units/plots must be traded/let as a single unit. 
+
 ### debt_consolidation
 
 A loan that merges other debts into one loan.
