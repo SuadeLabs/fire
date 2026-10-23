@@ -819,6 +819,7 @@
         "portfolio_management",
         "reference",
         "share_capital",
+        "share_premium",
         "single_collateral_pool",
         "trade_finance",
         "variation_margin"
