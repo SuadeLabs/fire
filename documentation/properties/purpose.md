@@ -1037,8 +1037,8 @@ refer to interest cashflows only, and do not include any principal flows
 ├── commercial_property
 ├── commodities_finance
 ├── construction
+│   ├── purpose_built_rental
 │   └── renovation
-│   └── purpose_built_rental
 ├── corporate_finance
 │   ├── business_recap
 │   ├── esop
