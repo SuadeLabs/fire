@@ -39,14 +39,6 @@
       "type": "integer",
       "monetary": true
     },
-    "status": {
-      "description": "The current descriptive status of a construction / ADC project.",
-      "type": "string",
-      "enum": [
-        "land_acquisition",
-        "substantially_complete"
-      ]
-    },
     "country_code": {
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/common.json#/country_code",
       "description": "The country of collateral. Two-letter country code as defined according to ISO 3166-1."
@@ -131,6 +123,14 @@
       "description": "The start date for recognition of the collateral",
       "type": "string",
       "format": "date-time"
+    },
+    "status": {
+      "description": "The current descriptive status of a construction / ADC project.",
+      "type": "string",
+      "enum": [
+        "land_acquisition",
+        "substantially_complete"
+      ]
     },
     "street_address": {
       "description": "The street address associated with the property. Must include street direction prefixes, direction suffixes, and unit number for condos and co-ops. Refer to https://www.federalreserve.gov/apps/reportingforms/Report/Index/FR_Y-14M for more information.",
