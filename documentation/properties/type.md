@@ -2294,7 +2294,7 @@ Loans in the segment that were charged-off due to bankruptcy during the reportin
 [fed-capital-assesments]: https://www.federalreserve.gov/reportforms/forms/FR_Y-14Q20150331_i.pdf#page=22
 
 [fha-projects]: https://www.hud.gov/program_offices/housing/mfh/progdesc
-[hud235]: https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title12-section1715z&num=0&edition=prelim
+[hud235]: https://www.federalregister.gov/documents/2015/04/03/2015-07597/federal-housing-administration-fha-removal-of-section-235-home-ownership-program-regulations
 [central-bank-facilities]: https://www.bankofengland.co.uk/sterling-monetary-framework/report-2019-21
 [performance-bonds]: https://www.acquisition.gov/far/28.001#:~:text=Performance%20bond
 [documentary-credit]: https://www.federalreserve.gov/econres/notes/feds-notes/trade-finance-activities-of-u-s-banks-what-the-data-can-tell-us-20260508.html
