@@ -4,8 +4,11 @@ import re
 from string import digits
 
 import pytest
-from jsonschema import Draft7Validator, RefResolver
+from jsonschema import Draft7Validator
 from jsonschema.exceptions import ValidationError
+from referencing import Registry
+from referencing.jsonschema import DRAFT7
+
 from . import (
     ALLOWED_PROPERTY_CHARS,
     DOC_NAMES,
@@ -168,13 +171,11 @@ class TestExamples:
     with open(os.path.join(SCHEMAS_DIR, "example.json")) as ff:
         example_schema = json.load(ff)
 
-    local_store = {SCHEMA_URL + name: fire_load(name) for name in SCHEMA_FILES}
-    validator = Draft7Validator(
-        example_schema,
-        resolver=RefResolver(
-            SCHEMA_URL + "example.json", example_schema, store=local_store
-        ),
+    registry = Registry().with_resources(
+        (SCHEMA_URL + name, DRAFT7.create_resource(fire_load(name)))
+        for name in SCHEMA_FILES
     )
+    validator = Draft7Validator(example_schema, registry=registry)
 
     @pytest.mark.parametrize("example_name", EXAMPLE_FILES)
     def test_validating_all_examples(self, example_name):
