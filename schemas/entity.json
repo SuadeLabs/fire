@@ -2764,6 +2764,8 @@
         "credit_institution",
         "credit_union",
         "deposit_broker",
+        "dsib",
+        "dsifi",
         "export_credit_agency",
         "federal_credit_union",
         "financial",
