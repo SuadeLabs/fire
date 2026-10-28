@@ -20,4 +20,8 @@ The identifier cannot be amended by the reporting entity once assigned. It is re
 
 Example: `ABCDEF1234567890XY12N202401`.
 
-This attribute differs from [securitisation_id](./securitisation_id.md), which is the institution's internal code linking the transaction to its tranches.
+This attribute differs from [**securitisation_id**][sid], which is the institution's internal code linking the transaction to its tranches.
+
+---
+
+[sid]: https://github.com/suadelabs/fire/blob/master/documentation/properties/securitisation_id.md
