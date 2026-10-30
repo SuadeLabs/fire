@@ -9,9 +9,9 @@ schemas:    [account, security]
 ```bash
 ├── tier_1
 ├── ce_tier_1
-├── ce_tier_1_ded_10
-├── ce_tier_1_ded_17_65
-├── ce_tier_1_ineligible
+│   └── ce_tier_1_ded_10
+│   └── ce_tier_1_ded_17_65
+│   └── ce_tier_1_ineligible
 ├── add_tier_1
 │   └── add_tier_1_indirect
 ├── cet1_grandfathered
