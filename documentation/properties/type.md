@@ -29,6 +29,8 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   └── social_housing_entity
 ├── financial
 │   ├── credit_institution
+│   │   ├── dsib
+│   │   ├── dsifi
 │   │   ├── national_bank
 │   │   ├── non_member_bank
 │   │   ├── state_member_bank
@@ -316,9 +318,21 @@ Credit institution is defined in Article 4 of [CRR][crr]:
 
 > (1) 'credit institution' means an undertaking the business of which is to take deposits or other repayable funds from the public and to grant credits for its own account
 
+### dsib
+
+D-SIB: Domestic Systemically Important Banks whose distress or failure have the potential to cause considerable disruption to the domestic financial system and the wider economy. 
+For the Canadian jurisdiction, D-SIBs are federally regulated banks designated by OSFI, and face higher capital requirements to mitigate the risks posed to the domestic stability. 
+Reference: https://www.osfi-bsif.gc.ca/en/supervision/financial-institutions/banks/systemically-important-banks
+
+### dsifi
+
+D-SIFI: Domestic Systemically Important Financial Institution are provincially regulated deposit-taking institution, that a Canadian provincial regulator has designated as critical to the stability of the financial system. 
+Unlike D-SIBs, there is no centralised list for D-SIFIs. Designations are communicated through provincial public notices or supervisory frameworks.
+
 ### national_bank
 
 A commercial bank whose charter is approved by the Office of the Comptroller of the Currency (OCC) rather than by a state banking agency. National banks are required to be members of the Federal Reserve System and belong to the Federal Deposit Insurance Corporation. Refer to [FFIEC Institution Types](https://www.ffiec.gov/npw/Help/InstitutionTypes).
+
 ### non_member_bank
 
 Commercial banks that are state-chartered and not members of the Federal Reserve System. Include all insured commercial banks and industrial banks. Refer to [FFIEC Institution Types](https://www.ffiec.gov/npw/Help/InstitutionTypes).
