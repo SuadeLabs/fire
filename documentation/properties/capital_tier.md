@@ -9,7 +9,9 @@ schemas:    [account, security]
 ```bash
 ├── tier_1
 ├── ce_tier_1
-├── ce_tier_1_ineligible
+│   └── ce_tier_1_ded_10
+│   └── ce_tier_1_ded_17_65
+│   └── ce_tier_1_ineligible
 ├── add_tier_1
 │   └── add_tier_1_indirect
 ├── cet1_grandfathered
@@ -55,6 +57,18 @@ Securities classed as common equity tier 1 (CET1) capital instruments.
 As set out in [CRR Article 26][crr-cet1-items], these are  capital instruments,
 provided that the conditions laid down in [CRR Article 28][crr-cet1-instruments] or, where applicable,
 [Article 29][crr-mutual-cet1] are met.
+
+### ce_tier_1
+Securities classed as common equity tier 1 (CET1) capital instruments.
+As set out in [CRR Article 26][crr-cet1-items], these are  capital instruments,
+provided that the conditions laid down in [CRR Article 28][crr-cet1-instruments] or, where applicable,
+[Article 29][crr-mutual-cet1] are met.
+
+### ce_tier_1_ded_10
+The balance of significant investments exceeding 10% of unadjusted Common Equity Tier 1 (CET1) capital, up to 17.65% of adjusted CET1 capital.
+
+### ce_tier_1_ded_17_65
+The balance of significant investments exceeding 17.65% of adjusted Common Equity Tier 1 (CET1) capital.
 
 ### ce_tier_1_ineligible
 Capital instruments which do not meet the condition in points (b), (l) and (m) of [CRR Article 28(1)][crr-cet1-instruments]. Conditions in those points reflect different situations of the capital which are reversible, and thus the amount reported here can be eligible in subsequent periods.
