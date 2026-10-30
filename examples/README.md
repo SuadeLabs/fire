@@ -469,7 +469,7 @@ A spot FX transaction selling one currency and buying another, shown as its two 
 {{#include fx_spot.json:5:}}
 ```
 #### FX swap
-Short 1-year AUDUSD fx swap. The notional amounts are used to calculate the spot rate (occuring on the start date).
+Short 1-year AUDUSD fx swap. The notional amounts are used to calculate the spot rate (occurring on the start date).
 ```json
 {{#include fx_swap.json:5:}}
 ```
