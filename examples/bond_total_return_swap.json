@@ -1,0 +1,107 @@
+{
+  "title": "bond_total_return_swap",
+  "comment": "bond_total_return_swap",
+  "data": {
+    "derivative": [
+      {
+        "id": "eur_bond_trs:bond_leg",
+        "date": "2027-01-01T00:00:00",
+        "deal_id": "eur_bond_trs",
+        "asset_class": "cr_single",
+        "type": "vanilla_swap",
+        "leg_type": "indexed",
+        "position": "short",
+        "underlying_security_id": "BondABC",
+        "currency_code": "EUR",
+        "notional_amount": 200000000,
+        "mtm_dirty": 1937708,
+        "trade_date": "2024-01-30T00:00:00",
+        "start_date": "2024-01-30T00:00:00",
+        "end_date": "2027-01-30T00:00:00",
+        "last_payment_date": "2032-01-30T00:00:00",
+        "customer_id": "BankXYZ",
+        "mna_id": "BankXYZ_ISDA",
+        "csa_id": "BankXYZ_CSA",
+        "regulatory_book": "trading_book",
+        "accounting_treatment": "held_for_trading"
+      },
+      {
+        "id": "eur_bond_trs:floating_leg",
+        "date": "2027-01-01T00:00:00",
+        "deal_id": "eur_bond_trs",
+        "asset_class": "cr_single",
+        "type": "vanilla_swap",
+        "leg_type": "floating",
+        "position": "long",
+        "underlying_index": "EURIBOR",
+        "underlying_index_tenor": "3m",
+        "spread": 99,
+        "rate": 4.69,
+        "currency_code": "EUR",
+        "notional_amount": 200000000,
+        "mtm_dirty": 0,
+        "trade_date": "2024-01-30T00:00:00",
+        "start_date": "2024-01-30T00:00:00",
+        "end_date": "2027-01-30T00:00:00",
+        "prev_payment_date": "2026-10-30T00:00:00",
+        "next_reset_date": "2027-01-30T00:00:00",
+        "customer_id": "BankXYZ",
+        "mna_id": "BankXYZ_ISDA",
+        "csa_id": "BankXYZ_CSA",
+        "regulatory_book": "trading_book",
+        "accounting_treatment": "held_for_trading"
+      }
+    ],
+    "security": [
+      {
+        "id": "BondABC",
+        "date": "2027-01-01T00:00:00",
+        "type": "bond",
+        "purpose": "reference",
+        "issuer_id": "IssuerABC",
+        "isin_code": "XS0100TEST01",
+        "currency_code": "EUR",
+        "issue_date": "2022-01-29T00:00:00",
+        "start_date": "2022-01-29T00:00:00",
+        "end_date": "2032-01-30T00:00:00",
+        "rate": 4.25,
+        "cqs_standardised": 2
+      }
+    ],
+    "issuer": [
+      {
+        "id": "IssuerABC",
+        "date": "2027-01-01T00:00:00",
+        "type": "corporate",
+        "country_code": "GB",
+        "cqs_standardised": 2
+      }
+    ],
+    "customer": [
+      {
+        "id": "BankXYZ",
+        "date": "2027-01-01T00:00:00",
+        "type": "credit_institution",
+        "country_code": "ES",
+        "cqs_standardised": 2
+      }
+    ],
+    "agreement": [
+      {
+        "id": "BankXYZ_ISDA",
+        "date": "2027-01-01T00:00:00",
+        "type": "isda",
+        "base_currency_code": "EUR"
+      },
+      {
+        "id": "BankXYZ_CSA",
+        "date": "2027-01-01T00:00:00",
+        "type": "isda",
+        "credit_support_type": "csa_isda_1995",
+        "margin_frequency": "daily",
+        "threshold": 0,
+        "base_currency_code": "EUR"
+      }
+    ]
+  }
+}

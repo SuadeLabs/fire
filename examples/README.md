@@ -56,6 +56,7 @@ The following are a few examples of common financial trades.
   - [Derivative examples](#derivative-examples)
     - [Bermudan swaption](#bermudan-swaption)
     - [Bond future](#bond-future)
+    - [Bond total return swap](#bond-total-return-swap)
     - [Cross-currency swap](#cross-currency-swap)
     - [Commodity option](#commodity-option)
     - [Credit default swap  - Index](#credit-default-swap----index)
@@ -408,6 +409,11 @@ Short USD 1y into 10y receiver swaption exercisable annually with physical settl
 June IMM Bund future (underlying index is the expected CTD on the reporting date)
 ```json
 {{#include bond_future.json:5:}}
+```
+#### Bond total return swap
+Pay the total return on a EUR corporate bond (BondABC, 4.25% 2032) and receive 3m EURIBOR + 99bp, under a margined ISDA/CSA. The two legs share a `deal_id`: the indexed bond leg references the bond through `underlying_security_id` and carries the bond maturity in `last_payment_date`; the floating funding leg carries the `next_reset_date`.
+```json
+{{#include bond_total_return_swap.json:5:}}
 ```
 Futures on 20-year treasury bond that matures in 2 years
 ```json
