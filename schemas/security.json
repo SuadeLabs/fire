@@ -994,6 +994,12 @@
         "traditional"
       ]
     },
+    "securitisation_unique_id": {
+      "description": "Attribute used for a securitisation transaction. Unique identifier of the securitisation as defined in Article 11 of Commission Delegated Regulation (EU) 2020/1224: LEI of the reporting entity, 'A' (ABCP) or 'N' (non-ABCP), the four-digit year of first issuance and a two-digit sequence number.",
+      "type": "string",
+      "minLength": 27,
+      "maxLength": 27
+    },
     "sedol": {
       "description": "The stock exchange daily official list (SEDOL) is a seven-character identification code assigned to securities that trade on the London Stock Exchange and various smaller exchanges in the United Kingdom. SEDOL codes are used for unit trusts, investment trusts, insurance-linked securities, and domestic and foreign stocks.",
       "type" :"string"
