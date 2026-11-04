@@ -47,7 +47,7 @@
       "type": "string"
     },
     "reporting_id": {
-      "description": "The internal ID for the legal entity under which the account is being reported.",
+      "description": "The internal ID for the legal entity under which the adjustment is being reported.",
       "type": "string"
     },
     "row": {
