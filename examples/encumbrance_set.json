@@ -162,7 +162,7 @@
 				"base_currency_code": "EUR",
 				"country_code": "GB",
 				"credit_support_type": "scsa_isda_2013",
-				"marging_frequency": "daily",
+				"margin_frequency": "daily",
 				"minimum_transfer_amount": 50,
 				"threshold": 10
 			}
