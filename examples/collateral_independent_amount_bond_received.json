@@ -40,7 +40,8 @@
         "id": "corporate",
         "type": "corporate",
         "currency_code": "SGD",
-        "country_code": "SG"
+        "country_code": "SG",
+        "incurred_cva": 10
       }
     ],
     "agreement": [
@@ -50,7 +51,6 @@
         "type": "isda",
         "base_currency_code": "SGD",
         "netting_restriction": "restrictive_covenant",
-        "incurred_cva": 10,
         "country_code": "SG"
       }
     ]

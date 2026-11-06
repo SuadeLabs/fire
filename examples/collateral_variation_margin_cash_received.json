@@ -25,7 +25,8 @@
         "id": "qccp",
         "type": "qccp",
         "currency_code": "GBP",
-        "country_code": "GB"
+        "country_code": "GB",
+        "incurred_cva": 0
       }
     ],
     "agreement": [
@@ -34,7 +35,6 @@
         "id": "ccp_master_agreement",
         "type": "isda",
         "base_currency_code": "GBP",
-        "incurred_cva": 0,
         "country_code": "GB"
       },
       {
