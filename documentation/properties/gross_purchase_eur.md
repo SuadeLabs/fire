@@ -8,5 +8,5 @@ schemas:    [security]
 
 ---
 
-The market value of purcahses at the time of purchase in EUR
+The market value of purchases at the time of purchase in EUR
 For additional details refer to: https://www.centralbank.ie/statistics/statistical-reporting-requirements/credit-institutions/survey-of-credit-institutions-return-crs2
