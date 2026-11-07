@@ -51,6 +51,13 @@
         "currency_code": "GBP",
         "country_code": "GB",
         "incurred_cva": 0
+      },
+      {
+        "date": "2020-03-31T00:00:00",
+        "id": "counterparty_1",
+        "type": "credit_institution",
+        "currency_code": "GBP",
+        "country_code": "GB"
       }
     ],
     "agreement": [

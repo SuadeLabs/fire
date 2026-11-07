@@ -13,6 +13,14 @@
         "type": "financial_guarantee",
         "customer_id": "corp_123_id"
       }
+    ],
+    "customer": [
+      {
+        "id": "corp_123_id",
+        "date": "2019-01-01T00:00:00",
+        "type": "corporate",
+        "country_code": "GB"
+      }
     ]
   }
 }

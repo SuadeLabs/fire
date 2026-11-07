@@ -26,7 +26,7 @@
 		"issuer": [
 			{
 				"date": "2022-04-20T00:00:00+00:00",
-				"id": "subordianted_debt_issuer",
+				"id": "subordinated_debt_issuer",
 				"country_code": "GB",
 				"type": "credit_institution"
 			}
