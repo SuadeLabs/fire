@@ -13,7 +13,7 @@
         "currency_code": "GBP",
         "customer_id": "central_bank",
         "hqla_class": "i",
-        "issuer_id": "ISS10",
+        "issuer_id": "willow",
         "movement": "asset",
         "mtm_dirty": 48558341,
         "next_payment_date": "2025-10-25T00:00:00+00:00",

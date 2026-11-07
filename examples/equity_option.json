@@ -58,6 +58,14 @@
         "base_currency_code": "EUR",
         "country_code": "GB"
       }
+    ],
+    "security": [
+      {
+        "id": "Corp_XYZ_stock",
+        "date": "2026-01-26T00:00:00+00:00",
+        "type": "equity",
+        "currency_code": "USD"
+      }
     ]
   }
 }
