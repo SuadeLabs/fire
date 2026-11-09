@@ -46,7 +46,7 @@
       {
         "id": "olive",
         "date": "2026-01-26T00:00:00+00:00",
-        "customer_id": "quartz1",
+        "customer_id": "CCP_01",
         "type": "isda",
         "base_currency_code": "EUR",
         "country_code": "GB",
@@ -59,6 +59,15 @@
         "type": "isda",
         "base_currency_code": "EUR",
         "country_code": "GB"
+      }
+    ],
+    "security": [
+      {
+        "id": "BTP",
+        "date": "2026-01-26T00:00:00+00:00",
+        "type": "bond",
+        "currency_code": "EUR",
+        "country_code": "IT"
       }
     ]
   }

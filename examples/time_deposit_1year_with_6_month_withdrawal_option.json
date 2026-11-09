@@ -19,6 +19,13 @@
         "asset_liability": "liability",
         "customer_id": "C123456"
       }
+    ],
+    "customer": [
+      {
+        "id": "C123456",
+        "date": "2017-06-30T14:03:12Z",
+        "country_code": "GB"
+      }
     ]
   }
 }
