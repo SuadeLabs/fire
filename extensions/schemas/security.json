@@ -69,14 +69,7 @@
         "US"
       ]
     },
-    "price": {
-      "description": "The price of a security. In general, this is the value that, when multiplied by the current face value or nominal amount of the security, results in the amount that would be received (excluding accrued interest) if the security were sold at market value. A security whose market value is equal to its outstanding face value has a price of 100. For equity securities, this is the price per share.",
-      "type": "number",
-      "jurisdictions": [
-        "US"
-      ]
-    },
-    "reversion_base_rate": {
+        "reversion_base_rate": {
       "description": "For instruments that convert from paying a fixed rate to paying a coupon/dividend rate that is linked to the rate of a particular index, report the index to which it is linked.",
       "$ref": "https://raw.githubusercontent.com/SuadeLabs/fire/master/schemas/security.json#/properties/base_rate",
       "type": "string",
