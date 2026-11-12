@@ -4,7 +4,7 @@
   "data": {
     "derivative": [
       {
-        "date": "2019-01-01T00:00:00",
+        "date": "2019-01-01T00:00:00Z",
         "id": "usd_payer_swaption",
         "asset_class": "ir",
         "type": "swaption",
@@ -15,10 +15,10 @@
         "strike": 0.02,
         "underlying_index": "USD_LIBOR",
         "underlying_index_tenor": "6m",
-        "start_date": "2019-01-01T00:00:00",
-        "end_date": "2020-01-01T00:00:00",
-        "last_payment_date": "2030-01-01T00:00:00",
-        "last_exercise_date": "2020-01-01T00:00:00",
+        "start_date": "2019-01-01T00:00:00Z",
+        "end_date": "2020-01-01T00:00:00Z",
+        "last_payment_date": "2030-01-01T00:00:00Z",
+        "last_exercise_date": "2020-01-01T00:00:00Z",
         "underlying_price": 0.02,
         "settlement_type": "physical",
         "mtm_dirty": -5

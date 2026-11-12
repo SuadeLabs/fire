@@ -5,7 +5,7 @@
     "security": [
       {
         "id": "repo_cash_leg",
-        "date": "2021-06-15T00:00:00",
+        "date": "2021-06-15T00:00:00Z",
         "currency_code": "GBP",
         "end_date": "2021-07-01T00:00:00Z",
         "balance": 15000,
@@ -21,7 +21,7 @@
       },
       {
         "id": "repo_asset_leg",
-        "date": "2021-06-15T00:00:00",
+        "date": "2021-06-15T00:00:00Z",
         "currency_code": "GBP",
         "end_date": "2021-07-01T00:00:00Z",
 	"cqs_standardised": 1,
@@ -40,7 +40,7 @@
     "issuer": [
       {
         "id": "uk_central_government_id",
-        "date": "2021-06-15T00:00:00",
+        "date": "2021-06-15T00:00:00Z",
         "type": "central_govt",
         "country_code": "GB"
       }

@@ -5,7 +5,7 @@
     "loan": [
       {
         "id": "loan_with_2_customers",
-        "date": "2021-09-30",
+        "date": "2021-09-30T00:00:00Z",
         "balance": 10000,
         "customers": [
           {
