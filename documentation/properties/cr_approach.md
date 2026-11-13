@@ -8,9 +8,44 @@ Specifies the approved rwa calculation approach that is applied to the exposure 
 by the regulator.
 
 ---
-### std
+
+```bash
+├── std
+│   ├──std_class_cant_model
+│   ├──std_class_immaterial
+│   ├──std_class_not_low_capr
+│   ├──std_connected_parties
+│   ├──std_exp_cant_model
+│   ├──std_exp_immaterial
+│   ├──std_rollout_plan
+```
+
+
+### std 
 Standardized Approach
 See [Basel CRE20-22](https://www.bis.org/basel_framework/chapter/CRE/20.htm)
+
+### std_connected_parties
+Exposures subject to the Standardised Approach under Article 150(1)(e) of the Credit Risk: Internal Ratings Based Approach (CRR) Part.
+
+### std_class_not_low_capr
+Exposures subject to the Standardised Approach under Article 150(1)(k)(i) of the Credit Risk: Internal Ratings Based Approach (CRR) Part, where the Standardised Approach does not result in significantly lower capital requirements.
+
+### std_class_cant_model
+Exposures subject to the Standardised Approach under Article 150(1)(k)(ii) of the Credit Risk: Internal Ratings Based Approach (CRR) Part, where the institution cannot reasonably model the exposures.
+
+### std_class_immaterial
+Exposures subject to the Standardised Approach under Article 150(1)(k)(iii) of the Credit Risk: Internal Ratings Based Approach (CRR) Part, where the exposures in each roll-out class are immaterial.
+
+### std_exp_cant_model
+Exposures subject to the Standardised Approach under Article 150(1)(l)(i) of the Credit Risk: Internal Ratings Based Approach (CRR) Part, where the institution cannot reasonably model the exposures.
+
+### std_exp_immaterial
+Exposures subject to the Standardised Approach under Article 150(1)(l)(ii) of the Credit Risk: Internal Ratings Based Approach (CRR) Part, where the exposures are immaterial in aggregate.
+
+### std_rollout_plan
+Exposures subject to sequential implementation of the IRB Approach under Article 148(1) of the Credit Risk: Internal Ratings Based Approach (CRR) Part.
+
 
 ### firb
 Foundation Internal Model Approach

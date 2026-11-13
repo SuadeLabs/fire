@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"provision_amount"
-schemas:	[loan]
+schemas:	[loan, account, security]
 ---
 
 # provision_amount

@@ -1,0 +1,94 @@
+{
+  "title": "speculative_property_mortgage",
+  "comment": "A mortgage used when a borrower, often a property developer, acquires land or builds without pre-secured buyers or tenants, relying on anticipated demand to sell or lease at a profit. Includes the actual loan and its committed record.",
+  "data": {
+    "loan": [
+      {
+        "id": "speculative_property_mortgage_actual",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest_balance": 5019072,
+        "asset_liability": "asset",
+        "balance": 1400267569,
+        "count": 4,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "zxcS211",
+        "customers": [
+          {
+            "id": "zxcS211",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2025-12-31T00:00:00+00:00",
+        "limit_amount": 1395248497,
+        "movement": "other",
+        "next_payment_date": "2025-12-31T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "purpose": "speculative_property",
+        "rate": 10.1,
+        "rate_type": "variable",
+        "repayment_frequency": "monthly",
+        "repayment_type": "combined",
+        "risk_country_code": "GB",
+        "secured": true,
+        "start_date": "2025-03-14T00:00:00+00:00",
+        "status": "actual",
+        "trade_date": "2025-03-14T00:00:00+00:00",
+        "type": "mortgage",
+        "regulatory_book": "banking_book"
+      },
+      {
+        "id": "speculative_property_mortgage_committed",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest_balance": 5019072,
+        "asset_liability": "asset",
+        "balance": 1400267569,
+        "count": 4,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "zxcS211",
+        "customers": [
+          {
+            "id": "zxcS211",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2025-12-31T00:00:00+00:00",
+        "limit_amount": 1395248497,
+        "movement": "other",
+        "next_payment_date": "2025-12-31T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "purpose": "speculative_property",
+        "rate": 10.1,
+        "rate_type": "variable",
+        "repayment_frequency": "monthly",
+        "repayment_type": "combined",
+        "risk_country_code": "GB",
+        "secured": true,
+        "start_date": "2025-03-14T00:00:00+00:00",
+        "status": "committed",
+        "trade_date": "2025-03-14T00:00:00+00:00",
+        "type": "mortgage",
+        "regulatory_book": "banking_book"
+      }
+    ],
+    "customer": [
+      {
+        "id": "zxcS211",
+        "date": "2025-08-26T00:00:00+00:00",
+        "boe_sector_code": "Non FinCorp; Non fincorp other than public corp",
+        "country_code": "GB",
+        "credit_impaired": false,
+        "intra_group": false,
+        "product_count": 2,
+        "sic_code": 41100,
+        "source": "Equation",
+        "start_date": "2021-08-31T00:00:00+00:00",
+        "status": "established",
+        "type": "sme"
+      }
+    ]
+  }
+}

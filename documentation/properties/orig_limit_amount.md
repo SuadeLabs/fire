@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "orig_limit_amount"
-schemas:    [loan]
+schemas:    [account, loan]
 ---
 
 # orig_limit_amount

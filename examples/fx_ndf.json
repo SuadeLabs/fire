@@ -1,0 +1,100 @@
+{
+  "title": "fx_ndf",
+  "comment": "A non-deliverable FX forward, settled on the difference between the contracted and prevailing exchange rates, shown as its two legs.",
+  "data": {
+    "derivative": [
+      {
+        "id": "forwards_ndf_short",
+        "date": "2026-01-26T00:00:00+00:00",
+        "mna_id": "jungle1",
+        "csa_id": "maple",
+        "deal_id": "jasper",
+        "asset_class": "fx",
+        "type": "ndf",
+        "position": "short",
+        "leg_type": "fixed",
+        "currency_code": "USD",
+        "notional_amount": 13000000,
+        "mtm_dirty": -12676212,
+        "trade_date": "2025-09-24T00:00:00+00:00",
+        "start_date": "2025-09-24T00:00:00+00:00",
+        "end_date": "2026-09-29T00:00:00+00:00",
+        "regulatory_book": "trading_book",
+        "delta": -1,
+        "fvh_level": 2,
+        "purpose": "back_to_back",
+        "on_balance_sheet": true,
+        "reporting_id": "12453",
+        "reporting_entity_name": "987463",
+        "asset_liability": "asset",
+        "accounting_treatment": "held_for_trading",
+        "customer_id": "CU00467"
+      },
+      {
+        "id": "forwards_ndf_long",
+        "date": "2026-01-26T00:00:00+00:00",
+        "mna_id": "jungle1",
+        "csa_id": "maple",
+        "deal_id": "jasper",
+        "asset_class": "fx",
+        "type": "ndf",
+        "position": "long",
+        "leg_type": "fixed",
+        "currency_code": "BRL",
+        "notional_amount": 79739400,
+        "mtm_dirty": 73417636,
+        "trade_date": "2025-09-24T00:00:00+00:00",
+        "start_date": "2025-09-24T00:00:00+00:00",
+        "end_date": "2026-09-29T00:00:00+00:00",
+        "regulatory_book": "trading_book",
+        "delta": 1,
+        "fvh_level": 2,
+        "purpose": "back_to_back",
+        "on_balance_sheet": true,
+        "reporting_id": "12453",
+        "reporting_entity_name": "987463",
+        "asset_liability": "asset",
+        "accounting_treatment": "held_for_trading",
+        "customer_id": "CU00467"
+      }
+    ],
+    "customer": [
+      {
+        "id": "CU00467",
+        "date": "2026-01-26T00:00:00+00:00",
+        "type": "credit_institution",
+        "country_code": "SE",
+        "name": "Bank 5",
+        "legal_entity_name": "Legal Name 3",
+        "fitch_lt": "aa_minus",
+        "moodys_lt": "aa3",
+        "snp_lt": "a_plus",
+        "intra_group": false,
+        "parent_id": "meadow",
+        "sic_code": 64999,
+        "lei_code": "AB000000000000L00061"
+      }
+    ],
+    "agreement": [
+      {
+        "id": "maple",
+        "date": "2026-01-26T00:00:00+00:00",
+        "base_currency_code": "USD",
+        "country_code": "SE",
+        "margin_frequency": "daily",
+        "minimum_transfer_amount": 250000,
+        "threshold": 0,
+        "number_of_disputes": 0
+      },
+      {
+        "id": "jungle1",
+        "date": "2026-01-26T00:00:00+00:00",
+        "base_currency_code": "USD",
+        "country_code": "SE",
+        "margin_frequency": "daily_settled",
+        "minimum_transfer_amount": 0,
+        "threshold": 0
+      }
+    ]
+  }
+}

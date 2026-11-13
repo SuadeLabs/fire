@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "economic_loss"
-schemas:    [loan, account]
+schemas:    [loan, account, derivative, security]
 ---
 
 # economic_loss

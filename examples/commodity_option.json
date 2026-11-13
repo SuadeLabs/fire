@@ -1,26 +1,53 @@
 {
   "title": "commodity_option",
-  "comment": "Commodity Option",
+  "comment": "An option on the price of an underlying commodity.",
   "data": {
     "derivative": [
       {
-        "date": "2020-03-31T00:00:00",
-        "id": "1",
-        "asset_class": "metals",
+        "id": "commodity_option",
+        "date": "2026-01-26T00:00:00+00:00",
+        "mna_id": "harbor1",
+        "asset_class": "agri",
         "type": "option",
+        "position": "short",
         "leg_type": "put",
-        "position": "long",
         "currency_code": "USD",
-        "underlying_quantity": 100,
-        "strike": 9829,
-        "underlying_index": "copper",
-        "underlying_price": 9829,
-        "trade_date": "2020-02-25T00:00:00",
-        "start_date": "2020-02-27T00:00:00",
-        "end_date": "2021-06-02T00:00:00",
-        "last_exercise_date": "2020-12-05T00:00:00",
-        "settlement_type": "physical",
-        "mtm_dirty": 193
+        "notional_amount": 10000000,
+        "strike": 0.2,
+        "mtm_dirty": -100000,
+        "underlying_index": "Sugar",
+        "trade_date": "2025-10-24T00:00:00+00:00",
+        "start_date": "2025-10-26T00:00:00+00:00",
+        "end_date": "2026-10-27T00:00:00+00:00",
+        "last_exercise_date": "2026-10-25T00:00:00+00:00",
+        "settlement_type": "cash",
+        "regulatory_book": "trading_book",
+        "underlying_price": 0.22,
+        "delta": -1,
+        "customer_id": "CU0941"
+      }
+    ],
+    "customer": [
+      {
+        "id": "CU0941",
+        "date": "2026-01-26T00:00:00+00:00",
+        "type": "credit_institution",
+        "country_code": "GB",
+        "name": "Bank 1",
+        "legal_entity_name": "Bank 1",
+        "currency_code": "GBP",
+        "moodys_lt": "aa2",
+        "snp_lt": "aa"
+      }
+    ],
+    "agreement": [
+      {
+        "id": "harbor1",
+        "date": "2026-01-26T00:00:00+00:00",
+        "customer_id": "CU0941",
+        "type": "isda",
+        "base_currency_code": "EUR",
+        "country_code": "GB"
       }
     ]
   }

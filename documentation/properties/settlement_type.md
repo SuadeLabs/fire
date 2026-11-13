@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "settlement_type"
-schemas:    [derivative]
+schemas:    [derivative, derivative_cash_flow]
 ---
 
 # settlement_type

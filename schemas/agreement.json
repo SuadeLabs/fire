@@ -110,7 +110,8 @@
         "isda_2002",
         "other",
         "other_gmra",
-        "other_isda"
+        "other_isda",
+        "right_to_set_off"
       ]
     },
     "version_id": {

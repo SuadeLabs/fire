@@ -1,0 +1,51 @@
+{
+  "title": "regional_government_bond",
+  "comment": "A debt instrument issued by a regional government.",
+  "data": {
+    "security": [
+      {
+        "id": "regional_government_bond",
+        "date": "2025-10-06T00:00:00+00:00",
+        "accounting_treatment": "held_for_trading",
+        "asset_liability": "asset",
+        "balance": 56000,
+        "currency_code": "EUR",
+        "deal_id": "12317",
+        "end_date": "2030-03-25T00:00:00+00:00",
+        "fitch_lt": "aaa",
+        "fvh_level": 2,
+        "hqla_class": "i",
+        "isin_code": "GB91282CJJ18",
+        "issuer_id": "Iss6",
+        "movement": "asset",
+        "mtm_dirty": 57372,
+        "notional_amount": 56000,
+        "on_balance_sheet": true,
+        "product_name": "bond",
+        "rate": 2.75,
+        "regulatory_book": "trading_book",
+        "rehypothecation": true,
+        "reporting_id": "honey",
+        "reporting_entity_name": "honey",
+        "start_date": "2025-03-24T00:00:00+00:00",
+        "type": "bond",
+        "trade_date": "2025-10-06T00:00:00+00:00"
+      }
+    ],
+    "issuer": [
+      {
+        "id": "Iss6",
+        "date": "2025-10-06T00:00:00+00:00",
+        "country_code": "DE",
+        "fitch_lt": "aaa",
+        "intra_group": false,
+        "legal_entity_name": "Iss6",
+        "lei_code": "AB000000000000L00874",
+        "name": "Iss6",
+        "parent_id": "IS01272",
+        "sic_code": 84110,
+        "type": "regional_govt"
+      }
+    ]
+  }
+}

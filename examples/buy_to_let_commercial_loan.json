@@ -1,0 +1,94 @@
+{
+  "title": "buy_to_let_commercial_loan",
+  "comment": "A commercial real estate loan where the borrower is purchasing the property to rent it out on a commercial basis to an unrelated third party. Includes the actual loan and its committed record.",
+  "data": {
+    "loan": [
+      {
+        "id": "buy_to_let_commercial_loan_actual",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest_balance": 2454795,
+        "asset_liability": "asset",
+        "balance": 802454795,
+        "count": 27,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "Name 12345",
+        "customers": [
+          {
+            "id": "Name 12345",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2028-06-12T00:00:00+00:00",
+        "limit_amount": 800000000,
+        "movement": "other",
+        "next_payment_date": "2025-09-10T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "purpose": "other",
+        "rate": 7,
+        "rate_type": "variable",
+        "repayment_frequency": "monthly",
+        "repayment_type": "interest_only",
+        "risk_country_code": "GB",
+        "secured": true,
+        "start_date": "2025-06-10T00:00:00+00:00",
+        "status": "actual",
+        "trade_date": "2025-06-10T00:00:00+00:00",
+        "type": "commercial",
+        "regulatory_book": "banking_book"
+      },
+      {
+        "id": "buy_to_let_commercial_loan_committed",
+        "date": "2025-08-26T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest_balance": 2454795,
+        "asset_liability": "asset",
+        "balance": 802454795,
+        "count": 27,
+        "country_code": "GB",
+        "currency_code": "GBP",
+        "customer_id": "Name 12345",
+        "customers": [
+          {
+            "id": "Name 12345",
+            "income_amount": 0
+          }
+        ],
+        "end_date": "2028-06-12T00:00:00+00:00",
+        "limit_amount": 800000000,
+        "movement": "other",
+        "next_payment_date": "2025-09-10T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "purpose": "other",
+        "rate": 7,
+        "rate_type": "variable",
+        "repayment_frequency": "monthly",
+        "repayment_type": "interest_only",
+        "risk_country_code": "GB",
+        "secured": true,
+        "start_date": "2025-06-10T00:00:00+00:00",
+        "status": "committed",
+        "trade_date": "2025-06-10T00:00:00+00:00",
+        "type": "commercial",
+        "regulatory_book": "banking_book"
+      }
+    ],
+    "customer": [
+      {
+        "id": "Name 12345",
+        "date": "2025-08-26T00:00:00+00:00",
+        "boe_sector_code": "Non FinCorp; Non fincorp other than public corp",
+        "country_code": "GB",
+        "credit_impaired": false,
+        "intra_group": false,
+        "product_count": 3,
+        "sic_code": 68320,
+        "source": "Equation",
+        "start_date": "2025-05-28T00:00:00+00:00",
+        "status": "established",
+        "type": "sme"
+      }
+    ]
+  }
+}

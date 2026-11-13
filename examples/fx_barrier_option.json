@@ -1,0 +1,86 @@
+{
+  "title": "fx_barrier_option",
+  "comment": "An FX call option with a barrier level that can activate or terminate the option, shown as a long and a short position.",
+  "data": {
+    "derivative": [
+      {
+        "id": "fx_barrier_option_short_call",
+        "date": "2026-01-26T00:00:00+00:00",
+        "mna_id": "falcon1",
+        "csa_id": "nectar",
+        "deal_id": "island",
+        "asset_class": "fx",
+        "type": "option",
+        "position": "short",
+        "leg_type": "call",
+        "currency_code": "EUR",
+        "notional_amount": 10000000,
+        "strike": 1.25,
+        "mtm_dirty": -100000,
+        "underlying_currency_code": "USD",
+        "trade_date": "2025-10-24T00:00:00+00:00",
+        "start_date": "2025-10-26T00:00:00+00:00",
+        "end_date": "2026-10-27T00:00:00+00:00",
+        "last_exercise_date": "2026-10-25T00:00:00+00:00",
+        "regulatory_book": "trading_book",
+        "underlying_price": 1.25,
+        "customer_id": "lantern1"
+      },
+      {
+        "id": "fx_barrier_option_long_call",
+        "date": "2026-01-26T00:00:00+00:00",
+        "mna_id": "falcon1",
+        "csa_id": "nectar",
+        "deal_id": "island",
+        "asset_class": "fx",
+        "type": "option",
+        "position": "long",
+        "leg_type": "call",
+        "currency_code": "EUR",
+        "notional_amount": 10000000,
+        "strike": 1.3,
+        "mtm_dirty": 50000,
+        "underlying_currency_code": "USD",
+        "trade_date": "2025-10-24T00:00:00+00:00",
+        "start_date": "2025-10-26T00:00:00+00:00",
+        "end_date": "2026-10-27T00:00:00+00:00",
+        "last_exercise_date": "2026-10-25T00:00:00+00:00",
+        "regulatory_book": "trading_book",
+        "underlying_price": 1.25,
+        "customer_id": "lantern1"
+      }
+    ],
+    "customer": [
+      {
+        "id": "lantern1",
+        "date": "2026-01-26T00:00:00+00:00",
+        "type": "corporate",
+        "country_code": "GB",
+        "name": "Corporate entity 1",
+        "legal_entity_name": "Corporate entity 1",
+        "currency_code": "GBP",
+        "moodys_lt": "baa2",
+        "snp_lt": "bbb"
+      }
+    ],
+    "agreement": [
+      {
+        "id": "nectar",
+        "date": "2026-01-26T00:00:00+00:00",
+        "customer_id": "lantern1",
+        "type": "isda",
+        "base_currency_code": "EUR",
+        "country_code": "GB",
+        "margin_frequency": "daily"
+      },
+      {
+        "id": "falcon1",
+        "date": "2026-01-26T00:00:00+00:00",
+        "customer_id": "lantern1",
+        "type": "isda",
+        "base_currency_code": "EUR",
+        "country_code": "GB"
+      }
+    ]
+  }
+}

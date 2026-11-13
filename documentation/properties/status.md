@@ -1,7 +1,7 @@
 ---
 layout:		property
 title:		"status"
-schemas:	[account, customer, loan, security, derivative]
+schemas:	[account, customer, loan, security, derivative, collateral]
 ---
 
 # status
@@ -9,6 +9,8 @@ schemas:	[account, customer, loan, security, derivative]
 ---
 
 The **status** property indicates the current state of the financial product. A product can be active, cancelled, defaulted, committed etc. This is generally used to differentiate potential offers committed by the institution (lending decision taken) but not yet accepted by a customer. The status could also indicate liabilities which have been cancelled but are still being held within the dataset (until maturity or otherwise).
+
+For collateral, the status property captures the asset's physical or operational readiness - such as property-builds which are currently under construction, or those that are completed and occupied. This reflects the risk of the underlying collateral and related loans.
 
 ## Account
 
@@ -46,10 +48,10 @@ The account has been cancelled but funds will be rolled-over in to another accou
 The account has been cancelled and the funds are known to be leaving the financial institution.
 
 ### audited
-Indicates profits that have been verified by persons independent of the firm that are responsible for the auditing of the firm’s accounts, as specified in condition (a) of Article 26 (2) of the CRR.
+Indicates profits that have been verified by persons independent of the firm that are responsible for the auditing of the firm's accounts, as specified in condition (a) of Article 26 (2) of the CRR.
 
 ### unaudited
-Indicates profits that have not been verified by persons independent of the firm that are responsible for the auditing of the firm’s accounts, thereby not meeting condition (a) of Article 26 (2) of the CRR.
+Indicates profits that have not been verified by persons independent of the firm that are responsible for the auditing of the firm's accounts, thereby not meeting condition (a) of Article 26 (2) of the CRR.
 
 ### other
 Any other status
@@ -70,7 +72,9 @@ The reporting institution has determined that the counterparty is part of an est
     ├── cancellable
     └── revolving
 ├── cancelled
-└── defaulted
+├── closed
+├── defaulted
+└── frozen
 ```
 ### actual
 This is a live loan.
@@ -90,8 +94,14 @@ See also [Basel CRE 20.94](https://www.bis.org/basel_framework/chapter/CRE/20.ht
 ### cancelled
 This is a loan that was committed but then later cancelled due to refusal by customer or expiry of offer.
 
+### closed
+A line of credit that is in its draw period where the credit line has been closed, allowing no further draws or increase in principal balance outstanding.
+
 ### defaulted
 This is a loan where the customer has defaulted or is non-performing.
+
+### frozen
+Identifies any line of credit that is in its draw period where the credit line has been temporarily frozen, allowing no further draws or increase in principal balance outstanding, in the reporting month.
 
 ### revolving
 Indicates that the product is a revolving credit. Revolving credit is a type of credit that allows a borrower to repeatedly borrow up to a certain limit without needing to reapply each time. As the borrower repays the balance, the credit becomes available again. See also [Revolving Credit on Investopedia][investopedia-revolving-credit]
@@ -100,7 +110,15 @@ Indicates that the product is a revolving credit. Revolving credit is a type of 
 ```bash
 ├── paid_up
 ├── called_up
+├── pending
+├── conversion
 ├── bankruptcy_remote
+├── failed_to_deliver
+├── other
+├── redeemed
+   ├── refinanced
+   └── replaced
+├── repurchase   
 ├── unsettled
     └── free_deliveries
 └── non_operational
@@ -110,6 +128,32 @@ Indicates that the product is a revolving credit. Revolving credit is a type of 
 This indicates that capital has been [paid up][paidup] by the shareholders to the company that issued the shares.
 When used in combination with the purpose attribute, 'default_fund', equates to prefunded default fund contributions.
 
+### conversion
+The instrument was converted into another form, such as preferred stock converting into common equity.
+
+### replaced
+The instrument was redeemed and a new instrument was issued to replace it (e.g., to maintain capital levels).
+
+### redeemed
+The instrument was redeemed and not replaced, reducing the outstanding capital base.
+
+### refinanced
+The instrument was redeemed and replaced with a different type of funding, such as debt or equity.
+
+### repurchase
+The instrument was repurchased by the issuing entity, such as a company repurchasing its own equity or debt from investors.
+
+### conversion
+The instrument was converted into another form, such as preferred stock converting into common equity.
+
+### failed_to_deliver
+This identifies collateral or cash that has not been delivered or received on the date contractually agreed. For example, a repo
+where stock has been pledged on the contractual settlement date but cash has not been received will be pledge by the counterparty
+as an agreed date in the future.
+
+### other
+Any other redemption-related action not captured by the other redemption categories.
+
 ### called_up
 This indicates that capital has been [called up][calledup] by the company issuing the shares but has not been paid yet by the shareholders.
 When used in combination with the purpose attribute, 'default_fund', equates to unfunded default fund contributions.
@@ -117,8 +161,11 @@ When used in combination with the purpose attribute, 'default_fund', equates to 
 [paidup]: https://www.acra.gov.sg/how-to-guides/setting-up-a-local-company/share-capital
 [calledup]: https://www.legislation.gov.uk/ukpga/2006/46/section/547?view=plain
 
+### pending
+Representing items in the course of collection or transmission to/from financial institutions but not yet received or paid
+
 ### bankruptcy_remote
-This indicates that the reporting institution has determined that the security will not be available to an entity’s creditors
+This indicates that the reporting institution has determined that the security will not be available to an entity's creditors
 in the event of the insolvency of that entity. When used in combination with the purpose attributes indicates that collateral
 posted by the reporting institution to its counterparty as initial or variation margin, is held in a bankruptcy-remote manner,
 and is therefore segregated from the counterparty's assets, as defined in Articles 276(1)(g) and 300(1) CRR.
@@ -149,6 +196,33 @@ This indicates that the transaction is still unsettled after its due delivery da
 ### free_deliveries
 
 From [CRE70.10](https://www.bis.org/basel_framework/chapter/CRE/70.htm#:~:text=Capital%20requirements%20for%20non%2DDvP%20transactions%20(free%20deliveries)), free deliveries are a specific type of unsettled transaction. Indicates that cash is paid without receipt of the corresponding receivable  (securities, foreign currencies, gold, or commodities) or, conversely, deliverables were delivered without receipt of the corresponding cash payment (non-DvP, or free deliveries) expose firms to a risk of loss on the full amount of cash paid or deliverables delivered.
+
+
+## Collateral
+
+```bash
+├── land_acquisition
+└── substantially_complete
+```
+
+### land_acquisition
+
+Distinguishes land-acquisition and site-acquisition loans from development or construction under the ADC (Acquisition, Development, and Construction) collateral class. It enables compliance with regulatory capital needs for exposures to ADC collateral for which the construction is very early on into the development cycle.
+> OSFI BCAR (4.1.13, Para 124): For residential land acquisition exposures, a 100% risk weight is assigned to exposures with an LTV that does not exceed 60%. All other land acquisition exposures are assigned a risk weight of 150%.
+> 
+> Basel Framework (CRE 20.90) Land ADC exposures refers to loans to companies or SPVs financing any of the land acquisition for development and construction purposes, or development and construction of any residential or commercial property.
+
+
+### substantially_complete
+
+Indicates whether a development or construction asset has reached 'official' build completion, permitting legal occupancy. This denotes that it *may* legally be occupied/lived-in (not to be confused with whether or not it *is* currently occupied/lived-in).
+
+Setting collateral as 'substantially complete' transitions exposures out of the higher-risk ADC (Acquisition, Development, and Construction) categories, into standard 'Completed' Real Estate categories, where capital requirements and risk weights are generally reduced. 
+This status requires formal legal certification. An asset cannot be flagged as 'complete' solely based on construction progress; it requires an issued government/municipal certificate of occupancy, and adherence to LTV requirements, which vary by regulator.
+
+> OSFI BCAR (4.1.13, Para 122): ADC projects which are substantially completed should be risk-weighted using the risk weights for income producing commercial real estate in Table 13 above, if the LTV of the exposure is no more than 80%. A project is considered substantially completed if the certificate of occupancy has been issued to the borrower.
+
+
 
 ---
 [lcr]:  http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0061

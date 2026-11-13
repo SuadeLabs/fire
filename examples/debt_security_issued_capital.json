@@ -1,0 +1,52 @@
+{
+  "title": "debt_security_issued_capital",
+  "comment": "A debt security issued by the firm and classified as equity capital.",
+  "data": {
+    "security": [
+      {
+        "id": "debt_security_issued_equity_capital",
+        "date": "2025-10-06T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest": 0,
+        "asset_liability": "equity",
+        "balance": 66500000000,
+        "capital_tier": "add_tier_1",
+        "currency_code": "GBP",
+        "customer_id": "saffron1",
+        "deal_id": "12320",
+        "end_date": "2030-01-17T00:00:00+00:00",
+        "interest_repayment_frequency": "at_maturity",
+        "maturity_date": "2030-01-17T00:00:00+00:00",
+        "movement": "issuance",
+        "mtm_clean": 56036156968,
+        "mtm_dirty": 56036156963,
+        "notional_amount": 66500000000,
+        "on_balance_sheet": true,
+        "product_name": "L: Perpetual Cap Security",
+        "regulatory_book": "banking_book",
+        "rehypothecation": false,
+        "reporting_id": "iris",
+        "reporting_entity_name": "iris",
+        "status": "paid_up",
+        "start_date": "2024-07-18T00:00:00+00:00",
+        "type": "debt",
+        "trade_date": "2024-07-11T00:00:00+00:00"
+      }
+    ],
+    "customer": [
+      {
+        "id": "saffron1",
+        "date": "2025-10-05T00:00:00+00:00",
+        "country_code": "GB",
+        "credit_impaired": false,
+        "intra_group": false,
+        "legal_entity_name": "nutmeg",
+        "moodys_lt": "a1",
+        "name": "nutmeg",
+        "parent_id": "apricot",
+        "type": "credit_institution",
+        "status": "established"
+      }
+    ]
+  }
+}

@@ -136,7 +136,7 @@
 				{"required": ["derivative"]},
 				{"required": ["derivative_cash_flow"]},
 				{"required": ["exchange_rate"]},
-				{"required": ["guarantot"]},
+				{"required": ["guarantor"]},
 				{"required": ["issuer"]},
 				{"required": ["loan"]},
 				{"required": ["loan_transaction"]},

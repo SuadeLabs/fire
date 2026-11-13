@@ -1,7 +1,7 @@
 ---
 layout:     property
 title:      "default_date"
-schemas:    [account, loan]
+schemas:    [account, loan, derivative, security]
 ---
 
 # default_date

@@ -36,6 +36,14 @@
         "issuer_id": "uk_central_government_id",
         "maturity_date": "2030-01-01T00:00:00Z"
       }
+    ],
+    "issuer": [
+      {
+        "id": "uk_central_government_id",
+        "date": "2021-06-15T00:00:00",
+        "type": "central_govt",
+        "country_code": "GB"
+      }
     ]
   }
 }

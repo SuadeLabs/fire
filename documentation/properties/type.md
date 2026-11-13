@@ -19,18 +19,30 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 ├── corporate
 │   ├── charity
 │   │   └── community_charity
-│   └── sme
-│       └── supported_sme
+│   ├── housing_coop
+│   ├── property_spe
+│   ├── sme
+│   │   └── medium_sme
+│   │   └── micro_sme
+│   │   └── small_sme
+│   │   └── supported_sme
+│   └── social_housing_entity
 ├── financial
 │   ├── credit_institution
+│   │   ├── dsib
+│   │   ├── dsifi
+│   │   ├── national_bank
+│   │   ├── non_member_bank
+│   │   ├── state_member_bank
 │   │   ├── merchant_bank
 │   │   ├── building_society
 │   │   ├── state_owned_bank
-│   │   └── promotional_lender
-│   │       ├── promo_fed_reserve
-│   │       └── promo_fed_home_loan
+│   │   ├── promotional_lender
+│   │   │   ├── promo_fed_reserve
+│   │   │   └── promo_fed_home_loan
 │   ├── investment_firm
 │   │   ├── fund
+│   │   │   ├── unincorp_inv_fund
 │   │   ├── private_fund
 │   │   │   ├── hedge_fund
 │   │   │   └── private_equity_fund
@@ -38,6 +50,8 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   │   └── real_estate_fund
 │   ├── pension_fund
 │   ├── credit_union
+│   │   ├── federal_credit_union
+│   │   └── state_credit_union
 │   ├── ciu
 │   ├── sspe
 │   ├── pic
@@ -47,7 +61,9 @@ Customer, issuer, guarantor and entity schemas share a lot of common type attrib
 │   ├── unregulated_financial
 │   └── other_financial
 ├── ccp
-│   └── qccp
+│   ├── ccp_credit_inst
+│   ├── qccp
+│   │   └── qccp_credit_inst
 ├── central_bank
 ├── mdb
 ├── deposit_broker
@@ -87,6 +103,18 @@ As defined in the [FCA Handbook](https://www.handbook.fca.org.uk/handbook/glossa
 
 > (in accordance with section 417(1) of the Act (Definitions)) any partnership, including a partnership constituted under the law of a country or territory outside the United Kingdom, but not including a limited liability partnership.
 
+### housing_coop
+
+As defined in Appendix 2: PRA Rulebook: CRR Firms: (CRR) Article 124E
+
+> An association or a cooperative of natural persons that exists with the sole purpose of granting its members the use of a primary residence in the property securing the loans.
+
+### property_spe
+
+As defined in Appendix 2: PRA Rulebook: CRR Firms: (CRR) Article 124E
+
+> An entity created specifically to finance and/or operate immovable property
+
 ### sme
 
 The definition of an SME is based on a set of criteria, while in theory it is possible for this to be a dynamic field based on other relevant data provided (employee count, turnover etc.), often times the data is unavailable or not current and hence firm may wish to identify SMEs directly.
@@ -102,6 +130,28 @@ In this scenario, an SME type will be assumed to comply with the [EU SME Recomme
 
 An SME with special treatment under the capital adequacy rules, invoking a special multiplier for RWAs
 
+### medium_sme
+
+A Medium Sized Enterprise is any entity engaged in an economic activity, irrespective of its
+legal form (corporation, partnership, sole trader etc.), which employs fewer than 250
+persons and whose annual turnover is greater than €10 million and less than or equal to
+€50 million or whose annual balance sheet is greater than €10 million and less than or
+equal to €43 million.
+
+### micro_sme
+
+A micro SME is one which does not meet the thresholds to be classified as a small SME.
+
+### small_sme
+
+Small enterprises are those engaged in an economic activity, irrespective of their legal form (corporation, partnership, sole trader etc.), which employs fewer than 50 persons and whose annual turnover or annual balance sheet is less than or equal to €10 million. If there are any instances where border-line cases exist using these definitions of small and medium sized enterprises, the employee number threshold is to take precedence.
+
+### social_housing_entity
+
+As defined in Appendix 2: PRA Rulebook: CRR Firms: (CRR) Article 124E
+
+> A public housing company or not-for-profit association regulated in the UK that exists to serve social purposes and to offer tenants long-term housing (a social housing exposure).
+
 ### other
 
 Other means it is known to **not** be one of the other types. If type is unknown it should just be left blank.
@@ -116,11 +166,19 @@ From the [US FDIC Regulatory Capital Rules](https://www.fdic.gov/regulations/law
 
 > Central counterparty (CCP) means a counterparty (for example, a clearing house) that facilitates trades between counterparties in one or more financial markets by either guaranteeing trades or novating contracts.
 
+### ccp_credit_inst
+
+A central counterparty as defined in EMIR Art 2(1) that is also a credit institution as defined in CRR Art 4(1)(1), but is not a qualifying CCP under CRR Art 4(1)(88).
+
 ### qccp
 
 Article 4 (88) of the [CRR][crr]:
 
 > Qualifying central counterparty (QCCP) means a central counterparty that has been either authorised in accordance with Article 14 of Regulation (EU) No 648/2012 or recognised in accordance with Article 25 of that Regulation
+
+### qccp_credit_institution
+
+A qualifying central counterparty as defined in CRR Art 4(1)(88), i.e. authorised under EMIR Art 14 or recognised under EMIR Art 25, that is also a credit institution as defined in CRR Art 4(1)(1).
 
 ### financial
 
@@ -270,6 +328,29 @@ Credit institution is defined in Article 4 of [CRR][crr]:
 
 > (1) 'credit institution' means an undertaking the business of which is to take deposits or other repayable funds from the public and to grant credits for its own account
 
+### dsib
+
+D-SIB: Domestic Systemically Important Banks whose distress or failure have the potential to cause considerable disruption to the domestic financial system and the wider economy. 
+For the Canadian jurisdiction, D-SIBs are federally regulated banks designated by OSFI, and face higher capital requirements to mitigate the risks posed to the domestic stability. 
+Reference: https://www.osfi-bsif.gc.ca/en/supervision/financial-institutions/banks/systemically-important-banks
+
+### dsifi
+
+D-SIFI: Domestic Systemically Important Financial Institution are provincially regulated deposit-taking institution, that a Canadian provincial regulator has designated as critical to the stability of the financial system. 
+Unlike D-SIBs, there is no centralised list for D-SIFIs. Designations are communicated through provincial public notices or supervisory frameworks.
+
+### national_bank
+
+A commercial bank whose charter is approved by the Office of the Comptroller of the Currency (OCC) rather than by a state banking agency. National banks are required to be members of the Federal Reserve System and belong to the Federal Deposit Insurance Corporation. Refer to [FFIEC Institution Types](https://www.ffiec.gov/npw/Help/InstitutionTypes).
+
+### non_member_bank
+
+Commercial banks that are state-chartered and not members of the Federal Reserve System. Include all insured commercial banks and industrial banks. Refer to [FFIEC Institution Types](https://www.ffiec.gov/npw/Help/InstitutionTypes).
+
+### state_member_bank
+
+All commercial banks that are state-chartered and members of the Federal Reserve System. Refer to [FFIEC Institution Types](https://www.ffiec.gov/npw/Help/InstitutionTypes).
+
 ### promotional_lender
 
 A promotional lender is defined by the EU [here][lcr] Article 10.1(e):
@@ -337,6 +418,9 @@ Investment firm is defined in the [FCA Handbook](https://www.handbook.fca.org.uk
 > (5) (in SYSC 19A(IFPRU Remuneration Code)) a firm in (3).
 > (6) (in SYSC 19D (Dual-regulated firms Remuneration Code)) a firm in (3) that is a UK designated investment firm.
 
+### unincorp_inv_fund
+_Unincorporated investment funds_ comprising investment portfolios owned by a group of participants and whose management is undertaken by other financial corporations
+
 ### ciu
 
 A collective investment undertaking is defined by the EU [here][lcr] Article 4(1)(7):
@@ -350,7 +434,7 @@ A general term for collective investment vehicles and management companies. For 
 ### private_fund
 
 A private fund is a pooled investment vehicle excluded from the definition of an investment company in the [US Investment Company Act 1940][inv-co-act]
-[Private Fund](<https://www.sec.gov/education/glossary/jargon-z#PEF:~:text=Private%20Equity%20Funds-,Private%20Fund,applicable%20registration%20requirements%20(for%20example%2C%20as%20an%20exempt%20reporting%20adviser).,-Want%20to%20learn>)
+[Private Fund](<https://www.sec.gov/education/glossary/jargon-z#PEF:~:text=Private%20Equity%20Funds-,Private%20Fund,applicable%20registration%20requirements%20(for%20example,%20as%20an%20exempt%20reporting%20adviser).,-Want%20to%20learn>)
 
 ### private_equity_fund
 
@@ -472,6 +556,14 @@ A **credit union** is defined by the [FCA](https://www.fca.org.uk/firms/credit-u
 > These services are regulated activities.
 > However, it should be noted that **credit_union** is regarded as non-financial for NSFR reporting, as per Article 428am [CRR][crr].
 
+### federal_credit_union
+
+A federally affiliated financial cooperative association organized for the purpose of promoting thrift among its members and creating a source of credit for provident or productive purposes. Refer to [FFIEC Institution Types](https://www.ffiec.gov/npw/Help/InstitutionTypes).
+
+### state_credit_union
+
+A state affiliated financial cooperative association organized for the purpose of promoting thrift among its members and creating a source of credit for provident or productive purposes. Refer to [FFIEC Institution Types](https://www.ffiec.gov/npw/Help/InstitutionTypes).
+
 ### deposit_broker
 
 A **deposit broker** can be an individual or a firm that facilitates the placement of deposits with insured depository institutions. Deposit brokers offer investors an assortment of fixed-term investment products, which earn low-risk returns.
@@ -494,11 +586,18 @@ Charity serving communities and individuals. Includes non-profit institutions se
 
 # Loan
 
-```
+```bash
 ├── mortgage
 │   ├── reverse_mortgage
 │   │   └── q_reverse_mortgage
-│   └── mortgage_charter
+│   ├── mortgage_charter
+│   ├── mortgage_cra
+│   ├── mortgage_fha_project
+│   ├── mortgage_fha_res
+│   ├── mortgage_hud235
+│   ├── mortgage_no_pmi
+│   ├── mortgage_pmi
+│   └── mortgage_va
 ├── commercial_property
 ├── personal
 ├── auto
@@ -510,12 +609,17 @@ Charity serving communities and individuals. Includes non-profit institutions se
 │   └── corporate_card
 ├── financial_lease
 ├── heloc
+│   └── heloc_lockout
+├── heloan
 ├── trade_finance
+│   ├── export
+│   └── import
 ├── credit_facility
 ├── liquidity_facility
 ├── multiccy_facility
 ├── nostro
 ├── education
+├── overdraft
 └── other
 ```
 
@@ -524,6 +628,14 @@ Charity serving communities and individuals. Includes non-profit institutions se
 From [CRR][crr] definitions (80):
 
 > Trade finance means financing, including guarantees, connected to the exchange of goods and services through financial products of fixed short-term maturity, generally of less than one year, without automatic rollover
+
+### export
+
+ Financing of goods and services (purchases, barter and/or gifts) from residents to non-residents.
+
+### import
+
+ Financing of goods and services (purchases, barter and/or gifts) from nonresidents to residents.
 
 ### auto
 
@@ -569,7 +681,7 @@ A **liquidity_facility** means the securitisation position arising from a contra
 
 ### multiccy_facility
 
-_Needs definition_
+A credit facility under which the borrower may draw funds in more than one agreed currency, subject to the facility’s terms and limits. The facility currency options are distinct from the currency of an individual drawing.
 
 ### margin
 
@@ -634,7 +746,7 @@ Nostro loans are the firm's accounts at other financial institutions which are i
 
 ### financial_lease
 
-From the [UK Gov](https://www.gov.uk/hmrc-internal-manuals/business-leasing-manual/blm00040), a finance lease is an arrangement under which one person (the lessor) provides the money to buy an asset which is used by another (the lessee) in return for an interest charge. The lessor has security because they own the asset. The terms of the leasing arrangements aim to give the lessor an interest like turn and no more or less – however good or bad the asset proves to be for the end user.
+From the [UK Gov](https://www.gov.uk/hmrc-internal-manuals/business-leasing-manual/blm00040), a finance lease is an arrangement under which one person (the lessor) provides the money to buy an asset which is used by another (the lessee) in return for an interest charge. The lessor has security because they own the asset. The terms of the leasing arrangements aim to give the lessor an interest like turn and no more or less – however good or bad the asset proves to be for the end user. See also: [Wikipedia: Finance Lease](https://en.wikipedia.org/wiki/Finance_lease)
 
 ### education
 
@@ -642,22 +754,84 @@ From [Investopedia][investopedia-education-loan]:
 
 > An education loan is a sum of money borrowed to finance post-secondary education or higher education-related expenses. Education loans are intended to cover the cost of tuition, books and supplies, and living expenses while the borrower is in the process of pursuing a degree. Payments are often deferred while students are in college and, depending on the lender, for an additional six-month period after earning a degree.
 
+### overdraft
+From the EU Directive on Credit Agreements, Art.3(d)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008L0048#:~:text=means%20of%20instalments%3B-,(d),funds%20which%20exceed%20the%20current%20balance%20in%20the%20consumer%27s%20current%20account%3B,-(e)):
+> An Overdraft is a short-term facility allowing account holders to take money from their account when there is no money in it.
+
+This can be up to an agreed limit (arranged overdraft) or beyond the agreed limit at the bank’s discretion (unarranged overdraft).
+Mapping note: Standard overdrafts should simply be mapped as accounts with type="current" and with a negative "balance". This usage of loan type="overdraft" is intended for stand-alone overdraft facilities or cases where the overdraft may also be collateralised (e.g. with real estate).
 
 ### other
 
 Other refers to a type of security not covered by the above. If you find yourself using this often, please [contribute][contributing].
 
+### heloan
+
+A home equity loan allows you to borrow money using the equity in your home as collateral. Equity is the amount your property is currently worth, minus the amount of any existing mortgage on your property. You receive the money from a home equity loan as a lump sum. Refer to [CFPB's explanation of home equity loans](https://www.consumerfinance.gov/ask-cfpb/what-is-a-home-equity-loan-en-106/).
+
+### heloc_lockout
+
+Any line of credit that contains a "lock-out" feature whereby a portion of the outstanding principal balance on a line may be locked into an amortizing or interest only loan with separate terms.
+
+### mortgage_cra
+
+Community reinvestment act mortgages. Refer to [Federal Reserve's CRA information](https://www.federalreserve.gov/consumerscommunities/cra_about.htm).
+
+### mortgage_fha_project
+
+A mortgage insured by the US Federal Housing Administration (FHA) under a project-based housing programme, such as multifamily rental housing insurance. See [HUD’s multifamily programme descriptions, “Rental Housing: Section 207”][fha-projects].
+
+### mortgage_fha_res
+
+Mortgages insured by the Federal Housing Administration.
+
+### mortgage_hud235
+
+A mortgage under the legacy HUD Section 235 programme, which combined mortgage insurance with assistance payments to support homeownership for lower-income families. See [National Housing Act, Section 235, codified at 12 USC 1715z(a) and (i)][hud235].
+
+### mortgage_no_pmi
+
+Conventional mortgage without Private Mortgage Insurance.
+
+### mortgage_pmi
+
+Conventional mortgage with Private Mortgage Insurance.
+
+### mortgage_va
+
+Mortgages insured by the Department of Veterans Affairs.
+
 # Security
 
-```
+```bash
 ├── equity
 │   ├── dividend
+│   ├── reit_pref
 │   ├── share
-│   │   ├── treasury
-│   │   └── pref_share
+│   │   ├── common
+│   │   ├── ciu_cash_cb
+│   │   ├── ciu_secs_excl_cov
+│   │   ├── ciu_cov_bond
+│   │   ├── ciu_corp_bond
+│   │   ├── ciu_public_sec
+│   │   ├── ciu_rmbs_auto
+│   │   ├── ciu_abs_oth
+│   │   ├── ciu_shares
+│   │   ├── cpp
+│   │   ├── cpp_tarp_pref
+│   │   ├── cs_usg
+│   │   ├── cs_warrant
+│   │   ├── mcp
+│   │   ├── mcp_usg
+│   │   ├── pref_share
+│   │   └── treasury
 │   ├── share_agg
-│   └── speculative_unlisted
-│   └── main_index_equity
+│   ├── speculative_unlisted
+│   ├── trups
+│   ├── trups_usg_pref
+│   ├── main_index_equity
+│   ├── nccp
+│   └── ncpp_convertible
 ├── debt
 │   ├── bond
 │   ├── covered_bond
@@ -671,18 +845,22 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │   ├── mtn
 │   │   └── emtn
 │   ├── pibs
-│   └── abs
+│   ├── ars
+│   ├── abs
 │       ├── abs_lease
 │       │   └── abs_auto
 │       ├── abs_cc
 │       ├── abs_consumer
 │       ├── abs_corp
+│       ├── abs_student
 │       ├── abs_sme
 │       │   ├── abs_sme_corp
 │       │   └── abs_sme_retail
 │       ├── abs_trade_rec
 │       ├── abs_wholesale
 │       ├── abs_other
+│       ├── cdo
+│       │   └── clo
 │       └── mbs
 │           ├── rmbs
 │           │   └── rmbs_income
@@ -698,6 +876,10 @@ Other refers to a type of security not covered by the above. If you find yoursel
 │       ├── performance_bond
 │       └── performance_sloc
 ├── letter_of_credit
+│   ├── documentary
+│   └── standby
+│       ├── financial
+│       └── performance
 ├── bill_of_exchange
 │   └── acceptance
 ├── cb_reserve
@@ -706,6 +888,9 @@ Other refers to a type of security not covered by the above. If you find yoursel
 ├── cash_ratio_deposit
 ├── cash
 ├── index
+├── loan_pool
+├── securitisation
+│   └── re_securitisation
 └── other
 ```
 
@@ -715,9 +900,71 @@ A **cash** or cash-equivalent security such as a securitisation of cash deposits
 
 > "Cash on hand" includes holdings of national and foreign banknotes and coins in circulation that are commonly used to make payments.
 
+### common
+
+Common stock (ordinary shares), a child of **equity**, **share**. See the [SEC’s stock guide, “What kinds of stocks are there?”][equity-sec-stocks]. Classification as Common Equity Tier 1 capital additionally requires the applicable regulatory criteria; see [CRR Articles 26 and 28][equity-crr-cet1].
+
+### cpp_tarp_pref
+
+This is CPP TARP Preferred - cumulative preferred stock issued under the capital purchase program (CPP) of the troubled asset relief program (TARP), which is a child of _equity_, _share_
+
+See the [US Treasury’s 2008 Capital Purchase Program description][equity-tarp-cpp], which describes the preferred shares and accompanying warrants. Here CPP means the programme; in **cpp** below it means cumulative perpetual preferred.
+
+### cpp
+
+This is cumulative perpetual preferred (CPP) - perpetual preferred shares with cumulative dividends, which is a child of _equity_, _share_
+
+For the distinction between cumulative and non-cumulative dividends, see the [Federal Reserve’s historical capital rules, section II.A.1.c.ii(1)–(3)][equity-fed-preferred].
+
+### mcp
+
+This is mandatory convertible preferred (mcp) - preferred equity instruments that mandatorily convert into common equity, which is a child of _equity_, _share_
+
+For a government-held example, see the [Treasury’s description of its mandatory convertible preferred stock in Ally][equity-treasury-ally]. The conversion terms are specified in the instrument’s contract.
+
+### mcp_usg
+
+This is MCP USG Preferred - Government-purchased Mandatory Convertible Preferred stock, which is a child of _equity_, _share_
+
+See the [Treasury’s Ally investment disclosure, including the “USG Capital Outstanding in Ally” table][equity-treasury-ally].
+
+### ncpp
+
+This is NCPP Redeemable – Non-Cumulative Perpetual Preferred security that may be redeemed by the issuer at its discretion
+
+See the [Federal Reserve’s historical capital rules, section II.A.1.c.ii(1)–(3)][equity-fed-preferred] for perpetual maturity, issuer redemption and non-cumulative dividend features. Redemption remains subject to the instrument’s terms and applicable regulatory approvals.
+
+### reit_pref
+
+This is REIT Preferred - Preferred stock issued by a Real Estate Investment Trust subsidiary
+
+See the [Federal Reserve’s historical FR Y-14A instructions, Schedule HC-R Memoranda, line item 130][equity-reit-preferred], which identifies REIT preferred securities as a preferred-stock category.
+
+### trups_usg_pref
+
+USG Preferred TRUPS - Trust Preferred Securities purchased by the U.S. Government, which is a child of _equity_
+
+For an example of government-held TruPS, see the [Treasury’s Ally investment disclosure and capital table][equity-treasury-ally].
+
+### ncpp_convertible
+
+Non-cumulative perpetual preferred stock that can be converted into common equity, grouped under **equity** in FIRE. For non-cumulative and perpetual features, see the [Federal Reserve’s historical capital rules, section II.A.1.c.ii][equity-fed-preferred]; for conversion into ordinary shares, see [IAS 33, paragraph 7(a)][equity-ias33].
+
+### cs_usg
+
+Common stock held by the U.S. Government through an investment programme, including shares received by converting an earlier preferred-stock investment. See the [Treasury’s conversion of Ally preferred shares into common stock][equity-treasury-ally].
+
+### cs_warrant
+
+This is CS Warrants - Warrants to purchase common stock issued alongside TARP or other capital instruments, which is a child of _equity_, _share_
+
+See the [US Treasury’s CPP description][equity-tarp-cpp], which explains warrants to purchase common stock issued alongside its preferred-stock investments.
+
 ### equity
 
 This is a "catch all" term for equity instruments such as _share_, _share_agg_ to be used when further granularity is not available or not needed.
+
+For the underlying accounting definition of an equity instrument as a residual interest after deducting liabilities, see [IAS 32, paragraph 11][equity-ias32]. The FIRE grouping does not by itself determine accounting or regulatory capital eligibility.
 
 ### dividend
 
@@ -728,40 +975,83 @@ A distribution of a company's post-tax profits made to its shareholders. Dividen
 
 Denotes if the security is a share (stock) or represents an aggregate for a portfolio or package of shares.
 
+See the [SEC’s stock guide, “What are stocks?”][equity-sec-stocks] for the ownership interest represented by shares. **share_agg** is FIRE’s grouping for multiple share positions.
+
 ### pref_share
 
 The [FCA](https://www.handbook.fca.org.uk/handbook/glossary/G1587.html) defines a **preference share** as:
 
 > A share conferring preference as to income or return of capital which does not form part of the equity share capital of a company
 
+See also the [SEC’s explanation of preferred stockholders’ dividend and liquidation priority][equity-sec-stocks].
+
 ### speculative_unlisted
 
-As per OSFI and BCBS, a Speculative unlisted equity is defined as "an equity investments in unlisted companies that are invested for short-term resale purposes, or are considered venture capital or similar investments which are subject to price volatility and are acquired in anticipation of significant future capital gains, or are held with trading intent. Investments in unlisted equities of corporate clients with which the institution has or intends to establish a long-term business relationship and debt-equity swaps for corporate restructuring purposes would be excluded." OSFI Chapter 4 P76.
+An equity investment in an unlisted company held for short-term resale, with trading intent, or as a venture-capital or similar investment seeking substantial capital gains. Long-term customer relationships and debt-equity swaps for corporate restructuring are excluded from this category. See [Basel Framework CRE20.58][equity-speculative].
 
 ### treasury
 
 According to IAS 32.33, if an entity reacquires its own equity instruments, those instruments shall be considered **treasury shares**, and shall be deducted from equity.
 
+See [IAS 32, paragraph 33, “Treasury shares”][equity-ias32].
+
+### trups
+
+Trust preferred securities issued through a trust sponsored by a banking organisation, typically backed by the sponsor’s junior subordinated debt and allowing deferred distributions. See the [Federal Reserve’s historical capital rules, section II.A.1.c.iv(1)–(3)][equity-fed-trups]. These distinguish the trust securities from the underlying debt’s maturity; FIRE groups the instruments under **equity**.
+
 ### main_index_equity
 
 The main_index_equity identifies equities that are constituents of a main index for the purposes of applying a volatility adjustment in line with [Article 224](https://www.eba.europa.eu/regulation-and-policy/single-rulebook/interactive-single-rulebook/16006).
 
-### debt
+The corresponding legislative text is available on [EUR-Lex: CRR Article 224(1), Table 3][equity-main-index].
 
+The **ciu_*** categories below identify fund holdings by their underlying assets.
+Liquidity eligibility also depends on [Article 15(1) of Delegated Regulation (EU) 2015/61][equity-ciu-assets]; the enum alone does not establish eligibility.
+
+### ciu_cash_cb
+
+Shares or units in a collective investment undertaking (CIU) whose underlying assets are coins, banknotes and/or central bank exposures. See [Article 15(2) and (4)][equity-ciu-assets].
+
+### ciu_secs_excl_cov
+
+Shares or units in a collective investment undertaking (CIU) whose underlying assets are debt securities other than covered bonds. See [Article 15(2) and (4)][equity-ciu-assets].
+
+### ciu_cov_bond
+
+Shares or units in a collective investment undertaking (CIU) whose underlying assets are covered bonds. See [Article 15(2) and (4)][equity-ciu-assets].
+
+### ciu_corp_bond
+
+Shares or units in a collective investment undertaking (CIU) whose underlying assets are corporate debt securities. See [Article 15(2) and (4)][equity-ciu-assets].
+
+### ciu_public_sec
+
+Shares or units in a collective investment undertaking (CIU) whose underlying assets are claims on, or guaranteed by, central governments, central banks, regional governments, local authorities or public sector entities. See [Article 15(2) and (4)][equity-ciu-assets].
+
+### ciu_rmbs_auto
+
+Shares or units in a collective investment undertaking (CIU) whose underlying assets are residential mortgage or auto-loan asset-backed securities. See [Article 15(2) and (4)][equity-ciu-assets].
+
+### ciu_abs_oth
+
+Shares or units in a collective investment undertaking (CIU) whose underlying assets are other asset-backed securities, such as those backed by commercial or individual lending. See [Article 15(2) and (4)][equity-ciu-assets].
+
+### ciu_shares
+
+Shares or units in a collective investment undertaking (CIU) whose underlying assets are shares included in a major stock index. See [Article 15(2) and (4)][equity-ciu-assets].
+
+### debt
 This is a "catch all" term for debt of any kind, _bond_, _bond_amortising_, _covered_bond_, _abs_, _residential_mbs_, _non_residential_mbs_, _frn_, _govt_gteed_frn_, to be used when further granularity is not available or not needed.
 
 ### bond
-
 A **bond** is a type of loan whereby an investor lends money to an entity for a defined period of time at a fixed or floating interest rate.
 
 ### covered_bond
-
 From the [LCR][lcr] Introduction (8):
 
 > Covered bonds are debt instruments issued by credit institutions and secured by a cover pool of assets which typically consist of mortgage loans or public sector debt to which investors have a preferential claim in the event of default. Their secured nature and certain additional safety features, such as the requirement on the issuer to replace non-performing assets in the cover pool and maintain the cover pool at a value exceeding the par value of the bonds ('asset coverage requirement'), have contributed to make covered bonds relatively low-risk, yield-bearing instruments with a key funding role in mortgage markets of most Member States. In certain Member States outstanding covered bond issuance exceeds the pool of outstanding government bonds. Certain covered bonds of credit quality step 1, in particular, exhibited an excellent liquidity performance during the period from 1 January 2008 to 30 June 2012 analysed by the EBA in its report. Nevertheless the EBA recommended treating these covered bonds as level 2A assets to align with BCBS standards. However, in the light of the considerations made above about their credit quality, liquidity performance and role in the funding markets of the Union, it is appropriate for these credit quality step 1 covered bonds to be treated as level 1 assets. In order to avoid excessive concentration risks and unlike other level 1 assets, the holdings of credit quality step 1 covered bonds in the liquidity buffer should be subject to a 70 % cap of the overall buffer, a minimum 7 % haircut and to the diversification requirement.
 
 ### convertible_bond
-
 Generally, a **convertible_bond** is a security which gives the investor the right to convert the security into shares at an agreed price on an agreed basis.
 
 From the [European system of national and regional accounts][2013-549]
@@ -769,35 +1059,32 @@ From the [European system of national and regional accounts][2013-549]
 > bonds, which may, at the option of the holder, be converted into the equity of the issuer, at which point they are classified as shares;
 
 ### emtn, mtn
-
 A Euro medium-term note is a medium-term (less than 5 years), flexible debt instrument that is traded and issued outside of the US and Canada. A medium-term note is the same but is traded in the US and Canada.
 
 ### commercial_paper
-
 Commercial paper is an unsecured promissory note with a fixed maturity of, typically, not more than 270 days.
 
 ### cd
-
 A certificate of deposit is also a promissory note, however can only be issued by a bank. It has a fixed maturity and specified fixed interest rate.
 
 ### bill_of_exchange
-
 From [UK Legislation](https://www.legislation.gov.uk/ukpga/Vict/45-46/61), a bill of exchange is an unconditional order in writing, addressed by one person to another, signed by the person giving it, requiring the person to whom it is addressed to pay on demand or at a fixed or determinable future time a sum certain in money to or to the order of a specified person, or to bearer.
 
 ### cb_facility
-
-_Needs definition_
+A central bank funding or liquidity facility through which an eligible institution can borrow funds under the central bank’s terms. Examples are described in the [Bank of England’s Sterling Monetary Framework][central-bank-facilities].
 
 ### struct_note
 
 Structure notes shall comprise contracts with embedded derivatives that are not covered bonds, asset backed securities, or classified as convertible compound financial instruments. They are a type of fixed-term investment where the amount you earn depends on the performance of a specific market (such as the FTSE 100) or specific assets (such as shares in individual companies).(https://www.fca.org.uk/consumers/structured-products)
 
 ### spv_mortgages, spv_other
-
 A special purpose vehicle is a separate legal entity created to fulfil a certain purpose for the parent.
 
-### abs
+### ars
+An auction rate security (ARS) is a long term security with a variable interest rate that is periodically reset through an auction process.
+(https://www.federalreserve.gov/apps/mdrm/data-dictionary/search/item?keyword=P084%20&show_short_title=False&show_conf=False&rep_status=All&rep_state=Opened&rep_period=Before&date_start=20190808&date_end=20190808)
 
+### abs
 An asset-backed security is a security whose income payments and hence value are derived from and collateralised (or "backed") by a specified pool of underlying assets. The pool of assets is typically a group of small and illiquid assets which are unable to be sold individually. Pooling the assets into financial instruments allows them to be sold to general investors, a process called securitisation. This allows the risk of investing in the underlying assets to be diversified because each security will represent a fraction of the total value of the diverse pool of underlying assets. The pools of underlying assets can include common payments from credit cards, auto loans, and mortgage loans, to esoteric cash flows from aircraft leases, royalty payments and movie revenues.
 
 The receivables or assets underlying the securitisation must be credit claims or receivables with defined terms relating to rental payments or principal and interest payment. Any referenced interest payments should be based on commonly encountered market interest rates and may include terms for caps and floors, but should not reference complex formulae or exotic derivatives.
@@ -812,77 +1099,68 @@ A non-exhaustive list of [examples][ecbexamples] of underlying assets that may c
 - leasing receivables.
 
 ### abs_lease
-
 Asset-backed securities backed by leases.
 
 ### abs_auto
-
 Auto loans and leases encompass a wide group of cars, motorcycles and other vehicles more fromally defined [here](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX%3A32015R0061#:~:text=auto%20loans%20and,of%20title%20provision):
 
 ### abs_cc
-
 Asset-backed securities backed by credit card receivables.
 
 ### abs_corp
-
 Asset-backed securities backed by corporate loans.
 
 ### abs_trade_rec
-
 Asset-backed securities backed by trade receivables.
 
 ### abs_sme
-
 Asset-backed securities backed by SME loans.
 
 ### abs_sme_corp
-
 Asset-backed securities backed by SME loans considered as corporate.
 
 ### abs_sme_retail
-
 Asset-backed securities backed by SME loans considered as retail.
 
-### abs_consumer
+### abs_student
+Asset-backed securities backed by student loans.
 
+### abs_consumer
 Asset-backed securities backed by consumer credit.
 
 ### abs_wholesale
-
 Asset-backed securities backed by wholesale credit.
 
 ### abs_other
-
 Any other asset-backed securitisation not encompassed by one of the other classifications.
 
-### mbs
+### cdo
+Collateralized debt obligations: Asset-backed securities backed by a portfolio of fixed income assets.
 
+### clo
+Collateralized loan obligations : Asset-backed securities backed by a portfolio of loans.  In general, CLOs are backed by a variety of loans, including whole commercial loans, revolving credit facilities, letters of credit, and bankers’ acceptances.
+
+### mbs
 Asset-backed securities specifically backed by mortgages.
 
 ### mtn
-
 Medium-term notes
 
 ### pibs
-
 [Building Societies Association](https://www.bsa.org.uk/information/consumer-factsheets/general-information/what-are-pibs) defines Permanent interest bearing shares (PIBS) as fixed-interest securities issued by building societies, and quoted on the stock market. They are bond like instruments in that they pay interest, but they have no maturity date - PIBS typically exist as long as their issuer does.
 
 ### performance_bond
-
-_Needs definition_
+A bond securing the fulfilment of a contractor’s obligations under a contract. See [US Federal Acquisition Regulation, 28.001][performance-bonds]. In this hierarchy it is a form of performance guarantee.
 
 ### rmbs
-
 A residential mortgage-backed security (a subclass of an ABS/MBS).
 
 ### rmbs_income
-
 A residential mortgage-backed security secured by a pool of mortages that are deemed to be income producing. Income producing mortages are defined as loans whose prospects for servicing them materially depend on the cash flows generated by the properties securing the loans rather than on the underlying capacity of the borrower to service the debt from other sources.
 
 Reference: [OSFI BCAR, section 4.1.11](<https://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/CAR22_chpt4.aspx#:~:text=Income%20producing%20residential%20real%20estate%3A%20exposures%20where%20the%20criteria%20in%20paragraph%20100%20are%20met%2C%20but%20those%20in%20paragraph%20110%20(land%20acquisition%2C%20development%20and%20construction)%20are%20not%20applicable.>)
 
 ### rmbs_trans
-
 This type value is in order to indicate whether the security is subject to transitional provisions for securitisations backed by residential loans:
 [LCR][lcr] Article 37:
 
@@ -891,34 +1169,28 @@ This type value is in order to indicate whether the security is subject to trans
 > 2.  By derogation from Article 13, securitisations issued after 1 October 2015, where the underlying exposures are residential loans as referred to in point (g)(i) of Article 13(2) that do not meet the average loan-to-value or the loan-to-income requirements set out in that point, shall qualify as Level 2B assets until 1 October 2025, provided that the underlying exposures include residential loans that were not subject to a national law regulating loan-to-income limits at the time they were granted and such residential loans were granted at any time prior to 1 October 2015.
 
 ### cmbs
-
 A commercial mortgage-backed security (a subclass of an abs).
 
 ### cmbs_income
-
 A commercial mortgage-backed security secured by a pool of mortages that are deemed to be income producing. Income producing mortages are defined as loans whose prospects for servicing them materially depend on the cash flows generated by the properties securing the loans rather than on the underlying capacity of the borrower to service the debt from other sources.
 
 Reference: [OSFI BCAR, section 4.1.12](<https://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/CAR22_chpt4.aspx#:~:text=Income%20producing%20commercial%20real%20estate%3A%20exposures%20where%20the%20criteria%20in%20paragraph%20108%20are%20met%2C%20but%20those%20in%20paragraph%20110%20(land%20acquisition%2C%20development%20and%20construction)%20are%20not%20applicable.>)
 
 ### nha_mbs
-
 National Housing Act (NHA) MBS that are guaranteed by the Canada Mortgage and Housing Corporation (CMHC), will receive a risk weight of 0% in recognition of the fact that obligations incurred by CMHC are legal obligations of the Government of Canada.
 
 Reference: [OSFI BCAR Chapter 4, P120](<https://www.osfi-bsif.gc.ca/Eng/fi-if/rg-ro/gdn-ort/gl-ld/Pages/CAR22_chpt4.aspx#:~:text=National%20Housing%20Act%20(NHA)%20MBS%20that%20are%20guaranteed%20by%20the%20Canada%20Mortgage%20and%20Housing%20Corporation%20(CMHC)%2C%20will%20receive%20a%20risk%20weight%20of%200%25%20in%20recognition%20of%20the%20fact%20that%20obligations%20incurred%20by%20CMHC%20are%20legal%20obligations%20of%20the%20Government%20of%20Canada.>)
 
 ### frn
-
 A floating-rate note is defined in the [Money Market Statistics Regulation][mm-stat] in Annex II as:
 
 > A debt instrument for which the periodic interest payments are calculated on the basis of the value, i.e. through fixing of an underlying reference rate such as Euribor on predefined dates known as fixing dates, and which has a maturity of not more than one year.
 > note: "one year" is defined as transactions with a maturity date of not more than 397 days after the trade date
 
 ### govt_gteed_frn
-
 A government guaranteed floating-rate note.
 
 ### cb_reserve
-
 As defined in [LCR Regulations Article 10 on Liquid Assets][lcr]:
 
 > reserves held by the credit institution in a central bank referred to in points (i) and (ii) provided that the credit institution is permitted to withdraw such reserves at any time during stress periods and the conditions for such withdrawal have been specified in an agreement between the relevant competent authority and the ECB or the central bank;
@@ -930,13 +1202,11 @@ As defined in [LCR Regulations Article 10 on Liquid Assets][lcr]:
 > Central Bank reserves that are not liquid and not withdrawable. See Article 7 (2) and Article 10 (1)(b)(iii) of the LCR. (Commission Delegated Regulation (EU) 2015/61 to supplement Regulation (EU) No 575/2013)
 
 ### cash_ratio_deposit
-
 The [BofE](https://www.bankofengland.co.uk/statistics/notice/2024/statistical-notice-2024-08) defines this as:
 
 > The Levy will be applied on a proportional basis, which means that the Bank will allocate the policy costs to be recovered by the Levy in proportion to an eligible institution's liability base. Eligible liabilities are defined in the Glossary. This will be a continuation of how the CRD scheme operated. The policy rationale for using the eligible liability base is the link between the size of a financial institution's liabilities and its potential impact on the Bank's financial stability and monetary policy functions.
 
 ### guarantee
-
 From EU [Supervisory Reporting][sup-rep] part 2(9):
 
 > 'Financial guarantees' are contracts that require the issuer to make specified payments to reimburse the holder of a loss it incurs, because a specified debtor fails to make payment when due in accordance with the original or modified terms of a debt instrument. Under IFRS or compatible National GAAP, these contracts meet the IAS 39.9 and IFRS 4.A definition of financial guarantee contracts. The following items of Annex I of the CRR shall be classified as 'financial guarantees':
@@ -945,26 +1215,41 @@ From EU [Supervisory Reporting][sup-rep] part 2(9):
 > (c) Irrevocable standby letters of credit having the character of credit substitutes.
 
 ### trade_credit_insurance
-
 From the [EBA's][eba-nsfr-report] report on the NSFR, section 6.2.1 outlines what **trade credit insurance** is:
 
 > A seller providing trade credit is exposed to the credit risk of the buyer. Trade credit insurance provides the seller with protection against the risk of non-payment by the buyer. The nonpayment may be due to the insolvency of the buyer or, in an international trade, due to political risks that prevent payment.
 
 ### letter_of_credit
-
 From the [EBA's][eba-nsfr-report] report on the NSFR, section 6.2.2, a **letter of credit** is:
 
 > When goods are traded, the seller and the buyer need to agree on the process of how to pay for the goods. While the buyer may be reluctant to prepay for the traded goods, the seller may also be unwilling to ship the goods before payment is made. In this situation, a bank can intermediate between the trading partners by providing an import letter of credit (L/C) to the buyer of the goods, which guarantees payment to the seller.
 > A L/C is a contingent liability and payment is only made by the bank to the seller from funds in the buyer's account when the documentation of shipping is presented.
 
-### acceptance
+### documentary
+A documentary letter of credit under which the issuer pays against presentation of documents complying with the credit’s terms, commonly shipping documents in trade finance. See the [Federal Reserve explanation of commercial letters of credit][documentary-credit].
 
+### standby
+A standby letter of credit that supports an obligation of the applicant and can be drawn upon when the specified payment or performance failure occurs. See [12 CFR 337.2(a)][standby-credit].
+
+### financial
+A financial standby letter of credit supporting a financial obligation, such as repayment of borrowed money. See [12 CFR 3.2, “Financial standby letter of credit”][credit-definitions].
+
+### performance
+A performance standby letter of credit supporting a non-financial or commercial obligation, payable to the beneficiary if the applicant fails to perform. See [12 CFR 3.2, “Performance standby letter of credit”][credit-definitions].
+
+### loan_pool
+From Title 13, Chapter I, Part 120, Subpart J, Section 120.1708 https://www.ecfr.gov/current/title-13/chapter-I/part-120/subpart-J/section-120.1708
+
+SBA guarantees to a Pool Investor the timely payment of principal and interest installments and any prepayment or other recovery of principal to which the Pool Investor is entitled. If an Obligor misses a scheduled payment pursuant to the terms of the Pool Note underlying a Loan Interest backing a Pool Certificate, SBA, through the CSA, will make advances to maintain the schedule of interest and principal payments to the Pool Investor. If SBA makes such payments, it is subrogated fully to the rights satisfied by such payment.
+
+Also see: https://catran.sba.gov/ftadistapps/ftawiki/pdf/p.cfm?a=SBA%20Guaranteed%20Loan%20Pool%20Cert%2E%20Program%20Guidelines%2Epdf
+
+### acceptance
 From EU [Supervisory Reporting][sup-rep] part 2(5)(60)(b):
 
 > "Acceptances" are obligations by an institution to pay on maturity the face value of a bill of exchange, normally covering the sale of goods. Consequently, they are classified as "trade receivables" on the balance sheet
 
 ### financial_guarantee
-
 From EU [Supervisory Reporting][sup-rep] part 2(9):
 
 > 'Financial guarantees' are contracts that require the issuer to make specified payments to reimburse the holder of a loss it incurs, because a specified debtor fails to make payment when due in accordance with the original or modified terms of a debt instrument. Under IFRS or compatible National GAAP, these contracts meet the IAS 39.9 and IFRS 4.A definition of financial guarantee contracts. The following items of Annex I of the CRR shall be classified as 'financial guarantees':
@@ -973,44 +1258,42 @@ From EU [Supervisory Reporting][sup-rep] part 2(9):
 > (c) Irrevocable standby letters of credit having the character of credit substitutes.
 
 ### financial_sloc
-
 Financial standby letter of credit
 
 ### performance_sloc
-
 Performance standby letter of credit
 
 ### performance_guarantee
+An undertaking supporting performance of a contractual obligation, rather than repayment of a debt. FIRE groups performance standby letters of credit, performance bonds and warranties under this category. See [12 CFR 3.2, “Performance standby letter of credit (or performance bond)”][credit-definitions].
 
-_Needs definition_
+### securitisation
+Securitisation transaction (see https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02017R2402-20210409#art_8:~:text=(1)%C2%A0,%E2%80%98securitisation%E2%80%99)
+
+### re_securitisation
+Securitisation transaction where at least one of the securitised exposures is a securitisation position (sub-type of securitisation)
+https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02017R2402-20210409#art_8:~:text=(4)%C2%A0,%E2%80%98resecuritisation
 
 ### share_agg
-
-_Needs definition_
+A FIRE grouping representing multiple shares or share positions in one security record, rather than an individual share position. See the collateral-swap example in [**sft_type**][sft-type-example], which uses this type for a portfolio of shares.
 
 ### spv_other
-
-_Needs definition_
+Debt securities issued by a special purpose vehicle (SPV) that are not classified as **spv_mortgages**. This identifies the securities issued by the vehicle; the earlier **spv_mortgages, spv_other** definition describes the vehicle itself.
 
 ### urp
-
-_Needs definition_
+An unfunded risk participation: an arrangement in which a participant assumes an agreed share of credit risk without advancing its share of the underlying financing at inception, and pays if the contractual loss or default conditions occur. See [IFC’s unfunded risk participation facility example][unfunded-participation].
 
 ### warranty
-
-_Needs definition_
+A contractual undertaking concerning the quality, condition or performance of supplied goods or services, with remedies if the undertaking is not met. See [FAR 2.101, “Warranty”][warranty-definition]. FIRE groups this under **performance_guarantee**.
 
 ### other
-
 Other refers to a type of security not covered by the above. If you find yourself using this often, please [contribute][contributing].
 
 ### index_linked
-
 Index-linked securities are securities whose notional amount and interest amount are linked on the intial and final values of an index, generally an inflation index.
 
 ### index
-
 Index securities are reference records recording the details of an index using the index_composition field.
+
 
 # Account
 
@@ -1022,6 +1305,8 @@ Index securities are reference records recording the details of an index using t
 ├── current
 │   └── current_io
 ├── debit_card (pending)
+├── debt_securities_issued
+├── financial_lease
 ├── internet_only
 ├── ira
 ├── isa
@@ -1030,12 +1315,14 @@ Index securities are reference records recording the details of an index using t
 │   ├── isa_current
 │   │   └── isa_current_io
 │   └── isa_io
+├── loans_and_advances
 ├── money_market
 ├── non_product
 │   ├── accruals
 │   ├── amortisation
 │   ├── deferred
 │   │   └── deferred_tax
+│   │       └── valuation_allowance
 │   ├── depreciation
 │   ├── expense
 │   ├── income
@@ -1054,7 +1341,8 @@ Index securities are reference records recording the details of an index using t
 │   └── time_deposit_io
 ├── third_party_savings
 ├── vostro
-└── other
+├── other
+└── other_financial_liab
 ```
 
 ### call
@@ -1066,6 +1354,10 @@ A call account is defined in the [Money Market Statistics Regulation][mm-stat] i
 ### cd
 
 A deposit account purely holding certificates of deposit (see _cd_ _Security_ **type**)
+
+### debt_securities_issued
+
+An account which holds **debt securities issued**
 
 ### prepaid_card
 
@@ -1093,6 +1385,10 @@ A credit card is then defined in Article 2 (34) and (5) as:
 > credit card means a category of payment instrument that enables the payer to initiate a credit card transaction;
 > credit card transaction means a card-based payment transaction where the amount of the transaction is debited in full or in part at a pre agreed specific calendar month date to the payer, in line with a prearranged credit facility, with or without interest;
 
+### financial_lease
+
+A finance lease is an arrangement under which one person (the lessor) provides the money to buy an asset which is used by another (the lessee) in return for an interest charge. A lease liability, in this case, is the present value of the future obligations under the lease agreement. (see Loan - financial_lease above)
+
 ### current (checking, demand)
 
 Any transactional account.
@@ -1104,6 +1400,14 @@ A current account that is offered and only accessible via the internet.
 ### bonds
 
 Any account containing notes, bonds or other securities instruments.
+
+### loans_and_advances
+
+An account which holds **loans and advances**
+
+### other_financial_liab
+
+An account which holds **other financial liabilities**
 
 ### retail_bonds
 
@@ -1297,6 +1601,10 @@ An account holding reserves. [Reserves][reserve] are created from profit or from
 
 [reserve]: https://en.wikipedia.org/wiki/Reserve_(accounting)
 
+### valuation_allowance
+
+An account that holds valuation allowances related to deferred tax assets (DTAs) arising from temporary differences.
+
 ### other
 
 Any other account type that cannot be classified as one of the other types.
@@ -1371,7 +1679,7 @@ The settlement value is based on the difference between the exchange rate specif
 
 A [**forward rate agreement**][fra] is an interest rate forward contract in which the rate to be paid or received on a specific obligation for a set period of time, beginning at some time in the future, is determined at contract initiation.
 
-[fra]: https://www.bis.org/statistics/glossary.htm?&selection=315&scope=Statistics&c=a&base=term
+[fra]: https://data.bis.org/help/glossary?item=Forward+rate+agreement+%28FRA%29
 
 ### variance_swap
 
@@ -1402,18 +1710,45 @@ The most common XCS, and that traded in interbank markets, is a mark-to-market (
 
 ```bash
 ├── residential_property
+│   ├── co_op
+│   ├── condo
+│   ├── manufactured_house
 │   ├── multifamily
+│   │   ├── one_unit
+│   │   ├── two_units
+│   │   ├── three_units
+│   │   └── four_units
+│   ├── planned_unit_dev
+│   ├── resi_mixed_use
+│   ├── single_family
+│   ├── townhouse
 │   └── res_property_hr
 ├── farm
 ├── commercial_property
+│   ├── healthcare
+│   ├── hospitality
+│   ├── industrial
+│   ├── office
+│   ├── retail
+│   ├── warehouse
 │   └── commercial_property_hr
 ├── immovable_property
 ├── guarantee
 ├── debenture
+├── blanket_lien
 ├── life_policy
 ├── cash
 ├── security
+├── trade_receivables
 ├── auto
+│   ├── auto_other
+│   ├── car
+│   ├── convertible
+│   ├── luxury
+│   ├── sport
+│   ├── suv
+│   ├── truck
+│   └── van
 └── other
 ```
 
@@ -1430,6 +1765,54 @@ Immovable property whose occupation is primarily for residential use. Specific r
 From EBA [Closing Real Estate Data Gaps](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017Y0131%2801%29) Section 2 (1)(1)(38):
 
 'Residential real estate' (RRE) means any immovable property located in the domestic territory, available for dwelling purposes, acquired, built or renovated by a private household and that is not qualified as a CRE property. If a property has a mixed use, it should be considered as different properties (based for example on the surface areas dedicated to each use) whenever it is feasible to make such breakdown; otherwise, the property can be classified according to its dominant use.
+
+### co_op
+
+A cooperative housing unit where residents own shares in a corporation that owns the building, rather than owning the actual unit. The corporation owns the building and each shareholder has the right to occupy a specific unit through a proprietary lease or occupancy agreement.
+
+### condo
+
+A condominium unit where the owner has exclusive ownership of the individual unit and shared ownership of common areas and facilities with other unit owners. The owner has a deed to their specific unit and pays fees for maintenance of common areas.
+
+### manufactured_house
+
+A factory-built home that is constructed to the federal Manufactured Home Construction and Safety Standards (HUD Code) and is permanently affixed to a foundation. These homes are built in a controlled factory environment and transported to the site in one or more sections.
+
+### multifamily
+
+Property composed of multiple residential dwellings.
+
+### one_unit
+
+A residential property containing exactly one dwelling unit. This includes single-family homes and other properties with one residential unit.
+
+### two_units
+
+A residential property containing exactly two dwelling units. This includes duplexes where each unit is typically occupied by a separate household.
+
+### three_units
+
+A residential property containing exactly three dwelling units. This includes triplexes where each unit is typically occupied by a separate household.
+
+### four_units
+
+A residential property containing exactly four dwelling units. This includes fourplexes where each unit is typically occupied by a separate household.
+
+### planned_unit_dev
+
+A planned unit development (PUD) is a type of residential development that combines different types of housing units and land uses within a single development. PUDs typically include a mix of single-family homes, townhouses, and condominiums, along with common areas and amenities.
+
+### resi_mixed_use
+
+A property that combines residential and non-residential uses, where the residential portion represents more than 50% of the total space. This includes properties with ground-floor commercial spaces and residential units above.
+
+### single_family
+
+A residential property designed for and occupied by a single family. This includes detached houses and other single-family dwellings.
+
+### townhouse
+
+A type of residential property that shares one or more walls with adjacent properties but has its own entrance and typically spans multiple floors. Townhouses are usually arranged in rows and may be part of a larger development.
 
 ### res_property_hr
 
@@ -1492,6 +1875,30 @@ As per Article 124 (3) of CRR 575/2013: In order to be eligible for the treatmen
 (e) the requirements set out in Article 208 are met and the valuation rules set out in Article 229(1) are complied with.
 For the purposes of point (c), institutions may exclude situations where purely macro-economic factors affect both the value of the property and the performance of the obligor.
 
+### healthcare
+
+Property used for medical or health-related services, including hospitals, medical campuses, assisted-living facilities, memory care facilities, and skilled-nursing or long-term care homes.
+
+### hospitality
+
+Property providing short-term accommodation or leisure services, including hotels, resorts, and gaming or entertainment facilities.
+
+### industrial
+
+Property used for manufacturing, assembly, research and development, or light industrial activities. Excludes properties primarily used for warehousing or logistics.
+
+### office
+
+Property used for administrative, professional, or medical office purposes.
+
+### retail
+
+Property used for the sale of goods or services to the public, including shopping centers, malls, high-street retail, and standalone stores.
+
+### warehouse
+
+Property used for storage, logistics, or distribution of goods.
+
 ### multifamily
 
 Property composed of five or more residential dwellings.
@@ -1510,35 +1917,77 @@ collateral that cannot be classified as residential or commercial property.
 
 ### farm
 
-_NEEDS Definition_
+Agricultural land and associated farm buildings pledged as security for an exposure. This is a property collateral category; it does not by itself identify livestock, crops or machinery pledged separately.
 
 ### guarantee
 
-_NEEDS Definition_
+Credit protection provided by a third party undertaking to meet the debtor’s obligations if the debtor fails to do so. This is unfunded protection rather than a pledged physical asset. For regulatory eligibility requirements, see [CRR, Articles 213 and 215][collateral-guarantees].
 
 ### debenture
 
-_NEEDS Definition_
+A debenture used to secure an exposure through a charge over a company’s assets, which may include fixed and floating charges. See [HMRC’s guidance on debentures][debenture-security]. This collateral usage refers to the security interest, rather than an unsecured debt instrument.
+
+### blanket_lien
+
+Collateral arrangement in which the lender holds a lien of equal seniority across substantially all of the borrower's unencumbered assets, providing recourse to those assets in the event of default.
 
 ### life_policy
 
 From Article 212(2) [CRR](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32013R0575), life insurance policies pledged as collateral will be considered if it meets certain criteria outlined in the article. These conditions include ,**but not limited to**, the credit institutions openly being assigned as the beneficiary and the life insurance company being notified of the pledge to the lending institution. Providing the conditions outlined in the article are met, the life insurance is eligble for use as collateral and the lender has a claim to some or all of the death benefit until the loan is repaid.
 
 ### cash
-
-_NEEDS Definition_
+Cash deposited or pledged to secure an exposure. For cash on deposit with the lending institution as eligible financial collateral, see [CRR, Article 197(1)(a)][cash-collateral].
 
 ### security
 
 This identifies that the piece of collateral used is a security, as mapped via the security schema and linked to the collateral schema using the collateral's `security_id` property.
 
+### trade_receivables
+Reference:  Trade receivables as defined in paragraph 85(c) of part 2 of Annex V to the
+amended Implementing Regulation (EU) No 680/2014.
+> Trade receivables includes loans granted on the basis of bills or other documents that give the right to receive the proceeds of transactions for the sale of goods or provision of services (i.e. on the basis of “trade credit” as defined in Annex A to Regulation (EU) No 549/2013)
+This type of instrument includes all factoring and similar transactions, such as acceptances, outright purchase of trade receivables, forfaiting, discounting of invoices, bills of exchange, commercial papers and other claims, on the condition that the credit institution buys the trade receivables (both with and without recourse to the debtor).
+Notably, accounts receivable stemming from sales of non-banking products by credit institutions are not trade receivables if the creditor has not bought them from a third party.
+
 ### auto
 
 This identifies a motor vehicle (such as an automobile, truck, or other types of vehicles) that is pledged by a borrower as collateral to secure a loan. If the borrower defaults on the loan, the lender has the legal right to seize the vehicle and sell it to recover the outstanding debt.
 
+### auto_other
+
+This identifies any other motor vehicle not covered in other attributes that is pledged by a borrower as collateral to secure a loan. If the borrower defaults on the loan, the lender has the legal right to seize the vehicle and sell it to recover the outstanding debt.
+
+### car
+
+This identifies a standard passenger vehicle (sedan, coupe, hatchback) that is pledged by a borrower as collateral to secure a loan. If the borrower defaults on the loan, the lender has the legal right to seize the vehicle and sell it to recover the outstanding debt.
+
+### convertible
+
+This identifies a vehicle with a retractable roof for open-air or enclosed driving that is pledged by a borrower as collateral to secure a loan. If the borrower defaults on the loan, the lender has the legal right to seize the vehicle and sell it to recover the outstanding debt.
+
+### luxury
+
+This identifies a premium vehicle that offers high-end features, superior materials, advanced technology, and enhanced comfort that is pledged by a borrower as collateral to secure a loan. If the borrower defaults on the loan, the lender has the legal right to seize the vehicle and sell it to recover the outstanding debt.
+
+### sport
+
+This identifies a high-performance automobile typically designed with enhanced speed, acceleration, handling, and sporty aesthetics that is pledged by a borrower as collateral to secure a loan. If the borrower defaults on the loan, the lender has the legal right to seize the vehicle and sell it to recover the outstanding debt.
+
+### suv
+
+This identifies a sport utility vehicle combining on-road comfort and off-road capability that is pledged by a borrower as collateral to secure a loan. If the borrower defaults on the loan, the lender has the legal right to seize the vehicle and sell it to recover the outstanding debt.
+
+### truck
+
+This identifies a motor vehicle designed for transporting cargo that is pledged by a borrower as collateral to secure a loan. If the borrower defaults on the loan, the lender has the legal right to seize the vehicle and sell it to recover the outstanding debt.
+
+### van
+
+This identifies a box-like motor vehicle for passengers or cargo, including minivans and full-size vans that is pledged by a borrower as collateral to secure a loan. If the borrower defaults on the loan, the lender has the legal right to seize the vehicle and sell it to recover the outstanding debt.
+
 ### other
 
-_NEEDS Definition_
+Collateral that does not fall within any of the collateral types above. Use a more specific type where the nature of the collateral is known and a corresponding category exists.
 
 # Agreement
 
@@ -1561,6 +2010,7 @@ _NEEDS Definition_
 │   ├── fbf
 │   │   └── afb
 │   └── other_isda
+├── right_to_set_off
 └── other
 ```
 
@@ -1650,6 +2100,10 @@ https://theotcspace.com/knowledge_item/afb-agreement-federation-bancaire-francai
 ### other_isda
 
 Any other ISDA agreement.
+
+### right_to_set_off
+
+This represents a legal agreement allowing deposits and loans with the same counterparty to be netted when reported on the balance assuming the entity intends to settle on a net basis.
 
 ### other
 
@@ -1862,3 +2316,30 @@ Loans in the segment that were charged-off due to bankruptcy during the reportin
 [ecbexamples]: https://www.ecb.europa.eu/pub/pdf/other/ecb-boe_case_better_functioning_securitisation_marketen.pdf
 [investopedia-education-loan]: https://www.investopedia.com/terms/e/education-loan.asp
 [fed-capital-assesments]: https://www.federalreserve.gov/reportforms/forms/FR_Y-14Q20150331_i.pdf#page=22
+
+[fha-projects]: https://www.hud.gov/program_offices/housing/mfh/progdesc
+[hud235]: https://www.federalregister.gov/documents/2015/04/03/2015-07597/federal-housing-administration-fha-removal-of-section-235-home-ownership-program-regulations
+[central-bank-facilities]: https://www.bankofengland.co.uk/sterling-monetary-framework/report-2019-21
+[performance-bonds]: https://www.acquisition.gov/far/28.001#:~:text=Performance%20bond
+[documentary-credit]: https://www.federalreserve.gov/econres/notes/feds-notes/trade-finance-activities-of-u-s-banks-what-the-data-can-tell-us-20260508.html
+[standby-credit]: https://www.law.cornell.edu/cfr/text/12/337.2#a
+[credit-definitions]: https://www.law.cornell.edu/cfr/text/12/3.2#:~:text=standby%20letter%20of%20credit
+[sft-type-example]: https://github.com/SuadeLabs/fire/blob/master/documentation/properties/sft_type.md
+[unfunded-participation]: https://disclosures.ifc.org/project-detail/SII/50370/gpc-urp
+[warranty-definition]: https://www.acquisition.gov/far/2.101#:~:text=Warranty%20means
+[collateral-guarantees]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575#:~:text=Additional%20requirements%20for%20guarantees
+[cash-collateral]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575#:~:text=Cash%20on%20deposit
+[debenture-security]: https://www.gov.uk/hmrc-internal-manuals/debt-management-and-banking/dmbm655260
+
+[equity-sec-stocks]: https://www.investor.gov/introduction-investing/investing-basics/investment-products/stocks#:~:text=What%20kinds%20of%20stocks%20are%20there
+[equity-crr-cet1]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575#:~:text=Article%2028
+[equity-tarp-cpp]: https://home.treasury.gov/news/press-releases/hp1207#:~:text=senior%20preferred%20shares
+[equity-fed-preferred]: https://www.federalreserve.gov/frrs/regulations/iidefinition-of-qualifying-capital-for-the-risk-based-capital-ratio.htm#:~:text=Noncumulative%20and%20cumulative%20features
+[equity-treasury-ally]: https://home.treasury.gov/news/press-releases/tg1014#:~:text=Mandatory%20Convertible%20Preferred
+[equity-reit-preferred]: https://www.federalreserve.gov/apps/reportingforms/Download/DownloadAttachment?guid=cac26886-1dad-49d3-9799-dc937cee8907
+[equity-ias32]: https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2022/issued/part-a/ias-32-financial-instruments-presentation.pdf?bypass=on
+[equity-speculative]: https://www.bis.org/committees/bcbs/basel-framework/standard/cre/20/inforce/2023-01-01/published/2022-12-08#:~:text=20.58
+[equity-fed-trups]: https://www.federalreserve.gov/frrs/regulations/iidefinition-of-qualifying-capital-for-the-risk-based-capital-ratio.htm#:~:text=Trust%20preferred%20securities%20are%20defined
+[equity-main-index]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575#:~:text=Article%20224
+[equity-ciu-assets]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32015R0061#:~:text=Article%2015
+[equity-ias33]: https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2024/issued/part-a/ias-33-earnings-per-share.pdf?bypass=on

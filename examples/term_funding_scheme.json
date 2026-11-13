@@ -1,0 +1,110 @@
+{
+  "title": "term_funding_scheme",
+  "comment": "Funding drawn under the Bank of England Term Funding Scheme, shown as its asset and liability legs under the same deal.",
+  "data": {
+    "security": [
+      {
+        "id": "term_funding_scheme",
+        "date": "2025-10-06T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest": 0,
+        "asset_liability": "asset",
+        "balance": -33283662900,
+        "currency_code": "GBP",
+        "customer_id": "cedar",
+        "deal_id": "123123",
+        "end_date": "2025-12-03T00:00:00+00:00",
+        "interest_repayment_frequency": "annually",
+        "isin_code": "LOAN52208742",
+        "issuer_id": "willow",
+        "maturity_date": "2025-12-03T00:00:00+00:00",
+        "movement": "asset",
+        "mtm_clean": -33283662900,
+        "mtm_dirty": -33283662895,
+        "notional_amount": -33283662900,
+        "on_balance_sheet": true,
+        "product_name": "A: Loan Pool",
+        "purpose": "single_collateral_pool",
+        "regulatory_book": "banking_book",
+        "rehypothecation": true,
+        "reporting_id": "iris",
+        "reporting_entity_name": "iris",
+        "sft_type": "term_funding_scheme",
+        "start_date": "2025-04-06T00:00:00+00:00",
+        "type": "other",
+        "trade_date": "2025-04-06T00:00:00+00:00"
+      },
+      {
+        "id": "term_funding_scheme2",
+        "date": "2025-10-06T00:00:00+00:00",
+        "accounting_treatment": "amortised_cost",
+        "accrued_interest": 174827453,
+        "asset_liability": "liability",
+        "balance": 25174827453,
+        "currency_code": "GBP",
+        "customer_id": "cedar1",
+        "deal_id": "123123",
+        "end_date": "2025-12-03T00:00:00+00:00",
+        "interest_repayment_frequency": "quarterly",
+        "isin_code": "LOAN52208742",
+        "issuer_id": "willow",
+        "last_payment_date": "2025-12-03T00:00:00+00:00",
+        "maturity_date": "2025-12-03T00:00:00+00:00",
+        "movement": "cash",
+        "mtm_clean": 25000000000,
+        "mtm_dirty": 25174827448,
+        "next_payment_date": "2025-11-07T00:00:00+00:00",
+        "notional_amount": 25000000000,
+        "on_balance_sheet": true,
+        "product_name": "L: TFS Repo Float",
+        "rate": 4,
+        "regulatory_book": "banking_book",
+        "rehypothecation": false,
+        "reporting_id": "iris",
+        "reporting_entity_name": "iris",
+        "sft_type": "term_funding_scheme",
+        "start_date": "2021-12-03T00:00:00+00:00",
+        "type": "other",
+        "trade_date": "2021-12-03T00:00:00+00:00"
+      }
+    ],
+    "customer": [
+      {
+        "id": "cedar",
+        "date": "2025-10-05T00:00:00+00:00",
+        "country_code": "GB",
+        "credit_impaired": false,
+        "intra_group": false,
+        "legal_entity_name": "sage",
+        "moodys_lt": "aa3",
+        "name": "sage",
+        "type": "central_bank",
+        "status": "established"
+      },
+      {
+        "id": "cedar1",
+        "date": "2025-10-05T00:00:00+00:00",
+        "country_code": "GB",
+        "credit_impaired": false,
+        "intra_group": false,
+        "legal_entity_name": "sage",
+        "moodys_lt": "aa3",
+        "name": "sage",
+        "type": "central_bank",
+        "status": "established"
+      }
+    ],
+    "issuer": [
+      {
+        "id": "willow",
+        "date": "2025-10-06T00:00:00+00:00",
+        "country_code": "GB",
+        "intra_group": true,
+        "legal_entity_name": "willow",
+        "moodys_lt": "a3",
+        "name": "willow",
+        "type": "building_society"
+      }
+    ]
+  }
+}

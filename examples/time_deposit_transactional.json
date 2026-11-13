@@ -1,0 +1,43 @@
+{
+  "title": "time_deposit_transactional",
+  "comment": "A fixed-term deposit held in a transactional account, where salaries, income or payments are regularly credited and debited.",
+  "data": {
+    "account": [
+      {
+        "id": "time_deposit_transactional",
+        "date": "2025-10-06T00:00:00+00:00",
+        "balance": 20285863,
+        "guarantee_amount": 2193334,
+        "rate": 4.7,
+        "accrued_interest": 285863,
+        "start_date": "2025-06-18T00:00:00+00:00",
+        "end_date": "2025-12-16T00:00:00+00:00",
+        "trade_date": "2025-06-18T00:00:00+00:00",
+        "on_balance_sheet": true,
+        "ledger_code": "A423423",
+        "currency_code": "GBP",
+        "accounting_treatment": "amortised_cost",
+        "country_code": "GR",
+        "status": "transactional",
+        "guarantee_scheme": "gb_fscs",
+        "rate_type": "fixed",
+        "purpose": "deposit",
+        "asset_liability": "liability",
+        "regulatory_book": "banking_book",
+        "type": "time_deposit",
+        "customer_id": "qwd234"
+      }
+    ],
+    "customer": [
+      {
+        "id": "qwd234",
+        "date": "2025-10-06T00:00:00+00:00",
+        "type": "corporate",
+        "legal_entity_name": "apples",
+        "name": "carrots",
+        "country_code": "GR",
+        "national_reporting_code": "TREEAS"
+      }
+    ]
+  }
+}

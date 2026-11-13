@@ -43,87 +43,91 @@ Primary asset classes are Foreign Exchange, Interest Rates, Credit, Equities, Co
 ```
 
 ### fx
-*Needs definition*
+Derivatives whose underlying risk is the exchange rate between currencies, such as currency forwards, swaps and options. See the [BIS OTC derivatives asset classes][bis-otc].
 
 ### ir
-*Needs definition*
+Derivatives linked to interest rates or interest-bearing instruments, such as interest rate swaps, forward rate agreements and interest rate options. See the [BIS OTC derivatives asset classes][bis-otc].
 
 ### inflation
-*Needs definition*
+Derivatives with payments linked to changes in a price index or inflation rate. FIRE groups these under **ir**. The [ECB explanation of inflation-linked swaps][ecb-inflation] describes exchanging fixed payments for inflation-linked payments.
 
 ### cr
-*Needs definition*
+Derivatives transferring credit risk relating to a reference entity or group of entities, such as credit default swaps. See the [BIS OTC derivatives asset classes][bis-otc].
 
 ### cr_index
-*Needs definition*
+Credit derivatives referencing an index of multiple reference entities, rather than one entity. See the [BIS definitions of credit derivatives][bis-otc].
 
 ### cr_single
-*Needs definition*
+Credit derivatives referencing a single entity, such as a single-name credit default swap. See the [BIS definitions of credit derivatives][bis-otc].
 
 ### eq
-*Needs definition*
+Derivatives linked to equity prices or returns, including individual shares and equity indices. See the [BIS OTC derivatives asset classes][bis-otc].
 
 ### eq_index
-*Needs definition*
+Equity derivatives referencing a share-price index. See the [BIS definitions of equity derivatives][bis-otc].
 
 ### eq_single
-*Needs definition*
+Equity derivatives referencing the shares of a single issuer. See the [BIS definitions of equity derivatives][bis-otc].
 
 ### co
-*Needs definition*
+Derivatives linked to commodity prices or indices. FIRE subdivides this category into metals, energy, agricultural and other commodities. The commodity names below are described in [Regulation (EU) 2017/585, Annex, Table 2][commodity-taxonomy].
 
 ### metals
-*Needs definition*
+Commodity derivatives referencing [metals, including base and precious metals][commodity-taxonomy].
 
 ### precious_metals
-*Needs definition*
+Commodity derivatives referencing [precious metals][commodity-taxonomy].
 
 ### gold
-*Needs definition*
+Commodity derivatives referencing [gold][commodity-taxonomy].
 
 ### silver
-*Needs definition*
+Commodity derivatives referencing [silver][commodity-taxonomy].
 
 ### platinum
-*Needs definition*
+Commodity derivatives referencing [platinum][commodity-taxonomy].
 
 ### palladium
-*Needs definition*
+Commodity derivatives referencing [palladium][commodity-taxonomy].
 
 ### energy
-*Needs definition*
+Commodity derivatives referencing [energy commodities][commodity-taxonomy].
 
 ### oil
-*Needs definition*
+Commodity derivatives referencing [oil][commodity-taxonomy].
 
 ### gas
-*Needs definition*
+Commodity derivatives referencing [natural gas][commodity-taxonomy].
 
 ### coal
-*Needs definition*
+Commodity derivatives referencing [coal][commodity-taxonomy].
 
 ### electricity
-*Needs definition*
+Commodity derivatives referencing [electricity][commodity-taxonomy].
 
 ### agri
-*Needs definition*
+Commodity derivatives referencing [agricultural commodities][commodity-taxonomy].
 
 ### sugar
-*Needs definition*
+Commodity derivatives referencing [sugar][commodity-taxonomy].
 
 ### coffee
-*Needs definition*
+Commodity derivatives referencing [coffee][commodity-taxonomy].
 
 ### corn
-*Needs definition*
+Commodity derivatives referencing [corn (maize)][commodity-taxonomy].
 
 ### co_other
-*Needs definition*
+Commodity derivatives whose underlying commodity does not fall within the metals, energy or agricultural categories in this hierarchy.
 
 ### other
-*Needs definition*
+Derivatives whose underlying asset class does not fall within the foreign exchange, interest rate, credit, equity or commodity categories above.
 
 
 ---
 
 [wiki]: https://en.wikipedia.org/wiki/Asset_classes
+
+[bis-otc]: https://data.bis.org/topics/OTC_DER
+[ecb-inflation]: https://www.ecb.europa.eu/pub/pdf/other/mb200309_focus04.en.pdf
+[commodity-taxonomy]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0585#:~:text=Table%202

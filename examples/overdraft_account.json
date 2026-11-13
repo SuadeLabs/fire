@@ -1,28 +1,43 @@
 {
   "title": "overdraft_account",
-  "comment": "Overdrafts should have a negative balance, and asset_liability as asset",
+  "comment": "A current account in overdraft.",
   "data": {
     "account": [
       {
-        "date": "2022-04-20T00:00:00",
-        "id": "overdraft",
-        "accrued_interest": -50,
-        "asset_liability": "asset",
-        "balance": -1000,
-        "customer_id": "overdraft_customer",
+        "id": "drawn_overdraft",
+        "date": "2025-10-06T00:00:00+00:00",
+        "ccf": 0,
+        "balance": -201419911,
+        "limit_amount": -900000000,
+        "guarantee_amount": 0,
+        "rate": 8.75,
+        "start_date": "1996-12-26T00:00:00+00:00",
+        "trade_date": "2025-10-06T00:00:00+00:00",
         "on_balance_sheet": true,
-        "start_date": "2022-04-20T00:00:00",
-        "status": "active",
-        "trade_date": "2022-04-20T00:00:00",
-        "type": "current"
+        "ledger_code": "A234234",
+        "currency_code": "GBP",
+        "accounting_treatment": "loans_and_recs",
+        "country_code": "GB",
+        "status": "transactional",
+        "guarantee_scheme": "gb_fscs",
+        "purpose": "deposit",
+        "asset_liability": "asset",
+        "regulatory_book": "banking_book",
+        "type": "current",
+        "customer_id": "rqew123"
       }
     ],
     "customer": [
       {
-        "date": "2022-04-20T00:00:00",
-        "id": "overdraft_customer",
+        "id": "rqew123",
+        "date": "2025-10-06T00:00:00+00:00",
+        "type": "corporate",
+        "legal_entity_name": "mangoes",
+        "name": "kiwis",
+        "parent_id": "CU6789",
+        "sic_code": 68100,
         "country_code": "GB",
-        "type": "natural_person"
+        "national_reporting_code": "FREEAM"
       }
     ]
   }

@@ -26,7 +26,7 @@
         "id": "Corp_Jul28",
         "date": "2019-01-01T00:00:00",
         "type": "bond",
-        "underlying_issuer_id": "us_corp",
+        "issuer_id": "us_corp",
         "isin_code": "XS1234567890",
         "currency_code": "USD",
         "issue_date": "2018-07-01 00:00:00",

@@ -74,9 +74,8 @@
         "type": "index",
         "currency_code": "USD",
         "start_date": "2021-03-31T00:00:00",
-        "end_date": "",
         "purpose": "reference",
-        "mtm": 100,
+        "mtm_dirty": 100,
         "index_composition": [
           {"reference_id": "SX5E", "weight": 0.25},
           {"reference_id": "FTSE100", "weight": 0.25},

@@ -128,7 +128,7 @@ From the [Open Risk Manual][orm]:
 > **External (Market) Indicators**
     Credit spreads
     Credit default swap prices for the borrower
-    Length of time (duration) or the extent (degree) to which the fair value of a financial asset is less then the amortized cost
+    Length of time (duration) or the extent (degree) to which the fair value of a financial asset is less then the amortised cost
     Other market information related to the borrower
     Significant change in the value of the collateral supporting the obligation or in the quality of third-party guarantees or credit enhancements, which are expected to reduce the borrower’s economic incentive to make scheduled contractual payments or to otherwise have an effect on the probability of a default occurring. For example, if the value of collateral declines because house prices decline, borrowers in some jurisdictions have a greater incentive to default on their mortgages.
     Actual or expected significant downgrade in an external credit rating

@@ -1,0 +1,57 @@
+{
+  "title": "securitisation_investor_erba",
+  "comment": "Investor position in a traditional, non-STS securitisation risk-weighted under SEC-ERBA: one securitisation transaction record linked by securitisation_id to the tranche held by the reporting institution.",
+  "data": {
+    "security": [
+      {
+        "id": "traditional_securitisation_6",
+        "date": "2025-02-21T00:00:00+00:00",
+        "type": "securitisation",
+        "securitisation_id": "XS666666",
+        "securitisation_unique_id": "ABCDEF1234567890XY12N202401",
+        "securitisation_role": "investor",
+        "securitisation_type": "traditional",
+        "issuance_type": "public_offering",
+        "originator_id": "ABCDEF1234567890XY12",
+        "excess_spread_type": "fixed_trapped",
+        "repayment_type": "sequential",
+        "currency_code": "GBP",
+        "issue_size": 1000000000,
+        "issue_date": "2024-10-01T00:00:00+00:00",
+        "maturity_date": "2056-09-14T00:00:00+00:00",
+        "end_date": "2046-09-14T00:00:00+00:00",
+        "notional_amount": 1000000000,
+        "balance": 950000000,
+        "risk_weight_std": 0.8,
+        "country_code": "GB",
+        "risk_country_code": "GB"
+      },
+      {
+        "id": "traditional_securitisation_6_mezz",
+        "date": "2025-02-21T00:00:00+00:00",
+        "type": "rmbs",
+        "securitisation_id": "XS666666",
+        "asset_liability": "asset",
+        "on_balance_sheet": true,
+        "isin_code": "XS6666660002",
+        "currency_code": "GBP",
+        "issue_size": 100000000,
+        "notional_amount": 90000000,
+        "balance": 10000000,
+        "mtm_dirty": 10000000,
+        "issue_date": "2024-10-01T00:00:00+00:00",
+        "maturity_date": "2056-09-14T00:00:00+00:00",
+        "regulatory_book": "banking_book",
+        "accounting_treatment": "amortised_cost",
+        "cr_approach": "sec_erba",
+        "seniority": "subordinated_secured",
+        "attachment_point": 0.1,
+        "detachment_point": 0.2,
+        "cqs_standardised": 6,
+        "snp_lt": "a",
+        "country_code": "GB",
+        "risk_country_code": "GB"
+      }
+    ]
+  }
+}

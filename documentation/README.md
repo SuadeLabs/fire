@@ -11,7 +11,7 @@ Please make sure all property markdown files in documentation/properties/ folder
 
 ```
 
---- 
+---
 layout:			property
 title:			"name of the data item as it appears in the schemas (ie. lowercase)"
 schemas:		[a list of schemas where this data_item is used]
@@ -20,7 +20,7 @@ schemas:		[a list of schemas where this data_item is used]
 ```
 
 # JSON
-JSON is short for "Javascript Object Notation" and defines the format for an "object". An object in programming terms can be a variable, data structure or a function (basically anything). More commonly, in Object-Oriented programming an object typically refers to an Instance of a Class. That is to say, a specific description of something more general. Like a Goat being an instance of the Class "Animal". 
+JSON is short for "Javascript Object Notation" and defines the format for an "object". An object in programming terms can be a variable, data structure or a function (basically anything). More commonly, in Object-Oriented programming an object typically refers to an Instance of a Class. That is to say, a specific description of something more general. Like a Goat being an instance of the Class "Animal".
 
 For our purposes, we can just consider JSON to be the data and a JSON-schema to just define the format for that data, ie. what it needs to *look like* so the computer can understand where things are when it receives it.
 
@@ -47,14 +47,14 @@ JSON is just text, so the formatting is purely visual, even the order (see above
 }
 ```
 
-You can visit: [http://jsonprettyprint.com/](http://jsonprettyprint.com/) to help with this formatting.
+You can visit: [http://jsonlint.com/](http://jsonlint.com/) to help with this formatting.
 
 
 # JSON-Schema
 While any data sent/received in JSON format will always look like the above, we need a way to make sure it is what we are expecting. For this we define a JSON-Schema which basically describes what the JSON formatted data should look like.
 
 ### Description
-What if we want to add a little more information to describe our property? This is where the "description" parameter comes in. We add some curly brackets where the "value" is supposed to be and add a description as so: 
+What if we want to add a little more information to describe our property? This is where the "description" parameter comes in. We add some curly brackets where the "value" is supposed to be and add a description as so:
 
 ```javascript
 {"name": {"description": "A little blurb about this property"} }
@@ -88,29 +88,29 @@ A **null** value means the value is unknown. Note that this is different from an
 
 An **integer** is a number without a fraction or exponent part.
 
-> ex 1. 4  
+> ex 1. 4
 > ex 2. 26908289076124561671021
 
 A **number** is a number with or without a fraction or exponent part.
 
-> ex 1. 26908289076124561671021  
+> ex 1. 26908289076124561671021
 > ex 2. 269082.89076124561671021
 
 A **string** is a list of characters (except " or \ ) inside "quotes". You can think of a string as a word. Note that the "word" can also contain numbers (like your national insurance number). But also note that numbers represented as strings need to be converted back to numbers if you want to add or multiply them.
 
-> ex 1. "sheep"  
+> ex 1. "sheep"
 > ex 2. "AS546NB8"
 
-A **boolean** is simple *true* or *false* flag. Note that the true/false flag is lowercase and not inside "quotes". 
+A **boolean** is simple *true* or *false* flag. Note that the true/false flag is lowercase and not inside "quotes".
 
-> ex 1. true  
+> ex 1. true
 > ex 2. false
 
 If you were wondering, the word boolean comes from a founding father of modern logic, the English mathematician [George Boole][boole].
 
 An **array** is a list of the other types, separated by commas and inside square brackets [ ].
 
-> ex 1. [2, 235, 34634, 34]  
+> ex 1. [2, 235, 34634, 34]
 > ex 2. ["sheep", "sheep_dog", "fox"]
 
 An **object** is a JSON object, or in other words, the thing we are defining. So this allows for nesting of objects within objects. This is valid JSON, but adds time and complexity in the decoding/parsing process so generally should be avoided.
@@ -128,18 +128,18 @@ An **object** is a JSON object, or in other words, the thing we are defining. So
 ```
 
 # Restrictions
-Once we have given a *description*, a *type* and maybe a *format* for our property value we can implement some sanity checks by applying further restrictions. 
+Once we have given a *description*, a *type* and maybe a *format* for our property value we can implement some sanity checks by applying further restrictions.
 
-Restrictions can come in the form of visual presentation like *formats* or *enums*, or they can come in the form of simple quantitative sanity-checks. Both are extremely useful to narrow down the possibilities of what might be considered as "valid data" according to the schema. These restrictions not only ensure that bad data is caught at the most granular level, but it also ensures that common semantics are used to define the same thing. It is the first step towards a harmonised standard. In other words, if a loan currency is US Dollar, let's agree to call it "USD" instead of "US_Dollar", "dollar-USA", "011" or "$US." 
+Restrictions can come in the form of visual presentation like *formats* or *enums*, or they can come in the form of simple quantitative sanity-checks. Both are extremely useful to narrow down the possibilities of what might be considered as "valid data" according to the schema. These restrictions not only ensure that bad data is caught at the most granular level, but it also ensures that common semantics are used to define the same thing. It is the first step towards a harmonised standard. In other words, if a loan currency is US Dollar, let's agree to call it "USD" instead of "US_Dollar", "dollar-USA", "011" or "$US."
 
 Restrictions can be difficult to implement as you need to consider all potential edge cases. Account balances are generally positive but sometimes can be negative, too. Leveraging widely used [ISO][iso] or [IFRS][ifrs] standards are therefore a great way to ensure you have considered the full spectrum of possible values. It also means that, more often than not, firms will already be familiar with and recording data in line with these standards.
 
 ### Formats
-How would you represent a date value like 31 August 2014? 
+How would you represent a date value like 31 August 2014?
 - We could make use of a string type: "31 August 2014" but then "Aug 31 2014" would also be valid and we would have trouble ordering our data by date.
 - We could accept an integer type: 31082014 but then 1235 would also be a valid integer. And even if we restricted it to 8-digits, we would have to remember to make sure single digit months have a leading zeros and still this doesn't tell us if it is 31 August 2014 or 14 February 8013.
 
-You get the idea, sometimes we need more information. This is where the **format** parameter comes in. 
+You get the idea, sometimes we need more information. This is where the **format** parameter comes in.
 
 The following is the list of the formats specified in the JSON Schema specification:
 
@@ -150,7 +150,7 @@ The following is the list of the formats specified in the JSON Schema specificat
 - "ipv6": IPv6 address, as defined in [RFC 2373, section 2.2](https://tools.ietf.org/html/rfc2373#section-2.2).
 - "uri": A universal resource identifier (URI), according to [RFC3986](https://tools.ietf.org/html/rfc3986).
 
-The one we use most commonly from this is the **"date-time"** format and it basically means your dates and timestamps need to be a valid string but also look like this: YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601. 
+The one we use most commonly from this is the **"date-time"** format and it basically means your dates and timestamps need to be a valid string but also look like this: YYYY-MM-DDTHH:MM:SSZ in accordance with ISO 8601.
 
 So for our example, if this is your schema:
 ```javascript

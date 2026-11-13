@@ -61,10 +61,16 @@ Note that ECB equivalent of TFS is the Targeted longer-term refinancing operatio
 [tltro]: https://www.ecb.europa.eu/mopo/implement/omo/tltro/html/index.en.html 
 
 ### bond_borrow
+A securities borrowing transaction in which the firm receives bonds and commits to return equivalent securities on an agreed future date or on request. See [SFTR, Article 3(7)][sftr-lending].
+
 ### bond_loan
+A securities lending transaction in which the firm transfers bonds to a borrower who commits to return equivalent securities on an agreed future date or on request. See [SFTR, Article 3(7)][sftr-lending].
+
 ### stock_borrow
+A securities borrowing transaction in which the firm receives shares and commits to return equivalent securities on an agreed future date or on request. See [SFTR, Article 3(7)][sftr-lending].
+
 ### stock_loan
-*Needs definition*
+A securities lending transaction in which the firm transfers shares to a borrower who commits to return equivalent securities on an agreed future date or on request. See [SFTR, Article 3(7)][sftr-lending].
 
 
 **example**
@@ -89,3 +95,5 @@ Note that ECB equivalent of TFS is the Targeted longer-term refinancing operatio
 | 9  | 5       | 18/08/16 | 16/08/16   | 15/09/16 | 18/08/16   | 50        |              | abs_auto          | asset      | asset           |
 
 [sftr]: http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32015R2365&qid=1466153681918
+
+[sftr-lending]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32015R2365#:~:text=equivalent%20securities%20or%20commodities

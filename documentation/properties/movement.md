@@ -7,7 +7,7 @@ schemas:	[loan, security]
 
 ---
 
-The **movement** parameter describes how an asset or liability arrived to the firm.
+The **movement** parameter describes how an asset or liability arrived or left the firm.
 
 # loan
 
@@ -59,6 +59,6 @@ From Central Bank Open Market Operations
 A a securities issuance of stocks or bonds (determined by the security - *type*)
 
 ### other
-*Needs definition*
+A security movement that is not a cash or asset leg of a securities financing transaction, a central bank open market operation, or an issuance, as described by the categories above.
 
 [eu]: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52015PC0472

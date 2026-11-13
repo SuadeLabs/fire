@@ -21,6 +21,6 @@ The scale is based on an internal assessment made by the reporting intitution. I
 If the reporting instituion has defined 5 different profiles for their investors, a **risk_profile** of 1 will represent the most conservative investors, while a **risk_profile** of 5 will represent the most risky ones.
 
 ---
-[cfa_institute]: https://www.cfainstitute.org/-/media/documents/article/rf-brief/rfbr-v1-n1-1-pdf.ashx
+[cfa_institute]: https://rpc.cfainstitute.org/sites/default/files/-/media/documents/article/rf-brief/rfbr-v1-n1-1-pdf.pdf
 [mifid_ii]: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32014L0065
 [us_finra_2011]: https://www.finra.org/rules-guidance/rulebooks/finra-rules/2111
