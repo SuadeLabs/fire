@@ -4,28 +4,28 @@
   "data": {
     "security": [
       {
-        "date": "2020-03-31T00:00:00",
+        "date": "2020-03-31T00:00:00Z",
         "id": "independent_amount",
         "customer_id": "corporate",
         "mna_id": "master_agreement",
         "type": "bond",
         "issuer_id": "Asian Development Bank",
         "isin_code": "NZADBDT007C4",
-        "issue_date": "2017-05-30T00:00:00",
-        "maturity_date": "2024-05-30T00:00:00",
+        "issue_date": "2017-05-30T00:00:00Z",
+        "maturity_date": "2024-05-30T00:00:00Z",
         "purpose": "independent_collateral_amount",
         "asset_liability": "liability",
         "currency_code": "NZD",
         "notional_amount": 100,
         "mtm_dirty": 17,
-        "trade_date": "2020-03-31T00:00:00",
-        "start_date": "2020-03-31T00:00:00",
+        "trade_date": "2020-03-31T00:00:00Z",
+        "start_date": "2020-03-31T00:00:00Z",
         "cqs_standardised": 1
       }
     ],
     "issuer": [
       {
-        "date": "2020-03-31T00:00:00",
+        "date": "2020-03-31T00:00:00Z",
         "id": "Asian Development Bank",
         "lei_code": "549300X0MVH42CY8Q105",
         "type": "mdb",
@@ -36,7 +36,7 @@
     ],
     "customer": [
       {
-        "date": "2020-03-31T00:00:00",
+        "date": "2020-03-31T00:00:00Z",
         "id": "corporate",
         "type": "corporate",
         "currency_code": "SGD",
@@ -46,7 +46,7 @@
     ],
     "agreement": [
       {
-        "date": "2020-03-31T00:00:00",
+        "date": "2020-03-31T00:00:00Z",
         "id": "master_agreement",
         "type": "isda",
         "base_currency_code": "SGD",
