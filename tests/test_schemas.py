@@ -212,8 +212,13 @@ class TestExamples:
         found = []
         for entity, records in example["data"].items():
             known = set(schema_properties(f"{entity}.json"))
-            extension = fire_load(f"{entity}.json", schemas_dir=EXTENSION_SCHEMAS_DIR)
-            known |= set(extension.get("properties", {}))
+            # Not every entity has a jurisdiction extension; a missing file
+            # just means there are no extension fields to allow.
+            if os.path.exists(os.path.join(EXTENSION_SCHEMAS_DIR, f"{entity}.json")):
+                extension = fire_load(
+                    f"{entity}.json", schemas_dir=EXTENSION_SCHEMAS_DIR
+                )
+                known |= set(extension.get("properties", {}))
             for index, record in enumerate(records):
                 found += [(entity, index, f) for f in sorted(set(record) - known)]
         return found
