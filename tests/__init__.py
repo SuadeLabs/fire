@@ -4,6 +4,9 @@ import os
 import requests
 from string import ascii_lowercase, digits
 
+from referencing import Registry
+from referencing.jsonschema import DRAFT7
+
 HOME = os.path.join(os.path.dirname(__file__), "..")
 SCHEMAS_DIR = os.path.join(HOME, "schemas")
 DOCS_DIR = os.path.join(HOME, "documentation", "properties")
@@ -121,6 +124,20 @@ def fire_stats():
         "unique_properties": len(uniq_properties),
         "data_combinations": format(decimal.Decimal(N), ".6e"),
     }
+
+
+def local_registry():
+    """
+    A registry of every schema in this checkout, keyed by the URL that $refs
+    use. Pass it to a validator so references resolve to the local files:
+    without one, jsonschema downloads them from GitHub master (deprecated, and
+    it tests master's schemas rather than this branch's), and with one, any
+    reference it doesn't hold is an error rather than a download.
+    """
+    return Registry().with_resources(
+        (SCHEMA_URL + name, DRAFT7.create_resource(fire_load(name)))
+        for name in SCHEMA_FILES
+    )
 
 
 def load_jsons(filenames, location):
