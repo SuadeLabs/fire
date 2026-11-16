@@ -5,7 +5,7 @@
     "security": [
       {
         "id": "bank_guarantee",
-        "date": "2019-01-01T00:00:00",
+        "date": "2019-01-01T00:00:00Z",
         "balance": 100000,
         "currency_code": "GBP",
         "asset_liability": "liability",
@@ -17,7 +17,7 @@
     "customer": [
       {
         "id": "corp_123_id",
-        "date": "2019-01-01T00:00:00",
+        "date": "2019-01-01T00:00:00Z",
         "type": "corporate",
         "country_code": "GB"
       }

@@ -5,7 +5,7 @@
     "derivative": [
       {
         "id": "corp_cds_5y",
-        "date": "2019-01-01T00:00:00",
+        "date": "2019-01-01T00:00:00Z",
         "asset_class": "cr_single",
         "type": "cds",
         "underlying_security_id": "Corp_Jul28",
@@ -14,9 +14,9 @@
         "delta":-1,
         "currency_code": "USD",
         "notional_amount": 100,
-        "trade_date": "2018-07-01T00:00:00",
-        "start_date": "2018-07-03T00:00:00",
-        "end_date": "2023-07-03T00:00:00",
+        "trade_date": "2018-07-01T00:00:00Z",
+        "start_date": "2018-07-03T00:00:00Z",
+        "end_date": "2023-07-03T00:00:00Z",
         "rate": 0.005,
         "settlement_type": "cash"
       }
@@ -24,20 +24,20 @@
     "security": [
       {
         "id": "Corp_Jul28",
-        "date": "2019-01-01T00:00:00",
+        "date": "2019-01-01T00:00:00Z",
         "type": "bond",
         "issuer_id": "us_corp",
         "isin_code": "XS1234567890",
         "currency_code": "USD",
-        "issue_date": "2018-07-01 00:00:00",
-        "maturity_date": "2028-07-01 00:00:00",
+        "issue_date": "2018-07-01T00:00:00Z",
+        "maturity_date": "2028-07-01T00:00:00Z",
         "cqs_standardised": 3
       }
     ],
     "issuer": [
       {
         "id": "us_corp",
-        "date": "2019-01-01T00:00:00",
+        "date": "2019-01-01T00:00:00Z",
         "type": "corporate",
         "country_code": "US",
         "snp_lt": "a_plus",

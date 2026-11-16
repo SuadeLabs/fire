@@ -5,8 +5,8 @@
     "agreement": [
       {
         "id": "MNA1",
-        "date": "2018-12-31 00:00:00",
-        "start_date": "2017-01-31 00:00:00",
+        "date": "2018-12-31T00:00:00Z",
+        "start_date": "2017-01-31T00:00:00Z",
         "country_code": "GB",
         "type": "isda"
       }
@@ -14,7 +14,7 @@
     "customer": [
       {
         "id": "customer_ccp",
-        "date": "2018-12-31 00:00:00",
+        "date": "2018-12-31T00:00:00Z",
         "type": "ccp",
         "country_code": "GB"
       }
@@ -22,9 +22,9 @@
     "security": [
       {
         "id": "collat_cash_posted_50",
-        "date": "2018-12-31 00:00:00",
-        "trade_date": "2018-12-31 00:00:00",
-        "start_date": "2018-12-31 00:00:00",
+        "date": "2018-12-31T00:00:00Z",
+        "trade_date": "2018-12-31T00:00:00Z",
+        "start_date": "2018-12-31T00:00:00Z",
         "asset_liability": "asset",
         "currency_code": "GBP",
         "balance": 5000,

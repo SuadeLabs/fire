@@ -4,7 +4,7 @@
   "data": {
     "security": [
       {
-        "date": "2020-03-31T00:00:00",
+        "date": "2020-03-31T00:00:00Z",
         "id": "im_posted_bond",
         "customer_id": "credit_insitution",
         "mna_id": "isda_master_agreement",
@@ -12,21 +12,21 @@
         "type": "bond",
         "issuer_id": "French Republic",
         "isin_code": "FR0000571218",
-        "issue_date": "1998-03-12T00:00:00",
-        "maturity_date": "2025-04-29T00:00:00",
+        "issue_date": "1998-03-12T00:00:00Z",
+        "maturity_date": "2025-04-29T00:00:00Z",
         "purpose": "independent_collateral_amount",
         "asset_liability": "asset",
         "currency_code": "EUR",
         "notional_amount": 100,
         "mtm_dirty": -145,
-        "trade_date": "2020-03-31T00:00:00",
-        "start_date": "2020-03-31T00:00:00",
+        "trade_date": "2020-03-31T00:00:00Z",
+        "start_date": "2020-03-31T00:00:00Z",
         "cqs_standardised": 1
       }
     ],
     "issuer": [
       {
-        "date": "2020-03-31T00:00:00",
+        "date": "2020-03-31T00:00:00Z",
         "id": "French Republic",
         "lei_code": "9695006J0AWHMYNZAL19",
         "type": "central_govt",
@@ -37,7 +37,7 @@
     ],
     "customer": [
       {
-        "date": "2020-03-31T00:00:00",
+        "date": "2020-03-31T00:00:00Z",
         "id": "credit_insitution",
         "type": "credit_institution",
         "currency_code": "GBP",
@@ -46,14 +46,14 @@
     ],
     "agreement": [
       {
-        "date": "2020-03-31T00:00:00",
+        "date": "2020-03-31T00:00:00Z",
         "id": "isda_master_agreement",
         "type": "isda",
         "base_currency_code": "GBP",
         "country_code": "GB"
       },
       {
-        "date": "2020-03-31T00:00:00",
+        "date": "2020-03-31T00:00:00Z",
         "id": "csa_agreement",
         "type": "isda",
         "base_currency_code": "EUR",

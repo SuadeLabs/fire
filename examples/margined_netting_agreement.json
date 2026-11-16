@@ -4,7 +4,7 @@
   "data": {
     "derivative": [
       {
-        "date": "2020-03-31T00:00:00",
+        "date": "2020-03-31T00:00:00Z",
         "id": "eur_10y_irs_fixed",
         "deal_id": "eur_10y_irs",
         "customer_id": "ccp_1",
@@ -16,14 +16,14 @@
         "position": "long",
         "currency_code": "EUR",
         "notional_amount": 10000,
-        "trade_date": "2019-02-25T00:00:00",
-        "start_date": "2020-02-27T00:00:00",
-        "end_date": "2029-02-27T00:00:00",
+        "trade_date": "2019-02-25T00:00:00Z",
+        "start_date": "2020-02-27T00:00:00Z",
+        "end_date": "2029-02-27T00:00:00Z",
         "rate": 0.01,
         "mtm_dirty": 70
       },
       {
-        "date": "2020-03-31T00:00:00",
+        "date": "2020-03-31T00:00:00Z",
         "id": "eur_10y_irs_floating",
         "deal_id": "long_eur_10y_irs",
         "customer_id": "counterparty_1",
@@ -38,14 +38,14 @@
         "rate": 0.0025,
         "underlying_index": "EURIBOR",
         "underlying_index_tenor": "3m",
-        "trade_date": "2019-02-25T00:00:00",
-        "start_date": "2020-02-27T00:00:00",
-        "end_date": "2029-02-27T00:00:00"
+        "trade_date": "2019-02-25T00:00:00Z",
+        "start_date": "2020-02-27T00:00:00Z",
+        "end_date": "2029-02-27T00:00:00Z"
       }
     ],
     "customer": [
       {
-        "date": "2020-03-31T00:00:00",
+        "date": "2020-03-31T00:00:00Z",
         "id": "ccp_1",
         "type": "ccp",
         "currency_code": "GBP",
@@ -53,7 +53,7 @@
         "incurred_cva": 0
       },
       {
-        "date": "2020-03-31T00:00:00",
+        "date": "2020-03-31T00:00:00Z",
         "id": "counterparty_1",
         "type": "credit_institution",
         "currency_code": "GBP",
@@ -62,14 +62,14 @@
     ],
     "agreement": [
       {
-        "date": "2020-03-31T00:00:00",
+        "date": "2020-03-31T00:00:00Z",
         "id": "isda_master_agreement",
         "type": "isda",
         "base_currency_code": "GBP",
         "country_code": "GB"
       },
       {
-        "date": "2020-03-31T00:00:00",
+        "date": "2020-03-31T00:00:00Z",
         "id": "csa_daily_margined",
         "type": "isda",
         "base_currency_code": "EUR",
@@ -82,7 +82,7 @@
     ],
     "security": [
       {
-        "date": "2020-03-31T00:00:00",
+        "date": "2020-03-31T00:00:00Z",
         "id": "vm_eur_received",
         "customer_id": "ccp_1",
         "mna_id": "isda_master_agreement",
@@ -93,11 +93,11 @@
         "currency_code": "EUR",
         "notional_amount": 55,
         "balance": 55,
-        "trade_date": "2020-03-31T00:00:00",
-        "start_date": "2020-03-31T00:00:00"
+        "trade_date": "2020-03-31T00:00:00Z",
+        "start_date": "2020-03-31T00:00:00Z"
       },
       {
-        "date": "2020-03-31T00:00:00",
+        "date": "2020-03-31T00:00:00Z",
         "id": "im_bond_posted",
         "customer_id": "ccp_1",
         "mna_id": "isda_master_agreement",
@@ -105,21 +105,21 @@
         "type": "bond",
         "issuer_id": "French Republic",
         "isin_code": "XS1234567890",
-        "issue_date": "2018-07-01 00:00:00",
-        "maturity_date": "2028-07-01 00:00:00",
+        "issue_date": "2018-07-01T00:00:00Z",
+        "maturity_date": "2028-07-01T00:00:00Z",
         "purpose": "independent_collateral_amount",
         "asset_liability": "asset",
         "currency_code": "EUR",
         "notional_amount": 8,
         "mtm_dirty": -10,
-        "trade_date": "2020-03-31T00:00:00",
-        "start_date": "2020-03-31T00:00:00",
+        "trade_date": "2020-03-31T00:00:00Z",
+        "start_date": "2020-03-31T00:00:00Z",
         "cqs_standardised": 1
       }
     ],
     "issuer": [
       {
-        "date": "2020-03-31T00:00:00",
+        "date": "2020-03-31T00:00:00Z",
         "id": "French Republic",
         "lei_code": "9695006J0AWHMYNZAL19",
         "type": "central_govt",
