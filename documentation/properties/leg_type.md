@@ -5,7 +5,7 @@ schemas:    [derivative]
 ---
 
 # leg_type
-Payoff type of a derivative leg, which may be a stand-alone trade (e.g. fra, cap), or part of an instrument refered to in the derivative_type attibute (eg. vanilla_swap). The atribute is an enum with the following members:
+Payoff type of a derivative leg, which may be a stand-alone trade (e.g. fra, cap), or part of an instrument referred to in the derivative_type attribute (eg. vanilla_swap). The attribute is an enum with the following members:
 
 ### fixed
 the leg cash flows are fixed amounts
