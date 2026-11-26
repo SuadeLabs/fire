@@ -4,7 +4,7 @@
     "data": {
       "derivative": [
         {
-          "date": "2019-12-31T00:00:00",
+          "date": "2019-12-31T00:00:00Z",
           "id": "longcall",
           "asset_class": "fx",
           "type": "option",
@@ -15,10 +15,10 @@
           "notional_amount": 100,
           "underlying_currency_code": "JPY",
           "strike": 130,
-          "trade_date": "2019-12-01T00:00:00",
-          "start_date": "2019-12-05T00:00:00",
-          "end_date": "2020-03-05T00:00:00",
-          "last_exercise_date": "2020-03-03T00:00:00",
+          "trade_date": "2019-12-01T00:00:00Z",
+          "start_date": "2019-12-05T00:00:00Z",
+          "end_date": "2020-03-05T00:00:00Z",
+          "last_exercise_date": "2020-03-03T00:00:00Z",
           "underlying_price": 130,
           "mtm_dirty": -2
         }

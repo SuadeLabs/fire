@@ -14,6 +14,7 @@ from . import (
     DOC_NAMES,
     EXAMPLES_DIR,
     EXAMPLE_FILES,
+    EXTENSION_SCHEMAS_DIR,
     SCHEMAS_DIR,
     SCHEMA_FILES,
     SCHEMA_URL,
@@ -175,7 +176,80 @@ class TestExamples:
         (SCHEMA_URL + name, DRAFT7.create_resource(fire_load(name)))
         for name in SCHEMA_FILES
     )
-    validator = Draft7Validator(example_schema, registry=registry)
+    # FORMAT_CHECKER makes "format": "date-time" an actual check (it needs
+    # rfc3339-validator installed); without it jsonschema ignores formats.
+    validator = Draft7Validator(
+        example_schema,
+        registry=registry,
+        format_checker=Draft7Validator.FORMAT_CHECKER,
+    )
+
+    # Fields whose value must equal the `id` of a record of another entity.
+    # Curated rather than inferred from the *_id suffix: most *_id fields
+    # (deal_id, facility_id, parent_id, ...) don't point at a FIRE record.
+    ID_REFERENCES = {
+        "customer_id": "customer",
+        "loan_id": "loan",
+        "guarantor_id": "guarantor",
+        "issuer_id": "issuer",
+        "security_id": "security",
+        "derivative_id": "derivative",
+        "underlying_issuer_id": "issuer",
+        "underlying_security_id": "security",
+        "underlying_derivative_id": "derivative",
+    }
+    ID_LIST_REFERENCES = {
+        "account_ids": "account",
+        "loan_ids": "loan",
+    }
+
+    @staticmethod
+    def unknown_fields(example):
+        """(entity, index, field) for every top-level record field that isn't
+        defined by the entity's schema (including inherited and extension fields).
+        FIRE schemas allow additional properties, so validation alone misses these.
+        """
+        found = []
+        for entity, records in example["data"].items():
+            known = set(schema_properties(f"{entity}.json"))
+            # Not every entity has a jurisdiction extension; a missing file
+            # just means there are no extension fields to allow.
+            if os.path.exists(os.path.join(EXTENSION_SCHEMAS_DIR, f"{entity}.json")):
+                extension = fire_load(
+                    f"{entity}.json", schemas_dir=EXTENSION_SCHEMAS_DIR
+                )
+                known |= set(extension.get("properties", {}))
+            for index, record in enumerate(records):
+                found += [(entity, index, f) for f in sorted(set(record) - known)]
+        return found
+
+    @classmethod
+    def dangling_references(cls, example):
+        """(entity, index, field, id) for every reference to an id that no
+        record of the expected entity in the same example has."""
+        ids = {
+            entity: {record["id"] for record in records if "id" in record}
+            for entity, records in example["data"].items()
+        }
+        found = []
+        for entity, records in example["data"].items():
+            for index, record in enumerate(records):
+                refs = [
+                    (field, record[field], target)
+                    for field, target in cls.ID_REFERENCES.items()
+                    if field in record
+                ]
+                refs += [
+                    (field, value, target)
+                    for field, target in cls.ID_LIST_REFERENCES.items()
+                    for value in record.get(field, [])
+                ]
+                found += [
+                    (entity, index, field, value)
+                    for field, value, target in refs
+                    if value not in ids.get(target, set())
+                ]
+        return found
 
     @pytest.mark.parametrize("example_name", EXAMPLE_FILES)
     def test_validating_all_examples(self, example_name):
@@ -187,6 +261,24 @@ class TestExamples:
             ex = json.load(ff)
 
         self.validator.validate(instance=ex)
+
+    @pytest.mark.parametrize("example_name", EXAMPLE_FILES)
+    def test_examples_use_only_defined_fields(self, example_name):
+        with open(os.path.join(EXAMPLES_DIR, example_name)) as ff:
+            ex = json.load(ff)
+
+        assert self.unknown_fields(ex) == []
+
+    @pytest.mark.parametrize("example_name", EXAMPLE_FILES)
+    def test_example_references_resolve(self, example_name):
+        """
+        Every customer_id, issuer_id, security_id, ... in an example should
+        point at a record that the same example defines.
+        """
+        with open(os.path.join(EXAMPLES_DIR, example_name)) as ff:
+            ex = json.load(ff)
+
+        assert self.dangling_references(ex) == []
 
     @pytest.mark.parametrize("example_name", EXAMPLE_FILES)
     def test_ex_titles_match_filenames(self, example_name):
@@ -223,7 +315,7 @@ class TestExamples:
         no_title = {
             "description": "check",
             "comment": "check",
-            "data": {"account": [{"id": "123", "date": "2020-02-02"}]},
+            "data": {"account": [{"id": "123", "date": "2020-02-02T00:00:00Z"}]},
         }
         with pytest.raises(ValidationError):
             self.validator.validate(no_title)
@@ -231,7 +323,7 @@ class TestExamples:
         bad_data_type = {
             "title": "check",
             "comment": "check",
-            "data": {"blah": [{"id": "123", "date": "2020-02-02"}]},
+            "data": {"blah": [{"id": "123", "date": "2020-02-02T00:00:00Z"}]},
         }
         with pytest.raises(ValidationError):
             self.validator.validate(bad_data_type)
@@ -239,7 +331,7 @@ class TestExamples:
         bad_nested_data = {
             "title": "check",
             "comment": "check",
-            "data": {"account": [{"id": 123, "date": "2020-02-02"}]},
+            "data": {"account": [{"id": 123, "date": "2020-02-02T00:00:00Z"}]},
         }
         with pytest.raises(ValidationError):
             self.validator.validate(bad_nested_data)
@@ -248,7 +340,9 @@ class TestExamples:
             "title": "check",
             "comment": "check",
             "data": {
-                "account": [{"id": "123", "date": "2020-02-02", "type": "coorent"}]
+                "account": [
+                    {"id": "123", "date": "2020-02-02T00:00:00Z", "type": "coorent"}
+                ]
             },
         }
         with pytest.raises(ValidationError):
@@ -257,7 +351,9 @@ class TestExamples:
         nested_null_value = {
             "title": "check",
             "comment": "check",
-            "data": {"account": [{"id": "123", "date": "2020-02-02", "type": None}]},
+            "data": {
+                "account": [{"id": "123", "date": "2020-02-02T00:00:00Z", "type": None}]
+            },
         }
         with pytest.raises(ValidationError):
             self.validator.validate(nested_null_value)
@@ -267,8 +363,8 @@ class TestExamples:
             "comment": "check",
             "data": {
                 "account": [
-                    {"id": "123", "date": "2020-02-02", "type": "current"},
-                    {"id": "123", "date": "2020-02-02", "type": None},
+                    {"id": "123", "date": "2020-02-02T00:00:00Z", "type": "current"},
+                    {"id": "123", "date": "2020-02-02T00:00:00Z", "type": None},
                 ]
             },
         }
@@ -278,6 +374,49 @@ class TestExamples:
         empty_data = {"title": "check", "comment": "check", "data": {"account": []}}
         with pytest.raises(ValidationError):
             self.validator.validate(empty_data)
+
+        for bad_date in ("2020-02-02", "2020-02-02T00:00:00", "2020-02-02 00:00:00"):
+            bad_date_format = {
+                "title": "check",
+                "comment": "check",
+                "data": {"account": [{"id": "123", "date": bad_date}]},
+            }
+            with pytest.raises(ValidationError, match="date-time"):
+                self.validator.validate(bad_date_format)
+
+    def test_unknown_fields_are_found(self):
+        ex = {
+            "data": {
+                "customer": [{"id": "C1", "date": "2020-02-02T00:00:00Z"}],
+                "loan": [
+                    {"id": "L1", "date": "2020-02-02T00:00:00Z", "balanse": 1},
+                ],
+            }
+        }
+        # customer.id is inherited from entity.json via allOf, so isn't unknown.
+        assert self.unknown_fields(ex) == [("loan", 0, "balanse")]
+
+    def test_dangling_references_are_found(self):
+        ex = {
+            "data": {
+                "customer": [{"id": "C1", "date": "2020-02-02T00:00:00Z"}],
+                "loan": [
+                    {"id": "L1", "date": "2020-02-02T00:00:00Z", "customer_id": "C1"},
+                    {"id": "L2", "date": "2020-02-02T00:00:00Z", "customer_id": "C2"},
+                ],
+                "collateral": [
+                    {
+                        "id": "COL1",
+                        "date": "2020-02-02T00:00:00Z",
+                        "loan_ids": ["L1", "L3"],
+                    }
+                ],
+            }
+        }
+        assert self.dangling_references(ex) == [
+            ("loan", 1, "customer_id", "C2"),
+            ("collateral", 0, "loan_ids", "L3"),
+        ]
 
 
 class TestCurveSchema:

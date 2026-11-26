@@ -4,7 +4,7 @@
   "data": {
     "derivative": [
       {
-        "date": "2019-04-30T00:00:00",
+        "date": "2019-04-30T00:00:00Z",
         "id": "audusd_swap:aud",
         "deal_id": "audusd_swap",
         "asset_class": "fx",
@@ -13,13 +13,13 @@
         "position": "short",
         "currency_code": "AUD",
         "notional_amount": 10000,
-        "trade_date": "2019-02-25T00:00:00",
-        "start_date": "2019-02-27T00:00:00",
-        "end_date": "2020-02-27T00:00:00",
+        "trade_date": "2019-02-25T00:00:00Z",
+        "start_date": "2019-02-27T00:00:00Z",
+        "end_date": "2020-02-27T00:00:00Z",
         "mtm_dirty": -2
       },
       {
-        "date": "2019-04-30T00:00:00",
+        "date": "2019-04-30T00:00:00Z",
         "id": "audusd_swap:aud",
         "deal_id": "audusd_swap",
         "asset_class": "fx",
@@ -28,9 +28,9 @@
         "position": "long",
         "currency_code": "USD",
         "notional_amount": 10275,
-        "trade_date": "2019-02-25T00:00:00",
-        "start_date": "2019-02-27T00:00:00",
-        "end_date": "2020-02-27T00:00:00"
+        "trade_date": "2019-02-25T00:00:00Z",
+        "start_date": "2019-02-27T00:00:00Z",
+        "end_date": "2020-02-27T00:00:00Z"
       }
     ]
   }
