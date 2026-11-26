@@ -22,6 +22,7 @@ from . import (
     fire_load,
     fire_stats,
     load_jsons,
+    local_registry,
     schema_enum_registry,
     schema_properties,
 )
@@ -284,7 +285,7 @@ class TestCurveSchema:
     with open(os.path.join(SCHEMAS_DIR, "curve.json")) as ff:
         curve_schema = json.load(ff)
 
-    validator = Draft7Validator(curve_schema)
+    validator = Draft7Validator(curve_schema, registry=local_registry())
 
     def test_valid_risk_rating_curve(self):
         """Test a valid risk rating curve with string values"""
@@ -328,6 +329,22 @@ class TestCurveSchema:
             ValidationError, match="is not valid under any of the given schemas"
         ):
             self.validator.validate(instance=unknown_curve)
+
+    def test_currency_code_resolves_from_local_schemas(self):
+        """currency_code is a $ref into common.json; it must resolve from this
+        checkout (via local_registry) and still reject an invalid code."""
+        curve = {
+            "id": "rate_curve_1",
+            "date": "2024-03-20T00:00:00Z",
+            "type": "rate",
+            "currency_code": "GBP",
+            "values": [{"reference": "1m", "value": 0.01}],
+        }
+        self.validator.validate(instance=curve)
+
+        curve["currency_code"] = "not_a_currency"
+        with pytest.raises(ValidationError, match="not_a_currency"):
+            self.validator.validate(instance=curve)
 
     def test_invalid_mixed_value_types(self):
         """Test an invalid curve with mixed string and number values"""

@@ -15,6 +15,7 @@ from . import (
     check_schema_fields,
     fire_load,
     load_jsons,
+    local_registry,
     schema_properties,
 )
 import os
@@ -82,7 +83,7 @@ def test_extended_schema_validations():
     json_schema = fire_load("customer.json", schemas_dir=EXTENSION_SCHEMAS_DIR)
 
     Draft7Validator.check_schema(json_schema)
-    validator = Draft7Validator(json_schema)
+    validator = Draft7Validator(json_schema, registry=local_registry())
 
     # missing date
     with pytest.raises(ValidationError, match="date"):
